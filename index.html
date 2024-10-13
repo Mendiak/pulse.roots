@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonicRoots: Electronic Music Styles Tree</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="tooltip">
+        <h1>SonicRoots: Electronic Music Styles Tree</h1>
+        <p>Explore a comprehensive collection of electronic music genres, organized into families, styles, and substyles. The site is designed for easy navigation, allowing you to delve into the various aspects of electronic music.</p>
+
+        <p>Families: Each genre is categorized into broader families such as Ambient, Techno, House, and Trance. These categories reflect common characteristics and influences.</p>
+        
+        <p>Styles and Substyles: Within each family, you’ll find specific styles and their substyles, each with its own unique identity and history.</p>
+        
+        <p>Clicking on a style or substyle reveals additional information, including a brief description and a sample track. This feature provides a clear understanding of the sound and essence of each genre.</p>
+    
+        <p>Thank you for visiting, and we hope you enjoy exploring the world of electronic music.</p>
+        <a href="index.html">Back to Home</a>
+    </div>
+    <svg id="treemap"></svg>
+
+    <div id="info-panel" class="hidden">
+        <button id="close-panel">Close</button>
+        <div id="info-content"></div>
+        <div id="spotify-embed"></div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
