@@ -1,6 +1,9 @@
 [
     {
         "style": "Experimental",
+        "description": "Música que explora nuevas formas de composición y producción sonora.",
+        "example": "John Cage - 4'33\"",
+        "spotify_track_id": "2bNCdW4rLnCTzgqUXTTDO1",
         "substyles": [
             {
                 "name": "Glitch",
@@ -19,35 +22,188 @@
                 "description": "Experimental genre that works with very short and minimalist sounds.",
                 "example": "SND - 00020 a",
                 "spotify_track_id": "6yLXHedDamHFMDl24xXFVp"
+            },
+            {
+                "name": "Musique Concrète",
+                "description": "A genre that utilizes recorded sounds from everyday life as its primary musical material.",
+                "example": "Pierre Schaeffer - Étude aux chemins de fer",
+                "spotify_track_id": "4wqon5GBOGvgVpD8Cu4qAN" 
+            },
+            {
+                "name": "Plunderphonics",
+                "description": "Música creada mediante la manipulación de grabaciones preexistentes.",
+                "example": "John Oswald - Plexure",
+                "spotify_track_id": "/7bY1ZKviM54MsGXfivxNnX"
+            },
+            {
+                "name": "IDM (Intelligent Dance Music)",
+                "description": "Género de música electrónica experimental con estructuras rítmicas complejas.",
+                "example": "Aphex Twin - Windowlicker",
+                "spotify_track_id": "409z4jUHpq7eIkg3N3FzZh",
+                "substyles": [
+                    {
+                        "name": "Braindance",
+                        "description": "Subgénero de IDM con énfasis en ritmos complejos y melodías intrincadas.",
+                        "example": "µ-Ziq - Brace Yourself Jason",
+                        "spotify_track_id": "4Z8jptUDjJDuxBf0pSOvSi"
+                    },
+                    {
+                        "name": "Drill 'n' Bass",
+                        "description": "Variante de IDM caracterizada por ritmos de batería rápidos y complejos.",
+                        "example": "Squarepusher - Come On My Selector",
+                        "spotify_track_id": "59gAXwLxVtS8ebM81GnpXp"
+                    },
+                    {
+                        "name": "Glitch Hop",
+                        "description": "Fusión de elementos de glitch e IDM con ritmos de hip-hop.",
+                        "example": "Prefuse 73 - One Word Extinguisher",
+                        "spotify_track_id": "11ghskpbs7SPZa4X6WAzlq"
+                    },
+                    {
+                        "name": "Breakcore",
+                        "description": "Estilo de IDM caracterizado por ritmos de breakbeat intensos y caóticos, a menudo con samples distorsionados.",
+                        "example": "Venetian Snares - Hajnal",
+                        "spotify_track_id": "0BqDGF2xAg9Y3hdD3eRFdG"
+                    },
+                    {
+                        "name": "Ambient IDM",
+                        "description": "Fusión de IDM con elementos de música ambient, creando paisajes sonoros atmosféricos y rítmicos.",
+                        "example": "Boards of Canada - Roygbiv",
+                        "spotify_track_id": "5Hf2h59YLInKlic7ooWZVd"
+                    }
+                ]
             }
         ]
     },
     {
         "style": "Techno",
+        "description": "A genre of electronic music characterized by a repetitive four on the floor beat, synthesized sounds, and a minimalist aesthetic.",
+        "example": "Joey Beltram - Energy Flash",
+        "spotify_track_id": "46ddej1ibGIgs58H0wakoK",
         "substyles": [
             {
                 "name": "Detroit Techno",
                 "description": "Techno style that originated in Detroit in the late 80s.",
                 "example": "Derrick May -  Strings of Life",
-                "spotify_track_id": "7N3FfUFMud1rjI6Vgw71mm"
+                "spotify_track_id": "7N3FfUFMud1rjI6Vgw71mm",
+                "substyles": [
+                    {
+                        "name": "Classic Detroit Techno",
+                        "description": "The original sound of Detroit Techno, known for its soulful melodies and hypnotic grooves.",
+                        "example": "Juan Atkins - No UFO's",
+                        "spotify_track_id": "1Ro7L7RPp5P8heOfW4EQKA"
+                    },
+                    {
+                        "name": "Detroit Techno 2.0",
+                        "description": "A modern take on Detroit Techno, often incorporating elements of minimal techno and dub techno.",
+                        "example": "Octave One Feat. Ann Saunderson - Blackwater",
+                        "spotify_track_id": "3etLHAzGr30F9G4bnUpdxw"
+                    },
+                    {
+                        "name": "Techno Soul",
+                        "description": "A fusion of Detroit Techno and soul music, characterized by its use of soulful vocals and melodies.",
+                        "example": "Kerri Chandler - Bar A Thym",
+                        "spotify_track_id": "44EI5kN4bHMLhC7lNjcnuK"
+                    },
+                    {
+                        "name": "Hard Detroit Techno",
+                        "description": "A more aggressive and intense form of Detroit Techno.",
+                        "example": "Jeff Mills - The Bells",
+                        "spotify_track_id": "0ISxyAhfop0MoMeAUw72RN"
+                    },
+                    {
+                        "name": "Minimal Detroit Techno",
+                        "description": "A stripped-back and minimalist approach to Detroit Techno.",
+                        "example": "Robert Hood - Minimal Nation",
+                        "spotify_track_id": "4vBBFo44z0W1hVpCBwcxUF"
+                    }
+                ]
             },
+            
             {
                 "name": "Acid Techno",
                 "description": "Techno style characterized by the use of the TB-303 synthesizer.",
                 "example": "Phuture - Acid Trax",
-                "spotify_track_id": "2aLXJJ2zOsBJlGTxiG0yMi"
+                "spotify_track_id": "2aLXJJ2zOsBJlGTxiG0yMi",
+                "substyles": [
+                    {
+                        "name": "Acid House",
+                        "description": "A fusion of acid techno and house music.",
+                        "example": "Mr. Fingers - Can You Feel It",
+                        "spotify_track_id": "4mNwbj8hTUjbyZSHdQVIuL"
+                    },
+                    {
+                        "name": "Acid Breaks",
+                        "description": "A blend of acid techno and breakbeat.",
+                        "example": "Josh Wink - Higher State of Consciousness",
+                        "spotify_track_id": "5jfn6EruW8gJaVM6dnpCQM"
+                    },
+                    {
+                        "name": "Acid Trance",
+                        "description": "A combination of acid techno and trance music.",
+                        "example": "Astrix - Poison",
+                        "spotify_track_id": "23FD4eYjBgeG2L45UAIm8U"
+                    }
+                ]
             },
+                
             {
                 "name": "Minimal Techno",
                 "description": "Techno style characterized by its minimalist and repetitive sound.",
                 "example": "Plastikman - Spastik",
-                "spotify_track_id": "553HOkDZQktOEBKvxTBPS1"
+                "spotify_track_id": "553HOkDZQktOEBKvxTBPS1",
+                "substyles": [
+                    {
+                        "name": "Microhouse",
+                        "description": "A minimalist subgenre of techno with subtle, intricate rhythms.",
+                        "example": "Ricardo Villalobos - Easy Lee",
+                        "spotify_track_id": "0GKKjmdefyDJT1RQ9Mx0rA"
+                    },
+                    {
+                        "name": "Minimal Dub",
+                        "description": "A fusion of minimal techno and dub music.",
+                        "example": "Basic Channel - Quadrant Dub",
+                        "spotify_track_id": "0dC0x8MaaASf0zenCVA4zc"
+                    },
+                    {
+                        "name": "Deep Minimal Techno",
+                        "description": "A deeper and more atmospheric take on minimal techno.",
+                        "example": "Deepbass - Les Planes",
+                        "spotify_track_id": "4JBXPj21sTqOZvgQurUJoP"
+                    },
+                    {
+                        "name": "Click Techno",
+                        "description": "A subgenre of minimal techno characterized by its use of clicks and other rhythmic noises.",
+                        "example": "Thomas Brinkmann - Walk With Me",
+                        "spotify_track_id": "5d3pcpimwrVpSc4uXtDKMW"
+                    }
+                ]
             },
             {
                 "name": "Hard Techno",
                 "description": "Faster and more aggressive techno.",
                 "example": "D.A.V.E. The Drummer - Hydraulix",
-                "spotify_track_id": "2fxNkT1PUocRFT2BwyRolp"
+                "spotify_track_id": "2fxNkT1PUocRFT2BwyRolp",
+                "substyles": [
+                    {
+                        "name": "Hard Acid",
+                        "description": "A fusion of hard techno and acid techno.",
+                        "example": "Phuture - Acid Trax",
+                        "spotify_track_id": "5j72kVstS2gHKl8zWJDNz0"
+                    },
+                    {
+                        "name": "Industrial Techno",
+                        "description": "A darker and more industrial-influenced form of hard techno.",
+                        "example": "Karl O Connor & Peter Sutton - Join Us In Paradise",
+                        "spotify_track_id": "7qrl3pKShTMOVq3pQqVLnQ"
+                    },
+                    {
+                        "name": "Schranz",
+                        "description": "A fast and distorted form of hard techno.",
+                        "example": "Chris Liebing - Evolution",
+                        "spotify_track_id": "4gLWFo7XDz3cNRV8qVqiK1"
+                    }
+                ]
             }
         ]
     },
@@ -58,25 +214,165 @@
                 "name": "Deep House",
                 "description": "House style characterized by a softer and more atmospheric sound.",
                 "example": "Larry Heard - Can You Feel It",
-                "spotify_track_id": "3bdcJVeUuAi7Hhkp54YOA9"
+                "spotify_track_id": "3bdcJVeUuAi7Hhkp54YOA9",
+                "substyles": [
+                    {
+                        "name": "Soulful House",
+                        "description": "Deep house with soulful vocals and melodies.",
+                        "example": "Frankie Knuckles - Your Love",
+                        "spotify_track_id": "3LXupNVnKor4LV9rzfYcQX"
+                    },
+                    {
+                        "name": "Dub House",
+                        "description": "Deep house with dub influences, featuring spacious echoes and basslines.",
+                        "example": "Mr. Fingers - Mystery of Love",
+                        "spotify_track_id": "1E8hMeQvfgvQPjN3BZ2viF"
+                    },
+                    {
+                        "name": "Atmospheric House",
+                        "description": "Deep house with atmospheric pads, creating a dreamy and spacious vibe.",
+                        "example": "Lane 8 - Fingerprint",
+                        "spotify_track_id": "1Hy3CoHThqF0NBSmkmeR21"
+                    },
+                    {
+                        "name": "Chill House",
+                        "description": "Laid-back and melodic deep house, perfect for relaxing or casual listening.",
+                        "example": "Kygo - Firestone (feat. Conrad Sewell)",
+                        "spotify_track_id": "1I8tHoNBFTuoJAlh4hfVVE"
+                    },
+                    {
+                        "name": "Tropical House",
+                        "description": "Upbeat and summery deep house, often featuring marimba melodies and tropical sounds.",
+                        "example": "Thomas Jack - Rivers (ft. Nico & Vinz)",
+                        "spotify_track_id": "3NBDgwEAGMj0aKRsU8zoO9"
+                    }
+                ]
             },
             {
                 "name": "Tech House",
                 "description": "House style that combines elements of techno and house.",
                 "example": "Armand Van Helden - Give Me Your Loving",
-                "spotify_track_id": "0YHkveF54ugrMrMCjL8yBp"
+                "spotify_track_id": "0YHkveF54ugrMrMCjL8yBp",
+                "substyles": [
+                    {
+                        "name": "Minimal Tech House",
+                        "description": "Tech house with a minimalist approach, focusing on stripped-back grooves and subtle details.",
+                        "example": "Maceo Plex - Conjure Balearia",
+                        "spotify_track_id": "6nNVrATle8kh4x3VbTD0t5"
+                    },
+                    {
+                        "name": "Funky Tech House",
+                        "description": "Tech house with funky basslines and grooves, often incorporating elements of disco and funk.",
+                        "example": "DJ Sneak - You Can't Hide From Your Bud",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Progressive Tech House",
+                        "description": "Tech house with a progressive structure, building up tension and releasing it with melodic elements.",
+                        "example": "Hernan Cattaneo & Nick Warren - The Soundgarden",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Tribal Tech House",
+                        "description": "Tech house with tribal percussion and rhythms, creating a primal and energetic vibe.",
+                        "example": "Chus & Ceballos - The Strong Rhythm",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Tech Funk",
+                        "description": "A fusion of tech house and funk, featuring funky basslines, groovy rhythms, and soulful vocals.",
+                        "example": "Angelo Ferreri - The Whistle Song",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]
             },
             {
                 "name": "Garage House",
                 "description": "House style that originated in New York clubs.",
                 "example": "Masters At Work - I Can't Get No Sleep",
-                "spotify_track_id": "7GGhRv9fDiows4YvP5JTE5"
+                "spotify_track_id": "7GGhRv9fDiows4YvP5JTE5",
+                "substyles": [
+                        {
+                        "name": "UK Garage",
+                        "description": "Originated in the UK, blending house, R&B, and jungle influences.",
+                        "example": "Artful Dodger - Re-Rewind (feat. Craig David)",
+                        "spotify_track_id": "4xXRTJXGxt7UBAVVOTV6ZN"
+                        },
+                        {
+                        "name": "Speed Garage",
+                        "description": "Faster and more energetic variant of UK Garage.",
+                        "example": "DJ Armand Van Helden - U Don't Know Me",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        },
+                        {
+                        "name": "2-step Garage",
+                        "description": "Characterized by syncopated rhythms and soulful melodies.",
+                        "example": "Wookie - Scrappy",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        },
+                        {
+                        "name": "Bassline",
+                        "description": "Originated in Sheffield, characterized by its heavy basslines and 4/4 beats.",
+                        "example": "T2 - Heartbroken",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        },
+                        {
+                        "name": "Future Garage",
+                        "description": "An evolution of UK Garage with influences from dubstep and future bass.",
+                        "example": "Burial - Archangel",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        },
+                        {
+                        "name": "Grime",
+                        "description": "A darker and more aggressive offshoot of UK Garage, with influences from drum and bass and hip-hop.",
+                        "example": "Dizzee Rascal - Boy in da Corner",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        },
+                        {
+                        "name": "Dubstep Garage",
+                        "description": "A fusion of 2-step garage and dubstep, with a focus on sub-bass frequencies and half-time rhythms.",
+                        "example": "Skream - Midnight Request Line",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        }
+                    ]
             },
             {
                 "name": "Chicago House",
                 "description": "Style that originated house music.",
                 "example": "Marshall Jefferson - Move Your Body",
-                "spotify_track_id": "5eAymAmVU6CyejjFJxvcMI"
+                "spotify_track_id": "5eAymAmVU6CyejjFJxvcMI",
+                "substyles": [
+                    {
+                    "name": "Classic Chicago House",
+                    "description": "The original sound of Chicago House, characterized by its soulful melodies, driving basslines, and uplifting vibes.",
+                    "example": "Frankie Knuckles - Your Love",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx" 
+                    },
+                    {
+                    "name": "Acid House",
+                    "description": "A subgenre of Chicago House that emerged in the mid-1980s, characterized by the squeaky, hypnotic sounds of the Roland TB-303 synthesizer.",
+                    "example": "Phuture - Acid Trax",
+                    "spotify_track_id": "2aLXJJ2zOsBJlGTxiG0yMi" 
+                    },
+                    {
+                    "name": "Ghetto House",
+                    "description": "A faster, rawer form of house music that emerged in Chicago in the 1990s, often featuring explicit lyrics and minimal production.",
+                    "example": "DJ Deeon - Freak Like Me",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                    "name": "Jackin' House",
+                    "description": "A high-energy, funk-influenced subgenre of Chicago house characterized by its infectious, 'jacking' rhythm.",
+                    "example": "Cajmere - Percolator",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                    "name": "Piano House",
+                    "description": "A subgenre of house music that prominently features piano riffs and melodies.",
+                    "example": "Fingers Inc. - Can You Feel It",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]
             }
         ]
     },
@@ -87,30 +383,127 @@
                 "name": "Goa Trance",
                 "description": "Trance style that originated in Goa, India, in the late 80s.",
                 "example": "LSD - Hallucinogen",
-                "spotify_track_id": "5V3UMwDGWho9MvjAtMLkZv"
+                "spotify_track_id": "5V3UMwDGWho9MvjAtMLkZv",
+                "substyles": [
+                {
+                    "name": "Psychedelic Goa",
+                    "description": "A more psychedelic-oriented subgenre of Goa Trance.",
+                    "example": "Example track",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                }
+            ]
             },
             {
                 "name": "Progressive Trance",
                 "description": "Trance style characterized by its more melodic and progressive sound.",
                 "example": "Delerium feat. Sarah McLachlan - Silence",
-                "spotify_track_id": "6WuBtCCjG0T2irgaeBkPDu"
-            },
+                "spotify_track_id": "6WuBtCCjG0T2irgaeBkPDu",
+                "substyles": [
+                    {
+                        "name": "Melodic Progressive Trance",
+                        "description": "Progressive Trance with a focus on melodic elements.",
+                        "example": "Above & Beyond - Sun & Moon",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Dark Progressive Trance",
+                        "description": "Progressive Trance with darker and more atmospheric elements.",
+                        "example": "Solarstone - Seven Cities",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Progressive Psytrance",
+                        "description": "A fusion of Progressive Trance and Psytrance elements.",
+                        "example": "Ace Ventura - Stomping Ground",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]    
+            },  
             {
                 "name": "Psytrance",
                 "description": "Trance style characterized by its more psychedelic and rhythmic sound.",
-                "example": "Astral Projection - Mahadeva",
-                "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp"
+                "example": "Infected Mushroom - Becoming Insane",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "substyles": [
+                {
+                    "name": "Full-on Psytrance",
+                    "description": "A high-energy subgenre of Psytrance.",
+                    "example": "1200 Micrograms - Mescaline",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                },
+                {
+                    "name": "Dark Psytrance",
+                    "description": "A darker and more intense subgenre of Psytrance.",
+                    "example": "Xenomorph - Genetic Manipulation",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                },
+                {
+                    "name": "Suomisaundi",
+                    "description": "A Finnish style of Psytrance known for its quirky sounds.",
+                    "example": "Texas Faggott - Deadbots",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                }
+            ]
             },
             {
                 "name": "Uplifting Trance",
                 "description": "Trance characterized by euphoric sounds.",
                 "example": "Rank 1 - Airwave",
-                "spotify_track_id": "4Q3p9fr4aaSVsiNmUrT2Tu"
+                "spotify_track_id": "4Q3p9fr4aaSVsiNmUrT2Tu",
+                "substyles": [
+                {
+                    "name": "Anthem Trance",
+                    "description": "Uplifting Trance with a focus on memorable melodies and buildups.",
+                    "example": "Armin van Buuren - Communication",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                },
+                {
+                    "name": "Orchestral Trance",
+                    "description": "Uplifting Trance incorporating orchestral elements.",
+                    "example": "Andy Blueman - Time to Rest",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                },
+                {
+                    "name": "Vocal Trance",
+                    "description": "Uplifting Trance featuring prominent vocals.",
+                    "example": "Oceanlab - Satellite",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                }
+            ]
+            },
+            {
+                "name": "Hard Trance",
+                "description": "A harder and faster subgenre of Trance music.",
+                "example": "Scot Project - F (Future Is Now)",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "substyles": [
+                    {
+                        "name": "Hard Uplifting Trance",
+                        "description": "A fusion of Hard Trance and Uplifting Trance elements.",
+                        "example": "Cosmic Gate - Fire Wire",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Hard Dance Trance",
+                        "description": "A blend of Hard Trance and Hard Dance music.",
+                        "example": "Yoji Biomehanika - Hardstyle Disco",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Hard Progressive Trance",
+                        "description": "A combination of Hard Trance and Progressive Trance styles.",
+                        "example": "Mauro Picotto - Komodo",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]
             }
         ]
     },
     {
         "style": "Drum and Bass",
+        "description": "Electronic music genre characterized by fast and syncopated rhythms.",
+        "example": "Goldie - Inner City Life",
+        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
         "substyles": [
             {
                 "name": "Neurofunk",
@@ -119,17 +512,75 @@
                 "spotify_track_id": "10q2m2CeSr9UyYE8SMmgYc"
             },
             {
+                "name": "Darkstep",
+                "description": "Subgenre of drum and bass with a darker and heavier sound.",
+                "example": "Dillinja - The Angels Fell",
+                "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
+            },
+            {
+                "name": "Techstep",
+                "description": "Subgenre of drum and bass that incorporates elements of techno.",
+                "example": "Decoder - Distorted Reality",
+                "spotify_track_id": "5Uc8zK0KuC5AXlXrxhOr2F"
+            },
+            {
                 "name": "Liquid Drum and Bass",
                 "description": "Drum and bass style characterized by its smoother and more melodic sound.",
                 "example": "Calibre - Even If",
-                "spotify_track_id": "5nVkaIXaqQtoMX4V1jncdO"
+                "spotify_track_id": "5nVkaIXaqQtoMX4V1jncdO",
+                "substyles": [
+                    {
+                    "name": "Liquid Funk",
+                    "description": "Subgenre of liquid drum and bass with funk influences.",
+                    "example": "Makoto - Liquid Funk",
+                    "spotify_track_id": "4aBHhXUQH3Ot1EGo4wuEwP"
+                    },
+                    {
+                    "name": "Jazzstep",
+                    "description": "Subgenre of liquid drum and bass with jazz influences.",
+                    "example": "Calibre - Souvenirs",
+                    "spotify_track_id": "6aPKlBXEHoSFHj4yDKBIAH"
+                    },
+                    {
+                    "name": "Atmospheric Drum and Bass",
+                    "description": "Subgenre of liquid drum and bass with a more ambient and atmospheric sound.",
+                    "example": "Alix Perez - Solace",
+                    "spotify_track_id": "4Ks7oDQcUriELlhBIIAWb0"
+                    }
+                ]
             },
             {
                 "name": "Jump Up",
                 "description": "Drum and bass style characterized by its fast and energetic rhythm.",
                 "example": "Loadstar - Bomber",
-                "spotify_track_id": "7e8mGE5bLsyN1lJmiogy0R"
-            }
+                "spotify_track_id": "7e8mGE5bLsyN1lJmiogy0R",
+                "substyles": [
+                    {
+                    "name": "Party Drum and Bass",
+                    "description": "Subgenre of jump up with a more festive and lively sound.",
+                    "example": "Benny L - Boombox",
+                    "spotify_track_id": "5Uc8zK0KuC5AXlXrxhOr2F"
+                    },
+                    {
+                    "name": "Happy Jump Up",
+                    "description": "Subgenre of jump up with a more cheerful and optimistic sound.",
+                    "example": "Kanine - Sunshine",
+                    "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
+                    }
+                ]
+            },
+            {
+                "name": "Darkstep",
+                "description": "Subgenre of drum and bass with a darker and heavier sound.",
+                "example": "Dillinja - The Angels Fell",
+                "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
+              },
+              {
+                "name": "Drumfunk",
+                "description": "Subgenre of drum and bass that focuses on rhythms and percussions.",
+                "example": "Paradox - Drumfunk",
+                "spotify_track_id": "6aPKlBXEHoSFHj4yDKBIAH"
+              }    
         ]
     },
     {
@@ -139,42 +590,257 @@
                 "name": "Brostep",
                 "description": "Dubstep style characterized by its more aggressive and distorted sound.",
                 "example": "Skrillex - Scary Monsters and Nice Sprites",
-                "spotify_track_id": "5q8oybjZelukF4h0CzSUN9"
+                "spotify_track_id": "5q8oybjZelukF4h0CzSUN9",
+                "substyles": [
+                    {
+                        "name": "Aggressive Dubstep",
+                        "description": "A subgenre of brostep with an even more intense and heavy sound.",
+                        "example": "Excision - Shambhala 2012 Mix",
+                        "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
+                    },
+                    {
+                        "name": "Melodic Brostep",
+                        "description": "A subgenre of brostep that incorporates more melodic elements.",
+                        "example": "Seven Lions - Worlds Apart",
+                        "spotify_track_id": "3Ks7oDQcUriELlhBIIAWb0"
+                    }
+                ]
             },
             {
                 "name": "Melodic Dubstep",
-                "description": "Dubstep style characterized by its more melodic and atmospheric sound.",
-                "example": "deadmau5 - Strobe",
-                "spotify_track_id": "4kJWtxDDNb9oAk3h7sX3N4"
+                "description": "A subgenre of dubstep that focuses on more melodic and emotional elements.",
+                "example": "Illenium - Fractures",
+                "spotify_track_id": "6aPKlBXEHoSFHj4yDKBIAH",
+                "substyles": [
+                    {
+                        "name": "Chillstep",
+                        "description": "A subgenre of melodic dubstep with a more relaxed and atmospheric sound.",
+                        "example": "Blackmill - Miracle",
+                        "spotify_track_id": "4Ks7oDQcUriELlhBIIAWb0"
+                    },
+                    {
+                        "name": "Future Garage",
+                        "description": "A subgenre of melodic dubstep that incorporates elements of garage and house music.",
+                        "example": "Burial - Archangel",
+                        "spotify_track_id": "2Ks7oDQcUriELlhBIIAWb0"
+                    }
+                ]
             },
             {
-                "name": "UK Garage",
-                "description": "Dubstep style that originated in the UK in the late 90s.",
-                "example": "Artful Dodger Feat. Craig David- Re-Rewind",
-                "spotify_track_id": "4xXRTJXGxt7UBAVVOTV6ZN"
+                "name": "UK Dubstep",
+                "description": "The original style of dubstep that emerged in the UK, known for its deep basslines and minimal, dark rhythms.",
+                "example": "Skream - Midnight Request Line",
+                "spotify_track_id": "6s7oDQcUriELlhBIIAWb1",
+                "substyles": [
+                {
+                    "name": "Dark Dubstep", 
+                    "description": "Focuses on ominous atmospheres, often incorporating elements of ambient or drone music.",
+                    "example": "Coki - Spongebob",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx" 
+                },
+                {
+                    "name": "Wonky Dubstep",
+                    "description": "Emphasizes irregular rhythms and syncopation, often using unusual time signatures.",
+                    "example": "Rusko - Jahova",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx" 
+                }
+            ]
+            },
+            {
+                "name": "Riddim",
+                "description": "A style of dubstep that emphasizes repetitive, minimalistic basslines and rhythms.",
+                "example": "Subtronics - Wook Laser",
+                "spotify_track_id": "3Rs7oDQcUriELlhBIIAWc2",
+                "substyles": [
+                {
+                    "name": "Heavy Riddim",
+                    "description": "Characterized by intense, distorted basslines and aggressive sound design.",
+                    "example": "Svdden - Behemoth",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                },
+                {
+                    "name": "Melodic Riddim",
+                    "description": "Combines the repetitive structure of riddim with more melodic elements and atmospheric soundscapes.",
+                    "example": "Virtual Riot - Energy Drink",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                }
+            ]
+            },
+            {
+                "name": "Deep Dubstep",
+                "description": "A subgenre of dubstep known for its emphasis on deep, sub-bass frequencies and a slower tempo.",
+                "example": "Mala - Changes",
+                "spotify_track_id": "1Ks7oDQcUriELlhBIIAWd3",
+                "substyles": [               
+                        {
+                            "name": "Dub Techno Dubstep",
+                            "description": "Blends the deep bass and spaciousness of dub techno with the rhythmic elements of dubstep.",
+                            "example": "Basic Channel - Physika", 
+                            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        },
+                        {
+                            "name": "Halftime Dubstep",
+                            "description": "Employs a slower tempo and often features a half-time drum pattern, creating a more relaxed and hypnotic vibe.",
+                            "example": "Burial - Archangel",
+                            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        }
+                    ]
             }
         ]
     },
+    
     {
         "style": "Ambient",
+        "description": "A genre of electronic music that emphasizes tone and atmosphere over traditional musical structure or rhythm.",
+        "example": "Brian Eno - Ambient 1: Music for Airports",
+        "spotify_track_id": "7M2JxImzXvqjzLHNOLgGXm",
         "substyles": [
             {
                 "name": "Dark Ambient",
-                "description": "Ambient with a darker and more sinister sound.",
-                "example": "Deathprod - Dead People's Things",
-                "spotify_track_id": "26slB6pfz5F8T723pMq32K"
+                "description": "Ambient with a darker and more sinister sound, often evoking a sense of unease or dread.",
+                "example": "Lustmord - Heresy",
+                "spotify_track_id": "26slB6pfz5F8T723pMq32K",
+                "substyles": [
+                    {
+                        "name": "Industrial Ambient",
+                        "description": "Combines dark ambient with industrial music elements, often featuring mechanical and metallic sounds.",
+                        "example": "Raison d'être - The Stains of the Embodied Sacrifice",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Lovecraftian Ambient",
+                        "description": "Dark ambient inspired by the cosmic horror of H.P. Lovecraft's works, often featuring otherworldly and unsettling soundscapes.",
+                        "example": "Cryo Chamber Collaboration - Nyarlathotep",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]
+            },
+            {
+                "name": "Psybient",
+                "description": "A fusion of ambient and psychedelic trance elements, often featuring ethereal melodies and hypnotic rhythms.",
+                "example": "Shpongle - Divine Moments of Truth",
+                "spotify_track_id": "5z0QLEpkbUh00SevSuYxOh",
+                "substyles": [
+                    {
+                        "name": "Psydub",
+                        "description": "A combination of psychedelic and dub music styles, characterized by deep basslines, echoing effects, and psychedelic textures.",
+                        "example": "Ott - The Queen of All Everything",
+                        "spotify_track_id": "0SQmetI1qvOlielC8X0f4i"
+                    },
+                    {
+                        "name": "Forest Psybient",
+                        "description": "Psybient with a focus on natural and organic sounds, often evoking the atmosphere of a mystical forest.",
+                        "example": "Astropilot - Fruits of the Imagination",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]
+            },
+            {
+                "name": "New Age Ambient",
+                "description": "Ambient music with a focus on creating a serene and uplifting atmosphere, often incorporating elements of world music and nature sounds.",
+                "example": "Enya - Orinoco Flow",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "substyles": [
+                    {
+                        "name": "Celtic Ambient",
+                        "description": "New Age ambient incorporating Celtic musical elements and instrumentation.",
+                        "example": "Loreena McKennitt - The Mummers' Dance",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Meditation Ambient",
+                        "description": "Ambient music specifically designed for meditation and relaxation practices.",
+                        "example": "Deuter - Koyasan",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]
+            },
+            {
+                "name": "Drone Ambient",
+                "description": "Minimalist ambient music characterized by long, sustained sounds and drones, often creating a hypnotic and immersive listening experience.",
+                "example": "Stars of the Lid - The Tired Sounds of Stars of the Lid",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "substyles": [
+                    {
+                        "name": "Drone Metal",
+                        "description": "A fusion of drone ambient and metal music, characterized by heavily distorted and sustained guitar tones.",
+                        "example": "Sunn O))) - It Took the Night to Believe",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Microtonal Drone",
+                        "description": "Drone ambient that explores microtonal tunings and unconventional harmonic relationships.",
+                        "example": "Eliane Radigue - Trilogie de la Mort",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]
+            },
+            {
+                "name": "Space Ambient",
+                "description": "Ambient music that evokes the vastness and mystery of outer space, often using synthesizers to create cosmic soundscapes.",
+                "example": "Steve Roach - Structures from Silence",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "substyles": [
+                    {
+                        "name": "Berlin School Ambient",
+                        "description": "A style of space ambient influenced by the Berlin School of electronic music, often featuring sequenced synthesizers and cosmic textures.",
+                        "example": "Tangerine Dream - Phaedra",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]
             }
         ]
-    },
+    }
+    ,
     {
         "style": "Bass music",
         "description": "A broad category of electronic dance music styles characterized by prominent bass lines and rhythms.",
         "substyles": [
             {
+                "name": "Miami Bass",
+                "description": "A booming, bass-heavy style of hip-hop and dance music that originated in Miami.",
+                "example": "2 Live Crew - Me So Horny",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "substyles": [
+                    {
+                        "name": "Bass Music",
+                        "description": "A general term for bass-heavy electronic dance music, often used interchangeably with Miami Bass.",
+                        "example": "DJ Magic Mike - Feel the Bass",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Electro Bass",
+                        "description": "A fusion of Miami Bass with electro music, featuring prominent use of drum machines and synthesizers.",
+                        "example": "Egyptian Lover - Egypt, Egypt",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Ghetto Bass",
+                        "description": "A raw, stripped-down variant of Miami Bass, often featuring explicit lyrics and minimal production.",
+                        "example": "DJ Assault - Ass N Titties",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    }
+                ]
+            },
+            {
                 "name": "Footwork",
                 "description": "Fast-paced electronic dance music style originating from Chicago, characterized by rapid rhythms and repetitive vocal samples.",
                 "example": "DJ Rashad - Double Cup",
-                "spotify_track_id": "4PocwPW14IfS0EFBME3Hk1"
+                "spotify_track_id": "4PocwPW14IfS0EFBME3Hk1",
+                "substyles": [
+                {
+                    "name": "Juke",
+                    "description": "A precursor to footwork, characterized by its fast tempo and repetitive vocal samples.",
+                    "example": "DJ Funk - Run",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                },
+                {
+                    "name": "Chicago Footwork",
+                    "description": "The original style of footwork that emerged from Chicago's dance battles.",
+                    "example": "RP Boo - Bangin' On King Dr.",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                }
+            ]
             },
             {
                 "name": "Future bass",
@@ -191,10 +857,24 @@
                 ]
             },
             {
-                "name": "Jungle terror",
-                "description": "A fusion of hardstyle, big room house, and trap, known for its aggressive sounds and tribal influences.",
-                "example": "Wiwek - Angry Birdz",
-                "spotify_track_id": "0zPmHSGQgXAdaf31cE7JLU"
+                "name": "Jungle",
+                "description": "A genre of electronic music characterized by fast breakbeats and heavy bass lines.",
+                "example": "Shy FX - Original Nuttah",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "substyles": [
+                    {
+                        "name": "Ragga Jungle",
+                        "description": "A fusion of jungle with reggae and dancehall elements.",
+                        "example": "Congo Natty - Junglist",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Jungle Terror",
+                        "description": "A fusion of hardstyle, big room house, and trap, known for its aggressive sounds and tribal influences.",
+                        "example": "Wiwek - Angry Birdz",
+                        "spotify_track_id": "0zPmHSGQgXAdaf31cE7JLU"
+                    }
+                ]
             },
             {
                 "name": "Midtempo bass",
@@ -263,26 +943,40 @@
             {
                 "name": "Big beat",
                 "description": "A style of electronic music that typically uses heavy breakbeats and synthesizer-generated loops and patterns.",
-                "example": "The Prodigy - Firestarter",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "example": "The Chemical Brothers - Hey Boy Hey Girl",
+                "spotify_track_id": "7kXmJwrZGIhDaLT9sNo3ut",
+                "substyles": [
+                {
+                    "name": "Chemical Breaks",
+                    "description": "A style of big beat associated with The Chemical Brothers, characterized by its psychedelic and rock influences.",
+                    "example": "The Chemical Brothers - Block Rockin' Beats",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                },
+                {
+                    "name": "Funky Breaks",
+                    "description": "A fusion of big beat with funk elements, often incorporating live instrumentation and sampling.",
+                    "example": "Fatboy Slim - The Rockafeller Skank",
+                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                }
+            ]
             },
             {
                 "name": "Breakbeat hardcore",
                 "description": "An early style of hardcore electronic dance music that emerged in the UK in the early 1990s.",
                 "example": "The Prodigy - Charly",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx",
+                "spotify_track_id": "02G5u4AcbGhlfSkHzGCpmN",
                 "substyles": [
                     {
                         "name": "Darkcore",
                         "description": "A darker, more atmospheric subgenre of breakbeat hardcore that emerged in the early 1990s.",
                         "example": "2 Bad Mice - Bombscare",
-                        "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "2AUYC44g0viKK22y9JA1eh"
                     },
                     {
                         "name": "Hardcore breaks",
                         "description": "A fusion of breakbeat and hardcore techno, characterized by fast tempos and aggressive sounds.",
-                        "example": "Nasenbluten - Intellectual Killer",
-                        "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                        "example": "Omni Trio - Renegade Snares",
+                        "spotify_track_id": "4M04cLgZVSQq97IG2Uh2NE"
                     }
                 ]
             },
@@ -290,31 +984,33 @@
                 "name": "Broken beat",
                 "description": "A style of electronic music characterized by irregular, shuffled rhythms.",
                 "example": "4hero - Hold It Down",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
-            },
-            {
-                "name": "Florida breaks",
-                "description": "A regional style of breakbeat that originated in Orlando, Florida in the 1990s.",
-                "example": "Dynamix II - Just Give the DJ a Break",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "spotify_track_id": "3FTiu4HXB4OFeOKBKR1kRP"
             },
             {
                 "name": "Nu skool breaks",
                 "description": "A style of breakbeat that emerged in the late 1990s, incorporating elements of techno and electro.",
                 "example": "Stanton Warriors - Da Antidote",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
-            },
-            {
-                "name": "Progressive breaks",
-                "description": "A subgenre of breakbeat incorporating elements of progressive house and trance.",
-                "example": "Hybrid - Finished Symphony",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "spotify_track_id": "3oo5Ji6vuWLvrS2Y5PdlqK",
+                "substyles": [
+                    {
+                        "name": "Florida breaks",
+                        "description": "A regional style of breakbeat that originated in Orlando, Florida in the 1990s.",
+                        "example": "Dynamix II - Just Give the DJ a Break",
+                        "spotify_track_id": "5PXJ9veF31ROQjDnrfge2J"
+                    },
+                    {
+                        "name": "Progressive breaks",
+                        "description": "A subgenre of breakbeat incorporating elements of progressive house and trance.",
+                        "example": "Hybrid - Finished Symphony",
+                        "spotify_track_id": "7nUwU36boOFB8QL7oFeM1z"
+                    }
+                ]
             },
             {
                 "name": "Psychedelic breakbeat",
                 "description": "A fusion of breakbeat and psychedelic trance, often featuring complex rhythms and trippy sounds.",
                 "example": "Eat Static - Bony Incus",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "spotify_track_id": "5pvJ4rvoMfLFjUcl89OCeQ"
             }
         ]
     },
@@ -325,19 +1021,45 @@
                 "name": "Downtempo",
                 "description": "A relaxed, slower-paced electronic music style.",
                 "example": "Bonobo - Black Sands",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "spotify_track_id": "6uoM7KHsyJsHZqBQHKjQbc",
+                "substyles": [
+                    {
+                        "name": "Lo-fi Hip Hop",
+                        "description": "A style of downtempo music that combines elements of hip-hop and chill-out electronica.",
+                        "example": "Nujabes - Feather",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    },
+                    {
+                        "name": "Nu jazz",
+                        "description": "A blend of jazz elements with electronic beats and ambient textures.",
+                        "example": "St Germain - Rose Rouge",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                      },
+                      {
+                        "name": "Bossa nova chill",
+                        "description": "A relaxed fusion of bossa nova rhythms and electronic textures, often used in chill-out contexts.",
+                        "example": "Bebel Gilberto - So Nice",
+                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                      }
+                ]    
             },
+            {
+                "name": "Lounge",
+                "description": "Relaxed, sophisticated background music often associated with bars and hotels.",
+                "example": "Thievery Corporation - Lebanese Blonde",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
             {
                 "name": "Psybient",
                 "description": "A fusion of ambient and psychedelic trance elements.",
                 "example": "Shpongle - Divine Moments of Truth",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx",
+                "spotify_track_id": "5z0QLEpkbUh00SevSuYxOh",
                 "substyles": [
                     {
                         "name": "Psydub",
                         "description": "A combination of psychedelic and dub music styles.",
-                        "example": "Ott - Smoked Glass and Chrome",
-                        "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                        "example": "Hallucinogen - Gamma Goblins Part 2",
+                        "spotify_track_id": "0SQmetI1qvOlielC8X0f4i"
                     }
                 ]
             },
@@ -345,13 +1067,43 @@
                 "name": "Trip hop",
                 "description": "A fusion of hip-hop and electronic music with a relaxed, atmospheric sound.",
                 "example": "Massive Attack - Teardrop",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "spotify_track_id": "67Hna13dNDkZvBpTXRIaOJ"
             },
             {
                 "name": "Trip rock",
                 "description": "A blend of trip hop and rock music elements.",
                 "example": "Portishead - Glory Box",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "spotify_track_id": "3Ty7OTBNSigGEpeW2PqcsC"
+            },
+            {
+                "name": "Ambient Dub",
+                "description": "A fusion of ambient and dub music, characterized by spacious soundscapes and deep basslines.",
+                "example": "The Orb - Little Fluffy Clouds",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+            },
+            {
+                "name": "Balearic Beat",
+                "description": "A blend of electronic, pop, and Mediterranean sounds, originating from Ibiza.",
+                "example": "José Padilla - Adios Ayer",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+            },
+            {
+                "name": "Chillwave",
+                "description": "A genre combining elements of pop, hip-hop, and electronic music with nostalgic 1980s synth sounds.",
+                "example": "Washed Out - Feel It All Around",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+            },
+            {
+                "name": "Vaporwave",
+                "description": "An internet-born microgenre known for its nostalgic or surrealist engagement with consumer culture.",
+                "example": "Macintosh Plus - リサフランク420 / 現代のコンピュー",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+            },
+            {
+                "name": "Synthwave",
+                "description": "Retro-style electronic music inspired by 1980s film soundtracks and video games.",
+                "example": "Kavinsky - Nightcall",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
             }
         ]
     },
@@ -362,26 +1114,26 @@
             {
                 "name": "Afro/cosmic music",
                 "description": "A fusion of disco with African and space-themed elements.",
-                "example": "Beppe Loda - Ehjah",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "example": "Tony Esposito - Kalimba de Luna",
+                "spotify_track_id": "4qvkB7tOgSqgSqbpKWGOrO"
             },
             {
                 "name": "Electro-disco",
                 "description": "A blend of disco and electronic music.",
-                "example": "Giorgio Moroder - I Feel Love",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "example": "Giorgio Moroder feat. Donna Summer - I Feel Love",
+                "spotify_track_id": "1vCBk33l9HaWp5FOnhSGxk"
             },
             {
                 "name": "Euro disco",
                 "description": "A European variant of disco music.",
                 "example": "Boney M. - Rasputin",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx",
+                "spotify_track_id": "5lWSa1rmuSL6OBPOnkAqoa",
                 "substyles": [
                     {
                         "name": "Italo disco",
                         "description": "An Italian variant of Euro disco.",
                         "example": "Ryan Paris - Dolce Vita",
-                        "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "55TfPKgtkovhAtDyqIMiEL"
                     }
                 ]
             },
@@ -389,15 +1141,212 @@
                 "name": "Nu-disco",
                 "description": "A modern revival of disco music incorporating elements of house and funk.",
                 "example": "Daft Punk - Get Lucky",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "spotify_track_id": "69kOkLUCkxIZYexIgSG8rq"
             },
             {
                 "name": "Space disco",
                 "description": "A subgenre of disco with futuristic and space-themed elements.",
                 "example": "Meco - Star Wars Theme/Cantina Band",
-                "spotify_track_id": "spotify:track:xxxxxxxxxxxxxxxx"
+                "spotify_track_id": "4MVA30NmvNtpbDon1ZG7mk"
             }
         ]
-    }
+    },
+    {
+        "style": "Funk and Soul Fusion",
+        "description": "A fusion genre that blends elements of funk, soul, and electronic music, characterized by groovy rhythms, soulful melodies, and modern production techniques.",
+        "example": "Jamiroquai - Cosmic Girl",
+        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+        "substyles": [
+          {
+            "name": "Acid Jazz",
+            "description": "A fusion of jazz, soul, and funk with electronic elements, often featuring improvisation.",
+            "example": "Jamiroquai - Virtual Insanity",
+            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "substyles": [
+              {
+                "name": "Jazz House",
+                "description": "A blend of house music rhythms with jazz influences, often featuring live instrumentation.",
+                "example": "St Germain - Rose Rouge",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "Lounge Jazz",
+                "description": "A smooth, relaxed fusion of jazz and electronic beats, often used in chill or lounge environments.",
+                "example": "Thievery Corporation - The Richest Man in Babylon",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "Broken Beat",
+                "description": "A subgenre of electronic music with irregular drum patterns, drawing from jazz, funk, and soul influences.",
+                "example": "4hero - Hold It Down",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              }
+            ]
+          },
+          {
+            "name": "Funktronica",
+            "description": "A modern fusion of funk and electronic music, characterized by groovy basslines and electronic production.",
+            "example": "Griz - Smokin’",
+            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "substyles": [
+              {
+                "name": "Future Funk",
+                "description": "A genre blending funky grooves with modern electronic production, often featuring disco and synth elements.",
+                "example": "Yung Bae - Bae City Rollaz",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "Nu-Funk",
+                "description": "A contemporary take on funk music with modern production techniques and electronic influences.",
+                "example": "The Allergies - Dance Now",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              }
+            ]
+          },
+          {
+            "name": "Synth-funk",
+            "description": "A blend of funk and electronic synth sounds, often characterized by prominent use of synthesizers.",
+            "example": "Chromeo - Fancy Footwork",
+            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "substyles": [
+              {
+                "name": "Electro Funk",
+                "description": "A fusion of electronic music and funk, characterized by the use of drum machines and synthesizers.",
+                "example": "Zapp - More Bounce to the Ounce",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "Electroclash",
+                "description": "A fusion of electro, punk, and synthpop, often with a retro, underground aesthetic.",
+                "example": "Fischerspooner - Emerge",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "style": "Industrial and Post-Industrial",
+        "description": "A genre rooted in harsh, mechanical sounds and dystopian themes, often blending elements of electronic, noise, and experimental music. Post-industrial extends these concepts, exploring darker, atmospheric territories.",
+        "example": "Nine Inch Nails - Closer",
+        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+        "substyles": [
+          {
+            "name": "Industrial Techno",
+            "description": "A fusion of techno music with the abrasive, mechanical sound of industrial music, characterized by distorted kicks and aggressive rhythms.",
+            "example": "Perc - Look What Your Love Has Done To Me",
+            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+          },
+          {
+            "name": "EBM",
+            "description": "Electronic Body Music, a genre combining industrial music with danceable beats, often featuring heavy synthesizers and dark themes.",
+            "example": "Front 242 - Headhunter",
+            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "substyles": [
+              {
+                "name": "Dark Electro",
+                "description": "A subgenre of EBM with darker, more atmospheric soundscapes, often characterized by sinister melodies and complex synth work.",
+                "example": "Hocico - Poltergeist",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "Futurepop",
+                "description": "A melodic, more accessible subgenre of EBM that combines industrial sounds with trance-like melodies and futuristic themes.",
+                "example": "VNV Nation - Beloved",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "Aggrotech",
+                "description": "A harsher, more aggressive form of EBM, often featuring distorted vocals, heavy beats, and themes of violence or dystopia.",
+                "example": "Suicide Commando - Hellraiser",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              }
+            ]
+          },
+          {
+            "name": "Post-Industrial",
+            "description": "A genre that evolved from industrial music, incorporating darker, more ambient soundscapes, often exploring themes of isolation and decay.",
+            "example": "Coil - The First Five Minutes After Death",
+            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "substyles": [
+              {
+                "name": "Dark Ambient",
+                "description": "A subgenre characterized by droning, eerie soundscapes, often invoking feelings of dread, isolation, or mysticism.",
+                "example": "Lustmord - The Last Days",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "Witch House",
+                "description": "A dark, occult-inspired fusion of electronic music, industrial, and hip-hop, characterized by heavy use of reverb and chopped vocals.",
+                "example": "Salem - King Night",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "style": "Pop and Rock Fusion",
+        "description": "A genre that combines elements of pop music and rock, often featuring catchy melodies, electronic instrumentation, and innovative production techniques.",
+        "example": "Depeche Mode - Enjoy the Silence",
+        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+        "substyles": [
+          {
+            "name": "Synth-pop",
+            "description": "A genre characterized by the use of synthesizers and electronic instruments, blending catchy pop melodies with futuristic sounds.",
+            "example": "Pet Shop Boys - West End Girls",
+            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "substyles": [
+              {
+                "name": "Electropop",
+                "description": "A contemporary blend of pop and electronic music, often featuring catchy hooks and danceable beats.",
+                "example": "Grimes - Oblivion",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "Futurepop",
+                "description": "A melodic subgenre of synth-pop that combines electronic music with elements of EBM and trance.",
+                "example": "VNV Nation - Illusion",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "New Wave",
+                "description": "A genre that emerged in the late 1970s, characterized by a blend of punk rock, pop, and electronic elements.",
+                "example": "The Cars - Just What I Needed",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              }
+            ]
+          },
+          {
+            "name": "Electronic Rock",
+            "description": "A fusion of rock music and electronic elements, often featuring guitar riffs alongside synthesizers and drum machines.",
+            "example": "Linkin Park - Somewhere I Belong",
+            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "substyles": [
+              {
+                "name": "Dance-punk",
+                "description": "A genre that blends elements of punk rock with electronic music, characterized by a danceable beat and a raw sound.",
+                "example": "LCD Soundsystem - Dance Yrself Clean",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              },
+              {
+                "name": "Indie Electronic",
+                "description": "A genre combining indie rock and electronic music, often featuring unconventional sounds and lo-fi aesthetics.",
+                "example": "Passion Pit - Sleepyhead",
+                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+              }
+            ]
+          },
+          {
+            "name": "Dance-pop",
+            "description": "A genre of pop music designed for danceability, characterized by upbeat tempos and catchy melodies.",
+            "example": "Lady Gaga - Just Dance",
+            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+          }
+        ]
+      }
+        
+        
+      
 
 ]

@@ -13,8 +13,8 @@ async function fetchData() {
 
   // Función para crear el árbol con D3.js
  function createTree(data) {
-    const width = 1200;
-    const height = 1200;
+    const width = 1300;
+    const height = 2600;
   
     const svg = d3.select("svg")
       .attr("width", width)
@@ -69,7 +69,11 @@ async function fetchData() {
       .append('g')
       .attr('class', 'node')
       .attr('transform', d => `translate(${d.depth === 0 ? d.y + 97: d.y},${d.x})`)
+      .attr('class', d => d.depth === 1 || d.depth === 2 || d.depth === 3 ? 'node clickable-node' : 'node')
       .on('click', (event, d) => {
+        if (d.depth === 0) {
+          return; 
+        }
         const infoPanel = document.getElementById('info-panel');
         const infoContent = document.getElementById('info-content');
         const spotifyEmbed = document.getElementById('spotify-embed');
@@ -89,18 +93,17 @@ async function fetchData() {
         `;
       
         infoPanel.classList.add('visible');
-      });
-      
-      
-            
+      });           
   
     node.append('circle')
       .attr('r',6);
+      
   
     node.append('text')
       .attr('dy', 3)
       .attr('x', d => d.children ? -8 : 8)
       .style('text-anchor', d => d.children ? 'end' : 'start')
+      .style('font-family', 'Arimo, sans-serif')
       .text(d => d.data.name);
   }
   
