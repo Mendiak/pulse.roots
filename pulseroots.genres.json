@@ -1,7 +1,7 @@
 [
     {
         "style": "Experimental",
-        "description": "Música que explora nuevas formas de composición y producción sonora.",
+        "description": "Experimental electronic music is a genre that explores unconventional sounds, structures, and techniques, often pushing the boundaries of traditional music. It incorporates a wide range of electronic instruments, effects, and innovative production methods to create unique auditory experiences, emphasizing creativity and exploration over conventional musical forms.",
         "example": "John Cage - 4'33\"",
         "spotify_track_id": "2bNCdW4rLnCTzgqUXTTDO1",
         "substyles": [
@@ -31,43 +31,43 @@
             },
             {
                 "name": "Plunderphonics",
-                "description": "Música creada mediante la manipulación de grabaciones preexistentes.",
+                "description": "Plunderphonics is a genre that involves the creative use of pre-existing audio samples from various sources to create new compositions, often manipulating these samples to challenge traditional notions of authorship and originality.",
                 "example": "John Oswald - Plexure",
-                "spotify_track_id": "/7bY1ZKviM54MsGXfivxNnX"
+                "spotify_track_id": "7bY1ZKviM54MsGXfivxNnX"
             },
             {
                 "name": "IDM (Intelligent Dance Music)",
-                "description": "Género de música electrónica experimental con estructuras rítmicas complejas.",
+                "description": "IDM is a genre of electronic music characterized by complex rhythms, intricate melodies, and experimental sound design, often blending elements of ambient, techno, and breakbeat. It emphasizes creativity and innovation, appealing to listeners who appreciate music that is both cerebral and danceable.",
                 "example": "Aphex Twin - Windowlicker",
                 "spotify_track_id": "409z4jUHpq7eIkg3N3FzZh",
                 "substyles": [
                     {
                         "name": "Braindance",
-                        "description": "Subgénero de IDM con énfasis en ritmos complejos y melodías intrincadas.",
+                        "description": "Braindance is a genre of electronic music that combines elements of IDM, acid house, and ambient, characterized by intricate rhythms, complex melodies, and a playful yet cerebral aesthetic. It often features a fusion of synthetic sounds and organic samples, creating a sound that is both danceable and intellectually stimulating.",
                         "example": "µ-Ziq - Brace Yourself Jason",
                         "spotify_track_id": "4Z8jptUDjJDuxBf0pSOvSi"
                     },
                     {
                         "name": "Drill 'n' Bass",
-                        "description": "Variante de IDM caracterizada por ritmos de batería rápidos y complejos.",
+                        "description": "Drill 'n' Bass is a subgenre of electronic music that blends elements of drill music and breakcore, known for its fast, complex breakbeats and heavy basslines. It often incorporates aggressive and fragmented samples, creating a chaotic yet rhythmically intricate sound that challenges conventional dance music structures.",
                         "example": "Squarepusher - Come On My Selector",
                         "spotify_track_id": "59gAXwLxVtS8ebM81GnpXp"
                     },
                     {
                         "name": "Glitch Hop",
-                        "description": "Fusión de elementos de glitch e IDM con ritmos de hip-hop.",
+                        "description": "Glitch Hop is a genre that fuses elements of hip-hop and glitch music, characterized by its use of glitchy sounds, chopped samples, and heavy basslines. It combines the rhythmic structures of hip-hop with experimental sound manipulation, resulting in a dynamic and textured listening experience that often emphasizes both groove and innovation.",
                         "example": "Prefuse 73 - One Word Extinguisher",
-                        "spotify_track_id": "11ghskpbs7SPZa4X6WAzlq"
+                        "spotify_track_id": "74z4r5ou4es2hokHvIv79z"
                     },
                     {
                         "name": "Breakcore",
-                        "description": "Estilo de IDM caracterizado por ritmos de breakbeat intensos y caóticos, a menudo con samples distorsionados.",
+                        "description": "Breakcore is an aggressive and chaotic genre of electronic music that features rapid, fragmented breakbeats, heavy sampling, and a wide range of influences, including jungle, hardcore techno, and noise music. It often incorporates unpredictable shifts in tempo and style, creating an intense auditory experience that challenges conventional music structures.",
                         "example": "Venetian Snares - Hajnal",
                         "spotify_track_id": "0BqDGF2xAg9Y3hdD3eRFdG"
                     },
                     {
                         "name": "Ambient IDM",
-                        "description": "Fusión de IDM con elementos de música ambient, creando paisajes sonoros atmosféricos y rítmicos.",
+                        "description": "Ambient IDM (Intelligent Dance Music) is a subgenre that blends the cerebral aspects of IDM with the serene, atmospheric qualities of ambient music. It emphasizes textural soundscapes, intricate rhythms, and subtle melodies, creating immersive listening experiences that invite contemplation and introspection while remaining suitable for dance settings.",
                         "example": "Boards of Canada - Roygbiv",
                         "spotify_track_id": "5Hf2h59YLInKlic7ooWZVd"
                     }
@@ -77,13 +77,13 @@
     },
     {
         "style": "Techno",
-        "description": "A genre of electronic music characterized by a repetitive four on the floor beat, synthesized sounds, and a minimalist aesthetic.",
+        "description": "Techno music is a genre of electronic dance music that emerged in the late 1980s in Detroit, characterized by its repetitive 4/4 beats, synthesized melodies, and use of technology-driven sounds. It emphasizes rhythm and texture, often featuring minimalistic arrangements and a futuristic aesthetic, making it a staple in underground dance clubs and raves.",
         "example": "Joey Beltram - Energy Flash",
         "spotify_track_id": "46ddej1ibGIgs58H0wakoK",
         "substyles": [
             {
                 "name": "Detroit Techno",
-                "description": "Techno style that originated in Detroit in the late 80s.",
+                "description": "Detroit techno is a subgenre of techno music that originated in Detroit in the 1980s, characterized by its soulful melodies, driving 4/4 beats, and futuristic sounds. It often incorporates elements of funk, jazz, and electronic music, reflecting the city's cultural heritage and industrial landscape. Detroit techno is known for its emotional depth and innovative production techniques, influencing the global techno scene.",
                 "example": "Derrick May -  Strings of Life",
                 "spotify_track_id": "7N3FfUFMud1rjI6Vgw71mm",
                 "substyles": [
@@ -119,16 +119,21 @@
                     }
                 ]
             },
-            
+            {
+                "name": "Schaffel Techno",
+                "description": "A subgenre of techno that emerged in Cologne, Germany in the early 1990s, characterized by its emphasis on deep, driving basslines, hypnotic rhythms, and a darker, more atmospheric sound than traditional Detroit techno.",
+                "example": "Superpitcher - To Turn You On",
+                "spotify_track_id": "212DKnQstTuDnXeST832dP" 
+            },
             {
                 "name": "Acid Techno",
-                "description": "Techno style characterized by the use of the TB-303 synthesizer.",
+                "description": "Acid techno is a subgenre of techno music that emerged in the late 1980s, characterized by its use of the Roland TB-303 synthesizer, which creates distinctive squelchy basslines and psychedelic melodies. The genre features repetitive beats and hypnotic rhythms, often incorporating elements of acid house and trance, resulting in a sound that is both energetic and immersive, popular in underground dance scenes.",
                 "example": "Phuture - Acid Trax",
                 "spotify_track_id": "2aLXJJ2zOsBJlGTxiG0yMi",
                 "substyles": [
                     {
                         "name": "Acid House",
-                        "description": "A fusion of acid techno and house music.",
+                        "description": "Acid house is a subgenre of house music that emerged in the mid-1980s, characterized by its use of the Roland TB-303 synthesizer to create distinctive squelchy basslines and repetitive, hypnotic rhythms. Acid house often features minimalistic beats and psychedelic elements, creating an immersive sound that became synonymous with the rave culture and underground dance scenes of the time.",
                         "example": "Mr. Fingers - Can You Feel It",
                         "spotify_track_id": "4mNwbj8hTUjbyZSHdQVIuL"
                     },
@@ -148,7 +153,7 @@
             },   
             {
                 "name": "Minimal Techno",
-                "description": "Techno style characterized by its minimalist and repetitive sound.",
+                "description": "Minimal techno is a subgenre of techno music that focuses on simplicity and subtlety, characterized by repetitive beats, minimalistic arrangements, and a reduced palette of sounds. It emphasizes space and texture, often incorporating sparse melodies and rhythmic variations to create an immersive listening experience, making it popular in both club settings and for home listening.",
                 "example": "Plastikman - Spastik",
                 "spotify_track_id": "553HOkDZQktOEBKvxTBPS1",
                 "substyles": [
@@ -159,7 +164,7 @@
                         "spotify_track_id": "0GKKjmdefyDJT1RQ9Mx0rA"
                     },
                     {
-                        "name": "Deep Minimal Techno",
+                        "name": "Deep Techno",
                         "description": "A deeper and more atmospheric take on minimal techno.",
                         "example": "Deepbass - Les Planes",
                         "spotify_track_id": "4JBXPj21sTqOZvgQurUJoP"
@@ -172,15 +177,15 @@
                     },
                     {
                         "name": "Dub Techno",
-                        "description": "A subgenre that blends the hypnotic and repetitive rhythms of techno with the atmospheric and spacious sound of dub music.",
+                        "description": "A subgenre of techno music that blends the rhythmic and atmospheric elements of dub music with the minimalistic and repetitive structures of techno. It is characterized by deep, spacious soundscapes, heavy use of reverb and echo, and a focus on bass and rhythm. Dub techno often creates an immersive, hypnotic experience, making it popular in both dance clubs and ambient listening environments.",
                         "example": "Basic Channel - Quadrant Dub",
-                        "spotify_track_id": "42nhTxeaxPiqdi6VHBz08f"
+                        "spotify_track_id": "0dC0x8MaaASf0zenCVA4zc"
                     }
                 ]
             },
             {
                 "name": "Hard Techno",
-                "description": "Faster and more aggressive techno.",
+                "description": "Hard techno is a subgenre of techno music that emphasizes aggressive beats, fast tempos, and heavy basslines, often featuring a driving 4/4 rhythm. It is characterized by its intensity and energy, incorporating elements of industrial and hardcore music, and often includes distorted kicks and synthesized sounds. Hard techno is designed for high-energy dance floors, making it a staple in underground club scenes and raves.",
                 "example": "D.A.V.E. The Drummer - Hydraulix",
                 "spotify_track_id": "2fxNkT1PUocRFT2BwyRolp",
                 "substyles": [
@@ -208,6 +213,9 @@
     },
     {
         "style": "House",
+        "description": "House music is a genre of electronic dance music characterized by its repetitive 4/4 beats, soulful melodies, and heavy use of synthesizers, originating from Chicago in the early 1980s.",
+        "example": "Lil' Louis - French Kiss",
+        "spotify_track_id": "7hnqJYCKZFW7vMoykaraZG",
         "substyles": [
             {
                 "name": "Deep House",
@@ -377,6 +385,9 @@
     },
     {
         "style": "Trance",
+        "description": "Trance is a genre of electronic dance music known for its uplifting melodies, repetitive build-ups, and euphoric breakdowns, often characterized by a tempo between 125 and 150 BPM, designed to evoke a hypnotic or trance-like state in listeners.",
+        "example": "Paul Van Dyk - For An Angel",
+        "spotify_track_id": "3PbDqZ1VMsBTjXCbs6Jv7P",
         "substyles": [
             {
                 "name": "Goa Trance",
@@ -500,7 +511,7 @@
     },
     {
         "style": "Drum and Bass",
-        "description": "Electronic music genre characterized by fast and syncopated rhythms.",
+        "description": "Drum and Bass is a fast-paced genre of electronic music characterized by rapid breakbeats (typically between 160-180 BPM), heavy basslines, and intricate drum patterns, often featuring elements of jazz, reggae, and hip-hop influences.",
         "example": "Goldie - Inner City Life",
         "spotify_track_id": "0O7xFEqePrcTUgOi4qe0uB",
         "substyles": [
@@ -519,8 +530,8 @@
             {
                 "name": "Techstep",
                 "description": "Subgenre of drum and bass that incorporates elements of techno.",
-                "example": "Decoder - Distorted Reality",
-                "spotify_track_id": "5Uc8zK0KuC5AXlXrxhOr2F"
+                "example": "Ed Rush - Funktion",
+                "spotify_track_id": "6IhrPBjEmGbro7g2iR63KC"
             },
             {
                 "name": "Liquid Drum and Bass",
@@ -549,6 +560,12 @@
                 ]
             },
             {
+                "name": "Drumfunk",
+                "description": "Subgenre of drum and bass that focuses on rhythms and percussions.",
+                "example": "Paradox - Drumfunk",
+                "spotify_track_id": "5tfiwO64InFkOPxgdDWTFN"
+            }, 
+            {
                 "name": "Jump Up",
                 "description": "Drum and bass style characterized by its fast and energetic rhythm.",
                 "example": "Loadstar - Bomber",
@@ -567,23 +584,14 @@
                     "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
                     }
                 ]
-            },
-            {
-                "name": "Darkstep",
-                "description": "Subgenre of drum and bass with a darker and heavier sound.",
-                "example": "Dillinja - The Angels Fell",
-                "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
-              },
-              {
-                "name": "Drumfunk",
-                "description": "Subgenre of drum and bass that focuses on rhythms and percussions.",
-                "example": "Paradox - Drumfunk",
-                "spotify_track_id": "6aPKlBXEHoSFHj4yDKBIAH"
-              }    
+            }   
         ]
     },
     {
         "style": "Dubstep",
+        "description": "Dubstep is a genre of electronic music known for its heavy sub-bass, syncopated rhythms, and half-time beats, typically featuring wobbling basslines, sparse drum patterns, and dark, atmospheric elements, emerging from the UK garage scene in the early 2000s.",
+        "example": "Benga & Coki - Night",
+        "spotify_track_id": "2ST4rHwfdfkuArUKvdGn8a",
         "substyles": [
             {
                 "name": "Brostep",
@@ -623,7 +631,7 @@
                 "name": "UK Dubstep",
                 "description": "The original style of dubstep that emerged in the UK, known for its deep basslines and minimal, dark rhythms.",
                 "example": "Skream - Midnight Request Line",
-                "spotify_track_id": "6s7oDQcUriELlhBIIAWb1",
+                "spotify_track_id": "6saiu3uHwIpzPl8GKtRRNR",
                 "substyles": [
                 {
                     "name": "Dark Dubstep", 
@@ -643,7 +651,7 @@
                 "name": "Riddim",
                 "description": "A style of dubstep that emphasizes repetitive, minimalistic basslines and rhythms.",
                 "example": "Subtronics - Wook Laser",
-                "spotify_track_id": "3Rs7oDQcUriELlhBIIAWc2",
+                "spotify_track_id": "3qavwet0IxIpsUqKQ6vlSj",
                 "substyles": [
                 {
                     "name": "Heavy Riddim",
@@ -684,7 +692,7 @@
     
     {
         "style": "Ambient",
-        "description": "A genre of electronic music that emphasizes tone and atmosphere over traditional musical structure or rhythm.",
+        "description": "Ambient music is a genre of electronic music that focuses on creating immersive, atmospheric soundscapes, often characterized by slow tempos, minimalistic structures, and an emphasis on tone and mood over traditional rhythm or melody, designed to evoke a sense of space and tranquility.",
         "example": "Brian Eno - Ambient 1: Music for Airports",
         "spotify_track_id": "3bCmDqflFBHijgJfvtqev5",
         "substyles": [
@@ -692,7 +700,7 @@
                 "name": "Dark Ambient",
                 "description": "Ambient with a darker and more sinister sound, often evoking a sense of unease or dread.",
                 "example": "Lustmord - Heresy",
-                "spotify_track_id": "63mIZjVbIAdfeWqdMQOwJb",
+                "spotify_track_id": "2mLGoZsnCjgw49mDwtvs0b",
                 "substyles": [
                     {
                         "name": "Industrial Ambient",
@@ -772,7 +780,7 @@
                 "name": "Space Ambient",
                 "description": "Ambient music that evokes the vastness and mystery of outer space, often using synthesizers to create cosmic soundscapes.",
                 "example": "Steve Roach - Structures from Silence",
-                "spotify_track_id": "194ZxFpjv5ttxZan4caXRq",
+                "spotify_track_id": "3v6UGvx3CJ0F0iEq5jWwl1",
                 "substyles": [
                     {
                         "name": "Berlin School Ambient",
@@ -786,8 +794,10 @@
     }
     ,
     {
-        "style": "Bass music",
-        "description": "A broad category of electronic dance music styles characterized by prominent bass lines and rhythms.",
+        "style": "Bass Music",
+        "description": "Bass music is a broad genre of electronic music that emphasizes heavy, prominent basslines and sub-bass frequencies, often incorporating elements from various styles such as dubstep, trap, drum and bass, and UK garage, with a focus on low-end sound design and rhythmic intensity.",
+        "example": "Baauer - Harlem Shake",
+        "spotify_track_id": "01XFgRZfZI7oBagNf1Loml",
         "substyles": [
             {
                 "name": "Miami Bass",
@@ -795,13 +805,7 @@
                 "example": "2 Live Crew - Me So Horny",
                 "spotify_track_id": "3EgvmOhP3NQUHY7d6PDOUg",
                 "substyles": [
-                    {
-                        "name": "Bass Music",
-                        "description": "A general term for bass-heavy electronic dance music, often used interchangeably with Miami Bass.",
-                        "example": "DJ Magic Mike - Feel the Bass III",
-                        "spotify_track_id": "3jMxlXdAYNh41Eo6biUeXR"
-                    },
-                    {
+                                        {
                         "name": "Electro Bass",
                         "description": "A fusion of Miami Bass with electro music, featuring prominent use of drum machines and synthesizers.",
                         "example": "Egyptian Lover - Egypt, Egypt",
@@ -905,7 +909,9 @@
     },
     {
         "style": "Breakbeat",
-        "description": "A broad style of electronic music characterized by its use of broken drum patterns.",
+        "description": "Breakbeat is a genre of electronic music that features syncopated drum patterns, typically derived from sampled drum breaks in funk, hip-hop, or soul music. It emphasizes irregular rhythms and offbeat grooves, often used as a foundation for genres like drum and bass, jungle, and breakbeat hardcore.",
+        "example": "The Future Sound Of London - Papua New Guinea",
+        "spotify_track_id": "5zh23oMbATQlWbwEe5U0KG",
         "substyles": [
             {
                 "name": "Acid breaks",
@@ -1009,6 +1015,9 @@
     },
     {
         "style": "Chill-out",
+        "description": "Chill-out is a genre of electronic music characterized by its relaxed, downtempo beats and atmospheric soundscapes, often blending elements of ambient, jazz, and lounge music. It’s designed to create a soothing and calming environment, typically played in laid-back settings or as background music.",
+        "example": "Zero 7 - Destiny",
+        "spotify_track_id": "27ViQppP3LZPCJl2A0w9kp",
         "substyles": [
             {
                 "name": "Downtempo",
@@ -1102,7 +1111,9 @@
     },
     {
         "style": "Disco",
-        "description": "A genre of dance music characterized by four-on-the-floor beats and prominent use of strings and horns.",
+        "description": "Disco is a genre of dance music that emerged in the 1970s, characterized by its four-on-the-floor beats, syncopated basslines, and lush orchestration, often featuring string sections, horns, and catchy melodies. Disco music is known for its upbeat, danceable sound, often associated with nightclubs and dance parties.",
+        "example": "Donna Summer - Last Dance",
+        "spotify_track_id": "5fKTkCOpnyJko7jZqpbJnX",
         "substyles": [
             {
                 "name": "Afro/cosmic music",

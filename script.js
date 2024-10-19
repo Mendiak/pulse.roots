@@ -81,7 +81,7 @@ async function fetchData() {
         infoContent.innerHTML = `
           <h2>${d.data.name}</h2>
           <p>${d.data.description || 'No description available'}</p>
-          <p>Example track: ${d.data.example || 'N/A'}</p>
+          <p><b>Example track: ${d.data.example || 'N/A'}</b></p>
         `;
       
         // Acceder correctamente al spotify_track_id
@@ -89,7 +89,7 @@ async function fetchData() {
         console.log('Track ID:', trackId);
       
         spotifyEmbed.innerHTML = `
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="160" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         `;
       
         infoPanel.classList.add('visible');
