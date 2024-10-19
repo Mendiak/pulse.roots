@@ -1,6 +1,6 @@
-# SonicRoots: Electronic Music Styles Tree
+# PulseRoots: Electronic Music Styles Tree
 
-SonicRoots is an interactive visualization of electronic music genres and subgenres, presented as a hierarchical tree structure. This project aims to educate and entertain music enthusiasts by showcasing the diverse world of electronic music.
+PulseRoots is an interactive visualization of electronic music genres and subgenres, presented as a hierarchical tree structure. This project aims to educate and entertain music enthusiasts by showcasing the diverse world of electronic music.
 
 ## Features
 
