@@ -20,7 +20,7 @@ SonicRoots is an interactive visualization of electronic music genres and subgen
 ## Setup
 
 1. Clone the repository:
-```git clone https://github.com/yourusername/sonicroots.git```
+```git clone https://github.com/Mendiak/pulse.roots.git```
 
 2. Open `index.html` in a modern web browser.
 

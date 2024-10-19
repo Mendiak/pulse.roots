@@ -145,8 +145,7 @@
                         "spotify_track_id": "23FD4eYjBgeG2L45UAIm8U"
                     }
                 ]
-            },
-                
+            },   
             {
                 "name": "Minimal Techno",
                 "description": "Techno style characterized by its minimalist and repetitive sound.",
@@ -160,12 +159,6 @@
                         "spotify_track_id": "0GKKjmdefyDJT1RQ9Mx0rA"
                     },
                     {
-                        "name": "Minimal Dub",
-                        "description": "A fusion of minimal techno and dub music.",
-                        "example": "Basic Channel - Quadrant Dub",
-                        "spotify_track_id": "0dC0x8MaaASf0zenCVA4zc"
-                    },
-                    {
                         "name": "Deep Minimal Techno",
                         "description": "A deeper and more atmospheric take on minimal techno.",
                         "example": "Deepbass - Les Planes",
@@ -176,6 +169,12 @@
                         "description": "A subgenre of minimal techno characterized by its use of clicks and other rhythmic noises.",
                         "example": "Thomas Brinkmann - Walk With Me",
                         "spotify_track_id": "5d3pcpimwrVpSc4uXtDKMW"
+                    },
+                    {
+                        "name": "Dub Techno",
+                        "description": "A subgenre that blends the hypnotic and repetitive rhythms of techno with the atmospheric and spacious sound of dub music.",
+                        "example": "Basic Channel - Quadrant Dub",
+                        "spotify_track_id": "42nhTxeaxPiqdi6VHBz08f"
                     }
                 ]
             },
@@ -636,7 +635,7 @@
                     "name": "Wonky Dubstep",
                     "description": "Emphasizes irregular rhythms and syncopation, often using unusual time signatures.",
                     "example": "Rusko - Jahova",
-                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx" 
+                    "spotify_track_id": "37YRoUFDB4AC86jeuG3e8I" 
                 }
             ]
             },
@@ -650,13 +649,13 @@
                     "name": "Heavy Riddim",
                     "description": "Characterized by intense, distorted basslines and aggressive sound design.",
                     "example": "Svdden - Behemoth",
-                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    "spotify_track_id": "5XFNxeWhhpNc0175JKydLD"
                 },
                 {
                     "name": "Melodic Riddim",
                     "description": "Combines the repetitive structure of riddim with more melodic elements and atmospheric soundscapes.",
                     "example": "Virtual Riot - Energy Drink",
-                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    "spotify_track_id": "3507Teuh1vj1L5eMAJj80O"
                 }
             ]
             },
@@ -664,19 +663,19 @@
                 "name": "Deep Dubstep",
                 "description": "A subgenre of dubstep known for its emphasis on deep, sub-bass frequencies and a slower tempo.",
                 "example": "Mala - Changes",
-                "spotify_track_id": "1Ks7oDQcUriELlhBIIAWd3",
+                "spotify_track_id": "0PfR5qCmwobwbpXL3vaqPm",
                 "substyles": [               
                         {
                             "name": "Dub Techno Dubstep",
                             "description": "Blends the deep bass and spaciousness of dub techno with the rhythmic elements of dubstep.",
-                            "example": "Basic Channel - Physika", 
-                            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                            "example": "Joy Orbison - Hyph Mngo", 
+                            "spotify_track_id": "2BTjb4H2FLh2e5zx3nI6Ul"
                         },
                         {
                             "name": "Halftime Dubstep",
                             "description": "Employs a slower tempo and often features a half-time drum pattern, creating a more relaxed and hypnotic vibe.",
-                            "example": "Burial - Archangel",
-                            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                            "example": "Ivy Lab - Magikess",
+                            "spotify_track_id": "3zrRpBXFQVMPpZwrSOD8Wf"
                         }
                     ]
             }
@@ -687,25 +686,25 @@
         "style": "Ambient",
         "description": "A genre of electronic music that emphasizes tone and atmosphere over traditional musical structure or rhythm.",
         "example": "Brian Eno - Ambient 1: Music for Airports",
-        "spotify_track_id": "7M2JxImzXvqjzLHNOLgGXm",
+        "spotify_track_id": "3bCmDqflFBHijgJfvtqev5",
         "substyles": [
             {
                 "name": "Dark Ambient",
                 "description": "Ambient with a darker and more sinister sound, often evoking a sense of unease or dread.",
                 "example": "Lustmord - Heresy",
-                "spotify_track_id": "26slB6pfz5F8T723pMq32K",
+                "spotify_track_id": "63mIZjVbIAdfeWqdMQOwJb",
                 "substyles": [
                     {
                         "name": "Industrial Ambient",
                         "description": "Combines dark ambient with industrial music elements, often featuring mechanical and metallic sounds.",
-                        "example": "Raison d'être - The Stains of the Embodied Sacrifice",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "example": "Raison d'être - Mouldering The Forlorn I",
+                        "spotify_track_id": "6wSY0hb9JnSJE7zUuGG0JG"
                     },
                     {
                         "name": "Lovecraftian Ambient",
                         "description": "Dark ambient inspired by the cosmic horror of H.P. Lovecraft's works, often featuring otherworldly and unsettling soundscapes.",
                         "example": "Cryo Chamber Collaboration - Nyarlathotep",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "1l1w978OIgum6CTGrwed0z"
                     }
                 ]
             },
@@ -719,13 +718,13 @@
                         "name": "Psydub",
                         "description": "A combination of psychedelic and dub music styles, characterized by deep basslines, echoing effects, and psychedelic textures.",
                         "example": "Ott - The Queen of All Everything",
-                        "spotify_track_id": "0SQmetI1qvOlielC8X0f4i"
+                        "spotify_track_id": "188s885TL0EgDz07BShopC"
                     },
                     {
                         "name": "Forest Psybient",
                         "description": "Psybient with a focus on natural and organic sounds, often evoking the atmosphere of a mystical forest.",
-                        "example": "Astropilot - Fruits of the Imagination",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "example": "Astropilot - Forest of Memories",
+                        "spotify_track_id": "4dunMkgLKhhF7AkF0gzVj4"
                     }
                 ]
             },
@@ -733,39 +732,39 @@
                 "name": "New Age Ambient",
                 "description": "Ambient music with a focus on creating a serene and uplifting atmosphere, often incorporating elements of world music and nature sounds.",
                 "example": "Enya - Orinoco Flow",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "spotify_track_id": "0Fyj9w0HVfjoxm9S8nGClt",
                 "substyles": [
                     {
                         "name": "Celtic Ambient",
                         "description": "New Age ambient incorporating Celtic musical elements and instrumentation.",
                         "example": "Loreena McKennitt - The Mummers' Dance",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "3D9u1UpCD8FU7LZFsMvVZQ"
                     },
                     {
                         "name": "Meditation Ambient",
                         "description": "Ambient music specifically designed for meditation and relaxation practices.",
                         "example": "Deuter - Koyasan",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "5lV4TxufL1Sq5zfC8Gz2CZ"
                     }
                 ]
             },
             {
                 "name": "Drone Ambient",
                 "description": "Minimalist ambient music characterized by long, sustained sounds and drones, often creating a hypnotic and immersive listening experience.",
-                "example": "Stars of the Lid - The Tired Sounds of Stars of the Lid",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "example": "Stars of the Lid - Requiem for Dyning Mothers Pt. 2",
+                "spotify_track_id": "7m2iqOIBuCT0XvMkv4wYNv",
                 "substyles": [
                     {
                         "name": "Drone Metal",
                         "description": "A fusion of drone ambient and metal music, characterized by heavily distorted and sustained guitar tones.",
                         "example": "Sunn O))) - It Took the Night to Believe",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "7BzthK5pl4Z75h5eO3AtFK"
                     },
                     {
                         "name": "Microtonal Drone",
                         "description": "Drone ambient that explores microtonal tunings and unconventional harmonic relationships.",
                         "example": "Eliane Radigue - Trilogie de la Mort",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "2qLeLtVxS5N9A9B0qd1BC5"
                     }
                 ]
             },
@@ -773,13 +772,13 @@
                 "name": "Space Ambient",
                 "description": "Ambient music that evokes the vastness and mystery of outer space, often using synthesizers to create cosmic soundscapes.",
                 "example": "Steve Roach - Structures from Silence",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "spotify_track_id": "194ZxFpjv5ttxZan4caXRq",
                 "substyles": [
                     {
                         "name": "Berlin School Ambient",
                         "description": "A style of space ambient influenced by the Berlin School of electronic music, often featuring sequenced synthesizers and cosmic textures.",
                         "example": "Tangerine Dream - Phaedra",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "4QLqhrjTzz90jkYw4Q64y2"
                     }
                 ]
             }
@@ -794,25 +793,25 @@
                 "name": "Miami Bass",
                 "description": "A booming, bass-heavy style of hip-hop and dance music that originated in Miami.",
                 "example": "2 Live Crew - Me So Horny",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "spotify_track_id": "3EgvmOhP3NQUHY7d6PDOUg",
                 "substyles": [
                     {
                         "name": "Bass Music",
                         "description": "A general term for bass-heavy electronic dance music, often used interchangeably with Miami Bass.",
-                        "example": "DJ Magic Mike - Feel the Bass",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "example": "DJ Magic Mike - Feel the Bass III",
+                        "spotify_track_id": "3jMxlXdAYNh41Eo6biUeXR"
                     },
                     {
                         "name": "Electro Bass",
                         "description": "A fusion of Miami Bass with electro music, featuring prominent use of drum machines and synthesizers.",
                         "example": "Egyptian Lover - Egypt, Egypt",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "6noajkkuZkla4d8E6sYUiY"
                     },
                     {
                         "name": "Ghetto Bass",
                         "description": "A raw, stripped-down variant of Miami Bass, often featuring explicit lyrics and minimal production.",
                         "example": "DJ Assault - Ass N Titties",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "5y1OahNB1xZWNEWB6zgWzf"
                     }
                 ]
             },
@@ -826,13 +825,13 @@
                     "name": "Juke",
                     "description": "A precursor to footwork, characterized by its fast tempo and repetitive vocal samples.",
                     "example": "DJ Funk - Run",
-                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    "spotify_track_id": "09OzrUfjdciGFbVlnjUqwk"
                 },
                 {
                     "name": "Chicago Footwork",
                     "description": "The original style of footwork that emerged from Chicago's dance battles.",
                     "example": "RP Boo - Bangin' On King Dr.",
-                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    "spotify_track_id": "27AqWfTAVVa5Vuhm1ogs45"
                 }
             ]
             },
@@ -853,14 +852,14 @@
             {
                 "name": "Jungle",
                 "description": "A genre of electronic music characterized by fast breakbeats and heavy bass lines.",
-                "example": "Shy FX - Original Nuttah",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+                "example": "Shy FX - Original Nuttah 25",
+                "spotify_track_id": "55K24vPjLgAX8yLAq8fErj",
                 "substyles": [
                     {
                         "name": "Ragga Jungle",
                         "description": "A fusion of jungle with reggae and dancehall elements.",
                         "example": "Congo Natty - Junglist",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "1sap7FwEuCQqFv3bOpnh6A"
                     },
                     {
                         "name": "Jungle Terror",
@@ -944,13 +943,13 @@
                     "name": "Chemical Breaks",
                     "description": "A style of big beat associated with The Chemical Brothers, characterized by its psychedelic and rock influences.",
                     "example": "The Chemical Brothers - Block Rockin' Beats",
-                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    "spotify_track_id": "1FNvrp5K02oThumS6gllzp"
                 },
                 {
                     "name": "Funky Breaks",
                     "description": "A fusion of big beat with funk elements, often incorporating live instrumentation and sampling.",
                     "example": "Fatboy Slim - The Rockafeller Skank",
-                    "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                    "spotify_track_id": "18MSYWuOIDb8YhBHOjfjkX"
                 }
             ]
             },
@@ -1021,19 +1020,19 @@
                         "name": "Lo-fi Hip Hop",
                         "description": "A style of downtempo music that combines elements of hip-hop and chill-out electronica.",
                         "example": "Nujabes - Feather",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "2ej1A2Ze6P2EOW7KfIosZR"
                     },
                     {
                         "name": "Nu jazz",
                         "description": "A blend of jazz elements with electronic beats and ambient textures.",
                         "example": "St Germain - Rose Rouge",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "1divptdjcWXvF1aflfTQnw"
                       },
                       {
                         "name": "Bossa nova chill",
                         "description": "A relaxed fusion of bossa nova rhythms and electronic textures, often used in chill-out contexts.",
                         "example": "Bebel Gilberto - So Nice",
-                        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                        "spotify_track_id": "5szCBBeY4xhhCT3A399Yjd"
                       }
                 ]    
             },
@@ -1041,7 +1040,7 @@
                 "name": "Lounge",
                 "description": "Relaxed, sophisticated background music often associated with bars and hotels.",
                 "example": "Thievery Corporation - Lebanese Blonde",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "6k5VMHrwv7mgPpkQSRQtQr"
               },
             {
                 "name": "Psybient",
@@ -1073,31 +1072,31 @@
                 "name": "Ambient Dub",
                 "description": "A fusion of ambient and dub music, characterized by spacious soundscapes and deep basslines.",
                 "example": "The Orb - Little Fluffy Clouds",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "7FVvHGA46aU7mkwx4iHMRE"
             },
             {
                 "name": "Balearic Beat",
                 "description": "A blend of electronic, pop, and Mediterranean sounds, originating from Ibiza.",
                 "example": "José Padilla - Adios Ayer",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "3inZkpVlyHfLoxwuyu2GYW"
             },
             {
                 "name": "Chillwave",
                 "description": "A genre combining elements of pop, hip-hop, and electronic music with nostalgic 1980s synth sounds.",
                 "example": "Washed Out - Feel It All Around",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "4V0x90QcMh4ZxwHzEWOdtK"
             },
             {
                 "name": "Vaporwave",
                 "description": "An internet-born microgenre known for its nostalgic or surrealist engagement with consumer culture.",
-                "example": "Macintosh Plus - リサフランク420 / 現代のコンピュー",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "example": "Oneohtrix Point Never - Age Of",
+                "spotify_track_id": "3YLzR5mhUEOY8taTn76D2k"
             },
             {
                 "name": "Synthwave",
                 "description": "Retro-style electronic music inspired by 1980s film soundtracks and video games.",
                 "example": "Kavinsky - Nightcall",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "0U0ldCRmgCqhVvD6ksG63j"
             }
         ]
     },
@@ -1149,51 +1148,51 @@
         "style": "Funk and Soul Fusion",
         "description": "A fusion genre that blends elements of funk, soul, and electronic music, characterized by groovy rhythms, soulful melodies, and modern production techniques.",
         "example": "Jamiroquai - Cosmic Girl",
-        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+        "spotify_track_id": "6y0Etr2KJr0sdcEp7ajoUK",
         "substyles": [
           {
             "name": "Acid Jazz",
             "description": "A fusion of jazz, soul, and funk with electronic elements, often featuring improvisation.",
             "example": "Jamiroquai - Virtual Insanity",
-            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "spotify_track_id": "24SUWisv2lYQiB3bVpE1sn",
             "substyles": [
               {
                 "name": "Jazz House",
                 "description": "A blend of house music rhythms with jazz influences, often featuring live instrumentation.",
-                "example": "St Germain - Rose Rouge",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "example": "Bob Sinclair - I Feel For You",
+                "spotify_track_id": "7opq9mMuTcHUXTY3EO3hym"
               },
               {
                 "name": "Lounge Jazz",
                 "description": "A smooth, relaxed fusion of jazz and electronic beats, often used in chill or lounge environments.",
                 "example": "Thievery Corporation - The Richest Man in Babylon",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "6CMngrzUTdolgXSy1UCfCx"
               },
               {
                 "name": "Broken Beat",
                 "description": "A subgenre of electronic music with irregular drum patterns, drawing from jazz, funk, and soul influences.",
                 "example": "4hero - Hold It Down",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "3FTiu4HXB4OFeOKBKR1kRP"
               }
             ]
           },
           {
             "name": "Funktronica",
             "description": "A modern fusion of funk and electronic music, characterized by groovy basslines and electronic production.",
-            "example": "Griz - Smokin’",
-            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "example": "MGMT - Electric Feel",
+            "spotify_track_id": "3FtYbEfBqAlGO46NUDQSAt",
             "substyles": [
               {
                 "name": "Future Funk",
                 "description": "A genre blending funky grooves with modern electronic production, often featuring disco and synth elements.",
                 "example": "Yung Bae - Bae City Rollaz",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "4J00divYxTl6BN36HdzByD"
               },
               {
                 "name": "Nu-Funk",
                 "description": "A contemporary take on funk music with modern production techniques and electronic influences.",
                 "example": "The Allergies - Dance Now",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "2s2AurILVufRqALTJQo0D8"
               }
             ]
           },
@@ -1201,19 +1200,19 @@
             "name": "Synth-funk",
             "description": "A blend of funk and electronic synth sounds, often characterized by prominent use of synthesizers.",
             "example": "Chromeo - Fancy Footwork",
-            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "spotify_track_id": "52VaYLDBhX5vNd8taZxA1R",
             "substyles": [
               {
                 "name": "Electro Funk",
                 "description": "A fusion of electronic music and funk, characterized by the use of drum machines and synthesizers.",
                 "example": "Zapp - More Bounce to the Ounce",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "1LiwqqaafXkNQuWGW3HeId"
               },
               {
                 "name": "Electroclash",
                 "description": "A fusion of electro, punk, and synthpop, often with a retro, underground aesthetic.",
                 "example": "Fischerspooner - Emerge",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "3vyKSb9sAdXl0kQ1KnS9fY"
               }
             ]
           }
@@ -1223,37 +1222,37 @@
         "style": "Industrial and Post-Industrial",
         "description": "A genre rooted in harsh, mechanical sounds and dystopian themes, often blending elements of electronic, noise, and experimental music. Post-industrial extends these concepts, exploring darker, atmospheric territories.",
         "example": "Nine Inch Nails - Closer",
-        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+        "spotify_track_id": "5mc6EyF1OIEOhAkD0Gg9Lc",
         "substyles": [
           {
             "name": "Industrial Techno",
             "description": "A fusion of techno music with the abrasive, mechanical sound of industrial music, characterized by distorted kicks and aggressive rhythms.",
             "example": "Perc - Look What Your Love Has Done To Me",
-            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+            "spotify_track_id": "6DETw9d8IZageLexHqDtn4"
           },
           {
             "name": "EBM",
             "description": "Electronic Body Music, a genre combining industrial music with danceable beats, often featuring heavy synthesizers and dark themes.",
             "example": "Front 242 - Headhunter",
-            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "spotify_track_id": "3iZIki3LcOtyY3Cg5DEllm",
             "substyles": [
               {
                 "name": "Dark Electro",
                 "description": "A subgenre of EBM with darker, more atmospheric soundscapes, often characterized by sinister melodies and complex synth work.",
                 "example": "Hocico - Poltergeist",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "41MMt30XQ95J4ynStyRPnM"
               },
               {
                 "name": "Futurepop",
                 "description": "A melodic, more accessible subgenre of EBM that combines industrial sounds with trance-like melodies and futuristic themes.",
                 "example": "VNV Nation - Beloved",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "2o8oBC0lVZuQwHc2CMGzF1"
               },
               {
                 "name": "Aggrotech",
                 "description": "A harsher, more aggressive form of EBM, often featuring distorted vocals, heavy beats, and themes of violence or dystopia.",
                 "example": "Suicide Commando - Hellraiser",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "5goqvGbLNajTCoMV8aCYFJ"
               }
             ]
           },
@@ -1261,19 +1260,13 @@
             "name": "Post-Industrial",
             "description": "A genre that evolved from industrial music, incorporating darker, more ambient soundscapes, often exploring themes of isolation and decay.",
             "example": "Coil - The First Five Minutes After Death",
-            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "spotify_track_id": "7z1gd54tUivy21IbH5RkT3",
             "substyles": [
-              {
-                "name": "Dark Ambient",
-                "description": "A subgenre characterized by droning, eerie soundscapes, often invoking feelings of dread, isolation, or mysticism.",
-                "example": "Lustmord - The Last Days",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
-              },
               {
                 "name": "Witch House",
                 "description": "A dark, occult-inspired fusion of electronic music, industrial, and hip-hop, characterized by heavy use of reverb and chopped vocals.",
                 "example": "Salem - King Night",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "30bItCTQr7rD0qSKgOb3Dn"
               }
             ]
           }
@@ -1283,31 +1276,31 @@
         "style": "Pop and Rock Fusion",
         "description": "A genre that combines elements of pop music and rock, often featuring catchy melodies, electronic instrumentation, and innovative production techniques.",
         "example": "Depeche Mode - Enjoy the Silence",
-        "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+        "spotify_track_id": "6WK9dVrRABMkUXFLNlgWFh",
         "substyles": [
           {
             "name": "Synth-pop",
             "description": "A genre characterized by the use of synthesizers and electronic instruments, blending catchy pop melodies with futuristic sounds.",
             "example": "Pet Shop Boys - West End Girls",
-            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "spotify_track_id": "5Dqik1P9toCJTLj5rEm78s",
             "substyles": [
               {
                 "name": "Electropop",
                 "description": "A contemporary blend of pop and electronic music, often featuring catchy hooks and danceable beats.",
                 "example": "Grimes - Oblivion",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "4BY4V1T0RJK1HmD2Q0ClyK"
               },
               {
                 "name": "Futurepop",
                 "description": "A melodic subgenre of synth-pop that combines electronic music with elements of EBM and trance.",
                 "example": "VNV Nation - Illusion",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "273tTmuqkEXRpYdFKx9iKm"
               },
               {
                 "name": "New Wave",
                 "description": "A genre that emerged in the late 1970s, characterized by a blend of punk rock, pop, and electronic elements.",
                 "example": "The Cars - Just What I Needed",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "4alHo6RGd0D3OUbTPExTHN"
               }
             ]
           },
@@ -1315,19 +1308,19 @@
             "name": "Electronic Rock",
             "description": "A fusion of rock music and electronic elements, often featuring guitar riffs alongside synthesizers and drum machines.",
             "example": "Linkin Park - Somewhere I Belong",
-            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx",
+            "spotify_track_id": "3fjmSxt0PskST13CSdBUFx",
             "substyles": [
               {
                 "name": "Dance-punk",
                 "description": "A genre that blends elements of punk rock with electronic music, characterized by a danceable beat and a raw sound.",
                 "example": "LCD Soundsystem - Dance Yrself Clean",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "2cmRpmO04TLaKPzmAzySYZ"
               },
               {
                 "name": "Indie Electronic",
                 "description": "A genre combining indie rock and electronic music, often featuring unconventional sounds and lo-fi aesthetics.",
                 "example": "Passion Pit - Sleepyhead",
-                "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+                "spotify_track_id": "4prEPl61C8qZpeo3IkYSMl"
               }
             ]
           },
@@ -1335,7 +1328,7 @@
             "name": "Dance-pop",
             "description": "A genre of pop music designed for danceability, characterized by upbeat tempos and catchy melodies.",
             "example": "Lady Gaga - Just Dance",
-            "spotify_track_id": "xxxxxxxxxxxxxxxxxxx"
+            "spotify_track_id": "1dzQoRqT5ucxXVaAhTcT0J"
           }
         ]
       }
