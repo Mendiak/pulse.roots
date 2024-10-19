@@ -14,7 +14,7 @@ async function fetchData() {
   // Función para crear el árbol con D3.js
  function createTree(data) {
     const width = 1300;
-    const height = 2600;
+    const height = 3000;
   
     const svg = d3.select("svg")
       .attr("width", width)
@@ -41,10 +41,17 @@ async function fetchData() {
             description: subsubstyle.description,
             example: subsubstyle.example,
             spotify_track_id: subsubstyle.spotify_track_id,
+            children: subsubstyle.substyles ? subsubstyle.substyles.map(subsubsubstyle => ({
+              name: subsubsubstyle.name,
+              description: subsubsubstyle.description,
+              example: subsubsubstyle.example,
+              spotify_track_id: subsubsubstyle.spotify_track_id
+            })) : undefined
           })) : undefined
         }))
       }))
     };
+    
       
   
     const root = d3.hierarchy(hierarchicalData);
@@ -69,7 +76,7 @@ async function fetchData() {
       .append('g')
       .attr('class', 'node')
       .attr('transform', d => `translate(${d.depth === 0 ? d.y + 97: d.y},${d.x})`)
-      .attr('class', d => d.depth === 1 || d.depth === 2 || d.depth === 3 ? 'node clickable-node' : 'node')
+      .attr('class', d => d.depth === 1 || d.depth === 2 || d.depth === 3 || d.depth === 4 ? 'node clickable-node' : 'node')
       .on('click', (event, d) => {
         if (d.depth === 0) {
           return; 

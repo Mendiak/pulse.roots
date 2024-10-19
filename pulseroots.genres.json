@@ -508,188 +508,7 @@
                 ]
             }
         ]
-    },
-    {
-        "style": "Drum and Bass",
-        "description": "Drum and Bass is a fast-paced genre of electronic music characterized by rapid breakbeats (typically between 160-180 BPM), heavy basslines, and intricate drum patterns, often featuring elements of jazz, reggae, and hip-hop influences.",
-        "example": "Goldie - Inner City Life",
-        "spotify_track_id": "0O7xFEqePrcTUgOi4qe0uB",
-        "substyles": [
-            {
-                "name": "Neurofunk",
-                "description": "Drum and bass style characterized by its darker and more aggressive sound.",
-                "example": "Noisia - Diplodocus",
-                "spotify_track_id": "10q2m2CeSr9UyYE8SMmgYc"
-            },
-            {
-                "name": "Darkstep",
-                "description": "Subgenre of drum and bass with a darker and heavier sound.",
-                "example": "Dillinja - The Angels Fell",
-                "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
-            },
-            {
-                "name": "Techstep",
-                "description": "Subgenre of drum and bass that incorporates elements of techno.",
-                "example": "Ed Rush - Funktion",
-                "spotify_track_id": "6IhrPBjEmGbro7g2iR63KC"
-            },
-            {
-                "name": "Liquid Drum and Bass",
-                "description": "Drum and bass style characterized by its smoother and more melodic sound.",
-                "example": "Calibre - Even If",
-                "spotify_track_id": "5nVkaIXaqQtoMX4V1jncdO",
-                "substyles": [
-                    {
-                    "name": "Liquid Funk",
-                    "description": "Subgenre of liquid drum and bass with funk influences.",
-                    "example": "Makoto - Liquid Funk",
-                    "spotify_track_id": "4aBHhXUQH3Ot1EGo4wuEwP"
-                    },
-                    {
-                    "name": "Jazzstep",
-                    "description": "Subgenre of liquid drum and bass with jazz influences.",
-                    "example": "Calibre - Souvenirs",
-                    "spotify_track_id": "6aPKlBXEHoSFHj4yDKBIAH"
-                    },
-                    {
-                    "name": "Atmospheric Drum and Bass",
-                    "description": "Subgenre of liquid drum and bass with a more ambient and atmospheric sound.",
-                    "example": "Alix Perez - Solace",
-                    "spotify_track_id": "4Ks7oDQcUriELlhBIIAWb0"
-                    }
-                ]
-            },
-            {
-                "name": "Drumfunk",
-                "description": "Subgenre of drum and bass that focuses on rhythms and percussions.",
-                "example": "Paradox - Drumfunk",
-                "spotify_track_id": "5tfiwO64InFkOPxgdDWTFN"
-            }, 
-            {
-                "name": "Jump Up",
-                "description": "Drum and bass style characterized by its fast and energetic rhythm.",
-                "example": "Loadstar - Bomber",
-                "spotify_track_id": "7e8mGE5bLsyN1lJmiogy0R",
-                "substyles": [
-                    {
-                    "name": "Party Drum and Bass",
-                    "description": "Subgenre of jump up with a more festive and lively sound.",
-                    "example": "Benny L - Boombox",
-                    "spotify_track_id": "5Uc8zK0KuC5AXlXrxhOr2F"
-                    },
-                    {
-                    "name": "Happy Jump Up",
-                    "description": "Subgenre of jump up with a more cheerful and optimistic sound.",
-                    "example": "Kanine - Sunshine",
-                    "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
-                    }
-                ]
-            }   
-        ]
-    },
-    {
-        "style": "Dubstep",
-        "description": "Dubstep is a genre of electronic music known for its heavy sub-bass, syncopated rhythms, and half-time beats, typically featuring wobbling basslines, sparse drum patterns, and dark, atmospheric elements, emerging from the UK garage scene in the early 2000s.",
-        "example": "Benga & Coki - Night",
-        "spotify_track_id": "2ST4rHwfdfkuArUKvdGn8a",
-        "substyles": [
-            {
-                "name": "Brostep",
-                "description": "Dubstep style characterized by its more aggressive and distorted sound.",
-                "example": "Skrillex - Scary Monsters and Nice Sprites",
-                "spotify_track_id": "5q8oybjZelukF4h0CzSUN9",
-                "substyles": [
-                    {
-                        "name": "Aggressive Dubstep",
-                        "description": "A subgenre of brostep with an even more intense and heavy sound.",
-                        "example": "Knife Party - Centipede",
-                        "spotify_track_id": "0u2AIKDVafHwCFQ9LDnqxH"
-                    },
-                    {
-                        "name": "Melodic Brostep",
-                        "description": "A subgenre of brostep that incorporates more melodic elements.",
-                        "example": "Peter Robinson & Madeon - Shelter",
-                        "spotify_track_id": "2ewEh7LuvToYyGHq7yT8N1"
-                    }
-                ]
-            },
-            {
-                "name": "Melodic Dubstep",
-                "description": "A subgenre of dubstep that focuses on more melodic and emotional elements.",
-                "example": "Illenium - Fractures",
-                "spotify_track_id": "45h9XBwzKkxYucjgfV0Fts",
-                "substyles": [
-                    {
-                        "name": "Chillstep",
-                        "description": "A subgenre of melodic dubstep with a more relaxed and atmospheric sound.",
-                        "example": "Blackmill - Miracle",
-                        "spotify_track_id": "5VQdYgOMD5DunteeIWztZs"
-                    }
-                ]
-            },
-            {
-                "name": "UK Dubstep",
-                "description": "The original style of dubstep that emerged in the UK, known for its deep basslines and minimal, dark rhythms.",
-                "example": "Skream - Midnight Request Line",
-                "spotify_track_id": "6saiu3uHwIpzPl8GKtRRNR",
-                "substyles": [
-                {
-                    "name": "Dark Dubstep", 
-                    "description": "Focuses on ominous atmospheres, often incorporating elements of ambient or drone music.",
-                    "example": "Datsik Feat. Snoop Dogg- Smoke Bomb",
-                    "spotify_track_id": "4kl6jf0mJkkXw1rIsWnLbn" 
-                },
-                {
-                    "name": "Wonky Dubstep",
-                    "description": "Emphasizes irregular rhythms and syncopation, often using unusual time signatures.",
-                    "example": "Rusko - Jahova",
-                    "spotify_track_id": "37YRoUFDB4AC86jeuG3e8I" 
-                }
-            ]
-            },
-            {
-                "name": "Riddim",
-                "description": "A style of dubstep that emphasizes repetitive, minimalistic basslines and rhythms.",
-                "example": "Subtronics - Wook Laser",
-                "spotify_track_id": "3qavwet0IxIpsUqKQ6vlSj",
-                "substyles": [
-                {
-                    "name": "Heavy Riddim",
-                    "description": "Characterized by intense, distorted basslines and aggressive sound design.",
-                    "example": "Svdden - Behemoth",
-                    "spotify_track_id": "5XFNxeWhhpNc0175JKydLD"
-                },
-                {
-                    "name": "Melodic Riddim",
-                    "description": "Combines the repetitive structure of riddim with more melodic elements and atmospheric soundscapes.",
-                    "example": "Virtual Riot - Energy Drink",
-                    "spotify_track_id": "3507Teuh1vj1L5eMAJj80O"
-                }
-            ]
-            },
-            {
-                "name": "Deep Dubstep",
-                "description": "A subgenre of dubstep known for its emphasis on deep, sub-bass frequencies and a slower tempo.",
-                "example": "Mala - Changes",
-                "spotify_track_id": "0PfR5qCmwobwbpXL3vaqPm",
-                "substyles": [               
-                        {
-                            "name": "Dub Techno Dubstep",
-                            "description": "Blends the deep bass and spaciousness of dub techno with the rhythmic elements of dubstep.",
-                            "example": "Joy Orbison - Hyph Mngo", 
-                            "spotify_track_id": "2BTjb4H2FLh2e5zx3nI6Ul"
-                        },
-                        {
-                            "name": "Halftime Dubstep",
-                            "description": "Employs a slower tempo and often features a half-time drum pattern, creating a more relaxed and hypnotic vibe.",
-                            "example": "Ivy Lab - Magikess",
-                            "spotify_track_id": "3zrRpBXFQVMPpZwrSOD8Wf"
-                        }
-                    ]
-            }
-        ]
-    },
-    
+    },    
     {
         "style": "Ambient",
         "description": "Ambient music is a genre of electronic music that focuses on creating immersive, atmospheric soundscapes, often characterized by slow tempos, minimalistic structures, and an emphasis on tone and mood over traditional rhythm or melody, designed to evoke a sense of space and tranquility.",
@@ -820,6 +639,84 @@
                 ]
             },
             {
+                "name": "Drum and Bass",
+                "description": "Drum and Bass is a fast-paced genre of electronic music characterized by rapid breakbeats (typically between 160-180 BPM), heavy basslines, and intricate drum patterns, often featuring elements of jazz, reggae, and hip-hop influences.",
+                "example": "Goldie - Inner City Life",
+                "spotify_track_id": "0O7xFEqePrcTUgOi4qe0uB",
+                "substyles": [
+                    {
+                        "name": "Neurofunk",
+                        "description": "Drum and bass style characterized by its darker and more aggressive sound.",
+                        "example": "Noisia - Diplodocus",
+                        "spotify_track_id": "10q2m2CeSr9UyYE8SMmgYc"
+                    },
+                    {
+                        "name": "Darkstep",
+                        "description": "Subgenre of drum and bass with a darker and heavier sound.",
+                        "example": "Dillinja - The Angels Fell",
+                        "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
+                    },
+                    {
+                        "name": "Techstep",
+                        "description": "Subgenre of drum and bass that incorporates elements of techno.",
+                        "example": "Ed Rush - Funktion",
+                        "spotify_track_id": "6IhrPBjEmGbro7g2iR63KC"
+                    },
+                    {
+                        "name": "Liquid Drum and Bass",
+                        "description": "Drum and bass style characterized by its smoother and more melodic sound.",
+                        "example": "Calibre - Even If",
+                        "spotify_track_id": "5nVkaIXaqQtoMX4V1jncdO",
+                        "substyles": [
+                            {
+                            "name": "Liquid Funk",
+                            "description": "Subgenre of liquid drum and bass with funk influences.",
+                            "example": "Makoto - Liquid Funk",
+                            "spotify_track_id": "4aBHhXUQH3Ot1EGo4wuEwP"
+                            },
+                            {
+                            "name": "Jazzstep",
+                            "description": "Subgenre of liquid drum and bass with jazz influences.",
+                            "example": "Calibre - Souvenirs",
+                            "spotify_track_id": "6aPKlBXEHoSFHj4yDKBIAH"
+                            },
+                            {
+                            "name": "Atmospheric Drum and Bass",
+                            "description": "Subgenre of liquid drum and bass with a more ambient and atmospheric sound.",
+                            "example": "Alix Perez - Solace",
+                            "spotify_track_id": "4Ks7oDQcUriELlhBIIAWb0"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Drumfunk",
+                        "description": "Subgenre of drum and bass that focuses on rhythms and percussions.",
+                        "example": "Paradox - Drumfunk",
+                        "spotify_track_id": "5tfiwO64InFkOPxgdDWTFN"
+                    }, 
+                    {
+                        "name": "Jump Up",
+                        "description": "Drum and bass style characterized by its fast and energetic rhythm.",
+                        "example": "Loadstar - Bomber",
+                        "spotify_track_id": "7e8mGE5bLsyN1lJmiogy0R",
+                        "substyles": [
+                            {
+                            "name": "Party Drum and Bass",
+                            "description": "Subgenre of jump up with a more festive and lively sound.",
+                            "example": "Benny L - Boombox",
+                            "spotify_track_id": "5Uc8zK0KuC5AXlXrxhOr2F"
+                            },
+                            {
+                            "name": "Happy Jump Up",
+                            "description": "Subgenre of jump up with a more cheerful and optimistic sound.",
+                            "example": "Kanine - Sunshine",
+                            "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
+                            }
+                        ]
+                    }   
+                ]
+            },
+            {
                 "name": "Footwork",
                 "description": "Fast-paced electronic dance music style originating from Chicago, characterized by rapid rhythms and repetitive vocal samples.",
                 "example": "DJ Rashad - Double Cup",
@@ -838,6 +735,108 @@
                     "spotify_track_id": "27AqWfTAVVa5Vuhm1ogs45"
                 }
             ]
+            },
+            {
+                "style": "Dubstep",
+                "description": "Dubstep is a genre of electronic music known for its heavy sub-bass, syncopated rhythms, and half-time beats, typically featuring wobbling basslines, sparse drum patterns, and dark, atmospheric elements, emerging from the UK garage scene in the early 2000s.",
+                "example": "Benga & Coki - Night",
+                "spotify_track_id": "2ST4rHwfdfkuArUKvdGn8a",
+                "substyles": [
+                    {
+                        "name": "Brostep",
+                        "description": "Dubstep style characterized by its more aggressive and distorted sound.",
+                        "example": "Skrillex - Scary Monsters and Nice Sprites",
+                        "spotify_track_id": "5q8oybjZelukF4h0CzSUN9",
+                        "substyles": [
+                            {
+                                "name": "Aggressive Dubstep",
+                                "description": "A subgenre of brostep with an even more intense and heavy sound.",
+                                "example": "Knife Party - Centipede",
+                                "spotify_track_id": "0u2AIKDVafHwCFQ9LDnqxH"
+                            },
+                            {
+                                "name": "Melodic Brostep",
+                                "description": "A subgenre of brostep that incorporates more melodic elements.",
+                                "example": "Peter Robinson & Madeon - Shelter",
+                                "spotify_track_id": "2ewEh7LuvToYyGHq7yT8N1"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Melodic Dubstep",
+                        "description": "A subgenre of dubstep that focuses on more melodic and emotional elements.",
+                        "example": "Illenium - Fractures",
+                        "spotify_track_id": "45h9XBwzKkxYucjgfV0Fts",
+                        "substyles": [
+                            {
+                                "name": "Chillstep",
+                                "description": "A subgenre of melodic dubstep with a more relaxed and atmospheric sound.",
+                                "example": "Blackmill - Miracle",
+                                "spotify_track_id": "5VQdYgOMD5DunteeIWztZs"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "UK Dubstep",
+                        "description": "The original style of dubstep that emerged in the UK, known for its deep basslines and minimal, dark rhythms.",
+                        "example": "Skream - Midnight Request Line",
+                        "spotify_track_id": "6saiu3uHwIpzPl8GKtRRNR",
+                        "substyles": [
+                        {
+                            "name": "Dark Dubstep", 
+                            "description": "Focuses on ominous atmospheres, often incorporating elements of ambient or drone music.",
+                            "example": "Datsik Feat. Snoop Dogg- Smoke Bomb",
+                            "spotify_track_id": "4kl6jf0mJkkXw1rIsWnLbn" 
+                        },
+                        {
+                            "name": "Wonky Dubstep",
+                            "description": "Emphasizes irregular rhythms and syncopation, often using unusual time signatures.",
+                            "example": "Rusko - Jahova",
+                            "spotify_track_id": "37YRoUFDB4AC86jeuG3e8I" 
+                        }
+                    ]
+                    },
+                    {
+                        "name": "Riddim",
+                        "description": "A style of dubstep that emphasizes repetitive, minimalistic basslines and rhythms.",
+                        "example": "Subtronics - Wook Laser",
+                        "spotify_track_id": "3qavwet0IxIpsUqKQ6vlSj",
+                        "substyles": [
+                        {
+                            "name": "Heavy Riddim",
+                            "description": "Characterized by intense, distorted basslines and aggressive sound design.",
+                            "example": "Svdden - Behemoth",
+                            "spotify_track_id": "5XFNxeWhhpNc0175JKydLD"
+                        },
+                        {
+                            "name": "Melodic Riddim",
+                            "description": "Combines the repetitive structure of riddim with more melodic elements and atmospheric soundscapes.",
+                            "example": "Virtual Riot - Energy Drink",
+                            "spotify_track_id": "3507Teuh1vj1L5eMAJj80O"
+                        }
+                    ]
+                    },
+                    {
+                        "name": "Deep Dubstep",
+                        "description": "A subgenre of dubstep known for its emphasis on deep, sub-bass frequencies and a slower tempo.",
+                        "example": "Mala - Changes",
+                        "spotify_track_id": "0PfR5qCmwobwbpXL3vaqPm",
+                        "substyles": [               
+                                {
+                                    "name": "Dub Techno Dubstep",
+                                    "description": "Blends the deep bass and spaciousness of dub techno with the rhythmic elements of dubstep.",
+                                    "example": "Joy Orbison - Hyph Mngo", 
+                                    "spotify_track_id": "2BTjb4H2FLh2e5zx3nI6Ul"
+                                },
+                                {
+                                    "name": "Halftime Dubstep",
+                                    "description": "Employs a slower tempo and often features a half-time drum pattern, creating a more relaxed and hypnotic vibe.",
+                                    "example": "Ivy Lab - Magikess",
+                                    "spotify_track_id": "3zrRpBXFQVMPpZwrSOD8Wf"
+                                }
+                            ]
+                    }
+                ]
             },
             {
                 "name": "Future bass",
