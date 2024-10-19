@@ -15,6 +15,9 @@ async function fetchData() {
  function createTree(data) {
     const width = 1300;
     const height = 3000;
+
+    const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+
   
     const svg = d3.select("svg")
       .attr("width", width)
@@ -103,7 +106,13 @@ async function fetchData() {
       });           
   
     node.append('circle')
-      .attr('r',6);
+      .attr('r',6)
+      .style('fill', d => {
+        if (d.depth === 0) return '#000';  // Root node
+        if (d.depth === 1) return colorScale(d.data.name);  // Main genres
+        if (d.parent) return colorScale(d.parent.data.name);  // Subgenres inherit parent color
+        return '#999';  // Fallback color
+      });
       
   
     node.append('text')
