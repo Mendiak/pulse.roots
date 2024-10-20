@@ -6,36 +6,6 @@
         "spotify_track_id": "2bNCdW4rLnCTzgqUXTTDO1",
         "substyles": [
             {
-                "name": "Glitch",
-                "description": "Experimental genre that uses errors and digital distortions as creative elements.",
-                "example": "Untitled - Oval",
-                "spotify_track_id": "3E3Qqp7ya4XGjiQezxDhRV"
-            },
-            {
-                "name": "Noise",
-                "description": "Experimental genre characterized by abrasive and distorted sounds.",
-                "example": "Merzbow - Ultra Marine Blues",
-                "spotify_track_id": "7GWJgWnYwrOod8jY6n4YxZ"
-            },
-            {
-                "name": "Microsound",
-                "description": "Experimental genre that works with very short and minimalist sounds.",
-                "example": "SND - 00020 a",
-                "spotify_track_id": "6yLXHedDamHFMDl24xXFVp"
-            },
-            {
-                "name": "Musique Concrète",
-                "description": "A genre that utilizes recorded sounds from everyday life as its primary musical material.",
-                "example": "Pierre Schaeffer - Étude aux chemins de fer",
-                "spotify_track_id": "4wqon5GBOGvgVpD8Cu4qAN" 
-            },
-            {
-                "name": "Plunderphonics",
-                "description": "Plunderphonics is a genre that involves the creative use of pre-existing audio samples from various sources to create new compositions, often manipulating these samples to challenge traditional notions of authorship and originality.",
-                "example": "John Oswald - Plexure",
-                "spotify_track_id": "7bY1ZKviM54MsGXfivxNnX"
-            },
-            {
                 "name": "IDM (Intelligent Dance Music)",
                 "description": "IDM is a genre of electronic music characterized by complex rhythms, intricate melodies, and experimental sound design, often blending elements of ambient, techno, and breakbeat. It emphasizes creativity and innovation, appealing to listeners who appreciate music that is both cerebral and danceable.",
                 "example": "Aphex Twin - Windowlicker",
@@ -70,8 +40,108 @@
                         "description": "Ambient IDM (Intelligent Dance Music) is a subgenre that blends the cerebral aspects of IDM with the serene, atmospheric qualities of ambient music. It emphasizes textural soundscapes, intricate rhythms, and subtle melodies, creating immersive listening experiences that invite contemplation and introspection while remaining suitable for dance settings.",
                         "example": "Boards of Canada - Roygbiv",
                         "spotify_track_id": "5Hf2h59YLInKlic7ooWZVd"
+                    },
+                    {
+                        "name": "Acid IDM",
+                        "description": "Acid IDM combines the sound of acid techno, characterized by the Roland TB-303 synthesizer, with IDM's intricate rhythms and experimental approach.",
+                        "example": "Autechre - 444",
+                        "spotify_track_id": "4WWwTDK9yKj3pizCXX46cY"
                     }
                 ]
+            },
+            {
+                "name": "Glitch",
+                "description": "Experimental genre that uses errors and digital distortions as creative elements.",
+                "example": "Untitled - Oval",
+                "spotify_track_id": "3E3Qqp7ya4XGjiQezxDhRV"
+            },
+            {
+                "name": "8-bit (Chiptune)",
+                "description": "8-bit music, or chiptune, is a style that uses sound chips from vintage computers and video game consoles to create electronic music. It's characterized by simple waveforms and limited polyphony, evoking a nostalgic sound reminiscent of early video game music.",
+                "example": "Anamanaguchi - Endless Fantasy",
+                "spotify_track_id": "4G7vYKaElzZ0ewI5gAKEZJ",
+                "substyles": [
+                    {
+                        "name": "Bitpop",
+                        "description": "A genre that combines 8-bit or chiptune sounds with pop structures, creating catchy and upbeat electronic music with a retro feel.",
+                        "example": "Slagsmålsklubben - Sponsored By Destiny",
+                        "spotify_track_id": "0I00u1IwnGQVguICUiCsAf"
+                    },
+                    {
+                        "name": "Nintendocore",
+                        "description": "Nintendocore blends chiptune elements with hardcore punk or metal, creating a unique fusion of aggressive guitar riffs and nostalgic 8-bit sounds.",
+                        "example": "Horse the Band - Birdo",
+                        "spotify_track_id": "6OUTaPBccJY8UOkQxk9BmP"
+                    }
+                ]
+            },            
+            {
+                "name": "Noise",
+                "description": "Experimental genre characterized by abrasive and distorted sounds.",
+                "example": "Merzbow - Ultra Marine Blues",
+                "spotify_track_id": "7GWJgWnYwrOod8jY6n4YxZ"
+            },
+            {
+                "name": "Microsound",
+                "description": "Experimental genre that works with very short and minimalist sounds.",
+                "example": "SND - 00020 a",
+                "spotify_track_id": "6yLXHedDamHFMDl24xXFVp"
+            },
+            {
+                "name": "Neoclassical",
+                "description": "Neoclassical music is a genre that merges classical music elements with contemporary techniques and sounds, often utilizing electronic instruments and production methods. It emphasizes emotional depth and intricate compositions, appealing to both classical music enthusiasts and electronic music listeners.",
+                "example": "Ólafur Arnalds - Near Light",
+                "spotify_track_id": "6Xajr512QEGAZ20bqAWkyT",
+                "substyles": [
+                    {
+                        "name": "Contemporary Classical",
+                        "description": "Contemporary classical music focuses on modern compositions that often incorporate new musical ideas and techniques, blending traditional classical elements with innovative sounds.",
+                        "example": "Max Richter - On the Nature of Daylight",
+                        "spotify_track_id": "56oReVXIfUO9xkX7pHmEU0"
+                    },
+                    {
+                        "name": "Cinematic",
+                        "description": "Cinematic neoclassical music is characterized by its grand and emotive compositions, often used in film scores to evoke strong emotions and enhance storytelling.",
+                        "example": "Ludovico Einaudi - Nuvole Bianche",
+                        "spotify_track_id": "3weNRklVDqb4Rr5MhKBR3D"
+                    },
+                    {
+                        "name": "Ambient Classical",
+                        "description": "Ambient classical blends the serene qualities of ambient music with classical instrumentation, creating atmospheric soundscapes that invite relaxation and contemplation.",
+                        "example": "Hammock - Turn Away and Return",
+                        "spotify_track_id": "7KkqPFSw8jrZgSqSHGUagZ"
+                    }
+                ]
+            },            
+            {
+                "name": "Musique Concrète",
+                "description": "A genre that utilizes recorded sounds from everyday life as its primary musical material.",
+                "example": "Pierre Schaeffer - Étude aux chemins de fer",
+                "spotify_track_id": "4wqon5GBOGvgVpD8Cu4qAN" 
+            },
+            {
+                "name": "Tape Music",
+                "description": "Tape music is a genre of experimental electronic music that utilizes tape recorders to manipulate and alter recorded sounds. It involves techniques such as tape loops, tape splicing, and tape speed variations to create unique sonic textures and abstract compositions.",
+                "example": "Karlheinz Stockhausen - Gesang der Jünglinge", 
+                "spotify_track_id": "5pqgzs5NQ8f1CX5NO45R0V"
+            },    
+            {
+                "name": "Plunderphonics",
+                "description": "Plunderphonics is a genre that involves the creative use of pre-existing audio samples from various sources to create new compositions, often manipulating these samples to challenge traditional notions of authorship and originality.",
+                "example": "John Oswald - Plexure",
+                "spotify_track_id": "7bY1ZKviM54MsGXfivxNnX"
+            },
+            {
+                "name": "Lowercase",
+                "description": "A genre that utilizes very quiet, often barely perceptible sounds, focusing on amplification of micro-sounds.",
+                "example": "Steve Roden - Forms of Paper",
+                "spotify_track_id": "0kig7rUrfxhy7vNLyMTG2H"
+            },
+            {
+                "name": "Skweee",
+                "description": "A genre that fuses funky synth lines with simplified rhythms, creating a minimalist and playful sound.",
+                "example": "Randy Barracuda - Skweee Like a Pig",
+                "spotify_track_id": "4wCWVoeOd4bIYICCp7bhqN"
             }
         ]
     },
@@ -206,11 +276,105 @@
                         "description": "A fast and distorted form of hard techno.",
                         "example": "Chris Liebing - Evolution",
                         "spotify_track_id": "4gLWFo7XDz3cNRV8qVqiK1"
-                    }
+                    },
+                    {
+                        "name": "Hardcore",
+                        "description": "Hardcore techno is an extremely fast and aggressive genre of electronic music that evolved from techno in the early 1990s. It is characterized by its high tempos (often exceeding 160 BPM), heavily distorted kicks, and chaotic sound. The genre often incorporates industrial and punk influences, resulting in a raw and rebellious aesthetic. Hardcore techno is popular in underground rave scenes and is known for its intense energy.",
+                        "example": "Angerfist - Creed of Chaos",
+                        "spotify_track_id": "0rDR1WfdS2BAAMXEBPSXFt",
+                        "substyles": [
+                            {
+                                "name": "Gabber",
+                                "description": "Gabber is a subgenre of hardcore techno that originated in the Netherlands in the early 1990s, known for its extremely fast tempos, aggressive distorted kicks, and harsh, brutal sound. It is one of the most extreme forms of dance music, often associated with rave culture and underground parties. The style's name comes from a Dutch slang word meaning 'mate' or 'buddy.'",
+                                "example": "Neophyte - Army Of Hardcore",
+                                "spotify_track_id": "7CymnEV7bWx8eVt1CwdBeN"
+                            },
+                            {
+                                "name": "Speedcore",
+                                "description": "Speedcore is an ultra-fast and extreme subgenre of hardcore techno, characterized by its high BPMs (often exceeding 250 BPM), distorted kicks, and frenetic, chaotic sound. It often incorporates elements of industrial music and noise, making it one of the most aggressive forms of electronic music. Speedcore is popular in niche underground scenes and is known for pushing the limits of intensity.",
+                                "example": "Delta 9 - No More Regrets",
+                                "spotify_track_id": "01dOs9h8UbQY0EB9nIXHSf"
+                            },
+                            {
+                                "name": "Terrorcore",
+                                "description": "A darker and more extreme form of hardcore techno, often featuring gruesome or horror-themed samples. Terrorcore emphasizes speed and aggression, with a focus on chaotic, distorted beats.",
+                                "example": "Noisekick - Big Bad Wolf",
+                                "spotify_track_id": "0317SNNZHrRUxgSTNEanyw"
+                            },
+                            {
+                                "name": "Industrial Hardcore",
+                                "description": "A fusion of hardcore techno and industrial music, characterized by its use of distorted sounds, mechanical rhythms, and a darker atmosphere. Industrial hardcore often incorporates elements of noise music and is known for its raw, gritty sound.",
+                                "example": "Miss K8 & Noize Suppressor - Slam",
+                                "spotify_track_id": "6Q9a3iV2heYCzhR099LjZV"
+                            },
+                            {
+                                "name": "Frenchcore",
+                                "description": "A subgenre of hardcore techno that originated in France, characterized by its fast tempos, bouncy rhythms, and use of melodic elements. Frenchcore often blends hardcore's intensity with a more playful, upbeat vibe.",
+                                "example": "Dr. Peacock - Trip to Ireland",
+                                "spotify_track_id": "6u8pHCsBSo1rahkWXUxPzW"
+                            }
+                        ]
+                    }    
                 ]
-            }
+            }        
         ]
     },
+    {
+        "style": "Electro",
+        "description": "Electro is a genre of electronic music that emerged in the early 1980s, characterized by its prominent use of synthesizers, drum machines, and robotic, often repetitive rhythms. It features a distinctive, futuristic sound, often incorporating elements of funk, disco, and new wave, and has been influential in genres like synth-pop, house, and techno.",
+        "example": "Kraftwerk - The Model",
+        "spotify_track_id": "7G3zERqh2d2tij0pVQfohU",
+        "substyles": [
+          {
+            "name": "Electroclash",
+            "description": "A fusion of electro, punk, and synthpop, often with a retro, underground aesthetic, characterized by aggressive, danceable beats, distorted vocals, and a rebellious attitude. Electroclash emerged in the late 1990s and early 2000s, creating a unique blend of electronic and alternative music styles.",
+            "example": "Fischerspooner - Emerge",
+            "spotify_track_id": "3vyKSb9sAdXl0kQ1KnS9fY"
+          },
+          {
+            "name": "Electrofunk",
+            "description": "A blend of electro and funk music, characterized by the use of drum machines, synthesizers, and funky basslines, often featuring a high-energy and danceable feel. Electrofunk draws inspiration from both classic funk and electronic music, creating a groove-driven and futuristic sound.",
+            "example": "Zapp - More Bounce to the Ounce",
+            "spotify_track_id": "3Ho35OJixLg20qshXRgfBs"
+          },
+          {
+            "name": "Electropop",
+            "description": "A fusion of electro and pop music, characterized by catchy melodies, synthesized sounds, and a danceable beat, often featuring elements of synth-pop and electronic music. Electropop blends electronic instrumentation with pop song structures, resulting in a fun, energetic, and commercially appealing sound.",
+            "example": "Daft Punk -  Around the World",
+            "spotify_track_id": "1pKYYY0dkg23sQQXi0Q5zN"
+          },
+          {
+            "name": "French Electro",
+            "description": "A subgenre of electro that emerged in France in the late 1980s and early 1990s, characterized by its minimalist approach, repetitive rhythms, and use of synthesizers to create a hypnotic and atmospheric sound. French electro often features a darker, more industrial feel than traditional electro, exploring a minimalist and experimental approach to electronic music.",
+            "example": "Air - La Femme D'Argent",
+            "spotify_track_id": "3ZzhV6JIDKWvWR7wiKWD0C"
+          },
+          {
+            "name": "Detroit Electro",
+            "description": "A subgenre of electro that originated in Detroit, known for its raw, energetic sound, often incorporating elements of funk, soul, and techno. Detroit Electro is characterized by its driving rhythms, prominent basslines, and a sense of gritty urban energy.",
+            "example": "Juan Atkins - No UFO's",
+            "spotify_track_id": "1Ro7L7RPp5P8heOfW4EQKA" 
+          },
+          {
+            "name": "Industrial Electro",
+            "description": "A blend of electro and industrial music, characterized by harsh, distorted sounds, repetitive rhythms, and a sense of mechanical, often dystopian atmosphere. Industrial Electro incorporates elements of noise music and industrial techno, creating a dark, intense, and experimental sound.",
+            "example": "Front 242 - Headhunter",
+            "spotify_track_id": "3iZIki3LcOtyY3Cg5DEllm" 
+          },
+          {
+            "name": "Synthwave Electro",
+            "description": "A retro-futuristic style of electro music inspired by 1980s synth-pop, film scores, and video game soundtracks, characterized by its use of vintage synthesizers, driving basslines, and a nostalgic, often melancholic atmosphere. Synthwave Electro blends classic electro sounds with a modern production sensibility, creating a retro-futuristic aesthetic.",
+            "example": "Kavinsky - Nightcall",
+            "spotify_track_id": "0U0ldCRmgCqhVvD6ksG63j"
+          },
+          {
+            "name": "Dark Electro",
+            "description": "A darker and more atmospheric subgenre of Electro, often characterized by sinister melodies, complex synth work, and a sense of brooding intensity. Dark Electro has a focus on creating unsettling and hypnotic soundscapes, drawing influences from industrial music and gothic themes.",
+            "example": "Hocico - Poltergeist",
+            "spotify_track_id": "41MMt30XQ95J4ynStyRPnM"
+          }
+        ]
+      },
     {
         "style": "House",
         "description": "House music is a genre of electronic dance music characterized by its repetitive 4/4 beats, soulful melodies, and heavy use of synthesizers, originating from Chicago in the early 1980s.",
@@ -1210,21 +1374,7 @@
             "name": "Synth-funk",
             "description": "A blend of funk and electronic synth sounds, often characterized by prominent use of synthesizers.",
             "example": "Chromeo - Fancy Footwork",
-            "spotify_track_id": "52VaYLDBhX5vNd8taZxA1R",
-            "substyles": [
-              {
-                "name": "Electro Funk",
-                "description": "A fusion of electronic music and funk, characterized by the use of drum machines and synthesizers.",
-                "example": "Zapp - More Bounce to the Ounce",
-                "spotify_track_id": "1LiwqqaafXkNQuWGW3HeId"
-              },
-              {
-                "name": "Electroclash",
-                "description": "A fusion of electro, punk, and synthpop, often with a retro, underground aesthetic.",
-                "example": "Fischerspooner - Emerge",
-                "spotify_track_id": "3vyKSb9sAdXl0kQ1KnS9fY"
-              }
-            ]
+            "spotify_track_id": "52VaYLDBhX5vNd8taZxA1R"
           }
         ]
       },
@@ -1246,12 +1396,6 @@
             "example": "Front 242 - Headhunter",
             "spotify_track_id": "3iZIki3LcOtyY3Cg5DEllm",
             "substyles": [
-              {
-                "name": "Dark Electro",
-                "description": "A subgenre of EBM with darker, more atmospheric soundscapes, often characterized by sinister melodies and complex synth work.",
-                "example": "Hocico - Poltergeist",
-                "spotify_track_id": "41MMt30XQ95J4ynStyRPnM"
-              },
               {
                 "name": "Futurepop",
                 "description": "A melodic, more accessible subgenre of EBM that combines industrial sounds with trance-like melodies and futuristic themes.",

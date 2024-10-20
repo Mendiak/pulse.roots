@@ -39,7 +39,7 @@ PulseRoots is an interactive visualization of electronic music genres and subgen
 
 ## Contributing
 
-Contributions to SonicRoots are welcome! If you'd like to contribute, please follow these steps:
+Contributions to PulseRoots are welcome! If you'd like to contribute, please follow these steps:
 
 1. Fork the repository
 2. Create a new branch (`git checkout -b feature/AmazingFeature`)
@@ -55,4 +55,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 For any questions, feedback, or issues, please open an issue on this repository.
 
-Enjoy exploring the world of electronic music with SonicRoots!
+Enjoy exploring the world of electronic music with PulseRoots!

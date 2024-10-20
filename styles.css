@@ -76,17 +76,12 @@ a[href^="mailto:"]:hover {
     stroke-width: 2px;
 }
 
-/* Target nodes with the class "clickable-node" */
 .clickable-node text:hover {
   cursor: pointer;
 }
-
-.node-background {
-  fill: #c7c7c7; /* Set background color */
-}
-
 #link {
   color: #333;
+  font-size: 14px;
 }
 
 #link:visited {
@@ -118,8 +113,7 @@ a[href^="mailto:"]:hover {
   #close-panel-container {
     display: flex;
     justify-content: flex-end; 
-    cursor: pointer;
-    
+    cursor: pointer;    
   }
   
   form {

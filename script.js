@@ -1,4 +1,4 @@
-// Función para obtener los datos del archivo JSON
+// Function to fetch data from the JSON file
 async function fetchData() {
     try {
       const response = await fetch('pulseroots.genres.json');
@@ -11,10 +11,11 @@ async function fetchData() {
   }
   
 
-  // Función para crear el árbol con D3.js
+  // Function to create the tree with D3.js
  function createTree(data) {
     const width = 1300;
     const height = 3000;
+    
 
     const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
@@ -89,9 +90,9 @@ async function fetchData() {
         const spotifyEmbed = document.getElementById('spotify-embed');
       
         infoContent.innerHTML = `
-          <h2>${d.data.name}</h2>
+          <h2><i class="bi bi-tag-fill"></i> ${d.data.name}</h2>
           <p>${d.data.description || 'No description available'}</p>
-          <p><b>Example track: ${d.data.example || 'N/A'}</b></p>
+          <p><i class="bi bi-soundwave"></i> <b>Example track: ${d.data.example || 'N/A'}</b></p>
         `;
       
         // Acceder correctamente al spotify_track_id
@@ -127,5 +128,5 @@ async function fetchData() {
     document.getElementById('info-panel').classList.remove('visible');
   });  
   
-// Llama a la función para obtener los datos
+// Call the function to fetch the data
 fetchData();
