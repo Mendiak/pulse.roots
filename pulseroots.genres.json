@@ -82,6 +82,36 @@
                 "spotify_track_id": "7GWJgWnYwrOod8jY6n4YxZ"
             },
             {
+                "name": "Generative Music",
+                "description": "Generative music is a genre that focuses on systems that produce music through algorithms and processes rather than traditional composition methods. It often uses software or hardware to create evolving, non-repeating soundscapes, allowing for unique auditory experiences.",
+                "example": "Holly Herndon - Godmother",
+                "spotify_track_id": "525KnXoHVcXF30vj1C43yi"
+            },
+            {
+                "name": "Deconstructed Club",
+                "description": "Deconstructed club is a genre that subverts the conventions of club music by breaking down and reinterpreting its elements. It often incorporates unexpected sounds, structures, and influences from various genres, challenging listeners' expectations of dance music.",
+                "example": "Arca - Nonbinary",
+                "spotify_track_id": "4lUlYGT5VvZWN3GBDIc9KT"
+            },
+            {
+                "name": "Post-Digital",
+                "description": "Post-digital music explores the relationship between digital technology and sound, often embracing imperfections and glitches as artistic elements. It reflects on the impact of digital culture and technology on music production and consumption.",
+                "example": "Rioji Ikeda - data.matrix",
+                "spotify_track_id": "5LchjLl8fQ0Nkrdf9yRlaE"
+            },
+            {
+                "name": "Algorithmic Composition",
+                "description": "Algorithmic composition uses algorithms and mathematical processes to create music. It often explores the intersection of art and technology, resulting in compositions that challenge traditional notions of creativity and authorship.",
+                "example": "Iannis Xenakis - Pithoprakta",
+                "spotify_track_id": "5xAz6m6XOw8Bq45C807cyL"
+            },
+            {
+                "name": "Sound Art",
+                "description": "Sound art is an artistic practice that explores sound as a medium, often blurring the lines between music and visual art. It includes installations, performances, and compositions that utilize sound to convey ideas, emotions, and experiences.",
+                "example": "Francisco Lopez - La Selva, Pt. 1",
+                "spotify_track_id": "7cHcsM6aVo4NCPkpL509BJ"
+            },
+            {
                 "name": "Microsound",
                 "description": "Experimental genre that works with very short and minimalist sounds.",
                 "example": "SND - 00020 a",
@@ -142,6 +172,12 @@
                 "description": "A genre that fuses funky synth lines with simplified rhythms, creating a minimalist and playful sound.",
                 "example": "Randy Barracuda - Skweee Like a Pig",
                 "spotify_track_id": "4wCWVoeOd4bIYICCp7bhqN"
+            },
+            {
+                "name": "Circuit Bending",
+                "description": "Circuit bending is an experimental music genre that involves the creative short-circuiting of electronic devices, such as toys and synthesizers, to create unique sounds and musical compositions. It often leads to unpredictable results, showcasing the potential of everyday electronics as instruments.",
+                "example": "C. Spencer Yeh - Mission: Lazy",
+                "spotify_track_id": "6UPBGlfpaypNut3zM0kedF"
             }
         ]
     },
@@ -332,11 +368,45 @@
             "spotify_track_id": "3vyKSb9sAdXl0kQ1KnS9fY"
           },
           {
+            "name": "Space Electro",
+            "description": "A futuristic subgenre of Electro that emphasizes atmospheric, space-like soundscapes, often inspired by science fiction and cosmic themes. It blends the classic electro sound with spacey synthesizers and ambient textures, creating a unique, futuristic sonic experience.",
+            "example": "Drexciya - Wavejumper",
+            "spotify_track_id": "3zDSNlxD62sMA7ymMy5SPM"
+          },
+          {
             "name": "Electrofunk",
             "description": "A blend of electro and funk music, characterized by the use of drum machines, synthesizers, and funky basslines, often featuring a high-energy and danceable feel. Electrofunk draws inspiration from both classic funk and electronic music, creating a groove-driven and futuristic sound.",
             "example": "Zapp - More Bounce to the Ounce",
-            "spotify_track_id": "3Ho35OJixLg20qshXRgfBs"
+            "spotify_track_id": "3Ho35OJixLg20qshXRgfBs",
+            "substyles": [
+                {
+                "name": "Boogie",
+                "description": "A genre that fuses funk, R&B, and disco with electronic elements, characterized by smooth melodies, syncopated rhythms, and a danceable groove.",
+                "example": "D-Train - You're the One for Me",
+                "spotify_track_id": "3BneMfYdo9X8m90BRhMzSL"
+                }
+      ]
           },
+          {
+            "name": "Miami Bass",
+            "description": "A booming, bass-heavy style of hip-hop and dance music that originated in Miami.",
+            "example": "2 Live Crew - Me So Horny",
+            "spotify_track_id": "3EgvmOhP3NQUHY7d6PDOUg",
+            "substyles": [
+                                    {
+                    "name": "Electro Bass",
+                    "description": "A fusion of Miami Bass with electro music, featuring prominent use of drum machines and synthesizers.",
+                    "example": "Egyptian Lover - Egypt, Egypt",
+                    "spotify_track_id": "6noajkkuZkla4d8E6sYUiY"
+                },
+                {
+                    "name": "Ghetto Bass",
+                    "description": "A raw, stripped-down variant of Miami Bass, often featuring explicit lyrics and minimal production.",
+                    "example": "DJ Assault - Ass N Titties",
+                    "spotify_track_id": "5y1OahNB1xZWNEWB6zgWzf"
+                }
+            ]
+        },
           {
             "name": "Electropop",
             "description": "A fusion of electro and pop music, characterized by catchy melodies, synthesized sounds, and a danceable beat, often featuring elements of synth-pop and electronic music. Electropop blends electronic instrumentation with pop song structures, resulting in a fun, energetic, and commercially appealing sound.",
@@ -782,27 +852,7 @@
         "example": "Baauer - Harlem Shake",
         "spotify_track_id": "01XFgRZfZI7oBagNf1Loml",
         "substyles": [
-            {
-                "name": "Miami Bass",
-                "description": "A booming, bass-heavy style of hip-hop and dance music that originated in Miami.",
-                "example": "2 Live Crew - Me So Horny",
-                "spotify_track_id": "3EgvmOhP3NQUHY7d6PDOUg",
-                "substyles": [
-                                        {
-                        "name": "Electro Bass",
-                        "description": "A fusion of Miami Bass with electro music, featuring prominent use of drum machines and synthesizers.",
-                        "example": "Egyptian Lover - Egypt, Egypt",
-                        "spotify_track_id": "6noajkkuZkla4d8E6sYUiY"
-                    },
-                    {
-                        "name": "Ghetto Bass",
-                        "description": "A raw, stripped-down variant of Miami Bass, often featuring explicit lyrics and minimal production.",
-                        "example": "DJ Assault - Ass N Titties",
-                        "spotify_track_id": "5y1OahNB1xZWNEWB6zgWzf"
-                    }
-                ]
-            },
-            {
+                        {
                 "name": "Drum and Bass",
                 "description": "Drum and Bass is a fast-paced genre of electronic music characterized by rapid breakbeats (typically between 160-180 BPM), heavy basslines, and intricate drum patterns, often featuring elements of jazz, reggae, and hip-hop influences.",
                 "example": "Goldie - Inner City Life",
@@ -1455,7 +1505,13 @@
                 "description": "A genre that emerged in the late 1970s, characterized by a blend of punk rock, pop, and electronic elements.",
                 "example": "The Cars - Just What I Needed",
                 "spotify_track_id": "4alHo6RGd0D3OUbTPExTHN"
-              }
+              },
+              {
+                "name": "Hyperpop",
+                "description": "Hyperpop is an ultramodern genre that blends elements of pop, electronic music, and experimental sounds, often featuring exaggerated vocal effects, playful melodies, and maximalist production. It is known for its vibrant aesthetics and ties to internet culture.",
+                "example": "100 gecs - Money Machine",
+                "spotify_track_id": "61bwFjzXGG1x2aZsANdLyl"
+            }
             ]
           },
           {
@@ -1464,6 +1520,12 @@
             "example": "Linkin Park - Somewhere I Belong",
             "spotify_track_id": "3fjmSxt0PskST13CSdBUFx",
             "substyles": [
+                {
+                    "name": "Post-Rock",
+                    "description": "Post-rock is a genre that combines elements of rock music with experimental and ambient sounds, often characterized by instrumental compositions that create atmospheric soundscapes.",
+                    "example": "Explosions in the Sky - Your Hand in Mine",
+                    "spotify_track_id": "4mZofk9oND0AA4sJfzTH0R"
+                },  
               {
                 "name": "Dance-punk",
                 "description": "A genre that blends elements of punk rock with electronic music, characterized by a danceable beat and a raw sound.",
@@ -1482,9 +1544,24 @@
             "name": "Dance-pop",
             "description": "A genre of pop music designed for danceability, characterized by upbeat tempos and catchy melodies.",
             "example": "Lady Gaga - Just Dance",
-            "spotify_track_id": "1dzQoRqT5ucxXVaAhTcT0J"
-          }
-        ]
+            "spotify_track_id": "1dzQoRqT5ucxXVaAhTcT0J",
+            "substyles": [
+                {
+                    "name": "Bubblegum Pop",
+                    "description": "A genre known for its upbeat, sugary-sweet melodies and catchy hooks, often aimed at a younger audience.",
+                    "example": "Aqua - Barbie Girl",
+                    "spotify_track_id": "6j2q49eDkR4LoeP3OhgWuC"
+                  },
+                  {
+                    "name": "Eurodance",
+                    "description": "A genre of electronic dance music that originated in the late 1980s and is known for its uptempo beats, catchy melodies, and use of vocal hooks.",
+                    "example": "Haddaway - What Is Love",
+                    "spotify_track_id": "7JkZ2hQdDonRURJjlMuh8q"
+                  }
+                ]
+        
+            }
+        ]    
       }
         
         

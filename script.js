@@ -3,10 +3,10 @@ async function fetchData() {
     try {
       const response = await fetch('pulseroots.genres.json');
       const data = await response.json();
-      console.log('Datos recibidos del archivo JSON:', data);
+      console.log('Received data from JSON:', data);
       createTree(data);
     } catch (error) {
-      console.error('Error al obtener los datos:', error);
+      console.error('Error obtaining data:', error);
     }
   }
   
@@ -60,7 +60,9 @@ async function fetchData() {
   
     const root = d3.hierarchy(hierarchicalData);
   
-    const treeLayout = d3.tree().size([height, width - 150]);
+    const treeLayout = d3.tree().size([height, width -200]);
+
+    const nodesToShow = root.descendants().slice(1);
 
   
     treeLayout(root);
@@ -74,12 +76,12 @@ async function fetchData() {
         .x(d => d.y)
         .y(d => d.x));
   
-    const node = svg.selectAll('.node')
-      .data(root.descendants())
-      .enter()
-      .append('g')
-      .attr('class', 'node')
-      .attr('transform', d => `translate(${d.depth === 0 ? d.y + 97: d.y},${d.x})`)
+        const node = svg.selectAll('.node')
+        .data(nodesToShow) // Bind the filtered data
+        .enter()
+        .append('g')
+        .attr('class', 'node')
+        .attr('transform', d => `translate(${d.y},${d.x})`)
       .attr('class', d => d.depth === 1 || d.depth === 2 || d.depth === 3 || d.depth === 4 ? 'node clickable-node' : 'node')
       .on('click', (event, d) => {
         if (d.depth === 0) {
@@ -120,8 +122,9 @@ async function fetchData() {
       .attr('dy', 3)
       .attr('x', d => d.children ? -8 : 8)
       .style('text-anchor', d => d.children ? 'end' : 'start')
-      .style('font-family', 'Arimo, sans-serif')
-      .text(d => d.data.name);
+      .style('font-family', 'Aleo, serif')
+      .style('font-size', '14px')
+      .text(d => d.depth === 0 ? '' : d.data.name);
   }
   
   document.getElementById('close-panel').addEventListener('click', () => {
