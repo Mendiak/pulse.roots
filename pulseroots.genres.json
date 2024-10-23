@@ -46,15 +46,105 @@
                         "description": "Acid IDM combines the sound of acid techno, characterized by the Roland TB-303 synthesizer, with IDM's intricate rhythms and experimental approach.",
                         "example": "Autechre - 444",
                         "spotify_track_id": "4WWwTDK9yKj3pizCXX46cY"
+                    },
+                    {
+                        "name": "Skweee",
+                        "description": "A genre that fuses funky synth lines with simplified rhythms, creating a minimalist and playful sound.",
+                        "example": "Randy Barracuda - Skweee Like a Pig",
+                        "spotify_track_id": "4wCWVoeOd4bIYICCp7bhqN"
                     }
                 ]
             },
             {
-                "name": "Glitch",
-                "description": "Experimental genre that uses errors and digital distortions as creative elements.",
-                "example": "Untitled - Oval",
-                "spotify_track_id": "3E3Qqp7ya4XGjiQezxDhRV"
+                "name": "Sound Manipulation & Digital Artifacts",
+                "description": "This category focuses on the use of digital artifacts, errors, and intentional manipulation of sound as creative tools.",
+                "example": "Oval - Track 5",
+                "spotify_track_id": "6NnMH7mWyo3HBL0AUsTjrB",
+                "substyles": [
+                    {
+                        "name": "Glitch",
+                        "description": "A genre that uses errors and digital distortions as creative elements.",
+                        "example": "Untitled - Oval",
+                        "spotify_track_id": "3E3Qqp7ya4XGjiQezxDhRV"
+                    },
+                    {
+                        "name": "Post-Digital",
+                        "description": "Explores the relationship between digital technology and sound, often embracing imperfections and glitches as artistic elements.",
+                        "example": "Rioji Ikeda - data.matrix",
+                        "spotify_track_id": "5LchjLl8fQ0Nkrdf9yRlaE"
+                    },
+                    {
+                        "name": "Sound Art",
+                        "description": "Sound art is an artistic practice that explores sound as a medium, often blurring the lines between music and visual art. It includes installations, performances, and compositions that utilize sound to convey ideas, emotions, and experiences.",
+                        "example": "Francisco Lopez - La Selva, Pt. 1",
+                        "spotify_track_id": "7cHcsM6aVo4NCPkpL509BJ"
+                    },
+                    {
+                        "name": "Microsound",
+                        "description": "Experimental genre that works with very short and minimalist sounds.",
+                        "example": "SND - 00020 a",
+                        "spotify_track_id": "6yLXHedDamHFMDl24xXFVp"
+                    },
+                    {
+                        "name": "Generative & Process Music",
+                        "description": "Focuses on music that is created through processes, systems, or algorithms, often without human intervention.",
+                        "example": "Autechre - Gantz Graf",
+                        "spotify_track_id": "5OyrWto6OxYrxHGm93W3fE",
+                        "substyles": [
+                            {
+                                "name": "Generative Music",
+                                "description": "Music produced by systems and algorithms, creating evolving, non-repeating soundscapes.",
+                                "example": "Holly Herndon - Godmother",
+                                "spotify_track_id": "525KnXoHVcXF30vj1C43yi"
+                            },
+                            {
+                                "name": "Algorithmic Composition",
+                                "description": "Uses algorithms and mathematical formulas to compose music.",
+                                "example": "Iannis Xenakis - Pithoprakta",
+                                "spotify_track_id": "5xAz6m6XOw8Bq45C807cyL"
+                            }
+                        ]
+                    }
+                ]
             },
+            {
+                "name": "Noise & Distortion",
+                "description": "These substyles embrace distortion, feedback, and other abrasive sound textures.",
+                "example": "Merzbow - Ultra Marine Blues",
+                "spotify_track_id": "7GWJgWnYwrOod8jY6n4YxZ",
+                "substyles": [
+                    {
+                        "name": "Lowercase",
+                        "description": "Focuses on very quiet, often barely perceptible sounds, amplifying micro-sounds.",
+                        "example": "Steve Roden - Forms of Paper",
+                        "spotify_track_id": "0kig7rUrfxhy7vNLyMTG2H"
+                    },
+                    {
+                        "name": "Circuit Bending",
+                        "description": "Circuit bending is an experimental music genre that involves the creative short-circuiting of electronic devices, such as toys and synthesizers, to create unique sounds and musical compositions. It often leads to unpredictable results, showcasing the potential of everyday electronics as instruments.",
+                        "example": "C. Spencer Yeh - Mission: Lazy",
+                        "spotify_track_id": "6UPBGlfpaypNut3zM0kedF"
+                    },
+                    {
+                        "name": "Power Electronics",
+                        "description": "Combines harsh industrial sounds with elements of noise and often provocative themes.",
+                        "example": "Throbbing Gristle - Discipline",
+                        "spotify_track_id": "0H63F35tOQd7zlQR8qyFDj"
+                    },
+                    {
+                        "name": "Harsh Noise Wall",
+                        "description": "Characterized by extremely dense and abrasive walls of sound, often relentless and overwhelming.",
+                        "example": "Vomir - _33T.Part1",
+                        "spotify_track_id": "7a1OLyuLYGyEhAXxPCscpV" 
+                    },
+                    {
+                        "name": "Japanoise",
+                        "description": "A subgenre originating in Japan known for its extreme use of feedback, harsh noise, and improvisational nature.",
+                        "example": "Masonna - Pt. 1",
+                        "spotify_track_id": "6T7B34BcN2BLZNzuEs1bjX" 
+                    }
+                ]
+            },  
             {
                 "name": "8-bit (Chiptune)",
                 "description": "8-bit music, or chiptune, is a style that uses sound chips from vintage computers and video game consoles to create electronic music. It's characterized by simple waveforms and limited polyphony, evoking a nostalgic sound reminiscent of early video game music.",
@@ -74,48 +164,26 @@
                         "spotify_track_id": "6OUTaPBccJY8UOkQxk9BmP"
                     }
                 ]
-            },            
+            },          
             {
-                "name": "Noise",
-                "description": "Experimental genre characterized by abrasive and distorted sounds.",
-                "example": "Merzbow - Ultra Marine Blues",
-                "spotify_track_id": "7GWJgWnYwrOod8jY6n4YxZ"
-            },
-            {
-                "name": "Generative Music",
-                "description": "Generative music is a genre that focuses on systems that produce music through algorithms and processes rather than traditional composition methods. It often uses software or hardware to create evolving, non-repeating soundscapes, allowing for unique auditory experiences.",
-                "example": "Holly Herndon - Godmother",
-                "spotify_track_id": "525KnXoHVcXF30vj1C43yi"
-            },
-            {
-                "name": "Deconstructed Club",
-                "description": "Deconstructed club is a genre that subverts the conventions of club music by breaking down and reinterpreting its elements. It often incorporates unexpected sounds, structures, and influences from various genres, challenging listeners' expectations of dance music.",
-                "example": "Arca - Nonbinary",
-                "spotify_track_id": "4lUlYGT5VvZWN3GBDIc9KT"
-            },
-            {
-                "name": "Post-Digital",
-                "description": "Post-digital music explores the relationship between digital technology and sound, often embracing imperfections and glitches as artistic elements. It reflects on the impact of digital culture and technology on music production and consumption.",
-                "example": "Rioji Ikeda - data.matrix",
-                "spotify_track_id": "5LchjLl8fQ0Nkrdf9yRlaE"
-            },
-            {
-                "name": "Algorithmic Composition",
-                "description": "Algorithmic composition uses algorithms and mathematical processes to create music. It often explores the intersection of art and technology, resulting in compositions that challenge traditional notions of creativity and authorship.",
-                "example": "Iannis Xenakis - Pithoprakta",
-                "spotify_track_id": "5xAz6m6XOw8Bq45C807cyL"
-            },
-            {
-                "name": "Sound Art",
-                "description": "Sound art is an artistic practice that explores sound as a medium, often blurring the lines between music and visual art. It includes installations, performances, and compositions that utilize sound to convey ideas, emotions, and experiences.",
-                "example": "Francisco Lopez - La Selva, Pt. 1",
-                "spotify_track_id": "7cHcsM6aVo4NCPkpL509BJ"
-            },
-            {
-                "name": "Microsound",
-                "description": "Experimental genre that works with very short and minimalist sounds.",
-                "example": "SND - 00020 a",
-                "spotify_track_id": "6yLXHedDamHFMDl24xXFVp"
+                "name": "Experimental Club / Avant-Club",
+                "description": "A subgenre that reconfigures and deconstructs traditional club music elements from genres like grime, jersey club, and reggaetón, resulting in innovative and unpredictable soundscapes. It often emphasizes breaking away from conventional club structures, incorporating fragmented beats, unexpected textures, and new sonic territories.",
+                "example": "SOPHIE - Faceshopping",
+                "spotify_track_id": "2rN1ODOsaNfYu782rw36jR",
+                "substyles": [
+                    {
+                        "name": "Deconstructed Club",
+                        "description": "Deconstructed club is a genre that subverts the conventions of club music by breaking down and reinterpreting its elements. It often incorporates unexpected sounds, structures, and influences from various genres, challenging listeners' expectations of dance music.",
+                        "example": "Arca - Nonbinary",
+                        "spotify_track_id": "4lUlYGT5VvZWN3GBDIc9KT"
+                    },
+                    {
+                        "name": "Textural Club",
+                        "description": "Focuses on fragmented textures and unconventional club rhythms.",
+                        "example": "Amnesia Scanner - AS Acá",
+                        "spotify_track_id": "6U80HaFsZZDVwtIzfrMhxQ"
+                    }
+                ]
             },
             {
                 "name": "Neoclassical",
@@ -160,24 +228,6 @@
                 "description": "Plunderphonics is a genre that involves the creative use of pre-existing audio samples from various sources to create new compositions, often manipulating these samples to challenge traditional notions of authorship and originality.",
                 "example": "John Oswald - Plexure",
                 "spotify_track_id": "7bY1ZKviM54MsGXfivxNnX"
-            },
-            {
-                "name": "Lowercase",
-                "description": "A genre that utilizes very quiet, often barely perceptible sounds, focusing on amplification of micro-sounds.",
-                "example": "Steve Roden - Forms of Paper",
-                "spotify_track_id": "0kig7rUrfxhy7vNLyMTG2H"
-            },
-            {
-                "name": "Skweee",
-                "description": "A genre that fuses funky synth lines with simplified rhythms, creating a minimalist and playful sound.",
-                "example": "Randy Barracuda - Skweee Like a Pig",
-                "spotify_track_id": "4wCWVoeOd4bIYICCp7bhqN"
-            },
-            {
-                "name": "Circuit Bending",
-                "description": "Circuit bending is an experimental music genre that involves the creative short-circuiting of electronic devices, such as toys and synthesizers, to create unique sounds and musical compositions. It often leads to unpredictable results, showcasing the potential of everyday electronics as instruments.",
-                "example": "C. Spencer Yeh - Mission: Lazy",
-                "spotify_track_id": "6UPBGlfpaypNut3zM0kedF"
             }
         ]
     },
@@ -1550,7 +1600,7 @@
                     "name": "Bubblegum Pop",
                     "description": "A genre known for its upbeat, sugary-sweet melodies and catchy hooks, often aimed at a younger audience.",
                     "example": "Aqua - Barbie Girl",
-                    "spotify_track_id": "6j2q49eDkR4LoeP3OhgWuC"
+                    "spotify_track_id": "5ZrDlcxIDZyjOzHdYW1ydr"
                   },
                   {
                     "name": "Eurodance",
