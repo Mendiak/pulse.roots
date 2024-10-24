@@ -71,7 +71,7 @@
                         "name": "Post-Digital",
                         "description": "Explores the relationship between digital technology and sound, often embracing imperfections and glitches as artistic elements.",
                         "example": "Rioji Ikeda - data.matrix",
-                        "spotify_track_id": "5LchjLl8fQ0Nkrdf9yRlaE"
+                        "spotify_track_id": "5ZmSq1xJbf1IptikZZgvJ6"
                     },
                     {
                         "name": "Sound Art",
@@ -270,8 +270,8 @@
                     {
                         "name": "Minimal Detroit Techno",
                         "description": "A stripped-back and minimalist approach to Detroit Techno.",
-                        "example": "Robert Hood - Minimal Nation",
-                        "spotify_track_id": "4vBBFo44z0W1hVpCBwcxUF"
+                        "example": "Robert Hood - Rhythm Of Vision",
+                        "spotify_track_id": "3PxI10OJhF7y9txEcEMukZ"
                     }
                 ]
             },
@@ -323,7 +323,7 @@
                         "name": "Deep Techno",
                         "description": "A deeper and more atmospheric take on minimal techno.",
                         "example": "Deepbass - Les Planes",
-                        "spotify_track_id": "4JBXPj21sTqOZvgQurUJoP"
+                        "spotify_track_id": "6evJpAEl3mQs8EnZPMvumL"
                     },
                     {
                         "name": "Click Techno",
@@ -360,8 +360,8 @@
                     {
                         "name": "Schranz",
                         "description": "A fast and distorted form of hard techno.",
-                        "example": "Chris Liebing - Evolution",
-                        "spotify_track_id": "4gLWFo7XDz3cNRV8qVqiK1"
+                        "example": "Chris Liebing & Andre Walter - Random Process",
+                        "spotify_track_id": "2bgZSsep97so4m8k2d5OEj"
                     },
                     {
                         "name": "Hardcore",
@@ -555,13 +555,13 @@
                         "name": "Funky Tech House",
                         "description": "Tech house with funky basslines and grooves, often incorporating elements of disco and funk.",
                         "example": "DJ Sneak - Untouchable Funk",
-                        "spotify_track_id": "5He9yPmPv0Du9hASUlTUjr"
+                        "spotify_track_id": "7lrMZnS3UBMpIsdd4ITN59"
                     },
                     {
                         "name": "Progressive Tech House",
                         "description": "Tech house with a progressive structure, building up tension and releasing it with melodic elements.",
                         "example": "Roger Sanchez- Another Chance",
-                        "spotify_track_id": "xxxxxxxx08fMRujpKhEDTanKN9l2udxxxxxxxxxxx"
+                        "spotify_track_id": "08fMRujpKhEDTanKN9l2ud"
                     },
                     {
                         "name": "Tribal Tech House",
@@ -703,7 +703,7 @@
                         "name": "Dark Progressive Trance",
                         "description": "Progressive Trance with darker and more atmospheric elements.",
                         "example": "Solarstone - Seven Cities",
-                        "spotify_track_id": "4GpHU6W6cPUa8tIk8EwBbY"
+                        "spotify_track_id": "5VIVZAQVSfJRD8f4XFbgBL"
                     },
                     {
                         "name": "Progressive Psytrance",
@@ -875,7 +875,7 @@
                         "name": "Microtonal Drone",
                         "description": "Drone ambient that explores microtonal tunings and unconventional harmonic relationships.",
                         "example": "Eliane Radigue - Trilogie de la Mort",
-                        "spotify_track_id": "2qLeLtVxS5N9A9B0qd1BC5"
+                        "spotify_track_id": "6SrDGaMF5zeQVoujQq4Pap"
                     }
                 ]
             },
@@ -918,7 +918,7 @@
                         "name": "Darkstep",
                         "description": "Subgenre of drum and bass with a darker and heavier sound.",
                         "example": "Dillinja - The Angels Fell",
-                        "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
+                        "spotify_track_id": "2KL9mHCn3aSZJzxpJM4HNb"
                     },
                     {
                         "name": "Techstep",
@@ -935,20 +935,20 @@
                             {
                             "name": "Liquid Funk",
                             "description": "Subgenre of liquid drum and bass with funk influences.",
-                            "example": "Makoto - Liquid Funk",
-                            "spotify_track_id": "4aBHhXUQH3Ot1EGo4wuEwP"
+                            "example": "Calibre - Even If",
+                            "spotify_track_id": "5nVkaIXaqQtoMX4V1jncdO"
                             },
                             {
                             "name": "Jazzstep",
                             "description": "Subgenre of liquid drum and bass with jazz influences.",
-                            "example": "Calibre - Souvenirs",
-                            "spotify_track_id": "6aPKlBXEHoSFHj4yDKBIAH"
+                            "example": "Roni Size & Reprazent - Brown Paper Bag",
+                            "spotify_track_id": "3ZQs8RHO3lPZoUwpavPENL"
                             },
                             {
                             "name": "Atmospheric Drum and Bass",
                             "description": "Subgenre of liquid drum and bass with a more ambient and atmospheric sound.",
-                            "example": "Alix Perez - Solace",
-                            "spotify_track_id": "4Ks7oDQcUriELlhBIIAWb0"
+                            "example": "LTJ Bukem - Atlantis",
+                            "spotify_track_id": "2527WUoKIauHY1tx5TCetu"
                             }
                         ]
                     },
@@ -967,14 +967,14 @@
                             {
                             "name": "Party Drum and Bass",
                             "description": "Subgenre of jump up with a more festive and lively sound.",
-                            "example": "Benny L - Boombox",
-                            "spotify_track_id": "5Uc8zK0KuC5AXlXrxhOr2F"
+                            "example": "Mampi Swift - The One",
+                            "spotify_track_id": "0fPfNeGh7ccq9i9ZAWiMBv"
                             },
                             {
                             "name": "Happy Jump Up",
                             "description": "Subgenre of jump up with a more cheerful and optimistic sound.",
-                            "example": "Kanine - Sunshine",
-                            "spotify_track_id": "7aBamUmJOy8jtfbBj8Xw9n"
+                            "example": "DJ Hazard - Mr. Happy",
+                            "spotify_track_id": "2vg5YDfcWlj4eK6wPPeCyu"
                             }
                         ]
                     }   
@@ -1198,7 +1198,7 @@
                         "name": "Philly club",
                         "description": "A regional variant of Baltimore club that originated in Philadelphia, often incorporating elements of hip-hop and R&B.",
                         "example": "DJ Sega - Colours",
-                        "spotify_track_id": "1wlL39JcPDjcUWwMdZS9Hd"
+                        "spotify_track_id": "10w5UHG7SqkVmy0XyN3p1F"
                     }
                 ]
             },

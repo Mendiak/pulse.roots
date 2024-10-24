@@ -1,18 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   margin: 0;
-  padding: 40px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  flex-direction: row;
+  flex-direction: column; 
   background-image: url('assets/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Aleo", serif;
+}
+
+#header-container {
+  background: linear-gradient(to right, #222, #333, #444);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px; 
+}
+
+#logo {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+#logo-link {
+  text-decoration: none; 
+  color: inherit; 
+  display: flex;
+  gap: 20px;
+  align-items: center; 
+}
+
+#logo:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+#social-share {
+  color: #fff;
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#social-share i {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+#social-share i:hover {
+  color: #a7a7a7;
+}
+
+#main-container {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
 }
 
 #tooltip {
@@ -28,20 +76,15 @@ body {
   color: #333;
 }
 
-#logo {
-  margin-top: 20px;
-  width: 100px;
-}
-
 h1 {
-  font-size: 40px;
-  font-family: "Arimo", sans-serif;
+  font-size: 24px;
+  color: #fff;
+  margin: 0;
 }
 
 p {
   font-size: 16px;
   }
-
 
 #treemap {
   max-width: 1200px;
@@ -139,4 +182,9 @@ p {
   #submitbutton:hover {
     background-color: #a7a7a7;
     color: #fff;
+  }
+
+  .social-share i {
+    color: #333;
+    font-size: 24px;
   }
