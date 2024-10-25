@@ -14,10 +14,12 @@ body {
 
 #header-container {
   background: linear-gradient(to right, #222, #333, #444);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px; 
+  margin-bottom: 40px;
 }
 
 #logo {
@@ -38,42 +40,34 @@ body {
   transform: rotate(10deg) scale(1.1);
 }
 
-#social-share {
-  color: #fff;
-  margin-left: auto;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-#social-share i {
-  color: #fff;
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-#social-share i:hover {
-  color: #a7a7a7;
-}
-
 #main-container {
   margin: 20px;
   display: flex;
   gap: 20px;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #tooltip {
   max-width: 350px;
-  min-width: 300px;
+  min-width: 250px;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   border-radius: 10px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: #333;
+}
+
+#spotify-login-link {
+  color: #333
+}
+
+#spotify-login-link:visited {
+  color: #686868
 }
 
 h1 {
@@ -87,8 +81,7 @@ p {
   }
 
 #treemap {
-  max-width: 1200px;
-  min-width: 300px;
+  min-width: 250px;
   height: auto;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -96,6 +89,7 @@ p {
   padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .node text {    
@@ -111,22 +105,13 @@ p {
 .clickable-node text:hover {
   cursor: pointer;
 }
-#link {
-  color: #333;
-  font-size: 14px;
-}
-
-#link:visited {
-  color: #7e7e7e;
-}
-
 #info-panel {
     position: fixed;
     bottom: 0;
     left: 0;
     height: auto;
     width: 90%;
-    max-width: 450px;
+    max-width: 500px;
     background-color: #dbdbdb;
     padding: 20px;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
@@ -135,56 +120,97 @@ p {
     border-top-right-radius: 10px;
   }
   
-  #info-panel.visible {
-    transform: translateY(0);
-  }
-  
-  #info-content {
-    margin-bottom: 15px;
-  }
-  
-  #close-panel-container {
-    display: flex;
-    justify-content: flex-end; 
-    cursor: pointer;    
-  }
-  
-  form {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+#info-panel.visible {
+  transform: translateY(0);
+}
 
-  input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: "Aleo", serif;
-  }
+#info-content {
+  margin-bottom: 15px;
+}
 
-  textarea {
-    min-height: 100px;
-  }
+#close-panel-container {
+  display: flex;
+  justify-content: flex-end;  
+}
 
-  #submitbutton {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: "Aleo", serif;
-  }
+#close-panel-container i {
+  cursor: pointer;
+}
 
-  #submitbutton:hover {
-    background-color: #a7a7a7;
-    color: #fff;
-  }
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  .social-share i {
-    color: #333;
-    font-size: 24px;
-  }
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Aleo", serif;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+#submitbutton {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Aleo", serif;
+}
+
+#submitbutton:hover {
+  background-color: #a7a7a7;
+  color: #fff;
+}
+
+footer {
+  background: linear-gradient(to right, #222, #333, #444);    color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 20px 50px;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer i {
+  margin-right: 10px;
+}
+
+#logoandlinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+#footer-logo {
+  display: flex;
+  min-width: 50px;
+}
+
+#social-share i {
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+#social-share i:hover {
+  color: #a7a7a7;
+}
