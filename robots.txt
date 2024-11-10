@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mendiak.github.io/pulse.roots/sitemap.xml

@@ -398,6 +398,18 @@
                                 "description": "A subgenre of hardcore techno that originated in France, characterized by its fast tempos, bouncy rhythms, and use of melodic elements. Frenchcore often blends hardcore's intensity with a more playful, upbeat vibe.",
                                 "example": "Dr. Peacock - Trip to Ireland",
                                 "spotify_track_id": "6u8pHCsBSo1rahkWXUxPzW"
+                            },
+                            {
+                                "name": "Makina",
+                                "description": "Makina is a Spanish subgenre of hardcore techno, primarily originating from the rave scenes of Valencia and Barcelona in the 1990s. It is known for its fast BPM, energetic beats, and an uplifting, melodic tone, often incorporating elements from trance and eurodance. Makina is popular in Spain and is characterized by its fast, upbeat rhythms and anthemic melodies.",
+                                "example": "Pont Aeri - Flying Free",
+                                "spotify_track_id": "5yqiverYlKEA0ly96HPq01"
+                            },
+                            {
+                                "name": "Bakalao",
+                                "description": "Bakalao is a Spanish electronic music style that emerged in the 1980s in Valencia, known for its underground, rebellious vibe. It incorporates elements of electronic body music (EBM), industrial, and techno, and is characterized by its dark, hypnotic sound, driving basslines, and raw energy. Bakalao is associated with the underground club scene in Spain, especially the iconic Ruta del Bakalao.",
+                                "example": "Megabeat - Es Imposible, No Puede Ser",
+                                "spotify_track_id": "1KYnJzAnz5p2ztWgesXPFQ"
                             }
                         ]
                     }    
@@ -439,7 +451,7 @@
           },
           {
             "name": "Miami Bass",
-            "description": "A booming, bass-heavy style of hip-hop and dance music that originated in Miami.",
+            "description": "Emerging from Miami in the 1980s, it blends hip-hop’s rhythmic vocal delivery with electro’s synthesized beats and electronic bass lines. The genre is marked by its deep, booming 808 bass, fast-paced rhythms, and party-centric themes, making it a staple in dance clubs and car audio culture. It has been especially influential in the evolution of Southern hip-hop and bass music.",
             "example": "2 Live Crew - Me So Horny",
             "spotify_track_id": "3EgvmOhP3NQUHY7d6PDOUg",
             "substyles": [
@@ -541,7 +553,7 @@
             },
             {
                 "name": "Tech House",
-                "description": "House style that combines elements of techno and house.",
+                "description": "Tech-house is a subgenre of electronic dance music that combines elements of techno and house. Known for its deep, driving basslines, steady four-on-the-floor beats, and minimalistic, repetitive melodies, tech-house often features crisp percussion and subtle, atmospheric sounds. It maintains the hypnotic groove of house music while incorporating the more refined, mechanical textures of techno. Emerging in the late 1990s, tech-house has become popular in underground and mainstream clubs alike for its ability to create an immersive, rhythmic experience that keeps dance floors moving for extended sets.",
                 "example": "Armand Van Helden - Give Me Your Loving",
                 "spotify_track_id": "0YHkveF54ugrMrMCjL8yBp",
                 "substyles": [
@@ -579,13 +591,13 @@
             },
             {
                 "name": "Garage House",
-                "description": "House style that originated in New York clubs.",
+                "description": "Garage house is a subgenre of house music that originated in the early 1980s in New York City, influenced by the soulful and gospel-inspired sound of disco. Known for its rich, soulful vocals, swing-influenced rhythms, and melodic basslines, garage house emphasizes emotional expression and groove. Its name comes from the legendary New York club Paradise Garage, where DJ Larry Levan helped shape the genre's sound. Garage house has a warm, uplifting vibe, combining deep, resonant bass with smooth, layered instrumentals and vocal harmonies, making it popular both in clubs and among dance music enthusiasts for its soulful, danceable style.",
                 "example": "Masters At Work - I Can't Get No Sleep",
                 "spotify_track_id": "7GGhRv9fDiows4YvP5JTE5",
                 "substyles": [
                         {
                         "name": "UK Garage",
-                        "description": "Originated in the UK, blending house, R&B, and jungle influences.",
+                        "description": "UK garage is a genre of electronic dance music that originated in the UK in the early 1990s, evolving from house, garage house, and jungle. Known for its shuffling, syncopated beats, vocal samples, and prominent basslines, UK garage often features chopped-up, pitch-shifted vocal snippets and a 'two-step' rhythm, where the kick drum pattern skips certain beats for a more off-kilter feel. The genre has a distinctively upbeat, bouncy sound and incorporates elements from R&B, hip-hop, and reggae. UK garage gave rise to various subgenres like grime, dubstep, and bassline, influencing the UK dance music scene deeply.",
                         "example": "Artful Dodger - Re-Rewind (feat. Craig David)",
                         "spotify_track_id": "4xXRTJXGxt7UBAVVOTV6ZN"
                         },
@@ -597,7 +609,7 @@
                         },
                         {
                         "name": "2-step Garage",
-                        "description": "Characterized by syncopated rhythms and soulful melodies.",
+                        "description": "2-step garage is a subgenre of UK garage characterized by its unique, syncopated rhythm where the traditional four-on-the-floor beat is replaced with a more complex, staggered pattern. Emerging in the late 1990s, 2-step garage typically features a prominent bassline, chopped-up vocal samples, and influences from R&B and jungle. The genre is defined by its'skipping' feel, as the beat often omits the kick on certain downbeats, creating a distinctive shuffle that feels both smooth and energetic. This style laid the groundwork for future genres like grime and dubstep, shaping the UK’s dance music scene with its innovative rhythms and soulful vibes.",
                         "example": "Wookie - Scrappy",
                         "spotify_track_id": "6BfGVU213AQzBv39g2IzOU"
                         },
@@ -615,7 +627,7 @@
                         },
                         {
                         "name": "Grime",
-                        "description": "A darker and more aggressive offshoot of UK Garage, with influences from drum and bass and hip-hop.",
+                        "description": "Grime is a genre of electronic music and rap that originated in London in the early 2000s, emerging from UK garage, jungle, and dancehall influences. Known for its aggressive, fast-paced beats (typically around 140 BPM) and raw, street-inspired lyrics, grime often features dark, minimalist production with heavy basslines, sharp synths, and syncopated rhythms. MCs play a central role in grime, delivering rapid-fire verses that touch on themes of urban life, resilience, and social issues. Artists like Dizzee Rascal, Wiley, and Skepta helped bring grime to prominence, making it a defining genre in UK music culture and a major influence on modern hip-hop and electronic music.",
                         "example": "Dizzee Rascal - I Luv U",
                         "spotify_track_id": "4OGZ8hbvwe6FsEzdh16vxj"
                         },
@@ -629,7 +641,7 @@
             },
             {
                 "name": "Chicago House",
-                "description": "Style that originated house music.",
+                "description": "Chicago house is a foundational genre of house music that emerged in the early 1980s in Chicago’s underground club scene, especially at venues like The Warehouse, where DJ Frankie Knuckles was a key figure. Characterized by its four-on-the-floor drum machine beats, soulful vocals, and repetitive, hypnotic basslines, Chicago house often incorporates synthesizers and samples from disco and funk. The genre is known for its raw, minimal production style and uplifting energy, which helped establish house music as a global phenomenon. Chicago house laid the groundwork for numerous house subgenres and continues to influence dance music worldwide.",
                 "example": "Marshall Jefferson - Move Your Body",
                 "spotify_track_id": "5eAymAmVU6CyejjFJxvcMI",
                 "substyles": [
@@ -641,7 +653,7 @@
                     },
                     {
                     "name": "Acid House",
-                    "description": "A subgenre of Chicago House that emerged in the mid-1980s, characterized by the squeaky, hypnotic sounds of the Roland TB-303 synthesizer.",
+                    "description": "Acid house is a subgenre of house music that emerged in the mid-1980s, known for its distinctive 'squelching' sound created by the Roland TB-303 bass synthesizer. Originating in Chicago but gaining massive popularity in the UK rave scene, acid house is characterized by its repetitive, hypnotic beats, minimalistic structure, and the signature, warbling 303 bassline, which gives it a trippy, psychedelic feel. Tracks typically feature stripped-back production and may include samples and vocal snippets, contributing to its entrancing and euphoric vibe. Acid house played a key role in shaping the late-1980s rave culture and remains a staple in electronic dance music.",
                     "example": "Phuture - Acid Trax",
                     "spotify_track_id": "2aLXJJ2zOsBJlGTxiG0yMi" 
                     },
@@ -659,7 +671,7 @@
                     },
                     {
                     "name": "Piano House",
-                    "description": "A subgenre of house music that prominently features piano riffs and melodies.",
+                    "description": "Piano house is a subgenre of house music that emerged in the late 1980s and early 1990s, characterized by its uplifting and melodic sound, with the piano as a central instrument. The genre features catchy, bright piano riffs and chord progressions, often accompanied by a steady four-on-the-floor beat, soulful vocals, and energetic basslines. Piano house draws influence from disco and Chicago house, with its emphasis on melody and harmony giving it a more feel-good, euphoric vibe. It became especially popular in the early 90s dance scene and continues to be a beloved subgenre for its uplifting and hands-in-the-air energy.",
                     "example": "Fingers Inc. - Can You Feel It",
                     "spotify_track_id": "4mNwbj8hTUjbyZSHdQVIuL"
                     }
@@ -675,13 +687,13 @@
         "substyles": [
             {
                 "name": "Goa Trance",
-                "description": "Trance style that originated in Goa, India, in the late 80s.",
+                "description": "Goa trance is a subgenre of trance music that originated in the late 1980s and early 1990s in the Goa region of India, where it was initially played at outdoor parties and raves. Known for its psychedelic and spiritual influences, Goa trance features intricate, layered synth melodies, fast-paced tempos (typically around 130-150 BPM), and deep, rolling basslines. The genre is marked by its use of evolving, hypnotic sequences and trippy, atmospheric sounds, often including samples from Indian and Eastern music, along with psychedelic and cosmic themes. Goa trance played a pivotal role in the development of the global psychedelic trance scene and remains a classic in the trance community for its vibrant, energetic, and otherworldly vibe.",
                 "example": "LSD - Hallucinogen",
                 "spotify_track_id": "5V3UMwDGWho9MvjAtMLkZv",
                 "substyles": [
                 {
                     "name": "Psychedelic Goa",
-                    "description": "A more psychedelic-oriented subgenre of Goa Trance.",
+                    "description": "Psychedelic Goa, often just referred to as Goa trance, evolved from the original Goa trance sound in the mid-1990s and became more intense, experimental, and psychedelic. It features faster tempos (usually around 140-150 BPM), complex, evolving melodies, and heavily distorted, mind-bending synths. The genre is known for its deep basslines, intricate percussion, and hypnotic, trance-like qualities that create an immersive experience. Psychedelic Goa incorporates more psychedelic and surreal soundscapes, often with cosmic, spiritual, or surreal themes, and includes elements like voice samples, glitchy effects, and acid-like sounds. It became the foundation for the broader psychedelic trance movement, characterized by its high-energy, trippy atmospheres, and focus on inducing altered states of consciousness during raves and festivals.",
                     "example": "Astral Projection - Mahadeva",
                     "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp"
                 }
@@ -715,7 +727,7 @@
             },  
             {
                 "name": "Psytrance",
-                "description": "Trance style characterized by its more psychedelic and rhythmic sound.",
+                "description": "Psytrance (short for psychedelic trance) is a subgenre of trance music that emerged in the early 1990s, heavily influenced by Goa trance and psychedelic rock. Known for its fast tempos (usually 140-150 BPM), intricate, layered rhythms, and deep basslines, psytrance creates a hypnotic, otherworldly atmosphere. It often features psychedelic sound effects, distorted synths, and evolving, mind-bending melodies that aim to induce an altered state of consciousness. Psytrance is marked by its intense, high-energy vibe, with themes of spirituality, the cosmos, and psychedelia. The genre is popular in outdoor festivals and rave scenes, where its immersive, trance-like qualities enhance the experience of the music and its listeners.",
                 "example": "Infected Mushroom - Becoming Insane",
                 "spotify_track_id": "22DnBQIIXFPJNRGuNjWlSg",
                 "substyles": [
@@ -733,7 +745,7 @@
                 },
                 {
                     "name": "Suomisaundi",
-                    "description": "A Finnish style of Psytrance known for its quirky sounds.",
+                    "description": "Suomisoundi (or Suomi trance) is a subgenre of psychedelic trance that originated in Finland in the late 1990s. Known for its experimental, eclectic, and often quirky sound, suomisoundi blends elements of traditional psytrance with a unique, offbeat approach. It features distorted basslines, fast tempos (around 140-150 BPM), and layered, psychedelic melodies, but with a more playful, unconventional style. The music often incorporates humorous or surreal samples, unexpected breaks, and strange sound effects, creating a fun and unpredictable listening experience. Suomisoundi stands out for its sense of freedom and individuality, making it a favorite within niche psychedelic trance circles, with a focus on creativity and a less-polished, more 'raw' vibe compared to other psytrance subgenres.",
                     "example": "Shiva Chandra - Return To Atlantis",
                     "spotify_track_id": "3FsCBkbh8xIaCcnCXJ85iT"
                 }
@@ -861,7 +873,7 @@
             },
             {
                 "name": "Drone Ambient",
-                "description": "Minimalist ambient music characterized by long, sustained sounds and drones, often creating a hypnotic and immersive listening experience.",
+                "description": "Drone ambient is a subgenre of ambient music characterized by long, sustained sounds or 'drones' that evolve slowly over time, creating a deep, immersive atmosphere. The music often features minimalistic structures, with little or no rhythmic elements, focusing instead on texture, tone, and the subtle movement of sound. Drone ambient can include natural field recordings, electronic sounds, or manipulated acoustic instruments, creating a vast, spacey environment. The genre emphasizes mood and emotion over melody or harmony, often inducing a meditative, trance-like state. It is typically used to evoke a sense of stillness, introspection, or vast, open spaces. Drone ambient can range from serene and soothing to intense and enveloping, making it ideal for background listening, relaxation, or deep focus.",
                 "example": "Stars of the Lid - Requiem for Dyning Mothers Pt. 2",
                 "spotify_track_id": "7m2iqOIBuCT0XvMkv4wYNv",
                 "substyles": [
@@ -982,13 +994,13 @@
             },
             {
                 "name": "Footwork",
-                "description": "Fast-paced electronic dance music style originating from Chicago, characterized by rapid rhythms and repetitive vocal samples.",
+                "description": "Footwork is a genre of electronic dance music that originated in Chicago in the early 2000s, evolving from juke music and heavily influenced by hip-hop and house. Known for its rapid, syncopated beats (typically around 160 BPM), footwork features complex, stuttering rhythms, fast-paced percussion, and energetic, bass-heavy production. The genre is often associated with the dance style of the same name, which involves quick, intricate foot movements and spins. Footwork tracks are typically short, with chopped-up vocal samples and glitchy, experimental sounds, creating a unique, fragmented musical experience. It has gained significant recognition in underground and experimental dance scenes, influencing modern genres like juke, trap, and electronic music.",
                 "example": "DJ Rashad - Double Cup",
                 "spotify_track_id": "4PocwPW14IfS0EFBME3Hk1",
                 "substyles": [
                 {
                     "name": "Juke",
-                    "description": "A precursor to footwork, characterized by its fast tempo and repetitive vocal samples.",
+                    "description": "Juke is a fast-paced electronic dance genre from Chicago, typically around 160 BPM. It features syncopated rhythms, deep basslines, and chopped-up vocal samples. Known for its energetic, raw sound, juke focuses on rhythm and movement, often accompanying fast, intricate footwork dance styles. It is a precursor to footwork and has influenced bass-heavy electronic music.",
                     "example": "DJ Funk - Run",
                     "spotify_track_id": "09OzrUfjdciGFbVlnjUqwk"
                 },
