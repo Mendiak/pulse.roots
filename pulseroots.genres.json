@@ -7,7 +7,7 @@
         "substyles": [
             {
                 "name": "IDM (Intelligent Dance Music)",
-                "description": "IDM is a genre of electronic music characterized by complex rhythms, intricate melodies, and experimental sound design, often blending elements of ambient, techno, and breakbeat. It emphasizes creativity and innovation, appealing to listeners who appreciate music that is both cerebral and danceable.",
+                "description": "IDM (Intelligent Dance Music) is a genre of electronic music that emerged in the early 1990s, characterized by its complex, experimental approach to rhythm, structure, and sound design. IDM blends elements of ambient, techno, and drum and bass with intricate, often unconventional beats and intricate melodies, creating a sound that is both cerebral and emotionally expressive. Unlike mainstream dance music, which focuses on maintaining a consistent groove for the dancefloor, IDM is more about pushing the boundaries of sound and rhythm, using glitchy effects, irregular time signatures, and abstract compositions. The genre often features atmospheric soundscapes, intricate layers of synths, and sampled sounds. IDM is intended to be listened to and appreciated as much for its innovative production as for its potential to be danced to. Pioneering artists of IDM include Autechre, Aphex Twin, Squarepusher, and Boards of Canada.",
                 "example": "Aphex Twin - Windowlicker",
                 "spotify_track_id": "409z4jUHpq7eIkg3N3FzZh",
                 "substyles": [
@@ -179,7 +179,7 @@
                     },
                     {
                         "name": "Textural Club",
-                        "description": "Focuses on fragmented textures and unconventional club rhythms.",
+                        "description": "Textural Club is a subgenre of electronic dance music that emphasizes intricate, atmospheric sound design and immersive textures while maintaining a club-friendly rhythm. It blends elements of ambient, experimental, and minimal electronic music with the steady, danceable beats typically found in club tracks. The genre prioritizes creating rich, evolving soundscapes, often using effects like reverb, delay, and distortion to shape the texture of the music. The rhythms are typically more subdued or hypnotic compared to more mainstream club genres like house or techno, creating a balance between rhythm and mood. Textural club music is designed for both the dancefloor and deep listening, focusing on the emotional and sonic qualities of the music, rather than catchy melodies or anthemic hooks. Artists in this genre often experiment with unconventional production techniques, pushing the boundaries of sound while maintaining a groove suitable for club environments.",
                         "example": "Amnesia Scanner - AS Acá",
                         "spotify_track_id": "6U80HaFsZZDVwtIzfrMhxQ"
                     }
@@ -213,7 +213,7 @@
             },            
             {
                 "name": "Musique Concrète",
-                "description": "A genre that utilizes recorded sounds from everyday life as its primary musical material.",
+                "description": "Musique concrète is an experimental music genre that emerged in the 1940s, using recorded sounds—such as environmental noises, spoken word, and mechanical sounds—as raw material for composition. Unlike traditional music that relies on instruments, it focuses on manipulating these recordings through techniques like splicing, looping, and distortion to create new sound textures. Pioneered by French composer Pierre Schaeffer, musique concrète emphasizes the creative arrangement of sound itself rather than melody or harmony, and is considered a precursor to modern electronic music and sound art. Its innovative use of everyday noises transformed the landscape of music composition and studio production.",
                 "example": "Pierre Schaeffer - Étude aux chemins de fer",
                 "spotify_track_id": "4wqon5GBOGvgVpD8Cu4qAN" 
             },
@@ -321,13 +321,13 @@
                     },
                     {
                         "name": "Deep Techno",
-                        "description": "A deeper and more atmospheric take on minimal techno.",
+                        "description": "Deep Techno is a subgenre of techno that emphasizes a more atmospheric and introspective approach to the traditional techno sound. It blends the repetitive, hypnotic rhythms of techno with deep basslines, spacious, ambient soundscapes, and subtle, evolving textures. The genre is typically slower and more minimal, with a focus on creating a smooth, immersive atmosphere rather than high-energy beats. Deep techno often uses reverb, delay, and atmospheric effects to evoke a sense of space and mood, making it suitable for both the dancefloor and reflective listening. It prioritizes mood and depth, offering a more meditative or groovy experience compared to other more intense or aggressive techno subgenres.",
                         "example": "Deepbass - Les Planes",
                         "spotify_track_id": "6evJpAEl3mQs8EnZPMvumL"
                     },
                     {
                         "name": "Click Techno",
-                        "description": "A subgenre of minimal techno characterized by its use of clicks and other rhythmic noises.",
+                        "description": "Click Techno is a minimal subgenre of techno that focuses on highly detailed, percussive rhythms, often featuring sharp, 'clicking' sounds, subtle glitches, and mechanical noises as the primary elements of the music. The beats are typically sparse, emphasizing texture and intricacy over melody or harmony. This style of techno relies on precision and experimentation with small sonic details, creating a hypnotic, almost tactile listening experience. It is known for its clean, mechanical aesthetic, where the emphasis is placed on the micro-level manipulation of sound, rather than big, sweeping arrangements. The result is a minimal, but rhythmically engaging sound that can be both challenging and immersive.",
                         "example": "Thomas Brinkmann - Walk With Me",
                         "spotify_track_id": "5d3pcpimwrVpSc4uXtDKMW"
                     },
@@ -347,19 +347,19 @@
                 "substyles": [
                     {
                         "name": "Hard Acid",
-                        "description": "A fusion of hard techno and acid techno.",
+                        "description": "Hard Acid is a subgenre of acid techno that amplifies the intense, squelchy sounds of the classic 303 bassline, pushing them to more aggressive and distorted extremes. It features fast tempos, heavy bass, and sharp, acidic synthesizer lines that are often manipulated and modulated for a raw, abrasive sound. The genre retains the trippy, hypnotic qualities of acid techno but adds a darker, more industrial edge with harder, punchier kicks and more intense sound design. Hard acid is focused on creating a relentless, high-energy atmosphere that appeals to those who enjoy intense, gritty acid sounds with a driving, hard-hitting rhythm.",
                         "example": "Phuture - Acid Trax",
                         "spotify_track_id": "5j72kVstS2gHKl8zWJDNz0"
                     },
                     {
                         "name": "Industrial Techno",
-                        "description": "A darker and more industrial-influenced form of hard techno.",
+                        "description": "Industrial Techno blends the mechanical, harsh sounds of industrial music with the repetitive rhythms of techno. It is characterized by abrasive, distorted kicks, metallic percussion, and dark, atmospheric elements that create a sense of tension and power. Industrial techno often incorporates noisy, experimental textures, broken beats, and dystopian soundscapes, creating an intense and unsettling atmosphere. The genre emphasizes a raw, underground aesthetic, and while it shares techno’s focus on rhythm and movement, industrial techno adds an abrasive, industrial quality that sets it apart, often making it suited for darker, more intense dancefloor environments.",
                         "example": "Karl O Connor & Peter Sutton - Join Us In Paradise",
                         "spotify_track_id": "7qrl3pKShTMOVq3pQqVLnQ"
                     },
                     {
                         "name": "Schranz",
-                        "description": "A fast and distorted form of hard techno.",
+                        "description": "Schranz is a hard, industrial-influenced subgenre of techno that emerged in the late 1990s. It is characterized by its fast tempo, aggressive, pounding basslines, and a raw, unpolished sound. Schranz often features distorted, repetitive kick drums and abrasive, metallic textures, creating an intense, driving rhythm that’s designed to dominate the dancefloor. The genre focuses on power and energy, with a focus on minimal but powerful elements like distorted percussion and industrial-style sound design. It tends to be more abrasive and less melodic than other forms of techno, with an emphasis on heavy, relentless beats and harsh soundscapes.",
                         "example": "Chris Liebing & Andre Walter - Random Process",
                         "spotify_track_id": "2bgZSsep97so4m8k2d5OEj"
                     },
@@ -457,24 +457,18 @@
             "substyles": [
                                     {
                     "name": "Electro Bass",
-                    "description": "A fusion of Miami Bass with electro music, featuring prominent use of drum machines and synthesizers.",
+                    "description": "Electro Bass is a subgenre of electronic music that combines elements of electro, bass music, and funk. It is characterized by heavy, syncopated basslines, electronic beats, and a strong emphasis on rhythm and groove. The bass often has a deep, vibrating quality, with the use of analog or synthesized sounds that give it a punchy, energetic feel. Electro bass incorporates futuristic, robotic soundscapes and glitchy effects, while often maintaining a danceable, club-ready rhythm. It draws influences from early electro, Miami bass, and other bass-heavy genres, creating an intense, high-energy sound that is both rhythmic and experimental.",
                     "example": "Egyptian Lover - Egypt, Egypt",
                     "spotify_track_id": "6noajkkuZkla4d8E6sYUiY"
                 },
                 {
                     "name": "Ghetto Bass",
-                    "description": "A raw, stripped-down variant of Miami Bass, often featuring explicit lyrics and minimal production.",
+                    "description": "Ghetto Bass is a subgenre of bass music that originated in urban and underground scenes, characterized by its heavily syncopated, low-frequency basslines and hip-hop-inspired rhythms. It incorporates elements from genres like Miami bass, electro, and hip-hop, but with a focus on raw, unpolished, and gritty sound. The bass is often deep and distorted, with rhythms that are designed to be energetic and heavy, while the production tends to have a rough, underground quality. Ghetto bass often incorporates samples, vocal chops, and beats that give it a street-level, dancefloor-oriented vibe, blending electronic music with hip-hop’s swagger and attitude.",
                     "example": "DJ Assault - Ass N Titties",
                     "spotify_track_id": "5y1OahNB1xZWNEWB6zgWzf"
                 }
             ]
         },
-          {
-            "name": "Electropop",
-            "description": "A fusion of electro and pop music, characterized by catchy melodies, synthesized sounds, and a danceable beat, often featuring elements of synth-pop and electronic music. Electropop blends electronic instrumentation with pop song structures, resulting in a fun, energetic, and commercially appealing sound.",
-            "example": "Daft Punk -  Around the World",
-            "spotify_track_id": "1pKYYY0dkg23sQQXi0Q5zN"
-          },
           {
             "name": "French Electro",
             "description": "A subgenre of electro that emerged in France in the late 1980s and early 1990s, characterized by its minimalist approach, repetitive rhythms, and use of synthesizers to create a hypnotic and atmospheric sound. French electro often features a darker, more industrial feel than traditional electro, exploring a minimalist and experimental approach to electronic music.",
@@ -1020,7 +1014,7 @@
                 "substyles": [
                     {
                         "name": "Brostep",
-                        "description": "Dubstep style characterized by its more aggressive and distorted sound.",
+                        "description": "Brostep is a subgenre of dubstep that emerged in the late 2000s, primarily in the U.S., and is known for its aggressive, high-energy sound. Characterized by heavy, wobbling basslines, sharp synths, and intense drops, brostep often features distorted, 'growling' bass sounds and complex, rapid-fire rhythms. Unlike traditional dubstep, which is darker and more atmospheric, brostep emphasizes loud, punchy production and dramatic builds and drops, making it popular in festival and club settings. Artists like Skrillex helped bring brostep into the mainstream, giving it a prominent place in modern electronic music.",
                         "example": "Skrillex - Scary Monsters and Nice Sprites",
                         "spotify_track_id": "5q8oybjZelukF4h0CzSUN9",
                         "substyles": [
@@ -1054,7 +1048,7 @@
                     },
                     {
                         "name": "UK Dubstep",
-                        "description": "The original style of dubstep that emerged in the UK, known for its deep basslines and minimal, dark rhythms.",
+                        "description": "UK dubstep is a subgenre of electronic dance music that originated in South London in the early 2000s. Known for its dark, bass-heavy sound, UK dubstep typically features syncopated rhythms, deep sub-bass frequencies, and minimal, spacious production. Tracks are usually around 140 BPM and often include elements like wobbling basslines, skittering hi-hats, and haunting, atmospheric sounds. UK dubstep focuses on creating a deep, immersive vibe, often with a restrained, almost meditative feel. Early pioneers like Skream, Benga, and Digital Mystikz helped establish dubstep as a defining sound in UK electronic music, influencing genres like grime and later styles like brostep.",
                         "example": "Skream - Midnight Request Line",
                         "spotify_track_id": "6saiu3uHwIpzPl8GKtRRNR",
                         "substyles": [
@@ -1074,7 +1068,7 @@
                     },
                     {
                         "name": "Riddim",
-                        "description": "A style of dubstep that emphasizes repetitive, minimalistic basslines and rhythms.",
+                        "description": "Riddim is a subgenre of dubstep that focuses on repetitive, rhythmic bass patterns and minimalistic, syncopated beats. Emerging in the mid-2010s, riddim is characterized by its slower tempos (usually around 140 BPM) and 'wobbly' basslines that create a hypnotic, groove-driven sound. It often features stripped-back production, with fewer melodic elements, letting the bass and rhythm take center stage. Known for its heavy, deep drops and head-nodding flow, riddim has a darker, more underground vibe than mainstream dubstep, resonating in the bass music scene and frequently played in dubstep and EDM festivals.",
                         "example": "Subtronics - Wook Laser",
                         "spotify_track_id": "3qavwet0IxIpsUqKQ6vlSj",
                         "substyles": [
@@ -1116,7 +1110,7 @@
             },
             {
                 "name": "Future bass",
-                "description": "A style of electronic dance music characterized by synthesized bass lines and influences from trap, R&B, and pop.",
+                "description": "Future bass is a subgenre of electronic dance music known for its bright, uplifting sound and emotional, melodic focus. Originating in the early 2010s, future bass typically features lush, modulated synths, side-chained chords, and smooth, pitch-shifting basslines. The genre often incorporates catchy, pop-influenced melodies and vibrant, high-energy drops, creating an atmospheric yet energetic feel. Future bass tracks are usually set around 140 BPM but can vary, and they emphasize a “wavy” or “bouncy” sound that feels dynamic and uplifting. Artists like Flume and Marshmello helped popularize future bass, which has since become a favorite in both pop and electronic dance music for its feel-good, euphoric vibes.",
                 "example": "Flume - Never Be Like You feat. Kai",
                 "spotify_track_id": "476j7IDRIDRvv1Xu71EVc8",
                 "substyles": [
@@ -1130,7 +1124,7 @@
             },
             {
                 "name": "Jungle",
-                "description": "A genre of electronic music characterized by fast breakbeats and heavy bass lines.",
+                "description": "Jungle is a high-energy subgenre of electronic dance music that emerged in the UK in the early 1990s, blending elements of reggae, dancehall, and hip-hop with fast, breakbeat rhythms. Known for its rapid tempos (usually 160-180 BPM), jungle is characterized by heavily syncopated, chopped-up drum patterns, often using the iconic “Amen break” sample, along with deep, rolling basslines and reggae-inspired vocal samples. Jungle’s gritty, raw sound and complex rhythms make it intense and immersive, laying the groundwork for drum and bass and influencing much of the UK’s rave and bass music scenes.",
                 "example": "Shy FX - Original Nuttah 25",
                 "spotify_track_id": "55K24vPjLgAX8yLAq8fErj",
                 "substyles": [
@@ -1162,7 +1156,7 @@
             },
             {
                 "name": "UK bass",
-                "description": "An umbrella term for various bass-heavy electronic music styles originating from the UK, including dubstep, grime, and garage.",
+                "description": "UK bass is an umbrella term for a variety of bass-heavy electronic music styles that emerged from the UK in the late 2000s, drawing influences from genres like dubstep, garage, grime, and drum and bass. Known for its deep, powerful basslines and diverse tempos, UK bass often incorporates syncopated rhythms, heavy sub-bass, and elements from house and techno. It’s less about a specific tempo or structure and more about the emphasis on bass and groove, blending elements from various UK underground scenes. UK bass has become a staple in club music, appealing to listeners with its innovative, genre-blurring sound and versatility.",
                 "example": "Burial - Archangel",
                 "spotify_track_id": "6evpAJCR5GeeHDGgv3aXb3"
             },
@@ -1190,25 +1184,25 @@
         "substyles": [
             {
                 "name": "Acid breaks",
-                "description": "A fusion of breakbeat and acid house, featuring the distinctive sound of the Roland TB-303 synthesizer.",
+                "description": "Acid breaks is a subgenre of electronic dance music that fuses the squelchy, acid-inspired sounds of the Roland TB-303 synthesizer with breakbeat rhythms. Emerging in the 1990s, acid breaks combines the funky, syncopated beats of breakbeat with the hypnotic, looping basslines and trippy effects characteristic of acid house. Tracks often have a gritty, raw energy, featuring complex drum patterns, distorted synths, and psychedelic elements that create an intense, danceable groove. Acid breaks is popular in underground scenes, known for its high-energy feel and the fusion of acid’s otherworldly sounds with breakbeat’s rhythmic complexity.",
                 "example": "Plump DJs - The Push",
                 "spotify_track_id": "6GO7a7NDTTT8noTZXYn602"
             },
             {
                 "name": "Baltimore club",
-                "description": "A style of breakbeat house music that originated in Baltimore, known for its aggressive tempos and heavy bass.",
+                "description": "Baltimore club is a high-energy genre of electronic dance music that originated in Baltimore, Maryland, in the late 1980s. Known for its distinctive 'boom-boom-clap' beat pattern, Baltimore club combines elements of hip-hop, house, and breakbeat, typically at a tempo of around 130 BPM. The genre often features chopped-up vocal samples, repetitive, catchy hooks, and bass-heavy production, creating a raw, infectious groove designed for dance floors. Baltimore club tracks are frequently simple and short, focusing on rhythm and movement, and the genre has become influential in regional dance scenes and beyond for its fun, fast-paced style and gritty, DIY aesthetic.",
                 "example": "Rod Lee - Dance My Pain Away",
                 "spotify_track_id": "2sZrEIyHRqzEB4sBw8X9Jh",
                 "substyles": [
                     {
                         "name": "Jersey club",
-                        "description": "A faster, more aggressive offshoot of Baltimore club that originated in Newark, New Jersey.",
+                        "description": "Jersey club is an energetic, bass-heavy genre of dance music that originated in New Jersey in the early 2000s. Known for its fast, bouncy rhythms (typically around 130-140 BPM), Jersey club features a 'kick pattern' where heavy bass kicks are arranged in a syncopated, stuttering style. The genre often includes chopped-up vocal samples, rapid loops, and call-and-response elements, creating a playful, high-energy feel. Jersey club draws from Baltimore club music but incorporates its own unique dance-focused elements, such as signature 'bed squeak' samples. It’s popular in dance scenes and social media for its infectious, rhythmic grooves and has a strong DIY and party-oriented culture.",
                         "example": "DJ Sliink - Vibrate",
                         "spotify_track_id": "7gorDn4T7LPOFDHzKBvkNo"
                     },
                     {
                         "name": "Philly club",
-                        "description": "A regional variant of Baltimore club that originated in Philadelphia, often incorporating elements of hip-hop and R&B.",
+                        "description": "Philly club is a genre of electronic dance music that originated in Philadelphia in the late 1990s and early 2000s. Similar to Baltimore and Jersey club, Philly club features fast-paced, bass-heavy beats, but it’s distinguished by its use of syncopated rhythms, heavy drum kicks, and a signature “stuttering” vocal style. The genre often incorporates chopped-up and pitch-shifted vocal samples, creating a playful, energetic vibe that drives the dance floor. Philly club music tends to have a more soulful, deeper groove compared to its counterparts, with influences from house and hip-hop. The genre is known for its emphasis on rhythm and danceability, making it a staple in Philly’s club scene.",
                         "example": "DJ Sega - Colours",
                         "spotify_track_id": "10w5UHG7SqkVmy0XyN3p1F"
                     }
@@ -1216,7 +1210,7 @@
             },
             {
                 "name": "Big beat",
-                "description": "A style of electronic music that typically uses heavy breakbeats and synthesizer-generated loops and patterns.",
+                "description": "Big beat is a genre of electronic music that emerged in the mid-1990s, characterized by its blend of heavy, breakbeat rhythms, distorted basslines, and rock-influenced elements. Big beat tracks often feature upbeat, looped drum samples, funky basslines, and the incorporation of elements from genres like hip-hop, industrial, and acid house. The genre is known for its energetic, aggressive sound and its ability to cross over into mainstream music, often featuring catchy, sampled vocal snippets and driving, rhythmic intensity. Artists like The Chemical Brothers, Fatboy Slim, and The Prodigy helped popularize big beat in the 90s, making it a defining sound in the era of rave and alternative dance music.",
                 "example": "The Chemical Brothers - Hey Boy Hey Girl",
                 "spotify_track_id": "7kXmJwrZGIhDaLT9sNo3ut",
                 "substyles": [
@@ -1236,7 +1230,7 @@
             },
             {
                 "name": "Breakbeat hardcore",
-                "description": "An early style of hardcore electronic dance music that emerged in the UK in the early 1990s.",
+                "description": "Breakbeat hardcore is a genre of electronic dance music that originated in the early 1990s in the UK, blending elements of hardcore techno and breakbeat. Known for its fast, energetic rhythms (typically around 150-170 BPM), breakbeat hardcore features breakbeat drum patterns combined with rave-style synths, heavy basslines, and often samples from hip-hop, jungle, and early acid house. The genre is characterized by its intense, high-energy sound, with uplifting melodies and euphoria-driven vibes, often accompanied by fast-paced, chopped-up vocal samples. Breakbeat hardcore played a significant role in the development of the rave scene and laid the groundwork for later subgenres like jungle and drum and bass.",
                 "example": "The Prodigy - Charly",
                 "spotify_track_id": "02G5u4AcbGhlfSkHzGCpmN",
                 "substyles": [
@@ -1256,13 +1250,13 @@
             },
             {
                 "name": "Broken beat",
-                "description": "A style of electronic music characterized by irregular, shuffled rhythms.",
+                "description": "Broken beat is a genre of electronic music that emerged in the late 1990s, primarily in the UK, blending elements of jazz, funk, and electronic dance music. It is characterized by its complex, syncopated rhythms and 'broken' drum patterns, where the beats are often fragmented or off-beat, giving the music a laid-back yet intricate feel. Broken beat features deep basslines, smooth melodies, and a fusion of live instruments (such as bass, keys, and horns) with electronic production. The genre has a soulful, groovy vibe and often includes elements of jazz improvisation, creating a smooth yet experimental sound. Artists like Bugz in the Attic and Mark de Clive-Lowe helped shape the genre, which has influenced genres like future jazz and nu-jazz.",
                 "example": "4hero - Hold It Down",
                 "spotify_track_id": "3FTiu4HXB4OFeOKBKR1kRP"
             },
             {
                 "name": "Nu skool breaks",
-                "description": "A style of breakbeat that emerged in the late 1990s, incorporating elements of techno and electro.",
+                "description": "Nu skool breaks is a subgenre of breakbeat that emerged in the late 1990s and early 2000s, characterized by a more modern, polished sound compared to traditional breakbeat. It blends elements of electro, big beat, and progressive house with the signature breakbeat rhythms, featuring funky basslines, distorted synths, and intricate drum patterns. Nu skool breaks often incorporates more melodic elements and futuristic sound design, with a focus on creating a driving, energetic groove suitable for the dance floor. The genre is known for its high-energy, bass-heavy tracks, and artists like Stanton Warriors and Plump DJs were instrumental in its development, bridging the gap between breakbeat and more mainstream electronic dance music.",
                 "example": "Stanton Warriors - Da Antidote",
                 "spotify_track_id": "3oo5Ji6vuWLvrS2Y5PdlqK",
                 "substyles": [
@@ -1296,7 +1290,7 @@
         "substyles": [
             {
                 "name": "Downtempo",
-                "description": "A relaxed, slower-paced electronic music style.",
+                "description": "Downtempo is a genre of electronic music characterized by slower tempos (typically between 80-110 BPM) and a relaxed, chilled-out vibe. It often features smooth, atmospheric soundscapes with elements like ambient textures, laid-back beats, melodic instrumentation, and subtle basslines. Downtempo can incorporate influences from genres like trip-hop, ambient, jazz, and funk, creating a soothing, introspective listening experience. It’s popular for background music, relaxation, and reflective moments, and is often used in cafes, lounges, or as a complement to chillout and relaxation sessions. Artists like Massive Attack, Bonobo, and Thievery Corporation are key figures in the downtempo scene.",
                 "example": "Bonobo - Black Sands",
                 "spotify_track_id": "6uoM7KHsyJsHZqBQHKjQbc",
                 "substyles": [
@@ -1307,7 +1301,7 @@
                         "spotify_track_id": "2ej1A2Ze6P2EOW7KfIosZR"
                     },
                     {
-                        "name": "Nu jazz",
+                        "name": "Nu jazz is a genre that blends elements of jazz with modern electronic music, creating a fusion of live instruments and digital production. Emerging in the late 1990s and early 2000s, nu jazz incorporates influences from genres like funk, soul, house, and ambient, while maintaining the improvisational and melodic qualities of traditional jazz. It often features smooth, groovy basslines, complex rhythms, and jazz-inspired melodies, combined with electronic effects, sampling, and synthesized sounds. The genre can range from relaxed, atmospheric tracks to more energetic, upbeat rhythms, offering a fresh take on jazz for contemporary audiences. Artists like St. Germain, The Cinematic Orchestra, and Jazzanova helped define the nu jazz sound.",
                         "description": "A blend of jazz elements with electronic beats and ambient textures.",
                         "example": "St Germain - Rose Rouge",
                         "spotify_track_id": "1divptdjcWXvF1aflfTQnw"
@@ -1322,13 +1316,13 @@
             },
             {
                 "name": "Lounge",
-                "description": "Relaxed, sophisticated background music often associated with bars and hotels.",
+                "description": "Lounge music is a genre that combines smooth, relaxed melodies with a laid-back, atmospheric vibe, often incorporating elements of jazz, bossa nova, and electronic music. It emerged in the mid-20th century as a form of background music in upscale bars, restaurants, and lounges, designed to create a comfortable, sophisticated ambiance without overpowering conversation. Lounge music typically features mellow tempos, soft instrumentation (such as piano, guitar, and light percussion), and soothing vocal or instrumental melodies. Over time, it has evolved to include more modern electronic influences, often blending chillout, downtempo, and ambient sounds. It remains popular for creating a calming, elegant atmosphere in social settings.",
                 "example": "Thievery Corporation - Lebanese Blonde",
                 "spotify_track_id": "6k5VMHrwv7mgPpkQSRQtQr"
               },
             {
                 "name": "Psybient",
-                "description": "A fusion of ambient and psychedelic trance elements.",
+                "description": "Psybient, also known as psychedelic ambient, is a genre that combines elements of ambient music with the psychedelic sounds of trance and downtempo. It features atmospheric, spacey soundscapes, often with slow, evolving beats and deeply immersive, hypnotic melodies. Psybient incorporates psychedelic effects, such as intricate sound textures, ethereal synths, and subtle, ethereal vocals, creating a dreamy, meditative environment. The genre emphasizes mood and atmosphere, often drawing on themes of spirituality, nature, and altered states of consciousness. Psybient music is popular for relaxation, meditation, and trance-like experiences, with artists like Shpongle and Ott being key figures in the scene.",
                 "example": "Shpongle - Divine Moments of Truth",
                 "spotify_track_id": "5z0QLEpkbUh00SevSuYxOh",
                 "substyles": [
@@ -1342,43 +1336,45 @@
             },
             {
                 "name": "Trip hop",
-                "description": "A fusion of hip-hop and electronic music with a relaxed, atmospheric sound.",
+                "description": "Trip hop is a genre of electronic music that emerged in the 1990s, blending elements of hip hop, ambient, jazz, and electronic music. Known for its moody, atmospheric sound, trip hop often features slow, laid-back beats (usually around 80-100 BPM), heavy basslines, and a mix of sampled and live instrumentation. The genre is marked by its use of melancholic melodies, atmospheric soundscapes, and often haunting or introspective vocals. Trip hop has a dark, introspective vibe, combining the rhythmic qualities of hip hop with the moodiness of ambient and experimental music. Pioneering artists like Massive Attack, Portishead, and Tricky helped define the genre, which is often associated with chillout and late-night listening.",
                 "example": "Massive Attack - Teardrop",
-                "spotify_track_id": "67Hna13dNDkZvBpTXRIaOJ"
-            },
-            {
-                "name": "Trip rock",
-                "description": "A blend of trip hop and rock music elements.",
-                "example": "Portishead - Glory Box",
-                "spotify_track_id": "3Ty7OTBNSigGEpeW2PqcsC"
+                "spotify_track_id": "67Hna13dNDkZvBpTXRIaOJ",
+                "substyles": [
+                    {
+                        "name": "Trip rock",
+                        "description": "Trip rock is a subgenre of electronic music that blends elements of trip hop with rock, creating a fusion of atmospheric beats, slow tempos, and live instrumentation. It typically features deep basslines, haunting melodies, and a mix of electronic samples alongside guitars, drums, and other traditional rock instruments. The genre maintains the introspective, melancholic vibe of trip hop, while incorporating the energy and structure of rock, often with experimental or psychedelic elements. Trip rock tracks may have a dreamy, hypnotic feel, with a focus on mood and atmosphere, making it ideal for both relaxed listening and more dynamic, emotionally charged experiences. Artists like UNKLE and The Beta Band helped define the trip rock sound, merging electronic production with rock's organic qualities.",
+                        "example": "Portishead - Glory Box",
+                        "spotify_track_id": "3Ty7OTBNSigGEpeW2PqcsC"
+                    }
+                ]
             },
             {
                 "name": "Ambient Dub",
-                "description": "A fusion of ambient and dub music, characterized by spacious soundscapes and deep basslines.",
+                "description": "Ambient dub is a genre that fuses the atmospheric, immersive qualities of ambient music with the rhythmic elements of dub reggae. It features deep, flowing basslines, reverb-heavy effects, and echoing, spacey soundscapes, creating a meditative, trance-like vibe. The rhythms are often slow and steady, with a focus on creating a soothing, laid-back atmosphere rather than driving beats. Ambient dub may include minimal, dub-style percussion and subtle melodic elements, often used to evoke a sense of relaxation and deep immersion. The genre is ideal for background listening or creating a calm, introspective mood. Artists like The Orb and Deep Forest have explored ambient dub elements in their work.",
                 "example": "The Orb - Little Fluffy Clouds",
                 "spotify_track_id": "7FVvHGA46aU7mkwx4iHMRE"
             },
             {
                 "name": "Balearic Beat",
-                "description": "A blend of electronic, pop, and Mediterranean sounds, originating from Ibiza.",
+                "description": "Balearic beat is a style of dance music that originated in the Balearic Islands, particularly Ibiza, during the 1980s. Known for its relaxed, eclectic mix of genres, Balearic beat blends elements of house, disco, ambient, and rock with smooth, laid-back rhythms. The genre is characterized by its atmospheric, sun-drenched vibes, often incorporating tropical or world music influences. Balearic beat tracks typically feature mellow beats, smooth basslines, and uplifting melodies, creating a chilled yet danceable sound that evokes the feeling of a beach party or sunset. It’s a perfect soundtrack for relaxed club environments, with artists like Danny Rampling and José Padilla helping shape the sound.",
                 "example": "José Padilla - Adios Ayer",
                 "spotify_track_id": "3inZkpVlyHfLoxwuyu2GYW"
             },
             {
                 "name": "Chillwave",
-                "description": "A genre combining elements of pop, hip-hop, and electronic music with nostalgic 1980s synth sounds.",
+                "description": "Chillwave is a genre of electronic music that emerged in the late 2000s, characterized by its nostalgic, dreamy sound and laid-back, lo-fi production. It blends elements of synthpop, ambient, and indie pop, often featuring warm, reverb-heavy synths, smooth basslines, and relaxed, slow tempos (typically around 60-90 BPM). Chillwave often incorporates vintage or retro aesthetics, with distorted vocals, hazy soundscapes, and a focus on creating a relaxed, introspective atmosphere. The genre evokes feelings of nostalgia and escapism, often associated with summer, youth, and lazy afternoons. Artists like Washed Out, Toro y Moi, and Neon Indian are key figures in the chillwave movement.",
                 "example": "Washed Out - Feel It All Around",
                 "spotify_track_id": "4V0x90QcMh4ZxwHzEWOdtK"
             },
             {
                 "name": "Vaporwave",
-                "description": "An internet-born microgenre known for its nostalgic or surrealist engagement with consumer culture.",
+                "description": "Vaporwave is a genre of electronic music and aesthetic that emerged in the early 2010s, characterized by its use of nostalgic, retro-futuristic sounds and visual elements. It blends smooth, ambient synths with samples from 80s and 90s pop, R&B, and smooth jazz, often slowed down or pitch-shifted to create a dreamy, surreal atmosphere. Vaporwave's music often features heavy use of reverb, glitch effects, and distorted vocals, creating a sense of detachment or irony. The genre is also known for its visual style, including 3D-rendered imagery, Japanese characters, and 90s digital aesthetics, all invoking a sense of nostalgia for past eras, often with a satirical or critical tone. Key artists include Macross 82-99, Saint Pepsi, and Vektroid.",
                 "example": "Oneohtrix Point Never - Age Of",
                 "spotify_track_id": "3YLzR5mhUEOY8taTn76D2k"
             },
             {
                 "name": "Synthwave",
-                "description": "Retro-style electronic music inspired by 1980s film soundtracks and video games.",
+                "description": "Synthwave is a genre of electronic music that draws heavily from 1980s pop culture, blending retro synth sounds with modern electronic production. It incorporates elements of electronic dance music, movie soundtracks, and early video game music, often featuring upbeat, melodic synths, catchy basslines, and nostalgic, cinematic vibes. Synthwave aims to capture the essence of the 80s, evoking a sense of nostalgia for the decade’s aesthetic and sound, while incorporating contemporary production techniques. The genre often features uplifting, energetic melodies, with a focus on creating a neon-lit, futuristic atmosphere. Artists like Kavinsky, Perturbator, and Carpenter Brut are prominent figures in the synthwave scene.",
                 "example": "Kavinsky - Nightcall",
                 "spotify_track_id": "0U0ldCRmgCqhVvD6ksG63j"
             }
@@ -1386,25 +1382,25 @@
     },
     {
         "style": "Disco",
-        "description": "Disco is a genre of dance music that emerged in the 1970s, characterized by its four-on-the-floor beats, syncopated basslines, and lush orchestration, often featuring string sections, horns, and catchy melodies. Disco music is known for its upbeat, danceable sound, often associated with nightclubs and dance parties.",
+        "description": "Disco is a genre of dance music that emerged in the 1970s, characterized by its upbeat, rhythmic sound and focus on creating a vibrant, energetic atmosphere for the dance floor. Disco features a steady four-on-the-floor beat, syncopated basslines, and lush orchestration, often incorporating strings, horns, and electric pianos. The genre emphasizes groove, with catchy melodies and vocals often layered over driving rhythms. Disco was a cultural phenomenon, influencing fashion, dance styles, and nightlife, and is known for its lavish, glamorous vibe. Iconic disco artists like Donna Summer, Chic, and the Bee Gees helped define the sound, which paved the way for later dance and electronic music genres.",
         "example": "Donna Summer - Last Dance",
         "spotify_track_id": "5fKTkCOpnyJko7jZqpbJnX",
         "substyles": [
             {
                 "name": "Afro/cosmic music",
-                "description": "A fusion of disco with African and space-themed elements.",
+                "description": "Afro-cosmic music is a genre that blends African rhythms and traditional sounds with cosmic, psychedelic, and electronic elements, creating a unique fusion of cultural influences. Emerging in the late 1970s and 1980s, this genre often incorporates jazz, funk, disco, and experimental music, with an emphasis on rhythm, groove, and a transcendent, otherworldly atmosphere. Afro-cosmic music is known for its use of polyrhythms, deep basslines, and synthetic textures, creating a fusion of earthy, tribal sounds with futuristic, spacey vibes. This genre was particularly influential in Italy during the late 70s and early 80s, where DJs and producers began incorporating African-inspired rhythms into their experimental electronic music. It has since become a significant influence on contemporary world music and electronic genres.",
                 "example": "Tony Esposito - Kalimba de Luna",
                 "spotify_track_id": "4qvkB7tOgSqgSqbpKWGOrO"
             },
             {
                 "name": "Electro-disco",
-                "description": "A blend of disco and electronic music.",
+                "description": "Electro-disco is a fusion of disco music and electronic elements that emerged in the late 1970s and early 1980s. It combines the upbeat, danceable rhythms of disco with the futuristic sounds of synthesizers, drum machines, and electronic production techniques. Electro-disco tracks often feature funky basslines, melodic synths, and robotic or processed vocals, creating a more synthetic and space-age feel compared to traditional disco. The genre helped bridge the gap between disco’s golden age and the rise of electronic dance music, influencing later genres like house and synthpop. Artists like Giorgio Moroder and Kraftwerk were pioneers of the electro-disco sound.",
                 "example": "Giorgio Moroder feat. Donna Summer - I Feel Love",
                 "spotify_track_id": "1vCBk33l9HaWp5FOnhSGxk"
             },
             {
                 "name": "Euro disco",
-                "description": "A European variant of disco music.",
+                "description": "Euro-disco is a style of disco music that originated in Europe during the late 1970s and 1980s. Known for its catchy melodies, upbeat rhythms, and the heavy use of synthesizers and drum machines, Euro-disco is often characterized by its polished, commercial sound and catchy, anthemic choruses. Unlike American disco, which tended to have a more soulful or funk-based sound, Euro-disco embraced a more electronic and synthetic approach, making it highly popular in European clubs. The genre gained worldwide popularity with hits like “Baila” by Ritchie Family and “Disco Band” by Scotch. Artists like Donna Summer (in her later works), Silver Pozzoli, and Sabrina helped define the Euro-disco sound.",
                 "example": "Boney M. - Rasputin",
                 "spotify_track_id": "5lWSa1rmuSL6OBPOnkAqoa",
                 "substyles": [
@@ -1418,7 +1414,7 @@
             },
             {
                 "name": "Nu-disco",
-                "description": "A modern revival of disco music incorporating elements of house and funk.",
+                "description": "Nu disco is a modern evolution of disco music that emerged in the mid-2000s, blending classic disco sounds with contemporary electronic production techniques. It combines the funky, danceable rhythms and melodic elements of 70s and 80s disco with modern synthesizers, deep basslines, and house music influences. Nu disco often features smooth, groovy beats, catchy vocal hooks, and a polished, retro-futuristic aesthetic, creating a fresh take on the disco sound while maintaining its nostalgic vibe. The genre is often more laid-back and atmospheric compared to its predecessor, but still retains a strong emphasis on rhythm and groove. Artists like Daft Punk, Todd Terje, and Justice are key figures in the nu disco movement.",
                 "example": "Daft Punk - Get Lucky",
                 "spotify_track_id": "69kOkLUCkxIZYexIgSG8rq"
             },
@@ -1438,27 +1434,21 @@
         "substyles": [
           {
             "name": "Acid Jazz",
-            "description": "A fusion of jazz, soul, and funk with electronic elements, often featuring improvisation.",
+            "description": "Acid jazz is a genre that emerged in the late 1980s and early 1990s, blending jazz, funk, soul, and elements of electronic music. It combines the improvisational nature of jazz with the grooves of funk, often incorporating elements like breakbeats, electronic basslines, and synthesizers. Acid jazz features jazzy horn sections, smooth basslines, and rhythms that draw from both traditional jazz and modern dance music, creating a fusion of organic and electronic sounds. The genre has a laid-back, yet rhythmic vibe, often incorporating soulful vocals and funky grooves. Pioneering artists like Jamiroquai, The Brand New Heavies, and Incognito helped define acid jazz, which became popular in the UK club scene before influencing later genres like nu-jazz and downtempo.",
             "example": "Jamiroquai - Virtual Insanity",
             "spotify_track_id": "24SUWisv2lYQiB3bVpE1sn",
             "substyles": [
               {
                 "name": "Jazz House",
-                "description": "A blend of house music rhythms with jazz influences, often featuring live instrumentation.",
+                "description": "Jazz house is a genre that fuses jazz music with house music, blending the rhythmic elements and structure of house with the improvisation, instrumentation, and harmonies of jazz. The genre typically features jazzy melodies and chord progressions, often accompanied by smooth basslines, piano riffs, and brass or string instruments, all layered over house music’s steady four-on-the-floor beats. Jazz house can vary in tempo but often maintains a laid-back, groove-oriented vibe, with some tracks focusing on deep house influences while others emphasize the more upbeat, funky aspects of jazz. Artists like Masters at Work, Joey Negro, and Ron Trent have contributed to the development of jazz house, creating a sophisticated yet danceable blend of both genres.",
                 "example": "Bob Sinclair - I Feel For You",
                 "spotify_track_id": "7opq9mMuTcHUXTY3EO3hym"
               },
               {
                 "name": "Lounge Jazz",
-                "description": "A smooth, relaxed fusion of jazz and electronic beats, often used in chill or lounge environments.",
+                "description": "In the realm of electronic music, lounge jazz is reinterpreted with the use of chillout beats, ambient textures, and electronic soundscapes. The genre blends the relaxing, easy-listening qualities of traditional lounge jazz with subtle, atmospheric synths, soft drum loops, and smooth, melodic instrumentation. It creates a laid-back, refined vibe, often with jazzy piano, muted trumpet, or saxophone samples, and the addition of soft electronic pads and reverb effects. The result is a relaxed, ambient sound that still carries the essence of jazz’s smooth melodies and improvisation, but with an electronic twist, ideal for cafes, lounges, and casual listening. Artists like Bonobo, Thievery Corporation, and Nicola Cruz have incorporated electronic lounge jazz influences into their music.",
                 "example": "Thievery Corporation - The Richest Man in Babylon",
                 "spotify_track_id": "6CMngrzUTdolgXSy1UCfCx"
-              },
-              {
-                "name": "Broken Beat",
-                "description": "A subgenre of electronic music with irregular drum patterns, drawing from jazz, funk, and soul influences.",
-                "example": "4hero - Hold It Down",
-                "spotify_track_id": "3FTiu4HXB4OFeOKBKR1kRP"
               }
             ]
           },
@@ -1497,26 +1487,20 @@
         "spotify_track_id": "5mc6EyF1OIEOhAkD0Gg9Lc",
         "substyles": [
           {
-            "name": "Industrial Techno",
-            "description": "A fusion of techno music with the abrasive, mechanical sound of industrial music, characterized by distorted kicks and aggressive rhythms.",
-            "example": "Perc - Look What Your Love Has Done To Me",
-            "spotify_track_id": "6DETw9d8IZageLexHqDtn4"
-          },
-          {
             "name": "EBM",
-            "description": "Electronic Body Music, a genre combining industrial music with danceable beats, often featuring heavy synthesizers and dark themes.",
+            "description": "EBM (Electronic Body Music) is a genre of electronic music that emerged in the early 1980s, blending industrial, electronic, and post-punk elements with heavy, driving beats and aggressive rhythms. EBM is characterized by its use of synthesizers, sequencers, and drum machines to create mechanical, rhythmic patterns, often accompanied by shouted or distorted vocals. The genre’s sound is harsh and minimalistic, with a focus on repetitive, danceable beats and dark, futuristic atmospheres. EBM often deals with themes of rebellion, technology, and dystopia, making it a staple in underground and industrial club scenes. Artists like Front 242, Nitzer Ebb, and DAF helped pioneer the EBM sound, influencing later genres like industrial techno and futurepop.",
             "example": "Front 242 - Headhunter",
             "spotify_track_id": "3iZIki3LcOtyY3Cg5DEllm",
             "substyles": [
               {
                 "name": "Futurepop",
-                "description": "A melodic, more accessible subgenre of EBM that combines industrial sounds with trance-like melodies and futuristic themes.",
+                "description": "Futurepop is a subgenre of electronic music that blends elements of EBM (Electronic Body Music) with more melodic, accessible, and often uplifting sounds. It emerged in the late 1990s and early 2000s, incorporating catchy synth melodies, danceable rhythms, and emotionally-driven, often melancholic vocals. Futurepop tends to have a more polished and mainstream appeal compared to the darker, more aggressive styles of traditional EBM. The genre often blends elements of synthpop, industrial, and trance, creating a sound that is both atmospheric and club-friendly. Artists like VNV Nation, Apoptygma Berzerk, and Covenant are key contributors to the futurepop movement.",
                 "example": "VNV Nation - Beloved",
                 "spotify_track_id": "2o8oBC0lVZuQwHc2CMGzF1"
               },
               {
                 "name": "Aggrotech",
-                "description": "A harsher, more aggressive form of EBM, often featuring distorted vocals, heavy beats, and themes of violence or dystopia.",
+                "description": "Aggrotech (also known as Harsh EBM) is a subgenre of industrial music that focuses on aggressive, dark, and harsh electronic sounds. It takes influence from EBM but emphasizes more distorted, abrasive elements, with heavily processed vocals, intense beats, and harsh synth textures. The sound is typically fast-paced and brutal, often featuring aggressive themes, such as anger, rebellion, and dystopia. Aggrotech incorporates distorted, shouted vocals and extreme electronic effects, resulting in a harder, more confrontational style. Artists like Suicide Commando, Combichrist, and Grendel are prominent figures in the aggrotech scene, often pushing the limits of intensity and sonic harshness.",
                 "example": "Suicide Commando - Hellraiser",
                 "spotify_track_id": "5goqvGbLNajTCoMV8aCYFJ"
               }
@@ -1546,31 +1530,31 @@
         "substyles": [
           {
             "name": "Synth-pop",
-            "description": "A genre characterized by the use of synthesizers and electronic instruments, blending catchy pop melodies with futuristic sounds.",
+            "description": "Synthpop is a genre of electronic music that emerged in the late 1970s and early 1980s, characterized by its use of synthesizers, drum machines, and electronic production to create catchy, melodic pop music. Synthpop combines the accessibility and structure of pop music with the futuristic and synthetic sounds of electronic instruments. The genre often features clean, bright synthesizer melodies, simple but effective drum patterns, and vocals that are either smooth or slightly robotic. Synthpop’s sound is often polished and radio-friendly, blending the upbeat, danceable qualities of pop with the experimental, electronic elements of early electronic music. Artists like Depeche Mode, Kraftwerk, Gary Numan, and Pet Shop Boys are key figures in the synthpop movement, which influenced a wide range of pop, dance, and electronic music that followed.",
             "example": "Pet Shop Boys - West End Girls",
             "spotify_track_id": "5Dqik1P9toCJTLj5rEm78s",
             "substyles": [
               {
                 "name": "Electropop",
-                "description": "A contemporary blend of pop and electronic music, often featuring catchy hooks and danceable beats.",
+                "description": "Electropop is a genre of pop music that blends traditional pop melodies and structures with electronic production, often featuring synthesizers, drum machines, and digital effects. Emerging in the late 1990s and early 2000s, electropop is characterized by its polished, catchy hooks, energetic rhythms, and a clean, futuristic sound that emphasizes electronic elements without losing the accessibility of pop music. It often incorporates influences from genres like synthpop, dance music, and new wave, creating a hybrid of traditional pop sensibilities with the innovative textures of electronic music. Vocals in electropop are typically clear and melodic, sometimes treated with electronic effects or pitch manipulation. Artists like Robyn, La Roux, Grimes, and CHVRCHES are well-known for defining and popularizing electropop, merging catchy tunes with electronic experimentation for a sound that's both mainstream and forward-thinking.",
                 "example": "Grimes - Oblivion",
                 "spotify_track_id": "4BY4V1T0RJK1HmD2Q0ClyK"
               },
               {
                 "name": "Futurepop",
-                "description": "A melodic subgenre of synth-pop that combines electronic music with elements of EBM and trance.",
+                "description": "Futurepop is a subgenre of electronic music that blends elements of EBM (Electronic Body Music), synthpop, and trance, characterized by its melodic, uplifting, and accessible sound while retaining a strong electronic foundation. Emerging in the late 1990s and early 2000s, futurepop combines the rhythmic, bass-heavy beats of EBM with catchy, emotional melodies, and often features atmospheric synths and trance-like elements. The vocals are typically melodic, clear, and sometimes emotionally charged, often addressing themes of love, loss, and human connection, in contrast to the darker themes of traditional EBM. Futurepop has a polished, radio-friendly appeal, while still maintaining the rhythmic intensity and futuristic atmosphere that fans of EBM appreciate. Key artists in the futurepop scene include VNV Nation, Covenant, and Apoptygma Berzerk.",
                 "example": "VNV Nation - Illusion",
                 "spotify_track_id": "273tTmuqkEXRpYdFKx9iKm"
               },
               {
                 "name": "New Wave",
-                "description": "A genre that emerged in the late 1970s, characterized by a blend of punk rock, pop, and electronic elements.",
+                "description": "New wave is a genre of music that emerged in the late 1970s and early 1980s, combining elements of punk rock with more experimental, electronic, and pop influences. It is characterized by its use of synthesizers, quirky melodies, and often a more polished, commercial sound compared to punk’s raw energy. New wave bands typically embraced the emerging electronic technologies of the time, incorporating synthetic sounds, catchy pop hooks, and a wide variety of stylistic influences, including disco, funk, and post-punk. The genre often has an art-pop sensibility, with an emphasis on visual style, fashion, and innovation. Notable new wave bands include Depeche Mode, Talking Heads, Blondie, and Duran Duran.",
                 "example": "The Cars - Just What I Needed",
                 "spotify_track_id": "4alHo6RGd0D3OUbTPExTHN"
               },
               {
                 "name": "Hyperpop",
-                "description": "Hyperpop is an ultramodern genre that blends elements of pop, electronic music, and experimental sounds, often featuring exaggerated vocal effects, playful melodies, and maximalist production. It is known for its vibrant aesthetics and ties to internet culture.",
+                "description": "Hyperpop is a genre that emerged in the 2010s, characterized by its maximalist approach to pop music, blending hyperactive, high-energy beats with experimental, exaggerated production. It often features distorted vocals, rapid tempo changes, and an eclectic mix of influences from pop, electronic, and avant-garde music. Hyperpop is known for pushing the boundaries of pop music, using glitchy, pitch-shifted vocals, high-pitched synths, and surreal soundscapes, creating a sound that is intentionally exaggerated and sometimes chaotic. The genre embraces a sense of fun, freedom, and futurism, often incorporating themes of internet culture, digital identity, and subverting traditional pop structures. Key artists in hyperpop include 100 gecs, SOPHIE, and A.G. Cook.",
                 "example": "100 gecs - Money Machine",
                 "spotify_track_id": "61bwFjzXGG1x2aZsANdLyl"
             }
@@ -1584,7 +1568,7 @@
             "substyles": [
                 {
                     "name": "Post-Rock",
-                    "description": "Post-rock is a genre that combines elements of rock music with experimental and ambient sounds, often characterized by instrumental compositions that create atmospheric soundscapes.",
+                    "description": "Post-rock is a genre of music that emerged in the 1990s, characterized by its departure from traditional rock structures and an emphasis on instrumental soundscapes, atmospheric textures, and experimental techniques. Post-rock often incorporates elements from ambient, classical, and electronic music, using guitars, bass, and drums in unconventional ways—such as creating lush, layered soundscapes or building gradual, cinematic crescendos. The music is typically instrumental, with a focus on mood, dynamics, and the emotional resonance of sound rather than lyrics or traditional song structures. Post-rock compositions can range from quiet, introspective passages to intense, explosive climaxes, often eschewing conventional verse-chorus forms in favor of more fluid, evolving pieces. Bands like Sigur Rós, Godspeed You! Black Emperor, Explosions in the Sky, and Mogwai are key contributors to the post-rock movement. The genre has influenced various other styles, such as shoegaze, ambient, and electronic music, as well as cinematic film scores.",
                     "example": "Explosions in the Sky - Your Hand in Mine",
                     "spotify_track_id": "4mZofk9oND0AA4sJfzTH0R"
                 },  
@@ -1596,7 +1580,7 @@
               },
               {
                 "name": "Indie Electronic",
-                "description": "A genre combining indie rock and electronic music, often featuring unconventional sounds and lo-fi aesthetics.",
+                "description": "Indie Electronic is a genre that blends the experimental and DIY ethos of indie music with the digital sounds and production techniques of electronic music. Emerging in the 2000s, indie electronic incorporates elements from a wide range of genres, including synthpop, ambient, downtempo, and electro, while maintaining the distinctive, often introspective qualities of indie rock or folk. It features an eclectic mix of electronic beats, synthesized melodies, and organic instrumentation, often with a focus on emotional, personal themes and atmospheric soundscapes. Vocals in indie electronic music can range from dreamy and ethereal to more conventional, but the overall sound tends to be less polished than mainstream electronic music, retaining an intimate, handmade feel. Artists like Tycho, Washed Out, and Passion Pit helped define the genre, creating music that blends the warmth and creativity of indie with the futuristic textures of electronic music.",
                 "example": "Passion Pit - Sleepyhead",
                 "spotify_track_id": "4prEPl61C8qZpeo3IkYSMl"
               }
@@ -1610,13 +1594,13 @@
             "substyles": [
                 {
                     "name": "Bubblegum Pop",
-                    "description": "A genre known for its upbeat, sugary-sweet melodies and catchy hooks, often aimed at a younger audience.",
+                    "description": "Bubblegum Pop is a genre of pop music that emerged in the 1960s, characterized by its catchy melodies, upbeat rhythms, simple lyrics, and overall lighthearted, sugary sound. It is often aimed at a young audience and features bright, fun, and energetic tunes with an emphasis on sing-along choruses and accessible production. The genre draws inspiration from 1960s pop, doo-wop, and teen idol music, typically using simple, repetitive song structures and playful lyrics about love, youth, and innocence. While bubblegum pop is often criticized for being overly commercial or formulaic, its infectious, feel-good nature has made it highly popular and enduring. Key artists associated with bubblegum pop include The Archies, The Monkees, and later acts like Britney Spears and NSYNC, who carried the spirit of the genre into the 1990s and 2000s with a more modern, glossy pop sound.",
                     "example": "Aqua - Barbie Girl",
                     "spotify_track_id": "5ZrDlcxIDZyjOzHdYW1ydr"
                   },
                   {
                     "name": "Eurodance",
-                    "description": "A genre of electronic dance music that originated in the late 1980s and is known for its uptempo beats, catchy melodies, and use of vocal hooks.",
+                    "description": "Eurodance is a genre of electronic dance music that emerged in the early 1990s, characterized by a fusion of electronic beats, high-energy rhythms, and catchy, often anthemic melodies. It combines elements of house, techno, and hi-NRG with elements of pop and hip-hop, and typically features a blend of male and female vocals, with the male vocals often rapping and the female vocals providing melodic, chorus-driven hooks. The music is designed to be uplifting and highly danceable, with a fast tempo and a focus on creating an energetic, party atmosphere. Eurodance also often incorporates elements of trance, with its melodic and expansive soundscapes. The genre became particularly popular in Europe during the 1990s, but also achieved commercial success internationally. Key artists in the genre include 2 Unlimited, Scooter, La Bouche, and Snap!, who helped define the Eurodance sound with hits like 'Rhythm is a Dancer' and Be My Lover'.",
                     "example": "Haddaway - What Is Love",
                     "spotify_track_id": "7JkZ2hQdDonRURJjlMuh8q"
                   }
