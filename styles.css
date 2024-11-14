@@ -222,3 +222,15 @@ footer i {
     padding: 10px 30px;
   }
 }
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 100;
+  pointer-events: none;
+  max-width: 400px;
+}

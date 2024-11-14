@@ -107,6 +107,37 @@ async function fetchData() {
       
         infoPanel.classList.add('visible');
       });           
+      
+      // Agrega el código del tooltip aquí
+node.on('mouseover', (event, d) => {
+  if (d.depth === 0) return; // No mostrar tooltip para el nodo raíz
+
+  // Crea un elemento div para el tooltip
+  const tooltip = d3.select('body')
+    .append('div')
+    .attr('class', 'tooltip')
+    .style('opacity', 0);
+
+  // Agrega contenido al tooltip
+  tooltip.html(`
+    <h3>${d.data.name}</h3>
+    <p>${d.data.description || 'No description available'}</p>
+    <p><i class="bi bi-hand-index"></i> Click the node to listen the example track.</p>
+  `);
+
+  // Anima la aparición del tooltip
+  tooltip.transition()
+    .duration(200)
+    .style('opacity', 0.9);
+
+  // Posiciona el tooltip cerca del nodo
+  tooltip.style('left', (event.pageX + 10) + 'px')
+    .style('top', (event.pageY - 28) + 'px');
+});
+
+node.on('mouseout', (event, d) => {
+  d3.select('.tooltip').remove();
+});
   
     node.append('circle')
       .attr('r',6)
@@ -124,7 +155,8 @@ async function fetchData() {
       .style('text-anchor', d => d.children ? 'end' : 'start')
       .style('font-family', 'Aleo, serif')
       .style('font-size', '14px')
-      .text(d => d.depth === 0 ? '' : d.data.name);
+      .text(d => d.depth === 0 ? '' : d.data.name);      
+      
   }
   
   document.getElementById('close-panel').addEventListener('click', () => {
@@ -133,3 +165,4 @@ async function fetchData() {
   
 // Call the function to fetch the data
 fetchData();
+
