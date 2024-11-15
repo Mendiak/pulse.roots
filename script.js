@@ -80,9 +80,9 @@ function createTree(data) {
       .x(d => d.y)
       .y(d => d.x));
 
-    // Create the nodes
-    const node = svg.selectAll('.node')
-    .data(nodesToShow)
+  // Create the nodes
+  const node = svg.selectAll('.node')
+    .data(nodesToShow) // Bind the filtered data
     .enter()
     .append('g')
     .attr('class', 'node')
@@ -113,16 +113,7 @@ function createTree(data) {
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="160" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       `;
 
-      // Obtener el ancho de la ventana actual
-      const windowWidth = window.innerWidth;
-
-      // Establecer el ancho máximo del panel de información
-      const maxPanelWidth = Math.min(500, windowWidth * 0.9);
-
-      // Establecer el ancho del panel de información
-      infoPanel.style.width = `${maxPanelWidth}px`;
-
-      // Mostrar el panel de información
+      // Show the info panel
       infoPanel.classList.add('visible');
     });
 
@@ -143,28 +134,28 @@ function showTooltip(event, d) {
     <p><i class="bi bi-hand-index"></i> Click the node to listen the example track.</p>
   `);
 
-  // Animate the tooltip's appearance
-  tooltip.transition()
-    .duration(200)
-    .style('opacity', 0.9);
+ // Animate the tooltip's appearance
+ tooltip.transition()
+ .duration(200)
+ .style('opacity', 0.9);
 
-  // Position the tooltip near the node
-  tooltip.style('left', (event.pageX + 10) + 'px')
-    .style('top', (event.pageY - 28) + 'px');
+// Position the tooltip near the node
+tooltip.style('left', (event.pageX + 10) + 'px')
+ .style('top', (event.pageY - 28) + 'px');
 }
 
 // Function to hide the tooltip
 function hideTooltip() {
-  d3.select('.tooltip').remove();
+d3.select('.tooltip').remove();
 }
 
 // Add the event listeners to the nodes
 node.on('mouseover', (event, d) => {
-  // Check if the screen is small before showing the tooltip
-  if (window.innerWidth < 768) {
-    return;
-  }
-  showTooltip(event, d);
+// Check if the screen is small before showing the tooltip
+if (window.innerWidth < 768) {
+ return;
+}
+showTooltip(event, d);
 });
 
 node.on('mouseout', () => {
