@@ -234,3 +234,9 @@ footer i {
   pointer-events: none;
   max-width: 400px;
 }
+
+@media (max-width: 767px) {
+  .tooltip {
+    display: none;
+  }
+}
