@@ -154,8 +154,8 @@
             {
                 "name": "8-bit (Chiptune)",
                 "description": "8-bit music, or chiptune, is a style that uses sound chips from vintage computers and video game consoles to create electronic music. It's characterized by simple waveforms and limited polyphony, evoking a nostalgic sound reminiscent of early video game music.",
-                "example": "Anamanaguchi - Endless Fantasy",
-                "spotify_track_id": "4G7vYKaElzZ0ewI5gAKEZJ",
+                "example": "Nullsleep - Her Lazer Light Eyes",
+                "spotify_track_id": "6RDZlgaytqZCYBnnIVkxXi",
                 "substyles": [
                     {
                         "name": "Bitpop",
@@ -1572,12 +1572,18 @@
             "example": "Linkin Park - Somewhere I Belong",
             "spotify_track_id": "3fjmSxt0PskST13CSdBUFx",
             "substyles": [
-                {
-                    "name": "Post-Rock",
-                    "description": "Post-rock is a genre of music that emerged in the 1990s, characterized by its departure from traditional rock structures and an emphasis on instrumental soundscapes, atmospheric textures, and experimental techniques. Post-rock often incorporates elements from ambient, classical, and electronic music, using guitars, bass, and drums in unconventional ways—such as creating lush, layered soundscapes or building gradual, cinematic crescendos. The music is typically instrumental, with a focus on mood, dynamics, and the emotional resonance of sound rather than lyrics or traditional song structures. Post-rock compositions can range from quiet, introspective passages to intense, explosive climaxes, often eschewing conventional verse-chorus forms in favor of more fluid, evolving pieces. Bands like Sigur Rós, Godspeed You! Black Emperor, Explosions in the Sky, and Mogwai are key contributors to the post-rock movement. The genre has influenced various other styles, such as shoegaze, ambient, and electronic music, as well as cinematic film scores.",
-                    "example": "Explosions in the Sky - Your Hand in Mine",
-                    "spotify_track_id": "4mZofk9oND0AA4sJfzTH0R"
-                },  
+            {
+                "name": "Krautrock",
+                "description": "A genre of experimental, electronic-influenced rock music that emerged in Germany in the late 1960s and 1970s, characterized by repetitive, hypnotic rhythms, synthesizers, and atmospheric, avant-garde soundscapes.",
+                "example": "Kraftwerk - Autobahn",
+                "spotify_track_id": "31uidLEHAcF8Cw1cX1VCS8"
+                },
+            {
+                "name": "Post-Rock",
+                "description": "Post-rock is a genre of music that emerged in the 1990s, characterized by its departure from traditional rock structures and an emphasis on instrumental soundscapes, atmospheric textures, and experimental techniques. Post-rock often incorporates elements from ambient, classical, and electronic music, using guitars, bass, and drums in unconventional ways—such as creating lush, layered soundscapes or building gradual, cinematic crescendos. The music is typically instrumental, with a focus on mood, dynamics, and the emotional resonance of sound rather than lyrics or traditional song structures. Post-rock compositions can range from quiet, introspective passages to intense, explosive climaxes, often eschewing conventional verse-chorus forms in favor of more fluid, evolving pieces. Bands like Sigur Rós, Godspeed You! Black Emperor, Explosions in the Sky, and Mogwai are key contributors to the post-rock movement. The genre has influenced various other styles, such as shoegaze, ambient, and electronic music, as well as cinematic film scores.",
+                "example": "Explosions in the Sky - Your Hand in Mine",
+                "spotify_track_id": "4mZofk9oND0AA4sJfzTH0R"
+            },  
               {
                 "name": "Dance-punk",
                 "description": "A genre that blends elements of punk rock with electronic music, characterized by a danceable beat and a raw sound.",
