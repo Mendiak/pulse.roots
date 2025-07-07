@@ -1,6 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --primary-dark: #333;
+  --secondary-dark: #222;
+  --tertiary-dark: #444;
+  --text-light: #fff;
+  --text-grey: #a7a7a7;
+  --header-gradient: linear-gradient(to right, var(--secondary-dark), var(--primary-dark), var(--tertiary-dark));
+}
+
 body {
   margin: 0;
   display: flex;
@@ -13,7 +22,7 @@ body {
 }
 
 #header-container {
-  background: linear-gradient(to right, #222, #333, #444);
+  background: var(--header-gradient);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   display: flex;
   justify-content: space-between;
@@ -48,34 +57,31 @@ body {
   flex-wrap: wrap;
 }
 
-#tooltip {
+.info-box {
   max-width: 300px;
   min-width: 250px;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   border-radius: 10px;
+  padding: 30px;
+  color: var(--primary-dark);
+}
+
+#tooltip {
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #333;
 }
 
 #thanks {
-  max-width: 300px;
-  min-width: 250px;
-  text-align: left;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  border-radius: 10px;
   margin: 30px;
-  padding: 30px;
-  color: #333;
 }
 
 #spotify-login-link {
-  color: #333
+  color: var(--primary-dark);
+  font-weight: bold;
 }
 
 #spotify-login-link:visited {
@@ -84,7 +90,7 @@ body {
 
 h1 {
   font-size: 24px;
-  color: #fff;
+  color: var(--text-light);
   margin: 0;
 }
 
@@ -105,7 +111,7 @@ p {
 }
 
 .node text {    
-  fill: #333;
+  fill: var(--primary-dark);
 }
 
 .link {
@@ -169,8 +175,8 @@ textarea {
 }
 
 #submitbutton {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--primary-dark);
+  color: var(--text-light);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -180,18 +186,17 @@ textarea {
 }
 
 #submitbutton:hover {
-  background-color: #a7a7a7;
-  color: #fff;
+  background-color: var(--text-grey);
+  color: var(--text-light);
 }
 
 footer {
-  background: linear-gradient(to right, #222, #333, #444);    color: #fff;
+  background: var(--header-gradient);
+  color: var(--text-light);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   padding: 20px 50px;
   font-size: 14px;
-  color: white;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
@@ -199,7 +204,7 @@ footer {
 }
 
 footer a {
-  color: white;
+  color: var(--text-light);
   text-decoration: none;
 }
 
@@ -226,13 +231,7 @@ footer i {
 }
 
 #social-share i:hover {
-  color: #a7a7a7;
-}
-
-@media (max-width: 768px) {
-  footer {      
-    padding: 10px 30px;
-  }
+  color: var(--text-grey);
 }
 
 .tooltip {
@@ -247,7 +246,10 @@ footer i {
   max-width: 400px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  footer {      
+    padding: 10px 30px;
+  }
   .tooltip {
     display: none;
   }

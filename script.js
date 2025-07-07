@@ -29,33 +29,24 @@ function createTree(data) {
     .style("display", "block") 
     .style("margin", "0 auto"); 
 
+  // Recursive function to transform the flat data into a hierarchical structure
+  function transformToHierarchy(node) {
+    const newNode = {
+      name: node.name || node.style, // Handles both root 'style' and nested 'name'
+      description: node.description,
+      example: node.example,
+      spotify_track_id: node.spotify_track_id,
+    };
+    if (node.substyles && node.substyles.length > 0) {
+      newNode.children = node.substyles.map(transformToHierarchy);
+    }
+    return newNode;
+  }
+
   // Transform the data into a hierarchical structure
   const hierarchicalData = {
     name: "Electronic Music",
-    children: data.map(style => ({
-      name: style.style,
-      description: style.description,
-      example: style.example,
-      spotify_track_id: style.spotify_track_id,
-      children: style.substyles.map(substyle => ({
-        name: substyle.name,
-        description: substyle.description,
-        example: substyle.example,
-        spotify_track_id: substyle.spotify_track_id,
-        children: substyle.substyles ? substyle.substyles.map(subsubstyle => ({
-          name: subsubstyle.name,
-          description: subsubstyle.description,
-          example: subsubstyle.example,
-          spotify_track_id: subsubstyle.spotify_track_id,
-          children: subsubstyle.substyles ? subsubstyle.substyles.map(subsubsubstyle => ({
-            name: subsubsubstyle.name,
-            description: subsubsubstyle.description,
-            example: subsubsubstyle.example,
-            spotify_track_id: subsubsubstyle.spotify_track_id
-          })) : undefined
-        })) : undefined
-      }))
-    }))
+    children: data.map(transformToHierarchy)
   };
 
   // Create a hierarchical data structure from the transformed data
@@ -87,7 +78,7 @@ function createTree(data) {
     .append('g')
     .attr('class', 'node')
     .attr('transform', d => `translate(${d.y},${d.x})`)
-    .attr('class', d => d.depth === 1 || d.depth === 2 || d.depth === 3 || d.depth === 4 ? 'node clickable-node' : 'node')
+    .attr('class', d => d.depth > 0 ? 'node clickable-node' : 'node')
     .on('click', (event, d) => {
       // Handle the click event on the nodes
       if (d.depth === 0) {
@@ -104,14 +95,17 @@ function createTree(data) {
         <p><i class="bi bi-soundwave"></i> <b>Example track: ${d.data.example || 'N/A'}</b></p>
       `;
 
-      // Access the spotify_track_id correctly
-      const trackId = d.data.spotify_track_id || '1234567890';
-      console.log('Track ID:', trackId);
-
-      // Embed the Spotify player for the selected track
-      spotifyEmbed.innerHTML = `
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="160" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      `;
+      // Embed the Spotify player only if a trackId exists
+      const trackId = d.data.spotify_track_id;
+      if (trackId) {
+        spotifyEmbed.innerHTML = `
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="160" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        `;
+        spotifyEmbed.style.display = 'block';
+      } else {
+        spotifyEmbed.innerHTML = '';
+        spotifyEmbed.style.display = 'none';
+      }
 
       // Show the info panel
       infoPanel.classList.add('visible');
@@ -151,11 +145,7 @@ d3.select('.tooltip').remove();
 
 // Add the event listeners to the nodes
 node.on('mouseover', (event, d) => {
-// Check if the screen is small before showing the tooltip
-if (window.innerWidth < 768) {
- return;
-}
-showTooltip(event, d);
+  showTooltip(event, d);
 });
 
 node.on('mouseout', () => {
@@ -185,7 +175,14 @@ node.on('mouseout', () => {
 
 // Add an event listener to close the info panel
 document.getElementById('close-panel').addEventListener('click', () => {
-  document.getElementById('info-panel').classList.remove('visible');
+  const infoPanel = document.getElementById('info-panel');
+  const spotifyEmbed = document.getElementById('spotify-embed');
+
+  // Hide the panel
+  infoPanel.classList.remove('visible');
+
+  // Stop the music by clearing the iframe content
+  spotifyEmbed.innerHTML = '';
 });
 
 // Call the function to fetch the data
