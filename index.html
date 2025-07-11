@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S86REQ0046"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-S86REQ0046');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S86REQ0046');
     </script>
 
     <meta name="description" content="PulseRoots: Interactive visualization of electronic music genres and styles">
@@ -52,13 +55,18 @@
                 <img src="assets/logo.png" id="logo" alt="PulseRoots Logo"> 
                 <h1>PulseRoots: Electronic Music Styles Tree</h1>
             </a>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search for a genre...">
+                <button id="search-button"><i class="bi bi-search"></i> Search</button>
+                <button id="clear-button"><i class="bi bi-x-lg"></i> Clear</button>
+            </div>
         </div>    
     </header>
     <main>
         <div id="main-container">        
         <div id="tooltip" class="info-box" aria-labelledby="treemap-title">
-            <section aria-labelledby="treemap-title">
-                <h2>Treemap Format</h2>
+            <section>
+                <h2 id="treemap-title">Treemap Format</h2>
 
                 <p>Explore a comprehensive collection of electronic music genres, presented in a treemap format. The map starts at the broad "Electronic Music" category, then descends into the main "Families" (Ambient, Techno, House, etc.), and further branches into specific styles and substyles.</p>
                 
@@ -74,7 +82,6 @@
                 <p>This treemap represents one way to categorize electronic music genres. Other classifications could group styles differently, based on cultural, historical, or sonic perspectives.</p>
                 
                 <h2><i class="bi bi-spotify" aria-label="Spotify icon"></i> Note on Listening to Example Tracks</h2>
-                <p>If you want to listen to the full example tracks, please make sure you're <a id="spotify-login-link" href="https://accounts.spotify.com/login" target="_blank">logged into Spotify <i class="bi bi-box-arrow-up-right" aria-label="External link icon"></i></a> in your browser. If you're not logged in, you'll only be able to hear a short sample of the song, lasting just a few seconds.</p>
 
                 <h2>Contact</h2>
                 <p>Thank you for visiting, and I hope you enjoy exploring the world of electronic music.</p>
@@ -99,31 +106,40 @@
             </form>       
         </div>
 
-        <svg id="treemap"></svg>
-
-        <div id="info-panel" class="hidden">
-            <div id="close-panel-container">
-                <i id="close-panel"class="bi bi-x-circle" aria-label="Close info panel"></i>
-            </div>
-            <div id="info-content"></div>
-            <div id="spotify-embed"></div>
+        <div id="visualization-container">
+            <svg id="treemap"></svg>
         </div>
 
         </div>
     </main>
+
+    <!-- Overlay for the modal panel -->
+    <div id="modal-overlay" class="hidden"></div>
+
+    <!-- Info panel that slides up. Moved here to avoid being blurred. -->
+    <div id="info-panel" class="hidden">
+        <div id="close-panel-container">
+            <i id="close-panel"class="bi bi-x-circle" aria-label="Close info panel"></i>
+        </div>
+        <div id="info-content"></div>
+        <div id="spotify-embed"></div>
+    </div>
+
     <footer>
         <div id="logoandlinks">
             <img src="assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo">
-            <div id="links-container">
-                <p>LINKS & CREDITS:</p>
-                <p><i class="bi bi-github" aria-label="Github icon"></i><a id="referral" href="https://github.com/Mendiak/pulse.roots" target="_blank">PulseRoots @ Github</a></p>
-                <p><i class="bi bi-camera" aria-label="Image icon"></i><a id="referral" href="https://unsplash.com/es/fotos/una-persona-parada-en-una-habitacion-oscura-con-luces-rojas-y-purpuras-M9SNlCS9_2E?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash" target="_blank">Photo by Kiryl @ Unsplash</a></p>
-                <p><i class="bi bi-vector-pen" aria-label="Vector icon"></i><a id="referral" href="https://www.flaticon.com/authors/ibrandify" target="_blank">Logo by ibrandify @ Flaticon</a></p>
-                <p><i class="bi bi-code-slash" aria-label="Code icon"></i><a id="referral" href="https://mendiak.github.io/portfolio/" target="_blank">Website by Mikel Aramendia</a></p>
-            </div>
+            <nav id="links-container" aria-label="Links and Credits">
+                <h3>LINKS & CREDITS</h3>
+                <ul>
+                    <li><i class="bi bi-github" aria-hidden="true"></i><a class="footer-link" href="https://github.com/Mendiak/pulse.roots" target="_blank" rel="noopener noreferrer">PulseRoots @ Github</a></li>
+                    <li><i class="bi bi-camera" aria-hidden="true"></i><a class="footer-link" href="https://unsplash.com/es/fotos/una-persona-parada-en-una-habitacion-oscura-con-luces-rojas-y-purpuras-M9SNlCS9_2E?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener noreferrer">Photo by Kiryl @ Unsplash</a></li>
+                    <li><i class="bi bi-vector-pen" aria-hidden="true"></i><a class="footer-link" href="https://www.flaticon.com/authors/ibrandify" target="_blank" rel="noopener noreferrer">Logo by ibrandify @ Flaticon</a></li>
+                    <li><i class="bi bi-code-slash" aria-hidden="true"></i><a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Website by Mikel Aramendia</a></li>
+                </ul>
+            </nav>
          </div>
         <nav id="social-share" aria-label="Social media sharing">
-            <p>SHARE THIS:</p>  
+            <h3>SHARE THIS</h3>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://mendiak.github.io/pulse.roots/" 
                target="_blank" 
                rel="noopener noreferrer"
@@ -144,7 +160,10 @@
                aria-label="Share on Reddit">
                <i class="bi bi-reddit" aria-hidden="true"></i>
             </a>
-        </nav>    
+        </nav>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> PulseRoots. All Rights Reserved.</p>
+        </div>
         </footer>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="script.js"></script>

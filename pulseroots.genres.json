@@ -115,7 +115,7 @@
             },
             {
                 "name": "Noise & Distortion",
-                "description": "These substyles embrace distortion, feedback, and other abrasive sound textures.",
+                "description": "Noise & Distortion es una categoría que abarca géneros y estilos que desafían las convenciones musicales tradicionales al utilizar el ruido, la distorsión y las texturas sonoras abrasivas como elementos compositivos principales. Lejos de buscar la armonía o la melodía, la música noise explora el espectro completo del sonido, incluyendo frecuencias y texturas a menudo consideradas indeseables o cacofónicas. Sus raíces se remontan a movimientos de vanguardia como el Futurismo de principios del siglo XX y ha evolucionado a través de la música industrial y experimental.\n\nEste enfoque no se trata simplemente de crear sonidos fuertes, sino de esculpir el ruido para evocar atmósferas intensas, a menudo confrontacionales o inmersivas. Los artistas de este género utilizan una amplia gama de herramientas, desde sintetizadores sobrecargados y pedales de efectos hasta equipos modificados (circuit bending) y grabaciones de campo procesadas, para crear paisajes sonoros que pueden ser desde caóticos y abrumadores hasta sutiles y texturizados. Es una forma de arte sonoro que prioriza la textura, la intensidad y la experiencia auditiva pura sobre la estructura musical convencional.",
                 "example": "Merzbow - Ultra Marine Blues",
                 "spotify_track_id": "7GWJgWnYwrOod8jY6n4YxZ",
                 "substyles": [
@@ -159,7 +159,7 @@
                 "substyles": [
                     {
                         "name": "Bitpop",
-                        "description": "A genre that combines 8-bit or chiptune sounds with pop structures, creating catchy and upbeat electronic music with a retro feel.",
+                        "description": "Bitpop es un subgénero del chiptune que fusiona las melodías y sonidos característicos de los chips de sonido de 8 bits, propios de las videoconsolas y ordenadores antiguos, con las estructuras y sensibilidades de la música pop. El resultado es una música electrónica pegadiza, enérgica y a menudo nostálgica, que combina la crudeza y las limitaciones del sonido chiptune con estribillos memorables, progresiones de acordes pop y ritmos bailables. A diferencia de otras formas de chiptune más experimentales, el bitpop se centra en la accesibilidad y el gancho melódico, creando canciones que son a la vez un homenaje a la era de los videojuegos retro y piezas de pop electrónico por derecho propio.",
                         "example": "Slagsmålsklubben - Sponsored By Destiny",
                         "spotify_track_id": "0I00u1IwnGQVguICUiCsAf"
                     },
@@ -239,7 +239,7 @@
     },
     {
         "style": "Techno",
-        "description": "Techno music is a genre of electronic dance music that emerged in the late 1980s in Detroit, characterized by its repetitive 4/4 beats, synthesized melodies, and use of technology-driven sounds. It emphasizes rhythm and texture, often featuring minimalistic arrangements and a futuristic aesthetic, making it a staple in underground dance clubs and raves.",
+        "description": "Techno is a genre of electronic dance music that originated in Detroit, Michigan, during the mid-to-late 1980s. Pioneered by 'The Belleville Three'—Juan Atkins, Derrick May, and Kevin Saunderson—techno was born from a fusion of funk, electro, and a fascination with futuristic themes, heavily influenced by writers like Alvin Toffler. It is characterized by a repetitive 4/4 time signature, a tempo typically between 120 and 150 BPM, and a focus on rhythm and texture over melodic complexity. Unlike the soulful, vocal-driven sound of its contemporary, Chicago house, techno often features a more mechanical, stripped-down, and hypnotic sound palette, using synthesizers and drum machines to create a sonic landscape that feels both industrial and otherworldly. It's a genre built for continuous mixing in clubs, creating immersive, long-form journeys on the dancefloor.",
         "example": "Joey Beltram - Energy Flash",
         "spotify_track_id": "46ddej1ibGIgs58H0wakoK",
         "substyles": [
@@ -425,7 +425,7 @@
     },
     {
         "style": "Electro",
-        "description": "Electro is a genre of electronic music that emerged in the early 1980s, characterized by its prominent use of synthesizers, drum machines, and robotic, often repetitive rhythms. It features a distinctive, futuristic sound, often incorporating elements of funk, disco, and new wave, and has been influential in genres like synth-pop, house, and techno.",
+        "description": "Electro, short for electro-funk, is a genre of electronic music that emerged in the early 1980s, directly influencing the development of techno, house, and Miami bass. Its signature sound is defined by the use of the Roland TR-808 drum machine, which provides its distinct, syncopated, and often sparse drum patterns, breaking away from the steady four-on-the-floor beat of disco. Fusing the rhythmic sensibilities of funk with futuristic, synthesized sounds and often vocoded or robotic vocals, electro creates a sound that is both groovy and mechanical. Pioneered by artists like Afrika Bambaataa & The Soulsonic Force with 'Planet Rock,' it established a blueprint for rhythm-focused electronic music built on technology and a sci-fi aesthetic.",
         "example": "Kraftwerk - The Model",
         "spotify_track_id": "7G3zERqh2d2tij0pVQfohU",
         "substyles": [
@@ -509,13 +509,13 @@
       },
     {
         "style": "House",
-        "description": "House music is a genre of electronic dance music characterized by its repetitive 4/4 beats, soulful melodies, and heavy use of synthesizers, originating from Chicago in the early 1980s.",
+        "description": "House music is a genre of electronic dance music that emerged from the underground club scene of Chicago in the early 1980s. Its name is derived from The Warehouse, a club where resident DJ Frankie Knuckles, the 'Godfather of House,' pioneered the sound by mixing disco classics with drum machines and synthesizers. House is defined by its steady 4/4 time signature, a tempo typically between 118-135 BPM, and a prominent bass drum on every beat. It builds upon the soulful, uplifting spirit of disco, often incorporating gospel-inspired vocals, piano riffs, and deep, groovy basslines to create an atmosphere of unity, celebration, and release on the dancefloor. It is the foundational genre for countless styles of electronic music that followed.",
         "example": "Lil' Louis - French Kiss",
         "spotify_track_id": "7hnqJYCKZFW7vMoykaraZG",
         "substyles": [
             {
                 "name": "Deep House",
-                "description": "Deep House is a subgenre of house music known for its smooth, soulful, and atmospheric sound. It combines the rhythmic foundation of house with softer, more melodic elements, creating a laid-back yet groovy vibe. Deep house often incorporates lush chords, smooth basslines, and subtle, evolving textures, making it ideal for both club settings and intimate, relaxed listening environments.",
+                "description": "Deep house is a subgenre of house music that emerged in the late 1980s, blending the soulful, disco-infused sound of early Chicago house with the complexities of jazz-funk and a more subdued, atmospheric mood. It is characterized by a slightly slower tempo than classic house, complex chord progressions, lush pads, and a focus on smooth, soulful vocals or instrumental melodies. The sound is often described as sophisticated, hypnotic, and introspective, with deep, rolling basslines that create a warm, immersive experience. Pioneered by artists like Larry Heard (Mr. Fingers), deep house prioritizes mood and musicality, making it suitable for both intimate dancefloors and contemplative listening.",
                 "example": "Larry Heard - Can You Feel It",
                 "spotify_track_id": "3bdcJVeUuAi7Hhkp54YOA9",
                 "substyles": [
@@ -914,9 +914,9 @@
         "example": "Baauer - Harlem Shake",
         "spotify_track_id": "01XFgRZfZI7oBagNf1Loml",
         "substyles": [
-                        {
+            {
                 "name": "Drum and Bass",
-                "description": "Drum and Bass is a high-energy genre of electronic music known for its rapid breakbeats (typically between 160-180 BPM), intense basslines, and complex drum patterns. Emerging in the UK during the early 1990s, it draws from a variety of influences including jazz, reggae, hip-hop, and the rave scene. The genre’s fast pace and intricate rhythms make it a favorite in club environments, with a sound that is both aggressive and deeply atmospheric. Over time, Drum and Bass has branched into various subgenres, each adding unique flavors and textures while maintaining the genre's core characteristics of rapid beats and bass-driven energy.",
+                "description": "Drum and Bass (often abbreviated as D&B or DnB) is a high-energy genre of electronic music that evolved from the UK's jungle and breakbeat hardcore scenes in the early 1990s. It is defined by its fast, complex breakbeats, typically ranging from 160 to 180 BPM, paired with heavy, prominent sub-bass lines that form the music's core. While jungle often retained a strong reggae and dancehall influence, drum and bass streamlined the sound, focusing on intricate, meticulously programmed drum patterns and a wider range of sonic textures, from dark and industrial (techstep) to smooth and melodic (liquid funk). The genre is a showcase of rhythmic complexity and sound design, creating a sound that is both physically intense and sonically diverse.",
                 "example": "Goldie - Inner City Life",
                 "spotify_track_id": "0O7xFEqePrcTUgOi4qe0uB",
                 "substyles": [

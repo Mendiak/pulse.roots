@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
   --primary-dark: #333;
   --secondary-dark: #222;
@@ -21,13 +19,22 @@ body {
   font-family: "Aleo", serif;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
 #header-container {
   background: var(--header-gradient);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 20px; 
+  padding: 8px 20px;
+}
+
+main {
   margin-bottom: 40px;
 }
 
@@ -53,8 +60,7 @@ body {
   margin: 20px;
   display: flex;
   gap: 20px;
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .info-box {
@@ -100,18 +106,63 @@ p {
 
 #treemap {
   min-width: 250px;
+  width: 100%;
   height: auto;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  overflow: hidden; /* This will clip any overflowing content and prevent scrollbars */
 }
 
+.searched-node circle {
+  stroke: #ff0055;
+  stroke-width: 4px;
+  r: 10; /* Make the circle bigger */
+}
+
+.searched-node text {
+  font-weight: bold;
+  fill: #ff0055;
+}
+
+#search-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#visualization-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* Allow the container to shrink and prevent overflow */
+  min-width: 0;
+}
+
+#search-container input {
+  max-width: 300px;
+}
 .node text {    
   fill: var(--primary-dark);
+}
+
+.node.faded, .link.faded {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.path-highlight-node text {
+  font-weight: bold;
+  fill: #000;
+}
+
+.path-highlight-link {
+  stroke: #ff0055;
+  stroke-width: 3px;
+  transition: stroke 0.3s ease;
 }
 
 .link {
@@ -123,27 +174,61 @@ p {
 .clickable-node text:hover {
   cursor: pointer;
 }
+
+/* Overlay for the modal effect */
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px); /* Modern blur effect */
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* Not clickable when hidden */
+}
+
+#modal-overlay.visible {
+  opacity: 1;
+  pointer-events: auto; /* Clickable when visible */
+}
+
 #info-panel {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: auto;
-    width: 90%;
-    max-width: 500px;
-    background-color: #dbdbdb;
-    padding: 20px;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-out;
-    transform: translateY(100%);
-    border-top-right-radius: 10px;
-  }
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 90%;
+  max-width: 600px;
+  background-color: #2e2e2e;
+  color: var(--text-light);
+  padding: 20px;
+  box-shadow: 0 -4px 30px rgba(0,0,0,0.3);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth "overshoot" effect */
+  transform: translate(-50%, 110%); /* Start further down */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top: 5px solid var(--panel-accent-color, #fff);
+  z-index: 1001; /* Ensure it's above the header */
+}
   
 #info-panel.visible {
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 #info-content {
   margin-bottom: 15px;
+}
+
+#info-panel h2 {
+  margin-top: 0;
+  color: var(--text-light);
+}
+
+#info-panel p {
+  color: #ccc;
 }
 
 #close-panel-container {
@@ -174,7 +259,7 @@ textarea {
   min-height: 100px;
 }
 
-#submitbutton {
+#submitbutton, #search-button, #clear-button {
   background-color: var(--primary-dark);
   color: var(--text-light);
   border: none;
@@ -185,7 +270,7 @@ textarea {
   font-family: "Aleo", serif;
 }
 
-#submitbutton:hover {
+#submitbutton:hover, #search-button:hover, #clear-button:hover {
   background-color: var(--text-grey);
   color: var(--text-light);
 }
@@ -194,18 +279,24 @@ footer {
   background: var(--header-gradient);
   color: var(--text-light);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  padding: 20px 50px;
+  padding: 30px 50px 15px; /* More top padding, less bottom */
   font-size: 14px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 50px;
+  align-items: flex-start; /* Align items to the top */
 }
 
 footer a {
   color: var(--text-light);
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #c0c0c0; /* Lighter grey for hover */
 }
 
 footer i {
@@ -225,13 +316,48 @@ footer i {
   min-width: 50px;
 }
 
+#links-container h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: var(--text-grey);
+}
+
+#links-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#links-container li {
+  margin-bottom: 10px;
+}
+
+#social-share h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: var(--text-grey);
+}
+
 #social-share i {
   font-size: 25px;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 #social-share i:hover {
   color: var(--text-grey);
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  flex-basis: 100%; /* Take full width */
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--tertiary-dark);
+  color: var(--text-grey);
+  font-size: 12px;
 }
 
 .tooltip {
@@ -252,5 +378,10 @@ footer i {
   }
   .tooltip {
     display: none;
+  }
+
+  #logoandlinks {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
