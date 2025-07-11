@@ -372,41 +372,6 @@ footer i {
   max-width: 400px;
 }
 
-@media (max-width: 768px) {
-  footer {      
-    padding: 10px 30px;
-  }
-  .tooltip {
-    display: none;
-  }
-
-  #logoandlinks {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* --- Mobile-Specific Styles --- */
-
-  /* Hide the D3.js tree visualization on small screens */
-  #visualization-container {
-    display: none;
-  }
-
-  /* Show the mobile navigation container (we'll create this next) */
-  #mobile-nav-container {
-    display: block;
-    width: 100%;
-  }
-
-  #main-container {
-    flex-direction: column;
-  }
-
-  .info-box {
-    max-width: 100%;
-  }
-}
-
 /* --- Styles for the new Mobile Navigation --- */
 
 /* Hide mobile nav on large screens by default */
@@ -448,4 +413,39 @@ footer i {
 
 .genre-item .indicator {
   transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  footer {      
+    padding: 10px 30px;
+  }
+  .tooltip {
+    display: none;
+  }
+
+  #logoandlinks {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* --- Mobile-Specific Styles --- */
+
+  /* Hide the D3.js tree visualization on small screens */
+  #visualization-container {
+    display: none;
+  }
+
+  /* Show the mobile navigation container (we'll create this next) */
+  #mobile-nav-container {
+    display: block;
+    width: 100%;
+  }
+
+  #main-container {
+    flex-direction: column;
+  }
+
+  .info-box {
+    max-width: 100%;
+  }
 }
