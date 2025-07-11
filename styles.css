@@ -381,6 +381,7 @@ footer i {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
 #mobile-genre-list, .sub-list {
@@ -413,9 +414,52 @@ footer i {
 
 .genre-item .indicator {
   transition: transform 0.3s ease;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.genre-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between the info icon and the expand icon */
+}
+
+.info-icon {
+  font-size: 1.2em;
+  color: var(--primary-dark);
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.info-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
+  /* --- Header Responsive Styles --- */
+  #header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 18px; /* Smaller title for mobile */
+  }
+
+  #logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  #search-container {
+    width: 100%;
+  }
+
+  #search-container input {
+    flex-grow: 1; /* Allow input to take up available space */
+  }
+
   footer {      
     padding: 10px 30px;
   }

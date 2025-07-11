@@ -228,37 +228,55 @@ function closeInfoPanel() {
 function createMobileNav(items, parentElement) {
   items.forEach(item => {
     const listItem = document.createElement('li');
-
-    // Create a div for the item name, which will be clickable
     const itemDiv = document.createElement('div');
     itemDiv.className = 'genre-item';
-    itemDiv.textContent = item.style || item.name; // Use 'style' for top-level, 'name' for sub-levels
 
-    listItem.appendChild(itemDiv);
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'genre-name';
+    nameSpan.textContent = item.style || item.name;
+    itemDiv.appendChild(nameSpan);
 
-    // If the item has substyles, it's a parent node that can be expanded
+    // If it's a parent node (has substyles)
     if (item.substyles && item.substyles.length > 0) {
+      const actionsDiv = document.createElement('div');
+      actionsDiv.className = 'genre-actions';
+
+      // Create an info icon to show the panel for the parent genre
+      const infoIcon = document.createElement('i');
+      infoIcon.className = 'bi bi-info-circle-fill info-icon';
+      infoIcon.setAttribute('aria-label', `Info for ${item.style || item.name}`);
+      
+      // Create the expand/collapse indicator
       const indicator = document.createElement('span');
       indicator.className = 'indicator';
       indicator.innerHTML = '&#43;'; // Plus sign
-      itemDiv.appendChild(indicator);
+
+      actionsDiv.appendChild(infoIcon);
+      actionsDiv.appendChild(indicator);
+      itemDiv.appendChild(actionsDiv);
 
       const subList = document.createElement('ul');
       subList.className = 'sub-list';
-      
-      // --- RECURSION ---
       createMobileNav(item.substyles, subList);
+      
+      listItem.appendChild(itemDiv);
       listItem.appendChild(subList);
 
-      // Add click event to expand/collapse the sub-list
+      // Event listener for the whole item (expand/collapse)
       itemDiv.addEventListener('click', () => {
         subList.classList.toggle('expanded');
         const isExpanded = subList.classList.contains('expanded');
         indicator.innerHTML = isExpanded ? '&#8722;' : '&#43;'; // Minus or plus sign
       });
-    } else {
-      // If it's a leaf node (no substyles), clicking it shows the info panel
-      itemDiv.addEventListener('click', () => showInfoPanel(item));
+
+      // Event listener ONLY for the info icon (show panel)
+      infoIcon.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevents the accordion from toggling
+        showInfoPanel(item);
+      });
+    } else { // If it's a leaf node (no substyles)
+      listItem.appendChild(itemDiv);
+      itemDiv.addEventListener('click', () => showInfoPanel(item)); // The whole item is clickable
     }
 
     parentElement.appendChild(listItem);
