@@ -23,18 +23,50 @@ function hideTooltip() {
   tooltip.transition().duration(200).style('opacity', 0);
 }
 
+// --- Reusable Panel Logic ---
+function showInfoPanel(itemData, accentColor = '#ff0055') {
+  const infoPanel = document.getElementById('info-panel');
+  const infoContent = document.getElementById('info-content');
+  const spotifyEmbed = document.getElementById('spotify-embed');
+  const overlay = document.getElementById('modal-overlay');
+
+  // Show the overlay
+  overlay.classList.add('visible');
+  // Set the panel's accent border color
+  infoPanel.style.setProperty('--panel-accent-color', accentColor);
+
+  // Update the info panel with the node's data
+  infoContent.innerHTML = `
+    <h2><i class="bi bi-tag-fill"></i> ${itemData.name || itemData.style}</h2>
+    <p>${itemData.description || 'No description available'}</p>
+    <p><i class="bi bi-soundwave"></i> <b>Example track: ${itemData.example || 'N/A'}</b></p>
+  `;
+
+  // Embed the Spotify player only if a trackId exists
+  const trackId = itemData.spotify_track_id;
+  if (trackId) {
+    spotifyEmbed.innerHTML = `
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="160" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    `;
+    spotifyEmbed.style.display = 'block';
+  } else {
+    spotifyEmbed.innerHTML = '';
+    spotifyEmbed.style.display = 'none';
+  }
+
+  // Show the info panel
+  infoPanel.classList.add('visible');
+}
+
 // Function to fetch data from the JSON file
 async function fetchData() {
   try {
     // Fetch the data from the JSON file
     const response = await fetch('pulseroots.genres.json');
     const data = await response.json();
-    console.log('Received data from JSON:', data);
-    
-    // Initial tree creation
-    createTree(data);
-    // Redraw on window resize for responsiveness
-    window.addEventListener('resize', () => createTree(data));
+    createTree(data); // Initial tree creation for desktop
+    createMobileNav(data, document.getElementById('mobile-genre-list')); // Create mobile nav
+    window.addEventListener('resize', () => createTree(data)); // Redraw tree on resize
   } catch (error) {
     console.error('Error obtaining data:', error);
   }
@@ -143,42 +175,11 @@ function createTree(data) {
       d3.selectAll('.node, .link').classed('faded', false).classed('path-highlight-node', false).classed('path-highlight-link', false);
     })
     .on('click', (event, d) => {
-      // Handle the click event on the nodes
-      if (d.depth === 0) {
-        return; 
-      }
-      const infoPanel = document.getElementById('info-panel');
-      const infoContent = document.getElementById('info-content');
-      const spotifyEmbed = document.getElementById('spotify-embed');
-      const overlay = document.getElementById('modal-overlay');
-
-      // Show the overlay
-      overlay.classList.add('visible');
-      // Get node color and set it as a CSS variable for the panel's accent border
+      if (d.depth === 0) return;
+      // Get the color from the D3 node to use as an accent
       const nodeColor = d3.select(event.currentTarget).select('circle').style('fill');
-      infoPanel.style.setProperty('--panel-accent-color', nodeColor);
-
-      // Update the info panel with the node's data
-      infoContent.innerHTML = `
-        <h2><i class="bi bi-tag-fill"></i> ${d.data.name}</h2>
-        <p>${d.data.description || 'No description available'}</p>
-        <p><i class="bi bi-soundwave"></i> <b>Example track: ${d.data.example || 'N/A'}</b></p>
-      `;
-
-      // Embed the Spotify player only if a trackId exists
-      const trackId = d.data.spotify_track_id;
-      if (trackId) {
-        spotifyEmbed.innerHTML = `
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="160" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        `;
-        spotifyEmbed.style.display = 'block';
-      } else {
-        spotifyEmbed.innerHTML = '';
-        spotifyEmbed.style.display = 'none';
-      }
-
-      // Show the info panel
-      infoPanel.classList.add('visible');
+      // Call the reusable function to show the panel
+      showInfoPanel(d.data, nodeColor);
     });
 
   // Attach the DOM node to each data point for easy selection later
@@ -219,60 +220,98 @@ function closeInfoPanel() {
   spotifyEmbed.innerHTML = '';
 }
 
-// Add event listeners to close the panel
-document.getElementById('close-panel').addEventListener('click', closeInfoPanel);
-document.getElementById('modal-overlay').addEventListener('click', closeInfoPanel);
+/**
+ * Creates a nested, collapsible navigation list for mobile view.
+ * @param {Array} items - The array of genre or sub-genre objects.
+ * @param {HTMLElement} parentElement - The <ul> element to which the list items will be appended.
+ */
+function createMobileNav(items, parentElement) {
+  items.forEach(item => {
+    const listItem = document.createElement('li');
 
-window.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    const infoPanel = document.getElementById('info-panel');
-    if (infoPanel.classList.contains('visible')) {
-      closeInfoPanel();
+    // Create a div for the item name, which will be clickable
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'genre-item';
+    itemDiv.textContent = item.style || item.name; // Use 'style' for top-level, 'name' for sub-levels
+
+    listItem.appendChild(itemDiv);
+
+    // If the item has substyles, it's a parent node that can be expanded
+    if (item.substyles && item.substyles.length > 0) {
+      const indicator = document.createElement('span');
+      indicator.className = 'indicator';
+      indicator.innerHTML = '&#43;'; // Plus sign
+      itemDiv.appendChild(indicator);
+
+      const subList = document.createElement('ul');
+      subList.className = 'sub-list';
+      
+      // --- RECURSION ---
+      createMobileNav(item.substyles, subList);
+      listItem.appendChild(subList);
+
+      // Add click event to expand/collapse the sub-list
+      itemDiv.addEventListener('click', () => {
+        subList.classList.toggle('expanded');
+        const isExpanded = subList.classList.contains('expanded');
+        indicator.innerHTML = isExpanded ? '&#8722;' : '&#43;'; // Minus or plus sign
+      });
+    } else {
+      // If it's a leaf node (no substyles), clicking it shows the info panel
+      itemDiv.addEventListener('click', () => showInfoPanel(item));
     }
-  }
-});
 
-// Add event listener for the search button
-document.getElementById('search-button').addEventListener('click', () => {
-  const searchTerm = document.getElementById('search-input').value.toLowerCase();
-  if (!searchTerm) return;
+    parentElement.appendChild(listItem);
+  });
+}
 
-  // Remove previous search highlights
-  d3.selectAll('.node').classed('searched-node', false);
+// --- Main Execution ---
+// This ensures the script runs only after the entire HTML document has been loaded and parsed.
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // --- Panel Closing Logic ---
+  document.getElementById('close-panel').addEventListener('click', closeInfoPanel);
+  document.getElementById('modal-overlay').addEventListener('click', closeInfoPanel);
 
-  // Apply new search highlights
-  d3.selectAll('.node')
-    .filter(d => d.data.name.toLowerCase().includes(searchTerm))
-    .classed('searched-node', true)
-    .each(d => {
-      // Optional: expand parents to make the node visible if you implement collapsible nodes
-      let current = d;
-      while (current.parent) {
-        // Logic to expand would go here
-        current = current.parent;
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      const infoPanel = document.getElementById('info-panel');
+      if (infoPanel.classList.contains('visible')) {
+        closeInfoPanel();
       }
-    });
+    }
+  });
+
+  // --- Search Logic ---
+  document.getElementById('search-button').addEventListener('click', () => {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    if (!searchTerm) return;
+
+    // Remove previous search highlights
+    d3.selectAll('.node').classed('searched-node', false);
+
+    // Apply new search highlights
+    d3.selectAll('.node')
+      .filter(d => d.data.name.toLowerCase().includes(searchTerm))
+      .classed('searched-node', true);
+  });
+
+  document.getElementById('clear-button').addEventListener('click', () => {
+    document.getElementById('search-input').value = '';
+    d3.selectAll('.node').classed('searched-node', false);
+  });
+
+  document.getElementById('search-input').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      document.getElementById('search-button').click();
+    }
+  });
+
+  // --- Footer Year ---
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  // --- Initial Data Load ---
+  // This function will now be called safely after the DOM is ready.
+  fetchData();
 });
-
-// Add event listener for the clear button
-document.getElementById('clear-button').addEventListener('click', () => {
-  document.getElementById('search-input').value = '';
-  d3.selectAll('.node').classed('searched-node', false);
-});
-
-// Add event listener to trigger search on "Enter" key press
-document.getElementById('search-input').addEventListener('keydown', (event) => {
-  // Check if the key pressed was "Enter"
-  if (event.key === 'Enter') {
-    // Prevent the default action (like form submission, though not applicable here)
-    event.preventDefault();
-    // Trigger a click on the search button to reuse its logic
-    document.getElementById('search-button').click();
-  }
-});
-
-// Call the function to fetch the data
-fetchData();
-
-// Dynamically update the copyright year in the footer
-document.getElementById('current-year').textContent = new Date().getFullYear();

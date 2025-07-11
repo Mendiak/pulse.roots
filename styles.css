@@ -384,4 +384,68 @@ footer i {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  /* --- Mobile-Specific Styles --- */
+
+  /* Hide the D3.js tree visualization on small screens */
+  #visualization-container {
+    display: none;
+  }
+
+  /* Show the mobile navigation container (we'll create this next) */
+  #mobile-nav-container {
+    display: block;
+    width: 100%;
+  }
+
+  #main-container {
+    flex-direction: column;
+  }
+
+  .info-box {
+    max-width: 100%;
+  }
+}
+
+/* --- Styles for the new Mobile Navigation --- */
+
+/* Hide mobile nav on large screens by default */
+#mobile-nav-container {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#mobile-genre-list, .sub-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sub-list {
+  padding-left: 20px; /* Indent sub-genres */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.sub-list.expanded {
+  max-height: 1000px; /* A large enough value to show all items */
+  transition: max-height 0.5s ease-in;
+}
+
+.genre-item {
+  padding: 15px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary-dark);
+  font-weight: bold;
+}
+
+.genre-item .indicator {
+  transition: transform 0.3s ease;
 }

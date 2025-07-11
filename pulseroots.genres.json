@@ -115,7 +115,7 @@
             },
             {
                 "name": "Noise & Distortion",
-                "description": "Noise & Distortion es una categoría que abarca géneros y estilos que desafían las convenciones musicales tradicionales al utilizar el ruido, la distorsión y las texturas sonoras abrasivas como elementos compositivos principales. Lejos de buscar la armonía o la melodía, la música noise explora el espectro completo del sonido, incluyendo frecuencias y texturas a menudo consideradas indeseables o cacofónicas. Sus raíces se remontan a movimientos de vanguardia como el Futurismo de principios del siglo XX y ha evolucionado a través de la música industrial y experimental.\n\nEste enfoque no se trata simplemente de crear sonidos fuertes, sino de esculpir el ruido para evocar atmósferas intensas, a menudo confrontacionales o inmersivas. Los artistas de este género utilizan una amplia gama de herramientas, desde sintetizadores sobrecargados y pedales de efectos hasta equipos modificados (circuit bending) y grabaciones de campo procesadas, para crear paisajes sonoros que pueden ser desde caóticos y abrumadores hasta sutiles y texturizados. Es una forma de arte sonoro que prioriza la textura, la intensidad y la experiencia auditiva pura sobre la estructura musical convencional.",
+                "description": "These substyles embrace distortion, feedback, and other abrasive sound textures.",
                 "example": "Merzbow - Ultra Marine Blues",
                 "spotify_track_id": "7GWJgWnYwrOod8jY6n4YxZ",
                 "substyles": [
@@ -159,7 +159,6 @@
                 "substyles": [
                     {
                         "name": "Bitpop",
-                        "description": "Bitpop es un subgénero del chiptune que fusiona las melodías y sonidos característicos de los chips de sonido de 8 bits, propios de las videoconsolas y ordenadores antiguos, con las estructuras y sensibilidades de la música pop. El resultado es una música electrónica pegadiza, enérgica y a menudo nostálgica, que combina la crudeza y las limitaciones del sonido chiptune con estribillos memorables, progresiones de acordes pop y ritmos bailables. A diferencia de otras formas de chiptune más experimentales, el bitpop se centra en la accesibilidad y el gancho melódico, creando canciones que son a la vez un homenaje a la era de los videojuegos retro y piezas de pop electrónico por derecho propio.",
                         "example": "Slagsmålsklubben - Sponsored By Destiny",
                         "spotify_track_id": "0I00u1IwnGQVguICUiCsAf"
                     },
