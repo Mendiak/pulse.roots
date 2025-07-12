@@ -66,6 +66,36 @@ async function fetchData() {
     const data = await response.json();
     createTree(data); // Initial tree creation for desktop
     createMobileNav(data, document.getElementById('mobile-genre-list')); // Create mobile nav
+
+    // --- Accordion Controls Logic ---
+    // This logic is moved here to ensure it runs AFTER the mobile nav is created.
+    const expandAllBtn = document.getElementById('expand-all-btn');
+    const collapseAllBtn = document.getElementById('collapse-all-btn');
+    // Now that createMobileNav has run, the items exist and can be selected.
+    const accordionItems = document.querySelectorAll('#mobile-genre-list .genre-item[aria-expanded]');
+
+    if (expandAllBtn && collapseAllBtn) {
+      expandAllBtn.addEventListener('click', () => {
+        accordionItems.forEach(item => {
+          item.setAttribute('aria-expanded', 'true');
+          const subList = document.getElementById(item.getAttribute('aria-controls'));
+          if (subList) {
+            subList.classList.add('expanded');
+          }
+        });
+      });
+
+      collapseAllBtn.addEventListener('click', () => {
+        accordionItems.forEach(item => {
+          item.setAttribute('aria-expanded', 'false');
+          const subList = document.getElementById(item.getAttribute('aria-controls'));
+          if (subList) {
+            subList.classList.remove('expanded');
+          }
+        });
+      });
+    }
+
     window.addEventListener('resize', () => createTree(data)); // Redraw tree on resize
   } catch (error) {
     console.error('Error obtaining data:', error);
@@ -227,16 +257,20 @@ function closeInfoPanel() {
  */
 function createMobileNav(items, parentElement) {
   items.forEach(item => {
+    // Use a unique ID for linking controls and content, good for accessibility
+    const uniqueId = `sub-list-${(item.style || item.name).replace(/\s+/g, '-')}-${Math.random().toString(36).substr(2, 9)}`;
+
     const listItem = document.createElement('li');
-    const itemDiv = document.createElement('div');
-    itemDiv.className = 'genre-item';
+    // Use a <button> for parent items for better accessibility, and a <div> for leaf nodes.
+    const itemElement = document.createElement(item.substyles && item.substyles.length > 0 ? 'button' : 'div');
+    itemElement.className = 'genre-item';
 
     const nameSpan = document.createElement('span');
     nameSpan.className = 'genre-name';
     nameSpan.textContent = item.style || item.name;
     // Store original text for search highlighting
     nameSpan.dataset.originalText = item.style
-    itemDiv.appendChild(nameSpan);
+    itemElement.appendChild(nameSpan);
 
     // If it's a parent node (has substyles)
     if (item.substyles && item.substyles.length > 0) {
@@ -255,20 +289,25 @@ function createMobileNav(items, parentElement) {
 
       actionsDiv.appendChild(infoIcon);
       actionsDiv.appendChild(indicator);
-      itemDiv.appendChild(actionsDiv);
+      itemElement.appendChild(actionsDiv);
+
+      // Accessibility attributes for the button
+      itemElement.setAttribute('aria-expanded', 'false');
+      itemElement.setAttribute('aria-controls', uniqueId);
 
       const subList = document.createElement('ul');
       subList.className = 'sub-list';
+      subList.id = uniqueId; // Assign the unique ID
       createMobileNav(item.substyles, subList);
       
-      listItem.appendChild(itemDiv);
+      listItem.appendChild(itemElement);
       listItem.appendChild(subList);
 
       // Event listener for the whole item (expand/collapse)
-      itemDiv.addEventListener('click', () => {
+      itemElement.addEventListener('click', () => {
         subList.classList.toggle('expanded');
         const isExpanded = subList.classList.contains('expanded');
-        indicator.innerHTML = isExpanded ? '&#8722;' : '&#43;'; // Minus or plus sign
+        itemElement.setAttribute('aria-expanded', isExpanded);
       });
 
       // Event listener ONLY for the info icon (show panel)
@@ -277,8 +316,8 @@ function createMobileNav(items, parentElement) {
         showInfoPanel(item);
       });
     } else { // If it's a leaf node (no substyles)
-      listItem.appendChild(itemDiv);
-      itemDiv.addEventListener('click', () => showInfoPanel(item)); // The whole item is clickable
+      listItem.appendChild(itemElement);
+      itemElement.addEventListener('click', () => showInfoPanel(item)); // The whole item is clickable
     }
 
     parentElement.appendChild(listItem);

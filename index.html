@@ -64,26 +64,22 @@
     </header>
     <main>
         <div id="main-container">        
-        <div id="tooltip" class="info-box" aria-labelledby="treemap-title">
+        <div id="tooltip" class="info-box" aria-labelledby="intro-title">
             <section>
-                <h2 id="treemap-title">Treemap Format</h2>
+                <h2 id="intro-title"><i class="bi bi-compass" aria-hidden="true"></i> How to Explore</h2>
+                <p>Welcome to PulseRoots! This guide helps you navigate the vast world of electronic music using our interactive tools.</p>
+                <p>On <strong>desktop</strong>, you'll find an immersive <strong>treemap</strong> that visually maps out the connections between genres. On <strong>mobile</strong>, the genres are organized into a clear and accessible <strong>accordion list</strong>.</p>
 
-                <p>Explore a comprehensive collection of electronic music genres, presented in a treemap format. The map starts at the broad "Electronic Music" category, then descends into the main "Families" (Ambient, Techno, House, etc.), and further branches into specific styles and substyles.</p>
+                <h2><i class="bi bi-soundwave" aria-hidden="true"></i> Styles and Substyles</h2>
+                <p>Both views start with broad "Families" (like Techno or House) and branch down into specific styles and substyles. Click or tap on any genre to open a panel with a detailed description and a sample track to help you understand its unique sound.</p>
                 
-                <h2>Families</h2>
-                <p>Each genre is categorized into broader families such as Ambient, Techno, House, and Trance. These families represent shared characteristics and influences across genres.</p>
+                <h2><i class="bi bi-journal-text" aria-hidden="true"></i> Note on Classification</h2>
+                <p>This visualization represents one interpretation of how electronic music genres are categorized. Music is fluid, and other classifications might group styles differently based on cultural, historical, or sonic perspectives.</p>
                 
-                <h2>Styles and Substyles</h2>
-                <p>Within each family, the treemap showcases distinct styles and their substyles. Each of these has its own unique sound and historical significance, making it easy to navigate through the world of electronic music.</p>
-                
-                <p>Clicking on a style or substyle will reveal more detailed information, including a brief description and a sample track to help you explore and understand each genre.</p>
-                
-                <h2>Note on Classification</h2>
-                <p>This treemap represents one way to categorize electronic music genres. Other classifications could group styles differently, based on cultural, historical, or sonic perspectives.</p>
-                
-                <h2><i class="bi bi-spotify" aria-label="Spotify icon"></i> Note on Listening to Example Tracks</h2>
+                <h2 class="section-divider"><i class="bi bi-spotify" aria-hidden="true"></i> Listening to Tracks</h2>
+                <p>To listen to the example tracks, a Spotify account may be required. The embedded player provides a 30-second preview for all users. <a href="https://accounts.spotify.com/login" id="spotify-login-link" target="_blank" rel="noopener noreferrer">Logging into Spotify</a> may unlock the full track, depending on your subscription.</p>
 
-                <h2>Contact</h2>
+                <h2 class="section-divider"><i class="bi bi-envelope" aria-hidden="true"></i> Contact</h2>
                 <p>Thank you for visiting, and I hope you enjoy exploring the world of electronic music.</p>
                 
                 <p>If you have any suggestions, improvement proposals, if you've found any errors, or just want to say 'Hi!', feel free to write to me.</p>
@@ -113,6 +109,10 @@
         <!-- NUEVO: El contenedor para la navegación en MÓVIL -->
         <div id="mobile-nav-container">
             <h2>Explore Genres</h2>
+            <div id="accordion-controls">
+                <button id="expand-all-btn">Expand All</button>
+                <button id="collapse-all-btn">Collapse All</button>
+            </div>
             <ul id="mobile-genre-list">
                 <!-- Esta lista se llenará dinámicamente con JavaScript -->
             </ul>

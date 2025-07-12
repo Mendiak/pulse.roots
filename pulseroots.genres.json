@@ -159,6 +159,7 @@
                 "substyles": [
                     {
                         "name": "Bitpop",
+                        "description": "Bitpop is a subgenre of chiptune that combines 8-bit sounds with pop music sensibilities, featuring catchy melodies, upbeat rhythms, and often vocals. It blends the nostalgic, lo-fi aesthetic of chiptune with the accessible structures of pop, creating a sound that is both retro and modern.",
                         "example": "Slagsmålsklubben - Sponsored By Destiny",
                         "spotify_track_id": "0I00u1IwnGQVguICUiCsAf"
                     },

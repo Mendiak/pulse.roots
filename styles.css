@@ -1,23 +1,26 @@
-
+/* --- Root Variables & General Styles --- */
 :root {
   --primary-dark: #333;
   --secondary-dark: #222;
   --tertiary-dark: #444;
   --text-light: #fff;
-  --text-grey: #a7a7a7;
+  --text-grey: #bdbdbd; /* Increased contrast from #a7a7a7 */
   --header-gradient: linear-gradient(to right, var(--secondary-dark), var(--primary-dark), var(--tertiary-dark));
 }
 
 body {
   margin: 0;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   background-image: url('assets/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Aleo", serif;
+  line-height: 1.6; /* Set a base line-height for better readability */
 }
+
+/* --- Header --- */
 
 header {
   position: sticky;
@@ -33,6 +36,8 @@ header {
   align-items: center;
   padding: 8px 20px;
 }
+
+/* --- Main Content & Layout --- */
 
 main {
   margin-bottom: 40px;
@@ -63,22 +68,60 @@ main {
   align-items: flex-start;
 }
 
+/* Shared styles for main content boxes */
+.info-box, #treemap, #mobile-nav-container {
+  background-color: rgba(255, 255, 255, 0.85); /* Increased opacity for readability */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
 .info-box {
   max-width: 300px;
   min-width: 250px;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  border-radius: 10px;
-  padding: 30px;
+  padding: 25px 30px;
   color: var(--primary-dark);
 }
 
+/* --- Tooltip / Intro Box --- */
 #tooltip {
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.92); /* Higher opacity for the main info box */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+/* Style headings inside the intro box for better hierarchy */
+#tooltip h2 {
+  font-size: 1.1rem; /* 17.6px if base is 16px */
+  color: #111;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+  display: flex;
+  align-items: center;
+}
+
+/* Add spacing and style for icons within the intro headings */
+#tooltip h2 i {
+  margin-right: 0.6em;
+  font-size: 1.1em; /* Make icons slightly larger than text */
+}
+
+/* Remove top margin for the very first heading */
+#tooltip h2:first-of-type {
+  margin-top: 0;
+}
+
+/* Style paragraphs for better readability */
+#tooltip p {
+  font-size: 0.95rem; /* ~15px */
+  color: #333;
+}
+
+/* Add a visual separator for key sections */
+.section-divider {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 1.5em;
 }
 
 #thanks {
@@ -88,31 +131,38 @@ main {
 #spotify-login-link {
   color: var(--primary-dark);
   font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: rgba(0,0,0,0.2);
+  transition: text-decoration-color 0.3s ease;
 }
 
 #spotify-login-link:visited {
-  color: #686868
+  color: #555; /* Improved contrast for visited links */
+}
+
+/* Add a hover effect to make the link more interactive */
+#spotify-login-link:hover {
+  text-decoration-color: var(--primary-dark);
 }
 
 h1 {
   font-size: 24px;
   color: var(--text-light);
   margin: 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Add shadow for better readability on gradient */
 }
 
 p {
   font-size: 16px;
   }
 
+/* --- D3 Visualization --- */
 #treemap {
   min-width: 250px;
   width: 100%;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   overflow: hidden; /* This will clip any overflowing content and prevent scrollbars */
 }
 
@@ -134,17 +184,17 @@ p {
   justify-content: center;
 }
 
+#search-container input {
+  max-width: 300px;
+  transition: all 0.4s ease-in-out;
+}
+
 #visualization-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   /* Allow the container to shrink and prevent overflow */
   min-width: 0;
-}
-
-#search-container input {
-  max-width: 300px;
-  transition: all 0.4s ease-in-out;
 }
 .node text {    
   fill: var(--primary-dark);
@@ -168,7 +218,7 @@ p {
 
 .link {
   fill: none;
-  stroke: #a7a7a7;
+  stroke: #cccccc; /* Made the lines lighter to reduce interference with labels */
   stroke-width: 2px;
 }
 
@@ -197,6 +247,8 @@ p {
   pointer-events: auto; /* Clickable when visible */
 }
 
+/* --- Info Panel (Modal) --- */
+
 #info-panel {
   position: fixed;
   bottom: 0;
@@ -204,19 +256,23 @@ p {
   width: 90%;
   max-width: 600px;
   background-color: #2e2e2e;
-  color: var(--text-light);
+  color: #f0f0f0; /* Slightly off-white for softer text */
   padding: 20px;
   box-shadow: 0 -4px 30px rgba(0,0,0,0.3);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth "overshoot" effect */
   transform: translate(-50%, 110%); /* Start further down */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  border-top: 5px solid var(--panel-accent-color, #fff);
+  border-top: 5px solid var(--panel-accent-color, #fff);  
   z-index: 1001; /* Ensure it's above the header */
+  /* Prevent panel from overflowing the viewport on mobile */
+  max-height: 85vh; /* Limit height to 85% of viewport height */
+  overflow-y: auto; /* Allow vertical scrolling within the panel */
+  box-sizing: border-box; /* Ensure padding is included in the height calculation */
 }
   
 #info-panel.visible {
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0);  
 }
 
 #info-content {
@@ -225,21 +281,32 @@ p {
 
 #info-panel h2 {
   margin-top: 0;
-  color: var(--text-light);
+  color: #ffffff;
 }
 
 #info-panel p {
-  color: #ccc;
+  color: #dcdcdc; /* Lighter grey for better readability on dark background */
+  line-height: 1.65; /* Slightly more line height for long paragraphs */
+  font-size: 0.95rem;
 }
 
 #close-panel-container {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: flex-end;
+  /* Make the close button stick to the top of the panel during scroll */
+  position: sticky;
+  top: -20px; /* Counteract parent's top padding */
+  background-color: #2e2e2e; /* Match panel background to hide text scrolling underneath */
+  padding-top: 10px; /* Add space above the close icon */
+  padding-bottom: 10px; /* Add space between button and content */
+  z-index: 2; /* Ensure it's above the scrolling content */
 }
 
 #close-panel-container i {
   cursor: pointer;
 }
+
+/* --- Form Styles --- */
 
 form {
   margin-top: 30px;
@@ -276,12 +343,14 @@ textarea {
   color: var(--text-light);
 }
 
+/* --- Footer --- */
+
 footer {
   background: var(--header-gradient);
   color: var(--text-light);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   padding: 30px 50px 15px; /* More top padding, less bottom */
-  font-size: 14px;
+  font-size: 0.9rem; /* ~14.4px */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -294,6 +363,7 @@ footer a {
   color: var(--text-light);
   text-decoration: none;
   transition: color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4); /* Shadow for readability */
 }
 
 footer a:hover {
@@ -320,7 +390,7 @@ footer i {
 #links-container h3 {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   color: var(--text-grey);
 }
 
@@ -337,7 +407,7 @@ footer i {
 #social-share h3 {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   color: var(--text-grey);
 }
 
@@ -358,7 +428,7 @@ footer i {
   padding-top: 15px;
   border-top: 1px solid var(--tertiary-dark);
   color: var(--text-grey);
-  font-size: 12px;
+  font-size: 0.75rem; /* 12px */
 }
 
 .tooltip {
@@ -377,12 +447,33 @@ footer i {
 
 /* Hide mobile nav on large screens by default */
 #mobile-nav-container {
-  display: none;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
+  display: none; /* Hidden on desktop */
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+#accordion-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#expand-all-btn, #collapse-all-btn {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid var(--primary-dark);
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Aleo", serif;
+  font-weight: bold;
+  color: var(--primary-dark);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#expand-all-btn:hover, #collapse-all-btn:hover {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
 }
 
 #mobile-genre-list, .sub-list {
@@ -403,6 +494,13 @@ footer i {
 }
 
 .genre-item {
+  /* Reset button styles to make it look like our div */
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: "Aleo", serif;
+
   padding: 15px 10px;
   border-bottom: 1px solid rgba(0,0,0,0.1);
   cursor: pointer;
@@ -411,10 +509,20 @@ footer i {
   align-items: center;
   color: var(--primary-dark);
   font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+/* Add a subtle background to the currently open item to indicate its state */
+.genre-item[aria-expanded="true"] {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.genre-item:hover {
+  background-color: rgba(0,0,0,0.05);
 }
 
 .genre-item .indicator {
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -423,6 +531,11 @@ footer i {
   display: flex;
   align-items: center;
   gap: 20px; /* Space between the info icon and the expand icon */
+}
+
+/* Rotate the indicator when expanded */
+.genre-item[aria-expanded="true"] .indicator {
+  transform: rotate(45deg);
 }
 
 .info-icon {
@@ -436,6 +549,8 @@ footer i {
   transform: scale(1.1);
 }
 
+/* --- Media Queries for Responsiveness --- */
+
 @media (max-width: 768px) {
   /* --- Header Responsive Styles --- */
   #header-container {
@@ -443,18 +558,12 @@ footer i {
     flex-direction: row;
     padding: 10px 15px;
     gap: 10px;
+    /* Add position relative to act as a container for the absolute search bar */
+    position: relative;
   }
 
-  h1 {
-    font-size: 18px; /* Smaller title for mobile */
-  }
-
-  /* Ensure title doesn't wrap and push down the layout */
-  #logo-link h1 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 120px; /* Adjust if needed */
+  h1 {    
+    font-size: 16px; /* Smaller title for mobile to fit */
   }
 
   #logo {
@@ -462,44 +571,9 @@ footer i {
     height: 30px;
   }
 
+  /* Hide the search bar on mobile */
   #search-container {
-    /* Use flexbox to manage the expanding search bar */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-grow: 1; /* Allow it to take up remaining space */
-    gap: 5px;
-  }
-
-  #search-container input {
-    /* Collapse the input to just an icon */
-    width: 35px;
-    min-width: 35px;
-    padding-left: 35px; /* Space for the icon */
-    border-radius: 20px; /* Make it circular */
-    cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23888' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center left 10px;
-  }
-
-  /* When the user taps/focuses the input, expand it */
-  #search-container input:focus {
-    width: 100%;
-    cursor: text;
-    background-image: none; /* Hide icon when typing */
-    padding-left: 12px;
-  }
-
-  /* Hide buttons by default */
-  #search-button, #clear-button {
     display: none;
-  }
-
-  /* Show buttons only when the search bar is active */
-  #search-container:focus-within #search-button,
-  #search-container:focus-within #clear-button {
-    display: inline-block;
   }
 
   footer {      
