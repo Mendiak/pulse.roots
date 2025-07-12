@@ -234,6 +234,8 @@ function createMobileNav(items, parentElement) {
     const nameSpan = document.createElement('span');
     nameSpan.className = 'genre-name';
     nameSpan.textContent = item.style || item.name;
+    // Store original text for search highlighting
+    nameSpan.dataset.originalText = item.style
     itemDiv.appendChild(nameSpan);
 
     // If it's a parent node (has substyles)
