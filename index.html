@@ -124,11 +124,15 @@
     <div id="modal-overlay" class="hidden"></div>
 
     <!-- Info panel that slides up. Moved here to avoid being blurred. -->
-    <div id="info-panel" class="hidden">
+    <!-- ARIA attributes added for accessibility -->
+    <div id="info-panel" class="hidden" role="dialog" aria-modal="true" aria-labelledby="info-panel-title">
         <div id="close-panel-container">
-            <i id="close-panel"class="bi bi-x-circle" aria-label="Close info panel"></i>
+            <!-- Changed from <i> to <button> for semantic accessibility -->
+            <button id="close-panel" aria-label="Close info panel">
+                <i class="bi bi-x-circle" aria-hidden="true"></i>
+            </button>
         </div>
-        <div id="info-content"></div>
+        <div id="info-content"></div> <!-- Content will be injected by JS -->
         <div id="spotify-embed"></div>
     </div>
 

@@ -1,3 +1,7 @@
+// Create a color scale to be used by both the D3 tree and the mobile navigation
+// It's defined globally so both functions can access it.
+const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+
 // Create a single tooltip element to be reused for performance
 const tooltip = d3.select('body')
   .append('div')
@@ -24,23 +28,53 @@ function hideTooltip() {
 }
 
 // --- Reusable Panel Logic ---
+// Store the element that was focused before the panel opened
+let focusedElementBeforePanel;
+
 function showInfoPanel(itemData, accentColor = '#ff0055') {
   const infoPanel = document.getElementById('info-panel');
   const infoContent = document.getElementById('info-content');
   const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
+  const closeButton = document.getElementById('close-panel');
+
+  // --- Accessibility: Store focus and hide background content ---
+  focusedElementBeforePanel = document.activeElement;
+  document.getElementById('main-container').setAttribute('aria-hidden', 'true');
+  document.querySelector('header').setAttribute('aria-hidden', 'true');
+  document.querySelector('footer').setAttribute('aria-hidden', 'true');
 
   // Show the overlay
   overlay.classList.add('visible');
   // Set the panel's accent border color
   infoPanel.style.setProperty('--panel-accent-color', accentColor);
 
-  // Update the info panel with the node's data
+  // Update the info panel with the node's data.
+  // Add an ID to the h2 to be used by aria-labelledby on the panel.
   infoContent.innerHTML = `
-    <h2><i class="bi bi-tag-fill"></i> ${itemData.name || itemData.style}</h2>
+    <h2 id="info-panel-title"><i class="bi bi-tag-fill"></i> ${itemData.name || itemData.style}</h2>
     <p>${itemData.description || 'No description available'}</p>
     <p><i class="bi bi-soundwave"></i> <b>Example track: ${itemData.example || 'N/A'}</b></p>
   `;
+
+  // --- NEW: Wikipedia Link Logic ---
+  // Check if the item has a Wikipedia URL and add the link button if it does.
+  if (itemData.wikipedia_url) {
+    const wikiLinkContainer = document.createElement('div');
+    wikiLinkContainer.className = 'external-link-container';
+
+    const wikiLink = document.createElement('a');
+    wikiLink.href = itemData.wikipedia_url;
+    wikiLink.target = '_blank'; // Open in a new tab
+    wikiLink.rel = 'noopener noreferrer';
+    wikiLink.className = 'wikipedia-link';
+    
+    // Use an icon from Bootstrap Icons
+    wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> Read more on Wikipedia`;
+
+    wikiLinkContainer.appendChild(wikiLink);
+    infoContent.appendChild(wikiLinkContainer);
+  }
 
   // Embed the Spotify player only if a trackId exists
   const trackId = itemData.spotify_track_id;
@@ -56,6 +90,38 @@ function showInfoPanel(itemData, accentColor = '#ff0055') {
 
   // Show the info panel
   infoPanel.classList.add('visible');
+
+  // --- Accessibility: Move focus into the panel without an initial jarring focus ring ---
+  // Add a class to temporarily suppress the focus style on programmatic focus
+  closeButton.classList.add('programmatic-focus');
+  closeButton.focus();
+
+  // Remove the class after a short delay, so subsequent keyboard focus works as expected
+  setTimeout(() => {
+    closeButton.classList.remove('programmatic-focus');
+  }, 150); // A brief, imperceptible delay
+
+  const focusableElements = infoPanel.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]), iframe'
+  );
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  infoPanel.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+
+    if (e.shiftKey) { // Shift + Tab
+      if (document.activeElement === firstElement) {
+        lastElement.focus();
+        e.preventDefault();
+      }
+    } else { // Tab
+      if (document.activeElement === lastElement) {
+        firstElement.focus();
+        e.preventDefault();
+      }
+    }
+  });
 }
 
 // Function to fetch data from the JSON file
@@ -63,7 +129,7 @@ async function fetchData() {
   try {
     // Fetch the data from the JSON file
     const response = await fetch('pulseroots.genres.json');
-    const data = await response.json();
+    const data = await response.json();    
     createTree(data); // Initial tree creation for desktop
     createMobileNav(data, document.getElementById('mobile-genre-list')); // Create mobile nav
 
@@ -115,9 +181,6 @@ function createTree(data) {
   const innerWidth = containerWidth - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
-  // Create a color scale for the nodes
-  const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
-
   // Select the SVG container and set its dimensions
   const svg = svgContainer.attr("width", containerWidth)
     .attr("height", height)
@@ -134,6 +197,7 @@ function createTree(data) {
       description: node.description,
       example: node.example,
       spotify_track_id: node.spotify_track_id,
+      wikipedia_url: node.wikipedia_url,
     };
     if (node.substyles && node.substyles.length > 0) {
       newNode.children = node.substyles.map(transformToHierarchy);
@@ -219,10 +283,13 @@ function createTree(data) {
   node.append('circle')
     .attr('r',6)
     .style('fill', d => {
-      if (d.depth === 0) return '#000';  // Root node
-      if (d.depth === 1) return colorScale(d.data.name);  // Main genres
-      if (d.parent) return colorScale(d.parent.data.name);  // Subgenres inherit parent color
-      return '#999';  // Fallback color
+      if (d.depth === 0) return '#000';  // Root node color
+      // Find the top-level genre ancestor (at depth 1) to determine the color family.
+      const topLevelAncestor = d.ancestors().find(ancestor => ancestor.depth === 1);
+      if (topLevelAncestor) {
+        return colorScale(topLevelAncestor.data.name);
+      }
+      return '#999';  // Fallback color for any nodes that might not fit the structure
     });
 
   // Add the text labels for the nodes
@@ -241,6 +308,11 @@ function closeInfoPanel() {
   const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
 
+  // --- Accessibility: Un-hide background content and restore focus ---
+  document.getElementById('main-container').removeAttribute('aria-hidden');
+  document.querySelector('header').removeAttribute('aria-hidden');
+  document.querySelector('footer').removeAttribute('aria-hidden');
+
   // Hide the panel
   infoPanel.classList.remove('visible');
   // Hide the overlay
@@ -248,6 +320,11 @@ function closeInfoPanel() {
 
   // Stop the music by clearing the iframe content
   spotifyEmbed.innerHTML = '';
+
+  // --- Accessibility: Return focus to the element that opened the panel ---
+  if (focusedElementBeforePanel) {
+    focusedElementBeforePanel.focus();
+  }
 }
 
 /**
@@ -255,51 +332,79 @@ function closeInfoPanel() {
  * @param {Array} items - The array of genre or sub-genre objects.
  * @param {HTMLElement} parentElement - The <ul> element to which the list items will be appended.
  */
-function createMobileNav(items, parentElement) {
+function createMobileNav(items, parentElement, parentColor = null) {
   items.forEach(item => {
     // Use a unique ID for linking controls and content, good for accessibility
-    const uniqueId = `sub-list-${(item.style || item.name).replace(/\s+/g, '-')}-${Math.random().toString(36).substr(2, 9)}`;
+    const baseId = `${(item.style || item.name).replace(/\s+/g, '-')}-${Math.random().toString(36).substr(2, 9)}`;
+    const subListId = `sub-list-${baseId}`;
 
     const listItem = document.createElement('li');
     // Use a <button> for parent items for better accessibility, and a <div> for leaf nodes.
     const itemElement = document.createElement(item.substyles && item.substyles.length > 0 ? 'button' : 'div');
     itemElement.className = 'genre-item';
 
+    // Determine the color for this item.
+    // If it's a top-level genre, get a new color. If it's a sub-genre, inherit from the parent.
+    const currentColor = parentColor || colorScale(item.style || item.name);
+
+    // Apply the color as a CSS custom property for styling.
+    itemElement.style.setProperty('--genre-color', currentColor);
+
     const nameSpan = document.createElement('span');
     nameSpan.className = 'genre-name';
     nameSpan.textContent = item.style || item.name;
     // Store original text for search highlighting
-    nameSpan.dataset.originalText = item.style
+    nameSpan.dataset.originalText = item.style || item.name;
     itemElement.appendChild(nameSpan);
 
-    // If it's a parent node (has substyles)
-    if (item.substyles && item.substyles.length > 0) {
-      const actionsDiv = document.createElement('div');
-      actionsDiv.className = 'genre-actions';
+    // --- UNIFIED ACTIONS CONTAINER ---
+    // All items get an actions container for a consistent UI
+    const actionsDiv = document.createElement('div');
+    actionsDiv.className = 'genre-actions';
 
-      // Create an info icon to show the panel for the parent genre
-      const infoIcon = document.createElement('i');
-      infoIcon.className = 'bi bi-info-circle-fill info-icon';
-      infoIcon.setAttribute('aria-label', `Info for ${item.style || item.name}`);
-      
+    // Add Wikipedia icon if it exists
+    if (item.wikipedia_url) {
+      const wikiIconLink = document.createElement('a');
+      wikiIconLink.href = item.wikipedia_url;
+      wikiIconLink.target = '_blank';
+      wikiIconLink.rel = 'noopener noreferrer';
+      wikiIconLink.className = 'bi bi-wikipedia wiki-icon';
+      wikiIconLink.setAttribute('aria-label', `Read more about ${item.style || item.name} on Wikipedia`);
+      wikiIconLink.addEventListener('click', (e) => e.stopPropagation()); // Prevent accordion toggle
+      actionsDiv.appendChild(wikiIconLink);
+    }
+
+    // Add info icon for ALL items
+    const infoIcon = document.createElement('i');
+    infoIcon.className = 'bi bi-info-circle-fill info-icon';
+    infoIcon.setAttribute('aria-label', `Info for ${item.style || item.name}`);
+    infoIcon.addEventListener('click', (event) => {
+      event.stopPropagation(); // Stop propagation to prevent parent click handlers
+      showInfoPanel(item);
+    });
+    actionsDiv.appendChild(infoIcon);
+
+    // If it's a parent node (has substyles), add expand/collapse functionality
+    if (item.substyles && item.substyles.length > 0) {
       // Create the expand/collapse indicator
       const indicator = document.createElement('span');
       indicator.className = 'indicator';
       indicator.innerHTML = '&#43;'; // Plus sign
-
-      actionsDiv.appendChild(infoIcon);
       actionsDiv.appendChild(indicator);
-      itemElement.appendChild(actionsDiv);
 
       // Accessibility attributes for the button
+      const buttonId = `btn-${baseId}`;
+      itemElement.id = buttonId;
       itemElement.setAttribute('aria-expanded', 'false');
-      itemElement.setAttribute('aria-controls', uniqueId);
+      itemElement.setAttribute('aria-controls', subListId);
 
       const subList = document.createElement('ul');
       subList.className = 'sub-list';
-      subList.id = uniqueId; // Assign the unique ID
-      createMobileNav(item.substyles, subList);
-      
+      subList.id = subListId; // Assign the unique ID
+      subList.setAttribute('role', 'region'); // ARIA role for content panel
+      subList.setAttribute('aria-labelledby', buttonId); // Link panel to its button
+      createMobileNav(item.substyles, subList, currentColor); // Pass the color down to children
+
       listItem.appendChild(itemElement);
       listItem.appendChild(subList);
 
@@ -309,17 +414,13 @@ function createMobileNav(items, parentElement) {
         const isExpanded = subList.classList.contains('expanded');
         itemElement.setAttribute('aria-expanded', isExpanded);
       });
-
-      // Event listener ONLY for the info icon (show panel)
-      infoIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevents the accordion from toggling
-        showInfoPanel(item);
-      });
     } else { // If it's a leaf node (no substyles)
       listItem.appendChild(itemElement);
-      itemElement.addEventListener('click', () => showInfoPanel(item)); // The whole item is clickable
+      // No click listener on the item itself, only on the icons
     }
 
+    // Append the actions to the item element
+    itemElement.appendChild(actionsDiv);
     parentElement.appendChild(listItem);
   });
 }

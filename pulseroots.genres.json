@@ -239,15 +239,19 @@
     },
     {
         "style": "Techno",
+        "origin_decade": 1980,
         "description": "Techno is a genre of electronic dance music that originated in Detroit, Michigan, during the mid-to-late 1980s. Pioneered by 'The Belleville Three'—Juan Atkins, Derrick May, and Kevin Saunderson—techno was born from a fusion of funk, electro, and a fascination with futuristic themes, heavily influenced by writers like Alvin Toffler. It is characterized by a repetitive 4/4 time signature, a tempo typically between 120 and 150 BPM, and a focus on rhythm and texture over melodic complexity. Unlike the soulful, vocal-driven sound of its contemporary, Chicago house, techno often features a more mechanical, stripped-down, and hypnotic sound palette, using synthesizers and drum machines to create a sonic landscape that feels both industrial and otherworldly. It's a genre built for continuous mixing in clubs, creating immersive, long-form journeys on the dancefloor.",
         "example": "Joey Beltram - Energy Flash",
         "spotify_track_id": "46ddej1ibGIgs58H0wakoK",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Techno",
         "substyles": [
             {
                 "name": "Detroit Techno",
+                "origin_decade": 1980,
                 "description": "Detroit techno is a subgenre of techno music that originated in Detroit in the 1980s, characterized by its soulful melodies, driving 4/4 beats, and futuristic sounds. It often incorporates elements of funk, jazz, and electronic music, reflecting the city's cultural heritage and industrial landscape. Detroit techno is known for its emotional depth and innovative production techniques, influencing the global techno scene.",
                 "example": "Derrick May -  Strings of Life",
                 "spotify_track_id": "7N3FfUFMud1rjI6Vgw71mm",
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Detroit_techno",
                 "substyles": [
                     {
                         "name": "Classic Detroit Techno",
@@ -509,6 +513,7 @@
       },
     {
         "style": "House",
+        "origin_decade": 1980,
         "description": "House music is a genre of electronic dance music that emerged from the underground club scene of Chicago in the early 1980s. Its name is derived from The Warehouse, a club where resident DJ Frankie Knuckles, the 'Godfather of House,' pioneered the sound by mixing disco classics with drum machines and synthesizers. House is defined by its steady 4/4 time signature, a tempo typically between 118-135 BPM, and a prominent bass drum on every beat. It builds upon the soulful, uplifting spirit of disco, often incorporating gospel-inspired vocals, piano riffs, and deep, groovy basslines to create an atmosphere of unity, celebration, and release on the dancefloor. It is the foundational genre for countless styles of electronic music that followed.",
         "example": "Lil' Louis - French Kiss",
         "spotify_track_id": "7hnqJYCKZFW7vMoykaraZG",

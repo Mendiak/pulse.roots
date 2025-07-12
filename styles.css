@@ -16,8 +16,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  animation: fadeInBackground 2s ease-in-out; /* Smooth fade-in for the background */
   font-family: "Aleo", serif;
   line-height: 1.6; /* Set a base line-height for better readability */
+}
+
+/* Keyframe animation for the background fade-in */
+@keyframes fadeInBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* --- Header --- */
@@ -58,7 +65,8 @@ main {
 }
 
 #logo:hover {
-  transform: rotate(10deg) scale(1.1);
+  transform: rotate(5deg) scale(1.1); /* Slightly more subtle rotation */
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,0.4)); /* Add a shadow to lift it off the page */
 }
 
 #main-container {
@@ -115,6 +123,7 @@ main {
 /* Style paragraphs for better readability */
 #tooltip p {
   font-size: 0.95rem; /* ~15px */
+  line-height: 1.7; /* Increased line-height for better readability in long paragraphs */
   color: #333;
 }
 
@@ -187,6 +196,52 @@ p {
 #search-container input {
   max-width: 300px;
   transition: all 0.4s ease-in-out;
+}
+
+/* --- Loading Spinner and Content Visibility --- */
+
+/* A general utility class to hide elements */
+.hidden {
+  display: none !important; /* Use !important to override other display properties */
+}
+
+/* Wrapper for content that needs to be loaded */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0; /* Allow the container to shrink */
+  position: relative; /* Needed for absolute positioning of the spinner */
+  min-height: 300px; /* Give it some height while loading */
+}
+
+#loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--primary-dark);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--primary-dark);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#error-message {
+  text-align: center;
+  color: #d9534f; /* A standard error red color */
+  padding: 20px;
 }
 
 #visualization-container {
@@ -270,6 +325,23 @@ p {
   overflow-y: auto; /* Allow vertical scrolling within the panel */
   box-sizing: border-box; /* Ensure padding is included in the height calculation */
 }
+
+/* --- Custom Scrollbar for the Info Panel (WebKit browsers) --- */
+#info-panel::-webkit-scrollbar {
+  width: 10px;
+}
+
+#info-panel::-webkit-scrollbar-track {
+  background: #2e2e2e; /* Match panel background */
+  border-radius: 10px;
+}
+
+#info-panel::-webkit-scrollbar-thumb {
+  background-color: #555; /* A darker grey for the scrollbar handle */
+  border-radius: 10px;
+  border: 2px solid #2e2e2e; /* Creates padding around the thumb */
+}
+
   
 #info-panel.visible {
   transform: translate(-50%, 0);  
@@ -302,8 +374,36 @@ p {
   z-index: 2; /* Ensure it's above the scrolling content */
 }
 
-#close-panel-container i {
+/* Style the new close button to look like the old icon */
+#close-panel {
+  background: none;
+  border: none;
+  color: #f0f0f0; /* Match icon color */
+  padding: 0;
+  font-size: 1.5rem; /* Make the icon larger and easier to click */
   cursor: pointer;
+    /* Use flexbox for perfect centering of the icon inside the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem; /* Give the button a fixed square size for a perfect circle */
+  height: 2.2rem;
+  border-radius: 50%; /* Make the button itself circular */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#close-panel:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Add a custom focus style for accessibility, replacing the default blue outline */
+#close-panel:focus-visible {
+  outline: none; /* Remove the default browser outline */
+  /* Create a subtle white glow to indicate focus, which looks better on the dark panel */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+  border-radius: 50%; /* Make the focus indicator circular to match the icon shape */
+  transform: scale(1.1); /* Also apply the scale effect on focus */
 }
 
 /* --- Form Styles --- */
@@ -328,19 +428,20 @@ textarea {
 }
 
 #submitbutton, #search-button, #clear-button {
-  background-color: var(--primary-dark);
+  background: linear-gradient(to bottom, #444, #333); /* Subtle gradient for depth */
   color: var(--text-light);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
   font-family: "Aleo", serif;
 }
 
 #submitbutton:hover, #search-button:hover, #clear-button:hover {
-  background-color: var(--text-grey);
-  color: var(--text-light);
+  background: linear-gradient(to bottom, #555, #444);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow on hover for a "lifting" effect */
+  transform: translateY(-2px); /* Lift the button slightly */
 }
 
 /* --- Footer --- */
@@ -461,19 +562,22 @@ footer i {
 #expand-all-btn, #collapse-all-btn {
   flex-grow: 1;
   padding: 10px;
-  border: 1px solid var(--primary-dark);
-  background-color: transparent;
+  border: none;
+  background: linear-gradient(to bottom, #fdfdfd, #f0f0f0);
+  border: 1px solid rgba(0,0,0,0.15);
   cursor: pointer;
   border-radius: 5px;
   font-family: "Aleo", serif;
   font-weight: bold;
   color: var(--primary-dark);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
 #expand-all-btn:hover, #collapse-all-btn:hover {
   background-color: var(--primary-dark);
   color: var(--text-light);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
 }
 
 #mobile-genre-list, .sub-list {
@@ -484,32 +588,47 @@ footer i {
 .sub-list {
   padding-left: 20px; /* Indent sub-genres */
   max-height: 0;
+  visibility: hidden; /* Hide from accessibility tree when collapsed */
   overflow: hidden;
-  transition: max-height 0.4s ease-out;
+  transition: max-height 0.4s ease-out, visibility 0s 0.4s; /* Delay visibility transition */
 }
 
 .sub-list.expanded {
   max-height: 1000px; /* A large enough value to show all items */
-  transition: max-height 0.5s ease-in;
+  visibility: visible; /* Make it visible for accessibility */
+  transition: max-height 0.5s ease-in, visibility 0s;
 }
 
 .genre-item {
   /* Reset button styles to make it look like our div */
   background: none;
-  border: none;
-  width: 100%;
+  border: none; /* Individual borders are set below */
+  width: 100%; /* Make item fill its container for a balanced look */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
   text-align: left;
   font-family: "Aleo", serif;
-
-  padding: 15px 10px;
+  font-size: 0.95rem; /* Slightly smaller font to prevent overflow on mobile */
+  
+  padding: 12px 15px 12px 10px; /* (T, R, B, L) - Balanced horizontal padding with the left border */
   border-bottom: 1px solid rgba(0,0,0,0.1);
-  cursor: pointer;
+  border-left: 5px solid var(--genre-color, transparent); /* Use the color from JS */
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--primary-dark);
-  font-weight: bold;
-  transition: background-color 0.2s ease;
+  font-weight: normal; /* Change from bold to normal for consistency */
+  transition: background-color 0.2s ease, border-color 0.3s ease;
+}
+
+/* Remove the bottom border from the last item in any list for a cleaner look */
+#mobile-genre-list > li:last-child > .genre-item,
+.sub-list > li:last-child > .genre-item {
+  border-bottom: none;
+}
+
+/* Apply cursor only to parent items that can be expanded */
+.genre-item[aria-expanded] {
+  cursor: pointer;
 }
 
 /* Add a subtle background to the currently open item to indicate its state */
@@ -517,6 +636,17 @@ footer i {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
+.genre-name {
+  /* Allow the name to take up available space but not push the actions off-screen */
+  flex: 1;
+  min-width: 0; /* Important for flex items to shrink properly */
+  
+  /* Truncate long text with an ellipsis */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px; /* Reduced space between the text and the icons */
+}
 .genre-item:hover {
   background-color: rgba(0,0,0,0.05);
 }
@@ -530,7 +660,7 @@ footer i {
 .genre-actions {
   display: flex;
   align-items: center;
-  gap: 20px; /* Space between the info icon and the expand icon */
+  gap: 15px; /* Reduced space between icons */
 }
 
 /* Rotate the indicator when expanded */
@@ -546,6 +676,47 @@ footer i {
 }
 .info-icon:hover {
   opacity: 1;
+  transform: scale(1.1);
+}
+
+/* --- NEW: Styles for External Links in Info Panel --- */
+.external-link-container {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #444; /* A visual separator inside the dark panel */
+    z-index: 1; /* Ensure it's above other potential elements */
+}
+
+.wikipedia-link {
+    /* Transform the button into a more subtle text link */
+    display: inline-flex; /* Keeps icon and text aligned */
+    align-items: center;
+    gap: 8px; /* Space between the icon and the text */
+    color: #dcdcdc; /* Match the panel's paragraph text color */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: color 0.2s ease;
+}
+
+.wikipedia-link:hover {
+    /* Add a subtle hover effect */
+    color: #fff;
+    text-decoration: underline;
+}
+
+.wikipedia-link .bi-wikipedia {
+    font-size: 1.2em;
+}
+
+.wiki-icon {
+  text-decoration: none; /* Remove underline from the icon link */
+  color: #777; /* Make the icon a lighter grey to be more discreet */
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.wiki-icon:hover {
+  color: #000; /* Darken on hover for better feedback */
   transform: scale(1.1);
 }
 
@@ -596,7 +767,7 @@ footer i {
   }
 
   /* Show the mobile navigation container (we'll create this next) */
-  #mobile-nav-container {
+  #mobile-nav-container.loaded { /* Only show if content has loaded */
     display: block;
     width: 100%;
   }
