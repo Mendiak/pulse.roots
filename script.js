@@ -383,9 +383,10 @@ function createMobileNav(items, parentElement, parentColor = null) {
     infoIcon.setAttribute('aria-label', `Info for ${item.style || item.name}`);
     infoIcon.addEventListener('click', (event) => {
       event.stopPropagation(); // Stop propagation to prevent parent click handlers
-      showInfoPanel(item);
+      showInfoPanel(item, currentColor); // Call showInfoPanel with the appropriate arguments
     });
     actionsDiv.appendChild(infoIcon);
+
 
     // If it's a parent node (has substyles), add expand/collapse functionality
     if (item.substyles && item.substyles.length > 0) {
