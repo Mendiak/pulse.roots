@@ -133,6 +133,9 @@ async function fetchData() {
     createTree(data); // Initial tree creation for desktop
     createMobileNav(data, document.getElementById('mobile-genre-list')); // Create mobile nav
 
+    // Show the mobile navigation container now that it's populated
+    document.getElementById('mobile-nav-container').classList.add('loaded');
+
     // --- Accordion Controls Logic ---
     // This logic is moved here to ensure it runs AFTER the mobile nav is created.
     const expandAllBtn = document.getElementById('expand-all-btn');
