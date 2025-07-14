@@ -1,3 +1,22 @@
+/**
+ * Returns a function, that, as long as it continues to be invoked, will not
+ * be triggered. The function will be called after it stops being called for
+ * N milliseconds.
+ * @param {Function} func The function to debounce.
+ * @param {number} wait The number of milliseconds to delay.
+ */
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
 // Create a color scale to be used by both the D3 tree and the mobile navigation
 // It's defined globally so both functions can access it.
 const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
@@ -80,7 +99,8 @@ function showInfoPanel(itemData, accentColor = '#ff0055') {
   const trackId = itemData.spotify_track_id;
   if (trackId) {
     spotifyEmbed.innerHTML = `
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="160" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p class="spotify-note"><strong>Note:</strong> Log in to Spotify in your browser to listen to the full track. Otherwise, a 30-second preview will be played.</p>
     `;
     spotifyEmbed.style.display = 'block';
   } else {
@@ -124,6 +144,40 @@ function showInfoPanel(itemData, accentColor = '#ff0055') {
   });
 }
 
+/**
+ * Saves the current expanded/collapsed state of the mobile accordion to localStorage.
+ */
+function saveAccordionState() {
+  const expandedItems = document.querySelectorAll('#mobile-genre-list .sub-list.expanded');
+  const expandedIds = Array.from(expandedItems).map(item => item.id);
+  localStorage.setItem('pulseRootsAccordionState', JSON.stringify(expandedIds));
+}
+
+/**
+ * Restores the accordion state from localStorage when the page loads.
+ */
+function restoreAccordionState() {
+  const savedState = localStorage.getItem('pulseRootsAccordionState');
+  if (!savedState) return;
+
+  try {
+    const expandedIds = JSON.parse(savedState);
+    if (Array.isArray(expandedIds)) {
+      expandedIds.forEach(id => {
+        const subList = document.getElementById(id);
+        const controllingButton = document.querySelector(`[aria-controls="${id}"]`);
+        if (subList && controllingButton) {
+          subList.classList.add('expanded');
+          controllingButton.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  } catch (e) {
+    console.error('Error parsing accordion state from localStorage:', e);
+    localStorage.removeItem('pulseRootsAccordionState'); // Clear corrupted data
+  }
+}
+
 // Function to fetch data from the JSON file
 async function fetchData() {
   try {
@@ -132,6 +186,9 @@ async function fetchData() {
     const data = await response.json();    
     createTree(data); // Initial tree creation for desktop
     createMobileNav(data, document.getElementById('mobile-genre-list')); // Create mobile nav
+
+    // Restore the accordion state after it has been created
+    restoreAccordionState();
 
     // Show the mobile navigation container now that it's populated
     document.getElementById('mobile-nav-container').classList.add('loaded');
@@ -142,6 +199,7 @@ async function fetchData() {
     const collapseAllBtn = document.getElementById('collapse-all-btn');
     // Now that createMobileNav has run, the items exist and can be selected.
     const accordionItems = document.querySelectorAll('#mobile-genre-list .genre-item[aria-expanded]');
+    const allSubLists = document.querySelectorAll('#mobile-genre-list .sub-list');
 
     if (expandAllBtn && collapseAllBtn) {
       expandAllBtn.addEventListener('click', () => {
@@ -149,9 +207,10 @@ async function fetchData() {
           item.setAttribute('aria-expanded', 'true');
           const subList = document.getElementById(item.getAttribute('aria-controls'));
           if (subList) {
-            subList.classList.add('expanded');
+            subList.classList.add('expanded'); // This is correct
           }
         });
+        saveAccordionState();
       });
 
       collapseAllBtn.addEventListener('click', () => {
@@ -159,13 +218,17 @@ async function fetchData() {
           item.setAttribute('aria-expanded', 'false');
           const subList = document.getElementById(item.getAttribute('aria-controls'));
           if (subList) {
-            subList.classList.remove('expanded');
+            subList.classList.remove('expanded'); // This is correct
           }
         });
+        saveAccordionState();
       });
     }
 
-    window.addEventListener('resize', () => createTree(data)); // Redraw tree on resize
+    // --- PERFORMANCE: Debounce the resize event to avoid excessive redraws ---
+    const debouncedCreateTree = debounce(() => createTree(data), 250);
+    window.addEventListener('resize', debouncedCreateTree);
+
   } catch (error) {
     console.error('Error obtaining data:', error);
   }
@@ -336,6 +399,7 @@ function closeInfoPanel() {
  * @param {HTMLElement} parentElement - The <ul> element to which the list items will be appended.
  */
 function createMobileNav(items, parentElement, parentColor = null) {
+  // This function now only handles the creation of the DOM structure.
   items.forEach(item => {
     // Use a unique ID for linking controls and content, good for accessibility
     const baseId = `${(item.style || item.name).replace(/\s+/g, '-')}-${Math.random().toString(36).substr(2, 9)}`;
@@ -344,6 +408,11 @@ function createMobileNav(items, parentElement, parentColor = null) {
     const listItem = document.createElement('li');
     // Use a <button> for parent items for better accessibility, and a <div> for leaf nodes.
     const itemElement = document.createElement(item.substyles && item.substyles.length > 0 ? 'button' : 'div');
+
+    // --- REFACTORED: Add data attributes for event delegation ---
+    itemElement.dataset.action = 'toggle'; // For expanding/collapsing
+    itemElement.dataset.itemData = JSON.stringify(item); // Store item data directly
+
     itemElement.className = 'genre-item';
 
     // Determine the color for this item.
@@ -372,19 +441,16 @@ function createMobileNav(items, parentElement, parentColor = null) {
       wikiIconLink.target = '_blank';
       wikiIconLink.rel = 'noopener noreferrer';
       wikiIconLink.className = 'bi bi-wikipedia wiki-icon';
+      wikiIconLink.dataset.action = 'wiki'; // For event delegation
       wikiIconLink.setAttribute('aria-label', `Read more about ${item.style || item.name} on Wikipedia`);
-      wikiIconLink.addEventListener('click', (e) => e.stopPropagation()); // Prevent accordion toggle
       actionsDiv.appendChild(wikiIconLink);
     }
 
     // Add info icon for ALL items
     const infoIcon = document.createElement('i');
     infoIcon.className = 'bi bi-info-circle-fill info-icon';
+    infoIcon.dataset.action = 'info'; // For event delegation
     infoIcon.setAttribute('aria-label', `Info for ${item.style || item.name}`);
-    infoIcon.addEventListener('click', (event) => {
-      event.stopPropagation(); // Stop propagation to prevent parent click handlers
-      showInfoPanel(item, currentColor); // Call showInfoPanel with the appropriate arguments
-    });
     actionsDiv.appendChild(infoIcon);
 
 
@@ -411,21 +477,68 @@ function createMobileNav(items, parentElement, parentColor = null) {
 
       listItem.appendChild(itemElement);
       listItem.appendChild(subList);
-
-      // Event listener for the whole item (expand/collapse)
-      itemElement.addEventListener('click', () => {
-        subList.classList.toggle('expanded');
-        const isExpanded = subList.classList.contains('expanded');
-        itemElement.setAttribute('aria-expanded', isExpanded);
-      });
     } else { // If it's a leaf node (no substyles)
       listItem.appendChild(itemElement);
-      // No click listener on the item itself, only on the icons
     }
 
     // Append the actions to the item element
     itemElement.appendChild(actionsDiv);
     parentElement.appendChild(listItem);
+  });
+}
+
+/**
+ * Performs a search on both the D3 tree and the mobile accordion list.
+ * @param {string} searchTerm The text to search for.
+ */
+function performSearch(searchTerm) {
+  const term = searchTerm.toLowerCase();
+
+  // --- D3 Tree Search (Desktop) ---
+  const treeNodes = d3.selectAll('.node');
+  treeNodes.classed('searched-node', false); // Clear previous results
+  if (term) {
+    treeNodes
+      .filter(d => d.data.name.toLowerCase().includes(term))
+      .classed('searched-node', true);
+  }
+
+  // --- Accordion Search (Mobile) ---
+  const mobileListItems = document.querySelectorAll('#mobile-genre-list li');
+  if (!mobileListItems.length) return;
+
+  mobileListItems.forEach(li => {
+    const itemElement = li.querySelector('.genre-item');
+    const nameSpan = itemElement.querySelector('.genre-name');
+    const originalText = nameSpan.dataset.originalText;
+    const isMatch = term && originalText.toLowerCase().includes(term);
+
+    // Show/hide the list item itself
+    li.style.display = 'block'; // Reset display before checking
+
+    // Highlight logic
+    if (isMatch) {
+      itemElement.classList.add('searched-item');
+      // Highlight the matching text
+      const regex = new RegExp(`(${term})`, 'gi');
+      nameSpan.innerHTML = originalText.replace(regex, '<mark class="search-highlight">$1</mark>');
+
+      // Expand all parents of the matched item
+      let parent = li.parentElement;
+      while (parent && parent.id !== 'mobile-genre-list') {
+        if (parent.classList.contains('sub-list')) {
+          parent.classList.add('expanded');
+          const controllingButton = document.querySelector(`[aria-controls="${parent.id}"]`);
+          if (controllingButton) {
+            controllingButton.setAttribute('aria-expanded', 'true');
+          }
+        }
+        parent = parent.parentElement;
+      }
+    } else {
+      itemElement.classList.remove('searched-item');
+      nameSpan.innerHTML = originalText; // Restore original text
+    }
   });
 }
 
@@ -446,29 +559,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // --- EFFICIENCY: Event Delegation for Mobile Accordion ---
+  const mobileNavContainer = document.getElementById('mobile-genre-list');
+  mobileNavContainer.addEventListener('click', (event) => {
+    const target = event.target;
+    const itemElement = target.closest('.genre-item');
+    if (!itemElement) return; // Click was not on an item
+
+    const action = target.dataset.action || itemElement.dataset.action;
+    const itemData = JSON.parse(itemElement.dataset.itemData);
+    const accentColor = itemElement.style.getPropertyValue('--genre-color');
+
+    switch (action) {
+      case 'toggle':
+        const subListId = itemElement.getAttribute('aria-controls');
+        if (subListId) {
+          const subList = document.getElementById(subListId);
+          subList.classList.toggle('expanded');
+          const isExpanded = subList.classList.contains('expanded');
+          itemElement.setAttribute('aria-expanded', isExpanded);
+          saveAccordionState();
+        }
+        break;
+      case 'info':
+        event.stopPropagation();
+        showInfoPanel(itemData, accentColor);
+        break;
+      case 'wiki':
+        // The link will navigate on its own, we just need to stop propagation
+        // to prevent the accordion from toggling.
+        event.stopPropagation();
+        break;
+    }
+  });
+
   // --- Search Logic ---
   document.getElementById('search-button').addEventListener('click', () => {
-    const searchTerm = document.getElementById('search-input').value.toLowerCase();
-    if (!searchTerm) return;
-
-    // Remove previous search highlights
-    d3.selectAll('.node').classed('searched-node', false);
-
-    // Apply new search highlights
-    d3.selectAll('.node')
-      .filter(d => d.data.name.toLowerCase().includes(searchTerm))
-      .classed('searched-node', true);
+    const searchTerm = document.getElementById('search-input').value;
+    performSearch(searchTerm);
   });
 
   document.getElementById('clear-button').addEventListener('click', () => {
     document.getElementById('search-input').value = '';
-    d3.selectAll('.node').classed('searched-node', false);
+    performSearch(''); // Clear search results
   });
 
   document.getElementById('search-input').addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      document.getElementById('search-button').click();
+      performSearch(event.target.value);
     }
   });
 
@@ -478,4 +617,79 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Initial Data Load ---
   // This function will now be called safely after the DOM is ready.
   fetchData();
+
+  // --- "Read More" Logic for Mobile Description ---
+  const infoBox = document.getElementById('tooltip'); // The main description box
+  if (infoBox) {
+    const readMoreBtn = document.createElement('button');
+    readMoreBtn.textContent = 'Read More';
+    readMoreBtn.className = 'read-more-btn';
+
+    // Append the button inside the info-box, it will be visible at the bottom of the collapsed content
+    infoBox.appendChild(readMoreBtn);
+
+    readMoreBtn.addEventListener('click', () => {
+      infoBox.classList.add('is-expanded'); // Expand the box using the CSS class
+      readMoreBtn.style.display = 'none'; // Hide the button after clicking
+    });
+  }
+
+  // --- NEW: Copy Link Button in Footer ---
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    const originalIconClass = 'bi-clipboard';
+    const successIconClass = 'bi-clipboard-check-fill';
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        // --- Success Feedback ---
+        const icon = copyBtn.querySelector('i');
+        icon.classList.remove(originalIconClass);
+        icon.classList.add(successIconClass);
+        copyBtn.setAttribute('aria-label', 'Link copied!');
+
+        // Revert back after 2 seconds
+        setTimeout(() => {
+          icon.classList.remove(successIconClass);
+          icon.classList.add(originalIconClass);
+          copyBtn.setAttribute('aria-label', 'Copy link to clipboard');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy link: ', err);
+        copyBtn.setAttribute('aria-label', 'Failed to copy!');
+      });
+    });
+  }
+
+  // --- NEW: Fullscreen API Logic ---
+  const fullscreenBtn = document.getElementById('fullscreen-btn');
+  
+  // Check if the Fullscreen API is supported by the browser
+  if (fullscreenBtn && document.fullscreenEnabled) {
+    const fullscreenIcon = fullscreenBtn.querySelector('i');
+
+    fullscreenBtn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    });
+
+    // Listen for changes in fullscreen state (e.g., user pressing Esc) to update the icon
+    document.addEventListener('fullscreenchange', () => {
+      if (document.fullscreenElement) {
+        fullscreenIcon.classList.replace('bi-fullscreen', 'bi-fullscreen-exit');
+        fullscreenBtn.setAttribute('aria-label', 'Exit Fullscreen');
+      } else {
+        fullscreenIcon.classList.replace('bi-fullscreen-exit', 'bi-fullscreen');
+        fullscreenBtn.setAttribute('aria-label', 'Enter Fullscreen');
+      }
+    });
+  } else if (fullscreenBtn) {
+    // Hide the button if the API is not supported
+    fullscreenBtn.style.display = 'none';
+  }
 });

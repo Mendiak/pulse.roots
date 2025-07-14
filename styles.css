@@ -137,7 +137,8 @@ main {
   margin: 30px;
 }
 
-#spotify-login-link {
+/* NEW: General style for links inside the main info box */
+.info-box-link {
   color: var(--primary-dark);
   font-weight: bold;
   text-decoration: underline;
@@ -145,12 +146,12 @@ main {
   transition: text-decoration-color 0.3s ease;
 }
 
-#spotify-login-link:visited {
+.info-box-link:visited {
   color: #555; /* Improved contrast for visited links */
 }
 
-/* Add a hover effect to make the link more interactive */
-#spotify-login-link:hover {
+/* Add a hover effect to make the links more interactive */
+.info-box-link:hover {
   text-decoration-color: var(--primary-dark);
 }
 
@@ -198,6 +199,30 @@ p {
   transition: all 0.4s ease-in-out;
 }
 
+/* NEW: Wrapper for right-side header controls */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* NEW: Styles for the fullscreen button */
+#fullscreen-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 22px; /* A good size for an icon */
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  line-height: 1; /* Prevent extra spacing */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#fullscreen-btn:hover {
+  color: var(--text-grey);
+  transform: scale(1.1);
+}
 /* --- Loading Spinner and Content Visibility --- */
 
 /* A general utility class to hide elements */
@@ -362,6 +387,15 @@ p {
   font-size: 0.95rem;
 }
 
+/* NEW: Style for the note about Spotify login in the info panel */
+.spotify-note {
+  font-size: 0.50rem; /* 12px */
+  color: #b0b0b0; /* A lighter grey for secondary text */
+  text-align: left;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
 #close-panel-container {
   display: flex;
   justify-content: flex-end;
@@ -512,6 +546,15 @@ footer i {
   color: var(--text-grey);
 }
 
+/* NEW: Style for the copy button to make it blend in */
+#copy-link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--text-light); /* Icon inherits this color */
+  cursor: pointer;
+}
+
 #social-share i {
   font-size: 25px;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -574,10 +617,17 @@ footer i {
 }
 
 #expand-all-btn:hover, #collapse-all-btn:hover {
-  background-color: var(--primary-dark);
+  background: var(--primary-dark);
   color: var(--text-light);
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   transform: translateY(-1px);
+}
+
+#expand-all-btn:active, #collapse-all-btn:active {
+  background: var(--primary-dark);
+  color: var(--text-light);
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
 #mobile-genre-list, .sub-list {
@@ -588,15 +638,17 @@ footer i {
 .sub-list {
   padding-left: 20px; /* Indent sub-genres */
   max-height: 0;
+  opacity: 0; /* Start fully transparent */
   visibility: hidden; /* Hide from accessibility tree when collapsed */
   overflow: hidden;
-  transition: max-height 0.4s ease-out, visibility 0s 0.4s; /* Delay visibility transition */
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out, visibility 0s 0.4s; /* Add opacity to transition */
 }
 
 .sub-list.expanded {
   max-height: 1000px; /* A large enough value to show all items */
+  opacity: 1; /* Fade in to full opacity */
   visibility: visible; /* Make it visible for accessibility */
-  transition: max-height 0.5s ease-in, visibility 0s;
+  transition: max-height 0.5s ease-in, opacity 0.4s ease-in 0.1s, visibility 0s; /* Fade in after a slight delay */
 }
 
 .genre-item {
@@ -677,6 +729,21 @@ footer i {
 .info-icon:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+/* NEW: Styles for the "Read More" button on mobile */
+.read-more-btn {
+  display: none; /* Hide by default on desktop */
+  margin: 0; /* Reset margin */
+  padding: 8px 16px;
+  background: var(--primary-dark);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Aleo", serif;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 /* --- NEW: Styles for External Links in Info Panel --- */
@@ -764,12 +831,14 @@ footer i {
   /* Hide the D3.js tree visualization on small screens */
   #visualization-container {
     display: none;
+    order: 3;
   }
 
   /* Show the mobile navigation container (we'll create this next) */
   #mobile-nav-container.loaded { /* Only show if content has loaded */
     display: block;
     width: 100%;
+    order: 1; /* Show accordion first */
   }
 
   #main-container {
@@ -778,5 +847,43 @@ footer i {
 
   .info-box {
     max-width: 100%;
+    order: 2; /* Show description after accordion */
+    /* NEW: Collapse the long description on mobile */
+    position: relative; /* Needed for the ::after pseudo-element */
+    max-height: 150px; /* Adjust as needed */
+    overflow: hidden;
+    padding-bottom: 60px; /* Add space at the bottom for the "Read More" button */
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  /* Add a gradient to indicate there's more content */
+  .info-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.85), transparent);
+    pointer-events: none; /* Allows clicking through the gradient */
+    transition: opacity 0.3s ease;
+  }
+
+  /* Styles for when the description is expanded */
+  .info-box.is-expanded {
+    max-height: 2000px; /* Large enough to show all content */
+  }
+
+  .info-box.is-expanded::after {
+    opacity: 0;
+  }
+
+  .read-more-btn {
+    display: block; /* Show on mobile */
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Ensure it's above the gradient fade */
   }
 }
