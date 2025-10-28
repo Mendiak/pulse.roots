@@ -600,6 +600,13 @@
                         "example": "Thomas Jack - Rivers (ft. Nico & Vinz)",
                         "spotify_track_id": "3NBDgwEAGMj0aKRsU8zoO9",
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Tropical_house"
+                    },
+                    {
+                        "name": "Amapiano",
+                        "description": "Amapiano is a subgenre of house music that emerged in South Africa in the mid-2010s. It is a hybrid of deep house, jazz, and lounge music characterized by synths, airy pads, and wide percussive basslines.",
+                        "example": "MFR Souls – Love You Tonight",
+                        "spotify_track_id": "2NbUnaGrjwRuRjZ5EPyOR5",
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Amapiano"
                     }
                 ]
             },
