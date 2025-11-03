@@ -1,0 +1,55 @@
+
+const fs = require('fs');
+const genres = require('./pulseroots.genres.json');
+
+const BASE_URL = 'https://mendiak.github.io/pulse.roots/';
+
+function generateUrls(genres, parentStyle = '') {
+  let urls = [];
+
+  genres.forEach(genre => {
+    const stylePath = parentStyle ? `${parentStyle}/${genre.name || genre.style}` : (genre.name || genre.style);
+    const styleUrl = `${BASE_URL}#${encodeURIComponent(stylePath.replace(/\s+/g, '-'))}`;
+    
+    urls.push({
+      loc: styleUrl,
+      lastmod: new Date().toISOString().split('T')[0], // Use current date for lastmod
+      changefreq: 'monthly',
+      priority: parentStyle ? 0.8 : 1.0
+    });
+
+    if (genre.substyles) {
+      urls = urls.concat(generateUrls(genre.substyles, stylePath));
+    }
+  });
+
+  return urls;
+}
+
+function generateSitemap() {
+  const urls = generateUrls(genres);
+
+  const urlset = urls.map(url => `
+  <url>
+    <loc>${url.loc}</loc>
+    <lastmod>${url.lastmod}</lastmod>
+    <changefreq>${url.changefreq}</changefreq>
+    <priority>${url.priority}</priority>
+  </url>`).join('');
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${BASE_URL}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  ${urlset}
+</urlset>`;
+
+  fs.writeFileSync('sitemap.xml', sitemap);
+  console.log('Sitemap generated successfully!');
+}
+
+generateSitemap();

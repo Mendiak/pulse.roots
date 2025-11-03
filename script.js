@@ -49,13 +49,70 @@ function hideTooltip() {
 // --- Reusable Panel Logic ---
 // Store the element that was focused before the panel opened
 let focusedElementBeforePanel;
+let allGenreData; // Global variable to store all genre data
+
+function updateSchemaOrg(itemData) {
+  // Remove any existing Schema.org script tags
+  const existingSchema = document.getElementById('genre-schema');
+  if (existingSchema) {
+    existingSchema.remove();
+  }
+
+  const genreName = itemData.name || itemData.style;
+  const genreDescription = itemData.description || 'An electronic music genre.';
+  const genreUrl = window.location.href;
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "MusicGenre",
+    "name": genreName,
+    "description": genreDescription,
+    "url": genreUrl,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": window.location.origin + window.location.pathname
+    }
+  };
+
+  if (itemData.wikipedia_url) {
+    schemaData.sameAs = itemData.wikipedia_url;
+  }
+
+  if (itemData.spotify_track_id) {
+    schemaData.exampleOfWork = {
+      "@type": "MusicRecording",
+      "name": itemData.example || `Example track for ${genreName}`,
+      "url": `https://open.spotify.com/track/${itemData.spotify_track_id}`
+    };
+  }
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.id = 'genre-schema';
+  script.textContent = JSON.stringify(schemaData);
+  document.head.appendChild(script);
+}
 
 function showInfoPanel(itemData, accentColor = '#ff0055') {
+  // Update Schema.org data
+  updateSchemaOrg(itemData);
+
   const infoPanel = document.getElementById('info-panel');
   const infoContent = document.getElementById('info-content');
   const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
   const closeButton = document.getElementById('close-panel');
+
+  // --- SEO: Update Title and Meta Description ---
+  const genreName = itemData.name || itemData.style;
+  document.title = `PulseRoots: Explore ${genreName}`;
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute('content', `Learn about the ${genreName} genre in electronic music. ${itemData.description.substring(0, 120)}...`);
+  }
+  // Update the URL hash
+  history.pushState(null, '', `#${encodeURIComponent(genreName.replace(/\s+/g, '-'))}`);
+
 
   // --- Accessibility: Store focus and hide background content ---
   focusedElementBeforePanel = document.activeElement;
@@ -386,6 +443,12 @@ function closeInfoPanel() {
 
   // Stop the music by clearing the iframe content
   spotifyEmbed.innerHTML = '';
+
+  // Remove dynamically added Schema.org script
+  const genreSchema = document.getElementById('genre-schema');
+  if (genreSchema) {
+    genreSchema.remove();
+  }
 
   // --- Accessibility: Return focus to the element that opened the panel ---
   if (focusedElementBeforePanel) {
