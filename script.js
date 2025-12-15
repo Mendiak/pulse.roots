@@ -827,4 +827,52 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // --- Cool Feature: Random Shuffle ---
+  const shuffleBtn = document.getElementById('shuffle-button');
+  if (shuffleBtn) {
+    shuffleBtn.addEventListener('click', () => {
+      // 1. Collect all "leaf" nodes (actual genres, not categories) from the D3 data
+      // We can access the data attached to the DOM elements
+      const allNodes = d3.selectAll('.clickable-node').data();
+      
+      if (allNodes.length > 0) {
+        // 2. Pick a random node
+        const randomNode = allNodes[Math.floor(Math.random() * allNodes.length)];
+        
+        // 3. Trigger the interaction
+        // Show panel
+        // Find the specific DOM element for this node to get its color
+        const nodeSelection = d3.selectAll('.clickable-node')
+          .filter(d => d === randomNode);
+        
+        const nodeColor = nodeSelection.select('circle').style('fill');
+        showInfoPanel(randomNode.data, nodeColor);
+
+        // 4. Highlight path in tree
+        // Reset previous highlights
+        d3.selectAll('.node').classed('faded', true);
+        d3.selectAll('.link').classed('faded', true);
+        d3.selectAll('.node').classed('path-highlight-node', false);
+        d3.selectAll('.link').classed('path-highlight-link', false);
+
+        // Highlight new path
+        randomNode.ancestors().forEach(ancestor => {
+            // d3.select(ancestor.gNode) is not reliably available here depending on how we bound it
+            // So we re-select based on data
+            d3.selectAll('.node').filter(d => d === ancestor)
+                .classed('faded', false)
+                .classed('path-highlight-node', true);
+        });
+
+        d3.selectAll('.link')
+            .filter(link => randomNode.ancestors().includes(link.target))
+            .classed('faded', false)
+            .classed('path-highlight-link', true);
+            
+        // Optional: Center view on node (complex with SVG, but we can try)
+        // For now, the panel opening is the main feedback.
+      }
+    });
+  }
 });

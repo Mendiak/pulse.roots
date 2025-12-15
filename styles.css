@@ -1079,6 +1079,8 @@ select:focus {
 
 /* --- Scroll Progress Bar --- */
 #scroll-progress-container {
+  display: none;
+  /* Hidden by default (Desktop) */
   position: fixed;
   top: 0;
   left: 0;
@@ -1096,4 +1098,80 @@ select:focus {
   /* Dynamic gradient */
   width: 0%;
   transition: width 0.1s ease-out;
+}
+
+/* --- Cool Features: Pulse, Neon & Shuffle --- */
+
+/* 1. Shuffle Button Style */
+#shuffle-button {
+  background: linear-gradient(to bottom, #d6006e, #9e0052);
+  /* Purple/Pink gradient */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  /* Spacing from other buttons */
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 10px rgba(255, 0, 110, 0.4);
+}
+
+#shuffle-button:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 0 15px rgba(255, 0, 110, 0.7);
+}
+
+/* 2. Neon Glow for Connections (Links) */
+.link {
+  /* PERFORMANCE FIX: Removed default drop-shadow as it causes lag on large trees */
+  /* filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)); */
+  transition: stroke 0.3s, filter 0.3s;
+}
+
+.path-highlight-link {
+  /* Stronger glow for highlighted paths - ONLY applied when needed */
+  filter: drop-shadow(0 0 5px #ff0055);
+}
+
+/* 3. Pulse Animation for Nodes */
+@keyframes nodePulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply pulse only to leaf nodes (depth > 0) to avoid messy root */
+.node circle {
+  transition: r 0.3s, fill 0.3s, filter 0.3s;
+}
+
+/* A subtle breathing effect for all clickable nodes */
+.clickable-node circle {
+  animation: nodePulse 4s infinite ease-in-out;
+  /* Stagger animations slightly via JS if we wanted, but CSS random-ish feel is okay */
+}
+
+.node circle:hover {
+  filter: drop-shadow(0 0 8px currentColor);
+  /* Glow with the node's own color */
+  animation: none;
+  /* Pause breathing on hover */
+  transform: scale(1.3);
+}
+
+/* --- Mobile Specific Overrides for Polish --- */
+@media (max-width: 768px) {
+  #scroll-progress-container {
+    display: block;
+    /* Show only on mobile */
+  }
 }
