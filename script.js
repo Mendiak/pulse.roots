@@ -237,7 +237,10 @@ function restoreAccordionState() {
 
 // Function to fetch data from the JSON file
 async function fetchData() {
+  const loadingSpinner = document.getElementById('loading-spinner');
   try {
+    if (loadingSpinner) loadingSpinner.classList.remove('hidden'); // Show spinner
+
     // Fetch the data from the JSON file
     const response = await fetch('pulseroots.genres.json');
     const data = await response.json();    
@@ -249,6 +252,7 @@ async function fetchData() {
 
     // Show the mobile navigation container now that it's populated
     document.getElementById('mobile-nav-container').classList.add('loaded');
+    if (loadingSpinner) loadingSpinner.classList.add('hidden'); // Hide spinner
 
     // --- Accordion Controls Logic ---
     // This logic is moved here to ensure it runs AFTER the mobile nav is created.
@@ -365,6 +369,16 @@ function createTree(data) {
     .attr('class', 'node')
     .attr('transform', d => `translate(${d.y},${d.x})`)
     .attr('class', d => d.depth > 0 ? 'node clickable-node' : 'node')
+    // A11y: Make nodes focusable
+    .attr('tabindex', d => d.depth > 0 ? 0 : -1)
+    .on('keydown', (event, d) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        // Trigger the same logic as click
+        const nodeColor = d3.select(event.currentTarget).select('circle').style('fill');
+        showInfoPanel(d.data, nodeColor);
+      }
+    })
     .on('mouseover', (event, d) => {
       showTooltip(event, d);
 
@@ -657,17 +671,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Search Logic ---
+  const searchInput = document.getElementById('search-input');
+  
+  // Real-time search with debounce
+  const debouncedSearch = debounce((term) => performSearch(term), 300);
+
+  searchInput.addEventListener('input', (e) => {
+    debouncedSearch(e.target.value);
+  });
+
   document.getElementById('search-button').addEventListener('click', () => {
-    const searchTerm = document.getElementById('search-input').value;
-    performSearch(searchTerm);
+    performSearch(searchInput.value);
   });
 
   document.getElementById('clear-button').addEventListener('click', () => {
-    document.getElementById('search-input').value = '';
+    searchInput.value = '';
     performSearch(''); // Clear search results
   });
 
-  document.getElementById('search-input').addEventListener('keydown', (event) => {
+  searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
       performSearch(event.target.value);
@@ -720,6 +742,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }).catch(err => {
         console.error('Failed to copy link: ', err);
         copyBtn.setAttribute('aria-label', 'Failed to copy!');
+      });
+    });
+  }
+
+  // --- Back to Top Logic ---
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+        // Small delay to allow display:block to apply before opacity transition
+        setTimeout(() => backToTopBtn.style.opacity = '1', 10);
+      } else {
+        backToTopBtn.style.opacity = '0';
+        setTimeout(() => {
+          if (window.scrollY <= 300) backToTopBtn.style.display = 'none';
+        }, 300);
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
     });
   }
