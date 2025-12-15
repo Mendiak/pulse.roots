@@ -4,7 +4,8 @@
   --secondary-dark: #222;
   --tertiary-dark: #444;
   --text-light: #fff;
-  --text-grey: #bdbdbd; /* Increased contrast from #a7a7a7 */
+  --text-grey: #bdbdbd;
+  /* Increased contrast from #a7a7a7 */
   --header-gradient: linear-gradient(to right, var(--secondary-dark), var(--primary-dark), var(--tertiary-dark));
 }
 
@@ -16,15 +17,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  animation: fadeInBackground 2s ease-in-out; /* Smooth fade-in for the background */
+  animation: fadeInBackground 2s ease-in-out;
+  /* Smooth fade-in for the background */
   font-family: "Aleo", serif;
-  line-height: 1.6; /* Set a base line-height for better readability */
+  line-height: 1.6;
+  /* Set a base line-height for better readability */
 }
 
 /* Keyframe animation for the background fade-in */
 @keyframes fadeInBackground {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* --- Header --- */
@@ -32,12 +40,13 @@ body {
 header {
   position: sticky;
   top: 0;
-  z-index: 1000; /* Ensure it stays on top of other content */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
 }
 
 #header-container {
   background: var(--header-gradient);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,16 +66,18 @@ main {
 }
 
 #logo-link {
-  text-decoration: none; 
-  color: inherit; 
+  text-decoration: none;
+  color: inherit;
   display: flex;
   gap: 20px;
-  align-items: center; 
+  align-items: center;
 }
 
 #logo:hover {
-  transform: rotate(5deg) scale(1.1); /* Slightly more subtle rotation */
-  filter: drop-shadow(0 3px 5px rgba(0,0,0,0.4)); /* Add a shadow to lift it off the page */
+  transform: rotate(5deg) scale(1.1);
+  /* Slightly more subtle rotation */
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.4));
+  /* Add a shadow to lift it off the page */
 }
 
 #main-container {
@@ -77,11 +88,14 @@ main {
 }
 
 /* Shared styles for main content boxes */
-.info-box, #treemap, #mobile-nav-container {
-  background-color: rgba(255, 255, 255, 0.85); /* Increased opacity for readability */
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+.info-box,
+#treemap,
+#mobile-nav-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  /* Increased opacity for readability */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .info-box {
@@ -94,14 +108,16 @@ main {
 
 /* --- Tooltip / Intro Box --- */
 #tooltip {
-  background-color: rgba(255, 255, 255, 0.92); /* Higher opacity for the main info box */
+  background-color: rgba(255, 255, 255, 0.92);
+  /* Higher opacity for the main info box */
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
 
 /* Style headings inside the intro box for better hierarchy */
 #tooltip h2 {
-  font-size: 1.1rem; /* 17.6px if base is 16px */
+  font-size: 1.1rem;
+  /* 17.6px if base is 16px */
   color: #111;
   margin-top: 2em;
   margin-bottom: 0.8em;
@@ -112,7 +128,8 @@ main {
 /* Add spacing and style for icons within the intro headings */
 #tooltip h2 i {
   margin-right: 0.6em;
-  font-size: 1.1em; /* Make icons slightly larger than text */
+  font-size: 1.1em;
+  /* Make icons slightly larger than text */
 }
 
 /* Remove top margin for the very first heading */
@@ -122,14 +139,16 @@ main {
 
 /* Style paragraphs for better readability */
 #tooltip p {
-  font-size: 0.95rem; /* ~15px */
-  line-height: 1.7; /* Increased line-height for better readability in long paragraphs */
+  font-size: 0.95rem;
+  /* ~15px */
+  line-height: 1.7;
+  /* Increased line-height for better readability in long paragraphs */
   color: #333;
 }
 
 /* Add a visual separator for key sections */
 .section-divider {
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 1.5em;
 }
 
@@ -142,12 +161,13 @@ main {
   color: var(--primary-dark);
   font-weight: bold;
   text-decoration: underline;
-  text-decoration-color: rgba(0,0,0,0.2);
+  text-decoration-color: rgba(0, 0, 0, 0.2);
   transition: text-decoration-color 0.3s ease;
 }
 
 .info-box-link:visited {
-  color: #555; /* Improved contrast for visited links */
+  color: #555;
+  /* Improved contrast for visited links */
 }
 
 /* Add a hover effect to make the links more interactive */
@@ -159,12 +179,13 @@ h1 {
   font-size: 24px;
   color: var(--text-light);
   margin: 0;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Add shadow for better readability on gradient */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  /* Add shadow for better readability on gradient */
 }
 
 p {
   font-size: 16px;
-  }
+}
 
 /* --- D3 Visualization --- */
 #treemap {
@@ -173,13 +194,15 @@ p {
   height: auto;
   padding-top: 10px;
   padding-bottom: 10px;
-  overflow: hidden; /* This will clip any overflowing content and prevent scrollbars */
+  overflow: hidden;
+  /* This will clip any overflowing content and prevent scrollbars */
 }
 
 .searched-node circle {
   stroke: #ff0055;
   stroke-width: 4px;
-  r: 10; /* Make the circle bigger */
+  r: 10;
+  /* Make the circle bigger */
 }
 
 .searched-node text {
@@ -211,11 +234,13 @@ p {
   background: none;
   border: none;
   color: var(--text-light);
-  font-size: 22px; /* A good size for an icon */
+  font-size: 22px;
+  /* A good size for an icon */
   cursor: pointer;
   padding: 0;
   margin: 0;
-  line-height: 1; /* Prevent extra spacing */
+  line-height: 1;
+  /* Prevent extra spacing */
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -223,11 +248,13 @@ p {
   color: var(--text-grey);
   transform: scale(1.1);
 }
+
 /* --- Loading Spinner and Content Visibility --- */
 
 /* A general utility class to hide elements */
 .hidden {
-  display: none !important; /* Use !important to override other display properties */
+  display: none !important;
+  /* Use !important to override other display properties */
 }
 
 /* Wrapper for content that needs to be loaded */
@@ -235,9 +262,12 @@ p {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  min-width: 0; /* Allow the container to shrink */
-  position: relative; /* Needed for absolute positioning of the spinner */
-  min-height: 300px; /* Give it some height while loading */
+  min-width: 0;
+  /* Allow the container to shrink */
+  position: relative;
+  /* Needed for absolute positioning of the spinner */
+  min-height: 300px;
+  /* Give it some height while loading */
 }
 
 #loading-spinner {
@@ -260,12 +290,15 @@ p {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #error-message {
   text-align: center;
-  color: #d9534f; /* A standard error red color */
+  color: #d9534f;
+  /* A standard error red color */
   padding: 20px;
 }
 
@@ -276,11 +309,13 @@ p {
   /* Allow the container to shrink and prevent overflow */
   min-width: 0;
 }
-.node text {    
+
+.node text {
   fill: var(--primary-dark);
 }
 
-.node.faded, .link.faded {
+.node.faded,
+.link.faded {
   opacity: 0.2;
   transition: opacity 0.3s ease;
 }
@@ -298,7 +333,8 @@ p {
 
 .link {
   fill: none;
-  stroke: #cccccc; /* Made the lines lighter to reduce interference with labels */
+  stroke: #cccccc;
+  /* Made the lines lighter to reduce interference with labels */
   stroke-width: 2px;
 }
 
@@ -314,17 +350,21 @@ p {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px); /* Modern blur effect */
-  -webkit-backdrop-filter: blur(4px); /* Safari support */
+  backdrop-filter: blur(4px);
+  /* Modern blur effect */
+  -webkit-backdrop-filter: blur(4px);
+  /* Safari support */
   z-index: 1000;
   opacity: 0;
   transition: opacity 0.4s ease;
-  pointer-events: none; /* Not clickable when hidden */
+  pointer-events: none;
+  /* Not clickable when hidden */
 }
 
 #modal-overlay.visible {
   opacity: 1;
-  pointer-events: auto; /* Clickable when visible */
+  pointer-events: auto;
+  /* Clickable when visible */
 }
 
 /* --- Info Panel (Modal) --- */
@@ -336,19 +376,26 @@ p {
   width: 90%;
   max-width: 600px;
   background-color: #2e2e2e;
-  color: #f0f0f0; /* Slightly off-white for softer text */
+  color: #f0f0f0;
+  /* Slightly off-white for softer text */
   padding: 20px;
-  box-shadow: 0 -4px 30px rgba(0,0,0,0.3);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth "overshoot" effect */
-  transform: translate(-50%, 110%); /* Start further down */
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Smooth "overshoot" effect */
+  transform: translate(-50%, 110%);
+  /* Start further down */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  border-top: 5px solid var(--panel-accent-color, #fff);  
-  z-index: 1001; /* Ensure it's above the header */
+  border-top: 5px solid var(--panel-accent-color, #fff);
+  z-index: 1001;
+  /* Ensure it's above the header */
   /* Prevent panel from overflowing the viewport on mobile */
-  max-height: 85vh; /* Limit height to 85% of viewport height */
-  overflow-y: auto; /* Allow vertical scrolling within the panel */
-  box-sizing: border-box; /* Ensure padding is included in the height calculation */
+  max-height: 85vh;
+  /* Limit height to 85% of viewport height */
+  overflow-y: auto;
+  /* Allow vertical scrolling within the panel */
+  box-sizing: border-box;
+  /* Ensure padding is included in the height calculation */
 }
 
 /* --- Custom Scrollbar for the Info Panel (WebKit browsers) --- */
@@ -357,19 +404,22 @@ p {
 }
 
 #info-panel::-webkit-scrollbar-track {
-  background: #2e2e2e; /* Match panel background */
+  background: #2e2e2e;
+  /* Match panel background */
   border-radius: 10px;
 }
 
 #info-panel::-webkit-scrollbar-thumb {
-  background-color: #555; /* A darker grey for the scrollbar handle */
+  background-color: #555;
+  /* A darker grey for the scrollbar handle */
   border-radius: 10px;
-  border: 2px solid #2e2e2e; /* Creates padding around the thumb */
+  border: 2px solid #2e2e2e;
+  /* Creates padding around the thumb */
 }
 
-  
+
 #info-panel.visible {
-  transform: translate(-50%, 0);  
+  transform: translate(-50%, 0);
 }
 
 #info-content {
@@ -382,15 +432,19 @@ p {
 }
 
 #info-panel p {
-  color: #dcdcdc; /* Lighter grey for better readability on dark background */
-  line-height: 1.65; /* Slightly more line height for long paragraphs */
+  color: #dcdcdc;
+  /* Lighter grey for better readability on dark background */
+  line-height: 1.65;
+  /* Slightly more line height for long paragraphs */
   font-size: 0.95rem;
 }
 
 /* NEW: Style for the note about Spotify login in the info panel */
 .spotify-note {
-  font-size: 0.50rem; /* 12px */
-  color: #b0b0b0; /* A lighter grey for secondary text */
+  font-size: 0.50rem;
+  /* 12px */
+  color: #b0b0b0;
+  /* A lighter grey for secondary text */
   text-align: left;
   margin-top: 12px;
   line-height: 1.4;
@@ -401,43 +455,55 @@ p {
   justify-content: flex-end;
   /* Make the close button stick to the top of the panel during scroll */
   position: sticky;
-  top: -20px; /* Counteract parent's top padding */
-  background-color: #2e2e2e; /* Match panel background to hide text scrolling underneath */
-  padding-top: 10px; /* Add space above the close icon */
-  padding-bottom: 10px; /* Add space between button and content */
-  z-index: 2; /* Ensure it's above the scrolling content */
+  top: -20px;
+  /* Counteract parent's top padding */
+  background-color: #2e2e2e;
+  /* Match panel background to hide text scrolling underneath */
+  padding-top: 10px;
+  /* Add space above the close icon */
+  padding-bottom: 10px;
+  /* Add space between button and content */
+  z-index: 2;
+  /* Ensure it's above the scrolling content */
 }
 
 /* Style the new close button to look like the old icon */
 #close-panel {
   background: none;
   border: none;
-  color: #f0f0f0; /* Match icon color */
+  color: #f0f0f0;
+  /* Match icon color */
   padding: 0;
-  font-size: 1.5rem; /* Make the icon larger and easier to click */
+  font-size: 1.5rem;
+  /* Make the icon larger and easier to click */
   cursor: pointer;
-    /* Use flexbox for perfect centering of the icon inside the button */
+  /* Use flexbox for perfect centering of the icon inside the button */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.2rem; /* Give the button a fixed square size for a perfect circle */
+  width: 2.2rem;
+  /* Give the button a fixed square size for a perfect circle */
   height: 2.2rem;
-  border-radius: 50%; /* Make the button itself circular */
+  border-radius: 50%;
+  /* Make the button itself circular */
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 #close-panel:hover {
-    color: #fff;
-    transform: scale(1.1);
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* Add a custom focus style for accessibility, replacing the default blue outline */
 #close-panel:focus-visible {
-  outline: none; /* Remove the default browser outline */
+  outline: none;
+  /* Remove the default browser outline */
   /* Create a subtle white glow to indicate focus, which looks better on the dark panel */
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
-  border-radius: 50%; /* Make the focus indicator circular to match the icon shape */
-  transform: scale(1.1); /* Also apply the scale effect on focus */
+  border-radius: 50%;
+  /* Make the focus indicator circular to match the icon shape */
+  transform: scale(1.1);
+  /* Also apply the scale effect on focus */
 }
 
 /* --- Form Styles --- */
@@ -449,7 +515,8 @@ form {
   gap: 10px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -461,8 +528,11 @@ textarea {
   min-height: 100px;
 }
 
-#submitbutton, #search-button, #clear-button {
-  background: linear-gradient(to bottom, #444, #333); /* Subtle gradient for depth */
+#submitbutton,
+#search-button,
+#clear-button {
+  background: linear-gradient(to bottom, #444, #333);
+  /* Subtle gradient for depth */
   color: var(--text-light);
   border: none;
   padding: 10px 20px;
@@ -472,10 +542,14 @@ textarea {
   font-family: "Aleo", serif;
 }
 
-#submitbutton:hover, #search-button:hover, #clear-button:hover {
+#submitbutton:hover,
+#search-button:hover,
+#clear-button:hover {
   background: linear-gradient(to bottom, #555, #444);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow on hover for a "lifting" effect */
-  transform: translateY(-2px); /* Lift the button slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Add shadow on hover for a "lifting" effect */
+  transform: translateY(-2px);
+  /* Lift the button slightly */
 }
 
 /* --- Footer --- */
@@ -483,26 +557,31 @@ textarea {
 footer {
   background: var(--header-gradient);
   color: var(--text-light);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  padding: 30px 50px 15px; /* More top padding, less bottom */
-  font-size: 0.9rem; /* ~14.4px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 30px 50px 15px;
+  /* More top padding, less bottom */
+  font-size: 0.9rem;
+  /* ~14.4px */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 50px;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start;
+  /* Align items to the top */
 }
 
 footer a {
   color: var(--text-light);
   text-decoration: none;
   transition: color 0.3s ease;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4); /* Shadow for readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  /* Shadow for readability */
 }
 
 footer a:hover {
-  color: #c0c0c0; /* Lighter grey for hover */
+  color: #c0c0c0;
+  /* Lighter grey for hover */
 }
 
 footer i {
@@ -525,7 +604,8 @@ footer i {
 #links-container h3 {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
+  /* 16px */
   color: var(--text-grey);
 }
 
@@ -542,7 +622,8 @@ footer i {
 #social-share h3 {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
+  /* 16px */
   color: var(--text-grey);
 }
 
@@ -551,7 +632,8 @@ footer i {
   background: none;
   border: none;
   padding: 0;
-  color: var(--text-light); /* Icon inherits this color */
+  color: var(--text-light);
+  /* Icon inherits this color */
   cursor: pointer;
 }
 
@@ -566,13 +648,15 @@ footer i {
 }
 
 .footer-bottom {
-  flex-basis: 100%; /* Take full width */
+  flex-basis: 100%;
+  /* Take full width */
   text-align: center;
   margin-top: 20px;
   padding-top: 15px;
   border-top: 1px solid var(--tertiary-dark);
   color: var(--text-grey);
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
+  /* 12px */
 }
 
 .tooltip {
@@ -591,9 +675,11 @@ footer i {
 
 /* Hide mobile nav on large screens by default */
 #mobile-nav-container {
-  display: none; /* Hidden on desktop */
+  display: none;
+  /* Hidden on desktop */
   padding: 20px;
-  box-sizing: border-box; /* Ensures padding is included in the width */
+  box-sizing: border-box;
+  /* Ensures padding is included in the width */
 }
 
 #accordion-controls {
@@ -602,12 +688,13 @@ footer i {
   margin-bottom: 15px;
 }
 
-#expand-all-btn, #collapse-all-btn {
+#expand-all-btn,
+#collapse-all-btn {
   flex-grow: 1;
   padding: 10px;
   border: none;
   background: linear-gradient(to bottom, #fdfdfd, #f0f0f0);
-  border: 1px solid rgba(0,0,0,0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   cursor: pointer;
   border-radius: 5px;
   font-family: "Aleo", serif;
@@ -616,65 +703,83 @@ footer i {
   transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
-#expand-all-btn:hover, #collapse-all-btn:hover {
+#expand-all-btn:hover,
+#collapse-all-btn:hover {
   background: var(--primary-dark);
   color: var(--text-light);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   transform: translateY(-1px);
 }
 
-#expand-all-btn:active, #collapse-all-btn:active {
+#expand-all-btn:active,
+#collapse-all-btn:active {
   background: var(--primary-dark);
   color: var(--text-light);
   transform: translateY(0);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
-#mobile-genre-list, .sub-list {
+#mobile-genre-list,
+.sub-list {
   list-style: none;
   padding-left: 0;
 }
 
 .sub-list {
-  padding-left: 20px; /* Indent sub-genres */
+  padding-left: 20px;
+  /* Indent sub-genres */
   max-height: 0;
-  opacity: 0; /* Start fully transparent */
-  visibility: hidden; /* Hide from accessibility tree when collapsed */
+  opacity: 0;
+  /* Start fully transparent */
+  visibility: hidden;
+  /* Hide from accessibility tree when collapsed */
   overflow: hidden;
-  transition: max-height 0.4s ease-out, opacity 0.3s ease-out, visibility 0s 0.4s; /* Add opacity to transition */
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out, visibility 0s 0.4s;
+  /* Add opacity to transition */
 }
 
 .sub-list.expanded {
-  max-height: 1000px; /* A large enough value to show all items */
-  opacity: 1; /* Fade in to full opacity */
-  visibility: visible; /* Make it visible for accessibility */
-  transition: max-height 0.5s ease-in, opacity 0.4s ease-in 0.1s, visibility 0s; /* Fade in after a slight delay */
+  max-height: 1000px;
+  /* A large enough value to show all items */
+  opacity: 1;
+  /* Fade in to full opacity */
+  visibility: visible;
+  /* Make it visible for accessibility */
+  transition: max-height 0.5s ease-in, opacity 0.4s ease-in 0.1s, visibility 0s;
+  /* Fade in after a slight delay */
 }
 
 .genre-item {
   /* Reset button styles to make it look like our div */
   background: none;
-  border: none; /* Individual borders are set below */
-  width: 100%; /* Make item fill its container for a balanced look */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  border: none;
+  /* Individual borders are set below */
+  width: 100%;
+  /* Make item fill its container for a balanced look */
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width and height */
   text-align: left;
   font-family: "Aleo", serif;
-  font-size: 0.95rem; /* Slightly smaller font to prevent overflow on mobile */
-  
-  padding: 12px 15px 12px 10px; /* (T, R, B, L) - Balanced horizontal padding with the left border */
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  border-left: 5px solid var(--genre-color, transparent); /* Use the color from JS */
+  font-size: 0.95rem;
+  /* Slightly smaller font to prevent overflow on mobile */
+
+  padding: 12px 15px 12px 10px;
+  /* (T, R, B, L) - Balanced horizontal padding with the left border */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--genre-color, transparent);
+  /* Use the color from JS */
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--primary-dark);
-  font-weight: normal; /* Change from bold to normal for consistency */
+  font-weight: normal;
+  /* Change from bold to normal for consistency */
   transition: background-color 0.2s ease, border-color 0.3s ease;
 }
 
 /* Remove the bottom border from the last item in any list for a cleaner look */
-#mobile-genre-list > li:last-child > .genre-item,
-.sub-list > li:last-child > .genre-item {
+#mobile-genre-list>li:last-child>.genre-item,
+.sub-list>li:last-child>.genre-item {
   border-bottom: none;
 }
 
@@ -691,16 +796,19 @@ footer i {
 .genre-name {
   /* Allow the name to take up available space but not push the actions off-screen */
   flex: 1;
-  min-width: 0; /* Important for flex items to shrink properly */
-  
+  min-width: 0;
+  /* Important for flex items to shrink properly */
+
   /* Truncate long text with an ellipsis */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 10px; /* Reduced space between the text and the icons */
+  margin-right: 10px;
+  /* Reduced space between the text and the icons */
 }
+
 .genre-item:hover {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .genre-item .indicator {
@@ -712,7 +820,8 @@ footer i {
 .genre-actions {
   display: flex;
   align-items: center;
-  gap: 15px; /* Reduced space between icons */
+  gap: 15px;
+  /* Reduced space between icons */
 }
 
 /* Rotate the indicator when expanded */
@@ -726,6 +835,7 @@ footer i {
   opacity: 0.6;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .info-icon:hover {
   opacity: 1;
   transform: scale(1.1);
@@ -733,8 +843,10 @@ footer i {
 
 /* NEW: Styles for the "Read More" button on mobile */
 .read-more-btn {
-  display: none; /* Hide by default on desktop */
-  margin: 0; /* Reset margin */
+  display: none;
+  /* Hide by default on desktop */
+  margin: 0;
+  /* Reset margin */
   padding: 8px 16px;
   background: var(--primary-dark);
   color: var(--text-light);
@@ -748,48 +860,57 @@ footer i {
 
 /* --- NEW: Styles for External Links in Info Panel --- */
 .external-link-container {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #444; /* A visual separator inside the dark panel */
-    z-index: 1; /* Ensure it's above other potential elements */
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+  /* A visual separator inside the dark panel */
+  z-index: 1;
+  /* Ensure it's above other potential elements */
 }
 
 .wikipedia-link {
-    /* Transform the button into a more subtle text link */
-    display: inline-flex; /* Keeps icon and text aligned */
-    align-items: center;
-    gap: 8px; /* Space between the icon and the text */
-    color: #dcdcdc; /* Match the panel's paragraph text color */
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9em;
-    transition: color 0.2s ease;
+  /* Transform the button into a more subtle text link */
+  display: inline-flex;
+  /* Keeps icon and text aligned */
+  align-items: center;
+  gap: 8px;
+  /* Space between the icon and the text */
+  color: #dcdcdc;
+  /* Match the panel's paragraph text color */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: color 0.2s ease;
 }
 
 .wikipedia-link:hover {
-    /* Add a subtle hover effect */
-    color: #fff;
-    text-decoration: underline;
+  /* Add a subtle hover effect */
+  color: #fff;
+  text-decoration: underline;
 }
 
 .wikipedia-link .bi-wikipedia {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .wiki-icon {
-  text-decoration: none; /* Remove underline from the icon link */
-  color: #777; /* Make the icon a lighter grey to be more discreet */
+  text-decoration: none;
+  /* Remove underline from the icon link */
+  color: #777;
+  /* Make the icon a lighter grey to be more discreet */
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .wiki-icon:hover {
-  color: #000; /* Darken on hover for better feedback */
+  color: #000;
+  /* Darken on hover for better feedback */
   transform: scale(1.1);
 }
 
 /* --- Media Queries for Responsiveness --- */
 
 @media (max-width: 768px) {
+
   /* --- Header Responsive Styles --- */
   #header-container {
     /* Revert to a row layout for a compact header */
@@ -800,8 +921,9 @@ footer i {
     position: relative;
   }
 
-  h1 {    
-    font-size: 16px; /* Smaller title for mobile to fit */
+  h1 {
+    font-size: 16px;
+    /* Smaller title for mobile to fit */
   }
 
   #logo {
@@ -814,9 +936,10 @@ footer i {
     display: none;
   }
 
-  footer {      
+  footer {
     padding: 10px 30px;
   }
+
   .tooltip {
     display: none;
   }
@@ -835,10 +958,12 @@ footer i {
   }
 
   /* Show the mobile navigation container (we'll create this next) */
-  #mobile-nav-container.loaded { /* Only show if content has loaded */
+  #mobile-nav-container.loaded {
+    /* Only show if content has loaded */
     display: block;
     width: 100%;
-    order: 1; /* Show accordion first */
+    order: 1;
+    /* Show accordion first */
   }
 
   #main-container {
@@ -847,12 +972,16 @@ footer i {
 
   .info-box {
     max-width: 100%;
-    order: 2; /* Show description after accordion */
+    order: 2;
+    /* Show description after accordion */
     /* NEW: Collapse the long description on mobile */
-    position: relative; /* Needed for the ::after pseudo-element */
-    max-height: 150px; /* Adjust as needed */
+    position: relative;
+    /* Needed for the ::after pseudo-element */
+    max-height: 150px;
+    /* Adjust as needed */
     overflow: hidden;
-    padding-bottom: 60px; /* Add space at the bottom for the "Read More" button */
+    padding-bottom: 60px;
+    /* Add space at the bottom for the "Read More" button */
     transition: max-height 0.5s ease-in-out;
   }
 
@@ -865,13 +994,15 @@ footer i {
     width: 100%;
     height: 50px;
     background: linear-gradient(to top, rgba(255, 255, 255, 0.85), transparent);
-    pointer-events: none; /* Allows clicking through the gradient */
+    pointer-events: none;
+    /* Allows clicking through the gradient */
     transition: opacity 0.3s ease;
   }
 
   /* Styles for when the description is expanded */
   .info-box.is-expanded {
-    max-height: 2000px; /* Large enough to show all content */
+    max-height: 2000px;
+    /* Large enough to show all content */
   }
 
   .info-box.is-expanded::after {
@@ -879,18 +1010,21 @@ footer i {
   }
 
   .read-more-btn {
-    display: block; /* Show on mobile */
+    display: block;
+    /* Show on mobile */
     position: absolute;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2; /* Ensure it's above the gradient fade */
+    z-index: 2;
+    /* Ensure it's above the gradient fade */
   }
 }
 
 /* --- Back to Top Button --- */
 #back-to-top-btn {
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -903,7 +1037,7 @@ footer i {
   padding: 15px;
   border-radius: 50%;
   font-size: 18px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   transition: opacity 0.3s, transform 0.3s, background-color 0.3s;
 }
 
@@ -920,5 +1054,46 @@ footer i {
 .node:focus circle {
   stroke: var(--primary-dark);
   stroke-width: 3px;
-  stroke-dasharray: 4 2; /* Dashed line for focus */
+  stroke-dasharray: 4 2;
+  /* Dashed line for focus */
+}
+
+/* --- Brand Consistency (Visual Polish) --- */
+
+/* 1. Custom Text Selection */
+::selection {
+  background-color: #ff0055;
+  /* The site's pink accent */
+  color: #fff;
+}
+
+/* 2. Custom Input Focus */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #ff0055;
+  box-shadow: 0 0 0 3px rgba(255, 0, 85, 0.2);
+  /* Subtle pink glow */
+}
+
+/* --- Scroll Progress Bar --- */
+#scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 2000;
+  /* On top of everything */
+  pointer-events: none;
+}
+
+#scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #ff0055, #ff5500);
+  /* Dynamic gradient */
+  width: 0%;
+  transition: width 0.1s ease-out;
 }

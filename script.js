@@ -802,4 +802,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hide the button if the API is not supported
     fullscreenBtn.style.display = 'none';
   }
+
+  // --- Polish: Scroll Progress Bar ---
+  const progressBar = document.getElementById('scroll-progress-bar');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      progressBar.style.width = scrolled + "%";
+    });
+  }
+
+  // --- Polish: Search Shortcut (/) ---
+  document.addEventListener('keydown', (e) => {
+    // Check if the key pressed is '/' and we are not already in an input
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault(); // Prevent printing '/'
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) {
+        searchInput.focus();
+        // Optional: Select all text when focusing via shortcut
+        searchInput.select();
+      }
+    }
+  });
 });
