@@ -50,6 +50,21 @@ function hideTooltip() {
 // Store the element that was focused before the panel opened
 let focusedElementBeforePanel;
 let allGenreData; // Global variable to store all genre data
+let genreMap = new Map(); // Helper to find genres and their parents
+let currentLayout = 'vertical'; // Global state for the layout ('vertical' or 'radial')
+
+/**
+ * Recursively builds a map of genres for easy lookup and parent retrieval.
+ */
+function buildGenreMap(data, parent = null) {
+  data.forEach(item => {
+    const name = item.name || item.style;
+    genreMap.set(name, { data: item, parent: parent });
+    if (item.substyles && item.substyles.length > 0) {
+      buildGenreMap(item.substyles, item);
+    }
+  });
+}
 
 function updateSchemaOrg(itemData) {
   // Remove any existing Schema.org script tags
@@ -93,7 +108,12 @@ function updateSchemaOrg(itemData) {
   document.head.appendChild(script);
 }
 
-function showInfoPanel(itemData, accentColor = '#ff0055') {
+function showInfoPanel(inputData, accentColor = '#ff0055') {
+  // Always try to get the full data from the map to ensure we have 'substyles' and correct 'parent'
+  const genreNameForLookup = inputData.name || inputData.style;
+  const genreEntry = genreMap.get(genreNameForLookup);
+  const itemData = genreEntry ? genreEntry.data : inputData;
+
   // Update Schema.org data
   updateSchemaOrg(itemData);
 
@@ -125,13 +145,100 @@ function showInfoPanel(itemData, accentColor = '#ff0055') {
   // Set the panel's accent border color
   infoPanel.style.setProperty('--panel-accent-color', accentColor);
 
+  // --- NEW: Breadcrumbs Navigation ---
+  const breadcrumbsContainer = document.createElement('div');
+  breadcrumbsContainer.className = 'breadcrumbs';
+  
+  const path = [];
+  let current = genreEntry;
+  while (current) {
+    path.unshift(current.data);
+    current = current.parent ? genreMap.get(current.parent.name || current.parent.style) : null;
+  }
+
+  // Add "Electronic Music" as root if not present (it's the tree root but not in genreMap)
+  if (path.length > 0 && path[0].name !== "Electronic Music") {
+      // We don't necessarily need to add the root "Electronic Music" if genres already start at family level
+  }
+
+  path.forEach((node, index) => {
+    const isLast = index === path.length - 1;
+    const breadcrumb = document.createElement('span');
+    breadcrumb.className = isLast ? 'breadcrumb-item breadcrumb-current' : 'breadcrumb-item';
+    
+    // We can use a simple icon for the internal items
+    const name = node.name || node.style;
+    breadcrumb.innerHTML = isLast ? name : `${name} <i class="bi bi-chevron-right breadcrumb-separator"></i>`;
+    
+    if (!isLast) {
+      breadcrumb.addEventListener('click', () => {
+        showInfoPanel(node, accentColor);
+      });
+    }
+    breadcrumbsContainer.appendChild(breadcrumb);
+  });
+
   // Update the info panel with the node's data.
   // Add an ID to the h2 to be used by aria-labelledby on the panel.
-  infoContent.innerHTML = `
-    <h2 id="info-panel-title"><i class="bi bi-tag-fill"></i> ${itemData.name || itemData.style}</h2>
-    <p>${itemData.description || 'No description available'}</p>
-    <p><i class="bi bi-soundwave"></i> <b>Example track: ${itemData.example || 'N/A'}</b></p>
-  `;
+  infoContent.innerHTML = '';
+  infoContent.appendChild(breadcrumbsContainer);
+  
+  const title = document.createElement('h2');
+  title.id = 'info-panel-title';
+  title.innerHTML = `<i class="bi bi-tag-fill"></i> ${itemData.name || itemData.style}`;
+  infoContent.appendChild(title);
+
+  const desc = document.createElement('p');
+  desc.textContent = itemData.description || 'No description available';
+  infoContent.appendChild(desc);
+
+  const example = document.createElement('p');
+  example.innerHTML = `<i class="bi bi-soundwave"></i> <b>Example track: ${itemData.example || 'N/A'}</b>`;
+  infoContent.appendChild(example);
+
+  // --- NEW: Parent Genre Navigation ---
+  if (genreEntry && genreEntry.parent) {
+    const parent = genreEntry.parent;
+    const parentName = parent.name || parent.style;
+    
+    const parentNav = document.createElement('div');
+    parentNav.className = 'nav-section parent-nav';
+    parentNav.innerHTML = `
+      <p class="nav-label">Part of:</p>
+      <button class="nav-link-btn parent-link" aria-label="Go to parent genre ${parentName}">
+        <i class="bi bi-arrow-up-circle"></i> ${parentName}
+      </button>
+    `;
+    
+    parentNav.querySelector('button').addEventListener('click', () => {
+      showInfoPanel(parent, accentColor);
+    });
+    
+    infoContent.appendChild(parentNav);
+  }
+
+  // --- NEW: Subgenres Navigation ---
+  if (itemData.substyles && itemData.substyles.length > 0) {
+    const subgenresNav = document.createElement('div');
+    subgenresNav.className = 'nav-section subgenres-nav';
+    subgenresNav.innerHTML = `<p class="nav-label">Subgenres:</p>`;
+    
+    const sublist = document.createElement('div');
+    sublist.className = 'subgenres-grid';
+    
+    itemData.substyles.forEach(sub => {
+      const subBtn = document.createElement('button');
+      subBtn.className = 'nav-link-btn subgenre-link';
+      subBtn.innerHTML = sub.name || sub.style;
+      subBtn.addEventListener('click', () => {
+        showInfoPanel(sub, accentColor);
+      });
+      sublist.appendChild(subBtn);
+    });
+    
+    subgenresNav.appendChild(sublist);
+    infoContent.appendChild(subgenresNav);
+  }
 
   // --- NEW: Wikipedia Link Logic ---
   // Check if the item has a Wikipedia URL and add the link button if it does.
@@ -244,6 +351,8 @@ async function fetchData() {
     // Fetch the data from the JSON file
     const response = await fetch('pulseroots.genres.json');
     const data = await response.json();    
+    allGenreData = data; // Store globally
+    buildGenreMap(data); // Pre-process for navigation
     createTree(data); // Initial tree creation for desktop
     createMobileNav(data, document.getElementById('mobile-genre-list')); // Create mobile nav
 
@@ -253,6 +362,28 @@ async function fetchData() {
     // Show the mobile navigation container now that it's populated
     document.getElementById('mobile-nav-container').classList.add('loaded');
     if (loadingSpinner) loadingSpinner.classList.add('hidden'); // Hide spinner
+
+    // --- Layout Controls Logic ---
+    const treeBtn = document.getElementById('tree-layout-btn');
+    const radialBtn = document.getElementById('radial-layout-btn');
+
+    if (treeBtn && radialBtn) {
+        treeBtn.addEventListener('click', () => {
+            if (currentLayout === 'vertical') return;
+            currentLayout = 'vertical';
+            treeBtn.classList.add('active');
+            radialBtn.classList.remove('active');
+            createTree(allGenreData);
+        });
+
+        radialBtn.addEventListener('click', () => {
+            if (currentLayout === 'radial') return;
+            currentLayout = 'radial';
+            radialBtn.classList.add('active');
+            treeBtn.classList.remove('active');
+            createTree(allGenreData);
+        });
+    }
 
     // --- Accordion Controls Logic ---
     // This logic is moved here to ensure it runs AFTER the mobile nav is created.
@@ -301,30 +432,64 @@ function createTree(data) {
   // Clear previous SVG content on redraw to avoid duplication
   svgContainer.selectAll("*").remove();
 
-  // Define margins and calculate inner dimensions for the chart
-  const margin = {top: 20, right: 250, bottom: 20, left: 50};
-  const containerWidth = svgContainer.node().getBoundingClientRect().width;
-  const height = 3500; // Adjusted height for more compact view
-  const innerWidth = containerWidth - margin.left - margin.right;
-  const innerHeight = height - margin.top - margin.bottom;
+  const containerBounds = svgContainer.node().getBoundingClientRect();
+  const containerWidth = containerBounds.width;
+
+  // Configuration based on layout
+  let height, innerWidth, innerHeight, margin, treeLayout;
+  
+  if (currentLayout === 'vertical') {
+    margin = {top: 20, right: 250, bottom: 20, left: 50};
+    height = 3500;
+    innerWidth = containerWidth - margin.left - margin.right;
+    innerHeight = height - margin.top - margin.bottom;
+    treeLayout = d3.tree().size([innerHeight, innerWidth]);
+  } else {
+    // Radial Layout
+    margin = {top: 20, right: 20, bottom: 20, left: 20};
+    // Ensure the radial layout has enough space and is centered
+    const minSize = Math.max(containerWidth, 800);
+    height = Math.min(window.innerHeight * 1.8, 1400); 
+    innerWidth = containerWidth - margin.left - margin.right;
+    innerHeight = height - margin.top - margin.bottom;
+    const radius = Math.min(containerWidth, height) / 2 - 150;
+    treeLayout = d3.tree()
+      .size([2 * Math.PI, radius])
+      .separation((a, b) => (a.parent === b.parent ? 1 : 2) / a.depth);
+  }
 
   // Select the SVG container and set its dimensions
   const svg = svgContainer.attr("width", containerWidth)
     .attr("height", height)
     .attr("viewBox", `0 0 ${containerWidth} ${height}`);
 
-  // Append a group element and apply the margin, all drawing will happen in here
-  const g = svg.append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
+  // Add a background rect to handle clicks on whitespace for deselecting (if planned)
+  svg.append("rect")
+    .attr("width", containerWidth)
+    .attr("height", height)
+    .attr("fill", "transparent")
+    .on("click", () => {
+      // Logic to clear highlights could go here
+    });
+
+  // Append a group element and apply the margin
+  const g = svg.append("g");
+  
+  if (currentLayout === 'vertical') {
+    g.attr("transform", `translate(${margin.left},${margin.top})`);
+  } else {
+    g.attr("transform", `translate(${containerWidth / 2},${height / 2})`);
+  }
 
   // Recursive function to transform the flat data into a hierarchical structure
   function transformToHierarchy(node) {
     const newNode = {
-      name: node.name || node.style, // Handles both root 'style' and nested 'name'
+      name: node.name || node.style,
       description: node.description,
       example: node.example,
       spotify_track_id: node.spotify_track_id,
       wikipedia_url: node.wikipedia_url,
+      substyles: node.substyles
     };
     if (node.substyles && node.substyles.length > 0) {
       newNode.children = node.substyles.map(transformToHierarchy);
@@ -332,111 +497,128 @@ function createTree(data) {
     return newNode;
   }
 
-  // Transform the data into a hierarchical structure
   const hierarchicalData = {
     name: "Electronic Music",
     children: data.map(transformToHierarchy)
   };
 
-  // Create a hierarchical data structure from the transformed data
   const root = d3.hierarchy(hierarchicalData);
-
-  // Create a tree layout with the specified dimensions
-  // The layout is horizontal, so height is for the y-axis and width for the x-axis
-  const treeLayout = d3.tree().size([innerHeight, innerWidth]);
-
-  // Filter the nodes to only show the ones that are not the root node
-  const nodesToShow = root.descendants().slice(1);
-
-  // Apply the tree layout to the data
   treeLayout(root);
 
-  // Create the links between the nodes
+  // Filter out the "Electronic Music" root node from showing up in the graph
+  const nodesToShow = root.descendants().filter(d => d.depth > 0);
+
+  // Link generator with smoother curves for radial
+  const linkGenerator = currentLayout === 'vertical' 
+    ? d3.linkHorizontal().x(d => d.y).y(d => d.x)
+    : d3.linkRadial().angle(d => d.x).radius(d => d.y);
+
+  // Create the links
   g.selectAll('.link')
-    .data(root.links())
+    .data(root.links().filter(l => l.source.depth > 0)) // Only links where source is not root
     .enter()
     .append('path')
     .attr('class', 'link')
-    .attr('d', d3.linkHorizontal()
-      .x(d => d.y)
-      .y(d => d.x));
+    .attr('d', linkGenerator)
+    .style('opacity', 0)
+    .transition()
+    .duration(800)
+    .style('opacity', 1);
 
   // Create the nodes
   const node = g.selectAll('.node')
-    .data(nodesToShow) // Bind the filtered data
+    .data(nodesToShow)
     .enter()
     .append('g')
-    .attr('class', 'node')
-    .attr('transform', d => `translate(${d.y},${d.x})`)
-    .attr('class', d => d.depth > 0 ? 'node clickable-node' : 'node')
-    // A11y: Make nodes focusable
-    .attr('tabindex', d => d.depth > 0 ? 0 : -1)
+    .attr('class', 'node clickable-node')
+    .attr('transform', d => {
+        if (currentLayout === 'vertical') {
+            return `translate(${d.y},${d.x})`;
+        } else {
+            // Adjust rotation to keep text readable
+            return `rotate(${d.x * 180 / Math.PI - 90}) translate(${d.y},0)`;
+        }
+    })
+    .attr('tabindex', 0)
+    .attr('aria-label', d => d.data.name)
+    .style('opacity', 0)
     .on('keydown', (event, d) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        // Trigger the same logic as click
         const nodeColor = d3.select(event.currentTarget).select('circle').style('fill');
         showInfoPanel(d.data, nodeColor);
       }
     })
     .on('mouseover', (event, d) => {
       showTooltip(event, d);
-
-      // --- Path Highlighting Logic ---
-      // Get all nodes and links and add a "faded" class
+      
+      // Highlight path to root
+      const ancestors = d.ancestors();
       d3.selectAll('.node').classed('faded', true);
       d3.selectAll('.link').classed('faded', true);
-
-      // Highlight the current node and its ancestors
-      d.ancestors().forEach(ancestor => {
-        d3.select(ancestor.gNode)
+      
+      ancestors.forEach(ancestor => {
+        d3.selectAll('.node').filter(n => n === ancestor)
           .classed('faded', false)
           .classed('path-highlight-node', true);
       });
-
-      // Highlight the links connecting the ancestors
+      
       d3.selectAll('.link')
-        .filter(link => d.ancestors().includes(link.target))
+        .filter(link => ancestors.includes(link.target) && ancestors.includes(link.source))
         .classed('faded', false)
         .classed('path-highlight-link', true);
     })
     .on('mouseout', () => {
       hideTooltip();
-      // Remove all highlighting and fading
-      d3.selectAll('.node, .link').classed('faded', false).classed('path-highlight-node', false).classed('path-highlight-link', false);
+      d3.selectAll('.node, .link')
+        .classed('faded', false)
+        .classed('path-highlight-node', false)
+        .classed('path-highlight-link', false);
     })
     .on('click', (event, d) => {
-      if (d.depth === 0) return;
-      // Get the color from the D3 node to use as an accent
+      event.stopPropagation();
       const nodeColor = d3.select(event.currentTarget).select('circle').style('fill');
-      // Call the reusable function to show the panel
       showInfoPanel(d.data, nodeColor);
     });
 
-  // Attach the DOM node to each data point for easy selection later
-  node.each(function(d) { d.gNode = this; }); // This is used for path highlighting
+  // Entry animation for nodes
+  node.transition()
+    .duration(800)
+    .delay((d, i) => i * 2)
+    .style('opacity', 1);
 
-  // Add the circles for the nodes
+  node.each(function(d) { d.gNode = this; });
+
   node.append('circle')
-    .attr('r',6)
+    .attr('r', 6)
     .style('fill', d => {
-      if (d.depth === 0) return '#000';  // Root node color
-      // Find the top-level genre ancestor (at depth 1) to determine the color family.
       const topLevelAncestor = d.ancestors().find(ancestor => ancestor.depth === 1);
       if (topLevelAncestor) {
         return colorScale(topLevelAncestor.data.name);
       }
-      return '#999';  // Fallback color for any nodes that might not fit the structure
-    });
+      return '#999';
+    })
+    .style('stroke', '#fff')
+    .style('stroke-width', '1.5px');
 
-  // Add the text labels for the nodes
   node.append('text')
-    .attr('dy', 3)
-    .attr('x', d => d.children ? -8 : 8)
-    .style('text-anchor', d => d.children ? 'end' : 'start')
+    .attr('dy', '0.31em')
+    .attr('x', d => {
+        if (currentLayout === 'vertical') return d.children ? -10 : 10;
+        return d.x < Math.PI ? 10 : -10;
+    })
+    .attr('text-anchor', d => {
+        if (currentLayout === 'vertical') return d.children ? 'end' : 'start';
+        return d.x < Math.PI ? 'start' : 'end';
+    })
+    .attr('transform', d => {
+        if (currentLayout === 'vertical') return null;
+        return d.x >= Math.PI ? 'rotate(180)' : null;
+    })
     .style('font-family', 'Aleo, serif')
-    .style('font-size', '14px')
-    .text(d => d.depth === 0 ? '' : d.data.name);
+    .style('font-size', '13px')
+    .style('font-weight', d => d.children ? 'bold' : 'normal')
+    .text(d => d.data.name);
 }
 
 // --- Panel Closing Logic ---
@@ -676,23 +858,131 @@ document.addEventListener('DOMContentLoaded', () => {
   // Real-time search with debounce
   const debouncedSearch = debounce((term) => performSearch(term), 300);
 
+  // --- NEW: Autocomplete Search Logic ---
+  const suggestionsContainer = document.getElementById('search-suggestions');
+  let currentFocus = -1;
+
+  function updateSuggestions(term) {
+    if (!term) {
+      suggestionsContainer.innerHTML = '';
+      suggestionsContainer.classList.add('hidden');
+      return;
+    }
+
+    const matches = Array.from(genreMap.values())
+      .filter(entry => (entry.data.name || entry.data.style).toLowerCase().includes(term.toLowerCase()))
+      .slice(0, 10); // Limit to 10 suggestions
+
+    if (matches.length > 0) {
+      suggestionsContainer.innerHTML = '';
+      matches.forEach((match, index) => {
+        const name = match.data.name || match.data.style;
+        const familyNode = match.parent ? (function getRoot(node) {
+            let curr = node;
+            while (curr.parent) {
+                const parentEntry = genreMap.get(curr.parent.name || curr.parent.style);
+                if (!parentEntry) break;
+                curr = parentEntry;
+            }
+            return curr.data.name || curr.data.style;
+        })(match) : 'Family';
+
+        const div = document.createElement('div');
+        div.className = 'suggestion-item';
+        div.innerHTML = `
+          <span class="suggestion-name">${name}</span>
+          <span class="suggestion-family">${familyNode}</span>
+        `;
+        
+        div.addEventListener('click', () => {
+          searchInput.value = name;
+          suggestionsContainer.innerHTML = '';
+          suggestionsContainer.classList.add('hidden');
+          
+          // Trigger the search/highlight logic
+          performSearch(name);
+          
+          // Find the node in the tree and open its panel
+          const d3Node = d3.selectAll('.clickable-node').filter(d => (d.data.name || d.data.style) === name).datum();
+          if (d3Node) {
+              const topLevelAncestor = d3Node.ancestors().find(ancestor => ancestor.depth === 1);
+              const color = topLevelAncestor ? colorScale(topLevelAncestor.data.name) : '#ff0055';
+              showInfoPanel(d3Node.data, color);
+          }
+        });
+        suggestionsContainer.appendChild(div);
+      });
+      suggestionsContainer.classList.remove('hidden');
+    } else {
+      suggestionsContainer.innerHTML = '';
+      suggestionsContainer.classList.add('hidden');
+    }
+  }
+
   searchInput.addEventListener('input', (e) => {
-    debouncedSearch(e.target.value);
+    const term = e.target.value;
+    updateSuggestions(term);
+    debouncedSearch(term);
+  });
+
+  searchInput.addEventListener('keydown', (event) => {
+    const items = suggestionsContainer.getElementsByClassName('suggestion-item');
+    if (event.key === 'ArrowDown') {
+      currentFocus++;
+      addActive(items);
+    } else if (event.key === 'ArrowUp') {
+      currentFocus--;
+      addActive(items);
+    } else if (event.key === 'Enter') {
+      if (currentFocus > -1) {
+        if (items[currentFocus]) items[currentFocus].click();
+      } else {
+        performSearch(searchInput.value);
+        suggestionsContainer.classList.add('hidden');
+      }
+    } else if (event.key === 'Escape') {
+        suggestionsContainer.classList.add('hidden');
+    }
+  });
+
+  function addActive(items) {
+    if (!items) return false;
+    removeActive(items);
+    if (currentFocus >= items.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (items.length - 1);
+    items[currentFocus].classList.add('active');
+    items[currentFocus].scrollIntoView({ block: 'nearest' });
+  }
+
+  function removeActive(items) {
+    for (let i = 0; i < items.length; i++) {
+      items[i].classList.remove('active');
+    }
+  }
+
+  // Click outside to close suggestions
+  document.addEventListener('click', (e) => {
+    if (e.target !== searchInput && e.target !== suggestionsContainer) {
+      suggestionsContainer.classList.add('hidden');
+    }
   });
 
   document.getElementById('search-button').addEventListener('click', () => {
     performSearch(searchInput.value);
+    suggestionsContainer.classList.add('hidden');
   });
 
   document.getElementById('clear-button').addEventListener('click', () => {
     searchInput.value = '';
     performSearch(''); // Clear search results
+    suggestionsContainer.innerHTML = '';
+    suggestionsContainer.classList.add('hidden');
   });
 
   searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      performSearch(event.target.value);
+      // Logic handled in the autocomplete keydown listener above
     }
   });
 

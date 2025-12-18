@@ -74,10 +74,17 @@
             </a>
             <div class="header-controls">
                 <div id="search-container">
-                    <input type="text" id="search-input" placeholder="Search for a genre...">
+                    <input type="text" id="search-input" placeholder="Search for a genre..." autocomplete="off">
+                    <div id="search-suggestions" class="hidden"></div>
                     <button id="search-button"><i class="bi bi-search"></i> Search</button>
                     <button id="clear-button"><i class="bi bi-x-lg"></i> Clear</button>
                     <button id="shuffle-button" title="Random Genre"><i class="bi bi-shuffle"></i></button>
+                </div>
+                <div id="layout-controls" class="header-control-group">
+                    <button id="tree-layout-btn" class="layout-btn active" title="Tree Layout"><i
+                            class="bi bi-diagram-3-fill"></i></button>
+                    <button id="radial-layout-btn" class="layout-btn" title="Radial Layout"><i
+                            class="bi bi-bullseye"></i></button>
                 </div>
                 <button id="fullscreen-btn" title="Toggle Fullscreen" aria-label="Enter Fullscreen">
                     <i class="bi bi-fullscreen"></i>

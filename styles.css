@@ -51,6 +51,53 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+}
+
+#search-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+  flex-wrap: nowrap;
+}
+
+#search-input {
+  width: 150px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--tertiary-dark);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+#search-button,
+#clear-button,
+#shuffle-button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+#search-button i,
+#clear-button i {
+  margin-right: 0;
+}
+
+#search-btn-text,
+#clear-btn-text {
+  display: none;
 }
 
 /* --- Main Content & Layout --- */
@@ -69,15 +116,15 @@ main {
   text-decoration: none;
   color: inherit;
   display: flex;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 #logo:hover {
   transform: rotate(5deg) scale(1.1);
-  /* Slightly more subtle rotation */
   filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.4));
-  /* Add a shadow to lift it off the page */
 }
 
 #main-container {
@@ -210,26 +257,126 @@ p {
   fill: #ff0055;
 }
 
-#search-container {
+
+#search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--secondary-dark);
+  border: 1px solid var(--tertiary-dark);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: var(--text-grey);
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item.active {
+  background-color: var(--tertiary-dark);
+  color: var(--text-light);
+}
+
+.suggestion-family {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* --- Breadcrumbs --- */
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  color: var(--text-grey);
+  align-items: center;
+}
+
+.breadcrumb-item {
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breadcrumb-item:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  opacity: 0.4;
+  font-size: 0.7rem;
+}
+
+.breadcrumb-current {
+  color: var(--text-light);
+  font-weight: bold;
+  cursor: default;
+}
+
+.breadcrumb-current:hover {
+  text-decoration: none;
+}
+
+/* NEW: Wrapper for layout switch controls */
+.header-control-group {
+  display: flex;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.layout-btn {
+  background: none;
+  border: none;
+  color: var(--text-grey);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#search-container input {
-  max-width: 300px;
-  transition: all 0.4s ease-in-out;
+.layout-btn:hover {
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
 }
 
-/* NEW: Wrapper for right-side header controls */
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.layout-btn.active {
+  color: var(--text-light);
+  background: var(--tertiary-dark);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 255, 255, 0.1);
+  transform: translateY(0);
 }
 
-/* NEW: Styles for the fullscreen button */
 #fullscreen-btn {
   background: none;
   border: none;
@@ -437,6 +584,55 @@ p {
   line-height: 1.65;
   /* Slightly more line height for long paragraphs */
   font-size: 0.95rem;
+}
+
+/* --- NEW: Navigation Sections in Info Panel --- */
+
+.nav-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-label {
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-grey) !important;
+  margin-bottom: 12px !important;
+  font-weight: bold;
+}
+
+.nav-link-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link-btn:hover {
+  background: var(--panel-accent-color, #ff0055);
+  border-color: var(--panel-accent-color, #ff0055);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.subgenres-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.parent-link {
+  font-weight: bold;
 }
 
 /* NEW: Style for the note about Spotify login in the info panel */
