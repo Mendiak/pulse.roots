@@ -1128,7 +1128,9 @@ footer i {
   }
 
   /* Hide the search bar on mobile */
-  #search-container {
+  #search-container,
+  #layout-controls,
+  #fullscreen-btn {
     display: none;
   }
 
