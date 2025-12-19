@@ -599,29 +599,25 @@ p {
   position: fixed;
   bottom: 0;
   left: 50%;
-  width: 90%;
-  max-width: 600px;
-  background-color: #2e2e2e;
-  color: #f0f0f0;
-  /* Slightly off-white for softer text */
-  padding: 20px;
-  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  /* Smooth "overshoot" effect */
+  width: 95%;
+  max-width: 650px;
+  background: var(--panel-dark);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  color: var(--text-main);
+  padding: 30px;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translate(-50%, 110%);
-  /* Start further down */
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-top: 6px solid var(--panel-accent-color, #fff);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border: 1px solid var(--glass-border);
+  border-bottom: none;
+  border-top: 4px solid var(--panel-accent-color, var(--accent-pink));
   z-index: 1001;
-  /* Ensure it's above the header */
-  /* Prevent panel from overflowing the viewport on mobile */
-  max-height: 85vh;
-  /* Limit height to 85% of viewport height */
+  max-height: 90vh;
   overflow-y: auto;
-  /* Allow vertical scrolling within the panel */
   box-sizing: border-box;
-  /* Ensure padding is included in the height calculation */
 }
 
 /* --- Custom Scrollbar for the Info Panel (WebKit browsers) --- */
@@ -630,17 +626,15 @@ p {
 }
 
 #info-panel::-webkit-scrollbar-track {
-  background: #2e2e2e;
-  /* Match panel background */
+  background: transparent;
   border-radius: 10px;
 }
 
 #info-panel::-webkit-scrollbar-thumb {
-  background-color: #555;
-  /* A darker grey for the scrollbar handle */
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  border: 2px solid #2e2e2e;
-  /* Creates padding around the thumb */
+  border: 2px solid transparent;
+  background-clip: content-box;
 }
 
 
@@ -749,18 +743,11 @@ p {
 #close-panel-container {
   display: flex;
   justify-content: flex-end;
-  /* Make the close button stick to the top of the panel during scroll */
   position: sticky;
-  top: -20px;
-  /* Counteract parent's top padding */
-  background-color: #2e2e2e;
-  /* Match panel background to hide text scrolling underneath */
-  padding-top: 10px;
-  /* Add space above the close icon */
-  padding-bottom: 10px;
-  /* Add space between button and content */
-  z-index: 2;
-  /* Ensure it's above the scrolling content */
+  top: -30px;
+  margin-top: -10px;
+  padding: 10px 0;
+  z-index: 10;
 }
 
 /* Style the new close button to look like the old icon */

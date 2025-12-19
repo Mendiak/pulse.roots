@@ -186,7 +186,25 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   const title = document.createElement('h2');
   title.id = 'info-panel-title';
   title.innerHTML = `<i class="bi bi-tag-fill"></i> ${itemData.name || itemData.style}`;
-  infoContent.appendChild(title);
+  
+  const shareBtn = document.createElement('button');
+  shareBtn.className = 'nav-link-btn share-btn';
+  shareBtn.style.marginLeft = 'auto'; // Push to the right
+  shareBtn.innerHTML = `<i class="bi bi-share-fill"></i> Share`;
+  shareBtn.title = "Share this genre";
+  shareBtn.addEventListener('click', () => {
+    shareGenre(itemData);
+  });
+  
+  const headerWrapper = document.createElement('div');
+  headerWrapper.className = 'panel-header-wrapper';
+  headerWrapper.style.display = 'flex';
+  headerWrapper.style.alignItems = 'center';
+  headerWrapper.style.marginBottom = '20px';
+  headerWrapper.appendChild(title);
+  headerWrapper.appendChild(shareBtn);
+  
+  infoContent.appendChild(headerWrapper);
 
   const desc = document.createElement('p');
   desc.textContent = itemData.description || 'No description available';
@@ -622,6 +640,46 @@ function createTree(data) {
     .text(d => d.data.name);
 
   // Add a radial gradient or glow effect if desired (via CSS is easier)
+}
+
+/**
+ * Shares the genre via the Web Share API or copies the link to the clipboard.
+ * @param {Object} itemData
+ */
+async function shareGenre(itemData) {
+  const genreName = itemData.name || itemData.style;
+  const shareUrl = window.location.origin + window.location.pathname + `#${encodeURIComponent(genreName.replace(/\s+/g, '-'))}`;
+  const shareText = `Discover ${genreName} on PulseRoots: Electronic Music Styles Tree`;
+
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: 'PulseRoots',
+        text: shareText,
+        url: shareUrl,
+      });
+    } catch (err) {
+      console.error('Error sharing:', err);
+    }
+  } else {
+    // Fallback: Copy to clipboard
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      
+      // Simple visual feedback
+      const shareBtn = document.querySelector('.share-btn');
+      const originalHTML = shareBtn.innerHTML;
+      shareBtn.innerHTML = `<i class="bi bi-check-lg"></i> Copied!`;
+      shareBtn.style.background = 'var(--accent-cyan)';
+      
+      setTimeout(() => {
+        shareBtn.innerHTML = originalHTML;
+        shareBtn.style.background = '';
+      }, 2000);
+    } catch (err) {
+      console.error('Error copying to clipboard:', err);
+    }
+  }
 }
 
 // --- Panel Closing Logic ---
