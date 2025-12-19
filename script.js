@@ -51,7 +51,9 @@ function hideTooltip() {
 let focusedElementBeforePanel;
 let allGenreData; // Global variable to store all genre data
 let genreMap = new Map(); // Helper to find genres and their parents
+let activeSelectedNode = null; // Global state for the currently selected node in the tree
 let currentLayout = 'vertical'; // Global state for the layout ('vertical' or 'radial')
+let lastHighlightedNode = null; // Track the node currently being highlighted
 
 /**
  * Recursively builds a map of genres for easy lookup and parent retrieval.
@@ -487,7 +489,9 @@ function createTree(data) {
     .attr("height", height)
     .attr("fill", "transparent")
     .on("click", () => {
-      // Logic to clear highlights could go here
+      // Logic to clear highlights
+      activeSelectedNode = null;
+      clearBranchHighlight();
     });
 
   // Append a group element and apply the margin
@@ -569,33 +573,22 @@ function createTree(data) {
     })
     .on('mouseover', (event, d) => {
       showTooltip(event, d);
-      
-      // Highlight path to root
-      const ancestors = d.ancestors();
-      d3.selectAll('.node').classed('faded', true);
-      d3.selectAll('.link').classed('faded', true);
-      
-      ancestors.forEach(ancestor => {
-        d3.selectAll('.node').filter(n => n === ancestor)
-          .classed('faded', false)
-          .classed('path-highlight-node', true);
-      });
-      
-      d3.selectAll('.link')
-        .filter(link => ancestors.includes(link.target) && ancestors.includes(link.source))
-        .classed('faded', false)
-        .classed('path-highlight-link', true);
+      highlightBranch(event.currentTarget, d);
     })
     .on('mouseout', () => {
       hideTooltip();
-      d3.selectAll('.node, .link')
-        .classed('faded', false)
-        .classed('path-highlight-node', false)
-        .classed('path-highlight-link', false);
+      if (!lastHighlightedNode || lastHighlightedNode !== activeSelectedNode) {
+        clearBranchHighlight();
+      }
     })
     .on('click', (event, d) => {
       event.stopPropagation();
       const nodeColor = d3.select(event.currentTarget).select('circle').style('fill');
+      
+      // Persist highlight on click
+      activeSelectedNode = d;
+      highlightBranch(event.currentTarget, d);
+      
       showInfoPanel(d.data, nodeColor);
     });
 
@@ -640,6 +633,59 @@ function createTree(data) {
     .text(d => d.data.name);
 
   // Add a radial gradient or glow effect if desired (via CSS is easier)
+}
+
+/**
+ * Highlights the branch from the target node to the root.
+ */
+function highlightBranch(element, d) {
+  lastHighlightedNode = d;
+  const ancestors = d.ancestors();
+  const nodeColor = d3.select(element).select('circle').style('fill');
+
+  // Clear ANY existing highlights first to prevent accumulation
+  d3.selectAll('.node, .link')
+    .classed('path-highlight-node', false)
+    .classed('path-highlight-link', false);
+
+  // Apply highlight color to the container for CSS access (including SVG filters)
+  d3.select('#visualization-container').style('--highlight-color', nodeColor);
+
+  d3.selectAll('.node').classed('faded', true);
+  d3.selectAll('.link').classed('faded', true);
+
+  ancestors.forEach(ancestor => {
+    d3.selectAll('.node').filter(n => n === ancestor)
+      .classed('faded', false)
+      .classed('path-highlight-node', true);
+  });
+
+  d3.selectAll('.link')
+    .filter(link => ancestors.includes(link.target) && ancestors.includes(link.source))
+    .classed('faded', false)
+    .classed('path-highlight-link', true);
+}
+
+/**
+ * Clears all branch highlights.
+ */
+function clearBranchHighlight() {
+  lastHighlightedNode = null;
+  
+  // If there's an active selected node, re-highlight it instead of clearing
+  if (activeSelectedNode) {
+    // We need to find the DOM element for the active node
+    const nodeToHighlight = d3.selectAll('.node').filter(n => n === activeSelectedNode);
+    if (!nodeToHighlight.empty()) {
+      highlightBranch(nodeToHighlight.node(), activeSelectedNode);
+      return;
+    }
+  }
+
+  d3.selectAll('.node, .link')
+    .classed('faded', false)
+    .classed('path-highlight-node', false)
+    .classed('path-highlight-link', false);
 }
 
 /**
@@ -700,6 +746,10 @@ function closeInfoPanel() {
 
   // Stop the music by clearing the iframe content
   spotifyEmbed.innerHTML = '';
+
+  // Clear the tree highlight state
+  activeSelectedNode = null;
+  clearBranchHighlight();
 
   // Remove dynamically added Schema.org script
   const genreSchema = document.getElementById('genre-schema');

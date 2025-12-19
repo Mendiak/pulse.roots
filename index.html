@@ -168,6 +168,32 @@
                     <div class="spinner"></div>
                     <p>Loading genres...</p>
                 </div>
+                <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+                    <defs>
+                        <filter id="svg-glow" x="-100%" y="-100%" width="300%" height="300%">
+                            <!-- Thinner, brighter core glow -->
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blurCore" />
+                            <!-- Wider, softer outer glow -->
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blurOuter" />
+
+                            <!-- Combine blurs -->
+                            <feMerge result="combinedBlur">
+                                <feMergeNode in="blurOuter" />
+                                <feMergeNode in="blurCore" />
+                            </feMerge>
+
+                            <feColorMatrix in="combinedBlur" type="matrix"
+                                values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 2.5 0" result="mask" />
+                            <feFlood flood-color="var(--highlight-color, #00f2ff)" result="flood" />
+                            <feComposite in="flood" in2="mask" operator="in" result="glow" />
+
+                            <feMerge>
+                                <feMergeNode in="glow" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                </svg>
                 <svg id="treemap"></svg>
             </div>
             <!-- NUEVO: El contenedor para la navegación en MÓVIL -->

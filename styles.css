@@ -536,13 +536,12 @@ p {
 
 .node:hover circle {
   r: 9;
-  filter: drop-shadow(0 0 8px currentColor);
+  filter: url(#svg-glow);
 }
 
 .path-highlight-node circle {
   r: 8;
-  stroke: var(--accent-cyan) !important;
-  stroke-width: 2px;
+  filter: url(#svg-glow);
 }
 
 .path-highlight-node text {
@@ -551,10 +550,10 @@ p {
 }
 
 .path-highlight-link {
-  stroke: var(--accent-cyan);
-  stroke-width: 3px;
+  stroke: var(--highlight-color, var(--accent-cyan));
+  stroke-width: 5px;
   transition: stroke 0.3s ease;
-  filter: drop-shadow(0 0 5px var(--accent-cyan));
+  filter: url(#svg-glow);
 }
 
 .link {
@@ -1454,10 +1453,7 @@ select:focus {
 }
 
 
-.path-highlight-link {
-  /* Stronger glow for highlighted paths - ONLY applied when needed */
-  filter: drop-shadow(0 0 5px #ff0055);
-}
+
 
 /* 3. Pulse Animation for Nodes */
 @keyframes nodePulse {
