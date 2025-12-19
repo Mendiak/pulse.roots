@@ -208,6 +208,13 @@
                         "description": "Textural Club is a subgenre of electronic dance music that emphasizes intricate, atmospheric sound design and immersive textures while maintaining a club-friendly rhythm. It blends elements of ambient, experimental, and minimal electronic music with the steady, danceable beats typically found in club tracks. The genre prioritizes creating rich, evolving soundscapes, often using effects like reverb, delay, and distortion to shape the texture of the music. The rhythms are typically more subdued or hypnotic compared to more mainstream club genres like house or techno, creating a balance between rhythm and mood. Textural club music is designed for both the dancefloor and deep listening, focusing on the emotional and sonic qualities of the music, rather than catchy melodies or anthemic hooks. Artists in this genre often experiment with unconventional production techniques, pushing the boundaries of sound while maintaining a groove suitable for club environments.",
                         "example": "Amnesia Scanner - AS Acá",
                         "spotify_track_id": "6U80HaFsZZDVwtIzfrMhxQ"
+                    },
+                    {
+                        "name": "Gqom",
+                        "description": "Originating from the townships of Durban, South Africa, Gqom is a raw, minimalist, and atmospheric subgenre of electronic dance music. Characterized by its dark, moody aesthetic and heavy, syncopated drum patterns, it eschews the traditional four-on-the-floor house beat in favor of broken, hypnotic rhythms. Often set at a steady 127 BPM, the genre focuses on deep sub-bass, industrial-sounding percussive loops, and a repetitive, trance-inducing energy. The term 'Gqom' derives from a Zulu onomatopoeic word representing a hitting drum, reflecting its hard-hitting and percussive nature.",
+                        "example": "DJ Lag - Trip To New York",
+                        "spotify_track_id": "7C1kNw3qy2eH8nLd48qcRr",
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Gqom"
                     }
                 ]
             },

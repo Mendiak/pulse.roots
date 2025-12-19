@@ -41,18 +41,17 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* Ensure it stays on top of other content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 #header-container {
   background: var(--header-gradient);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 20px;
+  padding: 10px 25px;
   flex-wrap: nowrap;
-  gap: 10px;
+  gap: 15px;
 }
 
 .header-controls {
@@ -72,22 +71,32 @@ header {
 }
 
 #search-input {
-  width: 150px;
-  padding: 8px 12px;
+  width: 180px;
+  padding: 10px 14px;
   border-radius: 8px;
-  border: 1px solid var(--tertiary-dark);
-  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   color: var(--text-light);
   font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+#search-input:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
 }
 
 #search-button,
 #clear-button,
 #shuffle-button {
-  padding: 8px 10px;
+  padding: 10px 15px;
   border-radius: 8px;
   white-space: nowrap;
   font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 #search-button i,
@@ -138,11 +147,13 @@ main {
 .info-box,
 #treemap,
 #mobile-nav-container {
-  background-color: rgba(255, 255, 255, 0.85);
-  /* Increased opacity for readability */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .info-box {
@@ -531,9 +542,9 @@ p {
   /* Smooth "overshoot" effect */
   transform: translate(-50%, 110%);
   /* Start further down */
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-top: 5px solid var(--panel-accent-color, #fff);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: 6px solid var(--panel-accent-color, #fff);
   z-index: 1001;
   /* Ensure it's above the header */
   /* Prevent panel from overflowing the viewport on mobile */
@@ -727,25 +738,31 @@ textarea {
 #submitbutton,
 #search-button,
 #clear-button {
-  background: linear-gradient(to bottom, #444, #333);
-  /* Subtle gradient for depth */
+  background: linear-gradient(to bottom, #4a4a4a, #2a2a2a);
   color: var(--text-light);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 22px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Aleo", serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #submitbutton:hover,
 #search-button:hover,
 #clear-button:hover {
-  background: linear-gradient(to bottom, #555, #444);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Add shadow on hover for a "lifting" effect */
+  background: linear-gradient(to bottom, #5a5a5a, #3a3a3a);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
-  /* Lift the button slightly */
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#submitbutton:active,
+#search-button:active,
+#clear-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Footer --- */
