@@ -615,10 +615,13 @@ function createTree(data) {
         if (currentLayout === 'vertical') return null;
         return d.x >= Math.PI ? 'rotate(180)' : null;
     })
-    .style('font-family', 'Aleo, serif')
-    .style('font-size', '13px')
-    .style('font-weight', d => d.children ? 'bold' : 'normal')
+    .style('font-family', '"Outfit", sans-serif')
+    .style('font-size', '14px')
+    .style('fill', '#f1f5f9')
+    .style('font-weight', d => d.children ? '600' : '400')
     .text(d => d.data.name);
+
+  // Add a radial gradient or glow effect if desired (via CSS is easier)
 }
 
 // --- Panel Closing Logic ---

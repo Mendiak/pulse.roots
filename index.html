@@ -7,7 +7,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
@@ -169,7 +170,6 @@
                 </div>
                 <svg id="treemap"></svg>
             </div>
-
             <!-- NUEVO: El contenedor para la navegación en MÓVIL -->
             <div id="mobile-nav-container">
                 <h2>Explore Genres</h2>
@@ -206,49 +206,51 @@
     </div>
 
     <footer>
-        <div id="logoandlinks">
-            <img src="assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo">
-            <nav id="links-container" aria-label="Links and Credits">
-                <h3>LINKS & CREDITS</h3>
+        <div id="footer-main">
+            <div id="footer-brand">
+                <img src="assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo">
+                <p id="footer-mission">Explore the deep connections and evolution of electronic music through an
+                    interactive lens. A journey from roots to future rhythms.</p>
+            </div>
+
+            <nav id="footer-links" aria-label="Links and Credits">
+                <h3>Links & Credits</h3>
                 <ul>
-                    <li><i class="bi bi-github" aria-hidden="true"></i><a class="footer-link"
-                            href="https://github.com/Mendiak/pulse.roots" target="_blank"
-                            rel="noopener noreferrer">PulseRoots @ Github</a></li>
-                    <li><i class="bi bi-camera" aria-hidden="true"></i><a class="footer-link"
-                            href="https://unsplash.com/es/fotos/una-persona-parada-en-una-habitacion-oscura-con-luces-rojas-y-purpuras-M9SNlCS9_2E?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
-                            target="_blank" rel="noopener noreferrer">Photo by Kiryl @ Unsplash</a></li>
-                    <li><i class="bi bi-vector-pen" aria-hidden="true"></i><a class="footer-link"
-                            href="https://www.flaticon.com/authors/ibrandify" target="_blank"
-                            rel="noopener noreferrer">Logo by ibrandify @ Flaticon</a></li>
-                    <li><i class="bi bi-code-slash" aria-hidden="true"></i><a class="footer-link"
-                            href="https://mendiak.github.io/portfolio/" target="_blank"
-                            rel="noopener noreferrer">Website by Mikel Aramendia</a></li>
+                    <li><a class="footer-link" href="https://github.com/Mendiak/pulse.roots" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-github"></i> Github</a></li>
+                    <li><a class="footer-link" href="https://unsplash.com/@kiryl" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-camera"></i> Photos</a></li>
+                    <li><a class="footer-link" href="https://www.flaticon.com/" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> Logo</a></li>
+                    <li><a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-code-slash"></i> Portfolio</a></li>
                 </ul>
             </nav>
+
+            <div id="footer-social-section">
+                <h3>Share This</h3>
+                <div id="social-icons-container">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://mendiak.github.io/pulse.roots/"
+                        target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="social-btn">
+                        <i class="bi bi-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://x.com/intent/tweet?url=https://mendiak.github.io/pulse.roots" target="_blank"
+                        rel="noopener noreferrer" aria-label="Share on X (Twitter)" class="social-btn">
+                        <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.reddit.com/submit?url=https://mendiak.github.io/pulse.roots/&title=PulseRoots"
+                        target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" class="social-btn">
+                        <i class="bi bi-reddit" aria-hidden="true"></i>
+                    </a>
+                    <button id="copy-link-btn" aria-label="Copy link to clipboard" class="social-btn">
+                        <i class="bi bi-clipboard" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        <nav id="social-share" aria-label="Social media sharing">
-            <h3>SHARE THIS</h3>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://mendiak.github.io/pulse.roots/"
-                target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
-                <i class="bi bi-facebook" aria-hidden="true"></i>
-            </a>
 
-            <a href="https://x.com/intent/tweet?url=https://mendiak.github.io/pulse.roots" target="_blank"
-                rel="noopener noreferrer" aria-label="Share on X (Twitter)">
-                <i class="bi bi-twitter-x" aria-hidden="true"></i>
-            </a>
-
-            <a href="https://www.reddit.com/submit?url=https://mendiak.github.io/pulse.roots/&title=PulseRoots"
-                target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit">
-                <i class="bi bi-reddit" aria-hidden="true"></i>
-            </a>
-            <!-- NEW: Copy Link Button -->
-            <button id="copy-link-btn" aria-label="Copy link to clipboard">
-                <i class="bi bi-clipboard" aria-hidden="true"></i>
-            </button>
-        </nav>
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> PulseRoots. All Rights Reserved.</p>
+            <p>&copy; <span id="current-year"></span> PulseRoots. Designed for the Electronic Music community.</p>
         </div>
     </footer>
     <script src="https://d3js.org/d3.v6.min.js"></script>
