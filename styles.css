@@ -1331,7 +1331,7 @@ footer {
 
   /* Styles for when the description is expanded */
   .info-box.is-expanded {
-    max-height: 2000px;
+    max-height: 8000px;
     /* Large enough to show all content */
   }
 

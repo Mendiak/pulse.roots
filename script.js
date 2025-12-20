@@ -394,6 +394,7 @@ async function fetchData() {
             treeBtn.classList.add('active');
             radialBtn.classList.remove('active');
             createTree(allGenreData);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         radialBtn.addEventListener('click', () => {
@@ -402,6 +403,7 @@ async function fetchData() {
             radialBtn.classList.add('active');
             treeBtn.classList.remove('active');
             createTree(allGenreData);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
@@ -458,9 +460,30 @@ function createTree(data) {
   // Configuration based on layout
   let height, innerWidth, innerHeight, margin, treeLayout;
   
+  // Transform data to hierarchy first to count nodes
+  function transformToHierarchyForCount(node) {
+      const newNode = { name: node.name || node.style };
+      if (node.substyles && node.substyles.length > 0) {
+        newNode.children = node.substyles.map(transformToHierarchyForCount);
+      }
+      return newNode;
+  }
+  
+  const tempHierarchicalData = {
+    name: "Electronic Music",
+    children: data.map(transformToHierarchyForCount)
+  };
+  const tempRoot = d3.hierarchy(tempHierarchicalData);
+  const totalNodes = tempRoot.descendants().length;
+
   if (currentLayout === 'vertical') {
     margin = {top: 20, right: 250, bottom: 20, left: 50};
-    height = 3500;
+    // DYNAMIC HEIGHT CALCULATION
+    // Base height per node to ensure comfortable spacing
+    const nodeSpacing = 22; 
+    // Calculate total height needed. Ensure a minimum to avoid cramping with few nodes.
+    height = Math.max(1000, totalNodes * nodeSpacing);
+    
     innerWidth = containerWidth - margin.left - margin.right;
     innerHeight = height - margin.top - margin.bottom;
     treeLayout = d3.tree().size([innerHeight, innerWidth]);

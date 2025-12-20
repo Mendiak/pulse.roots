@@ -517,8 +517,8 @@
                                     {
                     "name": "Electro Bass",
                     "description": "Electro Bass is a subgenre of electronic music that combines elements of electro, bass music, and funk. It is characterized by heavy, syncopated basslines, electronic beats, and a strong emphasis on rhythm and groove. The bass often has a deep, vibrating quality, with the use of analog or synthesized sounds that give it a punchy, energetic feel. Electro bass incorporates futuristic, robotic soundscapes and glitchy effects, while often maintaining a danceable, club-ready rhythm. It draws influences from early electro, Miami bass, and other bass-heavy genres, creating an intense, high-energy sound that is both rhythmic and experimental.",
-                    "example": "Egyptian Lover - Egypt, Egypt",
-                    "spotify_track_id": "6noajkkuZkla4d8E6sYUiY"
+                    "example": "Aux 88 - Aux Mind 2005",
+                    "spotify_track_id": "0E9cDp51EzFZAlTk5kasvX"
                 },
                 {
                     "name": "Ghetto Bass",
@@ -886,6 +886,14 @@
                         "spotify_track_id": "44utuWc4EefJyNOmeyeppV"
                     }
                 ]
+            },
+            {
+            "style": "Hardstyle",
+            "description": "Hardstyle is a powerful subgenre of electronic dance music that emerged in the Netherlands in the late 1990s and early 2000s. It is characterized by its aggressive, distorted kick drum sound, intense 'screech' sounds, and a steady tempo typically between 145 and 155 BPM. The genre often blends the melodic sensibilities of trance with the rhythmic intensity of hardcore techno. A signature element is the 'reverse bass'—a distorted, syncopated bassline that follows the kick—alongside euphoric, anthemic melodies in its more melodic variations. Hardstyle is central to large-scale 'hard dance' festivals and is known for its high-energy atmosphere and dedicated global community.",
+            "example": "Showtek - FTS",
+            "spotify_track_id": "2dglR5ZrKa4rGk6a2zsDKh",
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Hardstyle",
+            "substyles": []
             }
         ]
     },    
