@@ -215,6 +215,13 @@
                         "example": "DJ Lag - Trip To New York",
                         "spotify_track_id": "7C1kNw3qy2eH8nLd48qcRr",
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Gqom"
+                    },
+                    {
+                        "name": "Kuduro",
+                        "description": "Originating in Luanda, Angola, in the late 1980s, Kuduro is a high-energy genre that fuses Western house and techno with traditional African percussion and rhythms like semba and soca. Characterized by its fast tempo (around 140 BPM), aggressive 4/4 beats, and raw, minimalist production, it was born in the streets as a form of urban expression. While the original Angolan sound is gritty and percussive, it gained massive international influence through the 'Progressive Kuduro' movement in Lisbon, which blended it with heavy bass and European club aesthetics.",
+                        "example": "Buraka Som Sistema - Sound of Kuduro",
+                        "spotify_track_id": "0pKhBNnBdZtPA8lqKZ4xpi",
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Kuduro"
                     }
                 ]
             },
@@ -389,6 +396,12 @@
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Dub_techno"
                     }
                 ]
+            },
+            {
+                "name": "Melodic Techno",
+                "description": "Melodic techno is a subgenre of techno that emphasizes atmospheric soundscapes, emotional melodies, and a driving 4/4 beat. Unlike more industrial or minimal techno, it focuses on minor-chord progressions, arpeggiated synths, and cinematic builds that create a sense of tension and release. Emerging as a dominant global festival sound in the late 2010s and early 2020s (heavily associated with labels like Afterlife), it bridges the gap between the hypnotic repetition of techno and the emotional depth of progressive house and trance.",
+                "example": "ARTBAT - Horizon",
+                "spotify_track_id": "7Mqdzo9NcZLUwTAoyV2AeE"
             },
             {
                 "name": "Hard Techno",
