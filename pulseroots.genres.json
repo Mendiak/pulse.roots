@@ -494,6 +494,20 @@
                         ]
                     }    
                 ]
+            },
+            {
+                "name": "Peak Time / Driving Techno",
+                "description": "Peak Time / Driving Techno is a high-impact, festival-ready subgenre of techno tailored for the most energetic hours of a club night or festival. Characterized by powerful, punchy 4/4 kick drums and hypnotic rolling basslines, it typically operates between 128 and 135 BPM. The genre emphasizes 'driving' momentum, utilizing long buildups, industrial percussion hits, and atmospheric risers to create intense tension-and-release structures. While functionally designed for the dancefloor, it often incorporates melodic or acidic stabs, making it the dominant 'big room' sound of modern techno. Influential figures include Adam Beyer, Charlotte de Witte, and Enrico Sangiuliano.",
+                "example": "Age Of Love - The Age Of Love (Charlotte de Witte & Enrico Sangiuliano Remix)",
+                "spotify_track_id": "6R84ZlQF7gGkPB6o3GLZXB",
+                "substyles": [
+                    {
+                        "name": "Hardgroove",
+                        "description": "A rhythmic and percussive substyle of techno that focuses on tribal loops and fast, syncopated drum patterns rather than heavy melodies, providing a relentless and funkier 'groove' for the dancefloor.",
+                        "example": "Ben Sims - Carnival Part 1",
+                        "spotify_track_id": "6qakfXKrAvGmSYMQUzFmYH"
+                    }
+                ]
             }        
         ]
     },
@@ -792,7 +806,21 @@
                             "spotify_track_id": "7b4fQNd34RVNFKKziQz6mS"
                         }
                     ]
-}
+            },
+            {
+                "name": "Lo-fi House",
+                "description": "Lo-fi House, also known as Outsider House, is a subgenre that emerged in the early-to-mid 2010s. It is defined by its intentionally raw and unpolished production, utilizing tape saturation, hiss, and distorted drums to create a warm, nostalgic, and melancholic atmosphere. Drawing heavily from deep house and acid, it emphasizes texture and mood over clean, high-fidelity sound. The genre often features muffled kick drums, hazy synths, and soulful, pitch-shifted vocal samples, evoking a sense of DIY intimacy and digital-age yearning. Key figures include DJ Boring, Mall Grab, and Ross From Friends.",
+                "example": "DJ Boring - Winona",
+                "spotify_track_id": "4rvnBqTmx66LlCJZLbLAOY",
+                "substyles": [
+                    {
+                        "name": "Outsider House",
+                        "description": "A more experimental and sometimes abrasive variant of lo-fi house that blends house rhythms with elements of noise, techno, and industrial music. It often features eccentric sampling and a detached, avant-garde aesthetic.",
+                        "example": "Anthony Naples - Mad Disrespect",
+                        "spotify_track_id": "7rQqjq9zj0AqR6xqAKEO95"
+                    }
+                ]
+            }
         ]
     },
     {
@@ -1735,6 +1763,21 @@
               }
             ]
           },
+          {
+                "name": "New Beat",
+                "description": "New Beat is a Belgian electronic dance music genre that flourished in the late 1980s (1987-1989). It is characterized by a heavy, slow-to-mid tempo (typically 90-110 BPM), hypnotic basslines, and dark, industrial-influenced soundscapes. The genre originated accidentally when DJs at clubs like Boccaccio began playing 45 RPM EBM and New Wave records at 33 RPM with the pitch increased, creating a moody, 'chugging' sound. It served as a critical precursor to European Hardcore, Techno, and Trance, bridging the gap between underground industrial music and the early rave movement.",
+                "example": "Lords of Acid - I Sit on Acid",
+                "spotify_track_id": "2bUUMb6Xo8G1hhBjzXlb5b",
+                "wikipedia_url": "https://en.wikipedia.org/wiki/New_beat",
+                "substyles": [
+                    {
+                        "name": "Hard Beat",
+                        "description": "A faster and more aggressive evolution of New Beat that emerged around 1989. It incorporated harder kicks and more abrasive synthesizers, acting as the direct transition point into the early Belgian Techno and Hardcore scenes.",
+                        "example": "The Maxx - Cocaine",
+                        "spotify_track_id": "0Y2eC6ZN1y4HHsE2m3i4Jh"
+                    }
+                ]
+            },
           {
             "name": "Post-Industrial",
             "description": "Post-industrial music emerged as a development from industrial music, but with a shift toward more atmospheric and ambient elements. It often involves soundscapes that convey a sense of isolation, decay, and dystopia, creating a haunting and intense auditory experience. Post-industrial tracks frequently feature dark, brooding atmospheres, industrial sounds, and electronic textures, giving them a sense of unease or desolation. Themes of technological failure, societal collapse, and personal alienation are common, making it a deeply introspective and often confrontational genre. Artists like Coil pushed the boundaries of this sound, transforming it into something experimental and avant-garde.",
