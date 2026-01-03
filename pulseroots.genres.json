@@ -222,6 +222,13 @@
                         "example": "Buraka Som Sistema - Sound of Kuduro",
                         "spotify_track_id": "0pKhBNnBdZtPA8lqKZ4xpi",
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Kuduro"
+                    },
+                    {
+                        "name": "Singeli",
+                        "description": "Singeli is a high-velocity electronic dance music genre from Dar es Salaam, Tanzania. It is characterized by its breakneck speed, typically ranging from 180 to 300 BPM, featuring frantic, repetitive loops and rapid-fire MCing in Swahili. Emerging from working-class neighborhoods, it blends traditional Tanzanian sounds like taarab and mchiriku with a raw, DIY electronic aesthetic. Known for its intense energy and frenetic rhythms, Singeli has moved from Tanzanian street parties to global experimental club stages, championed by labels like Nyege Nyege Tapes.",
+                        "example": "Bamba Pana - Agaba Kibati",
+                        "spotify_track_id": "1PHwATzL7LLfI8Vk4jB0oq",
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Singeli"
                     }
                 ]
             },
@@ -278,7 +285,6 @@
     },
     {
         "style": "Techno",
-        "origin_decade": 1980,
         "description": "Techno is a genre of electronic dance music that originated in Detroit, Michigan, during the mid-to-late 1980s. Pioneered by 'The Belleville Three'—Juan Atkins, Derrick May, and Kevin Saunderson—techno was born from a fusion of funk, electro, and a fascination with futuristic themes, heavily influenced by writers like Alvin Toffler. It is characterized by a repetitive 4/4 time signature, a tempo typically between 120 and 150 BPM, and a focus on rhythm and texture over melodic complexity. Unlike the soulful, vocal-driven sound of its contemporary, Chicago house, techno often features a more mechanical, stripped-down, and hypnotic sound palette, using synthesizers and drum machines to create a sonic landscape that feels both industrial and otherworldly. It's a genre built for continuous mixing in clubs, creating immersive, long-form journeys on the dancefloor.",
         "example": "Joey Beltram - Energy Flash",
         "spotify_track_id": "46ddej1ibGIgs58H0wakoK",
@@ -286,7 +292,6 @@
         "substyles": [
             {
                 "name": "Detroit Techno",
-                "origin_decade": 1980,
                 "description": "Detroit techno is a subgenre of techno music that originated in Detroit in the 1980s, characterized by its soulful melodies, driving 4/4 beats, and futuristic sounds. It often incorporates elements of funk, jazz, and electronic music, reflecting the city's cultural heritage and industrial landscape. Detroit techno is known for its emotional depth and innovative production techniques, influencing the global techno scene.",
                 "example": "Derrick May -  Strings of Life",
                 "spotify_track_id": "7N3FfUFMud1rjI6Vgw71mm",
@@ -441,6 +446,12 @@
                                 "spotify_track_id": "7CymnEV7bWx8eVt1CwdBeN",
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/Gabber"
                             },
+                            {   "name": "Happy Hardcore",
+                                "description": "Happy Hardcore is a high-tempo, euphoric subgenre of hardcore techno that emerged in the early-to-mid 1990s. It is characterized by very fast BPMs (typically 160–180), driving 4/4 beats or breakbeats, and a focus on uplifting piano riffs, catchy melodies, and high-pitched 'chipmunk' vocal samples. Unlike its darker counterparts like Gabber or Industrial Hardcore, Happy Hardcore emphasizes a festive, positive atmosphere, often associated with the colorful 'kandi' rave culture. It bridges the gap between early breakbeat rave and modern hard dance music.",
+                                "example": "DJ Paul Elstak - Luv U More",
+                                "spotify_track_id": "5WfL4VVFQaHhjkNowXoZSZ",
+                                "wikipedia_url": "https://en.wikipedia.org/wiki/Happy_hardcore"
+                                },
                             {
                                 "name": "Speedcore",
                                 "description": "Speedcore is an ultra-fast and extreme subgenre of hardcore techno, characterized by its high BPMs (often exceeding 250 BPM), distorted kicks, and frenetic, chaotic sound. It often incorporates elements of industrial music and noise, making it one of the most aggressive forms of electronic music. Speedcore is popular in niche underground scenes and is known for pushing the limits of intensity.",
@@ -766,7 +777,22 @@
                     "spotify_track_id": "4mNwbj8hTUjbyZSHdQVIuL"
                     }
                 ]
-            }
+            },
+            {
+                    "name": "French House",
+                    "description": "French House, also known as French Touch or Filter House, is a subgenre that emerged in France in the mid-1990s. It is characterized by the heavy use of 'filter' effects (low-pass and high-pass filters) and phasers applied to disco and funk samples from the 1970s and 80s. It combines traditional house rhythms with glamorous production, funky basslines, and a strong focus on melody and danceability. Popularized globally by artists such as Daft Punk, Cassius, and Etienne de Crécy, it defined the sound of late 20th-century club music.",
+                    "example": "Stardust - Music Sounds Better With You",
+                    "spotify_track_id": "303ccTay2FiDTZ9fZ2AdBt",
+                    "wikipedia_url": "https://en.wikipedia.org/wiki/French_house",
+                    "substyles": [
+                        {
+                            "name": "Filter House",
+                            "description": "A technical variant of French House that focuses almost exclusively on frequency manipulation through filters, creating the signature 'muffled' and 'sweeping' sound that builds intense tension and euphoria on the dancefloor.",
+                            "example": "Alan Braxe & Fred Falke - Intro",
+                            "spotify_track_id": "7b4fQNd34RVNFKKziQz6mS"
+                        }
+                    ]
+}
         ]
     },
     {
@@ -1589,6 +1615,21 @@
                         "example": "Ryan Paris - Dolce Vita",
                         "spotify_track_id": "55TfPKgtkovhAtDyqIMiEL",
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Italo_disco"
+                    }
+                ]
+            },
+            {
+                "name": "Hi-NRG",
+                "description": "Hi-NRG (High Energy) is a high-tempo subgenre of electronic dance music that emerged in the late 1970s and early 1980s. It evolved from disco, specifically the 'electronic' disco sound, by replacing organic orchestration with a purely synthetic, staccato sound. Characterized by a fast tempo (typically above 125 BPM), driving 4/4 beats, and 'galloping' 16th-note basslines, it became a foundational influence for House, Eurodance, and Trance. It was particularly iconic within the LGBTQ+ club scene of the era, with pioneers like Patrick Cowley and Bobby Orlando leading the sound.",
+                "example": "Evelyn Thomas - High Energy",
+                "spotify_track_id": "78IXkKoywc5f9ipjzpZwu2",
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Hi-NRG",
+                "substyles": [
+                    {
+                        "name": "Eurobeat",
+                        "description": "A direct evolution of Hi-NRG and Italo Disco, Eurobeat features even faster tempos and a more commercial, pop-oriented structure. It gained massive popularity in Japan, becoming synonymous with the Para Para dance culture and racing-themed media.",
+                        "example": "Dave Rodgers - Space Boy",
+                        "spotify_track_id": "0CFvwXtSkQDmM5V7o4pmlW"
                     }
                 ]
             },
