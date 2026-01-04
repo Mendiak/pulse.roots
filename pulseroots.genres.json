@@ -208,27 +208,6 @@
                         "description": "Textural Club is a subgenre of electronic dance music that emphasizes intricate, atmospheric sound design and immersive textures while maintaining a club-friendly rhythm. It blends elements of ambient, experimental, and minimal electronic music with the steady, danceable beats typically found in club tracks. The genre prioritizes creating rich, evolving soundscapes, often using effects like reverb, delay, and distortion to shape the texture of the music. The rhythms are typically more subdued or hypnotic compared to more mainstream club genres like house or techno, creating a balance between rhythm and mood. Textural club music is designed for both the dancefloor and deep listening, focusing on the emotional and sonic qualities of the music, rather than catchy melodies or anthemic hooks. Artists in this genre often experiment with unconventional production techniques, pushing the boundaries of sound while maintaining a groove suitable for club environments.",
                         "example": "Amnesia Scanner - AS Acá",
                         "spotify_track_id": "6U80HaFsZZDVwtIzfrMhxQ"
-                    },
-                    {
-                        "name": "Gqom",
-                        "description": "Originating from the townships of Durban, South Africa, Gqom is a raw, minimalist, and atmospheric subgenre of electronic dance music. Characterized by its dark, moody aesthetic and heavy, syncopated drum patterns, it eschews the traditional four-on-the-floor house beat in favor of broken, hypnotic rhythms. Often set at a steady 127 BPM, the genre focuses on deep sub-bass, industrial-sounding percussive loops, and a repetitive, trance-inducing energy. The term 'Gqom' derives from a Zulu onomatopoeic word representing a hitting drum, reflecting its hard-hitting and percussive nature.",
-                        "example": "DJ Lag - Trip To New York",
-                        "spotify_track_id": "7C1kNw3qy2eH8nLd48qcRr",
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Gqom"
-                    },
-                    {
-                        "name": "Kuduro",
-                        "description": "Originating in Luanda, Angola, in the late 1980s, Kuduro is a high-energy genre that fuses Western house and techno with traditional African percussion and rhythms like semba and soca. Characterized by its fast tempo (around 140 BPM), aggressive 4/4 beats, and raw, minimalist production, it was born in the streets as a form of urban expression. While the original Angolan sound is gritty and percussive, it gained massive international influence through the 'Progressive Kuduro' movement in Lisbon, which blended it with heavy bass and European club aesthetics.",
-                        "example": "Buraka Som Sistema - Sound of Kuduro",
-                        "spotify_track_id": "0pKhBNnBdZtPA8lqKZ4xpi",
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Kuduro"
-                    },
-                    {
-                        "name": "Singeli",
-                        "description": "Singeli is a high-velocity electronic dance music genre from Dar es Salaam, Tanzania. It is characterized by its breakneck speed, typically ranging from 180 to 300 BPM, featuring frantic, repetitive loops and rapid-fire MCing in Swahili. Emerging from working-class neighborhoods, it blends traditional Tanzanian sounds like taarab and mchiriku with a raw, DIY electronic aesthetic. Known for its intense energy and frenetic rhythms, Singeli has moved from Tanzanian street parties to global experimental club stages, championed by labels like Nyege Nyege Tapes.",
-                        "example": "Bamba Pana - Agaba Kibati",
-                        "spotify_track_id": "1PHwATzL7LLfI8Vk4jB0oq",
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Singeli"
                     }
                 ]
             },
@@ -1610,6 +1589,75 @@
             }
         ]
     },
+    {
+        "style": "Global Club",
+        "description": "Global Club (also known as Global Bass or World Club) refers to a diverse movement of electronic dance music that emerges from local scenes outside the Western mainstream. It is characterized by the fusion of traditional regional rhythms with modern electronic production, often born in urban peripheries. This genre bridges the gap between local folk identities and global underground club culture, emphasizing syncopation, polyrhythms, and high-energy social expression.",
+        "example": "M.I.A. - Bucky Done Gun",
+        "spotify_track_id": "5eQABBjViGlMlA7ZDB1QL7",
+        "substyles": [
+            {
+                        "name": "Gqom",
+                        "description": "Originating from the townships of Durban, South Africa, Gqom is a raw, minimalist, and atmospheric subgenre of electronic dance music. Characterized by its dark, moody aesthetic and heavy, syncopated drum patterns, it eschews the traditional four-on-the-floor house beat in favor of broken, hypnotic rhythms. Often set at a steady 127 BPM, the genre focuses on deep sub-bass, industrial-sounding percussive loops, and a repetitive, trance-inducing energy. The term 'Gqom' derives from a Zulu onomatopoeic word representing a hitting drum, reflecting its hard-hitting and percussive nature.",
+                        "example": "DJ Lag - Trip To New York",
+                        "spotify_track_id": "7C1kNw3qy2eH8nLd48qcRr",
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Gqom"
+                    },
+                    {
+                        "name": "Kuduro",
+                        "description": "Originating in Luanda, Angola, in the late 1980s, Kuduro is a high-energy genre that fuses Western house and techno with traditional African percussion and rhythms like semba and soca. Characterized by its fast tempo (around 140 BPM), aggressive 4/4 beats, and raw, minimalist production, it was born in the streets as a form of urban expression. While the original Angolan sound is gritty and percussive, it gained massive international influence through the 'Progressive Kuduro' movement in Lisbon, which blended it with heavy bass and European club aesthetics.",
+                        "example": "Buraka Som Sistema - Sound of Kuduro",
+                        "spotify_track_id": "0pKhBNnBdZtPA8lqKZ4xpi",
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Kuduro"
+                    },
+                    {
+                        "name": "Singeli",
+                        "description": "Singeli is a high-velocity electronic dance music genre from Dar es Salaam, Tanzania. It is characterized by its breakneck speed, typically ranging from 180 to 300 BPM, featuring frantic, repetitive loops and rapid-fire MCing in Swahili. Emerging from working-class neighborhoods, it blends traditional Tanzanian sounds like taarab and mchiriku with a raw, DIY electronic aesthetic. Known for its intense energy and frenetic rhythms, Singeli has moved from Tanzanian street parties to global experimental club stages, championed by labels like Nyege Nyege Tapes.",
+                        "example": "Bamba Pana - Agaba Kibati",
+                        "spotify_track_id": "1PHwATzL7LLfI8Vk4jB0oq",
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Singeli"
+                    },
+                    {
+                        "name": "Funk Carioca",
+                        "description": "Funk Carioca, also known as Brazilian Funk or Baile Funk, is a rhythmic powerhouse born in the favelas of Rio de Janeiro. Originating in the 1980s as a localized evolution of Miami Bass and Electro-funk, it transitioned from using imported loops to creating the 'Tamborzão'—a signature syncopated beat that blends African percussion with heavy electronic sub-bass. The genre serves as a vital tool for social identity and urban expression, characterized by its DIY aesthetic, raw vocals, and high-energy loops. It has evolved from 90s social chronicles to modern high-speed and experimental forms that dominate global underground club circuits.",
+                        "example": "Cidinho & Doca - Rap da Felicidade",
+                        "spotify_track_id": "77BpytsTfXz6mgZOjCCRrB",
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Funk_carioca",
+                        "substyles": [
+                            {
+                                "name": "Classic Funk / Funk de Raiz",
+                                "description": "The foundational era of the 1990s, characterized by the 'Volt Mix' beat and social consciousness. These tracks, often called 'conscious funk,' focused on narratives of peace, pride, and daily life in the favelas, featuring melodic structures and a slower tempo (around 125 BPM) influenced by freestyle and soul.",
+                                "example": "MC Marcinho - Glamurosa",
+                                "spotify_track_id": "1ZBQQBBe5WFMoLuqMcqc2e"
+                            },
+                            {
+                                "name": "Funk Proibidão",
+                                "description": "A raw and confrontational subgenre that describes the harsh realities of organized crime and gang culture in the peripheries. Characterized by aggressive lyrics and a gritty, lo-fi production style, it represents the most underground and unfiltered side of the genre.",
+                                "example": "MC Orelha - Na Faixa de Gaza",
+                                "spotify_track_id": "5MH1hI9hFOhhaKKZPOhK9P"
+                            },
+                            {
+                                "name": "Funk Ostentação",
+                                "description": "Emerging from São Paulo in the late 2000s, this style shifted the focus from social struggle to themes of wealth, luxury, and consumption. It features more polished production, often incorporating pop elements and music videos centered around cars, fashion, and jewelry.",
+                                "example": "MC Guimê - País do Futebol",
+                                "spotify_track_id": "7AD7hNwGOOSRe33QtnyprD"
+                            },
+                            {
+                                "name": "Funk 150 BPM",
+                                "description": "A high-speed revolution that started in Rio's Baile da Gaiola in the late 2010s. By accelerating the tempo to 150 BPM, it introduced a frenetic, erratic rhythm that changed the dance dynamic, making it more intense and suitable for modern hyper-active dancefloors.",
+                                "example": "Kevin o Chris - Vamos pra Gaiola",
+                                "spotify_track_id": "7FiIQXpIeLo3ITfGGpb8PB"
+                            },
+                            {
+                                "name": "Funk Bruxaria / Automotivo",
+                                "description": "The current avant-garde of the genre, primarily from the São Paulo 'fluxos.' It is a dark, experimental subgenre that embraces extreme distortion, industrial noise, and high-pitched 'screeching' sounds (tuin). It is designed for massive car sound systems, pushing the limits of sound design and deconstructed club music.",
+                                "example": "DJ K - Beat Distorce Mente",
+                                "spotify_track_id": "4SGzkOvElvpUdlTp9wN9LI"
+                            }
+                        ]
+                    }
+                ]
+            },
+
     {
         "style": "Disco",
         "description": "Disco is a genre of dance music that emerged in the 1970s, characterized by its upbeat, rhythmic sound and focus on creating a vibrant, energetic atmosphere for the dance floor. Disco features a steady four-on-the-floor beat, syncopated basslines, and lush orchestration, often incorporating strings, horns, and electric pianos. The genre emphasizes groove, with catchy melodies and vocals often layered over driving rhythms. Disco was a cultural phenomenon, influencing fashion, dance styles, and nightlife, and is known for its lavish, glamorous vibe. Iconic disco artists like Donna Summer, Chic, and the Bee Gees helped define the sound, which paved the way for later dance and electronic music genres.",
