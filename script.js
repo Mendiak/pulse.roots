@@ -560,7 +560,7 @@ function createTree(data) {
 
   // Create the links
   g.selectAll('.link')
-    .data(root.links().filter(l => l.source.depth > 0)) // Only links where source is not root
+    .data(root.links().filter(l => l.target.depth > 0)) // Show all links to visible nodes (including from root)
     .enter()
     .append('path')
     .attr('class', 'link')
