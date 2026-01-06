@@ -676,17 +676,17 @@ p {
 /* --- NEW: Navigation Sections in Info Panel --- */
 
 .nav-section {
-  margin-top: 30px;
-  padding-top: 25px;
+  margin-top: 15px;
+  padding-top: 15px;
   border-top: 1px solid var(--glass-border);
 }
 
 .nav-label {
-  font-size: 0.75rem !important;
+  font-size: 0.7rem !important;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   color: var(--text-muted) !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 8px !important;
   font-weight: 700;
 }
 
@@ -694,16 +694,16 @@ p {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--glass-border);
   color: var(--text-main);
-  padding: 10px 20px;
-  border-radius: 12px;
+  padding: 6px 14px;
+  border-radius: 10px;
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .nav-link-btn:hover {
@@ -721,7 +721,7 @@ p {
 .subgenres-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .parent-link {
