@@ -216,6 +216,32 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   example.innerHTML = `<i class="bi bi-soundwave"></i> <b>Example track: ${itemData.example || 'N/A'}</b>`;
   infoContent.appendChild(example);
 
+  // --- NEW: Key Artists Section ---
+  if (itemData.key_artists && itemData.key_artists.length > 0) {
+    const artistsSection = document.createElement('div');
+    artistsSection.className = 'nav-section artists-section';
+    artistsSection.innerHTML = `<p class="nav-label">Key Artists:</p>`;
+    
+    const artistsSlider = document.createElement('div');
+    artistsSlider.className = 'artists-slider';
+    
+    itemData.key_artists.forEach(artist => {
+      const artistCard = document.createElement('a');
+      artistCard.className = 'artist-card';
+      artistCard.href = artist.url;
+      artistCard.target = '_blank';
+      artistCard.rel = 'noopener noreferrer';
+      artistCard.innerHTML = `
+        <span class="artist-name">${artist.name}</span>
+        <i class="bi bi-spotify"></i>
+      `;
+      artistsSlider.appendChild(artistCard);
+    });
+    
+    artistsSection.appendChild(artistsSlider);
+    infoContent.appendChild(artistsSection);
+  }
+
   // --- NEW: Parent Genre Navigation ---
   if (genreEntry && genreEntry.parent) {
     const parent = genreEntry.parent;
