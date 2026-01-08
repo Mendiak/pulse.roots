@@ -784,6 +784,20 @@
         "description": "Techno is a genre of electronic dance music that originated in Detroit, Michigan, during the mid-to-late 1980s. Pioneered by 'The Belleville Three'—Juan Atkins, Derrick May, and Kevin Saunderson—techno was born from a fusion of funk, electro, and a fascination with futuristic themes, heavily influenced by writers like Alvin Toffler. It is characterized by a repetitive 4/4 time signature, a tempo typically between 120 and 150 BPM, and a focus on rhythm and texture over melodic complexity. Unlike the soulful, vocal-driven sound of its contemporary, Chicago house, techno often features a more mechanical, stripped-down, and hypnotic sound palette, using synthesizers and drum machines to create a sonic landscape that feels both industrial and otherworldly. It's a genre built for continuous mixing in clubs, creating immersive, long-form journeys on the dancefloor.",
         "example": "Joey Beltram - Energy Flash",
         "spotify_track_id": "46ddej1ibGIgs58H0wakoK",
+        "key_artists": [
+            {
+                "name": "Juan Atkins",
+                "url": "https://open.spotify.com/artist/208EQzx7RmoE2Ng9gF2edh"
+            },
+            {
+                "name": "Derrick May",
+                "url": "https://open.spotify.com/artist/0v6N0xV7AfHHKVcgUOjC51"
+            },
+            {
+                "name": "Kevin Saunderson",
+                "url": "https://open.spotify.com/artist/0jS6VTFGujWxinY5TSQwOG"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/Techno",
         "substyles": [
             {
@@ -791,37 +805,121 @@
                 "description": "Detroit techno is a subgenre of techno music that originated in Detroit in the 1980s, characterized by its soulful melodies, driving 4/4 beats, and futuristic sounds. It often incorporates elements of funk, jazz, and electronic music, reflecting the city's cultural heritage and industrial landscape. Detroit techno is known for its emotional depth and innovative production techniques, influencing the global techno scene.",
                 "example": "Derrick May -  Strings of Life",
                 "spotify_track_id": "7N3FfUFMud1rjI6Vgw71mm",
+                "key_artists": [
+                    {
+                        "name": "Derrick May",
+                        "url": "https://open.spotify.com/artist/0v6N0xV7AfHHKVcgUOjC51"
+                    },
+                    {
+                        "name": "Juan Atkins",
+                        "url": "https://open.spotify.com/artist/208EQzx7RmoE2Ng9gF2edh"
+                    },
+                    {
+                        "name": "Kevin Saunderson",
+                        "url": "https://open.spotify.com/artist/0jS6VTFGujWxinY5TSQwOG"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Detroit_techno",
                 "substyles": [
                     {
                         "name": "Classic Detroit Techno",
                         "description": "Classic Detroit Techno represents the pioneering sound of techno that emerged in Detroit in the 1980s. It combines soulful melodies, funky basslines, and hypnotic grooves, drawing on influences from funk, electro, and Motown. This sound is known for its emotional depth and futuristic vision, featuring synthesized melodies and steady rhythms that create an immersive, uplifting experience.",
                         "example": "Juan Atkins - No UFO's",
-                        "spotify_track_id": "1Ro7L7RPp5P8heOfW4EQKA"
+                        "spotify_track_id": "1Ro7L7RPp5P8heOfW4EQKA",
+                        "key_artists": [
+                            {
+                                "name": "Juan Atkins",
+                                "url": "https://open.spotify.com/artist/208EQzx7RmoE2Ng9gF2edh"
+                            },
+                            {
+                                "name": "Derrick May",
+                                "url": "https://open.spotify.com/artist/0v6N0xV7AfHHKVcgUOjC51"
+                            },
+                            {
+                                "name": "Kevin Saunderson",
+                                "url": "https://open.spotify.com/artist/0jS6VTFGujWxinY5TSQwOG"
+                            }
+                        ]
                     },
                     {
                         "name": "Detroit Techno 2.0",
                         "description": "Detroit Techno 2.0 is a modern evolution of the classic Detroit sound, incorporating elements from minimal and dub techno while staying true to its roots. This style blends the soulful, atmospheric qualities of original Detroit techno with contemporary production techniques, often emphasizing clean, spacious arrangements and subtle rhythmic shifts.",
                         "example": "Octave One Feat. Ann Saunderson - Blackwater",
-                        "spotify_track_id": "3etLHAzGr30F9G4bnUpdxw"
+                        "spotify_track_id": "3etLHAzGr30F9G4bnUpdxw",
+                        "key_artists": [
+                            {
+                                "name": "Octave One",
+                                "url": "https://open.spotify.com/artist/0CRfAs5qmkRgw9x9etNGqH"
+                            },
+                            {
+                                "name": "Carl Craig",
+                                "url": "https://open.spotify.com/artist/17dbJyUCrxh4I7iyUrjaHU"
+                            },
+                            {
+                                "name": "Kenny Larkin",
+                                "url": "https://open.spotify.com/artist/7A4qanEMCOPcywaqZ01yVV"
+                            }
+                        ]
                     },
                     {
                         "name": "Techno Soul",
                         "description": "Techno Soul is a fusion genre that marries Detroit techno with the expressive elements of soul music. It features warm, melodic tones and soulful vocal samples or performances, creating an emotionally resonant style that maintains techno’s hypnotic pulse while adding a human, lyrical quality.",
                         "example": "Kerri Chandler - Bar A Thym",
-                        "spotify_track_id": "44EI5kN4bHMLhC7lNjcnuK"
+                        "spotify_track_id": "44EI5kN4bHMLhC7lNjcnuK",
+                        "key_artists": [
+                            {
+                                "name": "Octave One",
+                                "url": "https://open.spotify.com/artist/0CRfAs5qmkRgw9x9etNGqH"
+                            },
+                            {
+                                "name": "Eddie Fowlkes",
+                                "url": "https://open.spotify.com/artist/5s52J0wTa9B4YFG39iqXny"
+                            },
+                            {
+                                "name": "Ian O'Brien",
+                                "url": "https://open.spotify.com/artist/4uhd5mHMAsJNvmnLdPHj17"
+                            }
+                        ]
                     },
                     {
                         "name": "Hard Detroit Techno",
                         "description": "Hard Detroit Techno takes the Detroit sound in a more aggressive, intense direction. This style is faster and heavier, with pounding kick drums, relentless rhythms, and darker, industrial elements. Hard Detroit techno is raw and uncompromising, focusing on high-energy, dancefloor-driven tracks that retain Detroit’s innovative spirit.",
                         "example": "Jeff Mills - The Bells",
-                        "spotify_track_id": "0ISxyAhfop0MoMeAUw72RN"
+                        "spotify_track_id": "0ISxyAhfop0MoMeAUw72RN",
+                        "key_artists": [
+                            {
+                                "name": "Jeff Mills",
+                                "url": "https://open.spotify.com/artist/2eIDAcLKnWc4D350YyzvgS"
+                            },
+                            {
+                                "name": "Robert Hood",
+                                "url": "https://open.spotify.com/artist/5ipQlfnpRCtyOuhYqvPvQ8"
+                            },
+                            {
+                                "name": "DJ Bone",
+                                "url": "https://open.spotify.com/artist/5nAtXl2yhbQubn2gT9lhIg"
+                            }
+                        ]
                     },
                     {
                         "name": "Minimal Detroit Techno",
                         "description": "Minimal Detroit Techno is a stripped-down, minimalist version of Detroit techno that emphasizes simplicity and precision. With a focus on repetitive grooves, sparse arrangements, and clean, subtle soundscapes, this style captures the essence of Detroit’s hypnotic rhythms while reducing elements to their core, creating an understated yet powerful listening experience.",
                         "example": "Robert Hood - Rhythm Of Vision",
-                        "spotify_track_id": "3PxI10OJhF7y9txEcEMukZ"
+                        "spotify_track_id": "3PxI10OJhF7y9txEcEMukZ",
+                        "key_artists": [
+                            {
+                                "name": "Robert Hood",
+                                "url": "https://open.spotify.com/artist/5ipQlfnpRCtyOuhYqvPvQ8"
+                            },
+                            {
+                                "name": "Daniel Bell",
+                                "url": "https://open.spotify.com/artist/6xtK8iJS59y80uh95EFAlR"
+                            },
+                            {
+                                "name": "DBX",
+                                "url": "https://open.spotify.com/artist/08tQwub0ulYRq9dRBKVS1r"
+                            }
+                        ]
                     }
                 ]
             },
@@ -830,6 +928,20 @@
                 "description": "A subgenre of techno that emerged in Cologne, Germany in the early 1990s, characterized by its emphasis on deep, driving basslines, hypnotic rhythms, and a darker, more atmospheric sound than traditional Detroit techno.",
                 "example": "Superpitcher - To Turn You On",
                 "spotify_track_id": "212DKnQstTuDnXeST832dP",
+                "key_artists": [
+                    {
+                        "name": "Superpitcher",
+                        "url": "https://open.spotify.com/artist/55BdmUTmTmoUNOFQxm54k5"
+                    },
+                    {
+                        "name": "Michael Mayer",
+                        "url": "https://open.spotify.com/artist/5R9d1YP5jtBw2IrQItGzQI"
+                    },
+                    {
+                        "name": "Justus Köhncke",
+                        "url": "https://open.spotify.com/artist/7M9FwnKOKR4zl9iYCfy3bv"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Schaffel"
             },
             {
@@ -837,6 +949,20 @@
                 "description": "Acid techno is a subgenre of techno music that emerged in the late 1980s, characterized by its use of the Roland TB-303 synthesizer, which creates distinctive squelchy basslines and psychedelic melodies. The genre features repetitive beats and hypnotic rhythms, often incorporating elements of acid house and trance, resulting in a sound that is both energetic and immersive, popular in underground dance scenes.",
                 "example": "Phuture - Acid Trax",
                 "spotify_track_id": "2aLXJJ2zOsBJlGTxiG0yMi",
+                "key_artists": [
+                    {
+                        "name": "Hardfloor",
+                        "url": "https://open.spotify.com/artist/6z9JhbmcTrVKITp9ah4mJk"
+                    },
+                    {
+                        "name": "Josh Wink",
+                        "url": "https://open.spotify.com/artist/6DQLkRykAsF6paJnlIMX4H"
+                    },
+                    {
+                        "name": "Emmanuel Top",
+                        "url": "https://open.spotify.com/artist/5y8522WHbYqJVt1jSwNSfA"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Acid_techno",
                 "substyles": [
                     {
@@ -844,6 +970,20 @@
                         "description": "Acid house is a subgenre of house music that emerged in the mid-1980s, characterized by its use of the Roland TB-303 synthesizer to create distinctive squelchy basslines and repetitive, hypnotic rhythms. Acid house often features minimalistic beats and psychedelic elements, creating an immersive sound that became synonymous with the rave culture and underground dance scenes of the time.",
                         "example": "Mr. Fingers - Can You Feel It",
                         "spotify_track_id": "4mNwbj8hTUjbyZSHdQVIuL",
+                        "key_artists": [
+                            {
+                                "name": "Phuture",
+                                "url": "https://open.spotify.com/artist/7AGSJihqYPhYy5QzMcwcQT"
+                            },
+                            {
+                                "name": "DJ Pierre",
+                                "url": "https://open.spotify.com/artist/58nnSR1lwvcuklbb3Uc6TU"
+                            },
+                            {
+                                "name": "Adonis",
+                                "url": "https://open.spotify.com/artist/4AU8MXMTLFqxExYCmiKT6n"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Acid_house"
                     },
                     {
@@ -851,6 +991,20 @@
                         "description": "Acid Breaks combines the squelchy, psychedelic basslines of acid techno with the syncopated rhythms of breakbeat, resulting in a dynamic, groove-heavy sound. This subgenre is characterized by the signature 303 acid lines layered over broken beats, creating an energetic, fast-paced feel that blends acid’s hypnotic quality with the punch and drive of breakbeat. The fusion of these styles offers a danceable, intense listening experience that captures the raw energy of both genres.",
                         "example": "Josh Wink - Higher State of Consciousness",
                         "spotify_track_id": "5jfn6EruW8gJaVM6dnpCQM",
+                        "key_artists": [
+                            {
+                                "name": "Josh Wink",
+                                "url": "https://open.spotify.com/artist/6DQLkRykAsF6paJnlIMX4H"
+                            },
+                            {
+                                "name": "Überzone",
+                                "url": "https://open.spotify.com/artist/6HG2HjU2Q6ePNE39V71s7G"
+                            },
+                            {
+                                "name": "Meat Katie",
+                                "url": "https://open.spotify.com/artist/7zSXpdg9kFK5XMakPPVQ4a"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Breakbeat#Acid_breaks"
                     },
                     {
@@ -858,6 +1012,20 @@
                         "description": "Acid Trance merges the hypnotic basslines and synths of acid techno with the uplifting, melodic aspects of trance music. The result is a style that combines acid’s psychedelic, swirling sound with trance’s euphoric build-ups and atmospheric elements, often leading to long, immersive tracks designed for dancefloor journeys. Acid trance maintains the signature acid synth lines but layers them with sweeping pads, uplifting melodies, and driving rhythms that create a seamless blend of both genres’ iconic features.",
                         "example": "Astrix - Poison",
                         "spotify_track_id": "23FD4eYjBgeG2L45UAIm8U",
+                        "key_artists": [
+                            {
+                                "name": "Hardfloor",
+                                "url": "https://open.spotify.com/artist/6z9JhbmcTrVKITp9ah4mJk"
+                            },
+                            {
+                                "name": "Art of Trance",
+                                "url": "https://open.spotify.com/artist/42edDgjfmvA5cRKsF1KH5a"
+                            },
+                            {
+                                "name": "Union Jack",
+                                "url": "https://open.spotify.com/artist/2MiaJc5Vbck2Bkkm19eUx0"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Acid_trance"
                     }
                 ]
@@ -867,6 +1035,20 @@
                 "description": "Minimal techno is a subgenre of techno music that focuses on simplicity and subtlety, characterized by repetitive beats, minimalistic arrangements, and a reduced palette of sounds. It emphasizes space and texture, often incorporating sparse melodies and rhythmic variations to create an immersive listening experience, making it popular in both club settings and for home listening.",
                 "example": "Plastikman - Spastik",
                 "spotify_track_id": "553HOkDZQktOEBKvxTBPS1",
+                "key_artists": [
+                    {
+                        "name": "Robert Hood",
+                        "url": "https://open.spotify.com/artist/5ipQlfnpRCtyOuhYqvPvQ8"
+                    },
+                    {
+                        "name": "Richie Hawtin",
+                        "url": "https://open.spotify.com/artist/3AhwIUus3pIaA3CvYBEtpy"
+                    },
+                    {
+                        "name": "Plastikman",
+                        "url": "https://open.spotify.com/artist/7GoFQNOTX0suC6Tn59qx8n"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Minimal_techno",
                 "substyles": [
                     {
@@ -874,25 +1056,81 @@
                         "description": "Microhouse is a minimalist subgenre of techno and house music, characterized by its subtle, intricate rhythms and sparse, refined soundscapes. It focuses on fine details and delicate textures, often incorporating faint clicks, glitches, and micro-samples that give it a distinctive, almost understated groove. With a focus on minimalism, microhouse strips down the composition to essential elements, creating a hypnotic effect through repetition and subtle changes. This style thrives on the nuances within each beat and sound, offering an intimate, refined listening experience that is as immersive as it is understated.",
                         "example": "Ricardo Villalobos - Easy Lee",
                         "spotify_track_id": "0GKKjmdefyDJT1RQ9Mx0rA",
+                        "key_artists": [
+                            {
+                                "name": "Ricardo Villalobos",
+                                "url": "https://open.spotify.com/artist/0s2YIpNnjdf0FY4tNrF8Y4"
+                            },
+                            {
+                                "name": "Akufen",
+                                "url": "https://open.spotify.com/artist/3sGo1fGde8kx9sFUu8TZb4"
+                            },
+                            {
+                                "name": "Luomo",
+                                "url": "https://open.spotify.com/artist/1eDJci45Pb42HLWeYP5SSF"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Microhouse"
                     },
                     {
                         "name": "Deep Techno",
                         "description": "Deep Techno is a subgenre of techno that emphasizes a more atmospheric and introspective approach to the traditional techno sound. It blends the repetitive, hypnotic rhythms of techno with deep basslines, spacious, ambient soundscapes, and subtle, evolving textures. The genre is typically slower and more minimal, with a focus on creating a smooth, immersive atmosphere rather than high-energy beats. Deep techno often uses reverb, delay, and atmospheric effects to evoke a sense of space and mood, making it suitable for both the dancefloor and reflective listening. It prioritizes mood and depth, offering a more meditative or groovy experience compared to other more intense or aggressive techno subgenres.",
                         "example": "Deepbass - Les Planes",
-                        "spotify_track_id": "6evJpAEl3mQs8EnZPMvumL"
+                        "spotify_track_id": "6evJpAEl3mQs8EnZPMvumL",
+                        "key_artists": [
+                            {
+                                "name": "Deepbass",
+                                "url": "https://open.spotify.com/artist/4JBXPj21sTqOZvgQurUJoP"
+                            },
+                            {
+                                "name": "Ness",
+                                "url": "https://open.spotify.com/artist/7pwufEBGfggjoI8twqlsmQ"
+                            },
+                            {
+                                "name": "Claudio PRC",
+                                "url": "https://open.spotify.com/artist/5qbXOiqkhAk2GEvpkma7xj"
+                            }
+                        ]
                     },
                     {
                         "name": "Click Techno",
                         "description": "Click Techno is a minimal subgenre of techno that focuses on highly detailed, percussive rhythms, often featuring sharp, 'clicking' sounds, subtle glitches, and mechanical noises as the primary elements of the music. The beats are typically sparse, emphasizing texture and intricacy over melody or harmony. This style of techno relies on precision and experimentation with small sonic details, creating a hypnotic, almost tactile listening experience. It is known for its clean, mechanical aesthetic, where the emphasis is placed on the micro-level manipulation of sound, rather than big, sweeping arrangements. The result is a minimal, but rhythmically engaging sound that can be both challenging and immersive.",
                         "example": "Thomas Brinkmann - Walk With Me",
-                        "spotify_track_id": "5d3pcpimwrVpSc4uXtDKMW"
+                        "spotify_track_id": "5d3pcpimwrVpSc4uXtDKMW",
+                        "key_artists": [
+                            {
+                                "name": "Alva Noto",
+                                "url": "https://open.spotify.com/artist/1zrqDVuh55auIRthalFdXp"
+                            },
+                            {
+                                "name": "Byetone",
+                                "url": "https://open.spotify.com/artist/6ysohaI3qDxQ5qDVAq7Vbd"
+                            },
+                            {
+                                "name": "Frank Bretschneider",
+                                "url": "https://open.spotify.com/artist/7pCGLXLzwdujGNOSvZrDq8"
+                            }
+                        ]
                     },
                     {
                         "name": "Dub Techno",
                         "description": "A subgenre of techno music that blends the rhythmic and atmospheric elements of dub music with the minimalistic and repetitive structures of techno. It is characterized by deep, spacious soundscapes, heavy use of reverb and echo, and a focus on bass and rhythm. Dub techno often creates an immersive, hypnotic experience, making it popular in both dance clubs and ambient listening environments.",
                         "example": "Basic Channel - Quadrant Dub",
                         "spotify_track_id": "0dC0x8MaaASf0zenCVA4zc",
+                        "key_artists": [
+                            {
+                                "name": "Basic Channel",
+                                "url": "https://open.spotify.com/artist/37um1uxI92g4ll61LzrtB5"
+                            },
+                            {
+                                "name": "Deepchord",
+                                "url": "https://open.spotify.com/artist/45g23Apmqo2x4obM7LjmpW"
+                            },
+                            {
+                                "name": "Rhythm & Sound",
+                                "url": "https://open.spotify.com/artist/5e5DeHuHjgcj0DbdrdYKMo"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Dub_techno"
                     }
                 ]
@@ -901,44 +1139,142 @@
                 "name": "Melodic Techno",
                 "description": "Melodic techno is a subgenre of techno that emphasizes atmospheric soundscapes, emotional melodies, and a driving 4/4 beat. Unlike more industrial or minimal techno, it focuses on minor-chord progressions, arpeggiated synths, and cinematic builds that create a sense of tension and release. Emerging as a dominant global festival sound in the late 2010s and early 2020s (heavily associated with labels like Afterlife), it bridges the gap between the hypnotic repetition of techno and the emotional depth of progressive house and trance.",
                 "example": "ARTBAT - Horizon",
-                "spotify_track_id": "7Mqdzo9NcZLUwTAoyV2AeE"
+                "spotify_track_id": "7Mqdzo9NcZLUwTAoyV2AeE",
+                "key_artists": [
+                    {
+                        "name": "Tale Of Us",
+                        "url": "https://open.spotify.com/artist/1UL813H5aj3e8ekE5RqWqc"
+                    },
+                    {
+                        "name": "ARTBAT",
+                        "url": "https://open.spotify.com/artist/3BkRu2TGd2I1uBxZKddfg1"
+                    },
+                    {
+                        "name": "Mind Against",
+                        "url": "https://open.spotify.com/artist/48LWLoeY0dhwaiX1FRsn72"
+                    }
+                ]
             },
             {
                 "name": "Hard Techno",
                 "description": "Hard techno is a subgenre of techno music that emphasizes aggressive beats, fast tempos, and heavy basslines, often featuring a driving 4/4 rhythm. It is characterized by its intensity and energy, incorporating elements of industrial and hardcore music, and often includes distorted kicks and synthesized sounds. Hard techno is designed for high-energy dance floors, making it a staple in underground club scenes and raves.",
                 "example": "D.A.V.E. The Drummer - Hydraulix",
                 "spotify_track_id": "2fxNkT1PUocRFT2BwyRolp",
+                "key_artists": [
+                    {
+                        "name": "Chris Liebing",
+                        "url": "https://open.spotify.com/artist/21444lX8gpmOX36icLmbFI"
+                    },
+                    {
+                        "name": "DJ Rush",
+                        "url": "https://open.spotify.com/artist/6gBmUpKvNYtnQTSLK5vwS5"
+                    },
+                    {
+                        "name": "Paula Temple",
+                        "url": "https://open.spotify.com/artist/4iy2RFU8gIpXF5yaK0l8ZT"
+                    }
+                ],
                 "substyles": [
                     {
                         "name": "Hard Acid",
                         "description": "Hard Acid is a subgenre of acid techno that amplifies the intense, squelchy sounds of the classic 303 bassline, pushing them to more aggressive and distorted extremes. It features fast tempos, heavy bass, and sharp, acidic synthesizer lines that are often manipulated and modulated for a raw, abrasive sound. The genre retains the trippy, hypnotic qualities of acid techno but adds a darker, more industrial edge with harder, punchier kicks and more intense sound design. Hard acid is focused on creating a relentless, high-energy atmosphere that appeals to those who enjoy intense, gritty acid sounds with a driving, hard-hitting rhythm.",
                         "example": "Phuture - Acid Trax",
-                        "spotify_track_id": "5j72kVstS2gHKl8zWJDNz0"
+                        "spotify_track_id": "5j72kVstS2gHKl8zWJDNz0",
+                        "key_artists": [
+                            {
+                                "name": "A*S*Y*S",
+                                "url": "https://open.spotify.com/artist/4xfA60YoR4UbBxuOn9WXJq"
+                            },
+                            {
+                                "name": "Kai Tracid",
+                                "url": "https://open.spotify.com/artist/0frSMmZSEdr8pVRi8PBSwF"
+                            },
+                            {
+                                "name": "Thomas P. Heckmann",
+                                "url": "https://open.spotify.com/artist/4QLCqJ3RSF3y6DdvboPk9m"
+                            }
+                        ]
                     },
                     {
                         "name": "Industrial Techno",
                         "description": "Industrial Techno blends the mechanical, harsh sounds of industrial music with the repetitive rhythms of techno. It is characterized by abrasive, distorted kicks, metallic percussion, and dark, atmospheric elements that create a sense of tension and power. Industrial techno often incorporates noisy, experimental textures, broken beats, and dystopian soundscapes, creating an intense and unsettling atmosphere. The genre emphasizes a raw, underground aesthetic, and while it shares techno’s focus on rhythm and movement, industrial techno adds an abrasive, industrial quality that sets it apart, often making it suited for darker, more intense dancefloor environments.",
                         "example": "Karl O Connor & Peter Sutton - Join Us In Paradise",
                         "spotify_track_id": "7qrl3pKShTMOVq3pQqVLnQ",
+                        "key_artists": [
+                            {
+                                "name": "Surgeon",
+                                "url": "https://open.spotify.com/artist/1PSylklb2w06BAAHEtepqM"
+                            },
+                            {
+                                "name": "Regis",
+                                "url": "https://open.spotify.com/artist/4erwZm1JybuSPTUg5Bu7nT"
+                            },
+                            {
+                                "name": "British Murder Boys",
+                                "url": "https://open.spotify.com/artist/2GHvHovCwFqoSUmIR8l16q"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Industrial_techno"
                     },
                     {
                         "name": "Schranz",
                         "description": "Schranz is a hard, industrial-influenced subgenre of techno that emerged in the late 1990s. It is characterized by its fast tempo, aggressive, pounding basslines, and a raw, unpolished sound. Schranz often features distorted, repetitive kick drums and abrasive, metallic textures, creating an intense, driving rhythm that’s designed to dominate the dancefloor. The genre focuses on power and energy, with a focus on minimal but powerful elements like distorted percussion and industrial-style sound design. It tends to be more abrasive and less melodic than other forms of techno, with an emphasis on heavy, relentless beats and harsh soundscapes.",
                         "example": "Chris Liebing & Andre Walter - Random Process",
-                        "spotify_track_id": "2bgZSsep97so4m8k2d5OEj"
+                        "spotify_track_id": "2bgZSsep97so4m8k2d5OEj",
+                        "key_artists": [
+                            {
+                                "name": "Chris Liebing",
+                                "url": "https://open.spotify.com/artist/21444lX8gpmOX36icLmbFI"
+                            },
+                            {
+                                "name": "DJ Amok",
+                                "url": "https://open.spotify.com/artist/6EshwNgQNDbzyQlUXawA52"
+                            },
+                            {
+                                "name": "Arkus P.",
+                                "url": "https://open.spotify.com/artist/2QX0SpKMsDrLa2qM15KcDf"
+                            }
+                        ]
                     },
                     {
                         "name": "Hardcore",
                         "description": "Hardcore techno is an extremely fast and aggressive genre of electronic music that evolved from techno in the early 1990s. It is characterized by its high tempos (often exceeding 160 BPM), heavily distorted kicks, and chaotic sound. The genre often incorporates industrial and punk influences, resulting in a raw and rebellious aesthetic. Hardcore techno is popular in underground rave scenes and is known for its intense energy.",
                         "example": "Angerfist - Creed of Chaos",
                         "spotify_track_id": "0rDR1WfdS2BAAMXEBPSXFt",
+                        "key_artists": [
+                            {
+                                "name": "Angerfist",
+                                "url": "https://open.spotify.com/artist/4sQNUQjOYj9rV2sdfJ8laS"
+                            },
+                            {
+                                "name": "Miss K8",
+                                "url": "https://open.spotify.com/artist/776uRsooWrGiVZkVWtvfgO"
+                            },
+                            {
+                                "name": "Tha Playah",
+                                "url": "https://open.spotify.com/artist/6MUXMQLSPFynFBwF2Qz2CU"
+                            }
+                        ],
                         "substyles": [
                             {
                                 "name": "Gabber",
                                 "description": "Gabber is a subgenre of hardcore techno that originated in the Netherlands in the early 1990s, known for its extremely fast tempos, aggressive distorted kicks, and harsh, brutal sound. It is one of the most extreme forms of dance music, often associated with rave culture and underground parties. The style's name comes from a Dutch slang word meaning 'mate' or 'buddy.'",
                                 "example": "Neophyte - Army Of Hardcore",
                                 "spotify_track_id": "7CymnEV7bWx8eVt1CwdBeN",
+                                "key_artists": [
+                                    {
+                                        "name": "Neophyte",
+                                        "url": "https://open.spotify.com/artist/2AfGElfjqXuSyUny7dsj9p"
+                                    },
+                                    {
+                                        "name": "Rotterdam Terror Corps",
+                                        "url": "https://open.spotify.com/artist/5vivlUC65oZCNqFxTue8rM"
+                                    },
+                                    {
+                                        "name": "The Stunned Guys",
+                                        "url": "https://open.spotify.com/artist/65T2gXuk9TCJk0kuMubwXH"
+                                    }
+                                ],
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/Gabber"
                             },
                             {
@@ -946,6 +1282,20 @@
                                 "description": "Happy Hardcore is a high-tempo, euphoric subgenre of hardcore techno that emerged in the early-to-mid 1990s. It is characterized by very fast BPMs (typically 160–180), driving 4/4 beats or breakbeats, and a focus on uplifting piano riffs, catchy melodies, and high-pitched 'chipmunk' vocal samples. Unlike its darker counterparts like Gabber or Industrial Hardcore, Happy Hardcore emphasizes a festive, positive atmosphere, often associated with the colorful 'kandi' rave culture. It bridges the gap between early breakbeat rave and modern hard dance music.",
                                 "example": "DJ Paul Elstak - Luv U More",
                                 "spotify_track_id": "5WfL4VVFQaHhjkNowXoZSZ",
+                                "key_artists": [
+                                    {
+                                        "name": "Scott Brown",
+                                        "url": "https://open.spotify.com/artist/6gaPx3AryG77284T2ZvELv"
+                                    },
+                                    {
+                                        "name": "Hixxy",
+                                        "url": "https://open.spotify.com/artist/79PC6rrXA39xOdNTf71dvN"
+                                    },
+                                    {
+                                        "name": "Darren Styles",
+                                        "url": "https://open.spotify.com/artist/2gZzTzeACSwFqkMroVxmnm"
+                                    }
+                                ],
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/Happy_hardcore"
                             },
                             {
@@ -953,25 +1303,81 @@
                                 "description": "Speedcore is an ultra-fast and extreme subgenre of hardcore techno, characterized by its high BPMs (often exceeding 250 BPM), distorted kicks, and frenetic, chaotic sound. It often incorporates elements of industrial music and noise, making it one of the most aggressive forms of electronic music. Speedcore is popular in niche underground scenes and is known for pushing the limits of intensity.",
                                 "example": "Delta 9 - No More Regrets",
                                 "spotify_track_id": "01dOs9h8UbQY0EB9nIXHSf",
+                                "key_artists": [
+                                    {
+                                        "name": "M1dy",
+                                        "url": "https://open.spotify.com/artist/4L3O1fDeNi8btq5uOB6NyP"
+                                    },
+                                    {
+                                        "name": "Kobaryo",
+                                        "url": "https://open.spotify.com/artist/1Y81Ch90opScfpMfN17lZb"
+                                    },
+                                    {
+                                        "name": "t+pHzolacom",
+                                        "url": "https://open.spotify.com/artist/"
+                                    }
+                                ],
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/Speedcore"
                             },
                             {
                                 "name": "Terrorcore",
                                 "description": "A darker and more extreme form of hardcore techno, often featuring gruesome or horror-themed samples. Terrorcore emphasizes speed and aggression, with a focus on chaotic, distorted beats.",
                                 "example": "Noisekick - Big Bad Wolf",
-                                "spotify_track_id": "0317SNNZHrRUxgSTNEanyw"
+                                "spotify_track_id": "0317SNNZHrRUxgSTNEanyw",
+                                "key_artists": [
+                                    {
+                                        "name": "Noisekick",
+                                        "url": "https://open.spotify.com/artist/7rJ5z48nX1gnrxnh0E7lUM"
+                                    },
+                                    {
+                                        "name": "SRB",
+                                        "url": "https://open.spotify.com/artist/2YpGgE9L27FaIaKXraNdcw"
+                                    },
+                                    {
+                                        "name": "Drokz",
+                                        "url": "https://open.spotify.com/artist/2RoJa2qF4fdyhBkVcl5pNi"
+                                    }
+                                ]
                             },
                             {
                                 "name": "Industrial Hardcore",
                                 "description": "A fusion of hardcore techno and industrial music, characterized by its use of distorted sounds, mechanical rhythms, and a darker atmosphere. Industrial hardcore often incorporates elements of noise music and is known for its raw, gritty sound.",
                                 "example": "Miss K8 & Noize Suppressor - Slam",
-                                "spotify_track_id": "6Q9a3iV2heYCzhR099LjZV"
+                                "spotify_track_id": "6Q9a3iV2heYCzhR099LjZV",
+                                "key_artists": [
+                                    {
+                                        "name": "The Outside Agency",
+                                        "url": "https://open.spotify.com/artist/4Gh02gVaInzoBvqEnJFQDS"
+                                    },
+                                    {
+                                        "name": "Ophidian",
+                                        "url": "https://open.spotify.com/artist/1LgLuJSqAJJ6v5RCvjUiQh"
+                                    },
+                                    {
+                                        "name": "Promo",
+                                        "url": "https://open.spotify.com/artist/6CG5i0dfyqWIOrqFY60ooq"
+                                    }
+                                ]
                             },
                             {
                                 "name": "Frenchcore",
                                 "description": "A subgenre of hardcore techno that originated in France, characterized by its fast tempos, bouncy rhythms, and use of melodic elements. Frenchcore often blends hardcore's intensity with a more playful, upbeat vibe.",
                                 "example": "Dr. Peacock - Trip to Ireland",
                                 "spotify_track_id": "6u8pHCsBSo1rahkWXUxPzW",
+                                "key_artists": [
+                                    {
+                                        "name": "Dr. Peacock",
+                                        "url": "https://open.spotify.com/artist/4RbUYWWjEBb4umwqakOEd3"
+                                    },
+                                    {
+                                        "name": "Sefa",
+                                        "url": "https://open.spotify.com/artist/0caJEGgVuXuSHhhrMCmlkI"
+                                    },
+                                    {
+                                        "name": "Radium",
+                                        "url": "https://open.spotify.com/artist/5YG7cC1VX7Nh7AjUOf6PcG"
+                                    }
+                                ],
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/Frenchcore"
                             },
                             {
@@ -979,13 +1385,41 @@
                                 "description": "Makina is a Spanish subgenre of hardcore techno, primarily originating from the rave scenes of Valencia and Barcelona in the 1990s. It is known for its fast BPM, energetic beats, and an uplifting, melodic tone, often incorporating elements from trance and eurodance. Makina is popular in Spain and is characterized by its fast, upbeat rhythms and anthemic melodies.",
                                 "example": "Pont Aeri - Flying Free",
                                 "spotify_track_id": "5yqiverYlKEA0ly96HPq01",
+                                "key_artists": [
+                                    {
+                                        "name": "Pastis & Buenri",
+                                        "url": "https://open.spotify.com/artist/2XtrsBob50yrdPKaWPJI9E"
+                                    },
+                                    {
+                                        "name": "Skudero",
+                                        "url": "https://open.spotify.com/artist/3gg56YoTajme7BQ7yhrZDZ"
+                                    },
+                                    {
+                                        "name": "Xavi Metralla",
+                                        "url": "https://open.spotify.com/artist/4USF2ItKXwKCRzEqZJDUCA"
+                                    }
+                                ],
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/M%C3%A1kina"
                             },
                             {
                                 "name": "Bakalao",
                                 "description": "Bakalao is a Spanish electronic music style that emerged in the 1980s in Valencia, known for its underground, rebellious vibe. It incorporates elements of electronic body music (EBM), industrial, and techno, and is characterized by its dark, hypnotic sound, driving basslines, and raw energy. Bakalao is associated with the underground club scene in Spain, especially the iconic Ruta del Bakalao.",
                                 "example": "Megabeat - Es Imposible, No Puede Ser",
-                                "spotify_track_id": "1KYnJzAnz5p2ztWgesXPFQ"
+                                "spotify_track_id": "1KYnJzAnz5p2ztWgesXPFQ",
+                                "key_artists": [
+                                    {
+                                        "name": "Chimo Bayo",
+                                        "url": "https://open.spotify.com/artist/5v8i5bIYoqGgrh9SLpclfd"
+                                    },
+                                    {
+                                        "name": "Paco Pil",
+                                        "url": "https://open.spotify.com/artist/2IVjh9o0Ai3S80lYqkBbWD"
+                                    },
+                                    {
+                                        "name": "Megabeat",
+                                        "url": "https://open.spotify.com/artist/1NmMmiKVXlxwjebU45CKXr"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -996,12 +1430,40 @@
                 "description": "Peak Time / Driving Techno is a high-impact, festival-ready subgenre of techno tailored for the most energetic hours of a club night or festival. Characterized by powerful, punchy 4/4 kick drums and hypnotic rolling basslines, it typically operates between 128 and 135 BPM. The genre emphasizes 'driving' momentum, utilizing long buildups, industrial percussion hits, and atmospheric risers to create intense tension-and-release structures. While functionally designed for the dancefloor, it often incorporates melodic or acidic stabs, making it the dominant 'big room' sound of modern techno. Influential figures include Adam Beyer, Charlotte de Witte, and Enrico Sangiuliano.",
                 "example": "Age Of Love - The Age Of Love (Charlotte de Witte & Enrico Sangiuliano Remix)",
                 "spotify_track_id": "6R84ZlQF7gGkPB6o3GLZXB",
+                "key_artists": [
+                    {
+                        "name": "Adam Beyer",
+                        "url": "https://open.spotify.com/artist/1btv9qmIpbp7q1ixCYNdHu"
+                    },
+                    {
+                        "name": "Amelie Lens",
+                        "url": "https://open.spotify.com/artist/5Ho1vKl1Uz8bJlk4vbmvmf"
+                    },
+                    {
+                        "name": "Charlotte de Witte",
+                        "url": "https://open.spotify.com/artist/1lJhME1ZpzsEa5M0wW6Mso"
+                    }
+                ],
                 "substyles": [
                     {
                         "name": "Hardgroove",
                         "description": "A rhythmic and percussive substyle of techno that focuses on tribal loops and fast, syncopated drum patterns rather than heavy melodies, providing a relentless and funkier 'groove' for the dancefloor.",
                         "example": "Ben Sims - Carnival Part 1",
-                        "spotify_track_id": "6qakfXKrAvGmSYMQUzFmYH"
+                        "spotify_track_id": "6qakfXKrAvGmSYMQUzFmYH",
+                        "key_artists": [
+                            {
+                                "name": "Ben Sims",
+                                "url": "https://open.spotify.com/artist/5wW4dvR027rdRFG0mtvckt"
+                            },
+                            {
+                                "name": "Mark Broom",
+                                "url": "https://open.spotify.com/artist/56HBXB2JoYhf04oMeko90l"
+                            },
+                            {
+                                "name": "Sims",
+                                "url": "https://open.spotify.com/artist/0GOx72r5AAEKRGQFn3xqXK"
+                            }
+                        ]
                     }
                 ]
             }
@@ -1012,6 +1474,20 @@
         "description": "Electro, short for electro-funk, is a genre of electronic music that emerged in the early 1980s, directly influencing the development of techno, house, and Miami bass. Its signature sound is defined by the use of the Roland TR-808 drum machine, which provides its distinct, syncopated, and often sparse drum patterns, breaking away from the steady four-on-the-floor beat of disco. Fusing the rhythmic sensibilities of funk with futuristic, synthesized sounds and often vocoded or robotic vocals, electro creates a sound that is both groovy and mechanical. Pioneered by artists like Afrika Bambaataa & The Soulsonic Force with 'Planet Rock,' it established a blueprint for rhythm-focused electronic music built on technology and a sci-fi aesthetic.",
         "example": "Kraftwerk - The Model",
         "spotify_track_id": "7G3zERqh2d2tij0pVQfohU",
+        "key_artists": [
+            {
+                "name": "Afrika Bambaataa",
+                "url": "https://open.spotify.com/artist/7cg61q8kK8jlFi8TKKw70p"
+            },
+            {
+                "name": "Kraftwerk",
+                "url": "https://open.spotify.com/artist/0dmPX6ovclgOy8WWJaFEUU"
+            },
+            {
+                "name": "Cybotron",
+                "url": "https://open.spotify.com/artist/5Mr6zawZ90BzjY14EROmSm"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/Electro_(music)",
         "substyles": [
             {
@@ -1019,25 +1495,81 @@
                 "description": "A fusion of electro, punk, and synthpop, often with a retro, underground aesthetic, characterized by aggressive, danceable beats, distorted vocals, and a rebellious attitude. Electroclash emerged in the late 1990s and early 2000s, creating a unique blend of electronic and alternative music styles.",
                 "example": "Fischerspooner - Emerge",
                 "spotify_track_id": "3vyKSb9sAdXl0kQ1KnS9fY",
+                "key_artists": [
+                    {
+                        "name": "Fischerspooner",
+                        "url": "https://open.spotify.com/artist/5R7K1GezC0jy24v1R2n4x3"
+                    },
+                    {
+                        "name": "Miss Kittin",
+                        "url": "https://open.spotify.com/artist/3QhNv79NoIvarU6N57GBzL"
+                    },
+                    {
+                        "name": "Peaches",
+                        "url": "https://open.spotify.com/artist/1gkSl4XpHIHI4I1WQbfXOE"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Electroclash"
             },
             {
                 "name": "Space Electro",
                 "description": "A futuristic subgenre of Electro that emphasizes atmospheric, space-like soundscapes, often inspired by science fiction and cosmic themes. It blends the classic electro sound with spacey synthesizers and ambient textures, creating a unique, futuristic sonic experience.",
                 "example": "Drexciya - Wavejumper",
-                "spotify_track_id": "3zDSNlxD62sMA7ymMy5SPM"
+                "spotify_track_id": "3zDSNlxD62sMA7ymMy5SPM",
+                "key_artists": [
+                    {
+                        "name": "Drexciya",
+                        "url": "https://open.spotify.com/artist/3KcV1kKG7Y0Gq7xPAGVjkZ"
+                    },
+                    {
+                        "name": "Dopplereffekt",
+                        "url": "https://open.spotify.com/artist/2w3mvReNNIQ7S44MAr89zu"
+                    },
+                    {
+                        "name": "I-f",
+                        "url": "https://open.spotify.com/artist/4JEj4gtpwF2dnnBZuNwpwT"
+                    }
+                ]
             },
             {
                 "name": "Electrofunk",
                 "description": "A blend of electro and funk music, characterized by the use of drum machines, synthesizers, and funky basslines, often featuring a high-energy and danceable feel. Electrofunk draws inspiration from both classic funk and electronic music, creating a groove-driven and futuristic sound.",
                 "example": "Zapp - More Bounce to the Ounce",
                 "spotify_track_id": "3Ho35OJixLg20qshXRgfBs",
+                "key_artists": [
+                    {
+                        "name": "Zapp",
+                        "url": "https://open.spotify.com/artist/6ra4GIOgCZQZMOaUECftGN"
+                    },
+                    {
+                        "name": "Chromeo",
+                        "url": "https://open.spotify.com/artist/2mV8aJphiSHYJf43DxL7Gt"
+                    },
+                    {
+                        "name": "Midnight Star",
+                        "url": "https://open.spotify.com/artist/0KMLfCXYb3Dhf1hLpu8cVd"
+                    }
+                ],
                 "substyles": [
                     {
                         "name": "Boogie",
                         "description": "A genre that fuses funk, R&B, and disco with electronic elements, characterized by smooth melodies, syncopated rhythms, and a danceable groove.",
                         "example": "D-Train - You're the One for Me",
-                        "spotify_track_id": "3BneMfYdo9X8m90BRhMzSL"
+                        "spotify_track_id": "3BneMfYdo9X8m90BRhMzSL",
+                        "key_artists": [
+                            {
+                                "name": "D-Train",
+                                "url": "https://open.spotify.com/artist/4gQEXxzqwNmQwjU0Wc0Ioe"
+                            },
+                            {
+                                "name": "The Whispers",
+                                "url": "https://open.spotify.com/artist/2XzHxDFTNywDd5ReMhgxkg"
+                            },
+                            {
+                                "name": "Kashif",
+                                "url": "https://open.spotify.com/artist/135Rv69sEKYSUfBBaI7i3M"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1046,19 +1578,61 @@
                 "description": "Emerging from Miami in the 1980s, it blends hip-hop’s rhythmic vocal delivery with electro’s synthesized beats and electronic bass lines. The genre is marked by its deep, booming 808 bass, fast-paced rhythms, and party-centric themes, making it a staple in dance clubs and car audio culture. It has been especially influential in the evolution of Southern hip-hop and bass music.",
                 "example": "2 Live Crew - Me So Horny",
                 "spotify_track_id": "3EgvmOhP3NQUHY7d6PDOUg",
+                "key_artists": [
+                    {
+                        "name": "2 Live Crew",
+                        "url": "https://open.spotify.com/artist/58Dx4HPzeOO3dbpD9YYEes"
+                    },
+                    {
+                        "name": "Sir Mix-A-Lot",
+                        "url": "https://open.spotify.com/artist/3TQ9JTBI2n2hfo7aRONEYV"
+                    },
+                    {
+                        "name": "DJ Magic Mike",
+                        "url": "https://open.spotify.com/artist/6hxlIANxRjG8mQTcR8evvP"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Miami_bass",
                 "substyles": [
                     {
                         "name": "Electro Bass",
                         "description": "Electro Bass is a subgenre of electronic music that combines elements of electro, bass music, and funk. It is characterized by heavy, syncopated basslines, electronic beats, and a strong emphasis on rhythm and groove. The bass often has a deep, vibrating quality, with the use of analog or synthesized sounds that give it a punchy, energetic feel. Electro bass incorporates futuristic, robotic soundscapes and glitchy effects, while often maintaining a danceable, club-ready rhythm. It draws influences from early electro, Miami bass, and other bass-heavy genres, creating an intense, high-energy sound that is both rhythmic and experimental.",
                         "example": "Aux 88 - Aux Mind 2005",
-                        "spotify_track_id": "0E9cDp51EzFZAlTk5kasvX"
+                        "spotify_track_id": "0E9cDp51EzFZAlTk5kasvX",
+                        "key_artists": [
+                            {
+                                "name": "Aux 88",
+                                "url": "https://open.spotify.com/artist/3UYegZ6o9aaL2UCOQeoAgI"
+                            },
+                            {
+                                "name": "Dynamix II",
+                                "url": "https://open.spotify.com/artist/1COQq82EhXTBcIc69FhE1T"
+                            },
+                            {
+                                "name": "Egyptian Lover",
+                                "url": "https://open.spotify.com/artist/6GGVr7WgIWhsnJNdGyPklP"
+                            }
+                        ]
                     },
                     {
                         "name": "Ghetto Bass",
                         "description": "Ghetto Bass is a subgenre of bass music that originated in urban and underground scenes, characterized by its heavily syncopated, low-frequency basslines and hip-hop-inspired rhythms. It incorporates elements from genres like Miami bass, electro, and hip-hop, but with a focus on raw, unpolished, and gritty sound. The bass is often deep and distorted, with rhythms that are designed to be energetic and heavy, while the production tends to have a rough, underground quality. Ghetto bass often incorporates samples, vocal chops, and beats that give it a street-level, dancefloor-oriented vibe, blending electronic music with hip-hop’s swagger and attitude.",
                         "example": "DJ Assault - Ass N Titties",
-                        "spotify_track_id": "5y1OahNB1xZWNEWB6zgWzf"
+                        "spotify_track_id": "5y1OahNB1xZWNEWB6zgWzf",
+                        "key_artists": [
+                            {
+                                "name": "DJ Assault",
+                                "url": "https://open.spotify.com/artist/3yoyUFgb11DMp1KrsJoQZU"
+                            },
+                            {
+                                "name": "Godfather",
+                                "url": "https://open.spotify.com/artist/3Gf6z7kuVRjZ2e3W2cxoXN"
+                            },
+                            {
+                                "name": "DJ Funk",
+                                "url": "https://open.spotify.com/artist/6M0FCfVRUo5DUuziqLFjJ0"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1066,19 +1640,61 @@
                 "name": "French Electro",
                 "description": "A subgenre of electro that emerged in France in the late 1980s and early 1990s, characterized by its minimalist approach, repetitive rhythms, and use of synthesizers to create a hypnotic and atmospheric sound. French electro often features a darker, more industrial feel than traditional electro, exploring a minimalist and experimental approach to electronic music.",
                 "example": "Air - La Femme D'Argent",
-                "spotify_track_id": "3ZzhV6JIDKWvWR7wiKWD0C"
+                "spotify_track_id": "3ZzhV6JIDKWvWR7wiKWD0C",
+                "key_artists": [
+                    {
+                        "name": "Air",
+                        "url": "https://open.spotify.com/artist/1wKDGglKV4FsFS85r2Dmpr"
+                    },
+                    {
+                        "name": "Daft Punk",
+                        "url": "https://open.spotify.com/artist/4tZwfgrHOc3mvqYlEYSvVi"
+                    },
+                    {
+                        "name": "Justice",
+                        "url": "https://open.spotify.com/artist/1gR0gsQYfi6joyO1dlp76N"
+                    }
+                ]
             },
             {
                 "name": "Detroit Electro",
                 "description": "A subgenre of electro that originated in Detroit, known for its raw, energetic sound, often incorporating elements of funk, soul, and techno. Detroit Electro is characterized by its driving rhythms, prominent basslines, and a sense of gritty urban energy.",
                 "example": "Juan Atkins - No UFO's",
-                "spotify_track_id": "1Ro7L7RPp5P8heOfW4EQKA"
+                "spotify_track_id": "1Ro7L7RPp5P8heOfW4EQKA",
+                "key_artists": [
+                    {
+                        "name": "Juan Atkins",
+                        "url": "https://open.spotify.com/artist/208EQzx7RmoE2Ng9gF2edh"
+                    },
+                    {
+                        "name": "Model 500",
+                        "url": "https://open.spotify.com/artist/2Djz8cbEv5rtrYrJYdzQ20"
+                    },
+                    {
+                        "name": "Drexciya",
+                        "url": "https://open.spotify.com/artist/3KcV1kKG7Y0Gq7xPAGVjkZ"
+                    }
+                ]
             },
             {
                 "name": "Industrial Electro",
                 "description": "A blend of electro and industrial music, characterized by harsh, distorted sounds, repetitive rhythms, and a sense of mechanical, often dystopian atmosphere. Industrial Electro incorporates elements of noise music and industrial techno, creating a dark, intense, and experimental sound.",
                 "example": "Front 242 - Headhunter",
                 "spotify_track_id": "3iZIki3LcOtyY3Cg5DEllm",
+                "key_artists": [
+                    {
+                        "name": "Front 242",
+                        "url": "https://open.spotify.com/artist/2tyMOS8xKREgpEwHnLc6EX"
+                    },
+                    {
+                        "name": "Nitzer Ebb",
+                        "url": "https://open.spotify.com/artist/7EnAgffrVyerTWH628TJ6f"
+                    },
+                    {
+                        "name": "Skinny Puppy",
+                        "url": "https://open.spotify.com/artist/5Mu0EMEsUIVE132pNMywns"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Electro-industrial"
             },
             {
@@ -1086,13 +1702,41 @@
                 "description": "A retro-futuristic style of electro music inspired by 1980s synth-pop, film scores, and video game soundtracks, characterized by its use of vintage synthesizers, driving basslines, and a nostalgic, often melancholic atmosphere. Synthwave Electro blends classic electro sounds with a modern production sensibility, creating a retro-futuristic aesthetic.",
                 "example": "Kavinsky - Nightcall",
                 "spotify_track_id": "0U0ldCRmgCqhVvD6ksG63j",
+                "key_artists": [
+                    {
+                        "name": "Kavinsky",
+                        "url": "https://open.spotify.com/artist/0UF7XLthtbSF2Eur7559oV"
+                    },
+                    {
+                        "name": "The Midnight",
+                        "url": "https://open.spotify.com/artist/2NFrAuh8RQdQoS7iYFbckw"
+                    },
+                    {
+                        "name": "Gunship",
+                        "url": "https://open.spotify.com/artist/3PALZKWkpwjRvBsRmhlVSS"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Synthwave"
             },
             {
                 "name": "Dark Electro",
                 "description": "A darker and more atmospheric subgenre of Electro, often characterized by sinister melodies, complex synth work, and a sense of brooding intensity. Dark Electro has a focus on creating unsettling and hypnotic soundscapes, drawing influences from industrial music and gothic themes.",
                 "example": "Hocico - Poltergeist",
-                "spotify_track_id": "41MMt30XQ95J4ynStyRPnM"
+                "spotify_track_id": "41MMt30XQ95J4ynStyRPnM",
+                "key_artists": [
+                    {
+                        "name": "Hocico",
+                        "url": "https://open.spotify.com/artist/5cilSDFcAQcLwh0dNqMhrE"
+                    },
+                    {
+                        "name": "Suicide Commando",
+                        "url": "https://open.spotify.com/artist/4N99bzdRBNRi7hGNCpMuhu"
+                    },
+                    {
+                        "name": "Agonoize",
+                        "url": "https://open.spotify.com/artist/76gauxdapMkInaQG5fl2Xv"
+                    }
+                ]
             }
         ]
     },
@@ -1101,6 +1745,20 @@
         "description": "House music is a genre of electronic dance music that emerged from the underground club scene of Chicago in the early 1980s. Its name is derived from The Warehouse, a club where resident DJ Frankie Knuckles, the 'Godfather of House,' pioneered the sound by mixing disco classics with drum machines and synthesizers. House is defined by its steady 4/4 time signature, a tempo typically between 118-135 BPM, and a prominent bass drum on every beat. It builds upon the soulful, uplifting spirit of disco, often incorporating gospel-inspired vocals, piano riffs, and deep, groovy basslines to create an atmosphere of unity, celebration, and release on the dancefloor. It is the foundational genre for countless styles of electronic music that followed.",
         "example": "Lil' Louis - French Kiss",
         "spotify_track_id": "7hnqJYCKZFW7vMoykaraZG",
+        "key_artists": [
+            {
+                "name": "Frankie Knuckles",
+                "url": "https://open.spotify.com/artist/63yl9nDNrHpiAYGlNJxxjc"
+            },
+            {
+                "name": "Marshall Jefferson",
+                "url": "https://open.spotify.com/artist/2Di8r9df6xjyj6CVOqbGVz"
+            },
+            {
+                "name": "Jesse Saunders",
+                "url": "https://open.spotify.com/artist/1EM7bx5tPeIFJ0yYQ5UyCq"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/House_music",
         "substyles": [
             {
@@ -1108,6 +1766,20 @@
                 "description": "Deep house is a subgenre of house music that emerged in the late 1980s, blending the soulful, disco-infused sound of early Chicago house with the complexities of jazz-funk and a more subdued, atmospheric mood. It is characterized by a slightly slower tempo than classic house, complex chord progressions, lush pads, and a focus on smooth, soulful vocals or instrumental melodies. The sound is often described as sophisticated, hypnotic, and introspective, with deep, rolling basslines that create a warm, immersive experience. Pioneered by artists like Larry Heard (Mr. Fingers), deep house prioritizes mood and musicality, making it suitable for both intimate dancefloors and contemplative listening.",
                 "example": "Larry Heard - Can You Feel It",
                 "spotify_track_id": "3bdcJVeUuAi7Hhkp54YOA9",
+                "key_artists": [
+                    {
+                        "name": "Larry Heard",
+                        "url": "https://open.spotify.com/artist/3j7teie3p6UnbA8nW51Trz"
+                    },
+                    {
+                        "name": "Kerri Chandler",
+                        "url": "https://open.spotify.com/artist/7nqpEU6DCHkNtK1bYsyS3W"
+                    },
+                    {
+                        "name": "Theo Parrish",
+                        "url": "https://open.spotify.com/artist/3qMRvSHJpaRjGDkIeNMoGz"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Deep_house",
                 "substyles": [
                     {
@@ -1115,31 +1787,101 @@
                         "description": "Soulful House blends deep house with soulful vocals and melodies, creating an emotionally charged atmosphere. This substyle emphasizes warmth and human expression, with uplifting or introspective vocal performances layered over deep, rhythmic beats.",
                         "example": "Frankie Knuckles - Your Love",
                         "spotify_track_id": "3LXupNVnKor4LV9rzfYcQX",
+                        "key_artists": [
+                            {
+                                "name": "Masters At Work",
+                                "url": "https://open.spotify.com/artist/5Fkj0k7EPUhIsESSIEA9f1"
+                            },
+                            {
+                                "name": "Louie Vega",
+                                "url": "https://open.spotify.com/artist/5dncbrnveDMX9DgxcedeUg"
+                            },
+                            {
+                                "name": "Blaze",
+                                "url": "https://open.spotify.com/artist/1Dt1UKLtrJIW1xxRBejjos"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Styles_of_house_music"
                     },
                     {
                         "name": "Dub House",
                         "description": "Dub House brings in influences from dub music, characterized by spacious echoes, reverb, and prominent basslines. The rhythm is often more laid-back, with a focus on creating an immersive, atmospheric experience through delay effects and deep, rolling bass.",
                         "example": "Mr. Fingers - Mystery of Love",
-                        "spotify_track_id": "1E8hMeQvfgvQPjN3BZ2viF"
+                        "spotify_track_id": "1E8hMeQvfgvQPjN3BZ2viF",
+                        "key_artists": [
+                            {
+                                "name": "Luomo",
+                                "url": "https://open.spotify.com/artist/1eDJci45Pb42HLWeYP5SSF"
+                            },
+                            {
+                                "name": "Jan Jelinek",
+                                "url": "https://open.spotify.com/artist/6Bpr6Jvb2Ic7WlzPD9EPJT"
+                            },
+                            {
+                                "name": "Andy Stott",
+                                "url": "https://open.spotify.com/artist/6BuDxEE5rfuYeyhxQsl53K"
+                            }
+                        ]
                     },
                     {
                         "name": "Atmospheric House",
                         "description": "Atmospheric House uses lush, ambient pads and ethereal soundscapes to create a dreamy, spacious vibe. The tracks often feature subtle rhythms and are designed to evoke a sense of tranquility and serenity, making them perfect for creating a relaxed, atmospheric setting.",
                         "example": "Lane 8 - Fingerprint",
-                        "spotify_track_id": "1Hy3CoHThqF0NBSmkmeR21"
+                        "spotify_track_id": "1Hy3CoHThqF0NBSmkmeR21",
+                        "key_artists": [
+                            {
+                                "name": "Lane 8",
+                                "url": "https://open.spotify.com/artist/27gtK7m9vYwCyJ04zz0kIb"
+                            },
+                            {
+                                "name": "Yotto",
+                                "url": "https://open.spotify.com/artist/5Dyfxq0ZrFjjeFBdSNxDbo"
+                            },
+                            {
+                                "name": "Tinlicker",
+                                "url": "https://open.spotify.com/artist/5EmEZjq8eHEC6qFnT63Lza"
+                            }
+                        ]
                     },
                     {
                         "name": "Chill House",
                         "description": "Chill House is a laid-back, melodic version of deep house that emphasizes soothing, relaxed rhythms and gentle melodies. It’s designed for casual listening or relaxation, with a smooth, mellow groove that’s easy to listen to in a variety of settings.",
                         "example": "Kygo - Firestone (feat. Conrad Sewell)",
-                        "spotify_track_id": "1I8tHoNBFTuoJAlh4hfVVE"
+                        "spotify_track_id": "1I8tHoNBFTuoJAlh4hfVVE",
+                        "key_artists": [
+                            {
+                                "name": "Miguel Migs",
+                                "url": "https://open.spotify.com/artist/6sqqGHyJ1Dnt1qKKe9iGAi"
+                            },
+                            {
+                                "name": "Kaskade",
+                                "url": "https://open.spotify.com/artist/6TQj5BFPooTa08A7pk8AQ1"
+                            },
+                            {
+                                "name": "Lisa Shaw",
+                                "url": "https://open.spotify.com/artist/36AfPbkMSwrFoWMQ9sUARb"
+                            }
+                        ]
                     },
                     {
                         "name": "Tropical House",
                         "description": "Tropical House is a more upbeat and summery form of deep house, incorporating tropical instruments like marimbas, steel drums, and melodies that evoke a beach or island atmosphere. The sound is bright and catchy, often infused with a light, carefree vibe perfect for warm weather or vacation-like settings.",
                         "example": "Thomas Jack - Rivers (ft. Nico & Vinz)",
                         "spotify_track_id": "3NBDgwEAGMj0aKRsU8zoO9",
+                        "key_artists": [
+                            {
+                                "name": "Kygo",
+                                "url": "https://open.spotify.com/artist/23fqKkggKUBHNkbKtXEls4"
+                            },
+                            {
+                                "name": "Thomas Jack",
+                                "url": "https://open.spotify.com/artist/6JmzdIDSQdeHg0pocIascm"
+                            },
+                            {
+                                "name": "Matoma",
+                                "url": "https://open.spotify.com/artist/4YXycRbyyAE0wozTk7QMEq"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Tropical_house"
                     },
                     {
@@ -1147,6 +1889,20 @@
                         "description": "Amapiano is a subgenre of house music that emerged in South Africa in the mid-2010s. It is a hybrid of deep house, jazz, and lounge music characterized by synths, airy pads, and wide percussive basslines.",
                         "example": "MFR Souls – Love You Tonight",
                         "spotify_track_id": "2NbUnaGrjwRuRjZ5EPyOR5",
+                        "key_artists": [
+                            {
+                                "name": "Kabza De Small",
+                                "url": "https://open.spotify.com/artist/1bNjWBFWsAAzZSR59lRdpR"
+                            },
+                            {
+                                "name": "DJ Maphorisa",
+                                "url": "https://open.spotify.com/artist/0mMqD2uqwvCjFvlzo6ayGi"
+                            },
+                            {
+                                "name": "Major League Djz",
+                                "url": "https://open.spotify.com/artist/0N3AcLTAS3vcx93PxN2Agb"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Amapiano"
                     }
                 ]
@@ -1156,37 +1912,121 @@
                 "description": "Tech-house is a subgenre of electronic dance music that combines elements of techno and house. Known for its deep, driving basslines, steady four-on-the-floor beats, and minimalistic, repetitive melodies, tech-house often features crisp percussion and subtle, atmospheric sounds. It maintains the hypnotic groove of house music while incorporating the more refined, mechanical textures of techno. Emerging in the late 1990s, tech-house has become popular in underground and mainstream clubs alike for its ability to create an immersive, rhythmic experience that keeps dance floors moving for extended sets.",
                 "example": "Armand Van Helden - Give Me Your Loving",
                 "spotify_track_id": "0YHkveF54ugrMrMCjL8yBp",
+                "key_artists": [
+                    {
+                        "name": "Green Velvet",
+                        "url": "https://open.spotify.com/artist/3ABaec4jjl95VqmG1iD4k2"
+                    },
+                    {
+                        "name": "Fisher",
+                        "url": "https://open.spotify.com/artist/1VJ0briNOlXRtJUAzoUJdt"
+                    },
+                    {
+                        "name": "CamelPhat",
+                        "url": "https://open.spotify.com/artist/240wlM8vDrf6S4zCyzGj2W"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Tech_house",
                 "substyles": [
                     {
                         "name": "Minimal Tech House",
                         "description": "Tech house with a minimalist approach, focusing on stripped-back grooves and subtle details.",
                         "example": "Maceo Plex - Conjure Balearia",
-                        "spotify_track_id": "6nNVrATle8kh4x3VbTD0t5"
+                        "spotify_track_id": "6nNVrATle8kh4x3VbTD0t5",
+                        "key_artists": [
+                            {
+                                "name": "Richie Hawtin",
+                                "url": "https://open.spotify.com/artist/3AhwIUus3pIaA3CvYBEtpy"
+                            },
+                            {
+                                "name": "Ricardo Villalobos",
+                                "url": "https://open.spotify.com/artist/0s2YIpNnjdf0FY4tNrF8Y4"
+                            },
+                            {
+                                "name": "Luciano",
+                                "url": "https://open.spotify.com/artist/3CJKkU0XuElRT1z8rEtIYg"
+                            }
+                        ]
                     },
                     {
                         "name": "Funky Tech House",
                         "description": "Tech house with funky basslines and grooves, often incorporating elements of disco and funk.",
                         "example": "DJ Sneak - Untouchable Funk",
-                        "spotify_track_id": "7lrMZnS3UBMpIsdd4ITN59"
+                        "spotify_track_id": "7lrMZnS3UBMpIsdd4ITN59",
+                        "key_artists": [
+                            {
+                                "name": "DJ Sneak",
+                                "url": "https://open.spotify.com/artist/5He9yPmPv0Du9hASUlTUjr"
+                            },
+                            {
+                                "name": "Derrick Carter",
+                                "url": "https://open.spotify.com/artist/3XwBizyFmbCCUFcdcsvMmm"
+                            },
+                            {
+                                "name": "Mark Farina",
+                                "url": "https://open.spotify.com/artist/3Nk2T3DZVBvPRO5BBSrklE"
+                            }
+                        ]
                     },
                     {
                         "name": "Progressive Tech House",
                         "description": "Tech house with a progressive structure, building up tension and releasing it with melodic elements.",
                         "example": "Roger Sanchez- Another Chance",
-                        "spotify_track_id": "08fMRujpKhEDTanKN9l2ud"
+                        "spotify_track_id": "08fMRujpKhEDTanKN9l2ud",
+                        "key_artists": [
+                            {
+                                "name": "Eric Prydz",
+                                "url": "https://open.spotify.com/artist/5sm0jQ1mq0dusiLtDJ2b4R"
+                            },
+                            {
+                                "name": "Cristoph",
+                                "url": "https://open.spotify.com/artist/695W5F2Ih8dYahLdjVOIoH"
+                            },
+                            {
+                                "name": "Jeremy Olander",
+                                "url": "https://open.spotify.com/artist/5vdjF79d5d2m12FOkJhxHB"
+                            }
+                        ]
                     },
                     {
                         "name": "Tribal Tech House",
                         "description": "Tech house with tribal percussion and rhythms, creating a primal and energetic vibe.",
                         "example": "Chus & Ceballos - The Strong Rhythm",
-                        "spotify_track_id": "4OSeai0pTZpadvkk5g3yQi"
+                        "spotify_track_id": "4OSeai0pTZpadvkk5g3yQi",
+                        "key_artists": [
+                            {
+                                "name": "Chus & Ceballos",
+                                "url": "https://open.spotify.com/artist/3m6N2XBSZqfkujRvGYcdi8"
+                            },
+                            {
+                                "name": "Danny Tenaglia",
+                                "url": "https://open.spotify.com/artist/2tG935baRE4mH8B3saiwbm"
+                            },
+                            {
+                                "name": "Steve Lawler",
+                                "url": "https://open.spotify.com/artist/0NDuRCSLSH0Ii5An4U6HME"
+                            }
+                        ]
                     },
                     {
                         "name": "Tech Funk",
                         "description": "A fusion of tech house and funk, featuring funky basslines, groovy rhythms, and soulful vocals.",
                         "example": "Adam Freeland - We Want Your Soul",
-                        "spotify_track_id": "5Wxg8ocgiYkLozRjJhJReM"
+                        "spotify_track_id": "5Wxg8ocgiYkLozRjJhJReM",
+                        "key_artists": [
+                            {
+                                "name": "Meat Katie",
+                                "url": "https://open.spotify.com/artist/7zSXpdg9kFK5XMakPPVQ4a"
+                            },
+                            {
+                                "name": "Elite Force",
+                                "url": "https://open.spotify.com/artist/6ihTqrjBvMSgztCI4BTQCY"
+                            },
+                            {
+                                "name": "Uberzone",
+                                "url": "https://open.spotify.com/artist/6HG2HjU2Q6ePNE39V71s7G"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1195,6 +2035,20 @@
                 "description": "Garage house is a subgenre of house music that originated in the early 1980s in New York City, influenced by the soulful and gospel-inspired sound of disco. Known for its rich, soulful vocals, swing-influenced rhythms, and melodic basslines, garage house emphasizes emotional expression and groove. Its name comes from the legendary New York club Paradise Garage, where DJ Larry Levan helped shape the genre's sound. Garage house has a warm, uplifting vibe, combining deep, resonant bass with smooth, layered instrumentals and vocal harmonies, making it popular both in clubs and among dance music enthusiasts for its soulful, danceable style.",
                 "example": "Masters At Work - I Can't Get No Sleep",
                 "spotify_track_id": "7GGhRv9fDiows4YvP5JTE5",
+                "key_artists": [
+                    {
+                        "name": "Todd Edwards",
+                        "url": "https://open.spotify.com/artist/6MFopqejpmTUUZlcRmGzgg"
+                    },
+                    {
+                        "name": "MJ Cole",
+                        "url": "https://open.spotify.com/artist/49GY4uPAwdlk5lSGtfKWYl"
+                    },
+                    {
+                        "name": "Grant Nelson",
+                        "url": "https://open.spotify.com/artist/6uEi6lYYhf6Fkd40ZVCKqi"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Garage_house",
                 "substyles": [
                     {
@@ -1202,6 +2056,20 @@
                         "description": "UK garage is a genre of electronic dance music that originated in the UK in the early 1990s, evolving from house, garage house, and jungle. Known for its shuffling, syncopated beats, vocal samples, and prominent basslines, UK garage often features chopped-up, pitch-shifted vocal snippets and a 'two-step' rhythm, where the kick drum pattern skips certain beats for a more off-kilter feel. The genre has a distinctively upbeat, bouncy sound and incorporates elements from R&B, hip-hop, and reggae. UK garage gave rise to various subgenres like grime, dubstep, and bassline, influencing the UK dance music scene deeply.",
                         "example": "Artful Dodger - Re-Rewind (feat. Craig David)",
                         "spotify_track_id": "4xXRTJXGxt7UBAVVOTV6ZN",
+                        "key_artists": [
+                            {
+                                "name": "Artful Dodger",
+                                "url": "https://open.spotify.com/artist/4L8MIM7AXmq6jb0tRix4JT"
+                            },
+                            {
+                                "name": "Craig David",
+                                "url": "https://open.spotify.com/artist/2JyWXPbkqI5ZJa3gwqVa0c"
+                            },
+                            {
+                                "name": "Zed Bias",
+                                "url": "https://open.spotify.com/artist/1XZzbCZRuj6eOdRxQcmiD7"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/UK_garage"
                     },
                     {
@@ -1209,6 +2077,20 @@
                         "description": "Speed Garage emerged in the late 1990s and early 2000s as a more accelerated and high-energy variant of UK Garage, a genre that originated in London in the mid-'90s. While UK Garage is known for its syncopated rhythms, smooth basslines, and the use of vocal chops, Speed Garage takes these elements and injects a sense of urgency with faster tempos and more intense basslines. The genre often incorporates elements of breakbeat, dub, and house, creating a raw, dynamic sound that retains the funky groove of UK Garage while pushing it to a more dancefloor-centric direction. With its faster pace and heavy emphasis on bass, Speed Garage became a staple in the underground club scene, appealing to those seeking a faster, more aggressive take on the UK Garage sound.",
                         "example": "DJ Armand Van Helden - U Don't Know Me",
                         "spotify_track_id": "7BpyfQEmvi0sUmOq29plEE",
+                        "key_artists": [
+                            {
+                                "name": "Armand Van Helden",
+                                "url": "https://open.spotify.com/artist/3cQA9WH8liZfeja1DxcDYE"
+                            },
+                            {
+                                "name": "Double 99",
+                                "url": "https://open.spotify.com/artist/3XUgFwHXbyBHNuAfv7sWu3"
+                            },
+                            {
+                                "name": "187 Lockdown",
+                                "url": "https://open.spotify.com/artist/1tlAuGE8fWLJOWyqdBrR2p"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Speed_garage"
                     },
                     {
@@ -1216,6 +2098,20 @@
                         "description": "2-step garage is a subgenre of UK garage characterized by its unique, syncopated rhythm where the traditional four-on-the-floor beat is replaced with a more complex, staggered pattern. Emerging in the late 1990s, 2-step garage typically features a prominent bassline, chopped-up vocal samples, and influences from R&B and jungle. The genre is defined by its'skipping' feel, as the beat often omits the kick on certain downbeats, creating a distinctive shuffle that feels both smooth and energetic. This style laid the groundwork for future genres like grime and dubstep, shaping the UK’s dance music scene with its innovative rhythms and soulful vibes.",
                         "example": "Wookie - Scrappy",
                         "spotify_track_id": "6BfGVU213AQzBv39g2IzOU",
+                        "key_artists": [
+                            {
+                                "name": "Wookie",
+                                "url": "https://open.spotify.com/artist/4MswQnojZK1oRaxNsACqjv"
+                            },
+                            {
+                                "name": "El-B",
+                                "url": "https://open.spotify.com/artist/1uf3MnL4HKgF5Zc70a2EDF"
+                            },
+                            {
+                                "name": "Groove Chronicles",
+                                "url": "https://open.spotify.com/artist/52ra5pt8grwDXQaE2AO5on"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/2-step_garage"
                     },
                     {
@@ -1223,6 +2119,20 @@
                         "description": "Bassline originated in Sheffield in the early 2000s and is characterized by its heavy, rolling basslines and 4/4 beats, which create a dancefloor-friendly sound. Drawing influences from UK Garage, grime, and house, Bassline takes the signature bass-driven elements of these genres and makes them the focal point of its tracks. The genre is known for its fast-paced rhythms, often featuring catchy vocal samples and a driving, bass-heavy groove that makes it distinct from other forms of garage music. Bassline quickly gained popularity in the northern UK club scene and remains influential in the broader UK bass music landscape.",
                         "example": "T2 - Heartbroken",
                         "spotify_track_id": "1Y1lfD897czmPqULtHS7E7",
+                        "key_artists": [
+                            {
+                                "name": "T2",
+                                "url": "https://open.spotify.com/artist/2VV4AGhL9jU2GuW9CIOpj2"
+                            },
+                            {
+                                "name": "DJ Q",
+                                "url": "https://open.spotify.com/artist/0b2XeWDPeBiLeskT6RFqMb"
+                            },
+                            {
+                                "name": "Jamie Duggan",
+                                "url": "https://open.spotify.com/artist/0MOlBnjY7mmwqxQpFuysB8"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Bassline_(music_genre)"
                     },
                     {
@@ -1230,6 +2140,20 @@
                         "description": "Future Garage is a subgenre that evolved from the UK Garage scene, blending its distinctive rhythmic structures with influences from dubstep, future bass, and ambient music. Known for its atmospheric, sometimes melancholic tone, Future Garage combines the syncopated beats and vocal manipulations of UK Garage with deeper basslines and ambient textures. The genre often incorporates glitchy percussion, reverberating synths, and atmospheric soundscapes that create a more introspective, ethereal mood compared to traditional garage. Artists like Burial brought Future Garage to the forefront, creating a space for darker, more atmospheric interpretations of the genre while retaining its rhythmic foundations.",
                         "example": "Burial - Archangel",
                         "spotify_track_id": "6evpAJCR5GeeHDGgv3aXb3",
+                        "key_artists": [
+                            {
+                                "name": "Burial",
+                                "url": "https://open.spotify.com/artist/0uCCBpmg6MrPb1KY2msceF"
+                            },
+                            {
+                                "name": "Mount Kimbie",
+                                "url": "https://open.spotify.com/artist/3NUtpWpGDoffm3RCGhSHtl"
+                            },
+                            {
+                                "name": "Jacques Greene",
+                                "url": "https://open.spotify.com/artist/0ygIgsjUzKivFgxgjQ9iV9"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Future_garage"
                     },
                     {
@@ -1237,13 +2161,41 @@
                         "description": "Grime is a genre of electronic music and rap that originated in London in the early 2000s, emerging from UK garage, jungle, and dancehall influences. Known for its aggressive, fast-paced beats (typically around 140 BPM) and raw, street-inspired lyrics, grime often features dark, minimalist production with heavy basslines, sharp synths, and syncopated rhythms. MCs play a central role in grime, delivering rapid-fire verses that touch on themes of urban life, resilience, and social issues. Artists like Dizzee Rascal, Wiley, and Skepta helped bring grime to prominence, making it a defining genre in UK music culture and a major influence on modern hip-hop and electronic music.",
                         "example": "Dizzee Rascal - I Luv U",
                         "spotify_track_id": "4OGZ8hbvwe6FsEzdh16vxj",
+                        "key_artists": [
+                            {
+                                "name": "Dizzee Rascal",
+                                "url": "https://open.spotify.com/artist/0gusqTJKxtU1UTmNRMHZcv"
+                            },
+                            {
+                                "name": "Wiley",
+                                "url": "https://open.spotify.com/artist/7k9T7lZlHjRAM1bb0r9Rm3"
+                            },
+                            {
+                                "name": "Skepta",
+                                "url": "https://open.spotify.com/artist/2p1fiYHYiXz9qi0JJyxBzN"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Grime_music"
                     },
                     {
                         "name": "Dubstep Garage",
                         "description": "A fusion of 2-step garage and dubstep, with a focus on sub-bass frequencies and half-time rhythms.",
                         "example": "Skream - Midnight Request Line",
-                        "spotify_track_id": "6saiu3uHwIpzPl8GKtRRNR"
+                        "spotify_track_id": "6saiu3uHwIpzPl8GKtRRNR",
+                        "key_artists": [
+                            {
+                                "name": "Skream",
+                                "url": "https://open.spotify.com/artist/2jbP92oFLWqPqogflK1wlW"
+                            },
+                            {
+                                "name": "Benga",
+                                "url": "https://open.spotify.com/artist/6lyYDuLxgcxPLH5RjUPH5p"
+                            },
+                            {
+                                "name": "Horsepower Productions",
+                                "url": "https://open.spotify.com/artist/2Su6RvkvrMNSvEh9ccMWD5"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1252,19 +2204,61 @@
                 "description": "Chicago house is a foundational genre of house music that emerged in the early 1980s in Chicago’s underground club scene, especially at venues like The Warehouse, where DJ Frankie Knuckles was a key figure. Characterized by its four-on-the-floor drum machine beats, soulful vocals, and repetitive, hypnotic basslines, Chicago house often incorporates synthesizers and samples from disco and funk. The genre is known for its raw, minimal production style and uplifting energy, which helped establish house music as a global phenomenon. Chicago house laid the groundwork for numerous house subgenres and continues to influence dance music worldwide.",
                 "example": "Marshall Jefferson - Move Your Body",
                 "spotify_track_id": "5eAymAmVU6CyejjFJxvcMI",
+                "key_artists": [
+                    {
+                        "name": "Frankie Knuckles",
+                        "url": "https://open.spotify.com/artist/63yl9nDNrHpiAYGlNJxxjc"
+                    },
+                    {
+                        "name": "Ron Hardy",
+                        "url": "https://open.spotify.com/artist/4E0iBKQ8E2IYxzf5oLYkHB"
+                    },
+                    {
+                        "name": "Marshall Jefferson",
+                        "url": "https://open.spotify.com/artist/2Di8r9df6xjyj6CVOqbGVz"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Chicago_house",
                 "substyles": [
                     {
                         "name": "Classic Chicago House",
                         "description": "Classic Chicago House is the foundational sound of house music, originating in Chicago during the early 1980s. Known for its soulful melodies, driving basslines, and uplifting vibes, it combines the rhythmic grooves of disco with a more electronic, minimal approach. Classic Chicago House features deep, steady drum patterns, warm synthesizer pads, and repetitive basslines that create an irresistible dancefloor energy. The genre’s emphasis on soul and emotion, often through sampled vocals or instrumental motifs, set it apart from other electronic dance music styles. Frankie Knuckles, one of the pioneers of Chicago House, helped define the sound, which continues to influence dance music worldwide.",
                         "example": "Frankie Knuckles - Your Love",
-                        "spotify_track_id": "0vryyKyxCFXT0gg670yNEw"
+                        "spotify_track_id": "0vryyKyxCFXT0gg670yNEw",
+                        "key_artists": [
+                            {
+                                "name": "Fingers Inc.",
+                                "url": "https://open.spotify.com/artist/7DbXdVqrretuCKPkTeX8Kk"
+                            },
+                            {
+                                "name": "Adonis",
+                                "url": "https://open.spotify.com/artist/4AU8MXMTLFqxExYCmiKT6n"
+                            },
+                            {
+                                "name": "Phuture",
+                                "url": "https://open.spotify.com/artist/7AGSJihqYPhYy5QzMcwcQT"
+                            }
+                        ]
                     },
                     {
                         "name": "Acid House",
                         "description": "Acid house is a subgenre of house music that emerged in the mid-1980s, known for its distinctive 'squelching' sound created by the Roland TB-303 bass synthesizer. Originating in Chicago but gaining massive popularity in the UK rave scene, acid house is characterized by its repetitive, hypnotic beats, minimalistic structure, and the signature, warbling 303 bassline, which gives it a trippy, psychedelic feel. Tracks typically feature stripped-back production and may include samples and vocal snippets, contributing to its entrancing and euphoric vibe. Acid house played a key role in shaping the late-1980s rave culture and remains a staple in electronic dance music.",
                         "example": "Phuture - Acid Trax",
                         "spotify_track_id": "2aLXJJ2zOsBJlGTxiG0yMi",
+                        "key_artists": [
+                            {
+                                "name": "Phuture",
+                                "url": "https://open.spotify.com/artist/7AGSJihqYPhYy5QzMcwcQT"
+                            },
+                            {
+                                "name": "DJ Pierre",
+                                "url": "https://open.spotify.com/artist/58nnSR1lwvcuklbb3Uc6TU"
+                            },
+                            {
+                                "name": "Armando",
+                                "url": "https://open.spotify.com/artist/5lODCkFdEtpPn3YxfmyLfT"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Acid_house"
                     },
                     {
@@ -1272,19 +2266,61 @@
                         "description": "Ghetto House emerged in Chicago in the 1990s as a raw, faster, and more stripped-down version of house music. Known for its minimal production and often explicit, provocative lyrics, Ghetto House emphasizes bass-heavy beats and repetitive, dancefloor-oriented grooves. The genre blends house with elements of hip-hop and electro, incorporating raw, unpolished sounds and creating an underground, energetic vibe. It's marked by a rebellious spirit and a focus on club culture, making it a staple in Chicago's late-night dance scene.",
                         "example": "DJ Deeon - Freak Like Me",
                         "spotify_track_id": "1PhCAJnEHWofxmJzvRjgQu",
+                        "key_artists": [
+                            {
+                                "name": "DJ Deeon",
+                                "url": "https://open.spotify.com/artist/5wY9R35VmZOg7NxQvKJXdH"
+                            },
+                            {
+                                "name": "DJ Funk",
+                                "url": "https://open.spotify.com/artist/6M0FCfVRUo5DUuziqLFjJ0"
+                            },
+                            {
+                                "name": "Dance Mania",
+                                "url": "https://open.spotify.com/artist/2zgkC2iqDlq3FcI2B7ChnD"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Ghetto_house"
                     },
                     {
                         "name": "Jackin' House",
                         "description": "Jackin' House is a high-energy subgenre of Chicago House that places a strong emphasis on funky, infectious rhythms often referred to as 'jacking.' This style is characterized by its upbeat tempo, syncopated basslines, and bouncy, swing-like percussion, creating a groove that's irresistibly danceable. The genre is heavily influenced by funk, disco, and classic house, combining soulful elements with a rhythmically complex drive. Jackin' House often features looping vocal samples, with the 'jack' rhythm evoking a sense of physical movement, making it a favorite in energetic club settings.",
                         "example": "Cajmere - Percolator",
-                        "spotify_track_id": "5JYbPUFjUn0i8BQy1C5JTs"
+                        "spotify_track_id": "5JYbPUFjUn0i8BQy1C5JTs",
+                        "key_artists": [
+                            {
+                                "name": "Cajmere",
+                                "url": "https://open.spotify.com/artist/7lIBLhQHKay3r1xtO3VtWT"
+                            },
+                            {
+                                "name": "Green Velvet",
+                                "url": "https://open.spotify.com/artist/3ABaec4jjl95VqmG1iD4k2"
+                            },
+                            {
+                                "name": "Derrick Carter",
+                                "url": "https://open.spotify.com/artist/3XwBizyFmbCCUFcdcsvMmm"
+                            }
+                        ]
                     },
                     {
                         "name": "Piano House",
                         "description": "Piano house is a subgenre of house music that emerged in the late 1980s and early 1990s, characterized by its uplifting and melodic sound, with the piano as a central instrument. The genre features catchy, bright piano riffs and chord progressions, often accompanied by a steady four-on-the-floor beat, soulful vocals, and energetic basslines. Piano house draws influence from disco and Chicago house, with its emphasis on melody and harmony giving it a more feel-good, euphoric vibe. It became especially popular in the early 90s dance scene and continues to be a beloved subgenre for its uplifting and hands-in-the-air energy.",
                         "example": "Fingers Inc. - Can You Feel It",
-                        "spotify_track_id": "4mNwbj8hTUjbyZSHdQVIuL"
+                        "spotify_track_id": "4mNwbj8hTUjbyZSHdQVIuL",
+                        "key_artists": [
+                            {
+                                "name": "Black Box",
+                                "url": "https://open.spotify.com/artist/6Hd3xhv1sj3rlojjvGLkGR"
+                            },
+                            {
+                                "name": "K-Klass",
+                                "url": "https://open.spotify.com/artist/4O1s9iVG46lSn1mD9ek1ES"
+                            },
+                            {
+                                "name": "Rozalla",
+                                "url": "https://open.spotify.com/artist/2wnJCxpnKAagrdBJAvaDrQ"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1293,13 +2329,41 @@
                 "description": "French House, also known as French Touch or Filter House, is a subgenre that emerged in France in the mid-1990s. It is characterized by the heavy use of 'filter' effects (low-pass and high-pass filters) and phasers applied to disco and funk samples from the 1970s and 80s. It combines traditional house rhythms with glamorous production, funky basslines, and a strong focus on melody and danceability. Popularized globally by artists such as Daft Punk, Cassius, and Etienne de Crécy, it defined the sound of late 20th-century club music.",
                 "example": "Stardust - Music Sounds Better With You",
                 "spotify_track_id": "303ccTay2FiDTZ9fZ2AdBt",
+                "key_artists": [
+                    {
+                        "name": "Daft Punk",
+                        "url": "https://open.spotify.com/artist/4tZwfgrHOc3mvqYlEYSvVi"
+                    },
+                    {
+                        "name": "Cassius",
+                        "url": "https://open.spotify.com/artist/4sf3QZW8a3xZ14IGsOAzoy"
+                    },
+                    {
+                        "name": "Etienne de Crécy",
+                        "url": "https://open.spotify.com/artist/78YRbJhMi5kXKruiQGCJo7"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/French_house",
                 "substyles": [
                     {
                         "name": "Filter House",
                         "description": "A technical variant of French House that focuses almost exclusively on frequency manipulation through filters, creating the signature 'muffled' and 'sweeping' sound that builds intense tension and euphoria on the dancefloor.",
                         "example": "Alan Braxe & Fred Falke - Intro",
-                        "spotify_track_id": "7b4fQNd34RVNFKKziQz6mS"
+                        "spotify_track_id": "7b4fQNd34RVNFKKziQz6mS",
+                        "key_artists": [
+                            {
+                                "name": "Alan Braxe",
+                                "url": "https://open.spotify.com/artist/24JRvbKfTcF2x7c2kCCJrW"
+                            },
+                            {
+                                "name": "Fred Falke",
+                                "url": "https://open.spotify.com/artist/0AfNNw1LS2i9KW4icd7inD"
+                            },
+                            {
+                                "name": "Braxe + Falcon",
+                                "url": "https://open.spotify.com/artist/10sZHUBkoiCLucz4bbCEBA"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1308,12 +2372,40 @@
                 "description": "Lo-fi House, also known as Outsider House, is a subgenre that emerged in the early-to-mid 2010s. It is defined by its intentionally raw and unpolished production, utilizing tape saturation, hiss, and distorted drums to create a warm, nostalgic, and melancholic atmosphere. Drawing heavily from deep house and acid, it emphasizes texture and mood over clean, high-fidelity sound. The genre often features muffled kick drums, hazy synths, and soulful, pitch-shifted vocal samples, evoking a sense of DIY intimacy and digital-age yearning. Key figures include DJ Boring, Mall Grab, and Ross From Friends.",
                 "example": "DJ Boring - Winona",
                 "spotify_track_id": "4rvnBqTmx66LlCJZLbLAOY",
+                "key_artists": [
+                    {
+                        "name": "DJ Boring",
+                        "url": "https://open.spotify.com/artist/3MkIU5jhXTMK9pYQTRVI6p"
+                    },
+                    {
+                        "name": "Mall Grab",
+                        "url": "https://open.spotify.com/artist/7yF6JnFPDzgml2Ytkyl5D7"
+                    },
+                    {
+                        "name": "Ross From Friends",
+                        "url": "https://open.spotify.com/artist/1Ma3pJzPIrAyYPNRkp3SUF"
+                    }
+                ],
                 "substyles": [
                     {
                         "name": "Outsider House",
                         "description": "A more experimental and sometimes abrasive variant of lo-fi house that blends house rhythms with elements of noise, techno, and industrial music. It often features eccentric sampling and a detached, avant-garde aesthetic.",
                         "example": "Anthony Naples - Mad Disrespect",
-                        "spotify_track_id": "7rQqjq9zj0AqR6xqAKEO95"
+                        "spotify_track_id": "7rQqjq9zj0AqR6xqAKEO95",
+                        "key_artists": [
+                            {
+                                "name": "Anthony Naples",
+                                "url": "https://open.spotify.com/artist/20bB5IFRjHw1EIAHvZ3tgd"
+                            },
+                            {
+                                "name": "Huerco S.",
+                                "url": "https://open.spotify.com/artist/0Wy3xgOTkgtDlT9wJsOQjy"
+                            },
+                            {
+                                "name": "Patricia",
+                                "url": "https://open.spotify.com/artist/2pctdrQetn7EI0QpCm9RIF"
+                            }
+                        ]
                     }
                 ]
             }
