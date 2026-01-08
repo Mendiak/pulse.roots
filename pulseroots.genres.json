@@ -2416,6 +2416,20 @@
         "description": "Trance is a genre of electronic dance music that emerged in the early 1990s, characterized by its hypnotic rhythms, uplifting melodies, and a focus on creating a deep emotional connection with the listener. It blends elements of house music, techno, and ambient, typically featuring long, evolving tracks with intricate layers of synthesizers, rolling basslines, and ethereal pads. The genre is known for its ability to induce a sense of euphoria or transcendence, often achieved through repetitive, uplifting progressions and breakdowns that gradually build into intense climaxes. With its focus on melody and mood, trance music seeks to transport the listener into a different mental state, making it a popular choice in both underground and mainstream electronic dance scenes. Over time, trance has evolved into various subgenres like progressive trance, hard trance, and vocal trance, each bringing its own twist to the core elements of the genre. Key artists such as Paul van Dyk, Armin van Buuren, and Tiësto have played significant roles in defining and popularizing trance on the global stage.",
         "example": "Paul Van Dyk - For An Angel",
         "spotify_track_id": "3PbDqZ1VMsBTjXCbs6Jv7P",
+        "key_artists": [
+            {
+                "name": "Paul van Dyk",
+                "url": "https://open.spotify.com/artist/7wU1naftD3lNq7rNsiDvOR"
+            },
+            {
+                "name": "Armin van Buuren",
+                "url": "https://open.spotify.com/artist/0SfsnGyD8FpIN4U4WCkBZ5"
+            },
+            {
+                "name": "Tiësto",
+                "url": "https://open.spotify.com/artist/2o5jDhtHVPhrJdv3cEQ99Z"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/Trance_music",
         "substyles": [
             {
@@ -2423,13 +2437,41 @@
                 "description": "Goa trance is a subgenre of trance music that originated in the late 1980s and early 1990s in the Goa region of India, where it was initially played at outdoor parties and raves. Known for its psychedelic and spiritual influences, Goa trance features intricate, layered synth melodies, fast-paced tempos (typically around 130-150 BPM), and deep, rolling basslines. The genre is marked by its use of evolving, hypnotic sequences and trippy, atmospheric sounds, often including samples from Indian and Eastern music, along with psychedelic and cosmic themes. Goa trance played a pivotal role in the development of the global psychedelic trance scene and remains a classic in the trance community for its vibrant, energetic, and otherworldly vibe.",
                 "example": "LSD - Hallucinogen",
                 "spotify_track_id": "5V3UMwDGWho9MvjAtMLkZv",
+                "key_artists": [
+                    {
+                        "name": "Goa Gil",
+                        "url": "https://open.spotify.com/artist/6eqbN8Xsnoe5nYJODTiY6V"
+                    },
+                    {
+                        "name": "The Infinity Project",
+                        "url": "https://open.spotify.com/artist/3MSq3HlSCnY9LNSlkDaEMx"
+                    },
+                    {
+                        "name": "Man With No Name",
+                        "url": "https://open.spotify.com/artist/1L49RF04CKd9D70Le9FHFz"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Goa_trance",
                 "substyles": [
                     {
                         "name": "Psychedelic Goa",
                         "description": "Psychedelic Goa, often just referred to as Goa trance, evolved from the original Goa trance sound in the mid-1990s and became more intense, experimental, and psychedelic. It features faster tempos (usually around 140-150 BPM), complex, evolving melodies, and heavily distorted, mind-bending synths. The genre is known for its deep basslines, intricate percussion, and hypnotic, trance-like qualities that create an immersive experience. Psychedelic Goa incorporates more psychedelic and surreal soundscapes, often with cosmic, spiritual, or surreal themes, and includes elements like voice samples, glitchy effects, and acid-like sounds. It became the foundation for the broader psychedelic trance movement, characterized by its high-energy, trippy atmospheres, and focus on inducing altered states of consciousness during raves and festivals.",
                         "example": "Astral Projection - Mahadeva",
-                        "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp"
+                        "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp",
+                        "key_artists": [
+                            {
+                                "name": "Hallucinogen",
+                                "url": "https://open.spotify.com/artist/5Lel5d14oFwC4XbKDv2AKW"
+                            },
+                            {
+                                "name": "Astral Projection",
+                                "url": "https://open.spotify.com/artist/40EsdChhIP1ZT9RYOcfUI0"
+                            },
+                            {
+                                "name": "Electric Universe",
+                                "url": "https://open.spotify.com/artist/55SDgogZ1SRUhIgmGvLyhD"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2438,24 +2480,80 @@
                 "description": "Progressive Trance is a subgenre of trance music that emphasizes a more melodic and progressive sound, often characterized by gradual buildups, evolving soundscapes, and an emphasis on atmospheric textures. Unlike more upbeat and fast-paced styles of trance, Progressive Trance tends to maintain a steady tempo while focusing on layered melodies, hypnotic rhythms, and emotional depth. It is known for its smooth transitions and immersive quality, creating a captivating journey for listeners on the dancefloor or in more introspective listening settings.",
                 "example": "Delerium feat. Sarah McLachlan - Silence",
                 "spotify_track_id": "6WuBtCCjG0T2irgaeBkPDu",
+                "key_artists": [
+                    {
+                        "name": "Sasha",
+                        "url": "https://open.spotify.com/artist/7MxGWmiAbqjNOGmj23wbWf"
+                    },
+                    {
+                        "name": "John Digweed",
+                        "url": "https://open.spotify.com/artist/3xnDktxhudJR2Wv3HZDQ9W"
+                    },
+                    {
+                        "name": "Hernan Cattaneo",
+                        "url": "https://open.spotify.com/artist/4mpJaw5y17CIN08qqe8EfB"
+                    }
+                ],
                 "substyles": [
                     {
                         "name": "Melodic Progressive Trance",
                         "description": "Melodic Progressive Trance emphasizes a strong focus on melodic elements, often incorporating uplifting and emotional melodies alongside the genre's signature progressive build-ups. The use of lush synthesizers, harmonic progressions, and dynamic breaks create a euphoric yet smooth sound. Artists in this style often aim to create tracks that evoke deep emotional responses, with a balanced, atmospheric flow.",
                         "example": "Above & Beyond - Sun & Moon",
-                        "spotify_track_id": "4rfhAoZjGwraqwX1w47uij"
+                        "spotify_track_id": "4rfhAoZjGwraqwX1w47uij",
+                        "key_artists": [
+                            {
+                                "name": "Grum",
+                                "url": "https://open.spotify.com/artist/3DhrvmXFJs6QKCSafoPhl4"
+                            },
+                            {
+                                "name": "Ilan Bluestone",
+                                "url": "https://open.spotify.com/artist/1yoZuH2j43vVSWsOwYuQyn"
+                            },
+                            {
+                                "name": "Genix",
+                                "url": "https://open.spotify.com/artist/5WWUkLXiAbmGwtELcfvB2w"
+                            }
+                        ]
                     },
                     {
                         "name": "Dark Progressive Trance",
                         "description": "Dark Progressive Trance introduces darker and more atmospheric tones into the progressive trance framework. With a focus on deep, moody basslines and haunting melodies, this subgenre has a more intense, introspective feel. It combines the steady progression of traditional Progressive Trance with elements that can feel more eerie or ethereal, often creating a sense of tension and release.",
                         "example": "Solarstone - Seven Cities",
-                        "spotify_track_id": "5VIVZAQVSfJRD8f4XFbgBL"
+                        "spotify_track_id": "5VIVZAQVSfJRD8f4XFbgBL",
+                        "key_artists": [
+                            {
+                                "name": "Gai Barone",
+                                "url": "https://open.spotify.com/artist/6ITKskiAcS4w9egVKClT7e"
+                            },
+                            {
+                                "name": "Basil O'Glue",
+                                "url": "https://open.spotify.com/artist/3Eibv9EH47KytGKRHDtJqb"
+                            },
+                            {
+                                "name": "Airwave",
+                                "url": "https://open.spotify.com/artist/4WrJFQnID7vIIA3LZzkhcO"
+                            }
+                        ]
                     },
                     {
                         "name": "Progressive Psytrance",
                         "description": "Progressive Psytrance is a fusion of Progressive Trance and Psytrance elements. It blends the driving rhythms and atmospheric buildup of Progressive Trance with the intricate, psychedelic soundscapes typical of Psytrance. This style often features complex arrangements, evolving textures, and deep basslines, combining the trance’s melodic and progressive elements with the mind-bending, trippy qualities of Psytrance, offering a unique experience for the listener.",
                         "example": "Ace Ventura - Stomping Ground",
-                        "spotify_track_id": "1v0W6trfznygCgFQl3md8N"
+                        "spotify_track_id": "1v0W6trfznygCgFQl3md8N",
+                        "key_artists": [
+                            {
+                                "name": "Ace Ventura",
+                                "url": "https://open.spotify.com/artist/7bSyjB4y9NAhoUDrZTpYt4"
+                            },
+                            {
+                                "name": "Liquid Soul",
+                                "url": "https://open.spotify.com/artist/64nL3MP8zmuLqUq8DDaIKS"
+                            },
+                            {
+                                "name": "Captain Hook",
+                                "url": "https://open.spotify.com/artist/5xnZNDl118VvPTvthujxpx"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2464,6 +2562,20 @@
                 "description": "Psytrance (short for psychedelic trance) is a subgenre of trance music that emerged in the early 1990s, heavily influenced by Goa trance and psychedelic rock. Known for its fast tempos (usually 140-150 BPM), intricate, layered rhythms, and deep basslines, psytrance creates a hypnotic, otherworldly atmosphere. It often features psychedelic sound effects, distorted synths, and evolving, mind-bending melodies that aim to induce an altered state of consciousness. Psytrance is marked by its intense, high-energy vibe, with themes of spirituality, the cosmos, and psychedelia. The genre is popular in outdoor festivals and rave scenes, where its immersive, trance-like qualities enhance the experience of the music and its listeners.",
                 "example": "Infected Mushroom - Becoming Insane",
                 "spotify_track_id": "22DnBQIIXFPJNRGuNjWlSg",
+                "key_artists": [
+                    {
+                        "name": "Infected Mushroom",
+                        "url": "https://open.spotify.com/artist/6S2tas4z6DyIklBajDqJxI"
+                    },
+                    {
+                        "name": "Astrix",
+                        "url": "https://open.spotify.com/artist/3dUltShd2gJQc98Kc7Syit"
+                    },
+                    {
+                        "name": "Vini Vici",
+                        "url": "https://open.spotify.com/artist/29zsVzEH33dD5QqxeL8dvy"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance",
                 "substyles": [
                     {
@@ -2471,19 +2583,61 @@
                         "description": "Full-on Psytrance is a high-energy subgenre of Psytrance that emerged in the late 1990s and early 2000s, often characterized by vibrant melodies, fast-paced beats, and a focus on building intense, uplifting energy. It stands out within the broader Psytrance scene due to its focus on positivity and euphoria. The genre is known for its powerful basslines, intricate sound design, and driving rhythms, which are crafted to sustain a peak-energy atmosphere on the dancefloor. Full-on tracks often incorporate a blend of psychedelic elements with trance-like melodies, creating a balance between intense, high-tempo beats and melodic moments that drive forward the euphoric journey.",
                         "example": "1200 Micrograms - Mescaline",
                         "spotify_track_id": "3G3cpknRLszl9vH9knbGHt",
+                        "key_artists": [
+                            {
+                                "name": "1200 Micrograms",
+                                "url": "https://open.spotify.com/artist/2opB8qXyAmLYSGEZxp7X3U"
+                            },
+                            {
+                                "name": "GMS",
+                                "url": "https://open.spotify.com/artist/0GOx72r5AAEKRGQFn3xqXK"
+                            },
+                            {
+                                "name": "Talamasca",
+                                "url": "https://open.spotify.com/artist/16fgoXgeTpBh4GE9XOjvn7"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance#Full-on"
                     },
                     {
                         "name": "Dark Psytrance",
                         "description": "Dark Psytrance developed as a more intense, experimental branch of Psytrance, gaining traction in the late 2000s. Unlike the uplifting nature of other Psytrance subgenres, Dark Psytrance explores darker, more atmospheric and sometimes ominous soundscapes. It's known for its twisted, hypnotic basslines, eerie melodies, and complex rhythms, which evoke feelings of tension and mystery. Tracks in this subgenre typically maintain fast tempos but focus on creating a deep, immersive journey that contrasts with the more colorful, melodic side of Psytrance. The genre appeals to listeners seeking an intense and atmospheric experience, often in underground and more experimental settings.",
                         "example": "Blisargon Demogorgon - Knights Of Light",
-                        "spotify_track_id": "6R5guJA1veBa35mkCgYwAe"
+                        "spotify_track_id": "6R5guJA1veBa35mkCgYwAe",
+                        "key_artists": [
+                            {
+                                "name": "Kindzadza",
+                                "url": "https://open.spotify.com/artist/0il4tWDQbRfSwMdk5CmP04"
+                            },
+                            {
+                                "name": "Penta",
+                                "url": "https://open.spotify.com/artist/26AHtbjWKiwYzsoGoUZq53"
+                            },
+                            {
+                                "name": "Kashyyyk",
+                                "url": "https://open.spotify.com/artist/46bKeGVnL5HWNfcDvm1HLe"
+                            }
+                        ]
                     },
                     {
                         "name": "Suomisaundi",
                         "description": "Suomisoundi (or Suomi trance) is a subgenre of psychedelic trance that originated in Finland in the late 1990s. Known for its experimental, eclectic, and often quirky sound, suomisoundi blends elements of traditional psytrance with a unique, offbeat approach. It features distorted basslines, fast tempos (around 140-150 BPM), and layered, psychedelic melodies, but with a more playful, unconventional style. The music often incorporates humorous or surreal samples, unexpected breaks, and strange sound effects, creating a fun and unpredictable listening experience. Suomisoundi stands out for its sense of freedom and individuality, making it a favorite within niche psychedelic trance circles, with a focus on creativity and a less-polished, more 'raw' vibe compared to other psytrance subgenres.",
                         "example": "Shiva Chandra - Return To Atlantis",
                         "spotify_track_id": "3FsCBkbh8xIaCcnCXJ85iT",
+                        "key_artists": [
+                            {
+                                "name": "Texas Faggott",
+                                "url": "https://open.spotify.com/artist/083pFSgqfJ8sL0JHAIAPyU"
+                            },
+                            {
+                                "name": "Mandalavandalz",
+                                "url": "https://open.spotify.com/artist/4Fu8RIa73VlFpx67mZsLi0"
+                            },
+                            {
+                                "name": "Luomuhappo",
+                                "url": "https://open.spotify.com/artist/5Wh0H8d2uDDTeNnjdybr42"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Suomisaundi"
                     }
                 ]
@@ -2493,25 +2647,81 @@
                 "description": "Uplifting Trance is a style of Trance music characterized by its euphoric, feel-good sounds, often designed to invoke emotional highs and create a sense of bliss on the dancefloor. This subgenre typically features melodic and uplifting progressions, building layers of sound that escalate towards an intense and positive climax. It draws from the more euphoric elements of Trance, often emphasizing melodies that are both harmonious and emotionally charged. Uplifting Trance is a popular subgenre in large-scale festivals and club scenes, appealing to listeners who seek an emotionally charged, ecstatic atmosphere. The genre emphasizes melody, harmony, and emotional release, often leading to moments of collective euphoria during live performances.",
                 "example": "Rank 1 - Airwave",
                 "spotify_track_id": "4Q3p9fr4aaSVsiNmUrT2Tu",
+                "key_artists": [
+                    {
+                        "name": "Aly & Fila",
+                        "url": "https://open.spotify.com/artist/5wugb0kaq0J6nyQ5Xgd17i"
+                    },
+                    {
+                        "name": "Sean Tyas",
+                        "url": "https://open.spotify.com/artist/4zqERoiO42cNiA3pPDWnvN"
+                    },
+                    {
+                        "name": "Giuseppe Ottaviani",
+                        "url": "https://open.spotify.com/artist/5B9q1NRokzWYB7nSgnlHyv"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Uplifting_trance",
                 "substyles": [
                     {
                         "name": "Anthem Trance",
                         "description": "Anthem Trance is a subset of Uplifting Trance that focuses on creating 'anthemic' tracks—those with memorable melodies, powerful buildups, and euphoric drops. Anthem Trance tracks are known for their accessibility and universal appeal, often becoming favorites at large events and festivals. These tracks are designed to evoke a sense of unity and collective experience, with soaring synths and progressive melodies that rise toward an uplifting climax. The emphasis is on crafting emotionally resonant, impactful moments, making the genre perfect for both individual listening and crowd-pleasing live performances.",
                         "example": "Armin van Buuren - Communication",
-                        "spotify_track_id": "7KnsBA0iWt9OcikVfzPDZs"
+                        "spotify_track_id": "7KnsBA0iWt9OcikVfzPDZs",
+                        "key_artists": [
+                            {
+                                "name": "Darude",
+                                "url": "https://open.spotify.com/artist/0LhHRmSd1EYM5QdNeNnCoQ"
+                            },
+                            {
+                                "name": "PPK",
+                                "url": "https://open.spotify.com/artist/6kGGvTWOWaF26tZF5hy19z"
+                            },
+                            {
+                                "name": "Robert Miles",
+                                "url": "https://open.spotify.com/artist/2YVF0Ou5zIc4mpgtLIlGN0"
+                            }
+                        ]
                     },
                     {
                         "name": "Orchestral Trance",
                         "description": "Orchestral Trance is a subgenre of Uplifting Trance that blends orchestral, symphonic elements with the electronic foundation of Trance music. Incorporating strings, brass, and orchestral arrangements, this subgenre aims to elevate the Trance experience to a more cinematic and grandiose level. The sweeping melodies and harmonic richness of orchestral arrangements enhance the uplifting nature of Trance, creating a dramatic and emotionally powerful atmosphere. This subgenre can evoke a sense of grandeur, often pairing with larger-than-life buildups and drops to provide a truly immersive listening experience.",
                         "example": "Andy Blueman - Time to Rest",
-                        "spotify_track_id": "2dlxPxWt3gyaDRk0CyrMXF"
+                        "spotify_track_id": "2dlxPxWt3gyaDRk0CyrMXF",
+                        "key_artists": [
+                            {
+                                "name": "Andy Blueman",
+                                "url": "https://open.spotify.com/artist/1rd8hTekqe5e48lEtXa3N9"
+                            },
+                            {
+                                "name": "SoundLift",
+                                "url": "https://open.spotify.com/artist/145cCavsIQpMOK4Nk7C4Np"
+                            },
+                            {
+                                "name": "Ahmed Romel",
+                                "url": "https://open.spotify.com/artist/5hp5V0IfVuZWmYeUqomqEs"
+                            }
+                        ]
                     },
                     {
                         "name": "Vocal Trance",
                         "description": "Vocal Trance combines the uplifting melodies of Trance with prominent, often emotive vocals. The inclusion of a singer or vocal samples adds an additional layer of emotional depth to the tracks, enhancing the euphoric experience. The vocals typically serve as a central part of the track, weaving through the melody and harmonizing with the uplifting instrumental parts. This subgenre is known for its ability to create emotional connections with listeners, as the combination of powerful lyrics and soaring melodies creates an atmospheric soundscape that resonates deeply, making it a favorite for those who enjoy the blend of trance music and vocal-driven compositions.",
                         "example": "Oceanlab - Satellite",
-                        "spotify_track_id": "2xF5vsm3k0S4dVyIhLD5w3"
+                        "spotify_track_id": "2xF5vsm3k0S4dVyIhLD5w3",
+                        "key_artists": [
+                            {
+                                "name": "Oceanlab",
+                                "url": "https://open.spotify.com/artist/0aTdKgInKeMlNnwWSa1YPT"
+                            },
+                            {
+                                "name": "4 Strings",
+                                "url": "https://open.spotify.com/artist/2a0fbijQhcaj1hOFp5b3id"
+                            },
+                            {
+                                "name": "Chicane",
+                                "url": "https://open.spotify.com/artist/5GxyeQagayzZOg4UwffQlD"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2520,25 +2730,81 @@
                 "description": "Hard Trance is a subgenre of Trance known for its high energy, harder beats, and faster tempos. While it retains the melodic and atmospheric qualities of traditional Trance, it incorporates more aggressive basslines, distorted synths, and driving rhythms. Hard Trance tracks often feature relentless percussion and intensified buildups that lead to explosive drops. This subgenre is popular in rave and festival environments, appealing to listeners who enjoy a more intense and dynamic experience, blending the euphoric qualities of Trance with the raw energy and power of harder dance music styles.",
                 "example": "Scot Project - F (Future Is Now)",
                 "spotify_track_id": "5QJntZ6inE3AjfJkPjg98g",
+                "key_artists": [
+                    {
+                        "name": "Scot Project",
+                        "url": "https://open.spotify.com/artist/39zQTkZegu3XxkHNRbQmaG"
+                    },
+                    {
+                        "name": "Yoji Biomehanika",
+                        "url": "https://open.spotify.com/artist/59J5BYhI2gAZ8TFJx5VCPv"
+                    },
+                    {
+                        "name": "Cosmic Gate",
+                        "url": "https://open.spotify.com/artist/6ySxYu68zTsO5ghsThpGtS"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Hard_trance",
                 "substyles": [
                     {
                         "name": "Hard Uplifting Trance",
                         "description": "Hard Uplifting Trance combines the high-energy elements of Hard Trance with the melodic and euphoric aspects of Uplifting Trance. This fusion creates a powerful contrast between uplifting melodies and intense, fast-paced rhythms. The result is a more aggressive version of Uplifting Trance, with the typical euphoric build-ups and soaring synths, but set against a backdrop of driving basslines and harder, punchier percussion. This subgenre aims to evoke both emotional highs and an adrenaline rush, making it ideal for those who enjoy a more intense and uplifting Trance experience.",
                         "example": "Cosmic Gate - Fire Wire",
-                        "spotify_track_id": "15Fpa2wUSK48RBT2eqBka8"
+                        "spotify_track_id": "15Fpa2wUSK48RBT2eqBka8",
+                        "key_artists": [
+                            {
+                                "name": "DuMonde",
+                                "url": "https://open.spotify.com/artist/4YmbYhAP7GdWZ5ehBTtDW4"
+                            },
+                            {
+                                "name": "Alphazone",
+                                "url": "https://open.spotify.com/artist/43oucnuGRuY0rtiW1ViC8D"
+                            },
+                            {
+                                "name": "Flutlicht",
+                                "url": "https://open.spotify.com/artist/4fdgfTdcaVmMPXpVUSC4G0"
+                            }
+                        ]
                     },
                     {
                         "name": "Hard Dance Trance",
                         "description": "Hard Dance Trance blends Hard Trance with elements of Hard Dance music, bringing together the pounding rhythms and energetic tempo of Hard Dance with the melodic and atmospheric qualities of Trance. The tracks typically feature fast, hard-hitting beats, layered with melodic progressions that maintain the uplifting elements of traditional Trance while introducing a tougher edge. Hard Dance Trance emphasizes high BPMs and aggressive percussion, often incorporating elements of house and techno to further energize the music, making it ideal for those who enjoy a dancefloor-focused, high-energy sound.",
                         "example": "DJ Isaac - Go Insane",
-                        "spotify_track_id": "02lBev4chlREhRtdo7FCQN"
+                        "spotify_track_id": "02lBev4chlREhRtdo7FCQN",
+                        "key_artists": [
+                            {
+                                "name": "Technoboy",
+                                "url": "https://open.spotify.com/artist/37jL2LnGjAkadOCszr8v7C"
+                            },
+                            {
+                                "name": "Tuneboy",
+                                "url": "https://open.spotify.com/artist/3mZnhzeAyjpFhO3cIepzBr"
+                            },
+                            {
+                                "name": "Showtek",
+                                "url": "https://open.spotify.com/artist/3gk0OYeLFWYupGFRHqLSR7"
+                            }
+                        ]
                     },
                     {
                         "name": "Hard Progressive Trance",
                         "description": "Hard Progressive Trance is a combination of Hard Trance and Progressive Trance, where the harder and more driving rhythms of Hard Trance meet the subtle and evolving progressions typical of Progressive Trance. This fusion creates a more intense version of Progressive Trance, featuring complex, evolving soundscapes alongside harder basslines and faster tempos. Hard Progressive Trance maintains the deep, atmospheric elements of Progressive Trance but intensifies them with the raw energy and powerful buildups of Hard Trance, making it suitable for listeners who appreciate both the cerebral nature of Progressive Trance and the high-energy punch of Hard Trance.",
                         "example": "Mauro Picotto - Komodo",
-                        "spotify_track_id": "44utuWc4EefJyNOmeyeppV"
+                        "spotify_track_id": "44utuWc4EefJyNOmeyeppV",
+                        "key_artists": [
+                            {
+                                "name": "Mauro Picotto",
+                                "url": "https://open.spotify.com/artist/0MNSDAOCHF7f2ZfAYxZ9bp"
+                            },
+                            {
+                                "name": "Mario Piu",
+                                "url": "https://open.spotify.com/artist/5Aj10ZmH8mlNB8tirOAo4f"
+                            },
+                            {
+                                "name": "Joy Kitikonti",
+                                "url": "https://open.spotify.com/artist/4JrU565LFXyKjDaHhdmPR6"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2547,6 +2813,20 @@
                 "description": "Hardstyle is a powerful subgenre of electronic dance music that emerged in the Netherlands in the late 1990s and early 2000s. It is characterized by its aggressive, distorted kick drum sound, intense 'screech' sounds, and a steady tempo typically between 145 and 155 BPM. The genre often blends the melodic sensibilities of trance with the rhythmic intensity of hardcore techno. A signature element is the 'reverse bass'—a distorted, syncopated bassline that follows the kick—alongside euphoric, anthemic melodies in its more melodic variations. Hardstyle is central to large-scale 'hard dance' festivals and is known for its high-energy atmosphere and dedicated global community.",
                 "example": "Showtek - FTS",
                 "spotify_track_id": "2dglR5ZrKa4rGk6a2zsDKh",
+                "key_artists": [
+                    {
+                        "name": "Showtek",
+                        "url": "https://open.spotify.com/artist/3gk0OYeLFWYupGFRHqLSR7"
+                    },
+                    {
+                        "name": "Headhunterz",
+                        "url": "https://open.spotify.com/artist/6C0KWmCdqrLU2LzzWBPbOy"
+                    },
+                    {
+                        "name": "Brennan Heart",
+                        "url": "https://open.spotify.com/artist/5QySqc6yAFDx9m7fedFZmC"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Hardstyle",
                 "substyles": []
             }
@@ -2557,6 +2837,20 @@
         "description": "Ambient music is an electronic genre that focuses on creating immersive, atmospheric soundscapes, often with minimal structures, slow tempos, and a focus on tone and mood rather than melody or rhythm. Pioneered by artists like Brian Eno, it emerged in the 1970s and is known for its ability to evoke emotions through expansive, ethereal sound environments. The genre has many subgenres, such as dark ambient and space ambient, each offering unique listening experiences. While often associated with relaxation, ambient music can also be experimental, transforming spaces and enhancing moods.",
         "example": "Brian Eno - Ambient 1: Music for Airports",
         "spotify_track_id": "3bCmDqflFBHijgJfvtqev5",
+        "key_artists": [
+            {
+                "name": "Brian Eno",
+                "url": "https://open.spotify.com/artist/7MSUfLeTdDEoZiJPDSBXgi"
+            },
+            {
+                "name": "Harold Budd",
+                "url": "https://open.spotify.com/artist/3uOCouLFR4bVx0XeiQJSbl"
+            },
+            {
+                "name": "Steve Roach",
+                "url": "https://open.spotify.com/artist/00gh6kmKYOu8xyorRxQm6a"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/Ambient_music",
         "substyles": [
             {
@@ -2564,25 +2858,81 @@
                 "description": "Dark Ambient is a subgenre of Ambient music that explores darker, more atmospheric soundscapes. It is characterized by its unsettling, eerie tones, often evoking a sense of dread, tension, or unease. Dark Ambient music typically features slow tempos and minimalist structures, creating an atmosphere that can be both haunting and introspective. It is often used to enhance feelings of isolation or contemplation, making it popular in horror-themed media or as a companion to abstract, experimental art.",
                 "example": "Lustmord - Heresy",
                 "spotify_track_id": "2mLGoZsnCjgw49mDwtvs0b",
+                "key_artists": [
+                    {
+                        "name": "Lustmord",
+                        "url": "https://open.spotify.com/artist/3FpCFpdoJOrGuR3G7UBgC7"
+                    },
+                    {
+                        "name": "Atrium Carceri",
+                        "url": "https://open.spotify.com/artist/6UIsHrMMddC9hmkwI4J3Jr"
+                    },
+                    {
+                        "name": "Desiderii Marginis",
+                        "url": "https://open.spotify.com/artist/56TXBqxg34LL3EqFqwS3EX"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Dark_ambient",
                 "substyles": [
                     {
                         "name": "Industrial Ambient",
                         "description": "Industrial Ambient is a fusion of Dark Ambient and Industrial music, combining the eerie, atmospheric elements of Dark Ambient with the harsh, mechanical sounds of Industrial music. It often features metallic clanks, rumbling basslines, and industrial drones that evoke feelings of desolation or dystopia. Industrial Ambient music can create a sense of oppressive environment or tension, with a focus on creating immersive, environmental soundscapes. The genre may blend organic sounds with mechanical textures, generating an auditory experience that feels both industrial and atmospheric.",
                         "example": "Raison d'être - Mouldering The Forlorn I",
-                        "spotify_track_id": "6wSY0hb9JnSJE7zUuGG0JG"
+                        "spotify_track_id": "6wSY0hb9JnSJE7zUuGG0JG",
+                        "key_artists": [
+                            {
+                                "name": "Raison d'être",
+                                "url": "https://open.spotify.com/artist/0NOdtBd6AUb9WLGfVU1yDR"
+                            },
+                            {
+                                "name": "Deutsch Nepal",
+                                "url": "https://open.spotify.com/artist/7puY8Dgwz0k1KcukFEu2X4"
+                            },
+                            {
+                                "name": "In Slaughter Natives",
+                                "url": "https://open.spotify.com/artist/3YS75aZeOvSbqPgSwFSrVX"
+                            }
+                        ]
                     },
                     {
                         "name": "Lovecraftian Ambient",
                         "description": "Lovecraftian Ambient is a niche subgenre of Dark Ambient inspired by the cosmic horror of H.P. Lovecraft's works. This style often incorporates otherworldly, unsettling soundscapes designed to evoke feelings of the unknown and the incomprehensible. The sound design tends to emphasize eerie drones, distant voices, and eldritch sounds that convey a sense of cosmic dread. Lovecraftian Ambient music draws on the themes of fear, isolation, and the insignificance of humanity in the vastness of the universe, making it ideal for those seeking a deeper, more existential listening experience.",
                         "example": "Cryo Chamber Collaboration - Nyarlathotep",
-                        "spotify_track_id": "1l1w978OIgum6CTGrwed0z"
+                        "spotify_track_id": "1l1w978OIgum6CTGrwed0z",
+                        "key_artists": [
+                            {
+                                "name": "Cryo Chamber Collaboration",
+                                "url": "https://open.spotify.com/artist/0YheaxIb6RBJFN9fMZp9gE"
+                            },
+                            {
+                                "name": "Atrium Carceri",
+                                "url": "https://open.spotify.com/artist/6UIsHrMMddC9hmkwI4J3Jr"
+                            },
+                            {
+                                "name": "Kammarheit",
+                                "url": "https://open.spotify.com/artist/3uUghlgJJQPZOHB6KRrSXZ"
+                            }
+                        ]
                     },
                     {
                         "name": "Dungeon Synth",
                         "description": "Dungeon Synth is a genre of electronic music that originated in the early 1990s, closely related to dark ambient and black metal. The style is characterized by a sound that is dark, lo-fi, and melancholic, often drawing on influences from folk, classical, medieval music, and fantasy video game soundtracks. It aims to evoke atmospheres of fantasy worlds, ancient castles, and mythical landscapes through synthesized melodies and atmospheric textures.",
                         "example": "Burzum - Tomhet",
                         "spotify_track_id": "7AJrPnFvJ51NzZbyFJZ3bH",
+                        "key_artists": [
+                            {
+                                "name": "Mortiis",
+                                "url": "https://open.spotify.com/artist/4jlxvaggBp7wVV02U6YYRQ"
+                            },
+                            {
+                                "name": "Burzum",
+                                "url": "https://open.spotify.com/artist/7L6u6TyhjuwubrcojPeNgf"
+                            },
+                            {
+                                "name": "Fief",
+                                "url": "https://open.spotify.com/artist/6wrcXTfXvKpP1HMpox9612"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Dungeon_synth"
                     },
                     {
@@ -2590,6 +2940,20 @@
                         "description": "Isolationism, a subgenre of dark ambient that emerged in the early 1990s, is defined by its desolate, eerie, and often unsettling soundscapes. It emphasizes silence, space, and a profound sense of solitude, using minimalist textures and subtle drones to create a feeling of being cut off from the outside world. The genre explores themes of emptiness and vast, cold environments.",
                         "example": "Thomas Köner - Teimo",
                         "spotify_track_id": "6LYfs6v1boQ62a8NxdXYhX",
+                        "key_artists": [
+                            {
+                                "name": "Thomas Köner",
+                                "url": "https://open.spotify.com/artist/02H68OmCeljWgjoVQVOB1v"
+                            },
+                            {
+                                "name": "Lull",
+                                "url": "https://open.spotify.com/artist/19v0Cnq5D4SKom8SVlXhkw"
+                            },
+                            {
+                                "name": "Final",
+                                "url": "https://open.spotify.com/artist/1VEmYmWXlco4Jf3lD4oICe"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Dark_ambient#Isolationism"
                     }
                 ]
@@ -2599,6 +2963,20 @@
                 "description": "Psybient blends ambient music with elements of psychedelic trance, creating a unique, ethereal sound characterized by hypnotic rhythms, evolving textures, and psychedelic melodies. It often invokes deep mental and emotional journeys, with tracks that promote relaxation while maintaining a sense of cosmic exploration. Emerging in the late 1990s, it fuses the ambient desire for atmosphere with the pulsating energy of psychedelia.",
                 "example": "Shpongle - Divine Moments of Truth",
                 "spotify_track_id": "5z0QLEpkbUh00SevSuYxOh",
+                "key_artists": [
+                    {
+                        "name": "Shpongle",
+                        "url": "https://open.spotify.com/artist/0m5XJwKGYyUjd3VMfcINCQ"
+                    },
+                    {
+                        "name": "Entheogenic",
+                        "url": "https://open.spotify.com/artist/7xjpPNWngnYl57VxpnbakE"
+                    },
+                    {
+                        "name": "Carbon Based Lifeforms",
+                        "url": "https://open.spotify.com/artist/38DX4hQVvPBs3PThDIAK11"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Psybient",
                 "substyles": [
                     {
@@ -2606,13 +2984,41 @@
                         "description": "A hybrid of psychedelic music and dub, Psydub focuses on deep basslines, reverberating effects, and spacey textures. This substyle is known for its laid-back, dub-influenced rhythm patterns, combined with the mind-expanding qualities of psychedelia, creating an immersive soundscape that's both relaxing and enveloping.",
                         "example": "Ott - The Queen of All Everything",
                         "spotify_track_id": "188s885TL0EgDz07BShopC",
+                        "key_artists": [
+                            {
+                                "name": "Ott",
+                                "url": "https://open.spotify.com/artist/60df5JBRRPcnSpsIMxxwQm"
+                            },
+                            {
+                                "name": "Globular",
+                                "url": "https://open.spotify.com/artist/6RVS3niyrqu7427m9moJ75"
+                            },
+                            {
+                                "name": "Kaminanda",
+                                "url": "https://open.spotify.com/artist/0jczGxUB6EOlmuY7VbEtop"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Psydub"
                     },
                     {
                         "name": "Forest Psybient",
                         "description": "A subgenre that evokes the natural world, Forest Psybient blends ambient and psychedelic trance to create sounds that resemble the atmosphere of mystical forests. With an emphasis on organic and environmental textures, it transports listeners to lush, tranquil woodland spaces, often with nature-inspired samples like birdsong or wind, for a truly otherworldly experience.",
                         "example": "Astropilot - Forest of Memories",
-                        "spotify_track_id": "4dunMkgLKhhF7AkF0gzVj4"
+                        "spotify_track_id": "4dunMkgLKhhF7AkF0gzVj4",
+                        "key_artists": [
+                            {
+                                "name": "Astropilot",
+                                "url": "https://open.spotify.com/artist/2z658O7sY52T18CIOqUcws"
+                            },
+                            {
+                                "name": "Aes Dana",
+                                "url": "https://open.spotify.com/artist/6n1fB5NgTsFNdT4JHpVMe1"
+                            },
+                            {
+                                "name": "Solar Fields",
+                                "url": "https://open.spotify.com/artist/7GyhmlEy51sGUE09A5AWzc"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2621,19 +3027,61 @@
                 "description": "New Age Ambient is focused on creating serene, uplifting sound environments that promote relaxation, healing, and introspection. This style often incorporates elements of world music, nature sounds, and soothing melodies, inviting listeners into peaceful, contemplative spaces. Popularized in the 1980s, it has become synonymous with ambient music used for relaxation, spiritual practices, and personal well-being.",
                 "example": "Enya - Orinoco Flow",
                 "spotify_track_id": "0Fyj9w0HVfjoxm9S8nGClt",
+                "key_artists": [
+                    {
+                        "name": "Enya",
+                        "url": "https://open.spotify.com/artist/6uothxMWeLWIhsGeF7cyo4"
+                    },
+                    {
+                        "name": "Enigma",
+                        "url": "https://open.spotify.com/artist/3DmG65yHQsMms7WAvrZOdt"
+                    },
+                    {
+                        "name": "Vangelis",
+                        "url": "https://open.spotify.com/artist/4P70aqttdpJ9vuYFDmf7f6"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/New_age_music",
                 "substyles": [
                     {
                         "name": "Celtic Ambient",
                         "description": "A substyle of New Age Ambient, Celtic Ambient integrates the ethereal sounds of Celtic music with ambient textures. It often features traditional instruments like the harp or flute, combined with atmospheric backdrops, creating a connection to nature and ancient cultural traditions. This genre is often used to evoke a sense of mystical serenity, rooted in Celtic spiritualism.",
                         "example": "Loreena McKennitt - The Mummers' Dance",
-                        "spotify_track_id": "3D9u1UpCD8FU7LZFsMvVZQ"
+                        "spotify_track_id": "3D9u1UpCD8FU7LZFsMvVZQ",
+                        "key_artists": [
+                            {
+                                "name": "Loreena McKennitt",
+                                "url": "https://open.spotify.com/artist/1JdeDdujDbS6ZeSlkXqx3a"
+                            },
+                            {
+                                "name": "Clannad",
+                                "url": "https://open.spotify.com/artist/0BkAYxgwF9VQiid4wI07yJ"
+                            },
+                            {
+                                "name": "Secret Garden",
+                                "url": "https://open.spotify.com/artist/6GUg2fRLklsnSJsG3PrTt0"
+                            }
+                        ]
                     },
                     {
                         "name": "Meditation Ambient",
                         "description": "Specifically designed for mindfulness, Meditation Ambient is crafted to support deep relaxation, meditation, and introspective practices. This subgenre emphasizes soothing, non-intrusive sounds that help calm the mind and aid in stress reduction, creating a peaceful sonic environment conducive to mental and emotional healing.",
                         "example": "Deuter - Koyasan",
-                        "spotify_track_id": "5lV4TxufL1Sq5zfC8Gz2CZ"
+                        "spotify_track_id": "5lV4TxufL1Sq5zfC8Gz2CZ",
+                        "key_artists": [
+                            {
+                                "name": "Deuter",
+                                "url": "https://open.spotify.com/artist/3AGvwnXbUo9LoAU2P5qYHB"
+                            },
+                            {
+                                "name": "Liquid Mind",
+                                "url": "https://open.spotify.com/artist/2mvZFsiQR3yWcHAroduCTF"
+                            },
+                            {
+                                "name": "Steven Halpern",
+                                "url": "https://open.spotify.com/artist/2J3qGaj5UzHvu0fjlLgb8k"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2642,6 +3090,20 @@
                 "description": "Drone ambient is a subgenre of ambient music characterized by long, sustained sounds or 'drones' that evolve slowly over time, creating a deep, immersive atmosphere. The music often features minimalistic structures, with little or no rhythmic elements, focusing instead on texture, tone, and the subtle movement of sound. Drone ambient can include natural field recordings, electronic sounds, or manipulated acoustic instruments, creating a vast, spacey environment. The genre emphasizes mood and emotion over melody or harmony, often inducing a meditative, trance-like state. It is typically used to evoke a sense of stillness, introspection, or vast, open spaces. Drone ambient can range from serene and soothing to intense and enveloping, making it ideal for background listening, relaxation, or deep focus.",
                 "example": "Stars of the Lid - Requiem for Dyning Mothers Pt. 2",
                 "spotify_track_id": "7m2iqOIBuCT0XvMkv4wYNv",
+                "key_artists": [
+                    {
+                        "name": "Stars of the Lid",
+                        "url": "https://open.spotify.com/artist/36pCa1JHc6hlGbfEmLzJQc"
+                    },
+                    {
+                        "name": "Tim Hecker",
+                        "url": "https://open.spotify.com/artist/1qiwaJwjKod5WhcYZ76O1B"
+                    },
+                    {
+                        "name": "William Basinski",
+                        "url": "https://open.spotify.com/artist/6u5axd0rpDsWSmzhFfb2VB"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Drone_music",
                 "substyles": [
                     {
@@ -2649,13 +3111,41 @@
                         "description": "A fusion of Drone Ambient and Metal, Drone Metal combines the sustained, minimalist sounds of drone music with the heavy, distorted guitars of metal. The genre features slow, crushingly heavy tones that evolve over time, creating an intense, enveloping atmosphere. It blends the hypnotic qualities of drone with the raw power of metal, resulting in an emotionally potent listening experience.",
                         "example": "Sunn O))) - It Took the Night to Believe",
                         "spotify_track_id": "7BzthK5pl4Z75h5eO3AtFK",
+                        "key_artists": [
+                            {
+                                "name": "Sunn O)))",
+                                "url": "https://open.spotify.com/artist/2ScEhgArBEdKyU4vNHSyiY"
+                            },
+                            {
+                                "name": "Earth",
+                                "url": "https://open.spotify.com/artist/4QQgXkCYTt3BlENzhyNETg"
+                            },
+                            {
+                                "name": "Boris",
+                                "url": "https://open.spotify.com/artist/6caPJFLv1wesmM7gwK1ACy"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Drone_metal"
                     },
                     {
                         "name": "Microtonal Drone",
                         "description": "Microtonal Drone explores the use of microtonal tunings and unconventional harmonic structures within the drone ambient framework. By incorporating intervals smaller than the standard semitone, this subgenre creates an otherworldly soundscape that pushes the boundaries of traditional tuning. The result is a deep, resonant experience that feels both alien and meditative, with shifting tonal relationships that evolve throughout the piece.",
                         "example": "Eliane Radigue - Trilogie de la Mort",
-                        "spotify_track_id": "6SrDGaMF5zeQVoujQq4Pap"
+                        "spotify_track_id": "6SrDGaMF5zeQVoujQq4Pap",
+                        "key_artists": [
+                            {
+                                "name": "Eliane Radigue",
+                                "url": "https://open.spotify.com/artist/1oG3G8tFIIseWu474ardvh"
+                            },
+                            {
+                                "name": "Phil Niblock",
+                                "url": "https://open.spotify.com/artist/476HQK2x1R3yow5duyU5hO"
+                            },
+                            {
+                                "name": "La Monte Young",
+                                "url": "https://open.spotify.com/artist/5h2yl4fuAyztOOBgMRyQhE"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2664,13 +3154,41 @@
                 "description": "Ambient music that evokes the vastness and mystery of outer space, often using synthesizers to create cosmic soundscapes.",
                 "example": "Steve Roach - Structures from Silence",
                 "spotify_track_id": "3v6UGvx3CJ0F0iEq5jWwl1",
+                "key_artists": [
+                    {
+                        "name": "Steve Roach",
+                        "url": "https://open.spotify.com/artist/00gh6kmKYOu8xyorRxQm6a"
+                    },
+                    {
+                        "name": "Jonn Serrie",
+                        "url": "https://open.spotify.com/artist/1QZGv6Rumxnw9nIGmowvlM"
+                    },
+                    {
+                        "name": "Michael Stearns",
+                        "url": "https://open.spotify.com/artist/5KbIofwaAvbvvkzG2zbmGD"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Space_ambient",
                 "substyles": [
                     {
                         "name": "Berlin School Ambient",
                         "description": "A style of space ambient influenced by the Berlin School of electronic music, often featuring sequenced synthesizers and cosmic textures.",
                         "example": "Tangerine Dream - Phaedra",
-                        "spotify_track_id": "4QLqhrjTzz90jkYw4Q64y2"
+                        "spotify_track_id": "4QLqhrjTzz90jkYw4Q64y2",
+                        "key_artists": [
+                            {
+                                "name": "Tangerine Dream",
+                                "url": "https://open.spotify.com/artist/1BGN1IdyiSR0ZYrkoKNchl"
+                            },
+                            {
+                                "name": "Klaus Schulze",
+                                "url": "https://open.spotify.com/artist/3U2U4TR03ZuStsizrv0EJB"
+                            },
+                            {
+                                "name": "Ashra",
+                                "url": "https://open.spotify.com/artist/4qzIpmopZ2KVodpmw7uJKe"
+                            }
+                        ]
                     }
                 ]
             }
@@ -2681,6 +3199,20 @@
         "description": "Bass music is a broad genre of electronic music that emphasizes heavy, prominent basslines and sub-bass frequencies, often incorporating elements from various styles such as dubstep, trap, drum and bass, and UK garage, with a focus on low-end sound design and rhythmic intensity.",
         "example": "Baauer - Harlem Shake",
         "spotify_track_id": "01XFgRZfZI7oBagNf1Loml",
+        "key_artists": [
+            {
+                "name": "Baauer",
+                "url": "https://open.spotify.com/artist/25fqWEebq6PoiGQIHIrdtv"
+            },
+            {
+                "name": "RL Grime",
+                "url": "https://open.spotify.com/artist/5eIbEEQnDM8yuDVB0bimSP"
+            },
+            {
+                "name": "Flosstradamus",
+                "url": "https://open.spotify.com/artist/2FmzVitXZjIkFolH8HXd4j"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/Bass_music",
         "substyles": [
             {
@@ -2688,6 +3220,20 @@
                 "description": "Drum and Bass (often abbreviated as D&B or DnB) is a high-energy genre of electronic music that evolved from the UK's jungle and breakbeat hardcore scenes in the early 1990s. It is defined by its fast, complex breakbeats, typically ranging from 160 to 180 BPM, paired with heavy, prominent sub-bass lines that form the music's core. While jungle often retained a strong reggae and dancehall influence, drum and bass streamlined the sound, focusing on intricate, meticulously programmed drum patterns and a wider range of sonic textures, from dark and industrial (techstep) to smooth and melodic (liquid funk). The genre is a showcase of rhythmic complexity and sound design, creating a sound that is both physically intense and sonically diverse.",
                 "example": "Goldie - Inner City Life",
                 "spotify_track_id": "0O7xFEqePrcTUgOi4qe0uB",
+                "key_artists": [
+                    {
+                        "name": "Goldie",
+                        "url": "https://open.spotify.com/artist/2SYqJ3uDLLXZNyZdLKBy4M"
+                    },
+                    {
+                        "name": "Andy C",
+                        "url": "https://open.spotify.com/artist/75HK7rgkmDMTnWwwmcN53N"
+                    },
+                    {
+                        "name": "High Contrast",
+                        "url": "https://open.spotify.com/artist/0bxHci3JIhhKA53n8rH3tT"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Drum_and_bass",
                 "substyles": [
                     {
@@ -2695,19 +3241,61 @@
                         "description": "A subgenre of Drum and Bass that leans into a darker, more aggressive sound. Neurofunk is defined by its intricate basslines and futuristic, almost mechanical rhythms, often featuring experimental sound design and heavy use of distortion. The style is intense and complex, designed to push the boundaries of drum programming and bass manipulation.",
                         "example": "Noisia - Diplodocus",
                         "spotify_track_id": "10q2m2CeSr9UyYE8SMmgYc",
+                        "key_artists": [
+                            {
+                                "name": "Noisia",
+                                "url": "https://open.spotify.com/artist/4YWj8sohRDjL9deiuRvEEY"
+                            },
+                            {
+                                "name": "Black Sun Empire",
+                                "url": "https://open.spotify.com/artist/3PAXvY08KxX5HmCsmKw4x8"
+                            },
+                            {
+                                "name": "Mefjus",
+                                "url": "https://open.spotify.com/artist/54qqaSH6byJIb8eFWxe3Pj"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Neurofunk"
                     },
                     {
                         "name": "Darkstep",
                         "description": "Darkstep is a heavier, darker variant of Drum and Bass that emphasizes foreboding atmospheres and ominous basslines. It is known for its hard, pounding rhythms and a sense of tension, creating an unsettling listening experience. Darkstep often incorporates darker soundscapes, deep bass, and minimal melodies, creating an aggressive and immersive feel.",
                         "example": "Dillinja - The Angels Fell",
-                        "spotify_track_id": "2KL9mHCn3aSZJzxpJM4HNb"
+                        "spotify_track_id": "2KL9mHCn3aSZJzxpJM4HNb",
+                        "key_artists": [
+                            {
+                                "name": "Current Value",
+                                "url": "https://open.spotify.com/artist/6B9SjvZNSQZkeJDH17oBSO"
+                            },
+                            {
+                                "name": "Limewax",
+                                "url": "https://open.spotify.com/artist/1mCm9sqidA8YS31nVyvlXM"
+                            },
+                            {
+                                "name": "Donny",
+                                "url": "https://open.spotify.com/artist/0HU0U9kdXEHZVxUNbuQe8S"
+                            }
+                        ]
                     },
                     {
                         "name": "Techstep",
                         "description": "A subgenre of Drum and Bass that incorporates elements of techno and industrial music. Techstep features deep, mechanical basslines, hard-hitting beats, and a more structured, almost minimalist approach. The genre is often dark, cold, and mechanical, with an emphasis on technological soundscapes and futuristic themes.",
                         "example": "Ed Rush - Funktion",
                         "spotify_track_id": "6IhrPBjEmGbro7g2iR63KC",
+                        "key_artists": [
+                            {
+                                "name": "Ed Rush",
+                                "url": "https://open.spotify.com/artist/6gj4aZLxVGCdFPMThH6q6q"
+                            },
+                            {
+                                "name": "Optical",
+                                "url": "https://open.spotify.com/artist/1vRz3sCz7iKtrmXK4HB1MI"
+                            },
+                            {
+                                "name": "Dom & Roland",
+                                "url": "https://open.spotify.com/artist/6USv9qhCn6zfxlBQIYJ9qs"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Techstep"
                     },
                     {
@@ -2715,6 +3303,20 @@
                         "description": "Characterized by its smoother, more melodic sound, Liquid Drum and Bass offers a more laid-back vibe compared to the genre’s typical intensity. Known for its flowing, liquid-like beats, atmospheric pads, and softer basslines, this style creates a more ambient and soulful listening experience while still maintaining the core drum and bass rhythms.",
                         "example": "Calibre - Even If",
                         "spotify_track_id": "5nVkaIXaqQtoMX4V1jncdO",
+                        "key_artists": [
+                            {
+                                "name": "Calibre",
+                                "url": "https://open.spotify.com/artist/4jogXSSvlyMkODGSZ2wc2P"
+                            },
+                            {
+                                "name": "Logistics",
+                                "url": "https://open.spotify.com/artist/01K8GEMGGxtrQ4xjDmNLPs"
+                            },
+                            {
+                                "name": "Nu:Tone",
+                                "url": "https://open.spotify.com/artist/7pDBRy9uWy1zq5b0uXIABQ"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Liquid_funk",
                         "substyles": [
                             {
@@ -2722,19 +3324,61 @@
                                 "description": "A subgenre that infuses Liquid Drum and Bass with funky rhythms, resulting in a groovy yet smooth sound. Liquid Funk blends catchy basslines and rhythmic patterns with atmospheric textures, creating a more upbeat and danceable sound while maintaining a relaxed flow.",
                                 "example": "Calibre - Even If",
                                 "spotify_track_id": "5nVkaIXaqQtoMX4V1jncdO",
+                                "key_artists": [
+                                    {
+                                        "name": "High Contrast",
+                                        "url": "https://open.spotify.com/artist/0bxHci3JIhhKA53n8rH3tT"
+                                    },
+                                    {
+                                        "name": "Netsky",
+                                        "url": "https://open.spotify.com/artist/5TgQ66WuWkoQ2xYxaSTnVP"
+                                    },
+                                    {
+                                        "name": "Danny Byrd",
+                                        "url": "https://open.spotify.com/artist/7iczgrgAFILjQVGzLsUzbG"
+                                    }
+                                ],
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/Liquid_funk"
                             },
                             {
                                 "name": "Jazzstep",
                                 "description": "As the name suggests, Jazzstep incorporates elements of jazz into the Liquid Drum and Bass framework, often blending smooth melodies, jazz harmonies, and syncopated rhythms with the genre's trademark breakbeats. This subgenre is more relaxed but maintains an energetic vibe through its intricate, rolling rhythms.",
                                 "example": "Roni Size & Reprazent - Brown Paper Bag",
-                                "spotify_track_id": "3ZQs8RHO3lPZoUwpavPENL"
+                                "spotify_track_id": "3ZQs8RHO3lPZoUwpavPENL",
+                                "key_artists": [
+                                    {
+                                        "name": "Roni Size",
+                                        "url": "https://open.spotify.com/artist/5UjqeSp9dX6Nrge7WdDukr"
+                                    },
+                                    {
+                                        "name": "EZ Rollers",
+                                        "url": "https://open.spotify.com/artist/2DRV8CWHnuapa1bpbvHjCl"
+                                    },
+                                    {
+                                        "name": "Peshay",
+                                        "url": "https://open.spotify.com/artist/07ogfrunSUmnsEsPQdRQUB"
+                                    }
+                                ]
                             },
                             {
                                 "name": "Atmospheric Drum and Bass",
                                 "description": "A more ambient and ethereal take on Liquid Drum and Bass, Atmospheric Drum and Bass focuses on creating immersive soundscapes that blend lush pads, deep bass, and atmospheric effects. It has a dreamy, spacey quality, often evoking a sense of serenity and calm while still keeping the rhythm-driven foundation of the genre.",
                                 "example": "LTJ Bukem - Atlantis",
-                                "spotify_track_id": "2527WUoKIauHY1tx5TCetu"
+                                "spotify_track_id": "2527WUoKIauHY1tx5TCetu",
+                                "key_artists": [
+                                    {
+                                        "name": "LTJ Bukem",
+                                        "url": "https://open.spotify.com/artist/5Wfn5sc1w3DhMTpU7oPJZL"
+                                    },
+                                    {
+                                        "name": "PFM",
+                                        "url": "https://open.spotify.com/artist/1MD5pgVzlusqGyuSTcTxvu"
+                                    },
+                                    {
+                                        "name": "Omni Trio",
+                                        "url": "https://open.spotify.com/artist/2lWfeg9pEv7nuCkZMbnhai"
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -2742,26 +3386,82 @@
                         "name": "Drumfunk",
                         "description": "Drumfunk emphasizes complex rhythms and percussions, focusing more on the interplay of drums than on melodic or harmonic content. The subgenre features intricate, breakbeat-driven rhythms, creating a rhythmic landscape that showcases the art of drumming and percussion in an experimental, often cerebral way.",
                         "example": "Paradox - Drumfunk",
-                        "spotify_track_id": "5tfiwO64InFkOPxgdDWTFN"
+                        "spotify_track_id": "5tfiwO64InFkOPxgdDWTFN",
+                        "key_artists": [
+                            {
+                                "name": "Paradox",
+                                "url": "https://open.spotify.com/artist/2XousncwCHWcQCAU8mEG2W"
+                            },
+                            {
+                                "name": "Seba",
+                                "url": "https://open.spotify.com/artist/07YUOmWljBTXwIseAUd9TW"
+                            },
+                            {
+                                "name": "Alaska",
+                                "url": "https://open.spotify.com/artist/2mDlFcPtgXtLF1gEshEInh"
+                            }
+                        ]
                     },
                     {
                         "name": "Jump Up",
                         "description": "Jump Up is a more upbeat, energetic style of Drum and Bass, known for its bouncy, fast rhythms and party-friendly vibe. The style incorporates catchy basslines and high-energy beats designed to get crowds moving. Its cheerful, bass-driven sound is perfect for the dancefloor, and its infectious grooves make it a staple of Drum and Bass events.",
                         "example": "Loadstar - Bomber",
                         "spotify_track_id": "7e8mGE5bLsyN1lJmiogy0R",
+                        "key_artists": [
+                            {
+                                "name": "DJ Hazard",
+                                "url": "https://open.spotify.com/artist/04rhebO91K6xoiXE0XuDkh"
+                            },
+                            {
+                                "name": "Macky Gee",
+                                "url": "https://open.spotify.com/artist/5EDztvTkyoKtK0ZdEdhOFx"
+                            },
+                            {
+                                "name": "SASASAS",
+                                "url": "https://open.spotify.com/artist/7CKAyjXz7Z7se4oGh07mGe"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Jungle_music#Jump-up",
                         "substyles": [
                             {
                                 "name": "Party Drum and Bass",
                                 "description": "A festive variation of Jump Up, Party Drum and Bass takes the energy of the genre and adds even more lively and celebratory elements. It’s characterized by an upbeat tempo, playful basslines, and a fun, party atmosphere, making it ideal for vibrant events and festivals.",
                                 "example": "Mampi Swift - The One",
-                                "spotify_track_id": "0fPfNeGh7ccq9i9ZAWiMBv"
+                                "spotify_track_id": "0fPfNeGh7ccq9i9ZAWiMBv",
+                                "key_artists": [
+                                    {
+                                        "name": "Mampi Swift",
+                                        "url": "https://open.spotify.com/artist/470XJa6gVffDrBraHtrr2z"
+                                    },
+                                    {
+                                        "name": "Brockie",
+                                        "url": "https://open.spotify.com/artist/4O8h3XRpqE3SMxLQaHjRlK"
+                                    },
+                                    {
+                                        "name": "DJ Hype",
+                                        "url": "https://open.spotify.com/artist/2MnM5JbezlOuVYlfx61Qc6"
+                                    }
+                                ]
                             },
                             {
                                 "name": "Happy Jump Up",
                                 "description": "Happy Jump Up brings a more cheerful and optimistic tone to the high-energy rhythms of Jump Up. This subgenre infuses the fast-paced beats with melodies and tones that evoke a sense of joy and positivity, making it a perfect soundtrack for happy and carefree moments.",
                                 "example": "DJ Hazard - Mr. Happy",
-                                "spotify_track_id": "2vg5YDfcWlj4eK6wPPeCyu"
+                                "spotify_track_id": "2vg5YDfcWlj4eK6wPPeCyu",
+                                "key_artists": [
+                                    {
+                                        "name": "DJ Guv",
+                                        "url": "https://open.spotify.com/artist/3zG4hHVlA4xIX5jwvOa2KD"
+                                    },
+                                    {
+                                        "name": "Hedex",
+                                        "url": "https://open.spotify.com/artist/22I9QWygJ2IfxR855VsA3t"
+                                    },
+                                    {
+                                        "name": "Tsuki",
+                                        "url": "https://open.spotify.com/artist/3mwFbNcly5ymCFK1XCnpCr"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -2772,6 +3472,20 @@
                 "description": "Footwork is a genre of electronic dance music that originated in Chicago in the early 2000s, evolving from juke music and heavily influenced by hip-hop and house. Known for its rapid, syncopated beats (typically around 160 BPM), footwork features complex, stuttering rhythms, fast-paced percussion, and energetic, bass-heavy production. The genre is often associated with the dance style of the same name, which involves quick, intricate foot movements and spins. Footwork tracks are typically short, with chopped-up vocal samples and glitchy, experimental sounds, creating a unique, fragmented musical experience. It has gained significant recognition in underground and experimental dance scenes, influencing modern genres like juke, trap, and electronic music.",
                 "example": "DJ Rashad - Double Cup",
                 "spotify_track_id": "4PocwPW14IfS0EFBME3Hk1",
+                "key_artists": [
+                    {
+                        "name": "DJ Rashad",
+                        "url": "https://open.spotify.com/artist/4zGBj9dI63YIWmZkPl3o7V"
+                    },
+                    {
+                        "name": "RP Boo",
+                        "url": "https://open.spotify.com/artist/678aHai0twQ5ZJcqO1KYWl"
+                    },
+                    {
+                        "name": "Traxman",
+                        "url": "https://open.spotify.com/artist/0KyFKunOclAI5jah1T55lh"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_(genre)",
                 "substyles": [
                     {
@@ -2779,13 +3493,41 @@
                         "description": "Juke is a fast-paced electronic dance genre from Chicago, typically around 160 BPM. It features syncopated rhythms, deep basslines, and chopped-up vocal samples. Known for its energetic, raw sound, juke focuses on rhythm and movement, often accompanying fast, intricate footwork dance styles. It is a precursor to footwork and has influenced bass-heavy electronic music.",
                         "example": "DJ Funk - Run",
                         "spotify_track_id": "09OzrUfjdciGFbVlnjUqwk",
+                        "key_artists": [
+                            {
+                                "name": "DJ Funk",
+                                "url": "https://open.spotify.com/artist/6M0FCfVRUo5DUuziqLFjJ0"
+                            },
+                            {
+                                "name": "Gant-Man",
+                                "url": "https://open.spotify.com/artist/0FRf7YoRwTB4L2HVVwzks4"
+                            },
+                            {
+                                "name": "DJ Deeon",
+                                "url": "https://open.spotify.com/artist/5wY9R35VmZOg7NxQvKJXdH"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_(genre)"
                     },
                     {
                         "name": "Chicago Footwork",
                         "description": "Chicago Footwork is the pioneering style of footwork, originating from Chicago in the early 1990s. Born from the city's vibrant dance battles, it features rapid, syncopated drum patterns and complex rhythms, designed to match the intense foot movements of dancers. The genre's sound is fast-paced, with beats typically around 160 BPM, and often incorporates samples from various genres like hip-hop, juke, and electronic music. It has a raw, underground vibe, with a focus on improvisation and energy. Chicago Footwork became iconic in the Chicago dance scene, influencing the broader footwork movement across the globe.",
                         "example": "RP Boo - Bangin' On King Dr.",
-                        "spotify_track_id": "27AqWfTAVVa5Vuhm1ogs45"
+                        "spotify_track_id": "27AqWfTAVVa5Vuhm1ogs45",
+                        "key_artists": [
+                            {
+                                "name": "RP Boo",
+                                "url": "https://open.spotify.com/artist/678aHai0twQ5ZJcqO1KYWl"
+                            },
+                            {
+                                "name": "DJ Rashad",
+                                "url": "https://open.spotify.com/artist/4zGBj9dI63YIWmZkPl3o7V"
+                            },
+                            {
+                                "name": "DJ Spinn",
+                                "url": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2794,6 +3536,20 @@
                 "description": "Dubstep is a genre of electronic music known for its heavy sub-bass, syncopated rhythms, and half-time beats, typically featuring wobbling basslines, sparse drum patterns, and dark, atmospheric elements, emerging from the UK garage scene in the early 2000s.",
                 "example": "Benga & Coki - Night",
                 "spotify_track_id": "2ST4rHwfdfkuArUKvdGn8a",
+                "key_artists": [
+                    {
+                        "name": "Skream",
+                        "url": "https://open.spotify.com/artist/2jbP92oFLWqPqogflK1wlW"
+                    },
+                    {
+                        "name": "Benga",
+                        "url": "https://open.spotify.com/artist/6lyYDuLxgcxPLH5RjUPH5p"
+                    },
+                    {
+                        "name": "Digital Mystikz",
+                        "url": "https://open.spotify.com/artist/4ESIM5V4xT2Ce0ZWPhxIEY"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Dubstep",
                 "substyles": [
                     {
@@ -2801,19 +3557,61 @@
                         "description": "Brostep is a subgenre of dubstep that emerged in the late 2000s, primarily in the U.S., and is known for its aggressive, high-energy sound. Characterized by heavy, wobbling basslines, sharp synths, and intense drops, brostep often features distorted, 'growling' bass sounds and complex, rapid-fire rhythms. Unlike traditional dubstep, which is darker and more atmospheric, brostep emphasizes loud, punchy production and dramatic builds and drops, making it popular in festival and club settings. Artists like Skrillex helped bring brostep into the mainstream, giving it a prominent place in modern electronic music.",
                         "example": "Skrillex - Scary Monsters and Nice Sprites",
                         "spotify_track_id": "5q8oybjZelukF4h0CzSUN9",
+                        "key_artists": [
+                            {
+                                "name": "Skrillex",
+                                "url": "https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX"
+                            },
+                            {
+                                "name": "Flux Pavilion",
+                                "url": "https://open.spotify.com/artist/7muzHifhMdnfN1xncRLOqk"
+                            },
+                            {
+                                "name": "Doctor P",
+                                "url": "https://open.spotify.com/artist/7ncQ3AmAxYqTv2vY46YclW"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Brostep",
                         "substyles": [
                             {
                                 "name": "Aggressive Dubstep",
                                 "description": "A subgenre of Brostep that intensifies the already heavy sound with even more aggressive basslines and harsh, distorted elements. It's designed to hit hard and energize listeners with high-impact, in-your-face rhythms.",
                                 "example": "Knife Party - Centipede",
-                                "spotify_track_id": "0u2AIKDVafHwCFQ9LDnqxH"
+                                "spotify_track_id": "0u2AIKDVafHwCFQ9LDnqxH",
+                                "key_artists": [
+                                    {
+                                        "name": "Knife Party",
+                                        "url": "https://open.spotify.com/artist/2DuJi13MWHjRHrqRUwk8vH"
+                                    },
+                                    {
+                                        "name": "Excision",
+                                        "url": "https://open.spotify.com/artist/5FKchcZpQOkqFvXBj1aCvb"
+                                    },
+                                    {
+                                        "name": "Zomboy",
+                                        "url": "https://open.spotify.com/artist/0ycHhPwPvoaO4VGzmMnXGq"
+                                    }
+                                ]
                             },
                             {
                                 "name": "Melodic Brostep",
                                 "description": "A more melodic variant of Brostep, incorporating harmonic and emotional elements while maintaining the aggressive energy. This substyle blends catchy melodies with the intense drops and distorted bass synonymous with Brostep.",
                                 "example": "Peter Robinson & Madeon - Shelter",
-                                "spotify_track_id": "2ewEh7LuvToYyGHq7yT8N1"
+                                "spotify_track_id": "2ewEh7LuvToYyGHq7yT8N1",
+                                "key_artists": [
+                                    {
+                                        "name": "Seven Lions",
+                                        "url": "https://open.spotify.com/artist/6fcTRFpz0yH79qSKfof7lp"
+                                    },
+                                    {
+                                        "name": "Adventure Club",
+                                        "url": "https://open.spotify.com/artist/5CdJjUi9f0cVgo9nFuJrFa"
+                                    },
+                                    {
+                                        "name": "Krewella",
+                                        "url": "https://open.spotify.com/artist/0Cd6nHYwecCNM1sVEXKlYr"
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -2822,12 +3620,40 @@
                         "description": "Melodic Dubstep is a subgenre that incorporates more emotional and melodic elements into the traditional dubstep framework. It emphasizes smoother transitions, harmonious melodies, and atmospheric soundscapes while retaining the signature deep bass and half-time rhythms of dubstep. Often more melodic and less aggressive than Brostep, Melodic Dubstep appeals to listeners looking for a more emotional or introspective experience, blending electronic music with cinematic or orchestral textures.",
                         "example": "Illenium - Fractures",
                         "spotify_track_id": "45h9XBwzKkxYucjgfV0Fts",
+                        "key_artists": [
+                            {
+                                "name": "Illenium",
+                                "url": "https://open.spotify.com/artist/45eNHdiiabvmbp4erw26rg"
+                            },
+                            {
+                                "name": "Said The Sky",
+                                "url": "https://open.spotify.com/artist/4LZ4De2MoO3lP6QaNCfvcu"
+                            },
+                            {
+                                "name": "Mitis",
+                                "url": "https://open.spotify.com/artist/16yUpGkBRgc2eDMd3bB3Uw"
+                            }
+                        ],
                         "substyles": [
                             {
                                 "name": "Chillstep",
                                 "description": "A laid-back substyle of Melodic Dubstep, Chillstep combines relaxing, atmospheric sounds with the signature bass-driven elements of dubstep. It's perfect for moments of relaxation or introspection, offering a mellow vibe while still maintaining a rhythmic pulse.",
                                 "example": "Blackmill - Miracle",
-                                "spotify_track_id": "5VQdYgOMD5DunteeIWztZs"
+                                "spotify_track_id": "5VQdYgOMD5DunteeIWztZs",
+                                "key_artists": [
+                                    {
+                                        "name": "Blackmill",
+                                        "url": "https://open.spotify.com/artist/08A9f7wRecEKFGN2PoylTl"
+                                    },
+                                    {
+                                        "name": "Phaeleh",
+                                        "url": "https://open.spotify.com/artist/5NkUpXWkeXspvu7iQQOHhP"
+                                    },
+                                    {
+                                        "name": "Direct",
+                                        "url": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -2836,18 +3662,60 @@
                         "description": "UK dubstep is a subgenre of electronic dance music that originated in South London in the early 2000s. Known for its dark, bass-heavy sound, UK dubstep typically features syncopated rhythms, deep sub-bass frequencies, and minimal, spacious production. Tracks are usually around 140 BPM and often include elements like wobbling basslines, skittering hi-hats, and haunting, atmospheric sounds. UK dubstep focuses on creating a deep, immersive vibe, often with a restrained, almost meditative feel. Early pioneers like Skream, Benga, and Digital Mystikz helped establish dubstep as a defining sound in UK electronic music, influencing genres like grime and later styles like brostep.",
                         "example": "Skream - Midnight Request Line",
                         "spotify_track_id": "6saiu3uHwIpzPl8GKtRRNR",
+                        "key_artists": [
+                            {
+                                "name": "Skream",
+                                "url": "https://open.spotify.com/artist/2jbP92oFLWqPqogflK1wlW"
+                            },
+                            {
+                                "name": "Mala",
+                                "url": "https://open.spotify.com/artist/7qJkLxM6Q2meXrGz2cUkpP"
+                            },
+                            {
+                                "name": "Coki",
+                                "url": "https://open.spotify.com/artist/06s35sbFfZJUEwFjAaZfiW"
+                            }
+                        ],
                         "substyles": [
                             {
                                 "name": "Dark Dubstep",
                                 "description": "A subgenre that leans heavily into ominous and eerie atmospheres, often drawing influences from ambient and drone music. Dark Dubstep uses haunting soundscapes and deep, rumbling bass to create an intense, immersive experience, often evoking a sense of foreboding.",
                                 "example": "Datsik Feat. Snoop Dogg- Smoke Bomb",
-                                "spotify_track_id": "4kl6jf0mJkkXw1rIsWnLbn"
+                                "spotify_track_id": "4kl6jf0mJkkXw1rIsWnLbn",
+                                "key_artists": [
+                                    {
+                                        "name": "Kryptic Minds",
+                                        "url": "https://open.spotify.com/artist/23LqlHZ1oiZIXBds7uq7F9"
+                                    },
+                                    {
+                                        "name": "Truth",
+                                        "url": "https://open.spotify.com/artist/2bRCIbSmgAXitACxT5ZpQy"
+                                    },
+                                    {
+                                        "name": "Biome",
+                                        "url": "https://open.spotify.com/artist/0OcXMAKkzHF1CkhqjAdOAm"
+                                    }
+                                ]
                             },
                             {
                                 "name": "Wonky Dubstep",
                                 "description": "Known for its off-kilter, irregular rhythms and syncopation, Wonky Dubstep breaks from the traditional straight beats of dubstep. This substyle often employs unusual time signatures and quirky bass patterns, resulting in a more unpredictable and experimental sound.",
                                 "example": "Rusko - Jahova",
                                 "spotify_track_id": "37YRoUFDB4AC86jeuG3e8I",
+                                "key_artists": [
+                                    {
+                                        "name": "Rusko",
+                                        "url": "https://open.spotify.com/artist/4BTcOR2hEQZQQL5AMo5u10"
+                                    },
+                                    {
+                                        "name": "Joker",
+                                        "url": "https://open.spotify.com/artist/0ZNfJyThuy6vLnPEpPaJdf"
+                                    },
+                                    {
+                                        "name": "Rustie",
+                                        "url": "https://open.spotify.com/artist/6YGu0Rv2120wkc4AXZSGgl"
+                                    }
+                                ],
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/Wonky_(genre)"
                             }
                         ]
@@ -2857,19 +3725,61 @@
                         "description": "Riddim is a subgenre of dubstep that focuses on repetitive, rhythmic bass patterns and minimalistic, syncopated beats. Emerging in the mid-2010s, riddim is characterized by its slower tempos (usually around 140 BPM) and 'wobbly' basslines that create a hypnotic, groove-driven sound. It often features stripped-back production, with fewer melodic elements, letting the bass and rhythm take center stage. Known for its heavy, deep drops and head-nodding flow, riddim has a darker, more underground vibe than mainstream dubstep, resonating in the bass music scene and frequently played in dubstep and EDM festivals.",
                         "example": "Subtronics - Wook Laser",
                         "spotify_track_id": "3qavwet0IxIpsUqKQ6vlSj",
+                        "key_artists": [
+                            {
+                                "name": "Subtronics",
+                                "url": "https://open.spotify.com/artist/3NJ94iuAmmMjbszODYT6pO"
+                            },
+                            {
+                                "name": "Boogie T",
+                                "url": "https://open.spotify.com/artist/4zlw0jXUzd4dRcqI3Y1OiY"
+                            },
+                            {
+                                "name": "Ganja White Night",
+                                "url": "https://open.spotify.com/artist/1a6oIpEh4DGgaqgWg5xwd3"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Riddim_(genre)",
                         "substyles": [
                             {
                                 "name": "Heavy Riddim",
                                 "description": "A more intense and aggressive take on Riddim, Heavy Riddim is defined by distorted basslines and a raw, forceful sound design. It focuses on delivering powerful, earth-shaking drops that make it stand out in the heavier end of bass music.",
                                 "example": "Svdden - Behemoth",
-                                "spotify_track_id": "5XFNxeWhhpNc0175JKydLD"
+                                "spotify_track_id": "5XFNxeWhhpNc0175JKydLD",
+                                "key_artists": [
+                                    {
+                                        "name": "Marauda",
+                                        "url": "https://open.spotify.com/artist/3YLUvWzk9eBm1WrHFlZxM4"
+                                    },
+                                    {
+                                        "name": "Svdden Death",
+                                        "url": "https://open.spotify.com/artist/2u01kCKA5wDvvztuH8lyT0"
+                                    },
+                                    {
+                                        "name": "Trampa",
+                                        "url": "https://open.spotify.com/artist/6UCXzCbIzKfGAk8613o8qt"
+                                    }
+                                ]
                             },
                             {
                                 "name": "Melodic Riddim",
                                 "description": "Melodic Riddim combines the signature repetitive structure of Riddim with more melodic and atmospheric elements. The result is a smoother, yet still rhythmically driven sound that retains the hypnotic qualities of the genre while adding more emotional depth.",
                                 "example": "Virtual Riot - Energy Drink",
-                                "spotify_track_id": "3507Teuh1vj1L5eMAJj80O"
+                                "spotify_track_id": "3507Teuh1vj1L5eMAJj80O",
+                                "key_artists": [
+                                    {
+                                        "name": "Virtual Riot",
+                                        "url": "https://open.spotify.com/artist/4FXGRMSHh2JjHxVwS8dhH1"
+                                    },
+                                    {
+                                        "name": "Chime",
+                                        "url": "https://open.spotify.com/artist/3hMTYaexWgGkXqvbkt6EIS"
+                                    },
+                                    {
+                                        "name": "Ace Aura",
+                                        "url": "https://open.spotify.com/artist/5o2KBzYUFierWmBhSemAhq"
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -2878,18 +3788,60 @@
                         "description": "Deep Dubstep is a subgenre known for its focus on deep, sub-bass frequencies and a slower tempo. While it retains the essential characteristics of dubstep, such as its syncopated rhythms, it places a greater emphasis on the low-end frequencies, creating a heavy, immersive sound. Tracks in this style often have a laid-back, atmospheric vibe, with minimalistic arrangements that allow the bass to resonate more profoundly. It’s a genre that invites listeners to lose themselves in the depths of the sound, often playing with the space between beats.",
                         "example": "Mala - Changes",
                         "spotify_track_id": "0PfR5qCmwobwbpXL3vaqPm",
+                        "key_artists": [
+                            {
+                                "name": "Mala",
+                                "url": "https://open.spotify.com/artist/7qJkLxM6Q2meXrGz2cUkpP"
+                            },
+                            {
+                                "name": "Kahn",
+                                "url": "https://open.spotify.com/artist/6X0Kd3L9wHWDzWU7cOgjW3"
+                            },
+                            {
+                                "name": "Goth-Trad",
+                                "url": "https://open.spotify.com/artist/133pV477MVSsj1MHgsrIc9"
+                            }
+                        ],
                         "substyles": [
                             {
                                 "name": "Dub Techno Dubstep",
                                 "description": "This substyle blends the spaciousness and deep bass of dub techno with the rhythmic elements of dubstep. Dub Techno Dubstep tracks often feature a slower pace and smooth, dubby textures, creating an atmospheric sound that focuses on mood and immersion.",
                                 "example": "Joy Orbison - Hyph Mngo",
-                                "spotify_track_id": "2BTjb4H2FLh2e5zx3nI6Ul"
+                                "spotify_track_id": "2BTjb4H2FLh2e5zx3nI6Ul",
+                                "key_artists": [
+                                    {
+                                        "name": "Basic Channel",
+                                        "url": "https://open.spotify.com/artist/37um1uxI92g4ll61LzrtB5"
+                                    },
+                                    {
+                                        "name": "Rhythm & Sound",
+                                        "url": "https://open.spotify.com/artist/5e5DeHuHjgcj0DbdrdYKMo"
+                                    },
+                                    {
+                                        "name": "Deepchord",
+                                        "url": "https://open.spotify.com/artist/45g23Apmqo2x4obM7LjmpW"
+                                    }
+                                ]
                             },
                             {
                                 "name": "Halftime Dubstep",
                                 "description": "Halftime Dubstep slows down the tempo and often employs a half-time drum pattern, giving the tracks a more relaxed, hypnotic feel. This substyle focuses on deep rhythms, with space for the bass to really breathe, creating a more chilled but still impactful listening experience.",
                                 "example": "Ivy Lab - Magikess",
-                                "spotify_track_id": "3zrRpBXFQVMPpZwrSOD8Wf"
+                                "spotify_track_id": "3zrRpBXFQVMPpZwrSOD8Wf",
+                                "key_artists": [
+                                    {
+                                        "name": "Ivy Lab",
+                                        "url": "https://open.spotify.com/artist/3VXCvo9Sr0hbZ4mk6VOKBs"
+                                    },
+                                    {
+                                        "name": "Alix Perez",
+                                        "url": "https://open.spotify.com/artist/4e6pQ61gYReORJoXcrQH1Z"
+                                    },
+                                    {
+                                        "name": "Eprom",
+                                        "url": "https://open.spotify.com/artist/2c2X6dr1PHctH24BxNOjHi"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -2900,6 +3852,20 @@
                 "description": "Future bass is a subgenre of electronic dance music known for its bright, uplifting sound and emotional, melodic focus. Originating in the early 2010s, future bass typically features lush, modulated synths, side-chained chords, and smooth, pitch-shifting basslines. The genre often incorporates catchy, pop-influenced melodies and vibrant, high-energy drops, creating an atmospheric yet energetic feel. Future bass tracks are usually set around 140 BPM but can vary, and they emphasize a “wavy” or “bouncy” sound that feels dynamic and uplifting. Artists like Flume and Marshmello helped popularize future bass, which has since become a favorite in both pop and electronic dance music for its feel-good, euphoric vibes.",
                 "example": "Flume - Never Be Like You feat. Kai",
                 "spotify_track_id": "476j7IDRIDRvv1Xu71EVc8",
+                "key_artists": [
+                    {
+                        "name": "Flume",
+                        "url": "https://open.spotify.com/artist/6nxWCVXbOlEVRexSbLsTer"
+                    },
+                    {
+                        "name": "San Holo",
+                        "url": "https://open.spotify.com/artist/0jNDKefhfSbLR9sFvcPLHo"
+                    },
+                    {
+                        "name": "Louis The Child",
+                        "url": "https://open.spotify.com/artist/7wg1qvie3KqDNQbAkTdbX0"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Future_bass",
                 "substyles": [
                     {
@@ -2907,6 +3873,20 @@
                         "description": "Kawaii Future Bass is a subgenre of future bass known for its playful, cute, and whimsical sound, often influenced by Japanese pop culture, including J-Pop and anime music. This style combines bright, uplifting melodies with energetic basslines and colorful synths. The use of high-pitched vocal samples or chopped vocals adds to the genre’s charm, creating an atmosphere that’s joyful and lighthearted. With its vibrant and emotive tone, Kawaii Future Bass is perfect for evoking feelings of positivity, fun, and youthful energy.",
                         "example": "Porter Robinson - Flicker",
                         "spotify_track_id": "6BivCuyKJtgLa9ooFsvUoZ",
+                        "key_artists": [
+                            {
+                                "name": "Snail's House",
+                                "url": "https://open.spotify.com/artist/29O9ZebFa65aIEvMaW5pQY"
+                            },
+                            {
+                                "name": "Yunomi",
+                                "url": "https://open.spotify.com/artist/2j00CVYTPx6q9ANbmB2keb"
+                            },
+                            {
+                                "name": "Wave Racer",
+                                "url": "https://open.spotify.com/artist/147jymD5t0TCXW0DbaXry0"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Future_bass"
                     }
                 ]
@@ -2916,6 +3896,20 @@
                 "description": "Jungle is a high-energy subgenre of electronic dance music that emerged in the UK in the early 1990s, blending elements of reggae, dancehall, and hip-hop with fast, breakbeat rhythms. Known for its rapid tempos (usually 160-180 BPM), jungle is characterized by heavily syncopated, chopped-up drum patterns, often using the iconic “Amen break” sample, along with deep, rolling basslines and reggae-inspired vocal samples. Jungle’s gritty, raw sound and complex rhythms make it intense and immersive, laying the groundwork for drum and bass and influencing much of the UK’s rave and bass music scenes.",
                 "example": "Shy FX - Original Nuttah 25",
                 "spotify_track_id": "55K24vPjLgAX8yLAq8fErj",
+                "key_artists": [
+                    {
+                        "name": "Shy FX",
+                        "url": "https://open.spotify.com/artist/5oDtp2FC8VqBjTx1aT4P5j"
+                    },
+                    {
+                        "name": "Congo Natty",
+                        "url": "https://open.spotify.com/artist/1NngQUSMHaauD7UjKuaH2W"
+                    },
+                    {
+                        "name": "General Levy",
+                        "url": "https://open.spotify.com/artist/2bHgAaZ7qbGbMMXwAQm48I"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Jungle_music",
                 "substyles": [
                     {
@@ -2923,13 +3917,41 @@
                         "description": "Ragga Jungle blends the rhythmic energy of jungle music with the dub and vocal stylings of reggae and dancehall. Characterized by fast-paced breakbeats, deep basslines, and the incorporation of reggae's offbeat rhythms and MC chants, Ragga Jungle creates a vibrant, energetic atmosphere. This fusion combines the raw intensity of jungle with the laid-back, soulful vibe of reggae, often bringing dancehall-style vocal samples and dub echoes into the mix. The result is a dynamic genre that’s perfect for both the dancefloor and relaxed listening.",
                         "example": "Congo Natty - Junglist",
                         "spotify_track_id": "1sap7FwEuCQqFv3bOpnh6A",
+                        "key_artists": [
+                            {
+                                "name": "Congo Natty",
+                                "url": "https://open.spotify.com/artist/1NngQUSMHaauD7UjKuaH2W"
+                            },
+                            {
+                                "name": "Top Cat",
+                                "url": "https://open.spotify.com/artist/3QR3QV1qQuTpcy1DIqOw9j"
+                            },
+                            {
+                                "name": "Tenor Fly",
+                                "url": "https://open.spotify.com/artist/37uswdRBtJ0qyXas292Uo0"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Jungle_music"
                     },
                     {
                         "name": "Jungle Terror",
                         "description": "Jungle Terror is an intense fusion of hardstyle, big room house, and trap music, characterized by heavy bass, aggressive drops, and tribal-inspired rhythms. Known for its high energy and raw, pounding beats, Jungle Terror often incorporates distinctive, percussive elements that evoke a primal, energetic feel. The genre combines the festival-ready atmosphere of big room house with the hard-hitting power of trap, creating a sound that’s designed to dominate the dancefloor with its driving, relentless rhythm and bold sound design.",
                         "example": "Wiwek - Angry Birdz",
-                        "spotify_track_id": "0zPmHSGQgXAdaf31cE7JLU"
+                        "spotify_track_id": "0zPmHSGQgXAdaf31cE7JLU",
+                        "key_artists": [
+                            {
+                                "name": "Wiwek",
+                                "url": "https://open.spotify.com/artist/4b2v3PBjJJCF2BX14lIAsT"
+                            },
+                            {
+                                "name": "Skrillex",
+                                "url": "https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX"
+                            },
+                            {
+                                "name": "Valentino Khan",
+                                "url": "https://open.spotify.com/artist/0deIjoDjl9g9Zpw0sCIOHh"
+                            }
+                        ]
                     }
                 ]
             },
@@ -2937,13 +3959,41 @@
                 "name": "Midtempo bass",
                 "description": "Midtempo Bass is a genre that combines elements of dubstep, electro house, and techno, typically sitting at a tempo range of 100-125 BPM. Known for its deep, punchy basslines and atmospheric sound design, this genre creates a dark, moody vibe that remains energetic without the faster tempos of other electronic styles. Midtempo Bass often features complex synth patterns, spacey melodies, and heavy drops, balancing between the heaviness of bass music and the groove of slower tempo rhythms. It’s perfect for those looking for something that hits hard without overwhelming the listener.",
                 "example": "REZZ - Edge",
-                "spotify_track_id": "478zKvO5SlAMJ1dNSn9Dcu"
+                "spotify_track_id": "478zKvO5SlAMJ1dNSn9Dcu",
+                "key_artists": [
+                    {
+                        "name": "Rezz",
+                        "url": "https://open.spotify.com/artist/4aKdmOXdUKX07HVd3sGgzw"
+                    },
+                    {
+                        "name": "1788-L",
+                        "url": "https://open.spotify.com/artist/7oB4pCSzvvRtZka6DxXUfN"
+                    },
+                    {
+                        "name": "K?d",
+                        "url": "https://open.spotify.com/artist/714O3xvBNiclo82vxBn8Bf"
+                    }
+                ]
             },
             {
                 "name": "Trap (EDM)",
                 "description": "Trap (EDM) is an electronic music style inspired by hip-hop trap, featuring hard-hitting basslines, rapid hi-hats, and layered synthesizers. With a tempo typically around 140 BPM, this genre emphasizes aggressive drops, high-energy beats, and catchy melodies. Trap (EDM) brings the rhythmic elements of hip-hop into the world of electronic dance music, creating a sound that is both punchy and melodic. It’s known for its festival appeal, with a focus on massive drops and anthemic buildups, making it a favorite in high-energy environments like clubs and large festivals.",
                 "example": "RL Grime - Core",
                 "spotify_track_id": "097ivRfD5gBHjqhwEMifOT",
+                "key_artists": [
+                    {
+                        "name": "RL Grime",
+                        "url": "https://open.spotify.com/artist/5eIbEEQnDM8yuDVB0bimSP"
+                    },
+                    {
+                        "name": "Baauer",
+                        "url": "https://open.spotify.com/artist/25fqWEebq6PoiGQIHIrdtv"
+                    },
+                    {
+                        "name": "Yellow Claw",
+                        "url": "https://open.spotify.com/artist/47z7ZrgFoBvVpCnElCE3Zh"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/EDM_trap_music"
             },
             {
@@ -2951,6 +4001,20 @@
                 "description": "UK bass is an umbrella term for a variety of bass-heavy electronic music styles that emerged from the UK in the late 2000s, drawing influences from genres like dubstep, garage, grime, and drum and bass. Known for its deep, powerful basslines and diverse tempos, UK bass often incorporates syncopated rhythms, heavy sub-bass, and elements from house and techno. It’s less about a specific tempo or structure and more about the emphasis on bass and groove, blending elements from various UK underground scenes. UK bass has become a staple in club music, appealing to listeners with its innovative, genre-blurring sound and versatility.",
                 "example": "Burial - Archangel",
                 "spotify_track_id": "6evpAJCR5GeeHDGgv3aXb3",
+                "key_artists": [
+                    {
+                        "name": "Burial",
+                        "url": "https://open.spotify.com/artist/0uCCBpmg6MrPb1KY2msceF"
+                    },
+                    {
+                        "name": "Jamie xx",
+                        "url": "https://open.spotify.com/artist/7A0awCXkE1FtSU8B0qwOJQ"
+                    },
+                    {
+                        "name": "SBTRKT",
+                        "url": "https://open.spotify.com/artist/1O10apSOoAPjOu6UhUNmeI"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/UK_bass"
             },
             {
@@ -2958,13 +4022,41 @@
                 "description": "Wave is a genre that emerged in the mid-2010s from the underground internet scene, blending elements of trap, grime, and emo. Known for its emotional melodies and heavy bass, it reflects the emotional depth and personal struggles of its creators. Wave’s connection to internet subcultures, particularly on platforms like SoundCloud and Bandcamp, helped the genre gain traction among young, digitally native listeners. The genre speaks to themes of isolation, loss, and longing, and has become a vehicle for introspective and vulnerable expression. Its sound is often dark and atmospheric, capturing the tension between melancholy and empowerment, resonating with a generation confronting emotional and societal challenges in a hyper-connected, often isolating digital world.",
                 "example": "Klimeks - Eternally Yours",
                 "spotify_track_id": "3ju6S1v9i1s9hzOm7hMRQr",
+                "key_artists": [
+                    {
+                        "name": "Skeler",
+                        "url": "https://open.spotify.com/artist/7ks4LdnBvp6HUsmVJiKgsB"
+                    },
+                    {
+                        "name": "Klimeks",
+                        "url": "https://open.spotify.com/artist/5JQljNQvDpk1hhKpJHpwNU"
+                    },
+                    {
+                        "name": "Barnacle Boi",
+                        "url": "https://open.spotify.com/artist/6psDObCnL4BfpwqYzE0Dzu"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Wave_music",
                 "substyles": [
                     {
                         "name": "Hardwave",
                         "description": "Hardwave is a more aggressive subgenre of wave that intensifies the genre’s emotional depth with faster tempos and heavier, more energetic beats. It retains wave’s signature melancholic melodies but amplifies them with bass-driven production, making the genre more club-friendly and intense. Hardwave reflects the growing trend of blending aggression with emotional expression, appealing to listeners who seek a cathartic release through music. The genre’s evolution mirrors broader cultural shifts in bass music, where artists are pushing sonic boundaries to capture both vulnerability and strength. Hardwave is a product of digital music communities that embrace both introspection and high-energy, visceral experiences, becoming a space where emotional tension meets powerful, confrontational sound.",
                         "example": "Skeler - Tel Aviv",
-                        "spotify_track_id": "45KsTd0ZqKlgw0fNc8oyC5"
+                        "spotify_track_id": "45KsTd0ZqKlgw0fNc8oyC5",
+                        "key_artists": [
+                            {
+                                "name": "Skeler",
+                                "url": "https://open.spotify.com/artist/7ks4LdnBvp6HUsmVJiKgsB"
+                            },
+                            {
+                                "name": "Deadcrow",
+                                "url": "https://open.spotify.com/artist/4ufkY8hmhmYl4aCnzv3dLE"
+                            },
+                            {
+                                "name": "Heimanu",
+                                "url": "https://open.spotify.com/artist/01mvWXVNW6Gz5Oxf6bQrtM"
+                            }
+                        ]
                     }
                 ]
             }
@@ -2975,6 +4067,20 @@
         "description": "Breakbeat is a genre of electronic music that features syncopated drum patterns, typically derived from sampled drum breaks in funk, hip-hop, or soul music. It emphasizes irregular rhythms and offbeat grooves, often used as a foundation for genres like drum and bass, jungle, and breakbeat hardcore.",
         "example": "The Future Sound Of London - Papua New Guinea",
         "spotify_track_id": "5zh23oMbATQlWbwEe5U0KG",
+        "key_artists": [
+            {
+                "name": "The Prodigy",
+                "url": "https://open.spotify.com/artist/4k1ELeJKT1ISyDv8JivPpB"
+            },
+            {
+                "name": "Fatboy Slim",
+                "url": "https://open.spotify.com/artist/4Y7tXHSEejGu1vQ9bwDdXW"
+            },
+            {
+                "name": "The Chemical Brothers",
+                "url": "https://open.spotify.com/artist/1GhPHrq36VKCY3ucVaZCfo"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/Breakbeat",
         "substyles": [
             {
@@ -2982,6 +4088,20 @@
                 "description": "Acid breaks is a subgenre of electronic dance music that fuses the squelchy, acid-inspired sounds of the Roland TB-303 synthesizer with breakbeat rhythms. Emerging in the 1990s, acid breaks combines the funky, syncopated beats of breakbeat with the hypnotic, looping basslines and trippy effects characteristic of acid house. Tracks often have a gritty, raw energy, featuring complex drum patterns, distorted synths, and psychedelic elements that create an intense, danceable groove. Acid breaks is popular in underground scenes, known for its high-energy feel and the fusion of acid’s otherworldly sounds with breakbeat’s rhythmic complexity.",
                 "example": "Plump DJs - The Push",
                 "spotify_track_id": "6GO7a7NDTTT8noTZXYn602",
+                "key_artists": [
+                    {
+                        "name": "Plump DJs",
+                        "url": "https://open.spotify.com/artist/1daC6WKGAm52YZbL5G7zYg"
+                    },
+                    {
+                        "name": "Stanton Warriors",
+                        "url": "https://open.spotify.com/artist/7GeAzBsalYANXTi1ReOm1R"
+                    },
+                    {
+                        "name": "Uberzone",
+                        "url": "https://open.spotify.com/artist/6HG2HjU2Q6ePNE39V71s7G"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Breakbeat#Acid_breaks"
             },
             {
@@ -2989,6 +4109,20 @@
                 "description": "Baltimore club is a high-energy genre of electronic dance music that originated in Baltimore, Maryland, in the late 1980s. Known for its distinctive 'boom-boom-clap' beat pattern, Baltimore club combines elements of hip-hop, house, and breakbeat, typically at a tempo of around 130 BPM. The genre often features chopped-up vocal samples, repetitive, catchy hooks, and bass-heavy production, creating a raw, infectious groove designed for dance floors. Baltimore club tracks are frequently simple and short, focusing on rhythm and movement, and the genre has become influential in regional dance scenes and beyond for its fun, fast-paced style and gritty, DIY aesthetic.",
                 "example": "Rod Lee - Dance My Pain Away",
                 "spotify_track_id": "2sZrEIyHRqzEB4sBw8X9Jh",
+                "key_artists": [
+                    {
+                        "name": "Rod Lee",
+                        "url": "https://open.spotify.com/artist/6h8bL2vqsdM7kLYjsHuU7w"
+                    },
+                    {
+                        "name": "DJ Technics",
+                        "url": "https://open.spotify.com/artist/6hjL3Bio8qtNcPTCpuIlhG"
+                    },
+                    {
+                        "name": "KW Griff",
+                        "url": "https://open.spotify.com/artist/0c93ipDYZUvYQEKgAs1Vfu"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Baltimore_club",
                 "substyles": [
                     {
@@ -2996,13 +4130,41 @@
                         "description": "Jersey club is an energetic, bass-heavy genre of dance music that originated in New Jersey in the early 2000s. Known for its fast, bouncy rhythms (typically around 130-140 BPM), Jersey club features a 'kick pattern' where heavy bass kicks are arranged in a syncopated, stuttering style. The genre often includes chopped-up vocal samples, rapid loops, and call-and-response elements, creating a playful, high-energy feel. Jersey club draws from Baltimore club music but incorporates its own unique dance-focused elements, such as signature 'bed squeak' samples. It’s popular in dance scenes and social media for its infectious, rhythmic grooves and has a strong DIY and party-oriented culture.",
                         "example": "DJ Sliink - Vibrate",
                         "spotify_track_id": "7gorDn4T7LPOFDHzKBvkNo",
+                        "key_artists": [
+                            {
+                                "name": "DJ Sliink",
+                                "url": "https://open.spotify.com/artist/0t9dGS12PMZmiJiZa9vpyk"
+                            },
+                            {
+                                "name": "UNIIQU3",
+                                "url": "https://open.spotify.com/artist/5aR8qSaApKChlZvzB0Jfpx"
+                            },
+                            {
+                                "name": "DJ Tameil",
+                                "url": "https://open.spotify.com/artist/7jpsm3UOVdNAI0GK2EbzV1"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Jersey_club"
                     },
                     {
                         "name": "Philly club",
                         "description": "Philly club is a genre of electronic dance music that originated in Philadelphia in the late 1990s and early 2000s. Similar to Baltimore and Jersey club, Philly club features fast-paced, bass-heavy beats, but it’s distinguished by its use of syncopated rhythms, heavy drum kicks, and a signature “stuttering” vocal style. The genre often incorporates chopped-up and pitch-shifted vocal samples, creating a playful, energetic vibe that drives the dance floor. Philly club music tends to have a more soulful, deeper groove compared to its counterparts, with influences from house and hip-hop. The genre is known for its emphasis on rhythm and danceability, making it a staple in Philly’s club scene.",
                         "example": "DJ Sega - Colours",
-                        "spotify_track_id": "10w5UHG7SqkVmy0XyN3p1F"
+                        "spotify_track_id": "10w5UHG7SqkVmy0XyN3p1F",
+                        "key_artists": [
+                            {
+                                "name": "DJ Sega",
+                                "url": "https://open.spotify.com/artist/2eM6bQmRCWyLYk1MVcHw9i"
+                            },
+                            {
+                                "name": "DJ Delish",
+                                "url": "https://open.spotify.com/artist/1Dh6pMtqj1w0d5DsNm7Rfd"
+                            },
+                            {
+                                "name": "Diamond Kuts",
+                                "url": "https://open.spotify.com/artist/2Q0v7CWY0hXuqRX8NZ6REp"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3011,19 +4173,61 @@
                 "description": "Big beat is a genre of electronic music that emerged in the mid-1990s, characterized by its blend of heavy, breakbeat rhythms, distorted basslines, and rock-influenced elements. Big beat tracks often feature upbeat, looped drum samples, funky basslines, and the incorporation of elements from genres like hip-hop, industrial, and acid house. The genre is known for its energetic, aggressive sound and its ability to cross over into mainstream music, often featuring catchy, sampled vocal snippets and driving, rhythmic intensity. Artists like The Chemical Brothers, Fatboy Slim, and The Prodigy helped popularize big beat in the 90s, making it a defining sound in the era of rave and alternative dance music.",
                 "example": "The Chemical Brothers - Hey Boy Hey Girl",
                 "spotify_track_id": "7kXmJwrZGIhDaLT9sNo3ut",
+                "key_artists": [
+                    {
+                        "name": "The Chemical Brothers",
+                        "url": "https://open.spotify.com/artist/1GhPHrq36VKCY3ucVaZCfo"
+                    },
+                    {
+                        "name": "Fatboy Slim",
+                        "url": "https://open.spotify.com/artist/4Y7tXHSEejGu1vQ9bwDdXW"
+                    },
+                    {
+                        "name": "The Crystal Method",
+                        "url": "https://open.spotify.com/artist/5eKLa1xyHLq8ERWmT1CRHj"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Big_beat",
                 "substyles": [
                     {
                         "name": "Chemical Breaks",
                         "description": "Chemical Breaks is a subgenre of big beat music closely associated with The Chemical Brothers, characterized by a fusion of psychedelic rock influences and electronic breakbeats. Emerging in the 1990s, this style blends distorted synths, funky basslines, and experimental soundscapes with a high-energy rhythmic foundation, often creating a hypnotic, psychedelic atmosphere. Chemical Breaks helped define the big beat movement by taking rock and acid house influences and fusing them with innovative electronic production. The genre’s unique sound contributed to the rise of crossover acts, appealing to both electronic music enthusiasts and rock listeners. With its mind-bending, bass-heavy beats and genre-blurring approach, Chemical Breaks represents the experimental spirit of the late 90s club scene and electronic music culture.",
                         "example": "The Chemical Brothers - Block Rockin' Beats",
-                        "spotify_track_id": "1FNvrp5K02oThumS6gllzp"
+                        "spotify_track_id": "1FNvrp5K02oThumS6gllzp",
+                        "key_artists": [
+                            {
+                                "name": "The Chemical Brothers",
+                                "url": "https://open.spotify.com/artist/1GhPHrq36VKCY3ucVaZCfo"
+                            },
+                            {
+                                "name": "Propellerheads",
+                                "url": "https://open.spotify.com/artist/3Z7thZHrtFvqp8OpPffPKp"
+                            },
+                            {
+                                "name": "Bentley Rhythm Ace",
+                                "url": "https://open.spotify.com/artist/28EZh7WvdbWwfOrf5lkvCk"
+                            }
+                        ]
                     },
                     {
                         "name": "Funky Breaks",
                         "description": "Funky Breaks is a subgenre that merges the infectious rhythms of big beat with the groove-laden, syncopated basslines of funk. This genre often incorporates live instrumentation, with elements such as horns, guitars, and drums, alongside electronic beats and sampling. Funky Breaks retains the energetic, sample-heavy foundations of big beat but infuses them with a more organic, danceable feel, harking back to the golden era of funk and soul music. Artists like Fatboy Slim popularized this fusion, creating tracks that were not only club anthems but also cross-genre bridges between dance music and funk. The genre's upbeat tempo and rhythmic complexity made it perfect for the lively, party atmosphere of 90s club scenes and festivals, where the emphasis was on movement and energy. Funky Breaks remains a timeless genre, combining the best of old-school grooves with the forward-thinking energy of modern dance music.",
                         "example": "Fatboy Slim - The Rockafeller Skank",
-                        "spotify_track_id": "18MSYWuOIDb8YhBHOjfjkX"
+                        "spotify_track_id": "18MSYWuOIDb8YhBHOjfjkX",
+                        "key_artists": [
+                            {
+                                "name": "Fatboy Slim",
+                                "url": "https://open.spotify.com/artist/4Y7tXHSEejGu1vQ9bwDdXW"
+                            },
+                            {
+                                "name": "Gramatik",
+                                "url": "https://open.spotify.com/artist/179BpmLkQCRIoU68Co80f5"
+                            },
+                            {
+                                "name": "A. Skillz",
+                                "url": "https://open.spotify.com/artist/1mCTvKCE9hqsj2CnX81iUM"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3032,6 +4236,20 @@
                 "description": "Breakbeat hardcore is a genre of electronic dance music that originated in the early 1990s in the UK, blending elements of hardcore techno and breakbeat. Known for its fast, energetic rhythms (typically around 150-170 BPM), breakbeat hardcore features breakbeat drum patterns combined with rave-style synths, heavy basslines, and often samples from hip-hop, jungle, and early acid house. The genre is characterized by its intense, high-energy sound, with uplifting melodies and euphoria-driven vibes, often accompanied by fast-paced, chopped-up vocal samples. Breakbeat hardcore played a significant role in the development of the rave scene and laid the groundwork for later subgenres like jungle and drum and bass.",
                 "example": "The Prodigy - Charly",
                 "spotify_track_id": "02G5u4AcbGhlfSkHzGCpmN",
+                "key_artists": [
+                    {
+                        "name": "The Prodigy",
+                        "url": "https://open.spotify.com/artist/4k1ELeJKT1ISyDv8JivPpB"
+                    },
+                    {
+                        "name": "SL2",
+                        "url": "https://open.spotify.com/artist/30TgkkBf0juP46UUwEYawn"
+                    },
+                    {
+                        "name": "Altern-8",
+                        "url": "https://open.spotify.com/artist/6RedK3o51NbUJuJxXlT4kj"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Breakbeat_hardcore",
                 "substyles": [
                     {
@@ -3039,13 +4257,41 @@
                         "description": "Darkcore is a subgenre of breakbeat hardcore that emerged in the early 1990s, known for its darker, more atmospheric qualities. Unlike the upbeat, euphoric energy of its parent genre, darkcore incorporates brooding, often sinister tones, with slower rhythms and heavier basslines, creating a more intense, immersive sound. Darkcore tracks typically feature eerie synths, haunting melodies, and a more melancholic atmosphere, drawing from elements of industrial music, acid house, and even early techno. This subgenre's dark, brooding aesthetic influenced the evolution of genres like drum and bass and jungle, which would later adopt its atmospheric and bass-heavy characteristics. Darkcore provided a stark contrast to the uplifting vibes of breakbeat hardcore, offering a more moody and immersive experience for the rave scene.",
                         "example": "2 Bad Mice - Bombscare",
                         "spotify_track_id": "2AUYC44g0viKK22y9JA1eh",
+                        "key_artists": [
+                            {
+                                "name": "Metalheadz",
+                                "url": "https://open.spotify.com/artist/2SYqJ3uDLLXZNyZdLKBy4M"
+                            },
+                            {
+                                "name": "Goldie",
+                                "url": "https://open.spotify.com/artist/2SYqJ3uDLLXZNyZdLKBy4M"
+                            },
+                            {
+                                "name": "Doc Scott",
+                                "url": "https://open.spotify.com/artist/1cuov4jcw3lXOvCANG7Kg4"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Darkcore"
                     },
                     {
                         "name": "Hardcore breaks",
                         "description": "Hardcore Breaks is a high-energy fusion of breakbeat and hardcore techno, characterized by fast tempos and aggressive sound design. With tempos often reaching 160 BPM and beyond, hardcore breaks combines the raw, pounding beats of hardcore techno with the rhythmic, syncopated drum patterns of breakbeat, resulting in a relentless, forward-driving sound. This subgenre emphasizes raw, distorted basslines, abrasive synths, and fast-paced, stuttering vocal samples, making it one of the most intense expressions of 1990s rave music. Hardcore breaks evolved out of the need for harder, more energetic tracks on the dance floor, and it played a significant role in pushing the boundaries of early electronic music, eventually influencing harder styles like hardstyle and gabber. Its aggressive energy and raw intensity made it a staple for rave-goers seeking a more adrenaline-fueled experience.",
                         "example": "Omni Trio - Renegade Snares",
-                        "spotify_track_id": "4M04cLgZVSQq97IG2Uh2NE"
+                        "spotify_track_id": "4M04cLgZVSQq97IG2Uh2NE",
+                        "key_artists": [
+                            {
+                                "name": "DJ Seduction",
+                                "url": "https://open.spotify.com/artist/3QCLS2hkq3jpkJuPmJZHyD"
+                            },
+                            {
+                                "name": "Ramos",
+                                "url": "https://open.spotify.com/artist/6FUQOJNyFVICWEvHsDciRF"
+                            },
+                            {
+                                "name": "Slipmatt",
+                                "url": "https://open.spotify.com/artist/0F71ra6iKMvn6ndmnaM2Lr"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3054,6 +4300,20 @@
                 "description": "Broken beat is a genre of electronic music that emerged in the late 1990s, primarily in the UK, blending elements of jazz, funk, and electronic dance music. It is characterized by its complex, syncopated rhythms and 'broken' drum patterns, where the beats are often fragmented or off-beat, giving the music a laid-back yet intricate feel. Broken beat features deep basslines, smooth melodies, and a fusion of live instruments (such as bass, keys, and horns) with electronic production. The genre has a soulful, groovy vibe and often includes elements of jazz improvisation, creating a smooth yet experimental sound. Artists like Bugz in the Attic and Mark de Clive-Lowe helped shape the genre, which has influenced genres like future jazz and nu-jazz.",
                 "example": "4hero - Hold It Down",
                 "spotify_track_id": "3FTiu4HXB4OFeOKBKR1kRP",
+                "key_artists": [
+                    {
+                        "name": "4hero",
+                        "url": "https://open.spotify.com/artist/1BlBZ9jQGOjmj6Zykgg43L"
+                    },
+                    {
+                        "name": "Bugz in the Attic",
+                        "url": "https://open.spotify.com/artist/3UbnYRfDPL3L74oFrJJxxv"
+                    },
+                    {
+                        "name": "IG Culture",
+                        "url": "https://open.spotify.com/artist/1aStXP3F92SgdczG1gx1Mp"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Broken_beat"
             },
             {
@@ -3061,6 +4321,20 @@
                 "description": "Nu skool breaks is a subgenre of breakbeat that emerged in the late 1990s and early 2000s, characterized by a more modern, polished sound compared to traditional breakbeat. It blends elements of electro, big beat, and progressive house with the signature breakbeat rhythms, featuring funky basslines, distorted synths, and intricate drum patterns. Nu skool breaks often incorporates more melodic elements and futuristic sound design, with a focus on creating a driving, energetic groove suitable for the dance floor. The genre is known for its high-energy, bass-heavy tracks, and artists like Stanton Warriors and Plump DJs were instrumental in its development, bridging the gap between breakbeat and more mainstream electronic dance music.",
                 "example": "Stanton Warriors - Da Antidote",
                 "spotify_track_id": "3oo5Ji6vuWLvrS2Y5PdlqK",
+                "key_artists": [
+                    {
+                        "name": "Stanton Warriors",
+                        "url": "https://open.spotify.com/artist/7GeAzBsalYANXTi1ReOm1R"
+                    },
+                    {
+                        "name": "Plump DJs",
+                        "url": "https://open.spotify.com/artist/1daC6WKGAm52YZbL5G7zYg"
+                    },
+                    {
+                        "name": "Krafty Kuts",
+                        "url": "https://open.spotify.com/artist/6Ebt7JHILWJCE7aR7JLFB2"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Nu_skool_breaks",
                 "substyles": [
                     {
@@ -3068,13 +4342,41 @@
                         "description": "Florida Breaks, a regional style of breakbeat, originated in Orlando, Florida, during the 1990s. It incorporates the fast-paced, syncopated rhythms of traditional breakbeat but with a distinctive American flavor, blending elements of electro, hip-hop, and house music. This style is known for its heavy, rolling basslines and funky, rhythm-driven beats that create a bouncy, party-ready vibe. Florida Breaks became especially popular in the US, influencing the development of the broader Nu Skool Breaks scene. It stands out for its more accessible, danceable qualities, with a focus on upbeat, groove-heavy tracks that make it a favorite in both underground clubs and larger festival environments.",
                         "example": "Dynamix II - Just Give the DJ a Break",
                         "spotify_track_id": "5PXJ9veF31ROQjDnrfge2J",
+                        "key_artists": [
+                            {
+                                "name": "DJ Icey",
+                                "url": "https://open.spotify.com/artist/6bqEoxxGlwtRXZsoAXJFzA"
+                            },
+                            {
+                                "name": "Uberzone",
+                                "url": "https://open.spotify.com/artist/6HG2HjU2Q6ePNE39V71s7G"
+                            },
+                            {
+                                "name": "Dynamix II",
+                                "url": "https://open.spotify.com/artist/1COQq82EhXTBcIc69FhE1T"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Florida_breaks"
                     },
                     {
                         "name": "Progressive breaks",
                         "description": "Progressive Breaks blends the energetic rhythms of breakbeat with the atmospheric, melodic elements of progressive house and trance. This subgenre maintains the groove-heavy characteristics of breakbeat but introduces deeper, more evolving melodies and smoother, more intricate arrangements. Progressive Breaks often features long, build-up-driven tracks, with a focus on creating a continuous, hypnotic flow on the dance floor. Its fusion of breakbeat’s rhythm and progressive music’s melodic sensibilities allows for a more expansive listening experience, appealing to fans of both genres. The genre gained popularity in the late '90s and early 2000s, with artists like Hybrid playing a key role in its development, helping to shape the sound of modern breakbeat and trance-infused dance music.",
                         "example": "Hybrid - Finished Symphony",
-                        "spotify_track_id": "7nUwU36boOFB8QL7oFeM1z"
+                        "spotify_track_id": "7nUwU36boOFB8QL7oFeM1z",
+                        "key_artists": [
+                            {
+                                "name": "Hybrid",
+                                "url": "https://open.spotify.com/artist/05lF0DUkLJqiW5o70SScyR"
+                            },
+                            {
+                                "name": "Way Out West",
+                                "url": "https://open.spotify.com/artist/3HghjRl8Mo6OJWG0WElY2z"
+                            },
+                            {
+                                "name": "BT",
+                                "url": "https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX"
+                            }
+                        ]
                     }
                 ]
             },
@@ -3082,7 +4384,21 @@
                 "name": "Psychedelic breakbeat",
                 "description": "Psychedelic Breakbeat is a fusion genre that blends the intricate rhythms of breakbeat with the hypnotic, mind-altering elements of psychedelic trance. This subgenre is characterized by its use of complex, syncopated drum patterns alongside trippy soundscapes and psychedelic effects that create an immersive, otherworldly listening experience. Tracks often incorporate distorted basslines, shimmering synths, and deep, atmospheric elements that evoke the feeling of a trance-like journey. The fusion of breakbeat’s groove-heavy, energetic rhythms with the psychedelic influence of trance makes it ideal for both introspective listening and energetic dance floors. Artists like Eat Static helped define this subgenre, bringing a more experimental and surreal edge to breakbeat by incorporating influences from both the rave and psychedelic scenes.",
                 "example": "Eat Static - Bony Incus",
-                "spotify_track_id": "5pvJ4rvoMfLFjUcl89OCeQ"
+                "spotify_track_id": "5pvJ4rvoMfLFjUcl89OCeQ",
+                "key_artists": [
+                    {
+                        "name": "Eat Static",
+                        "url": "https://open.spotify.com/artist/5NzgIP3Nss2uao20MDXavK"
+                    },
+                    {
+                        "name": "Digitalis",
+                        "url": "https://open.spotify.com/artist/2fBURuq7FrlH6z5F92mpOl"
+                    },
+                    {
+                        "name": "Hedflux",
+                        "url": "https://open.spotify.com/artist/11r65bQ3GM6XsfIkn2Dyjv"
+                    }
+                ]
             }
         ]
     },
