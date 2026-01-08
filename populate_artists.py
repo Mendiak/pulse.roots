@@ -2,9 +2,22 @@ import json
 import base64
 import requests
 import re
+import os
+from dotenv import load_dotenv
 
-CLIENT_ID = "4c30441122b046faa6e2389e6f69f8ec"
-CLIENT_SECRET = "40891f0810b24911aa001415041e63b8"
+# Load environment variables from .env file
+load_dotenv()
+
+CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
+CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
+
+# Validate that credentials are loaded
+if not CLIENT_ID or not CLIENT_SECRET:
+    raise ValueError(
+        "Missing Spotify credentials. Please create a .env file with "
+        "SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET. "
+        "See .env.example for reference."
+    )
 
 def get_spotify_token():
     auth_string = CLIENT_ID + ":" + CLIENT_SECRET
