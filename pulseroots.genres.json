@@ -4407,6 +4407,20 @@
         "description": "Chill-out is a genre of electronic music characterized by its relaxed, downtempo beats and atmospheric soundscapes, often blending elements of ambient, jazz, and lounge music. It’s designed to create a soothing and calming environment, typically played in laid-back settings or as background music.",
         "example": "Zero 7 - Destiny",
         "spotify_track_id": "27ViQppP3LZPCJl2A0w9kp",
+        "key_artists": [
+            {
+                "name": "Zero 7",
+                "url": "https://open.spotify.com/artist/14H7ag1wpQOsPPQJOD6Dqr"
+            },
+            {
+                "name": "Air",
+                "url": "https://open.spotify.com/artist/1wKDGglKV4FsFS85r2Dmpr"
+            },
+            {
+                "name": "Moby",
+                "url": "https://open.spotify.com/artist/3OsRAKCvk37zwYcnzRf5XF"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/Chill-out_music",
         "substyles": [
             {
@@ -4414,6 +4428,20 @@
                 "description": "Downtempo is a genre of electronic music characterized by slower tempos (typically between 80-110 BPM) and a relaxed, chilled-out vibe. It often features smooth, atmospheric soundscapes with elements like ambient textures, laid-back beats, melodic instrumentation, and subtle basslines. Downtempo can incorporate influences from genres like trip-hop, ambient, jazz, and funk, creating a soothing, introspective listening experience. It’s popular for background music, relaxation, and reflective moments, and is often used in cafes, lounges, or as a complement to chillout and relaxation sessions. Artists like Massive Attack, Bonobo, and Thievery Corporation are key figures in the downtempo scene.",
                 "example": "Bonobo - Black Sands",
                 "spotify_track_id": "6uoM7KHsyJsHZqBQHKjQbc",
+                "key_artists": [
+                    {
+                        "name": "Bonobo",
+                        "url": "https://open.spotify.com/artist/0cmWgDlu9CwTgxPhf403hb"
+                    },
+                    {
+                        "name": "Thievery Corporation",
+                        "url": "https://open.spotify.com/artist/25KNo5GDS6ZpLkjasaecA3"
+                    },
+                    {
+                        "name": "Morcheeba",
+                        "url": "https://open.spotify.com/artist/6bWxFw65IEJzBYjx3SxUXd"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Downtempo",
                 "substyles": [
                     {
@@ -4421,6 +4449,20 @@
                         "description": "Lo-fi Hip Hop is a genre that blends the laid-back vibes of chill-out electronica with the rhythmic elements of hip-hop, often characterized by its mellow, imperfect sound. The term 'lo-fi' refers to the deliberately rough, 'low fidelity' production, where background noise, crackling vinyl, and other analog imperfections are embraced to create a warm, nostalgic atmosphere. The music typically features relaxed, jazzy beats, smooth basslines, and soft, soulful samples, making it popular as background music for studying, relaxing, or simply unwinding. Lo-fi Hip Hop has gained immense popularity on streaming platforms, particularly in study or relaxation playlists, due to its calm, non-intrusive nature. Artists like Nujabes were pivotal in shaping the genre, creating a unique blend of hip-hop beats with soothing melodies that have become synonymous with the genre's serene, introspective mood.",
                         "example": "Nujabes - Feather",
                         "spotify_track_id": "2ej1A2Ze6P2EOW7KfIosZR",
+                        "key_artists": [
+                            {
+                                "name": "Nujabes",
+                                "url": "https://open.spotify.com/artist/3Rq3YOF9YG9YfCWD4D56RZ"
+                            },
+                            {
+                                "name": "J Dilla",
+                                "url": "https://open.spotify.com/artist/0IVcLMMbm05VIjnzPkGCyp"
+                            },
+                            {
+                                "name": "L.Dre",
+                                "url": "https://open.spotify.com/artist/6gWGD0yeQYobb2sq0LUr7k"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Lofi_hip-hop"
                     },
                     {
@@ -4428,19 +4470,61 @@
                         "description": "Nu jazz is a genre that blends elements of jazz with modern electronic music, creating a fusion of live instruments and digital production. Emerging in the late 1990s and early 2000s, nu jazz incorporates influences from genres like funk, soul, house, and ambient, while maintaining the improvisational and melodic qualities of traditional jazz. It often features smooth, groovy basslines, complex rhythms, and jazz-inspired melodies, combined with electronic effects, sampling, and synthesized sounds. The genre can range from relaxed, atmospheric tracks to more energetic, upbeat rhythms, offering a fresh take on jazz for contemporary audiences. Artists like St. Germain, The Cinematic Orchestra, and Jazzanova helped define the nu jazz sound.",
                         "example": "St Germain - Rose Rouge",
                         "spotify_track_id": "1divptdjcWXvF1aflfTQnw",
+                        "key_artists": [
+                            {
+                                "name": "St Germain",
+                                "url": "https://open.spotify.com/artist/484sZUYmnRXN84zmk3GY1n"
+                            },
+                            {
+                                "name": "The Cinematic Orchestra",
+                                "url": "https://open.spotify.com/artist/32ogthv0BdaSMPml02X9YB"
+                            },
+                            {
+                                "name": "Jazzanova",
+                                "url": "https://open.spotify.com/artist/0nTErwSOllrcUWt3knOG2T"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Nu_jazz"
                     },
                     {
                         "name": "Bossa nova chill",
                         "description": "Bossa Nova Chill is a genre that blends the smooth, syncopated rhythms of Brazilian bossa nova with modern electronic textures, creating a laid-back, relaxing atmosphere. It combines the intimate, jazzy guitar strumming and soothing vocal melodies typical of bossa nova with ambient sounds, soft synths, and subtle beats often found in chill-out and downtempo music. This fusion results in a mellow and atmospheric style that is perfect for unwinding or creating a peaceful background ambiance. The genre often retains the gentle, swaying rhythms of bossa nova while incorporating electronic elements that add depth and modernity, making it popular in lounge settings or as music for relaxation. Artists like Bebel Gilberto are known for contributing to this genre, creating a sound that feels both timeless and contemporary.",
                         "example": "Bebel Gilberto - So Nice",
-                        "spotify_track_id": "5szCBBeY4xhhCT3A399Yjd"
+                        "spotify_track_id": "5szCBBeY4xhhCT3A399Yjd",
+                        "key_artists": [
+                            {
+                                "name": "Bebel Gilberto",
+                                "url": "https://open.spotify.com/artist/6gk4ierjjSVPoZep27VfZz"
+                            },
+                            {
+                                "name": "Nouvelle Vague",
+                                "url": "https://open.spotify.com/artist/4h7NLIlg1oYdEtfQJfyto0"
+                            },
+                            {
+                                "name": "Koop",
+                                "url": "https://open.spotify.com/artist/7mW7Tv7NvywKKXqafZo0Lc"
+                            }
+                        ]
                     },
                     {
                         "name": "Lounge",
                         "description": "Lounge music is a genre that combines smooth, relaxed melodies with a laid-back, atmospheric vibe, often incorporating elements of jazz, bossa nova, and electronic music. It emerged in the mid-20th century as a form of background music in upscale bars, restaurants, and lounges, designed to create a comfortable, sophisticated ambiance without overpowering conversation. Lounge music typically features mellow tempos, soft instrumentation (such as piano, guitar, and light percussion), and soothing vocal or instrumental melodies. Over time, it has evolved to include more modern electronic influences, often blending chillout, downtempo, and ambient sounds. It remains popular for creating a calming, elegant atmosphere in social settings.",
                         "example": "Thievery Corporation - Lebanese Blonde",
                         "spotify_track_id": "6k5VMHrwv7mgPpkQSRQtQr",
+                        "key_artists": [
+                            {
+                                "name": "Lemongrass",
+                                "url": "https://open.spotify.com/artist/0988g1pgIlWAKBVf3DQ7db"
+                            },
+                            {
+                                "name": "De-Phazz",
+                                "url": "https://open.spotify.com/artist/0WLS16S6MJvMgWXrUezleN"
+                            },
+                            {
+                                "name": "Boozoo Bajou",
+                                "url": "https://open.spotify.com/artist/2I36EjIVz3vDfROgj1MfZ3"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Lounge_music"
                     }
                 ]
@@ -4450,6 +4534,20 @@
                 "description": "Trip hop is a genre of electronic music that emerged in the 1990s, blending elements of hip hop, ambient, jazz, and electronic music. Known for its moody, atmospheric sound, trip hop often features slow, laid-back beats (usually around 80-100 BPM), heavy basslines, and a mix of sampled and live instrumentation. The genre is marked by its use of melancholic melodies, atmospheric soundscapes, and often haunting or introspective vocals. Trip hop has a dark, introspective vibe, combining the rhythmic qualities of hip hop with the moodiness of ambient and experimental music. Pioneering artists like Massive Attack, Portishead, and Tricky helped define the genre, which is often associated with chillout and late-night listening.",
                 "example": "Massive Attack - Teardrop",
                 "spotify_track_id": "67Hna13dNDkZvBpTXRIaOJ",
+                "key_artists": [
+                    {
+                        "name": "Massive Attack",
+                        "url": "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+                    },
+                    {
+                        "name": "Portishead",
+                        "url": "https://open.spotify.com/artist/6liAMWkVf5LH7YR9yfFy1Y"
+                    },
+                    {
+                        "name": "Tricky",
+                        "url": "https://open.spotify.com/artist/6hhA8TKRNryM8FNzqCqdDO"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Trip_hop",
                 "substyles": [
                     {
@@ -4457,6 +4555,20 @@
                         "description": "Trip rock is a subgenre of electronic music that blends elements of trip hop with rock, creating a fusion of atmospheric beats, slow tempos, and live instrumentation. It typically features deep basslines, haunting melodies, and a mix of electronic samples alongside guitars, drums, and other traditional rock instruments. The genre maintains the introspective, melancholic vibe of trip hop, while incorporating the energy and structure of rock, often with experimental or psychedelic elements. Trip rock tracks may have a dreamy, hypnotic feel, with a focus on mood and atmosphere, making it ideal for both relaxed listening and more dynamic, emotionally charged experiences. Artists like UNKLE and The Beta Band helped define the trip rock sound, merging electronic production with rock's organic qualities.",
                         "example": "Portishead - Glory Box",
                         "spotify_track_id": "3Ty7OTBNSigGEpeW2PqcsC",
+                        "key_artists": [
+                            {
+                                "name": "UNKLE",
+                                "url": "https://open.spotify.com/artist/2nszamLjZFgu3Yx77mKxuC"
+                            },
+                            {
+                                "name": "Archive",
+                                "url": "https://open.spotify.com/artist/1Q776wzj2mrtXrNu3iH6nk"
+                            },
+                            {
+                                "name": "Bowery Electric",
+                                "url": "https://open.spotify.com/artist/6a27jEzxHDgONdmADAGcej"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Trip_rock"
                     },
                     {
@@ -4464,6 +4576,20 @@
                         "description": "Illbient is a genre of electronic music that originated in New York City in the early 1990s. It is a form of ambient music that incorporates elements of dub, hip hop, and world music, creating a gritty, urban soundscape. The term, a portmanteau of 'ill' and 'ambient,' reflects its blend of hip-hop sensibilities with atmospheric textures and dub-inflected basslines. Often described as cinematic, Illbient is closely related to trip hop, with which it is sometimes used interchangeably.",
                         "example": "DJ Spooky - Galactic Funk",
                         "spotify_track_id": "62ZtyaPFFVPEKQbCdLAScn",
+                        "key_artists": [
+                            {
+                                "name": "DJ Spooky",
+                                "url": "https://open.spotify.com/artist/1O8yrjjifkCO8txB4CxuOm"
+                            },
+                            {
+                                "name": "We",
+                                "url": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
+                            },
+                            {
+                                "name": "Byzar",
+                                "url": "https://open.spotify.com/artist/716NhGYqD1jl2wI1Qkgq36"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Illbient"
                     }
                 ]
@@ -4473,6 +4599,20 @@
                 "description": "Synthwave is a genre of electronic music that draws heavily from 1980s pop culture, blending retro synth sounds with modern electronic production. It incorporates elements of electronic dance music, movie soundtracks, and early video game music, often featuring upbeat, melodic synths, catchy basslines, and nostalgic, cinematic vibes. Synthwave aims to capture the essence of the 80s, evoking a sense of nostalgia for the decade’s aesthetic and sound, while incorporating contemporary production techniques. The genre often features uplifting, energetic melodies, with a focus on creating a neon-lit, futuristic atmosphere. Artists like Kavinsky, Perturbator, and Carpenter Brut are prominent figures in the synthwave scene.",
                 "example": "Kavinsky - Nightcall",
                 "spotify_track_id": "0U0ldCRmgCqhVvD6ksG63j",
+                "key_artists": [
+                    {
+                        "name": "Kavinsky",
+                        "url": "https://open.spotify.com/artist/0UF7XLthtbSF2Eur7559oV"
+                    },
+                    {
+                        "name": "The Midnight",
+                        "url": "https://open.spotify.com/artist/2NFrAuh8RQdQoS7iYFbckw"
+                    },
+                    {
+                        "name": "Gunship",
+                        "url": "https://open.spotify.com/artist/3PALZKWkpwjRvBsRmhlVSS"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Synthwave",
                 "substyles": [
                     {
@@ -4480,6 +4620,20 @@
                         "description": "Chillwave is a genre of electronic music that emerged in the late 2000s, characterized by its nostalgic, dreamy sound and laid-back, lo-fi production. It blends elements of synthpop, ambient, and indie pop, often featuring warm, reverb-heavy synths, smooth basslines, and relaxed, slow tempos (typically around 60-90 BPM). Chillwave often incorporates vintage or retro aesthetics, with distorted vocals, hazy soundscapes, and a focus on creating a relaxed, introspective atmosphere. The genre evokes feelings of nostalgia and escapism, often associated with summer, youth, and lazy afternoons. Artists like Washed Out, Toro y Moi, and Neon Indian are key figures in the chillwave movement.",
                         "example": "Washed Out - Feel It All Around",
                         "spotify_track_id": "4V0x90QcMh4ZxwHzEWOdtK",
+                        "key_artists": [
+                            {
+                                "name": "Washed Out",
+                                "url": "https://open.spotify.com/artist/5juOkIIy18sFw9L30syt1Z"
+                            },
+                            {
+                                "name": "Toro y Moi",
+                                "url": "https://open.spotify.com/artist/6O4EGCCb6DoIiR6B1QCQgp"
+                            },
+                            {
+                                "name": "Neon Indian",
+                                "url": "https://open.spotify.com/artist/0KydPQPUUoTNhmiHKOg5Er"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Chillwave"
                     },
                     {
@@ -4487,6 +4641,20 @@
                         "description": "Vaporwave is a genre of electronic music and aesthetic that emerged in the early 2010s, characterized by its use of nostalgic, retro-futuristic sounds and visual elements. It blends smooth, ambient synths with samples from 80s and 90s pop, R&B, and smooth jazz, often slowed down or pitch-shifted to create a dreamy, surreal atmosphere. Vaporwave's music often features heavy use of reverb, glitch effects, and distorted vocals, creating a sense of detachment or irony. The genre is also known for its visual style, including 3D-rendered imagery, Japanese characters, and 90s digital aesthetics, all invoking a sense of nostalgia for past eras, often with a satirical or critical tone. Key artists include Macross 82-99, Saint Pepsi, and Vektroid.",
                         "example": "Oneohtrix Point Never - Age Of",
                         "spotify_track_id": "3YLzR5mhUEOY8taTn76D2k",
+                        "key_artists": [
+                            {
+                                "name": "Macintosh Plus",
+                                "url": "https://open.spotify.com/artist/2hkoUqWFI4KP39O9MViMY3"
+                            },
+                            {
+                                "name": "Saint Pepsi",
+                                "url": "https://open.spotify.com/artist/3b014NFgLGBMV2q0sGyFQM"
+                            },
+                            {
+                                "name": "Blank Banshee",
+                                "url": "https://open.spotify.com/artist/1oR9pQhucVTJyi5lH2Y2iT"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Vaporwave"
                     },
                     {
@@ -4494,6 +4662,20 @@
                         "description": "Dreampunk es un subgénero de música electrónica experimental que surge del Vaporwave, caracterizado por atmósferas oníricas, oscuras y a menudo inquietantes. Utiliza samples manipulados de música ambiental, easy listening y otros géneros, ralentizándolos y añadiendo efectos de distorsión y reverberación para crear paisajes sonoros surrealistas y melancólicos. Dreampunk busca evocar sensaciones de nostalgia, disociación y exploración del subconsciente.",
                         "example": "2814 - 新しい日の誕生 (Birth of a New Day)",
                         "spotify_track_id": "2dFUtZtpWydAU4QMmUOK47",
+                        "key_artists": [
+                            {
+                                "name": "2814",
+                                "url": "https://open.spotify.com/artist/2wBpW4bAGYVe0yJcBeCTyd"
+                            },
+                            {
+                                "name": "t e l e p a t h",
+                                "url": "https://open.spotify.com/artist/4axKuDPr6WKcDCyh8vueTY"
+                            },
+                            {
+                                "name": "HKE",
+                                "url": "https://open.spotify.com/artist/2x6kZekpNZMll7Uq3M6ar5"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Dreampunk"
                     }
                 ]
@@ -4502,13 +4684,41 @@
                 "name": "Ambient Dub",
                 "description": "Ambient dub is a genre that fuses the atmospheric, immersive qualities of ambient music with the rhythmic elements of dub reggae. It features deep, flowing basslines, reverb-heavy effects, and echoing, spacey soundscapes, creating a meditative, trance-like vibe. The rhythms are often slow and steady, with a focus on creating a soothing, laid-back atmosphere rather than driving beats. Ambient dub may include minimal, dub-style percussion and subtle melodic elements, often used to evoke a sense of relaxation and deep immersion. The genre is ideal for background listening or creating a calm, introspective mood. Artists like The Orb and Deep Forest have explored ambient dub elements in their work.",
                 "example": "The Orb - Little Fluffy Clouds",
-                "spotify_track_id": "7FVvHGA46aU7mkwx4iHMRE"
+                "spotify_track_id": "7FVvHGA46aU7mkwx4iHMRE",
+                "key_artists": [
+                    {
+                        "name": "The Orb",
+                        "url": "https://open.spotify.com/artist/5HAtRoEPUvGSA7ziTGB1cF"
+                    },
+                    {
+                        "name": "Pole",
+                        "url": "https://open.spotify.com/artist/7D62OQfwvslnxJn9DkZm2F"
+                    },
+                    {
+                        "name": "Loscil",
+                        "url": "https://open.spotify.com/artist/3GM5cpCBadq2PMHjFoEvhK"
+                    }
+                ]
             },
             {
                 "name": "Balearic Beat",
                 "description": "Balearic beat is a style of dance music that originated in the Balearic Islands, particularly Ibiza, during the 1980s. Known for its relaxed, eclectic mix of genres, Balearic beat blends elements of house, disco, ambient, and rock with smooth, laid-back rhythms. The genre is characterized by its atmospheric, sun-drenched vibes, often incorporating tropical or world music influences. Balearic beat tracks typically feature mellow beats, smooth basslines, and uplifting melodies, creating a chilled yet danceable sound that evokes the feeling of a beach party or sunset. It’s a perfect soundtrack for relaxed club environments, with artists like Danny Rampling and José Padilla helping shape the sound.",
                 "example": "José Padilla - Adios Ayer",
                 "spotify_track_id": "3inZkpVlyHfLoxwuyu2GYW",
+                "key_artists": [
+                    {
+                        "name": "José Padilla",
+                        "url": "https://open.spotify.com/artist/7rDHusYGKfhI7ZNIGeUibU"
+                    },
+                    {
+                        "name": "Chicane",
+                        "url": "https://open.spotify.com/artist/5GxyeQagayzZOg4UwffQlD"
+                    },
+                    {
+                        "name": "Aeroplane",
+                        "url": "https://open.spotify.com/artist/31CtLHmSL7Oa7TPU9YyBEu"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Balearic_beat"
             }
         ]
@@ -4518,12 +4728,40 @@
         "description": "Global Club (also known as Global Bass or World Club) refers to a diverse movement of electronic dance music that emerges from local scenes outside the Western mainstream. It is characterized by the fusion of traditional regional rhythms with modern electronic production, often born in urban peripheries. This genre bridges the gap between local folk identities and global underground club culture, emphasizing syncopation, polyrhythms, and high-energy social expression.",
         "example": "M.I.A. - Bucky Done Gun",
         "spotify_track_id": "5eQABBjViGlMlA7ZDB1QL7",
+        "key_artists": [
+            {
+                "name": "M.I.A.",
+                "url": "https://open.spotify.com/artist/0QJIPDAEDILuo8AIq3pMuU"
+            },
+            {
+                "name": "Buraka Som Sistema",
+                "url": "https://open.spotify.com/artist/6zUiRChNyL3HEezOd1Wjam"
+            },
+            {
+                "name": "Branko",
+                "url": "https://open.spotify.com/artist/1lEBJGJgdoevi1Clv9CqLT"
+            }
+        ],
         "substyles": [
             {
                 "name": "Gqom",
                 "description": "Originating from the townships of Durban, South Africa, Gqom is a raw, minimalist, and atmospheric subgenre of electronic dance music. Characterized by its dark, moody aesthetic and heavy, syncopated drum patterns, it eschews the traditional four-on-the-floor house beat in favor of broken, hypnotic rhythms. Often set at a steady 127 BPM, the genre focuses on deep sub-bass, industrial-sounding percussive loops, and a repetitive, trance-inducing energy. The term 'Gqom' derives from a Zulu onomatopoeic word representing a hitting drum, reflecting its hard-hitting and percussive nature.",
                 "example": "DJ Lag - Trip To New York",
                 "spotify_track_id": "7C1kNw3qy2eH8nLd48qcRr",
+                "key_artists": [
+                    {
+                        "name": "DJ Lag",
+                        "url": "https://open.spotify.com/artist/1svX5cMlY22N60RxwzeJNO"
+                    },
+                    {
+                        "name": "Babes Wodumo",
+                        "url": "https://open.spotify.com/artist/3jfVtv9mWfW0c5b3Fx440e"
+                    },
+                    {
+                        "name": "Distruction Boyz",
+                        "url": "https://open.spotify.com/artist/44MG6uiTa2VeYlcy6VKDXe"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Gqom"
             },
             {
@@ -4531,6 +4769,20 @@
                 "description": "Originating in Luanda, Angola, in the late 1980s, Kuduro is a high-energy genre that fuses Western house and techno with traditional African percussion and rhythms like semba and soca. Characterized by its fast tempo (around 140 BPM), aggressive 4/4 beats, and raw, minimalist production, it was born in the streets as a form of urban expression. While the original Angolan sound is gritty and percussive, it gained massive international influence through the 'Progressive Kuduro' movement in Lisbon, which blended it with heavy bass and European club aesthetics.",
                 "example": "Buraka Som Sistema - Sound of Kuduro",
                 "spotify_track_id": "0pKhBNnBdZtPA8lqKZ4xpi",
+                "key_artists": [
+                    {
+                        "name": "Buraka Som Sistema",
+                        "url": "https://open.spotify.com/artist/6zUiRChNyL3HEezOd1Wjam"
+                    },
+                    {
+                        "name": "Pongo",
+                        "url": "https://open.spotify.com/artist/17MjqHVqjHRfIKAKen6o34"
+                    },
+                    {
+                        "name": "DJ Marfox",
+                        "url": "https://open.spotify.com/artist/4XG3TgASrkAnYdp58tWvLb"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Kuduro"
             },
             {
@@ -4538,6 +4790,20 @@
                 "description": "Singeli is a high-velocity electronic dance music genre from Dar es Salaam, Tanzania. It is characterized by its breakneck speed, typically ranging from 180 to 300 BPM, featuring frantic, repetitive loops and rapid-fire MCing in Swahili. Emerging from working-class neighborhoods, it blends traditional Tanzanian sounds like taarab and mchiriku with a raw, DIY electronic aesthetic. Known for its intense energy and frenetic rhythms, Singeli has moved from Tanzanian street parties to global experimental club stages, championed by labels like Nyege Nyege Tapes.",
                 "example": "Bamba Pana - Agaba Kibati",
                 "spotify_track_id": "1PHwATzL7LLfI8Vk4jB0oq",
+                "key_artists": [
+                    {
+                        "name": "Slickback",
+                        "url": "https://open.spotify.com/artist/0NwRAG9DawUqqgur9925fA"
+                    },
+                    {
+                        "name": "Duke",
+                        "url": "https://open.spotify.com/artist/1ZvtTaNp6MzFp0a69FB2xZ"
+                    },
+                    {
+                        "name": "Jay Mitta",
+                        "url": "https://open.spotify.com/artist/3IsLmcVQQz0mojIXUnxREm"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Singeli"
             },
             {
@@ -4545,37 +4811,121 @@
                 "description": "Funk Carioca, also known as Brazilian Funk or Baile Funk, is a rhythmic powerhouse born in the favelas of Rio de Janeiro. Originating in the 1980s as a localized evolution of Miami Bass and Electro-funk, it transitioned from using imported loops to creating the 'Tamborzão'—a signature syncopated beat that blends African percussion with heavy electronic sub-bass. The genre serves as a vital tool for social identity and urban expression, characterized by its DIY aesthetic, raw vocals, and high-energy loops. It has evolved from 90s social chronicles to modern high-speed and experimental forms that dominate global underground club circuits.",
                 "example": "Cidinho & Doca - Rap da Felicidade",
                 "spotify_track_id": "77BpytsTfXz6mgZOjCCRrB",
+                "key_artists": [
+                    {
+                        "name": "Anitta",
+                        "url": "https://open.spotify.com/artist/6tzRZ39aZlNqlUzQlkuhDV"
+                    },
+                    {
+                        "name": "Kevin o Chris",
+                        "url": "https://open.spotify.com/artist/2UMj7NCbuqy1yUZmiSYGjJ"
+                    },
+                    {
+                        "name": "Ludmilla",
+                        "url": "https://open.spotify.com/artist/3CDoRporvSjdzTrm99a3gi"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Funk_carioca",
                 "substyles": [
                     {
                         "name": "Classic Funk / Funk de Raiz",
                         "description": "The foundational era of the 1990s, characterized by the 'Volt Mix' beat and social consciousness. These tracks, often called 'conscious funk,' focused on narratives of peace, pride, and daily life in the favelas, featuring melodic structures and a slower tempo (around 125 BPM) influenced by freestyle and soul.",
                         "example": "MC Marcinho - Glamurosa",
-                        "spotify_track_id": "1ZBQQBBe5WFMoLuqMcqc2e"
+                        "spotify_track_id": "1ZBQQBBe5WFMoLuqMcqc2e",
+                        "key_artists": [
+                            {
+                                "name": "MC Marcinho",
+                                "url": "https://open.spotify.com/artist/3ZJCmnY5iUo1M0UFFWDXGf"
+                            },
+                            {
+                                "name": "Claudinho & Buchecha",
+                                "url": "https://open.spotify.com/artist/41ggHbtYARi4S4JtbeRrYY"
+                            },
+                            {
+                                "name": "Cidinho & Doca",
+                                "url": "https://open.spotify.com/artist/2rwHPBK5IvPCDr0QjKlgQc"
+                            }
+                        ]
                     },
                     {
                         "name": "Funk Proibidão",
                         "description": "A raw and confrontational subgenre that describes the harsh realities of organized crime and gang culture in the peripheries. Characterized by aggressive lyrics and a gritty, lo-fi production style, it represents the most underground and unfiltered side of the genre.",
                         "example": "MC Orelha - Na Faixa de Gaza",
-                        "spotify_track_id": "5MH1hI9hFOhhaKKZPOhK9P"
+                        "spotify_track_id": "5MH1hI9hFOhhaKKZPOhK9P",
+                        "key_artists": [
+                            {
+                                "name": "MC Orelha",
+                                "url": "https://open.spotify.com/artist/7qlLqIJmJXC8BwUqOHNygf"
+                            },
+                            {
+                                "name": "MC Smith",
+                                "url": "https://open.spotify.com/artist/6OUIY1hXVxeiAw6K7rDerM"
+                            },
+                            {
+                                "name": "Mr. Catra",
+                                "url": "https://open.spotify.com/artist/1mXaaMbQM3IYuhNWaZdFuE"
+                            }
+                        ]
                     },
                     {
                         "name": "Funk Ostentação",
                         "description": "Emerging from São Paulo in the late 2000s, this style shifted the focus from social struggle to themes of wealth, luxury, and consumption. It features more polished production, often incorporating pop elements and music videos centered around cars, fashion, and jewelry.",
                         "example": "MC Guimê - País do Futebol",
-                        "spotify_track_id": "7AD7hNwGOOSRe33QtnyprD"
+                        "spotify_track_id": "7AD7hNwGOOSRe33QtnyprD",
+                        "key_artists": [
+                            {
+                                "name": "MC Guimê",
+                                "url": "https://open.spotify.com/artist/3ge4xOaKvWfhRwgx0Rldov"
+                            },
+                            {
+                                "name": "MC Daleste",
+                                "url": "https://open.spotify.com/artist/4icSP0yZzpmBZLO6Z8OQGZ"
+                            },
+                            {
+                                "name": "MC Lon",
+                                "url": "https://open.spotify.com/artist/5FeGhv7je3hPQi2TLslPIl"
+                            }
+                        ]
                     },
                     {
                         "name": "Funk 150 BPM",
                         "description": "A high-speed revolution that started in Rio's Baile da Gaiola in the late 2010s. By accelerating the tempo to 150 BPM, it introduced a frenetic, erratic rhythm that changed the dance dynamic, making it more intense and suitable for modern hyper-active dancefloors.",
                         "example": "Kevin o Chris - Vamos pra Gaiola",
-                        "spotify_track_id": "7FiIQXpIeLo3ITfGGpb8PB"
+                        "spotify_track_id": "7FiIQXpIeLo3ITfGGpb8PB",
+                        "key_artists": [
+                            {
+                                "name": "Kevin o Chris",
+                                "url": "https://open.spotify.com/artist/2UMj7NCbuqy1yUZmiSYGjJ"
+                            },
+                            {
+                                "name": "FP do Trem Bala",
+                                "url": "https://open.spotify.com/artist/5hPHLE5ssifxHX5bhK8iXR"
+                            },
+                            {
+                                "name": "Rennan da Penha",
+                                "url": "https://open.spotify.com/artist/7ecRwFks8F2vYad383BkKf"
+                            }
+                        ]
                     },
                     {
                         "name": "Funk Bruxaria / Automotivo",
                         "description": "The current avant-garde of the genre, primarily from the São Paulo 'fluxos.' It is a dark, experimental subgenre that embraces extreme distortion, industrial noise, and high-pitched 'screeching' sounds (tuin). It is designed for massive car sound systems, pushing the limits of sound design and deconstructed club music.",
                         "example": "DJ K - Beat Distorce Mente",
-                        "spotify_track_id": "4SGzkOvElvpUdlTp9wN9LI"
+                        "spotify_track_id": "4SGzkOvElvpUdlTp9wN9LI",
+                        "key_artists": [
+                            {
+                                "name": "DJ K",
+                                "url": "https://open.spotify.com/artist/0QHgL1lAIqAw0HtD7YldmP"
+                            },
+                            {
+                                "name": "DJ Arana",
+                                "url": "https://open.spotify.com/artist/22RXQj1gd5zEbcRjdxiJbu"
+                            },
+                            {
+                                "name": "DJ Ramemes",
+                                "url": "https://open.spotify.com/artist/6Xk7H8ufVBIZcgGWAhY9b3"
+                            }
+                        ]
                     }
                 ]
             }
@@ -4586,6 +4936,20 @@
         "description": "Disco is a genre of dance music that emerged in the 1970s, characterized by its upbeat, rhythmic sound and focus on creating a vibrant, energetic atmosphere for the dance floor. Disco features a steady four-on-the-floor beat, syncopated basslines, and lush orchestration, often incorporating strings, horns, and electric pianos. The genre emphasizes groove, with catchy melodies and vocals often layered over driving rhythms. Disco was a cultural phenomenon, influencing fashion, dance styles, and nightlife, and is known for its lavish, glamorous vibe. Iconic disco artists like Donna Summer, Chic, and the Bee Gees helped define the sound, which paved the way for later dance and electronic music genres.",
         "example": "Donna Summer - Last Dance",
         "spotify_track_id": "5fKTkCOpnyJko7jZqpbJnX",
+        "key_artists": [
+            {
+                "name": "Donna Summer",
+                "url": "https://open.spotify.com/artist/2eogQKWWoohI3BSnoG7E2U"
+            },
+            {
+                "name": "Chic",
+                "url": "https://open.spotify.com/artist/1xivtET7hPQUzwgnLRQfEP"
+            },
+            {
+                "name": "Bee Gees",
+                "url": "https://open.spotify.com/artist/1LZEQNv7sE11VDY3SdxQeN"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/Disco",
         "substyles": [
             {
@@ -4593,19 +4957,61 @@
                 "description": "Afro-cosmic music is a genre that blends African rhythms and traditional sounds with cosmic, psychedelic, and electronic elements, creating a unique fusion of cultural influences. Emerging in the late 1970s and 1980s, this genre often incorporates jazz, funk, disco, and experimental music, with an emphasis on rhythm, groove, and a transcendent, otherworldly atmosphere. Afro-cosmic music is known for its use of polyrhythms, deep basslines, and synthetic textures, creating a fusion of earthy, tribal sounds with futuristic, spacey vibes. This genre was particularly influential in Italy during the late 70s and early 80s, where DJs and producers began incorporating African-inspired rhythms into their experimental electronic music. It has since become a significant influence on contemporary world music and electronic genres.",
                 "example": "Tony Esposito - Kalimba de Luna",
                 "spotify_track_id": "4qvkB7tOgSqgSqbpKWGOrO",
+                "key_artists": [
+                    {
+                        "name": "Tony Esposito",
+                        "url": "https://open.spotify.com/artist/2E236rsxSkaqZfJpv57gYF"
+                    },
+                    {
+                        "name": "Daniele Baldelli",
+                        "url": "https://open.spotify.com/artist/3NZuWa2TqpeGPWGISzX8E7"
+                    },
+                    {
+                        "name": "Beppe Loda",
+                        "url": "https://open.spotify.com/artist/1jb0K1XOfN4Q8HzpfPCTin"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Afro-cosmic_music"
             },
             {
                 "name": "Electro-disco",
                 "description": "Electro-disco is a fusion of disco music and electronic elements that emerged in the late 1970s and early 1980s. It combines the upbeat, danceable rhythms of disco with the futuristic sounds of synthesizers, drum machines, and electronic production techniques. Electro-disco tracks often feature funky basslines, melodic synths, and robotic or processed vocals, creating a more synthetic and space-age feel compared to traditional disco. The genre helped bridge the gap between disco’s golden age and the rise of electronic dance music, influencing later genres like house and synthpop. Artists like Giorgio Moroder and Kraftwerk were pioneers of the electro-disco sound.",
                 "example": "Giorgio Moroder feat. Donna Summer - I Feel Love",
-                "spotify_track_id": "1vCBk33l9HaWp5FOnhSGxk"
+                "spotify_track_id": "1vCBk33l9HaWp5FOnhSGxk",
+                "key_artists": [
+                    {
+                        "name": "Giorgio Moroder",
+                        "url": "https://open.spotify.com/artist/6jU2Tt13MmXYk0ZBv1KmfO"
+                    },
+                    {
+                        "name": "Cerrone",
+                        "url": "https://open.spotify.com/artist/5SE2sfwTpxL2vXRdG6H5PM"
+                    },
+                    {
+                        "name": "Space",
+                        "url": "https://open.spotify.com/artist/1ZLKV2uVGMytMpDw24stJj"
+                    }
+                ]
             },
             {
                 "name": "Euro disco",
                 "description": "Euro-disco is a style of disco music that originated in Europe during the late 1970s and 1980s. Known for its catchy melodies, upbeat rhythms, and the heavy use of synthesizers and drum machines, Euro-disco is often characterized by its polished, commercial sound and catchy, anthemic choruses. Unlike American disco, which tended to have a more soulful or funk-based sound, Euro-disco embraced a more electronic and synthetic approach, making it highly popular in European clubs. The genre gained worldwide popularity with hits like “Baila” by Ritchie Family and “Disco Band” by Scotch. Artists like Donna Summer (in her later works), Silver Pozzoli, and Sabrina helped define the Euro-disco sound.",
                 "example": "Boney M. - Rasputin",
                 "spotify_track_id": "5lWSa1rmuSL6OBPOnkAqoa",
+                "key_artists": [
+                    {
+                        "name": "Boney M.",
+                        "url": "https://open.spotify.com/artist/54R6Y0I7jGUCveDTtI21nb"
+                    },
+                    {
+                        "name": "Modern Talking",
+                        "url": "https://open.spotify.com/artist/79bxUQsBIXO8nVLB9fYKf7"
+                    },
+                    {
+                        "name": "Bad Boys Blue",
+                        "url": "https://open.spotify.com/artist/6OXILsPD4WNJ7XiGMAkCWa"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Eurodisco",
                 "substyles": [
                     {
@@ -4613,6 +5019,20 @@
                         "description": "Italo disco is an Italian variant of Euro disco that emerged in the late 1970s and early 1980s. Known for its upbeat, synthesized melodies, catchy hooks, and danceable rhythms, it combines elements of disco with futuristic electronic sounds. Italo disco is characterized by its smooth, often romantic, melodies and the heavy use of synthesizers, drum machines, and basslines that were typical of early electronic dance music. The genre is also marked by its distinctive vocal style, often featuring Italian-language lyrics or heavily accented English. The sound of Italo disco is both nostalgic and forward-thinking, blending the energy of disco with the electronic experimentation of the time. Artists like Ryan Paris and Sandy Marton became iconic within the genre, producing tracks that remain beloved dancefloor anthems.",
                         "example": "Ryan Paris - Dolce Vita",
                         "spotify_track_id": "55TfPKgtkovhAtDyqIMiEL",
+                        "key_artists": [
+                            {
+                                "name": "Ryan Paris",
+                                "url": "https://open.spotify.com/artist/3nRifdQMP5925XSkIN07oC"
+                            },
+                            {
+                                "name": "Savage",
+                                "url": "https://open.spotify.com/artist/3NRFinRTEqUCfaTTZmk8ek"
+                            },
+                            {
+                                "name": "Gazebo",
+                                "url": "https://open.spotify.com/artist/1Tzu45aHnn0Xz4msfhHRW1"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Italo_disco"
                     }
                 ]
@@ -4622,13 +5042,41 @@
                 "description": "Hi-NRG (High Energy) is a high-tempo subgenre of electronic dance music that emerged in the late 1970s and early 1980s. It evolved from disco, specifically the 'electronic' disco sound, by replacing organic orchestration with a purely synthetic, staccato sound. Characterized by a fast tempo (typically above 125 BPM), driving 4/4 beats, and 'galloping' 16th-note basslines, it became a foundational influence for House, Eurodance, and Trance. It was particularly iconic within the LGBTQ+ club scene of the era, with pioneers like Patrick Cowley and Bobby Orlando leading the sound.",
                 "example": "Evelyn Thomas - High Energy",
                 "spotify_track_id": "78IXkKoywc5f9ipjzpZwu2",
+                "key_artists": [
+                    {
+                        "name": "Evelyn Thomas",
+                        "url": "https://open.spotify.com/artist/2YLxwK8ceDNaG8RHhtkcQh"
+                    },
+                    {
+                        "name": "Patrick Cowley",
+                        "url": "https://open.spotify.com/artist/1pggi3bfbAPkwrylE63MEO"
+                    },
+                    {
+                        "name": "Sylvester",
+                        "url": "https://open.spotify.com/artist/5TGTpu4g8siFOIctZuQO7y"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Hi-NRG",
                 "substyles": [
                     {
                         "name": "Eurobeat",
                         "description": "A direct evolution of Hi-NRG and Italo Disco, Eurobeat features even faster tempos and a more commercial, pop-oriented structure. It gained massive popularity in Japan, becoming synonymous with the Para Para dance culture and racing-themed media.",
                         "example": "Dave Rodgers - Space Boy",
-                        "spotify_track_id": "0CFvwXtSkQDmM5V7o4pmlW"
+                        "spotify_track_id": "0CFvwXtSkQDmM5V7o4pmlW",
+                        "key_artists": [
+                            {
+                                "name": "Dave Rodgers",
+                                "url": "https://open.spotify.com/artist/1uXrhF4cZsmDQZDueF9uJT"
+                            },
+                            {
+                                "name": "Manuel",
+                                "url": "https://open.spotify.com/artist/7qAoXV4U0qDxQAUqhszjAA"
+                            },
+                            {
+                                "name": "Max Coveri",
+                                "url": "https://open.spotify.com/artist/4aFf48VQYRT631OJGgVwUv"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4637,6 +5085,20 @@
                 "description": "Nu disco is a modern evolution of disco music that emerged in the mid-2000s, blending classic disco sounds with contemporary electronic production techniques. It combines the funky, danceable rhythms and melodic elements of 70s and 80s disco with modern synthesizers, deep basslines, and house music influences. Nu disco often features smooth, groovy beats, catchy vocal hooks, and a polished, retro-futuristic aesthetic, creating a fresh take on the disco sound while maintaining its nostalgic vibe. The genre is often more laid-back and atmospheric compared to its predecessor, but still retains a strong emphasis on rhythm and groove. Artists like Daft Punk, Todd Terje, and Justice are key figures in the nu disco movement.",
                 "example": "Daft Punk - Get Lucky",
                 "spotify_track_id": "69kOkLUCkxIZYexIgSG8rq",
+                "key_artists": [
+                    {
+                        "name": "Daft Punk",
+                        "url": "https://open.spotify.com/artist/4tZwfgrHOc3mvqYlEYSvVi"
+                    },
+                    {
+                        "name": "Todd Terje",
+                        "url": "https://open.spotify.com/artist/49gaZqfow2v8EEQmjGyEIw"
+                    },
+                    {
+                        "name": "Breakbot",
+                        "url": "https://open.spotify.com/artist/0iui2Be5CP8EWxvHYsVspL"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Nu-disco"
             },
             {
@@ -4644,6 +5106,20 @@
                 "description": "A subgenre of disco with futuristic and space-themed elements.",
                 "example": "Meco - Star Wars Theme/Cantina Band",
                 "spotify_track_id": "4MVA30NmvNtpbDon1ZG7mk",
+                "key_artists": [
+                    {
+                        "name": "Meco",
+                        "url": "https://open.spotify.com/artist/1TCHZsFBuVgzKIrIRopFO8"
+                    },
+                    {
+                        "name": "Sheila and B. Devotion",
+                        "url": "https://open.spotify.com/artist/39JPkNKbtKPwj6OR9jRlKv"
+                    },
+                    {
+                        "name": "Cerrone",
+                        "url": "https://open.spotify.com/artist/5SE2sfwTpxL2vXRdG6H5PM"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Italo_disco#Space_disco"
             }
         ]
@@ -4653,12 +5129,40 @@
         "description": "A fusion genre that blends elements of funk, soul, and electronic music, characterized by groovy rhythms, soulful melodies, and modern production techniques.",
         "example": "Jamiroquai - Cosmic Girl",
         "spotify_track_id": "6y0Etr2KJr0sdcEp7ajoUK",
+        "key_artists": [
+            {
+                "name": "Jamiroquai",
+                "url": "https://open.spotify.com/artist/6J7biCazzYhU3gM9j1wfid"
+            },
+            {
+                "name": "The Brand New Heavies",
+                "url": "https://open.spotify.com/artist/3DEveX6KVzhPDqq2VRuN14"
+            },
+            {
+                "name": "Incognito",
+                "url": "https://open.spotify.com/artist/5moJNCJeiNwuQAhDLJXULs"
+            }
+        ],
         "substyles": [
             {
                 "name": "Acid Jazz",
                 "description": "Acid jazz is a genre that emerged in the late 1980s and early 1990s, blending jazz, funk, soul, and elements of electronic music. It combines the improvisational nature of jazz with the grooves of funk, often incorporating elements like breakbeats, electronic basslines, and synthesizers. Acid jazz features jazzy horn sections, smooth basslines, and rhythms that draw from both traditional jazz and modern dance music, creating a fusion of organic and electronic sounds. The genre has a laid-back, yet rhythmic vibe, often incorporating soulful vocals and funky grooves. Pioneering artists like Jamiroquai, The Brand New Heavies, and Incognito helped define acid jazz, which became popular in the UK club scene before influencing later genres like nu-jazz and downtempo.",
                 "example": "Jamiroquai - Virtual Insanity",
                 "spotify_track_id": "24SUWisv2lYQiB3bVpE1sn",
+                "key_artists": [
+                    {
+                        "name": "Jamiroquai",
+                        "url": "https://open.spotify.com/artist/6J7biCazzYhU3gM9j1wfid"
+                    },
+                    {
+                        "name": "The Brand New Heavies",
+                        "url": "https://open.spotify.com/artist/3DEveX6KVzhPDqq2VRuN14"
+                    },
+                    {
+                        "name": "Galliano",
+                        "url": "https://open.spotify.com/artist/5wCNzQ86Wfer6KdOxaPlQG"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Acid_jazz",
                 "substyles": [
                     {
@@ -4666,13 +5170,41 @@
                         "description": "Jazz house is a genre that fuses jazz music with house music, blending the rhythmic elements and structure of house with the improvisation, instrumentation, and harmonies of jazz. The genre typically features jazzy melodies and chord progressions, often accompanied by smooth basslines, piano riffs, and brass or string instruments, all layered over house music’s steady four-on-the-floor beats. Jazz house can vary in tempo but often maintains a laid-back, groove-oriented vibe, with some tracks focusing on deep house influences while others emphasize the more upbeat, funky aspects of jazz. Artists like Masters at Work, Joey Negro, and Ron Trent have contributed to the development of jazz house, creating a sophisticated yet danceable blend of both genres.",
                         "example": "Bob Sinclair - I Feel For You",
                         "spotify_track_id": "7opq9mMuTcHUXTY3EO3hym",
+                        "key_artists": [
+                            {
+                                "name": "St Germain",
+                                "url": "https://open.spotify.com/artist/484sZUYmnRXN84zmk3GY1n"
+                            },
+                            {
+                                "name": "Jazzanova",
+                                "url": "https://open.spotify.com/artist/0nTErwSOllrcUWt3knOG2T"
+                            },
+                            {
+                                "name": "Kyoto Jazz Massive",
+                                "url": "https://open.spotify.com/artist/10Mz09DRdfsBvUVTUWiqIv"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Styles_of_house_music#J"
                     },
                     {
                         "name": "Lounge Jazz",
                         "description": "In the realm of electronic music, lounge jazz is reinterpreted with the use of chillout beats, ambient textures, and electronic soundscapes. The genre blends the relaxing, easy-listening qualities of traditional lounge jazz with subtle, atmospheric synths, soft drum loops, and smooth, melodic instrumentation. It creates a laid-back, refined vibe, often with jazzy piano, muted trumpet, or saxophone samples, and the addition of soft electronic pads and reverb effects. The result is a relaxed, ambient sound that still carries the essence of jazz’s smooth melodies and improvisation, but with an electronic twist, ideal for cafes, lounges, and casual listening. Artists like Bonobo, Thievery Corporation, and Nicola Cruz have incorporated electronic lounge jazz influences into their music.",
                         "example": "Thievery Corporation - The Richest Man in Babylon",
-                        "spotify_track_id": "6CMngrzUTdolgXSy1UCfCx"
+                        "spotify_track_id": "6CMngrzUTdolgXSy1UCfCx",
+                        "key_artists": [
+                            {
+                                "name": "Thievery Corporation",
+                                "url": "https://open.spotify.com/artist/25KNo5GDS6ZpLkjasaecA3"
+                            },
+                            {
+                                "name": "Koop",
+                                "url": "https://open.spotify.com/artist/7mW7Tv7NvywKKXqafZo0Lc"
+                            },
+                            {
+                                "name": "De-Phazz",
+                                "url": "https://open.spotify.com/artist/0WLS16S6MJvMgWXrUezleN"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4681,18 +5213,60 @@
                 "description": "Funktronica is an exciting genre that merges the timeless, rhythmic grooves of funk with the innovation and energy of electronic music. Characterized by its use of deep, funky basslines and electronic production techniques, funktronica creates a danceable, futuristic vibe while maintaining the organic, soulful feel of classic funk. The genre integrates elements of disco, house, and electro, making it highly versatile and perfect for both the underground and mainstream dance scenes. With artists like MGMT contributing to the genre's rise, funktronica has found a way to make traditional funk grooves feel fresh and contemporary, as heard in tracks like 'Electric Feel,' where electronic beats meet funk’s signature rhythmic flair.",
                 "example": "MGMT - Electric Feel",
                 "spotify_track_id": "3FtYbEfBqAlGO46NUDQSAt",
+                "key_artists": [
+                    {
+                        "name": "Chromeo",
+                        "url": "https://open.spotify.com/artist/2mV8aJphiSHYJf43DxL7Gt"
+                    },
+                    {
+                        "name": "GRiZ",
+                        "url": "https://open.spotify.com/artist/2Jv5eshHtLycR6R8KQCdc4"
+                    },
+                    {
+                        "name": "Big Gigantic",
+                        "url": "https://open.spotify.com/artist/7o7mC95EDbJKTcPAAs8C3r"
+                    }
+                ],
                 "substyles": [
                     {
                         "name": "Future Funk",
                         "description": "Future Funk is a subgenre of funktronica that blends infectious, old-school funky rhythms with modern electronic production and a heavy dose of nostalgic elements. Often inspired by 1980s disco, city pop, and synthwave, future funk is known for its upbeat, danceable beats, funky basslines, and the prominent use of synthesizers and vocoder effects. Artists like Yung Bae exemplify the genre's vibrant energy, with tracks such as 'Bae City Rollaz' combining funky bass, infectious loops, and retro vibes, all while incorporating futuristic production techniques. Future funk bridges the past and the future, providing a lively, upbeat soundtrack that appeals to fans of both classic and contemporary electronic music.",
                         "example": "Yung Bae - Bae City Rollaz",
-                        "spotify_track_id": "4J00divYxTl6BN36HdzByD"
+                        "spotify_track_id": "4J00divYxTl6BN36HdzByD",
+                        "key_artists": [
+                            {
+                                "name": "Yung Bae",
+                                "url": "https://open.spotify.com/artist/30FDJPN3RtwJZ20g5YGCRX"
+                            },
+                            {
+                                "name": "Macross 82-99",
+                                "url": "https://open.spotify.com/artist/5C8KyBfvAz9PSaOd30eIow"
+                            },
+                            {
+                                "name": "Saint Pepsi",
+                                "url": "https://open.spotify.com/artist/3b014NFgLGBMV2q0sGyFQM"
+                            }
+                        ]
                     },
                     {
                         "name": "Nu-Funk",
                         "description": "Nu-funk is a modern interpretation of traditional funk music, taking its groovy, syncopated rhythms and basslines and recontextualizing them with modern electronic production techniques. This genre blends live instrumentation—such as funky guitars, bass, and horns—with digital effects and synthetic elements, creating a hybrid sound that feels both organic and futuristic. With artists like The Allergies leading the charge, nu-funk offers high-energy tracks perfect for the dance floor, as seen in 'Dance Now', where the fusion of analog and digital sounds creates an infectious, funky groove that never lets up. Nu-funk appeals to a new generation of listeners by keeping funk’s core elements intact while embracing modern production styles.",
                         "example": "The Allergies - Dance Now",
-                        "spotify_track_id": "2s2AurILVufRqALTJQo0D8"
+                        "spotify_track_id": "2s2AurILVufRqALTJQo0D8",
+                        "key_artists": [
+                            {
+                                "name": "The Allergies",
+                                "url": "https://open.spotify.com/artist/2v2cdjqYIpT8ZBpflNTttY"
+                            },
+                            {
+                                "name": "Kraak & Smaak",
+                                "url": "https://open.spotify.com/artist/7c5qu1gNlg8jWDzzmlp89O"
+                            },
+                            {
+                                "name": "Featurecast",
+                                "url": "https://open.spotify.com/artist/4OZcFrBu7oCltVhvi9wVrd"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4700,7 +5274,21 @@
                 "name": "Synth-funk",
                 "description": "Synth-funk is a genre that marries the groovy rhythms of funk with the cutting-edge sounds of synthesizers, creating a futuristic yet funk-infused sound. Prominent in the 1980s, this genre uses synthesizers as the backbone for its basslines, melodies, and rhythms, blending electronic sounds with the soulful, syncopated rhythms of funk. The result is a genre that’s funky and funky fresh, with a polished, electronic edge. Synth-funk tracks, such as Chromeo's 'Fancy Footwork', showcase the genre’s characteristic use of lush synthesizer lines, catchy hooks, and danceable grooves, creating a sound that is both nostalgic and innovative. Synth-funk is known for its smooth, sleek production and its ability to create both a laid-back yet funky vibe, making it a staple for fans of both retro and modern electronic music.",
                 "example": "Chromeo - Fancy Footwork",
-                "spotify_track_id": "52VaYLDBhX5vNd8taZxA1R"
+                "spotify_track_id": "52VaYLDBhX5vNd8taZxA1R",
+                "key_artists": [
+                    {
+                        "name": "Zapp & Roger",
+                        "url": "https://open.spotify.com/artist/6ra4GIOgCZQZMOaUECftGN"
+                    },
+                    {
+                        "name": "Chromeo",
+                        "url": "https://open.spotify.com/artist/2mV8aJphiSHYJf43DxL7Gt"
+                    },
+                    {
+                        "name": "Tuxedo",
+                        "url": "https://open.spotify.com/artist/0CCqHvxGgfjJzwzQzmPlEr"
+                    }
+                ]
             }
         ]
     },
@@ -4709,6 +5297,20 @@
         "description": "A genre rooted in harsh, mechanical sounds and dystopian themes, often blending elements of electronic, noise, and experimental music. Post-industrial extends these concepts, exploring darker, atmospheric territories.",
         "example": "Nine Inch Nails - Closer",
         "spotify_track_id": "5mc6EyF1OIEOhAkD0Gg9Lc",
+        "key_artists": [
+            {
+                "name": "Nine Inch Nails",
+                "url": "https://open.spotify.com/artist/0X380XXQSNBYuleKzav5UO"
+            },
+            {
+                "name": "Ministry",
+                "url": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+            },
+            {
+                "name": "Skinny Puppy",
+                "url": "https://open.spotify.com/artist/5Mu0EMEsUIVE132pNMywns"
+            }
+        ],
         "wikipedia_url": "https://en.wikipedia.org/wiki/Industrial_music",
         "substyles": [
             {
@@ -4716,6 +5318,20 @@
                 "description": "EBM (Electronic Body Music) is a genre of electronic music that emerged in the early 1980s, blending industrial, electronic, and post-punk elements with heavy, driving beats and aggressive rhythms. EBM is characterized by its use of synthesizers, sequencers, and drum machines to create mechanical, rhythmic patterns, often accompanied by shouted or distorted vocals. The genre’s sound is harsh and minimalistic, with a focus on repetitive, danceable beats and dark, futuristic atmospheres. EBM often deals with themes of rebellion, technology, and dystopia, making it a staple in underground and industrial club scenes. Artists like Front 242, Nitzer Ebb, and DAF helped pioneer the EBM sound, influencing later genres like industrial techno and futurepop.",
                 "example": "Front 242 - Headhunter",
                 "spotify_track_id": "3iZIki3LcOtyY3Cg5DEllm",
+                "key_artists": [
+                    {
+                        "name": "Front 242",
+                        "url": "https://open.spotify.com/artist/2tyMOS8xKREgpEwHnLc6EX"
+                    },
+                    {
+                        "name": "Nitzer Ebb",
+                        "url": "https://open.spotify.com/artist/7EnAgffrVyerTWH628TJ6f"
+                    },
+                    {
+                        "name": "DAF",
+                        "url": "https://open.spotify.com/artist/4tZwfgrHOc3mvqYlEYSvVi"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Electronic_body_music",
                 "substyles": [
                     {
@@ -4723,6 +5339,20 @@
                         "description": "Futurepop is a subgenre of electronic music that blends elements of EBM (Electronic Body Music) with more melodic, accessible, and often uplifting sounds. It emerged in the late 1990s and early 2000s, incorporating catchy synth melodies, danceable rhythms, and emotionally-driven, often melancholic vocals. Futurepop tends to have a more polished and mainstream appeal compared to the darker, more aggressive styles of traditional EBM. The genre often blends elements of synthpop, industrial, and trance, creating a sound that is both atmospheric and club-friendly. Artists like VNV Nation, Apoptygma Berzerk, and Covenant are key contributors to the futurepop movement.",
                         "example": "VNV Nation - Beloved",
                         "spotify_track_id": "2o8oBC0lVZuQwHc2CMGzF1",
+                        "key_artists": [
+                            {
+                                "name": "VNV Nation",
+                                "url": "https://open.spotify.com/artist/4KlYg0F5KG9QNDFKaeTNAy"
+                            },
+                            {
+                                "name": "Apoptygma Berzerk",
+                                "url": "https://open.spotify.com/artist/3OHbToMuJihWhRcqzKjpBd"
+                            },
+                            {
+                                "name": "Covenant",
+                                "url": "https://open.spotify.com/artist/11zG3SH7tJ36wYmCJ2oWyB"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Futurepop"
                     },
                     {
@@ -4730,6 +5360,20 @@
                         "description": "Aggrotech (also known as Harsh EBM) is a subgenre of industrial music that focuses on aggressive, dark, and harsh electronic sounds. It takes influence from EBM but emphasizes more distorted, abrasive elements, with heavily processed vocals, intense beats, and harsh synth textures. The sound is typically fast-paced and brutal, often featuring aggressive themes, such as anger, rebellion, and dystopia. Aggrotech incorporates distorted, shouted vocals and extreme electronic effects, resulting in a harder, more confrontational style. Artists like Suicide Commando, Combichrist, and Grendel are prominent figures in the aggrotech scene, often pushing the limits of intensity and sonic harshness.",
                         "example": "Suicide Commando - Hellraiser",
                         "spotify_track_id": "5goqvGbLNajTCoMV8aCYFJ",
+                        "key_artists": [
+                            {
+                                "name": "Suicide Commando",
+                                "url": "https://open.spotify.com/artist/4N99bzdRBNRi7hGNCpMuhu"
+                            },
+                            {
+                                "name": "Combichrist",
+                                "url": "https://open.spotify.com/artist/5556RAgwP70PnXbaUTGNbR"
+                            },
+                            {
+                                "name": "Psyclon Nine",
+                                "url": "https://open.spotify.com/artist/5Wqztnja4JFJ7WNcGLzAzb"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Electro-industrial#Aggrotech"
                     }
                 ]
@@ -4739,13 +5383,41 @@
                 "description": "New Beat is a Belgian electronic dance music genre that flourished in the late 1980s (1987-1989). It is characterized by a heavy, slow-to-mid tempo (typically 90-110 BPM), hypnotic basslines, and dark, industrial-influenced soundscapes. The genre originated accidentally when DJs at clubs like Boccaccio began playing 45 RPM EBM and New Wave records at 33 RPM with the pitch increased, creating a moody, 'chugging' sound. It served as a critical precursor to European Hardcore, Techno, and Trance, bridging the gap between underground industrial music and the early rave movement.",
                 "example": "Lords of Acid - I Sit on Acid",
                 "spotify_track_id": "2bUUMb6Xo8G1hhBjzXlb5b",
+                "key_artists": [
+                    {
+                        "name": "Lords of Acid",
+                        "url": "https://open.spotify.com/artist/3O3qPC1hmSp7442HYefx5w"
+                    },
+                    {
+                        "name": "Confetti's",
+                        "url": "https://open.spotify.com/artist/0QqL7lw3m7HXa7OMyyCxil"
+                    },
+                    {
+                        "name": "The Neon Judgement",
+                        "url": "https://open.spotify.com/artist/6mB1JVYIIk1NuBNBXcwrbk"
+                    }
+                ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/New_beat",
                 "substyles": [
                     {
                         "name": "Hard Beat",
                         "description": "A faster and more aggressive evolution of New Beat that emerged around 1989. It incorporated harder kicks and more abrasive synthesizers, acting as the direct transition point into the early Belgian Techno and Hardcore scenes.",
                         "example": "The Maxx - Cocaine",
-                        "spotify_track_id": "0Y2eC6ZN1y4HHsE2m3i4Jh"
+                        "spotify_track_id": "0Y2eC6ZN1y4HHsE2m3i4Jh",
+                        "key_artists": [
+                            {
+                                "name": "The Maxx",
+                                "url": "https://open.spotify.com/artist/3F1xWNT7MgQCuQEK2WSQf7"
+                            },
+                            {
+                                "name": "Tragic Error",
+                                "url": "https://open.spotify.com/artist/1mjuUrf6bH3hHEz8mKMeUn"
+                            },
+                            {
+                                "name": "Erotic Dissidents",
+                                "url": "https://open.spotify.com/artist/1YhKV1CL5rkIbZsL1VYKvd"
+                            }
+                        ]
                     }
                 ]
             },
@@ -4754,12 +5426,40 @@
                 "description": "Post-industrial music emerged as a development from industrial music, but with a shift toward more atmospheric and ambient elements. It often involves soundscapes that convey a sense of isolation, decay, and dystopia, creating a haunting and intense auditory experience. Post-industrial tracks frequently feature dark, brooding atmospheres, industrial sounds, and electronic textures, giving them a sense of unease or desolation. Themes of technological failure, societal collapse, and personal alienation are common, making it a deeply introspective and often confrontational genre. Artists like Coil pushed the boundaries of this sound, transforming it into something experimental and avant-garde.",
                 "example": "Coil - The First Five Minutes After Death",
                 "spotify_track_id": "7z1gd54tUivy21IbH5RkT3",
+                "key_artists": [
+                    {
+                        "name": "Coil",
+                        "url": "https://open.spotify.com/artist/37KB5e6cGsN1AQAB9Omm1U"
+                    },
+                    {
+                        "name": "Throbbing Gristle",
+                        "url": "https://open.spotify.com/artist/1UYhxPY1oqFUg1HfF8nV3k"
+                    },
+                    {
+                        "name": "Einstürzende Neubauten",
+                        "url": "https://open.spotify.com/artist/7KomCxZv6D5qCVvefwMnwB"
+                    }
+                ],
                 "substyles": [
                     {
                         "name": "Witch House",
                         "description": "Witch House is a genre known for its dark, occult-inspired aesthetic, blending elements of electronic music, industrial, and hip-hop. Often characterized by heavily processed, chopped-up vocals, eerie synths, and haunting melodies, Witch House brings together the sounds of horror and mystery with a sense of mysticism and ritual. It emerged in the late 2000s, with a focus on the occult and gothic imagery, drawing influence from the aesthetics of horror films, black magic, and subcultures like goth and industrial. The genre's sparse and atmospheric beats, coupled with heavy reverb, create a haunting, almost dreamlike quality, making it distinct in its approach to darkness.",
                         "example": "Salem - King Night",
                         "spotify_track_id": "30bItCTQr7rD0qSKgOb3Dn",
+                        "key_artists": [
+                            {
+                                "name": "Salem",
+                                "url": "https://open.spotify.com/artist/09CJcG6ndtL82D8x9VxaeT"
+                            },
+                            {
+                                "name": "Crystal Castles",
+                                "url": "https://open.spotify.com/artist/7K3zpFXBvPcvzhj7zlGJdO"
+                            },
+                            {
+                                "name": "oOoOO",
+                                "url": "https://open.spotify.com/artist/1f5Qv25dd6ldcXS9aKqDTi"
+                            }
+                        ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Witch_house_(genre)"
                     }
                 ]
