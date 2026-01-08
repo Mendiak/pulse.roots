@@ -20,9 +20,35 @@ PulseRoots is an interactive visualization of electronic music genres and subgen
 ## Setup
 
 1. Clone the repository:
-```git clone https://github.com/Mendiak/pulse.roots.git```
+```bash
+git clone https://github.com/Mendiak/pulse.roots.git
+cd pulse.roots
+```
 
 2. Open `index.html` in a modern web browser.
+
+### Python Scripts Setup (Optional)
+
+If you want to use the artist population scripts:
+
+1. Install Python dependencies:
+```bash
+pip install python-dotenv requests
+```
+
+2. Create a `.env` file with your Spotify API credentials:
+```bash
+cp .env.example .env
+# Edit .env and add your Spotify credentials
+```
+
+3. Get Spotify API credentials from [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+
+4. Run the scripts:
+```bash
+python populate_artists.py  # Populate missing artist URLs
+python audit_artists.py     # Verify artist data
+```
 
 ## Usage
 
@@ -36,6 +62,9 @@ PulseRoots is an interactive visualization of electronic music genres and subgen
 - `styles.css`: CSS styles for the project
 - `script.js`: JavaScript file containing the D3.js visualization and interaction logic
 - `pulseroots.genres.json`: JSON file containing the hierarchical data of electronic music genres
+- `populate_artists.py`: Python script to populate artist Spotify URLs
+- `audit_artists.py`: Python script to verify artist data integrity
+- `.env.example`: Template for environment variables (Spotify API credentials)
 
 ## Contributing
 

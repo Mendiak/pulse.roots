@@ -1,6 +1,9 @@
 # Environment variables with sensitive credentials
 .env
 
+# Git temporary files
+.git-rewrite/
+
 # Python
 __pycache__/
 *.py[cod]
