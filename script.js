@@ -1325,4 +1325,45 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- "On This Day" Feature ---
+  const historyBanner = document.getElementById('history-banner');
+  const historyFactSpan = document.getElementById('history-fact');
+  let historyInterval;
+
+  async function fetchHistoryFacts() {
+    try {
+      const response = await fetch('music_history.json');
+      const facts = await response.json();
+      return facts;
+    } catch (error) {
+      console.error('Error fetching music history facts:', error);
+      return [];
+    }
+  }
+
+  function displayRandomFact(facts) {
+    if (facts.length === 0) {
+      historyBanner.style.display = 'none';
+      return;
+    }
+    
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    const fact = facts[randomIndex];
+    const date = new Date(fact.date.replace(/-/g, '/'));
+    const formattedDate = `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}, ${date.getFullYear()}`;
+    historyFactSpan.innerHTML = `<strong>${formattedDate}:</strong> ${fact.fact}`;
+    historyBanner.style.display = 'block';
+  }
+
+  async function startHistoryBanner() {
+    const facts = await fetchHistoryFacts();
+    if (facts.length > 0) {
+      displayRandomFact(facts);
+      // Rotate facts every 10 seconds
+      historyInterval = setInterval(() => displayRandomFact(facts), 10000);
+    }
+  }
+
+  startHistoryBanner();
 });
