@@ -1350,9 +1350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const randomIndex = Math.floor(Math.random() * facts.length);
     const fact = facts[randomIndex];
-    const date = new Date(fact.date.replace(/-/g, '/'));
-    const formattedDate = `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}, ${date.getFullYear()}`;
-    historyFactSpan.innerHTML = `<strong>${formattedDate}:</strong> ${fact.fact}`;
+    historyFactSpan.innerHTML = `<strong>${fact.date}:</strong> ${fact.fact}`;
     historyBanner.style.display = 'block';
   }
 
