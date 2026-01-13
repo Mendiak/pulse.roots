@@ -1258,21 +1258,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (themeToggleBtn) {
     const themeIcon = themeToggleBtn.querySelector('i');
     
-    // Check for saved theme preference or default to dark
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    if (currentTheme === 'light') {
-      document.body.classList.add('light-mode');
-      colorScale = d3.scaleOrdinal(d3.schemeSet2);
-      d3.selectAll('.link').attr('stroke', '#9ca3af');
-      d3.selectAll('.node text').style('fill', '#333');
-      themeIcon.classList.replace('bi-moon', 'bi-sun');
-      themeToggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
-    } else {
-      colorScale = d3.scaleOrdinal(d3.schemeTableau10);
-      d3.selectAll('.node text').style('fill', '#fff');
-      themeIcon.classList.replace('bi-sun', 'bi-moon');
-      themeToggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
-    }
+    // Always start in dark mode
+    const currentTheme = 'dark';
+    document.body.classList.remove('light-mode');
+    colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+    d3.selectAll('.node text').style('fill', '#fff');
+    d3.selectAll('.link').attr('stroke', d => colorScale(d.target.data.name));
+    themeIcon.classList.replace('bi-sun', 'bi-moon');
+    themeToggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
     
     themeToggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
