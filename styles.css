@@ -1553,3 +1553,8 @@ select:focus {
     /* Show only on mobile */
   }
 }
+
+/* History Banner Animation */
+#history-banner #history-fact {
+  transition: opacity 0.5s ease-in-out;
+}

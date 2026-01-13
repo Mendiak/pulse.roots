@@ -1329,6 +1329,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- "On This Day" Feature ---
   const historyBanner = document.getElementById('history-banner');
   const historyFactSpan = document.getElementById('history-fact');
+  historyFactSpan.style.opacity = '1'; // Initialize opacity
   let historyInterval;
 
   async function fetchHistoryFacts() {
@@ -1348,10 +1349,17 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     
-    const randomIndex = Math.floor(Math.random() * facts.length);
-    const fact = facts[randomIndex];
-    historyFactSpan.innerHTML = `<strong>${fact.date}:</strong> ${fact.fact}`;
-    historyBanner.style.display = 'block';
+    // Fade out
+    historyFactSpan.style.opacity = '0';
+    
+    setTimeout(() => {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      const fact = facts[randomIndex];
+      historyFactSpan.innerHTML = `<strong>${fact.date}:</strong> ${fact.fact}`;
+      historyBanner.style.display = 'block';
+      // Fade in
+      historyFactSpan.style.opacity = '1';
+    }, 500);
   }
 
   async function startHistoryBanner() {
