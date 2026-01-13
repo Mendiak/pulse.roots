@@ -38,11 +38,12 @@ body.light-mode {
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-neon: 0 0 20px rgba(255, 0, 85, 0.3);
-  --header-glass: linear-gradient(135deg, rgba(248, 250, 252, 0.9), rgba(241, 245, 249, 0.8));
+  --header-glass: linear-gradient(135deg, rgba(100, 100, 100, 0.9), rgba(120, 120, 120, 0.8));
   background-color: var(--bg-dark);
   background-image:
     radial-gradient(at 0% 0%, rgba(255, 0, 85, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.03) 0px, transparent 50%);
+    radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.03) 0px, transparent 50%),
+    url('assets/background.jpg');
 }
 
 body.light-mode .link {
@@ -52,6 +53,53 @@ body.light-mode .link {
 body.light-mode #tooltip {
   background: white !important;
   backdrop-filter: none !important;
+}
+
+body.light-mode header h1 {
+  color: #fff;
+}
+
+body.light-mode footer {
+  color: #f8fafc;
+}
+
+body.light-mode #footer-mission {
+  color: #f8fafc;
+}
+
+body.light-mode #footer-links h3,
+body.light-mode #footer-social-section h3 {
+  color: #f8fafc;
+}
+
+body.light-mode .footer-link {
+  color: #f8fafc;
+}
+
+body.light-mode .footer-bottom {
+  color: #f8fafc;
+}
+
+body.light-mode #current-year {
+  color: #f8fafc;
+}
+
+body.light-mode .social-btn {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode .layout-btn {
+  color: #fff;
+}
+
+body.light-mode #search-input {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode #search-input::placeholder {
+  color: #ccc;
 }
 
 /* History Banner Light Mode */
@@ -578,7 +626,7 @@ p {
 
 .node text {
   fill: var(--text-main);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  text-shadow: none;
 }
 
 .node.faded,
