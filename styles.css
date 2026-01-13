@@ -599,7 +599,7 @@ p {
   bottom: 0;
   left: 50%;
   width: 95%;
-  max-width: 650px;
+  max-width: 720px;
   background: var(--panel-dark);
   backdrop-filter: blur(25px) saturate(180%);
   -webkit-backdrop-filter: blur(25px) saturate(180%);
