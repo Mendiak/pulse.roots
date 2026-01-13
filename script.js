@@ -19,7 +19,7 @@ function debounce(func, wait) {
 
 // Create a color scale to be used by both the D3 tree and the mobile navigation
 // It's defined globally so both functions can access it.
-const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+let colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
 // Create a single tooltip element to be reused for performance
 const tooltip = d3.select('body')
@@ -1251,6 +1251,51 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (fullscreenBtn) {
     // Hide the button if the API is not supported
     fullscreenBtn.style.display = 'none';
+  }
+
+  // --- Theme Toggle Logic ---
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  if (themeToggleBtn) {
+    const themeIcon = themeToggleBtn.querySelector('i');
+    
+    // Check for saved theme preference or default to dark
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    if (currentTheme === 'light') {
+      document.body.classList.add('light-mode');
+      colorScale = d3.scaleOrdinal(d3.schemeSet2);
+      d3.selectAll('.link').attr('stroke', '#9ca3af');
+      d3.selectAll('.node text').style('fill', '#333');
+      themeIcon.classList.replace('bi-moon', 'bi-sun');
+      themeToggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
+    } else {
+      colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+      d3.selectAll('.node text').style('fill', '#fff');
+      themeIcon.classList.replace('bi-sun', 'bi-moon');
+      themeToggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
+    }
+    
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      const isLight = document.body.classList.contains('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      
+      // Update color scale
+      colorScale = isLight ? d3.scaleOrdinal(d3.schemeSet2) : d3.scaleOrdinal(d3.schemeTableau10);
+      
+      // Update tree colors
+      const linkColor = isLight ? '#9ca3af' : d => colorScale(d.target.data.name);
+      d3.selectAll('.node circle').attr('fill', d => colorScale(d.data.name));
+      d3.selectAll('.link').attr('stroke', linkColor);
+      d3.selectAll('.node text').style('fill', isLight ? '#333' : '#fff');
+      
+      if (isLight) {
+        themeIcon.classList.replace('bi-moon', 'bi-sun');
+        themeToggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
+      } else {
+        themeIcon.classList.replace('bi-sun', 'bi-moon');
+        themeToggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
+      }
+    });
   }
 
   // --- Polish: Scroll Progress Bar ---
