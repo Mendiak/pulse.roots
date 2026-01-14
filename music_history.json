@@ -1,218 +1,63 @@
 [
-  {
-    "date": "1957",
-    "fact": "The RCA Mark II Sound Synthesizer is installed at the Columbia-Princeton Electronic Music Center in New York, becoming the first programmable electronic synthesizer and laying the foundations of academic electronic music."
-  },
-  {
-    "date": "1968",
-    "fact": "Wendy Carlos releases 'Switched-On Bach', an album recorded entirely with Moog synthesizers. It becomes a commercial success and introduces electronic music to a mainstream audience."
-  },
-  {
-    "date": "1970",
-    "fact": "Kraftwerk is officially formed in Düsseldorf, Germany. The group pioneers minimalist electronic music, influencing future genres such as techno, electro, synth-pop, and hip hop."
-  },
-  {
-    "date": "1977",
-    "fact": "Donna Summer releases 'I Feel Love', produced by Giorgio Moroder. Its fully synthesized rhythm and hypnotic structure revolutionize disco and directly influence techno, house, and electronic dance music."
-  },
-  {
-    "date": "1978",
-    "fact": "Yellow Magic Orchestra is formed in Tokyo. The band popularizes electronic pop and early sampling techniques, influencing synth-pop, techno, and video game music worldwide."
-  },
-  {
-    "date": "1980",
-    "fact": "Roland releases the TR-808 drum machine. Initially a commercial failure, its deep bass and synthetic percussion later become fundamental to hip hop, electro, techno, and house music."
-  },
-  {
-    "date": "1981",
-    "fact": "The Roland TB-303 Bass Line is released. Originally intended for guitar accompaniment, it later becomes the defining sound of acid house after being adopted by Chicago producers."
-  },
-  {
-    "date": "1982",
-    "fact": "Frankie Knuckles becomes resident DJ at The Warehouse in Chicago, where disco records are mixed with electronic drum machines, giving birth to house music."
-  },
-  {
-    "date": "1983",
-    "fact": "The MIDI (Musical Instrument Digital Interface) standard is introduced, allowing electronic instruments and computers to communicate, revolutionizing music production and live performance."
-  },
-  {
-    "date": "1983",
-    "fact": "Herbie Hancock releases 'Rockit', one of the first mainstream tracks to feature electronic funk, turntablism, and synthesized rhythms, bridging electronic music and hip hop culture."
-  },
-  {
-    "date": "1988",
-    "fact": "The compilation 'Techno! The New Dance Sound of Detroit' is released, spreading the term 'techno' internationally and introducing Detroit techno to European audiences."
-  },
-  {
-    "date": "1988",
-    "fact": "The Second Summer of Love takes place in the UK, as acid house and rave culture explode through illegal parties and warehouse events, reshaping youth culture."
-  },
-  {
-    "date": "1988",
-    "fact": "The Roland TB-303 becomes synonymous with acid house, especially after tracks like 'Acid Tracks' define the squelching bass sound of the genre."
-  },
-  {
-    "date": "1989",
-    "fact": "The fall of the Berlin Wall accelerates the rise of Berlin’s techno scene, with abandoned buildings and underground clubs becoming hubs for electronic music experimentation."
-  },
-  {
-    "date": "1991",
-    "fact": "The Tresor club opens in Berlin, becoming one of the most influential techno clubs in the world and a bridge between Detroit techno and European electronic music."
-  },
-  {
-    "date": "1991",
-    "fact": "Massive Attack releases 'Blue Lines', an album that blends hip hop, dub, soul, and electronics, establishing the foundations of the trip-hop genre."
-  },
-  {
-    "date": "1992",
-    "fact": "Warp Records releases the 'Artificial Intelligence' compilation, promoting electronic music designed for listening rather than dancing and helping define the IDM movement."
-  },
-  {
-    "date": "1992",
-    "fact": "Aphex Twin releases 'Selected Ambient Works 85–92', a landmark album that blends ambient textures with techno rhythms and shapes the future of IDM."
-  },
-  {
-    "date": "1994",
-    "fact": "The UK Criminal Justice Act targets unlicensed raves and outdoor electronic music events, marking a turning point and decline in the original UK rave movement."
-  },
-  {
-    "date": "1997",
-    "fact": "Daft Punk releases 'Homework', popularizing the French house movement and bringing filtered disco-infused house music to a global audience."
-  },
-  {
-    "date": "1997",
-    "fact": "Aphex Twin releases 'Come to Daddy', pushing experimental electronic music into the mainstream and becoming an iconic release of the IDM genre."
-  },
-  {
-    "date": "1999",
-    "fact": "The first Ultra Music Festival takes place in Miami, helping transform electronic dance music festivals into large-scale global events."
-  },
-  {
-    "date": "1999",
-    "fact": "Napster launches as a peer-to-peer MP3 sharing platform, dramatically changing how electronic music is distributed and consumed worldwide."
-  },
-  {
-    "date": "2000",
-    "fact": "The Detroit Electronic Music Festival debuts, celebrating the city’s techno heritage and becoming a major annual event for the global techno community."
-  },
-  {
-    "date": "2001",
-    "fact": "Ableton Live is released, introducing a new approach to music production and live performance through loop-based composition and real-time manipulation."
-  },
-  {
-    "date": "2002",
-    "fact": "Dubstep begins to emerge in South London, combining UK garage, dub, and dark bass textures, eventually becoming a global bass music phenomenon."
-  },
-  {
-    "date": "2001",
-    "fact": "Daft Punk releases 'Discovery', blending house, disco, pop, and synthwave aesthetics into one of the most influential electronic albums of all time."
-  },
-  {
-    "date": "2007",
-    "fact": "Justice releases '†' (Cross), defining the aggressive electro-house sound of the bloghouse era and influencing a new generation of producers."
-  },
-  {
-    "date": "2008",
-    "fact": "Spotify launches, accelerating the shift toward music streaming and reshaping how electronic music is discovered, shared, and monetized."
-  },
-  {
-    "date": "2013",
-    "fact": "Daft Punk’s 'Random Access Memories' wins multiple Grammy Awards, highlighting a renewed interest in analog production and live instrumentation within electronic music."
-  },
-  {
-    "date": "2016",
-    "fact": "Modular synthesizers experience a global resurgence, with Eurorack systems becoming central to experimental, ambient, and techno music production."
-  },
-  {
-    "date": "2020",
-    "fact": "Global COVID-19 lockdowns force clubs and festivals to close, leading DJs and producers to adopt livestreaming and virtual events as new performance formats."
-  },
-  {
-    "date": "1948",
-    "fact": "Pierre Schaeffer introduces 'musique concrète' in Paris, experimenting with tape loops, found sounds, and audio manipulation, marking one of the earliest forms of electronic music."
-  },
-  {
-    "date": "1955",
-    "fact": "Karlheinz Stockhausen begins producing electronic compositions in Germany, combining serialism and electronic sound generation, deeply influencing avant-garde and experimental music."
-  },
-  {
-    "date": "1964",
-    "fact": "Robert Moog commercializes the Moog modular synthesizer, making electronic sound synthesis accessible to musicians outside academic institutions."
-  },
-  {
-    "date": "1972",
-    "fact": "Brian Eno begins experimenting with tape loops and generative music concepts, later becoming a key figure in the development of ambient music."
-  },
-  {
-    "date": "1974",
-    "fact": "Kraftwerk releases 'Autobahn', achieving international success and demonstrating that electronic music can reach mass audiences."
-  },
-  {
-    "date": "1979",
-    "fact": "Gary Numan releases 'The Pleasure Principle', bringing synthesizers to the top of the UK charts and accelerating the rise of synth-pop."
-  },
-  {
-    "date": "1984",
-    "fact": "Detroit producers Juan Atkins, Derrick May, and Kevin Saunderson begin shaping what will become known as Detroit techno, inspired by futurism and electronic funk."
-  },
-  {
-    "date": "1986",
-    "fact": "House music spreads from Chicago to New York and Europe, becoming a dominant club sound and spawning numerous subgenres."
-  },
-  {
-    "date": "1987",
-    "fact": "The track 'Acid Tracks' by Phuture is released, officially defining the acid house sound through the use of the Roland TB-303."
-  },
-  {
-    "date": "1990",
-    "fact": "Rave culture expands rapidly across Europe, with large-scale illegal parties and free festivals becoming central to youth counterculture."
-  },
-  {
-    "date": "1993",
-    "fact": "Jungle music emerges in the UK, characterized by fast breakbeats, heavy bass, and reggae influences, later evolving into drum and bass."
-  },
-  {
-    "date": "1995",
-    "fact": "Drum and bass becomes a defined genre in the UK, with labels and clubs supporting a darker, more technical evolution of jungle."
-  },
-  {
-    "date": "1996",
-    "fact": "The Goa trance scene gains international recognition, blending psychedelic aesthetics with repetitive electronic rhythms."
-  },
-  {
-    "date": "1998",
-    "fact": "Minimal techno gains popularity in Europe, focusing on stripped-down rhythms, subtle modulation, and long-form club tracks."
-  },
-  {
-    "date": "2003",
-    "fact": "The rise of online music forums and digital labels accelerates the globalization of electronic music communities."
-  },
-  {
-    "date": "2004",
-    "fact": "Electroclash peaks as a genre, merging 1980s synth aesthetics with punk attitude and club culture."
-  },
-  {
-    "date": "2006",
-    "fact": "Berlin solidifies its status as a global techno capital, with clubs like Berghain defining a raw, industrial club sound."
-  },
-  {
-    "date": "2009",
-    "fact": "Bedroom producers increasingly rely on laptops and software-based studios, democratizing electronic music production."
-  },
-  {
-    "date": "2012",
-    "fact": "Bass music scenes diversify globally, with hybrid styles blending dubstep, techno, house, and experimental electronic music."
-  },
-  {
-    "date": "2014",
-    "fact": "Hardware synthesizers and drum machines experience a revival as artists seek tactile workflows alongside digital tools."
-  },
-  {
-    "date": "2018",
-    "fact": "Artificial intelligence and generative algorithms begin to influence experimental electronic music composition."
-  },
-  {
-    "date": "2022",
-    "fact": "Hybrid live sets combining modular synths, visuals, and real-time performance become increasingly common in electronic music festivals."
-  }
+  { "date": "1897", "fact": "Thaddeus Cahill patents the Telharmonium, the first fully electronic and polyphonic musical instrument, establishing early concepts of electronic sound generation and transmission." },
+  { "date": "1920", "fact": "Léon Theremin invents the theremin, the first electronic instrument played without physical contact, influencing future synthesizer design and electronic performance techniques." },
+  { "date": "1928", "fact": "Maurice Martenot introduces the Ondes Martenot, an early electronic instrument widely used in classical and experimental compositions for its expressive timbres." },
+  { "date": "1948", "fact": "Pierre Schaeffer introduces musique concrète in Paris, using recorded sounds and tape manipulation as musical material, redefining the boundaries of composition and electronic music." },
+  { "date": "1955", "fact": "Karlheinz Stockhausen begins producing electronic compositions in Germany, combining serialism and electronic sound generation, deeply influencing avant-garde and experimental music." },
+  { "date": "1957", "fact": "The RCA Mark II Sound Synthesizer is installed at the Columbia-Princeton Electronic Music Center in New York, becoming the first programmable electronic synthesizer." },
+  { "date": "1964", "fact": "Robert Moog commercializes the Moog modular synthesizer, making electronic sound synthesis accessible to musicians outside academic institutions." },
+  { "date": "1968", "fact": "Wendy Carlos releases 'Switched-On Bach', a commercially successful album recorded entirely with Moog synthesizers, introducing electronic music to a mass audience." },
+  { "date": "1970", "fact": "Kraftwerk is officially formed in Düsseldorf, pioneering minimalist electronic music and influencing techno, electro, and synth-pop." },
+  { "date": "1972", "fact": "Brian Eno begins experimenting with tape loops and generative music concepts, becoming a key figure in the development of ambient music." },
+  { "date": "1974", "fact": "Kraftwerk releases 'Autobahn', achieving international success and demonstrating that electronic music can reach mass audiences." },
+  { "date": "1977", "fact": "Donna Summer releases 'I Feel Love', produced by Giorgio Moroder, featuring a fully synthesized rhythm that profoundly influences disco and techno." },
+  { "date": "1978", "fact": "Yellow Magic Orchestra is formed in Tokyo, popularizing electronic pop and early sampling techniques worldwide." },
+  { "date": "1979", "fact": "Gary Numan releases 'The Pleasure Principle', bringing synthesizers to the top of the UK charts and accelerating synth-pop." },
+  { "date": "1980", "fact": "Roland releases the TR-808 drum machine, later becoming fundamental to hip hop, techno, and house music." },
+  { "date": "1981", "fact": "Roland releases the TB-303 Bass Line, later defining the acid house sound." },
+  { "date": "1982", "fact": "Frankie Knuckles becomes resident DJ at The Warehouse in Chicago, helping give birth to house music." },
+  { "date": "1982", "fact": "Afrika Bambaataa releases 'Planet Rock', defining the electro genre by blending hip hop and electronic music." },
+  { "date": "1983", "fact": "The MIDI standard is introduced, revolutionizing electronic music production and live performance." },
+  { "date": "1983", "fact": "Herbie Hancock releases 'Rockit', bridging electronic music, funk, and hip hop culture." },
+  { "date": "1984", "fact": "Detroit producers Juan Atkins, Derrick May, and Kevin Saunderson shape what becomes Detroit techno." },
+  { "date": "1984", "fact": "Jesse Saunders releases 'On & On', widely regarded as the first house music record." },
+  { "date": "1986", "fact": "House music spreads from Chicago to New York and Europe, becoming a dominant club sound." },
+  { "date": "1987", "fact": "Phuture releases 'Acid Tracks', officially defining the acid house sound using the TB-303." },
+  { "date": "1988", "fact": "The Second Summer of Love takes place in the UK, as acid house and rave culture explode." },
+  { "date": "1988", "fact": "The compilation 'Techno! The New Dance Sound of Detroit' popularizes the term techno internationally." },
+  { "date": "1989", "fact": "The fall of the Berlin Wall accelerates the rise of Berlin’s techno scene." },
+  { "date": "1989", "fact": "Warp Records is founded, later becoming a defining label for IDM and experimental electronic music." },
+  { "date": "1989", "fact": "The first Love Parade is held in Berlin, becoming a major symbol of techno culture." },
+  { "date": "1990", "fact": "Rave culture expands rapidly across Europe through large-scale illegal parties and free festivals." },
+  { "date": "1991", "fact": "Tresor club opens in Berlin, becoming one of the most influential techno clubs worldwide." },
+  { "date": "1991", "fact": "Massive Attack releases 'Blue Lines', establishing the foundations of trip-hop." },
+  { "date": "1992", "fact": "Warp Records releases the 'Artificial Intelligence' compilation, helping define IDM." },
+  { "date": "1992", "fact": "Aphex Twin releases 'Selected Ambient Works 85–92', shaping the future of IDM." },
+  { "date": "1993", "fact": "Jungle music emerges in the UK, later evolving into drum and bass." },
+  { "date": "1994", "fact": "The UK Criminal Justice Act targets unlicensed raves, marking a turning point in rave culture." },
+  { "date": "1995", "fact": "Drum and bass becomes a clearly defined genre in the UK." },
+  { "date": "1996", "fact": "Goa trance gains international recognition." },
+  { "date": "1997", "fact": "Daft Punk releases 'Homework', popularizing French house globally." },
+  { "date": "1997", "fact": "Aphex Twin releases 'Come to Daddy', pushing experimental electronic music into the mainstream." },
+  { "date": "1998", "fact": "Minimal techno gains popularity in Europe." },
+  { "date": "1999", "fact": "The first Ultra Music Festival takes place in Miami." },
+  { "date": "1999", "fact": "Napster launches, transforming digital music distribution." },
+  { "date": "2000", "fact": "The Detroit Electronic Music Festival debuts." },
+  { "date": "2001", "fact": "Ableton Live is released, transforming electronic music production and live performance." },
+  { "date": "2001", "fact": "Daft Punk releases 'Discovery', blending house, disco, and pop aesthetics." },
+  { "date": "2002", "fact": "Dubstep begins to emerge in South London." },
+  { "date": "2003", "fact": "Online forums and digital labels accelerate the globalization of electronic music." },
+  { "date": "2004", "fact": "Electroclash peaks as a genre." },
+  { "date": "2005", "fact": "Tomorrowland festival debuts in Belgium." },
+  { "date": "2006", "fact": "Berlin solidifies its status as a global techno capital." },
+  { "date": "2007", "fact": "Justice releases '†' (Cross), defining the bloghouse era." },
+  { "date": "2008", "fact": "Spotify launches, reshaping music discovery and monetization." },
+  { "date": "2009", "fact": "Laptop-based bedroom production becomes widespread." },
+  { "date": "2012", "fact": "Global bass music scenes diversify." },
+  { "date": "2013", "fact": "Daft Punk’s 'Random Access Memories' wins multiple Grammy Awards." },
+  { "date": "2014", "fact": "Hardware synthesizers and drum machines experience a revival." },
+  { "date": "2016", "fact": "Modular synthesizers experience a global resurgence." },
+  { "date": "2018", "fact": "Artificial intelligence begins influencing experimental electronic music." },
+  { "date": "2020", "fact": "The COVID-19 pandemic forces clubs and festivals to close, accelerating livestreamed electronic events." },
+  { "date": "2022", "fact": "Hybrid live sets combining modular synths, visuals, and real-time performance become common at festivals." }
 ]
