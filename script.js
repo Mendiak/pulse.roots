@@ -677,7 +677,7 @@ function createTree(data) {
     })
     .style('font-family', '"Outfit", sans-serif')
     .style('font-size', '14px')
-    .style('fill', '#f1f5f9')
+    .style('fill', document.body.classList.contains('light-mode') ? '#333' : '#fff')
     .style('font-weight', d => d.children ? '600' : '400')
     .text(d => d.data.name);
 
