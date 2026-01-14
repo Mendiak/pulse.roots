@@ -98,6 +98,22 @@ body.light-mode #current-year {
   color: #f8fafc;
 }
 
+body.light-mode #fullscreen-btn {
+  color: #f8fafc;
+}
+
+body.light-mode #fullscreen-btn:hover {
+  color: #fff;
+}
+
+body.light-mode #theme-toggle-btn {
+  color: #f8fafc;
+}
+
+body.light-mode #theme-toggle-btn:hover {
+  color: #fff;
+}
+
 body.light-mode #close-panel {
   color: #666;
 }
