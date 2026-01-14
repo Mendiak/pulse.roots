@@ -1460,7 +1460,8 @@ footer {
   /* Hide the search bar on mobile */
   #search-container,
   #layout-controls,
-  #fullscreen-btn {
+  #fullscreen-btn,
+  #theme-toggle-btn {
     display: none;
   }
 
