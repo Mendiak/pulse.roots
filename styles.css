@@ -84,9 +84,16 @@ body.light-mode #current-year {
   color: #f8fafc;
 }
 
-body.light-mode .social-btn {
-  color: #f8fafc;
-  background: rgba(255, 255, 255, 0.1);
+body.light-mode #close-panel {
+  color: #666;
+}
+
+body.light-mode #close-panel:hover {
+  color: #333;
+}
+
+body.light-mode #close-panel:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 body.light-mode .layout-btn {
@@ -545,13 +552,12 @@ p {
 }
 
 #theme-toggle-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  padding: 8px;
+  background: none;
+  border: none;
   color: var(--text-main);
   font-size: 22px;
   cursor: pointer;
+  padding: 0;
   margin: 0;
   line-height: 1;
   transition: transform 0.2s ease, color 0.2s ease;
@@ -560,7 +566,6 @@ p {
 #theme-toggle-btn:hover {
   color: var(--text-muted);
   transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.2);
 }
 
 /* --- Loading Spinner and Content Visibility --- */
