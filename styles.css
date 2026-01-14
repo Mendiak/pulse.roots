@@ -27,7 +27,7 @@
 /* Light Mode Variables */
 body.light-mode {
   --bg-dark: #f8fafc;
-  --panel-dark: rgba(255, 255, 255, 1);
+  --panel-dark: rgba(255, 255, 255, 0.85);
   --secondary-dark: rgba(255, 255, 255, 0.95);
   --tertiary-dark: rgba(200, 200, 200, 0.5);
   --text-main: #1e293b;
@@ -65,8 +65,8 @@ body.light-mode .link {
 }
 
 body.light-mode #tooltip {
-  background: white !important;
-  backdrop-filter: none !important;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--glass-blur);
 }
 
 body.light-mode header h1 {
@@ -145,7 +145,7 @@ body.light-mode #history-banner p {
 }
 
 body.light-mode #treemap {
-  background: white;
+  background: rgba(255, 255, 255, 0.85);
 }
 
 * {
