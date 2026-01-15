@@ -104,7 +104,7 @@
                     },
                     {
                         "name": "Breakcore",
-                        "description": "Breakcore is an aggressive and chaotic genre of electronic music that features rapid, fragmented breakbeats, heavy sampling, and a wide range of influences, including jungle, hardcore techno, and noise music. It often incorporates unpredictable shifts in tempo and style, creating an intense auditory experience that challenges conventional music structures.",
+                        "description": "Breakcore is an intense, chaotic subgenre that pushes the 'Amen Break' and other drum samples to their limits. Unlike Drum and Bass, which maintains a danceable groove, Breakcore focuses on unpredictable, complex rhythm manipulation, often chopping breaks into intricate, high-speed patterns that change bar-to-bar. It creates a sense of rhythmic disorientation, frequently blending these aggressive drums with contrasting samples from pop, anime, or classical music for ironic or jarring effect.",
                         "example": "Venetian Snares - Hajnal",
                         "spotify_track_id": "0BqDGF2xAg9Y3hdD3eRFdG",
                         "key_artists": [
@@ -208,7 +208,7 @@
             },
             {
                 "name": "Sound Manipulation",
-                "description": "This category focuses on the use of digital artifacts, errors, and intentional manipulation of sound as creative tools.",
+                "description": "Sound Manipulation is a broad category of experimental electronic music where the primary focus is the sculpting and processing of audio timbre rather than traditional melody, harmony, or rhythm. It treats sound as a malleable physical material to be stretched, broken, granulated, and reassembled using digital tools or studio techniques. This style encompasses a wide range of approaches, from the 'aesthetics of failure' and digital artifacts found in Glitch and Post-Digital, to the microscopic precision of Microsound and the algorithmic complexity of Generative music. By exploring the boundaries between noise, silence, and signal, artists in this genre create complex, textured sonic environments that challenge the listener's perception of what constitutes music.",
                 "example": "Oval - Track 5",
                 "spotify_track_id": "6NnMH7mWyo3HBL0AUsTjrB",
                 "key_artists": [
@@ -377,7 +377,7 @@
             },
             {
                 "name": "Noise & Distortion",
-                "description": "These substyles embrace distortion, feedback, and other abrasive sound textures.",
+                "description": "Noise & Distortion is a radical genre of experimental music that abandons traditional musical structures like melody, harmony, and rhythm in favor of dissonance, texture, and sonic intensity. Rooted in the avant-garde movements of the early 20th century, it explores the aesthetic potential of 'unwanted' sounds—such as feedback, static, hiss, machine hum, and extreme distortion. This genre spans a vast dynamic range, from the ear-splitting, monolithic walls of sound found in Harsh Noise and Power Electronics to the barely audible, microscopic textures of Lowercase. It is often confrontational and visceral, treating sound as a physical force designed to challenge the listener's endurance and redefine the boundaries of what constitutes music.",
                 "example": "Merzbow - Ultra Marine Blues",
                 "spotify_track_id": "7GWJgWnYwrOod8jY6n4YxZ",
                 "key_artists": [
@@ -505,7 +505,7 @@
             },
             {
                 "name": "8-bit (Chiptune)",
-                "description": "8-bit music, or chiptune, is a style that uses sound chips from vintage computers and video game consoles to create electronic music. It's characterized by simple waveforms and limited polyphony, evoking a nostalgic sound reminiscent of early video game music.",
+                "description": "8-bit music, or Chiptune, is a genre that synthesizes electronic music using the programmable sound generators (PSG) of vintage computers, consoles, and arcade machines, such as the NES, Game Boy, and Commodore 64. Instead of modern sampling, it relies on the real-time generation of basic waveforms—square, triangle, pulse, and noise. The genre is defined by creativity within strict hardware limitations; for instance, artists often use rapid arpeggios to simulate chords because the chips offer limited polyphony (voices). Rooted in the underground 'demoscene' culture, Chiptune has evolved from early video game soundtracks into a distinct artistic style that celebrates the raw, quantized, and digital aesthetic of early computing technology.",
                 "example": "Nullsleep - Her Lazer Light Eyes",
                 "spotify_track_id": "6RDZlgaytqZCYBnnIVkxXi",
                 "key_artists": [
@@ -590,7 +590,7 @@
                 "substyles": [
                     {
                         "name": "Deconstructed Club",
-                        "description": "Deconstructed club is a genre that subverts the conventions of club music by breaking down and reinterpreting its elements. It often incorporates unexpected sounds, structures, and influences from various genres, challenging listeners' expectations of dance music.",
+                        "description": "Deconstructed Club (often referred to as Post-Club) is an avant-garde movement that aggressively dismantles and reassembles the functional structures of traditional dance music. It rejects the steady, hypnotic loops of house and techno in favor of chaotic, non-linear rhythms and abrupt structural changes. The sound design is typically 'hyper-real' and high-definition, utilizing metallic textures, glass-shattering samples, and silence as heavy compositional tools. Drawing heavily from the raw energy of Ballroom, Grime, Jersey Club, and Dembow, it distorts these influences into jagged, abrasive, and often dystopian soundscapes. It is inextricably linked to queer underground culture and digital accelerationism, creating a sonic experience that is as much about physical tension as it is about dancing.",
                         "example": "Arca - Nonbinary",
                         "spotify_track_id": "4lUlYGT5VvZWN3GBDIc9KT",
                         "key_artists": [
@@ -737,7 +737,7 @@
             },
             {
                 "name": "Tape Music",
-                "description": "Tape music is a genre of experimental electronic music that utilizes tape recorders to manipulate and alter recorded sounds. It involves techniques such as tape loops, tape splicing, and tape speed variations to create unique sonic textures and abstract compositions.",
+                "description": "Tape Music is a pioneering form of experimental composition where magnetic tape is used not merely as a recording medium, but as the instrument itself. Emerging in the mid-20th century, it involves the physical manipulation of recorded sound through techniques such as splicing (cutting and rearranging tape with razor blades), varispeed (altering pitch and tempo), reversing, and creating mechanical tape loops. This genre shifted the focus from musical notation and live performance to the tactile sculpting of sound in a studio environment. It allowed composers to create impossible rhythms, dense textures, and 'phase shifting' effects (as seen in Steve Reich's work), effectively laying the technical and conceptual groundwork for modern sampling and the Digital Audio Workstation (DAW).",
                 "example": "Karlheinz Stockhausen - Gesang der Jünglinge",
                 "spotify_track_id": "5pqgzs5NQ8f1CX5NO45R0V",
                 "key_artists": [
@@ -758,7 +758,7 @@
             },
             {
                 "name": "Plunderphonics",
-                "description": "Plunderphonics is a genre that involves the creative use of pre-existing audio samples from various sources to create new compositions, often manipulating these samples to challenge traditional notions of authorship and originality.",
+                "description": "Plunderphonics is a genre and compositional philosophy, named by composer John Oswald in 1985, that constructs new musical works entirely out of existing audio recordings. Unlike hip-hop or electronic music that may use samples to build a beat, Plunderphonics treats the history of recorded audio as a raw palette for collage, often explicitly using recognizable sources from pop culture, news broadcasts, or commercials. The genre is characterized by radical recontextualization, where familiar sounds are chopped, layered, pitched, and distorted to create something entirely new, often serving as a satire or critique of mass media and copyright laws. It creates an uncanny listening experience where the focus is on the transformation of 'stolen' cultural artifacts.",
                 "example": "John Oswald - Plexure",
                 "spotify_track_id": "7bY1ZKviM54MsGXfivxNnX",
                 "key_artists": [
@@ -925,7 +925,7 @@
             },
             {
                 "name": "Schaffel Techno",
-                "description": "A subgenre of techno that emerged in Cologne, Germany in the early 1990s, characterized by its emphasis on deep, driving basslines, hypnotic rhythms, and a darker, more atmospheric sound than traditional Detroit techno.",
+                "description": "Schaffel Techno (derived from the German word for 'shuffle') is a distinctive subgenre associated with the Cologne electronic scene and the Kompakt label around the turn of the millennium. Unlike the rigid, straight 4/4 beat of traditional techno, Schaffel is defined by a heavy 'swing' or triplet feel (a bouncing 'dum-da-dum-da' rhythm). This creates a loping, galloping groove reminiscent of 1970s Glam Rock beats (like T. Rex) or Polka, but processed through the crisp, digital lens of Minimal Techno. It introduces a playful, quirky, and rock-influenced aesthetic to the dancefloor, intentionally breaking the monotony of the standard marching beat.",
                 "example": "Superpitcher - To Turn You On",
                 "spotify_track_id": "212DKnQstTuDnXeST832dP",
                 "key_artists": [
@@ -1137,7 +1137,7 @@
             },
             {
                 "name": "Melodic Techno",
-                "description": "Melodic techno is a subgenre of techno that emphasizes atmospheric soundscapes, emotional melodies, and a driving 4/4 beat. Unlike more industrial or minimal techno, it focuses on minor-chord progressions, arpeggiated synths, and cinematic builds that create a sense of tension and release. Emerging as a dominant global festival sound in the late 2010s and early 2020s (heavily associated with labels like Afterlife), it bridges the gap between the hypnotic repetition of techno and the emotional depth of progressive house and trance.",
+                "description": "Melodic techno bridges the gap between the hypnotic repetition of techno and the emotional breakdowns of trance. It is characterized by arpeggiated minor-key melodies, cavernous production, and dramatic, cinematic build-ups. Unlike trance, it usually maintains a slower tempo (120-128 BPM) and focuses on a rolling, darker bass groove rather than high-energy peaks. Heavily popularized by labels like Afterlife, it creates a solemn, stadium-sized emotional experience.",
                 "example": "ARTBAT - Horizon",
                 "spotify_track_id": "7Mqdzo9NcZLUwTAoyV2AeE",
                 "key_artists": [
@@ -1447,7 +1447,7 @@
                 "substyles": [
                     {
                         "name": "Hardgroove",
-                        "description": "A rhythmic and percussive substyle of techno that focuses on tribal loops and fast, syncopated drum patterns rather than heavy melodies, providing a relentless and funkier 'groove' for the dancefloor.",
+                        "description": "Hardgroove is a high-energy, percussive subgenre of techno that emphasizes continuous, 'rolling' rhythms over melodic progression. Emerging in the late 90s and experiencing a massive resurgence in the 2020s, it is characterized by dense layers of tribal percussion (congas, bongos, shakers) intertwined with funky, driving basslines and repetitive, chopped vocal loops. Unlike the darker, industrial atmosphere of standard techno, Hardgroove focuses on kinetic energy and 'swing,' creating a relentless, fast-paced (typically 135-145 BPM) wall of sound designed for intricate layering and maintaining peak-time dancefloor intensity.",
                         "example": "Ben Sims - Carnival Part 1",
                         "spotify_track_id": "6qakfXKrAvGmSYMQUzFmYH",
                         "key_artists": [
@@ -1886,7 +1886,7 @@
                     },
                     {
                         "name": "Amapiano",
-                        "description": "Amapiano is a subgenre of house music that emerged in South Africa in the mid-2010s. It is a hybrid of deep house, jazz, and lounge music characterized by synths, airy pads, and wide percussive basslines.",
+                        "description": "Amapiano is a subgenre of house music that emerged in South Africa, fusing deep house, jazz, and lounge music. Its most distinctive characteristic is the use of the 'Log Drum', a raw, percussive bassline sound inspired by traditional wooden drums, which drives the rhythm alongside airy pads, syncopated piano melodies, and shaker-heavy beats. It balances a laid-back, soulful atmosphere with intense, throbbing bass sections.",
                         "example": "MFR Souls – Love You Tonight",
                         "spotify_track_id": "2NbUnaGrjwRuRjZ5EPyOR5",
                         "key_artists": [
@@ -3533,7 +3533,7 @@
             },
             {
                 "name": "Dubstep",
-                "description": "Dubstep is a genre of electronic music known for its heavy sub-bass, syncopated rhythms, and half-time beats, typically featuring wobbling basslines, sparse drum patterns, and dark, atmospheric elements, emerging from the UK garage scene in the early 2000s.",
+                "description": "Dubstep is a genre of electronic dance music that originated in South London in the early 2000s, emerging as a dark, mutated evolution of UK Garage and 2-step. It is structurally defined by a tempo of roughly 140 BPM, but with a distinctive 'half-time' rhythm (kick on beat one, snare on beat three) that creates a spacious, lurching groove. The genre's sonic signature is its heavy emphasis on sub-bass frequencies—often felt physically rather than heard—and the use of Low Frequency Oscillation (LFO) to manipulate bass timbres, creating the iconic 'wobble' sound. Early dubstep emphasized atmosphere, silence, and dub-reggae influenced reverberation, creating a brooding, urban tension that contrasts with the more aggressive mid-range distortion found in its later commercial variations.",
                 "example": "Benga & Coki - Night",
                 "spotify_track_id": "2ST4rHwfdfkuArUKvdGn8a",
                 "key_artists": [
@@ -4404,7 +4404,7 @@
     },
     {
         "style": "Chill-out",
-        "description": "Chill-out is a genre of electronic music characterized by its relaxed, downtempo beats and atmospheric soundscapes, often blending elements of ambient, jazz, and lounge music. It’s designed to create a soothing and calming environment, typically played in laid-back settings or as background music.",
+        "description": "Chill-out is an umbrella term for a variety of mellow, downtempo electronic music styles that emerged from the post-acid house culture of the early 1990s. Originally born in the 'chill-out rooms' of raves—dedicated spaces for clubbers to decompress from high-energy beats—it places emphasis on atmosphere, mood, and relaxation rather than danceability. The sound typically blends the textural depth of Ambient music with slow, groovy rhythms drawn from Dub, Hip-Hop, Jazz, and Balearic beat. Over time, it evolved beyond the club scene to become synonymous with lounge culture and sunset sessions (notably associated with Ibiza's Café del Mar), offering a sophisticated fusion of organic instrumentation and electronic production.",
         "example": "Zero 7 - Destiny",
         "spotify_track_id": "27ViQppP3LZPCJl2A0w9kp",
         "key_artists": [
@@ -5126,7 +5126,7 @@
     },
     {
         "style": "Funk and Soul Fusion",
-        "description": "A fusion genre that blends elements of funk, soul, and electronic music, characterized by groovy rhythms, soulful melodies, and modern production techniques.",
+        "description": "Funk and Soul Fusion represents the evolution of traditional African American rhythm and blues into the digital age. It is defined by the intersection of organic musicianship (complex harmonies, syncopated grooves, 'swing') with electronic production tools. Unlike other electronic genres that aim for mechanical precision, this style uses technology—such as analog synthesizers, drum machines, Vocoders, and Talkboxes—to emulate and enhance the warmth and human feel of classic Funk and Soul. It spans from the synth-heavy 'Minneapolis Sound' of the 80s to the sample-based Acid Jazz of the 90s and the modern, glitchy textures of Future Funk, proving that electronic music can retain a deep, soulful emotional core.",
         "example": "Jamiroquai - Cosmic Girl",
         "spotify_track_id": "6y0Etr2KJr0sdcEp7ajoUK",
         "key_artists": [
@@ -5468,7 +5468,7 @@
     },
     {
         "style": "Pop and Rock Fusion",
-        "description": "A genre that combines elements of pop music and rock, often featuring catchy melodies, electronic instrumentation, and innovative production techniques.",
+        "description": "Pop and Rock Fusion within the electronic realm represents the bridge between traditional songwriting and digital production. Emerging largely from the post-punk and new wave movements of the late 70s, this category defines music that retains the verse-chorus structure, lyrical focus, and melodic hooks of Pop and Rock but replaces or augments traditional instrumentation with synthesizers, sequencers, and drum machines. It captures the tension between the 'human' element of rock bands (guitars, live vocals) and the 'robotic' precision of electronic gear. This broad category encompasses the synth-driven revolution of the 80s, the alternative dance crossover of the 90s, and the modern indie-electronic scene, offering soundscapes that are experimentally synthetic yet accessible and radio-friendly.",
         "example": "Depeche Mode - Enjoy the Silence",
         "spotify_track_id": "6WK9dVrRABMkUXFLNlgWFh",
         "key_artists": [
@@ -5595,7 +5595,7 @@
             },
             {
                 "name": "Electronic Rock",
-                "description": "A fusion of rock music and electronic elements, often featuring guitar riffs alongside synthesizers and drum machines.",
+                "description": "Electronic Rock is a broad fusion genre that combines the amplified instrumentation and song structures of rock music with the production techniques of electronic music. Rather than simply adding synthesizers to a rock band, it fundamentally integrates digital tools into the composition process. This often involves processing electric guitars through computer effects, utilizing hybrid drumming (blending live acoustic kits with programmed breakbeats or samples), and using synthesizers to drive the melody or bass. Spanning from the experimental sounds of the late 60s to modern alternative rock, the genre seeks to expand the traditional sonic palette of the rock band, creating a sound that possesses the visceral aggression of rock but the textural depth and precision of electronica.",
                 "example": "Linkin Park - Somewhere I Belong",
                 "spotify_track_id": "3fjmSxt0PskST13CSdBUFx",
                 "key_artists": [
@@ -5658,7 +5658,7 @@
                     },
                     {
                         "name": "Dance-punk",
-                        "description": "A genre that blends elements of punk rock with electronic music, characterized by a danceable beat and a raw sound.",
+                        "description": "Dance-punk (also known as Disco-punk) is a genre that fuses the raw energy and attitude of punk rock with the rhythmic groove of disco and funk. Emerging initially in the post-punk era of the late 70s and experiencing a massive revival in the early 2000s (spearheaded by the New York scene and DFA Records), it is characterized by 'angular' or jagged guitar riffs, driving melodic basslines, and dance-floor friendly drum patterns—often blending live percussion with drum machines. The genre bridges the divide between the rock club and the discotheque, combining the aggression and shouted vocals of punk with the hypnotic, syncopated loops of electronic dance music, often creating a sweaty, high-energy atmosphere.",
                         "example": "LCD Soundsystem - Dance Yrself Clean",
                         "spotify_track_id": "2cmRpmO04TLaKPzmAzySYZ",
                         "key_artists": [
@@ -5702,7 +5702,7 @@
             },
             {
                 "name": "Dance-pop",
-                "description": "A genre of pop music designed for danceability, characterized by upbeat tempos and catchy melodies.",
+                "description": "Dance-pop is a ubiquitous genre that combines the structured songwriting and catchy vocal hooks of Pop music with the rhythmic energy and production techniques of Electronic Dance Music (EDM). Originating in the post-disco era of the early 1980s, it distinguishes itself from pure dance music by prioritizing the 'song' (verse-chorus structure, melody, lyrics) over extended instrumental grooves or DJ-focused mixing. Dance-pop is a 'chameleon' genre, constantly evolving by absorbing current underground electronic trends—from House and Techno to Trap and Disco—and repackaging them with polished, high-fidelity production for a mainstream audience. It is designed to function equally well on commercial radio and the club dancefloor.",
                 "example": "Lady Gaga - Just Dance",
                 "spotify_track_id": "1dzQoRqT5ucxXVaAhTcT0J",
                 "key_artists": [
