@@ -1188,8 +1188,8 @@ document.addEventListener('DOMContentLoaded', () => {
     infoBox.appendChild(readMoreBtn);
 
     readMoreBtn.addEventListener('click', () => {
-      infoBox.classList.add('is-expanded'); // Expand the box using the CSS class
-      readMoreBtn.style.display = 'none'; // Hide the button after clicking
+      const isExpanded = infoBox.classList.toggle('is-expanded');
+      readMoreBtn.textContent = isExpanded ? 'Read Less' : 'Read More';
     });
   }
 

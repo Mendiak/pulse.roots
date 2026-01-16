@@ -1500,15 +1500,10 @@ footer {
   .info-box {
     max-width: 100%;
     order: 2;
-    /* Show description after accordion */
-    /* NEW: Collapse the long description on mobile */
     position: relative;
-    /* Needed for the ::after pseudo-element */
     max-height: 150px;
-    /* Adjust as needed */
-    overflow: hidden;
+    overflow: hidden; /* Ensure content is initially hidden */
     padding-bottom: 60px;
-    /* Add space at the bottom for the "Read More" button */
     transition: max-height 0.5s ease-in-out;
   }
 
@@ -1522,29 +1517,26 @@ footer {
     height: 50px;
     background: linear-gradient(to top, var(--bg-dark), transparent);
     pointer-events: none;
-    /* Allows clicking through the gradient */
     transition: opacity 0.3s ease;
   }
 
   /* Styles for when the description is expanded */
   .info-box.is-expanded {
-    max-height: 8000px;
-    /* Large enough to show all content */
+    max-height: 8000px; /* Large enough to show all content */
+    overflow: visible; /* Allow content to overflow when expanded */
   }
 
   .info-box.is-expanded::after {
-    opacity: 0;
+    opacity: 0; /* Hide the gradient when expanded */
   }
 
   .read-more-btn {
-    display: block;
-    /* Show on mobile */
+    display: block; /* Keep it block always on mobile */
     position: absolute;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    /* Ensure it's above the gradient fade */
   }
 }
 
