@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - PulseRoots</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: "Outfit", "Aleo", sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-dark);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: var(--panel-dark);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 40px;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 600px;
+        }
+        h2 {
+            color: var(--text-main);
+            margin-top: 0;
+            font-size: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h2 i {
+            color: var(--accent-pink);
+        }
+        p {
+            color: var(--text-muted);
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: var(--accent-gradient);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .back-button:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+            box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2><i class="bi bi-envelope" aria-hidden="true"></i> Contact Me</h2>
+        <p>Got any cool ideas for the site, spotted a bug, or just wanna say hi? Don't be shy, drop me a line! I'd love to hear from you.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="41398cfd-0efd-45fa-859e-50b9e66d6f31">
+            <input type="text" name="name" required placeholder="Your Name...">
+            <input type="email" name="email" required placeholder="Your Email...">
+            <textarea name="message" required placeholder="Your Message..."></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="hidden" name="redirect" value="https://mendiak.github.io/pulse.roots/thanks.html">
+            <button id="submitbutton" type="submit"><i class="bi bi-send"></i> Submit</button>
+        </form>
+        
+        <p style="text-align: center; margin-top: 30px;"><a href="index.html" class="back-button">Back to PulseRoots</a></p>
+    </div>
+</body>
+</html>
