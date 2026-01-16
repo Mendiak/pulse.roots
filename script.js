@@ -1151,7 +1151,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Initial Data Load ---
   // This function will now be called safely after the DOM is ready.
-  fetchData();
+  fetchData().then(() => {
+    // After data is loaded and genreMap is built, check for URL hash
+    handleUrlHash();
+  });
+
+  // Function to handle URL hash for deep linking
+  function handleUrlHash() {
+    if (window.location.hash) {
+      const hash = decodeURIComponent(window.location.hash.substring(1).replace(/-/g, ' '));
+      const genreEntry = genreMap.get(hash);
+      
+      if (genreEntry) {
+        // Find the top-level ancestor to get its color
+        let current = genreEntry;
+        while (current.parent) {
+            const parentEntry = genreMap.get(current.parent.name || current.parent.style);
+            if (!parentEntry) break; // Should not happen if map is consistent
+            current = parentEntry;
+        }
+        const topLevelAncestor = current.data;
+        const accentColor = colorScale(topLevelAncestor.name || topLevelAncestor.style);
+        showInfoPanel(genreEntry.data, accentColor);
+      }
+    }
+  }
 
   // --- "Read More" Logic for Mobile Description ---
   const infoBox = document.getElementById('tooltip'); // The main description box
