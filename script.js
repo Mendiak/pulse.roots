@@ -126,13 +126,8 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   const closeButton = document.getElementById('close-panel');
 
   // --- SEO: Update Title and Meta Description ---
-  const genreName = itemData.name || itemData.style;
-  document.title = `PulseRoots: Explore ${genreName}`;
-  const metaDescription = document.querySelector('meta[name="description"]');
-  if (metaDescription) {
-    metaDescription.setAttribute('content', `Learn about the ${genreName} genre in electronic music. ${itemData.description.substring(0, 120)}...`);
-  }
   // Update the URL hash
+  const genreName = itemData.name || itemData.style;
   history.pushState(null, '', `#${encodeURIComponent(genreName.replace(/\s+/g, '-'))}`);
 
 
@@ -151,20 +146,20 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   const breadcrumbsContainer = document.createElement('div');
   breadcrumbsContainer.className = 'breadcrumbs';
   
-  const path = [];
-  let current = genreEntry;
-  while (current) {
-    path.unshift(current.data);
-    current = current.parent ? genreMap.get(current.parent.name || current.parent.style) : null;
+  let currentForBreadcrumbs = genreEntry;
+  const breadcrumbsPath = [];
+  while (currentForBreadcrumbs) {
+    breadcrumbsPath.unshift(currentForBreadcrumbs.data);
+    currentForBreadcrumbs = currentForBreadcrumbs.parent ? genreMap.get(currentForBreadcrumbs.parent.name || currentForBreadcrumbs.parent.style) : null;
   }
 
   // Add "Electronic Music" as root if not present (it's the tree root but not in genreMap)
-  if (path.length > 0 && path[0].name !== "Electronic Music") {
+  if (breadcrumbsPath.length > 0 && breadcrumbsPath[0].name !== "Electronic Music") {
       // We don't necessarily need to add the root "Electronic Music" if genres already start at family level
   }
 
-  path.forEach((node, index) => {
-    const isLast = index === path.length - 1;
+  breadcrumbsPath.forEach((node, index) => {
+    const isLast = index === breadcrumbsPath.length - 1;
     const breadcrumb = document.createElement('span');
     breadcrumb.className = isLast ? 'breadcrumb-item breadcrumb-current' : 'breadcrumb-item';
     
@@ -1160,11 +1155,27 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleUrlHash() {
     if (window.location.hash) {
       const hash = decodeURIComponent(window.location.hash.substring(1).replace(/-/g, ' '));
-      const genreEntry = genreMap.get(hash);
+      const pathSegments = hash.split('/');
       
-      if (genreEntry) {
+      let deepestGenreEntry = null;
+      let currentPath = '';
+
+      // Iterate through path segments to find the deepest valid genre
+      for (let i = 0; i < pathSegments.length; i++) {
+        const segment = pathSegments[i];
+        currentPath = currentPath ? `${currentPath}/${segment}` : segment;
+        const entry = genreMap.get(currentPath);
+        if (entry) {
+          deepestGenreEntry = entry;
+        } else {
+          // If a segment doesn't match a genre, it might be a sub-genre of the previous valid entry
+          // Or the path is simply invalid beyond this point for direct genre mapping
+        }
+      }
+      
+      if (deepestGenreEntry) {
         // Find the top-level ancestor to get its color
-        let current = genreEntry;
+        let current = deepestGenreEntry;
         while (current.parent) {
             const parentEntry = genreMap.get(current.parent.name || current.parent.style);
             if (!parentEntry) break; // Should not happen if map is consistent
@@ -1172,7 +1183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const topLevelAncestor = current.data;
         const accentColor = colorScale(topLevelAncestor.name || topLevelAncestor.style);
-        showInfoPanel(genreEntry.data, accentColor);
+        showInfoPanel(deepestGenreEntry.data, accentColor);
       }
     }
   }
