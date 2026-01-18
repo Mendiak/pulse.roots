@@ -8,8 +8,7 @@ function generateUrls(genres, parentStyle = '') {
   let urls = [];
 
   genres.forEach(genre => {
-    const stylePath = parentStyle ? `${parentStyle}/${genre.name || genre.style}` : (genre.name || genre.style);
-    const styleUrl = `${BASE_URL}#${encodeURIComponent(stylePath.replace(/\s+/g, '-'))}`;
+    const styleUrl = `${BASE_URL}#${(genre.name || genre.style).replace(/\s+/g, '-')}`;
     
     urls.push({
       loc: styleUrl,
@@ -19,7 +18,7 @@ function generateUrls(genres, parentStyle = '') {
     });
 
     if (genre.substyles) {
-      urls = urls.concat(generateUrls(genre.substyles, stylePath));
+      urls = urls.concat(generateUrls(genre.substyles, parentStyle));
     }
   });
 
