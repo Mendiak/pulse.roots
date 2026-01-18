@@ -4,21 +4,23 @@ const genres = require('./pulseroots.genres.json');
 
 const BASE_URL = 'https://mendiak.github.io/pulse.roots/';
 
-function generateUrls(genres, parentStyle = '') {
+function generateUrls(genres, parentPath = []) {
   let urls = [];
 
   genres.forEach(genre => {
-    const styleUrl = `${BASE_URL}#${(genre.name || genre.style).replace(/\s+/g, '-')}`;
+    const currentPathPart = (genre.name || genre.style).replace(/\s+/g, '-');
+    const newPath = [...parentPath, currentPathPart];
+    const styleUrl = `${BASE_URL}#${newPath.join('/')}`;
     
     urls.push({
       loc: styleUrl,
       lastmod: new Date().toISOString().split('T')[0], // Use current date for lastmod
       changefreq: 'monthly',
-      priority: parentStyle ? 0.8 : 1.0
+      priority: parentPath.length > 0 ? 0.8 : 1.0
     });
 
     if (genre.substyles) {
-      urls = urls.concat(generateUrls(genre.substyles, parentStyle));
+      urls = urls.concat(generateUrls(genre.substyles, newPath));
     }
   });
 

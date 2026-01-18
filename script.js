@@ -110,6 +110,30 @@ function updateSchemaOrg(itemData) {
   document.head.appendChild(script);
 }
 
+/**
+ * Generates a URL-friendly path for a genre, including its parents.
+ * e.g., "Parent-Genre/Child-Genre"
+ * @param {Object} genreData The genre object.
+ * @returns {string} The genre path.
+ */
+function getGenrePath(genreData) {
+    const genreName = (genreData.name || genreData.style);
+    const entry = genreMap.get(genreName);
+
+    if (!entry) {
+        return (genreData.name || genreData.style).replace(/\s+/g, '-');
+    }
+
+    let pathParts = [(entry.data.name || entry.data.style).replace(/\s+/g, '-')];
+    let current = entry;
+    while (current && current.parent) {
+        const parentName = (current.parent.name || current.parent.style);
+        pathParts.unshift(parentName.replace(/\s+/g, '-'));
+        current = genreMap.get(parentName);
+    }
+    return pathParts.join('/');
+}
+
 function showInfoPanel(inputData, accentColor = '#ff0055') {
   // Always try to get the full data from the map to ensure we have 'substyles' and correct 'parent'
   const genreNameForLookup = inputData.name || inputData.style;
@@ -127,8 +151,8 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
 
   // --- SEO: Update Title and Meta Description ---
   // Update the URL hash
-  const genreName = itemData.name || itemData.style;
-  history.pushState(null, '', `#${encodeURIComponent(genreName.replace(/\s+/g, '-'))}`);
+  const genrePath = getGenrePath(itemData);
+  history.pushState(null, '', `#${genrePath}`);
 
 
   // --- Accessibility: Store focus and hide background content ---
@@ -381,6 +405,31 @@ function restoreAccordionState() {
     console.error('Error parsing accordion state from localStorage:', e);
     localStorage.removeItem('pulseRootsAccordionState'); // Clear corrupted data
   }
+}
+
+/**
+ * Finds a genre in the hierarchical data structure based on a URL path.
+ * @param {string[]} pathSegments An array of genre names from the URL.
+ * @returns {Object|null} The found genre object or null.
+ */
+function findGenreByPath(pathSegments) {
+    let currentLevel = allGenreData;
+    let foundGenre = null;
+
+    for (const segment of pathSegments) {
+        // Paths in URL use hyphens, data uses spaces
+        const segmentName = segment.replace(/-/g, ' ');
+        const nextGenre = currentLevel.find(g => (g.name || g.style) === segmentName);
+
+        if (nextGenre) {
+            foundGenre = nextGenre;
+            currentLevel = nextGenre.substyles || [];
+        } else {
+            // If we can't find it, break the chain
+            return null;
+        }
+    }
+    return foundGenre;
 }
 
 // Function to fetch data from the JSON file
@@ -738,7 +787,8 @@ function clearBranchHighlight() {
  */
 async function shareGenre(itemData) {
   const genreName = itemData.name || itemData.style;
-  const shareUrl = window.location.origin + window.location.pathname + `#${encodeURIComponent(genreName.replace(/\s+/g, '-'))}`;
+  const genrePath = getGenrePath(itemData);
+  const shareUrl = window.location.origin + window.location.pathname + `#${genrePath}`;
   const shareText = `Discover ${genreName} on PulseRoots: Electronic Music Styles Tree`;
 
   if (navigator.share) {
@@ -1154,37 +1204,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to handle URL hash for deep linking
   function handleUrlHash() {
     if (window.location.hash) {
-      const hash = decodeURIComponent(window.location.hash.substring(1).replace(/-/g, ' '));
-      const pathSegments = hash.split('/');
-      
-      let deepestGenreEntry = null;
-      let currentPath = '';
+        const hash = decodeURIComponent(window.location.hash.substring(1)); // e.g., "Parent-Genre/Child-Genre"
+        const pathSegments = hash.split('/');
 
-      // Iterate through path segments to find the deepest valid genre
-      for (let i = 0; i < pathSegments.length; i++) {
-        const segment = pathSegments[i];
-        currentPath = currentPath ? `${currentPath}/${segment}` : segment;
-        const entry = genreMap.get(currentPath);
-        if (entry) {
-          deepestGenreEntry = entry;
-        } else {
-          // If a segment doesn't match a genre, it might be a sub-genre of the previous valid entry
-          // Or the path is simply invalid beyond this point for direct genre mapping
+        let targetGenre = findGenreByPath(pathSegments);
+
+        // Fallback for old, non-hierarchical URLs (e.g., #Dubstep)
+        if (!targetGenre && pathSegments.length === 1) {
+            const genreName = pathSegments[0].replace(/-/g, ' ');
+            const entry = genreMap.get(genreName);
+            if (entry) {
+                targetGenre = entry.data;
+            }
         }
-      }
-      
-      if (deepestGenreEntry) {
-        // Find the top-level ancestor to get its color
-        let current = deepestGenreEntry;
-        while (current.parent) {
-            const parentEntry = genreMap.get(current.parent.name || current.parent.style);
-            if (!parentEntry) break; // Should not happen if map is consistent
-            current = parentEntry;
+
+        if (targetGenre) {
+            const entry = genreMap.get(targetGenre.name || targetGenre.style);
+            if (entry) {
+                // Find the top-level ancestor to get its color for the panel
+                let current = entry;
+                while (current.parent) {
+                    const parentEntry = genreMap.get(current.parent.name || current.parent.style);
+                    if (!parentEntry) break; 
+                    current = parentEntry;
+                }
+                const topLevelAncestor = current.data;
+                const accentColor = colorScale(topLevelAncestor.name || topLevelAncestor.style);
+                showInfoPanel(targetGenre, accentColor);
+            }
         }
-        const topLevelAncestor = current.data;
-        const accentColor = colorScale(topLevelAncestor.name || topLevelAncestor.style);
-        showInfoPanel(deepestGenreEntry.data, accentColor);
-      }
     }
   }
 
