@@ -32,7 +32,7 @@ function generateSitemap() {
 
   const urlset = urls.map(url => `
   <url>
-    <loc>${url.loc}</loc>
+    <loc>${url.loc.replace(/&/g, '&amp;')}</loc>
     <lastmod>${url.lastmod}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>
