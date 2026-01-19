@@ -21,6 +21,9 @@ function debounce(func, wait) {
 // It's defined globally so both functions can access it.
 let colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
+// Determine the base path (e.g., "/pulse.roots" or "")
+const BASE_PATH = window.location.pathname.includes('/pulse.roots') ? '/pulse.roots' : '';
+
 // Create a single tooltip element to be reused for performance
 const tooltip = d3.select('body')
   .append('div')
@@ -103,7 +106,7 @@ function updateSchemaOrg(itemData) {
     "url": genreUrl,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": window.location.origin + window.location.pathname
+      "@id": window.location.origin + BASE_PATH + window.location.pathname.replace(BASE_PATH, '')
     }
   };
 
@@ -167,7 +170,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
 
   // --- SEO & URL Update ---
   const genreSlug = getGenrePath(itemData);
-  const newPath = `/genres/${genreSlug}.html`;
+  const newPath = `${BASE_PATH}/genres/${genreSlug}.html`;
   const newUrl = `${window.location.origin}${newPath}`;
   
   // Only push state if the URL is different to avoid cluttering history
@@ -554,8 +557,9 @@ function handleUrl() {
         window.PR_GENRE_TO_LOAD = null; 
     } 
     // Priority 2: Check for a genre slug in the path
-    else if (window.location.pathname.startsWith('/genres/')) {
-        const pathAfterGenres = window.location.pathname.substring('/genres/'.length);
+    else if (window.location.pathname.includes('/genres/')) {
+        const genresIndex = window.location.pathname.indexOf('/genres/');
+        const pathAfterGenres = window.location.pathname.substring(genresIndex + '/genres/'.length);
         const slug = pathAfterGenres.replace('.html', '');
         genreIdentifier = slug;
     }
@@ -860,7 +864,7 @@ function clearBranchHighlight() {
 async function shareGenre(itemData) {
   const genreName = itemData.name || itemData.style;
   const genreSlug = getGenrePath(itemData);
-  const shareUrl = `${window.location.origin}/genres/${genreSlug}.html`;
+  const shareUrl = `${window.location.origin}${BASE_PATH}/genres/${genreSlug}.html`;
   const shareText = `Discover ${genreName} on PulseRoots: Electronic Music Styles Tree`;
 
   if (navigator.share) {
