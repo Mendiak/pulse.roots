@@ -23,6 +23,7 @@ let colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
 // Determine the base path (e.g., "/pulse.roots" or "")
 const BASE_PATH = window.location.pathname.includes('/pulse.roots') ? '/pulse.roots' : '';
+console.log('PulseRoots: Detected BASE_PATH:', BASE_PATH || '(root)');
 
 // Create a single tooltip element to be reused for performance
 const tooltip = d3.select('body')
@@ -471,7 +472,9 @@ async function fetchData() {
   try {
     if (loadingSpinner) loadingSpinner.classList.remove('hidden');
 
-    const response = await fetch('pulseroots.genres.json');
+    const fetchUrl = `${BASE_PATH}/pulseroots.genres.json`;
+    console.log('PulseRoots: Fetching data from:', fetchUrl);
+    const response = await fetch(fetchUrl);
     const data = await response.json();    
     allGenreData = data;
     buildGenreMap(data);
@@ -1421,7 +1424,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function fetchHistoryFacts() {
     try {
-      const response = await fetch('music_history.json');
+      const response = await fetch(`${BASE_PATH}/music_history.json`);
       const facts = await response.json();
       return facts;
     } catch (error) {
