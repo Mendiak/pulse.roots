@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S86REQ0046"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S86REQ0046');
+    </script>
+
+    <!-- SEO & General Meta Tags -->
+    <meta name="description"
+        content="Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and sample tracks.">
+    <meta name="keywords"
+        content="electronic music, music genres, techno, house, ambient, trance, music visualization, music tree">
+    <meta name="author" content="PulseRoots">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://socratika.org/pulse.roots/genres/experimental/neoclassical/cinematic.html">
+    <meta name="theme-color" content="#333333">
+
+    <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="PulseRoots: Cinematic">
+    <meta property="og:description"
+        content="Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and sample tracks.">
+    <meta property="og:image" content="https://socratika.org/pulse.roots/assets/og_image.webp">
+    <meta property="og:url" content="https://socratika.org/pulse.roots/genres/experimental/neoclassical/cinematic.html">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PulseRoots: Cinematic">
+    <meta name="twitter:description"
+        content="Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and sample tracks.">
+    <meta name="twitter:image" content="https://mendiak.github.io/pulse.roots/assets/og_image.webp">
+
+    <meta name="google-site-verification" content="7tAbK2WB9Cx4uF76izgXcrBdBXVeqDfUd9A97KrLewU" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>PulseRoots: Cinematic</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/assets/favicon.png" type="image/x-icon">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "PulseRoots",
+            "description": "Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and sample tracks.",
+            "applicationCategory": "Music Education",
+            "genre": "Electronic Music",
+            "url": "https://mendiak.github.io/pulse.roots/",
+            "author": {
+                "@type": "Person",
+                "name": "PulseRoots"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="scroll-progress-container">
+        <div id="scroll-progress-bar"></div>
+    </div>
+    <header>
+        <div id="header-container">
+            <a href="/index.html" id="logo-link" aria-label="Home">
+                <img src="/assets/logo.png" id="logo" alt="PulseRoots Logo">
+                <h1>PulseRoots: Electronic Music Styles Tree</h1>
+            </a>
+            <div class="header-controls">
+                <div id="search-container">
+                    <input type="text" id="search-input" placeholder="Search for a genre..." autocomplete="off">
+                    <div id="search-suggestions" class="hidden"></div>
+                    <button id="search-button"><i class="bi bi-search"></i> Search</button>
+                    <button id="clear-button"><i class="bi bi-x-lg"></i> Clear</button>
+                    <button id="shuffle-button" title="Random Genre"><i class="bi bi-shuffle"></i></button>
+                </div>
+                <div id="layout-controls" class="header-control-group">
+                    <button id="tree-layout-btn" class="layout-btn active" title="Tree Layout"><i
+                            class="bi bi-diagram-3-fill"></i></button>
+                    <button id="radial-layout-btn" class="layout-btn" title="Radial Layout"><i
+                            class="bi bi-bullseye"></i></button>
+                </div>
+                <button id="fullscreen-btn" title="Toggle Fullscreen" aria-label="Enter Fullscreen">
+                    <i class="bi bi-fullscreen"></i>
+                </button>
+                <button id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Light/Dark Mode">
+                    <i class="bi bi-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div id="history-banner" style="display: none; background: var(--panel-dark); padding: 15px; text-align: center; border-bottom: 1px solid var(--glass-border);">
+        <p style="margin: 0; font-size: 14px;"><strong>Music History:</strong> <span id="history-fact"></span></p>
+    </div>
+    <main>
+        <div id="main-container">
+            <div id="tooltip" class="info-box" aria-labelledby="intro-title">
+                <section>
+                    <h2 id="intro-title"><i class="bi bi-compass" aria-hidden="true"></i> How to Explore</h2>
+                    <p>Welcome to PulseRoots! This guide helps you navigate the vast world of electronic music using our
+                        interactive tools.</p>
+                    <p>On <strong>desktop</strong>, you'll find an immersive <strong>treemap</strong> that visually maps
+                        out the connections between genres. On <strong>mobile</strong>, the genres are organized into a
+                        clear and accessible <strong>accordion list</strong>.</p>
+
+                    <h2><i class="bi bi-soundwave" aria-hidden="true"></i> Styles and Substyles</h2>
+                    <p>Both views start with broad "Families" (like Techno or House) and branch down into specific
+                        styles and substyles. Click or tap on any genre to open a panel with a detailed description and
+                        a sample track to help you understand its unique sound.</p>
+
+                    <h2><i class="bi bi-person-check" aria-hidden="true"></i> Key Artists</h2>
+                    <p>For each genre, we've included a "Key Artists" section featuring pioneers and standout musicians who have significantly shaped its sound. This helps provide a richer context and a deeper dive into the genre's identity.</p>
+
+                    <h2><i class="bi bi-keyboard" aria-hidden="true"></i> Accessibility</h2>
+                    <p>PulseRoots is keyboard-accessible. Use the <strong>Tab</strong> key to navigate through the genre
+                        tree nodes, and press <strong>Enter</strong> or <strong>Space</strong> to open the details panel
+                        for a selected genre.</p>
+
+                    <h2><i class="bi bi-journal-text" aria-hidden="true"></i> Note on Classification</h2>
+                    <p>This visualization represents one interpretation of how electronic music genres are categorized.
+                        Music is fluid, and other classifications might group styles differently based on cultural,
+                        historical, or sonic perspectives.</p>
+
+                    <h2 class="section-divider"><i class="bi bi-lightbulb" aria-hidden="true"></i> Inspirations</h2>
+                    <p>PulseRoots is inspired by the incredible work of other music exploration projects. Special thanks
+                        to <a href="https://music.ishkur.com/" class="info-box-link" target="_blank"
+                            rel="noopener noreferrer">Ishkur's Guide to Electronic Music</a>, <a
+                            href="https://musicmap.info/" class="info-box-link" target="_blank"
+                            rel="noopener noreferrer">Musicmap</a>, and <a href="https://everynoise.com/"
+                            class="info-box-link" target="_blank" rel="noopener noreferrer">Every Noise at Once</a> for
+                        paving the way.</p>
+
+                    <h2 class="section-divider"><i class="bi bi-spotify" aria-hidden="true"></i> Listening to Tracks
+                    </h2>
+                    <p>To listen to the example tracks, a Spotify account may be required. The embedded player provides
+                        a 30-second preview for all users. <a href="https://accounts.spotify.com/login"
+                            id="spotify-login-link" class="info-box-link" target="_blank"
+                            rel="noopener noreferrer">Logging into Spotify</a> may unlock the full track, depending on
+                        your subscription.</p>
+
+                    <h2 class="section-divider"><i class="bi bi-envelope" aria-hidden="true"></i> Contact</h2>
+                    <p>Thank you for visiting, and I hope you enjoy exploring the world of electronic music.</p>
+
+                    <p>If you have any suggestions, improvement proposals, if you've found any errors, or just want to
+                        say 'Hi!', feel free to write to me through our <a href="/contact.html" class="info-box-link">contact page</a>.</p>
+                </section>
+
+            </div>
+
+            <div id="visualization-container">
+                <div id="loading-spinner" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Loading genres...</p>
+                </div>
+                <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+                    <defs>
+                        <filter id="svg-glow" x="-100%" y="-100%" width="300%" height="300%">
+                            <!-- Thinner, brighter core glow -->
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blurCore" />
+                            <!-- Wider, softer outer glow -->
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blurOuter" />
+
+                            <!-- Combine blurs -->
+                            <feMerge result="combinedBlur">
+                                <feMergeNode in="blurOuter" />
+                                <feMergeNode in="blurCore" />
+                            </feMerge>
+
+                            <feColorMatrix in="combinedBlur" type="matrix"
+                                values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 2.5 0" result="mask" />
+                            <feFlood flood-color="var(--highlight-color, #00f2ff)" result="flood" />
+                            <feComposite in="flood" in2="mask" operator="in" result="glow" />
+
+                            <feMerge>
+                                <feMergeNode in="glow" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                </svg>
+                <svg id="treemap"></svg>
+            </div>
+            <!-- NUEVO: El contenedor para la navegación en MÓVIL -->
+            <div id="mobile-nav-container">
+                <h2>Explore Genres</h2>
+                <div id="accordion-controls">
+                    <button id="expand-all-btn">Expand All</button>
+                    <button id="collapse-all-btn">Collapse All</button>
+                </div>
+                <ul id="mobile-genre-list">
+                    <!-- Esta lista se llenará dinámicamente con JavaScript -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top-btn" aria-label="Back to Top">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+    </main>
+
+    <!-- Overlay for the modal panel -->
+    <div id="modal-overlay"></div>
+
+    <!-- Info panel that slides up. Moved here to avoid being blurred. -->
+    <!-- ARIA attributes added for accessibility -->
+    <div id="info-panel" role="dialog" aria-modal="true" aria-labelledby="info-panel-title">
+        <div id="close-panel-container">
+            <!-- Changed from <i> to <button> for semantic accessibility -->
+            <button id="close-panel" aria-label="Close info panel">
+                <i class="bi bi-x-circle" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div id="info-content"></div> <!-- Content will be injected by JS -->
+        <div id="spotify-embed"></div>
+    </div>
+
+    <footer>
+        <div id="footer-main">
+            <div id="footer-brand">
+                <img src="/assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo">
+                <p id="footer-mission">Explore the deep connections and evolution of electronic music through an
+                    interactive lens. A journey from roots to future rhythms.</p>
+            </div>
+
+            <nav id="footer-links" aria-label="Links and Credits">
+                <h3>Links & Credits</h3>
+                <ul>
+                    <li><a class="footer-link" href="https://github.com/Mendiak/pulse.roots" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-github"></i> Github</a></li>
+                    <li><a class="footer-link" href="https://unsplash.com/es/@kshar2" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-camera"></i> Background Picture</a></li>
+                    <li><a class="footer-link" href="https://www.flaticon.com/" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> Logo</a></li>
+                    <li><a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-code-slash"></i> Portfolio</a></li>
+                    <li><a class="footer-link" href="/contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+                    <li><a class="footer-link" href="/privacy.html"><i class="bi bi-shield-lock"></i> Privacy Policy</a></li>
+                </ul>
+            </nav>
+
+            <div id="footer-social-section">
+                <h3>Share This</h3>
+                <div id="social-icons-container">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsocratika.org%2Fpulse.roots%2Fgenres%2Fexperimental%2Fneoclassical%2Fcinematic.html"
+                        target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="social-btn">
+                        <i class="bi bi-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://x.com/intent/tweet?url=https%3A%2F%2Fsocratika.org%2Fpulse.roots%2Fgenres%2Fexperimental%2Fneoclassical%2Fcinematic.html&text=Explore%20Cinematic%20on%20PulseRoots!"
+                        rel="noopener noreferrer" aria-label="Share on X (Twitter)" class="social-btn">
+                        <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fsocratika.org%2Fpulse.roots%2Fgenres%2Fexperimental%2Fneoclassical%2Fcinematic.html&title=PulseRoots: Cinematic"
+                        target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" class="social-btn">
+                        <i class="bi bi-reddit" aria-hidden="true"></i>
+                    </a>
+                    <button id="copy-link-btn" aria-label="Copy link to clipboard" class="social-btn">
+                        <i class="bi bi-clipboard" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> PulseRoots. Mapping the pulse of electronic music.</p>
+        </div>
+    </footer>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="/script.js"></script>
+
+    <script>
+        window.PR_GENRE_TO_LOAD = "Cinematic";
+    </script>
+</body>
+
+</html>

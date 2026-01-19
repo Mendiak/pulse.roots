@@ -56,6 +56,22 @@ let currentLayout = 'vertical'; // Global state for the layout ('vertical' or 'r
 let lastHighlightedNode = null; // Track the node currently being highlighted
 
 /**
+ * Creates a URL-friendly slug from a string.
+ * @param {string} text The text to slugify.
+ * @returns {string} The slugified text.
+ */
+function slugify(text) {
+    if (!text) return '';
+    return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/\//g, '-')            // Replace / with -
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+        .replace(/^-+/, '')             // Trim - from start of text
+        .replace(/-+$/, '');            // Trim - from end of text
+}
+
+/**
  * Recursively builds a map of genres for easy lookup and parent retrieval.
  */
 function buildGenreMap(data, parent = null) {
@@ -121,14 +137,14 @@ function getGenrePath(genreData) {
     const entry = genreMap.get(genreName);
 
     if (!entry) {
-        return (genreData.name || genreData.style).replace(/\s+/g, '-');
+        return slugify(genreData.name || genreData.style);
     }
 
-    let pathParts = [(entry.data.name || entry.data.style).replace(/\s+/g, '-')];
+    let pathParts = [slugify(entry.data.name || entry.data.style)];
     let current = entry;
     while (current && current.parent) {
         const parentName = (current.parent.name || current.parent.style);
-        pathParts.unshift(parentName.replace(/\s+/g, '-'));
+        pathParts.unshift(slugify(parentName));
         current = genreMap.get(parentName);
     }
     return pathParts.join('/');
@@ -149,10 +165,23 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   const overlay = document.getElementById('modal-overlay');
   const closeButton = document.getElementById('close-panel');
 
-  // --- SEO: Update Title and Meta Description ---
-  // Update the URL hash
-  const genrePath = getGenrePath(itemData);
-  history.pushState(null, '', `#${genrePath}`);
+  // --- SEO & URL Update ---
+  const genreSlug = getGenrePath(itemData);
+  const newPath = `/genres/${genreSlug}.html`;
+  const newUrl = `${window.location.origin}${newPath}`;
+  
+  // Only push state if the URL is different to avoid cluttering history
+  if (window.location.pathname !== newPath) {
+      history.pushState({ genre: genreNameForLookup }, '', newUrl);
+  }
+
+  // Update meta tags for the new URL
+  document.querySelector('link[rel="canonical"]').setAttribute('href', newUrl);
+  document.querySelector('meta[property="og:url"]').setAttribute('content', newUrl);
+  const newTitle = `PulseRoots: ${itemData.name || itemData.style}`;
+  document.title = newTitle;
+  document.querySelector('meta[property="og:title"]').setAttribute('content', newTitle);
+  document.querySelector('meta[name="twitter:title"]').setAttribute('content', newTitle);
 
 
   // --- Accessibility: Store focus and hide background content ---
@@ -177,17 +206,11 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     currentForBreadcrumbs = currentForBreadcrumbs.parent ? genreMap.get(currentForBreadcrumbs.parent.name || currentForBreadcrumbs.parent.style) : null;
   }
 
-  // Add "Electronic Music" as root if not present (it's the tree root but not in genreMap)
-  if (breadcrumbsPath.length > 0 && breadcrumbsPath[0].name !== "Electronic Music") {
-      // We don't necessarily need to add the root "Electronic Music" if genres already start at family level
-  }
-
   breadcrumbsPath.forEach((node, index) => {
     const isLast = index === breadcrumbsPath.length - 1;
     const breadcrumb = document.createElement('span');
     breadcrumb.className = isLast ? 'breadcrumb-item breadcrumb-current' : 'breadcrumb-item';
     
-    // We can use a simple icon for the internal items
     const name = node.name || node.style;
     breadcrumb.innerHTML = isLast ? name : `${name} <i class="bi bi-chevron-right breadcrumb-separator"></i>`;
     
@@ -200,7 +223,6 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   });
 
   // Update the info panel with the node's data.
-  // Add an ID to the h2 to be used by aria-labelledby on the panel.
   infoContent.innerHTML = '';
   infoContent.appendChild(breadcrumbsContainer);
   
@@ -235,7 +257,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   example.innerHTML = `<i class="bi bi-soundwave"></i> <b>Example track: ${itemData.example || 'N/A'}</b>`;
   infoContent.appendChild(example);
 
-  // --- NEW: Key Artists Section ---
+  // --- Key Artists Section ---
   if (itemData.key_artists && itemData.key_artists.length > 0) {
     const artistsSection = document.createElement('div');
     artistsSection.className = 'nav-section artists-section';
@@ -261,7 +283,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     infoContent.appendChild(artistsSection);
   }
 
-  // --- NEW: Parent Genre Navigation ---
+  // --- Parent Genre Navigation ---
   if (genreEntry && genreEntry.parent) {
     const parent = genreEntry.parent;
     const parentName = parent.name || parent.style;
@@ -282,7 +304,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     infoContent.appendChild(parentNav);
   }
 
-  // --- NEW: Subgenres Navigation ---
+  // --- Subgenres Navigation ---
   if (itemData.substyles && itemData.substyles.length > 0) {
     const subgenresNav = document.createElement('div');
     subgenresNav.className = 'nav-section subgenres-nav';
@@ -305,26 +327,23 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     infoContent.appendChild(subgenresNav);
   }
 
-  // --- NEW: Wikipedia Link Logic ---
-  // Check if the item has a Wikipedia URL and add the link button if it does.
+  // --- Wikipedia Link Logic ---
   if (itemData.wikipedia_url) {
     const wikiLinkContainer = document.createElement('div');
     wikiLinkContainer.className = 'external-link-container';
 
     const wikiLink = document.createElement('a');
     wikiLink.href = itemData.wikipedia_url;
-    wikiLink.target = '_blank'; // Open in a new tab
+    wikiLink.target = '_blank';
     wikiLink.rel = 'noopener noreferrer';
     wikiLink.className = 'wikipedia-link';
     
-    // Use an icon from Bootstrap Icons
     wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> Read more on Wikipedia`;
 
     wikiLinkContainer.appendChild(wikiLink);
     infoContent.appendChild(wikiLinkContainer);
   }
 
-  // Embed the Spotify player only if a trackId exists
   const trackId = itemData.spotify_track_id;
   if (trackId) {
     spotifyEmbed.innerHTML = `
@@ -337,18 +356,14 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     spotifyEmbed.style.display = 'none';
   }
 
-  // Show the info panel
   infoPanel.classList.add('visible');
 
-  // --- Accessibility: Move focus into the panel without an initial jarring focus ring ---
-  // Add a class to temporarily suppress the focus style on programmatic focus
   closeButton.classList.add('programmatic-focus');
   closeButton.focus();
 
-  // Remove the class after a short delay, so subsequent keyboard focus works as expected
   setTimeout(() => {
     closeButton.classList.remove('programmatic-focus');
-  }, 150); // A brief, imperceptible delay
+  }, 150);
 
   const focusableElements = infoPanel.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]), iframe'
@@ -359,12 +374,12 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   infoPanel.addEventListener('keydown', (e) => {
     if (e.key !== 'Tab') return;
 
-    if (e.shiftKey) { // Shift + Tab
+    if (e.shiftKey) { 
       if (document.activeElement === firstElement) {
         lastElement.focus();
         e.preventDefault();
       }
-    } else { // Tab
+    } else {
       if (document.activeElement === lastElement) {
         firstElement.focus();
         e.preventDefault();
@@ -408,25 +423,40 @@ function restoreAccordionState() {
 }
 
 /**
- * Finds a genre in the hierarchical data structure based on a URL path.
- * @param {string[]} pathSegments An array of genre names from the URL.
+ * Finds a genre in the hierarchical data structure based on a URL path or name.
+ * @param {string} identifier A genre name, slug, or full hierarchical slug path.
  * @returns {Object|null} The found genre object or null.
  */
-function findGenreByPath(pathSegments) {
+function findGenre(identifier) {
+    if (!identifier) return null;
+
+    // 1. Direct lookup by name (most common)
+    let entry = genreMap.get(identifier);
+    if (entry) return entry.data;
+
+    // 2. Lookup by direct slug (e.g., 'glitch' for a top-level genre)
+    const slugToFind = identifier.toLowerCase();
+    for (const [name, value] of genreMap.entries()) {
+        if (slugify(name) === slugToFind) {
+            return value.data;
+        }
+    }
+
+    // 3. Lookup by full hierarchical slug path (e.g., 'experimental/sound-manipulation/glitch')
+    const pathSegments = identifier.split('/');
     let currentLevel = allGenreData;
     let foundGenre = null;
 
     for (const segment of pathSegments) {
-        // Paths in URL use hyphens, data uses spaces
-        const segmentName = segment.replace(/-/g, ' ');
-        const nextGenre = currentLevel.find(g => (g.name || g.style) === segmentName);
+        const segmentName = segment.replace(/-/g, ' '); // Convert slug back to approximate name for map lookup
+        // We need to find the actual data object at this level
+        const nextGenre = currentLevel.find(g => slugify(g.name || g.style) === segment);
 
         if (nextGenre) {
             foundGenre = nextGenre;
             currentLevel = nextGenre.substyles || [];
         } else {
-            // If we can't find it, break the chain
-            return null;
+            return null; // Path segment not found
         }
     }
     return foundGenre;
@@ -436,24 +466,20 @@ function findGenreByPath(pathSegments) {
 async function fetchData() {
   const loadingSpinner = document.getElementById('loading-spinner');
   try {
-    if (loadingSpinner) loadingSpinner.classList.remove('hidden'); // Show spinner
+    if (loadingSpinner) loadingSpinner.classList.remove('hidden');
 
-    // Fetch the data from the JSON file
-    const response = await fetch('pulseroots.genres.json');
+    const response = await fetch('/pulseroots.genres.json');
     const data = await response.json();    
-    allGenreData = data; // Store globally
-    buildGenreMap(data); // Pre-process for navigation
-    createTree(data); // Initial tree creation for desktop
-    createMobileNav(data, document.getElementById('mobile-genre-list')); // Create mobile nav
+    allGenreData = data;
+    buildGenreMap(data);
+    createTree(data);
+    createMobileNav(data, document.getElementById('mobile-genre-list'));
 
-    // Restore the accordion state after it has been created
     restoreAccordionState();
 
-    // Show the mobile navigation container now that it's populated
     document.getElementById('mobile-nav-container').classList.add('loaded');
-    if (loadingSpinner) loadingSpinner.classList.add('hidden'); // Hide spinner
+    if (loadingSpinner) loadingSpinner.classList.add('hidden');
 
-    // --- Layout Controls Logic ---
     const treeBtn = document.getElementById('tree-layout-btn');
     const radialBtn = document.getElementById('radial-layout-btn');
 
@@ -477,13 +503,9 @@ async function fetchData() {
         });
     }
 
-    // --- Accordion Controls Logic ---
-    // This logic is moved here to ensure it runs AFTER the mobile nav is created.
     const expandAllBtn = document.getElementById('expand-all-btn');
     const collapseAllBtn = document.getElementById('collapse-all-btn');
-    // Now that createMobileNav has run, the items exist and can be selected.
     const accordionItems = document.querySelectorAll('#mobile-genre-list .genre-item[aria-expanded]');
-    const allSubLists = document.querySelectorAll('#mobile-genre-list .sub-list');
 
     if (expandAllBtn && collapseAllBtn) {
       expandAllBtn.addEventListener('click', () => {
@@ -491,7 +513,7 @@ async function fetchData() {
           item.setAttribute('aria-expanded', 'true');
           const subList = document.getElementById(item.getAttribute('aria-controls'));
           if (subList) {
-            subList.classList.add('expanded'); // This is correct
+            subList.classList.add('expanded');
           }
         });
         saveAccordionState();
@@ -502,20 +524,70 @@ async function fetchData() {
           item.setAttribute('aria-expanded', 'false');
           const subList = document.getElementById(item.getAttribute('aria-controls'));
           if (subList) {
-            subList.classList.remove('expanded'); // This is correct
+            subList.classList.remove('expanded');
           }
         });
         saveAccordionState();
       });
     }
 
-    // --- PERFORMANCE: Debounce the resize event to avoid excessive redraws ---
     const debouncedCreateTree = debounce(() => createTree(data), 250);
     window.addEventListener('resize', debouncedCreateTree);
+
+    // After all data is loaded and DOM is ready, handle the initial URL.
+    handleUrl();
 
   } catch (error) {
     console.error('Error obtaining data:', error);
   }
+}
+
+// Function to handle URL state for deep linking
+function handleUrl() {
+    let genreIdentifier = null;
+    const infoPanel = document.getElementById('info-panel');
+
+    // Priority 1: Check for the injected variable on static pages
+    if (window.PR_GENRE_TO_LOAD) {
+        genreIdentifier = window.PR_GENRE_TO_LOAD;
+        // Clear it after use
+        window.PR_GENRE_TO_LOAD = null; 
+    } 
+    // Priority 2: Check for a genre slug in the path
+    else if (window.location.pathname.startsWith('/genres/')) {
+        const pathAfterGenres = window.location.pathname.substring('/genres/'.length);
+        const slug = pathAfterGenres.replace('.html', '');
+        genreIdentifier = slug;
+    }
+    // Priority 3: Backward compatibility for old hash URLs
+    else if (window.location.hash) {
+        const hash = decodeURIComponent(window.location.hash.substring(1));
+        const pathSegments = hash.split('/');
+        genreIdentifier = pathSegments[pathSegments.length - 1].replace(/-/g, ' '); // simple name from hash
+    }
+
+    if (genreIdentifier) {
+        const targetGenre = findGenre(genreIdentifier);
+        if (targetGenre) {
+            const entry = genreMap.get(targetGenre.name || targetGenre.style);
+            if (entry) {
+                let current = entry;
+                while (current.parent) {
+                    const parentEntry = genreMap.get(current.parent.name || current.parent.style);
+                    if (!parentEntry) break;
+                    current = parentEntry;
+                }
+                const topLevelAncestor = current.data;
+                const accentColor = colorScale(topLevelAncestor.name || topLevelAncestor.style);
+                showInfoPanel(targetGenre, accentColor);
+            }
+        }
+    } else {
+        // If no genre is identified in the URL, ensure the panel is closed.
+        if (infoPanel.classList.contains('visible')) {
+            closeInfoPanel();
+        }
+    }
 }
 
 // Function to create the tree visualization with D3.js
@@ -787,8 +859,8 @@ function clearBranchHighlight() {
  */
 async function shareGenre(itemData) {
   const genreName = itemData.name || itemData.style;
-  const genrePath = getGenrePath(itemData);
-  const shareUrl = window.location.origin + window.location.pathname + `#${genrePath}`;
+  const genreSlug = getGenrePath(itemData);
+  const shareUrl = `${window.location.origin}/genres/${genreSlug}.html`;
   const shareText = `Discover ${genreName} on PulseRoots: Electronic Music Styles Tree`;
 
   if (navigator.share) {
@@ -806,7 +878,6 @@ async function shareGenre(itemData) {
     try {
       await navigator.clipboard.writeText(shareUrl);
       
-      // Simple visual feedback
       const shareBtn = document.querySelector('.share-btn');
       const originalHTML = shareBtn.innerHTML;
       shareBtn.innerHTML = `<i class="bi bi-check-lg"></i> Copied!`;
@@ -828,30 +899,28 @@ function closeInfoPanel() {
   const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
 
-  // --- Accessibility: Un-hide background content and restore focus ---
   document.getElementById('main-container').removeAttribute('aria-hidden');
   document.querySelector('header').removeAttribute('aria-hidden');
   document.querySelector('footer').removeAttribute('aria-hidden');
 
-  // Hide the panel
   infoPanel.classList.remove('visible');
-  // Hide the overlay
   overlay.classList.remove('visible');
 
-  // Stop the music by clearing the iframe content
   spotifyEmbed.innerHTML = '';
 
-  // Clear the tree highlight state
   activeSelectedNode = null;
   clearBranchHighlight();
 
-  // Remove dynamically added Schema.org script
   const genreSchema = document.getElementById('genre-schema');
   if (genreSchema) {
     genreSchema.remove();
   }
 
-  // --- Accessibility: Return focus to the element that opened the panel ---
+  // Reset the URL to the base if we are on a genre page
+  if (window.location.pathname.includes('/genres/')) {
+    history.pushState(null, '', '/');
+  }
+
   if (focusedElementBeforePanel) {
     focusedElementBeforePanel.focus();
   }
@@ -863,70 +932,53 @@ function closeInfoPanel() {
  * @param {HTMLElement} parentElement - The <ul> element to which the list items will be appended.
  */
 function createMobileNav(items, parentElement, parentColor = null) {
-  // This function now only handles the creation of the DOM structure.
   items.forEach(item => {
-    // Use a unique ID for linking controls and content, good for accessibility
-    const baseId = `${(item.style || item.name).replace(/\s+/g, '-')}-${Math.random().toString(36).substr(2, 9)}`;
+    const baseId = `${slugify(item.style || item.name)}-${Math.random().toString(36).substr(2, 9)}`;
     const subListId = `sub-list-${baseId}`;
 
     const listItem = document.createElement('li');
-    // Use a <button> for parent items for better accessibility, and a <div> for leaf nodes.
     const itemElement = document.createElement(item.substyles && item.substyles.length > 0 ? 'button' : 'div');
 
-    // --- REFACTORED: Add data attributes for event delegation ---
-    itemElement.dataset.action = 'toggle'; // For expanding/collapsing
-    itemElement.dataset.itemData = JSON.stringify(item); // Store item data directly
-
+    itemElement.dataset.action = 'toggle';
+    itemElement.dataset.itemData = JSON.stringify(item); 
     itemElement.className = 'genre-item';
 
-    // Determine the color for this item.
-    // If it's a top-level genre, get a new color. If it's a sub-genre, inherit from the parent.
     const currentColor = parentColor || colorScale(item.style || item.name);
-
-    // Apply the color as a CSS custom property for styling.
     itemElement.style.setProperty('--genre-color', currentColor);
 
     const nameSpan = document.createElement('span');
     nameSpan.className = 'genre-name';
     nameSpan.textContent = item.style || item.name;
-    // Store original text for search highlighting
     nameSpan.dataset.originalText = item.style || item.name;
     itemElement.appendChild(nameSpan);
 
-    // --- UNIFIED ACTIONS CONTAINER ---
-    // All items get an actions container for a consistent UI
     const actionsDiv = document.createElement('div');
     actionsDiv.className = 'genre-actions';
 
-    // Add Wikipedia icon if it exists
     if (item.wikipedia_url) {
       const wikiIconLink = document.createElement('a');
       wikiIconLink.href = item.wikipedia_url;
       wikiIconLink.target = '_blank';
       wikiIconLink.rel = 'noopener noreferrer';
       wikiIconLink.className = 'bi bi-wikipedia wiki-icon';
-      wikiIconLink.dataset.action = 'wiki'; // For event delegation
+      wikiIconLink.dataset.action = 'wiki';
       wikiIconLink.setAttribute('aria-label', `Read more about ${item.style || item.name} on Wikipedia`);
       actionsDiv.appendChild(wikiIconLink);
     }
 
-    // Add info icon for ALL items
     const infoIcon = document.createElement('i');
     infoIcon.className = 'bi bi-info-circle-fill info-icon';
-    infoIcon.dataset.action = 'info'; // For event delegation
+    infoIcon.dataset.action = 'info';
     infoIcon.setAttribute('aria-label', `Info for ${item.style || item.name}`);
     actionsDiv.appendChild(infoIcon);
 
 
-    // If it's a parent node (has substyles), add expand/collapse functionality
     if (item.substyles && item.substyles.length > 0) {
-      // Create the expand/collapse indicator
       const indicator = document.createElement('span');
       indicator.className = 'indicator';
-      indicator.innerHTML = '&#43;'; // Plus sign
+      indicator.innerHTML = '&#43;';
       actionsDiv.appendChild(indicator);
 
-      // Accessibility attributes for the button
       const buttonId = `btn-${baseId}`;
       itemElement.id = buttonId;
       itemElement.setAttribute('aria-expanded', 'false');
@@ -934,18 +986,17 @@ function createMobileNav(items, parentElement, parentColor = null) {
 
       const subList = document.createElement('ul');
       subList.className = 'sub-list';
-      subList.id = subListId; // Assign the unique ID
-      subList.setAttribute('role', 'region'); // ARIA role for content panel
-      subList.setAttribute('aria-labelledby', buttonId); // Link panel to its button
-      createMobileNav(item.substyles, subList, currentColor); // Pass the color down to children
+      subList.id = subListId;
+      subList.setAttribute('role', 'region');
+      subList.setAttribute('aria-labelledby', buttonId);
+      createMobileNav(item.substyles, subList, currentColor);
 
       listItem.appendChild(itemElement);
       listItem.appendChild(subList);
-    } else { // If it's a leaf node (no substyles)
+    } else {
       listItem.appendChild(itemElement);
     }
 
-    // Append the actions to the item element
     itemElement.appendChild(actionsDiv);
     parentElement.appendChild(listItem);
   });
@@ -958,16 +1009,14 @@ function createMobileNav(items, parentElement, parentColor = null) {
 function performSearch(searchTerm) {
   const term = searchTerm.toLowerCase();
 
-  // --- D3 Tree Search (Desktop) ---
   const treeNodes = d3.selectAll('.node');
-  treeNodes.classed('searched-node', false); // Clear previous results
+  treeNodes.classed('searched-node', false);
   if (term) {
     treeNodes
       .filter(d => d.data.name.toLowerCase().includes(term))
       .classed('searched-node', true);
   }
 
-  // --- Accordion Search (Mobile) ---
   const mobileListItems = document.querySelectorAll('#mobile-genre-list li');
   if (!mobileListItems.length) return;
 
@@ -977,17 +1026,13 @@ function performSearch(searchTerm) {
     const originalText = nameSpan.dataset.originalText;
     const isMatch = term && originalText.toLowerCase().includes(term);
 
-    // Show/hide the list item itself
-    li.style.display = 'block'; // Reset display before checking
+    li.style.display = 'block';
 
-    // Highlight logic
     if (isMatch) {
       itemElement.classList.add('searched-item');
-      // Highlight the matching text
       const regex = new RegExp(`(${term})`, 'gi');
       nameSpan.innerHTML = originalText.replace(regex, '<mark class="search-highlight">$1</mark>');
 
-      // Expand all parents of the matched item
       let parent = li.parentElement;
       while (parent && parent.id !== 'mobile-genre-list') {
         if (parent.classList.contains('sub-list')) {
@@ -1001,16 +1046,16 @@ function performSearch(searchTerm) {
       }
     } else {
       itemElement.classList.remove('searched-item');
-      nameSpan.innerHTML = originalText; // Restore original text
+      nameSpan.innerHTML = originalText;
     }
   });
 }
 
 // --- Main Execution ---
-// This ensures the script runs only after the entire HTML document has been loaded and parsed.
 document.addEventListener('DOMContentLoaded', () => {
   
-  // --- Panel Closing Logic ---
+  fetchData();
+
   document.getElementById('close-panel').addEventListener('click', closeInfoPanel);
   document.getElementById('modal-overlay').addEventListener('click', closeInfoPanel);
 
@@ -1023,12 +1068,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- EFFICIENCY: Event Delegation for Mobile Accordion ---
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', (event) => {
+    handleUrl();
+  });
+
   const mobileNavContainer = document.getElementById('mobile-genre-list');
   mobileNavContainer.addEventListener('click', (event) => {
     const target = event.target;
     const itemElement = target.closest('.genre-item');
-    if (!itemElement) return; // Click was not on an item
+    if (!itemElement) return;
 
     const action = target.dataset.action || itemElement.dataset.action;
     const itemData = JSON.parse(itemElement.dataset.itemData);
@@ -1050,20 +1099,14 @@ document.addEventListener('DOMContentLoaded', () => {
         showInfoPanel(itemData, accentColor);
         break;
       case 'wiki':
-        // The link will navigate on its own, we just need to stop propagation
-        // to prevent the accordion from toggling.
         event.stopPropagation();
         break;
     }
   });
 
-  // --- Search Logic ---
   const searchInput = document.getElementById('search-input');
-  
-  // Real-time search with debounce
   const debouncedSearch = debounce((term) => performSearch(term), 300);
 
-  // --- NEW: Autocomplete Search Logic ---
   const suggestionsContainer = document.getElementById('search-suggestions');
   let currentFocus = -1;
 
@@ -1076,7 +1119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const matches = Array.from(genreMap.values())
       .filter(entry => (entry.data.name || entry.data.style).toLowerCase().includes(term.toLowerCase()))
-      .slice(0, 10); // Limit to 10 suggestions
+      .slice(0, 10);
 
     if (matches.length > 0) {
       suggestionsContainer.innerHTML = '';
@@ -1104,10 +1147,8 @@ document.addEventListener('DOMContentLoaded', () => {
           suggestionsContainer.innerHTML = '';
           suggestionsContainer.classList.add('hidden');
           
-          // Trigger the search/highlight logic
           performSearch(name);
           
-          // Find the node in the tree and open its panel
           const d3Node = d3.selectAll('.clickable-node').filter(d => (d.data.name || d.data.style) === name).datum();
           if (d3Node) {
               const topLevelAncestor = d3Node.ancestors().find(ancestor => ancestor.depth === 1);
@@ -1165,7 +1206,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Click outside to close suggestions
   document.addEventListener('click', (e) => {
     if (e.target !== searchInput && e.target !== suggestionsContainer) {
       suggestionsContainer.classList.add('hidden');
@@ -1179,7 +1219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('clear-button').addEventListener('click', () => {
     searchInput.value = '';
-    performSearch(''); // Clear search results
+    performSearch('');
     suggestionsContainer.innerHTML = '';
     suggestionsContainer.classList.add('hidden');
   });
@@ -1187,63 +1227,17 @@ document.addEventListener('DOMContentLoaded', () => {
   searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      // Logic handled in the autocomplete keydown listener above
     }
   });
 
-  // --- Footer Year ---
   document.getElementById('current-year').textContent = new Date().getFullYear();
 
-  // --- Initial Data Load ---
-  // This function will now be called safely after the DOM is ready.
-  fetchData().then(() => {
-    // After data is loaded and genreMap is built, check for URL hash
-    handleUrlHash();
-  });
-
-  // Function to handle URL hash for deep linking
-  function handleUrlHash() {
-    if (window.location.hash) {
-        const hash = decodeURIComponent(window.location.hash.substring(1)); // e.g., "Parent-Genre/Child-Genre"
-        const pathSegments = hash.split('/');
-
-        let targetGenre = findGenreByPath(pathSegments);
-
-        // Fallback for old, non-hierarchical URLs (e.g., #Dubstep)
-        if (!targetGenre && pathSegments.length === 1) {
-            const genreName = pathSegments[0].replace(/-/g, ' ');
-            const entry = genreMap.get(genreName);
-            if (entry) {
-                targetGenre = entry.data;
-            }
-        }
-
-        if (targetGenre) {
-            const entry = genreMap.get(targetGenre.name || targetGenre.style);
-            if (entry) {
-                // Find the top-level ancestor to get its color for the panel
-                let current = entry;
-                while (current.parent) {
-                    const parentEntry = genreMap.get(current.parent.name || current.parent.style);
-                    if (!parentEntry) break; 
-                    current = parentEntry;
-                }
-                const topLevelAncestor = current.data;
-                const accentColor = colorScale(topLevelAncestor.name || topLevelAncestor.style);
-                showInfoPanel(targetGenre, accentColor);
-            }
-        }
-    }
-  }
-
-  // --- "Read More" Logic for Mobile Description ---
-  const infoBox = document.getElementById('tooltip'); // The main description box
+  const infoBox = document.getElementById('tooltip');
   if (infoBox) {
     const readMoreBtn = document.createElement('button');
     readMoreBtn.textContent = 'Read More';
     readMoreBtn.className = 'read-more-btn';
 
-    // Append the button inside the info-box, it will be visible at the bottom of the collapsed content
     infoBox.appendChild(readMoreBtn);
 
     readMoreBtn.addEventListener('click', () => {
@@ -1252,7 +1246,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- NEW: Copy Link Button in Footer ---
   const copyBtn = document.getElementById('copy-link-btn');
   if (copyBtn) {
     const originalIconClass = 'bi-clipboard';
@@ -1260,13 +1253,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     copyBtn.addEventListener('click', () => {
       navigator.clipboard.writeText(window.location.href).then(() => {
-        // --- Success Feedback ---
         const icon = copyBtn.querySelector('i');
         icon.classList.remove(originalIconClass);
         icon.classList.add(successIconClass);
         copyBtn.setAttribute('aria-label', 'Link copied!');
 
-        // Revert back after 2 seconds
         setTimeout(() => {
           icon.classList.remove(successIconClass);
           icon.classList.add(originalIconClass);
@@ -1279,14 +1270,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Back to Top Logic ---
   const backToTopBtn = document.getElementById('back-to-top-btn');
   
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         backToTopBtn.style.display = 'block';
-        // Small delay to allow display:block to apply before opacity transition
         setTimeout(() => backToTopBtn.style.opacity = '1', 10);
       } else {
         backToTopBtn.style.opacity = '0';
@@ -1304,10 +1293,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- NEW: Fullscreen API Logic ---
   const fullscreenBtn = document.getElementById('fullscreen-btn');
   
-  // Check if the Fullscreen API is supported by the browser
   if (fullscreenBtn && document.fullscreenEnabled) {
     const fullscreenIcon = fullscreenBtn.querySelector('i');
 
@@ -1321,7 +1308,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Listen for changes in fullscreen state (e.g., user pressing Esc) to update the icon
     document.addEventListener('fullscreenchange', () => {
       if (document.fullscreenElement) {
         fullscreenIcon.classList.replace('bi-fullscreen', 'bi-fullscreen-exit');
@@ -1332,16 +1318,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   } else if (fullscreenBtn) {
-    // Hide the button if the API is not supported
     fullscreenBtn.style.display = 'none';
   }
 
-  // --- Theme Toggle Logic ---
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   if (themeToggleBtn) {
     const themeIcon = themeToggleBtn.querySelector('i');
     
-    // Always start in dark mode
     const currentTheme = 'dark';
     document.body.classList.remove('light-mode');
     colorScale = d3.scaleOrdinal(d3.schemeTableau10);
@@ -1355,10 +1338,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const isLight = document.body.classList.contains('light-mode');
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
       
-      // Update color scale
       colorScale = isLight ? d3.scaleOrdinal(d3.schemeSet2) : d3.scaleOrdinal(d3.schemeTableau10);
       
-      // Update tree colors
       const linkColor = isLight ? '#9ca3af' : d => colorScale(d.target.data.name);
       d3.selectAll('.node circle').attr('fill', d => colorScale(d.data.name));
       d3.selectAll('.link').attr('stroke', linkColor);
@@ -1374,7 +1355,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Polish: Scroll Progress Bar ---
   const progressBar = document.getElementById('scroll-progress-bar');
   if (progressBar) {
     window.addEventListener('scroll', () => {
@@ -1385,52 +1365,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Polish: Search Shortcut (/) ---
   document.addEventListener('keydown', (e) => {
-    // Check if the key pressed is '/' and we are not already in an input
     if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
-      e.preventDefault(); // Prevent printing '/'
+      e.preventDefault();
       const searchInput = document.getElementById('search-input');
       if (searchInput) {
         searchInput.focus();
-        // Optional: Select all text when focusing via shortcut
         searchInput.select();
       }
     }
   });
 
-  // --- Cool Feature: Random Shuffle ---
   const shuffleBtn = document.getElementById('shuffle-button');
   if (shuffleBtn) {
     shuffleBtn.addEventListener('click', () => {
-      // 1. Collect all "leaf" nodes (actual genres, not categories) from the D3 data
-      // We can access the data attached to the DOM elements
       const allNodes = d3.selectAll('.clickable-node').data();
       
       if (allNodes.length > 0) {
-        // 2. Pick a random node
         const randomNode = allNodes[Math.floor(Math.random() * allNodes.length)];
         
-        // 3. Trigger the interaction
-        // Show panel
-        // Find the specific DOM element for this node to get its color
         const nodeSelection = d3.selectAll('.clickable-node')
           .filter(d => d === randomNode);
         
         const nodeColor = nodeSelection.select('circle').style('fill');
         showInfoPanel(randomNode.data, nodeColor);
 
-        // 4. Highlight path in tree
-        // Reset previous highlights
         d3.selectAll('.node').classed('faded', true);
         d3.selectAll('.link').classed('faded', true);
         d3.selectAll('.node').classed('path-highlight-node', false);
         d3.selectAll('.link').classed('path-highlight-link', false);
 
-        // Highlight new path
         randomNode.ancestors().forEach(ancestor => {
-            // d3.select(ancestor.gNode) is not reliably available here depending on how we bound it
-            // So we re-select based on data
             d3.selectAll('.node').filter(d => d === ancestor)
                 .classed('faded', false)
                 .classed('path-highlight-node', true);
@@ -1441,21 +1406,18 @@ document.addEventListener('DOMContentLoaded', () => {
             .classed('faded', false)
             .classed('path-highlight-link', true);
             
-        // Optional: Center view on node (complex with SVG, but we can try)
-        // For now, the panel opening is the main feedback.
       }
     });
   }
 
-  // --- "On This Day" Feature ---
   const historyBanner = document.getElementById('history-banner');
   const historyFactSpan = document.getElementById('history-fact');
-  historyFactSpan.style.opacity = '1'; // Initialize opacity
+  historyFactSpan.style.opacity = '1';
   let historyInterval;
 
   async function fetchHistoryFacts() {
     try {
-      const response = await fetch('music_history.json');
+      const response = await fetch('/music_history.json');
       const facts = await response.json();
       return facts;
     } catch (error) {
@@ -1470,7 +1432,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     
-    // Fade out
     historyFactSpan.style.opacity = '0';
     
     setTimeout(() => {
@@ -1478,7 +1439,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const fact = facts[randomIndex];
       historyFactSpan.innerHTML = `<strong>${fact.date}:</strong> ${fact.fact}`;
       historyBanner.style.display = 'block';
-      // Fade in
       historyFactSpan.style.opacity = '1';
     }, 500);
   }
@@ -1487,7 +1447,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const facts = await fetchHistoryFacts();
     if (facts.length > 0) {
       displayRandomFact(facts);
-      // Rotate facts every 10 seconds
       historyInterval = setInterval(() => displayRandomFact(facts), 10000);
     }
   }

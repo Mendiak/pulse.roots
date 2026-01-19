@@ -1,34 +1,83 @@
-
 const fs = require('fs');
-const genres = require('./pulseroots.genres.json');
+const path = require('path');
+const genresData = require('./pulseroots.genres.json');
 
 const BASE_URL = 'https://mendiak.github.io/pulse.roots/';
 
-function generateUrls(genres, parentPath = []) {
-  let urls = [];
+// Helper function to create a URL-friendly slug
+function slugify(text) {
+    if (!text) return '';
+    return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/\//g, '-')            // Replace / with -
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+        .replace(/^-+/, '')             // Trim - from start of text
+        .replace(/-+$/, '');            // Trim - from end of text
+}
 
-  genres.forEach(genre => {
-    const currentPathPart = (genre.name || genre.style).replace(/\s+/g, '-');
-    const newPath = [...parentPath, currentPathPart];
-    const styleUrl = `${BASE_URL}#${newPath.join('/')}`;
-    
-    urls.push({
-      loc: styleUrl,
-      lastmod: new Date().toISOString().split('T')[0], // Use current date for lastmod
-      changefreq: 'monthly',
-      priority: parentPath.length > 0 ? 0.8 : 1.0
-    });
+// Helper function to recursively get all genres from the JSON structure
+function getAllGenres(genres, currentPathSlugs = []) {
+    let allGenres = [];
+    const traverse = (items, currentParentSlugs) => {
+        for (const item of items) {
+            const genreName = item.name || item.style;
+            if (!genreName) continue;
 
-    if (genre.substyles) {
-      urls = urls.concat(generateUrls(genre.substyles, newPath));
-    }
-  });
+            const currentGenreSlug = slugify(genreName);
+            const fullGenreSlugPath = [...currentParentSlugs, currentGenreSlug].join('/');
 
-  return urls;
+            allGenres.push({
+                genreName: genreName,
+                fullSlugPath: fullGenreSlugPath
+            });
+
+            if (item.substyles && item.substyles.length > 0) {
+                traverse(item.substyles, [...currentParentSlugs, currentGenreSlug]);
+            }
+        }
+    };
+    traverse(genres, currentPathSlugs);
+    return allGenres;
 }
 
 function generateSitemap() {
-  const urls = generateUrls(genres);
+  const allGenreInfos = getAllGenres(genresData);
+
+  // Start with static pages
+  const urls = [
+    {
+      loc: BASE_URL,
+      lastmod: new Date().toISOString().split('T')[0],
+      changefreq: 'monthly',
+      priority: '1.0',
+    },
+    {
+      loc: `${BASE_URL}contact.html`,
+      lastmod: new Date().toISOString().split('T')[0],
+      changefreq: 'yearly',
+      priority: '0.7',
+    },
+    {
+      loc: `${BASE_URL}privacy.html`,
+      lastmod: new Date().toISOString().split('T')[0],
+      changefreq: 'yearly',
+      priority: '0.7',
+    },
+  ];
+
+  // Add genre pages
+  allGenreInfos.forEach(genreInfo => {
+    const { genreName, fullSlugPath } = genreInfo;
+    if (fullSlugPath) {
+      urls.push({
+        loc: `${BASE_URL}genres/${fullSlugPath}.html`,
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'monthly',
+        priority: '0.8',
+      });
+    }
+  });
 
   const urlset = urls.map(url => `
   <url>
@@ -40,28 +89,10 @@ function generateSitemap() {
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${BASE_URL}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>${BASE_URL}contact.html</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>${BASE_URL}privacy.html</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  ${urlset}
+${urlset}
 </urlset>`;
 
-  fs.writeFileSync('sitemap.xml', sitemap);
+  fs.writeFileSync('sitemap.xml', sitemap.trim());
   console.log('Sitemap generated successfully!');
 }
 
