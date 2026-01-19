@@ -74,15 +74,15 @@ try {
         let newHtml = templateHtml;
 
         // Make all asset paths root-relative
-        newHtml = newHtml.replace(/href="styles.css"/, 'href="/styles.css"');
-        newHtml = newHtml.replace(/src="script.js"/, 'src="/script.js"');
-        newHtml = newHtml.replace(/src="assets\/logo.png"/, 'src="/assets/logo.png"');
-        newHtml = newHtml.replace(/src="assets\/footer-logo.png"/, 'src="/assets/footer-logo.png"');
-        newHtml = newHtml.replace(/rel="icon" href="assets\/favicon.png"/, 'rel="icon" href="/assets/favicon.png"');
-        newHtml = newHtml.replace(/href="index.html"/g, 'href="/index.html"');
-        newHtml = newHtml.replace(/href="contact.html"/g, 'href="/contact.html"');
-        newHtml = newHtml.replace(/href="privacy.html"/g, 'href="/privacy.html"');
-        newHtml = newHtml.replace(/content="https:\/\/mendiak.github.io\/pulse.roots\/assets\/og_image.webp"/, `content="${baseUrl}/assets/og_image.webp"`);
+        newHtml = newHtml.replace(/href="styles\.css"/, 'href="/pulse.roots/styles.css"');
+        newHtml = newHtml.replace(/src="script\.js"/, 'src="/pulse.roots/script.js"');
+        newHtml = newHtml.replace(/src="assets\/logo\.png"/, 'src="/pulse.roots/assets/logo.png"');
+        newHtml = newHtml.replace(/src="assets\/footer-logo\.png"/, 'src="/pulse.roots/assets/footer-logo.png"');
+        newHtml = newHtml.replace(/rel="icon" href="assets\/favicon\.png"/, 'rel="icon" href="/pulse.roots/assets/favicon.png"');
+        newHtml = newHtml.replace(/href="index\.html"/g, 'href="/pulse.roots/index.html"');
+        newHtml = newHtml.replace(/href="contact\.html"/g, 'href="/pulse.roots/contact.html"');
+        newHtml = newHtml.replace(/href="privacy\.html"/g, 'href="/pulse.roots/privacy.html"');
+        newHtml = newHtml.replace(/content="https:\/\/mendiak\.github.io\/pulse\.roots\/assets\/og_image\.webp"/, `content="${baseUrl}/assets/og_image.webp"`);
 
         // Update title
         const newTitle = `PulseRoots: ${genreName}`;

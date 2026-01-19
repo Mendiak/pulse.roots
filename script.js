@@ -468,7 +468,7 @@ async function fetchData() {
   try {
     if (loadingSpinner) loadingSpinner.classList.remove('hidden');
 
-    const response = await fetch('/pulseroots.genres.json');
+    const response = await fetch('pulseroots.genres.json');
     const data = await response.json();    
     allGenreData = data;
     buildGenreMap(data);
@@ -918,7 +918,7 @@ function closeInfoPanel() {
 
   // Reset the URL to the base if we are on a genre page
   if (window.location.pathname.includes('/genres/')) {
-    history.pushState(null, '', '/');
+    history.pushState(null, '', '/pulse.roots/');
   }
 
   if (focusedElementBeforePanel) {
@@ -1417,7 +1417,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function fetchHistoryFacts() {
     try {
-      const response = await fetch('/music_history.json');
+      const response = await fetch('music_history.json');
       const facts = await response.json();
       return facts;
     } catch (error) {
