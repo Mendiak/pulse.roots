@@ -5,6 +5,7 @@ const genresFilePath = path.join(__dirname, 'pulseroots.genres.json');
 const templatePath = path.join(__dirname, 'index.html');
 const outputDir = path.join(__dirname, 'genres');
 const baseUrl = 'https://mendiak.github.io/pulse.roots'; // Corrected base URL
+const BASE_REPLACEMENT = '/pulse.roots';
 
 // Helper function to create a URL-friendly slug
 function slugify(text) {
@@ -74,14 +75,14 @@ try {
         let newHtml = templateHtml;
 
         // Make all asset paths root-relative
-        newHtml = newHtml.replace(/href="styles\.css"/, 'href="/pulse.roots/styles.css"');
-        newHtml = newHtml.replace(/src="script\.js"/, 'src="/pulse.roots/script.js"');
-        newHtml = newHtml.replace(/src="assets\/logo\.png"/, 'src="/pulse.roots/assets/logo.png"');
-        newHtml = newHtml.replace(/src="assets\/footer-logo\.png"/, 'src="/pulse.roots/assets/footer-logo.png"');
-        newHtml = newHtml.replace(/rel="icon" href="assets\/favicon\.png"/, 'rel="icon" href="/pulse.roots/assets/favicon.png"');
-        newHtml = newHtml.replace(/href="index\.html"/g, 'href="/pulse.roots/index.html"');
-        newHtml = newHtml.replace(/href="contact\.html"/g, 'href="/pulse.roots/contact.html"');
-        newHtml = newHtml.replace(/href="privacy\.html"/g, 'href="/pulse.roots/privacy.html"');
+        newHtml = newHtml.replace(/href="styles\.css"/, `href="${BASE_REPLACEMENT}/styles.css"`);
+        newHtml = newHtml.replace(/src="script\.js"/, `src="${BASE_REPLACEMENT}/script.js"`);
+        newHtml = newHtml.replace(/src="assets\/logo\.png"/, `src="${BASE_REPLACEMENT}/assets/logo.png"`);
+        newHtml = newHtml.replace(/src="assets\/footer-logo\.png"/, `src="${BASE_REPLACEMENT}/assets/footer-logo.png"`);
+        newHtml = newHtml.replace(/rel="icon" href="assets\/favicon\.png"/, `rel="icon" href="${BASE_REPLACEMENT}/assets/favicon.png"`);
+        newHtml = newHtml.replace(/href="index\.html"/g, `href="${BASE_REPLACEMENT}/index.html"`);
+        newHtml = newHtml.replace(/href="contact\.html"/g, `href="${BASE_REPLACEMENT}/contact.html"`);
+        newHtml = newHtml.replace(/href="privacy\.html"/g, `href="${BASE_REPLACEMENT}/privacy.html"`);
         newHtml = newHtml.replace(/content="https:\/\/mendiak\.github.io\/pulse\.roots\/assets\/og_image\.webp"/, `content="${baseUrl}/assets/og_image.webp"`);
 
         // Update title

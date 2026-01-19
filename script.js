@@ -474,7 +474,14 @@ async function fetchData() {
 
     const fetchUrl = `${BASE_PATH}/pulseroots.genres.json`;
     console.log('PulseRoots: Fetching data from:', fetchUrl);
+    
+    // Diagnostic alert (temp)
+    // alert('Fetching data from: ' + fetchUrl + '\nBase Path: ' + (BASE_PATH || '(root)'));
+
     const response = await fetch(fetchUrl);
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status} at ${fetchUrl}`);
+    }
     const data = await response.json();    
     allGenreData = data;
     buildGenreMap(data);
