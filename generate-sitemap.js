@@ -79,21 +79,22 @@ function generateSitemap() {
     }
   });
 
-  const urlset = urls.map(url => `
-  <url>
-    <loc>${url.loc.replace(/&/g, '&amp;')}</loc>
+  const urlset = urls.map(url => `  <url>
+    <loc>${url.loc.replace(/&/g, '&amp;').replace(/'/g, '&apos;').replace(/"/g, '&quot;')}</loc>
     <lastmod>${url.lastmod}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>
-  </url>`).join('');
+  </url>`).join('\n');
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urlset}
 </urlset>`;
 
-  fs.writeFileSync('sitemap.xml', sitemap.trim());
-  console.log('Sitemap generated successfully!');
+  // Write with explicit UTF-8 encoding
+  fs.writeFileSync('sitemap.xml', sitemap, { encoding: 'utf8' });
+  console.log('✓ Sitemap generated successfully!');
+  console.log(`✓ Total URLs: ${urls.length}`);
 }
 
 generateSitemap();
