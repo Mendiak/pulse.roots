@@ -16,8 +16,7 @@ PulseRoots is an interactive visualization of the evolution of electronic music.
 ## Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+), D3.js (v6), Bootstrap Icons.
-- **Analytics & SEO**: Google Tag Manager, Schema.org (JSON-LD), Node.js (for sitemap).
-- **Data & Tools**: Python (for data enrichment), Spotify Web API.
+- **Data & Tools**: Spotify Web API.
 
 ## Setup & Local Development
 
@@ -50,21 +49,9 @@ The project's heart is `pulseroots.genres.json`. It follows a recursive tree str
 }
 ```
 
-## Maintenance Scripts
-
-### Python (Data Management)
-Located in the root, these scripts help maintain the `pulseroots.genres.json` file.
-- `populate_artists.py`: Automatically fetches Spotify URLs for artists using the Spotify API.
-- `audit_artists.py`: Checks for missing URLs or data inconsistencies in the JSON.
-
-**Setup**:
-1. Copy `.env.example` to `.env` and add your Spotify API credentials.
-2. Install dependencies: `pip install python-dotenv requests`.
-3. Run: `python populate_artists.py`.
-
-### Node.js (SEO Maintenance)
-- `generate-sitemap.js`: Generates a `sitemap.xml` based on the genre hierarchy to improve search engine indexing.
-- **Usage**: `node generate-sitemap.js`
+### Node.js (Maintenance)
+- `build.js`: Consolidates SEO and data maintenance. It generates `sitemap.xml` and all individual genre HTML pages in the `genres/` directory based on the hierarchy in `pulseroots.genres.json`.
+- **Usage**: `node build.js`
 
 ## Project Structure
 
@@ -74,7 +61,7 @@ Located in the root, these scripts help maintain the `pulseroots.genres.json` fi
 - `pulseroots.genres.json`: The database of genres.
 - `assets/`: Images, icons, and branding assets.
 - `generate-sitemap.js`: Sitemap generator (Node.js).
-- `populate_artists.py` / `audit_artists.py`: Data maintenance scripts (Python).
+- `build.js`: Build and maintenance script (Node.js).
 - `sitemap.xml` / `robots.txt`: SEO files.
 - `thanks.html`: Redirection page for the contact form.
 
