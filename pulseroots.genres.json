@@ -776,6 +776,48 @@
                     }
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Plunderphonics"
+            },
+            {
+                "name": "Hauntology",
+                "description": "Hauntology is a musical and aesthetic movement that emerged in the mid-2000s, exploring themes of cultural memory, nostalgia for lost futures, and the decay of analog media. Musically, it relies heavily on the crackle of vinyl, tape hiss, and samples from public information films, library music, and educational soundtracks from the 1960s and 70s. It creates a ghostly, uneasy atmosphere that feels familiar yet wrong, as if remembering a past that never actually happened.",
+                "example": "The Caretaker - It's Just a Burning Memory",
+                "spotify_track_id": "0uEec9a0RsYeQiaeyJapjY",
+                "key_artists": [
+                    {
+                        "name": "The Caretaker",
+                        "url": "https://open.spotify.com/intl-es/artist/2uQn9OFibYuvEMqMuH1zaP"
+                    },
+                    {
+                        "name": "Burial",
+                        "url": "https://open.spotify.com/intl-es/artist/0uCCBpmg6MrPb1KY2msceF"
+                    },
+                    {
+                        "name": "Broadcast",
+                        "url": "https://open.spotify.com/intl-es/artist/0WtTGUjbur1R1cNzBvbsMU"
+                    }
+                ],
+                "substyles": [
+                    {
+                        "name": "Hypnagogic Pop",
+                        "description": "A lo-fi, psychedelic offshoot of hauntology that emerged in the late 2000s (pre-vaporwave). It mimics the sounds of 1980s commercial pop, new age, and synth-funk, but processed through heavy reverb, tape saturation, and distortion to evoke the state between wakefulness and sleep (hypnagogia).",
+                        "example": "Ariel Pink - Round and Round",
+                        "spotify_track_id": "0IpxdHYUGxYvhZTeCdppH6",
+                        "key_artists": [
+                            {
+                                "name": "Ariel Pink",
+                                "url": "https://open.spotify.com/intl-es/artist/5H0YoDsPDi9fObFmJtTjfN"
+                            },
+                            {
+                                "name": "James Ferraro",
+                                "url": "https://open.spotify.com/intl-es/artist/2gjrgz4DNYGrvQOpqLr2nv"
+                            },
+                            {
+                                "name": "Dean Blunt",
+                                "url": "https://open.spotify.com/intl-es/artist/5CFSYjc0PAiQvndFjafabk"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
