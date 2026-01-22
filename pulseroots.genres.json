@@ -2408,6 +2408,48 @@
                         ]
                     }
                 ]
+            },
+            {
+                "name": "Brazilian Bass",
+                "description": "Brazilian Bass is a subgenre of House music that originated in Brazil around the mid-2010s. Pioneered by artists like Alok and Vintage Culture, it is characterized by deep, punchy basslines that often act as the main melodic element, typically sitting between 120 and 126 BPM. It blends the moody atmosphere of Deep House with the aggressive low-end of Techno and G-House, focusing on a heavy, driving low-end rather than complex top-end melodies.",
+                "example": "Alok, Bruno Martini feat. Zeeba - Hear Me Now",
+                "spotify_track_id": "39cmB3ZoTOLwOTq7tMNqKa",
+                "key_artists": [
+                    {
+                        "name": "Alok",
+                        "url": "https://open.spotify.com/intl-es/artist/0NGAZxHanS9e0iNHpR8f2W"
+                    },
+                    {
+                        "name": "Vintage Culture",
+                        "url": "https://open.spotify.com/intl-es/artist/28uJnu5EsrGml2tBd7y8ts"
+                    },
+                    {
+                        "name": "Sevenn",
+                        "url": "https://open.spotify.com/intl-es/artist/7bNqXqIrIfwJnipx7oGeU4"
+                    }
+                ],
+                "substyles": [
+                    {
+                        "name": "Slap House",
+                        "description": "Slap House is a modern evolution of Brazilian Bass that gained massive global popularity around 2018-2020. It takes the signature punchy bass of its parent genre but processes it to sound more metallic, elastic, and bouncing (the 'slap' sound). It creates a highly commercial aesthetic by combining these driving basslines with catchy pop vocals and simple, radio-friendly structures, dominating streaming charts and remixes.",
+                        "example": "Dynoro & Gigi D'Agostino - In My Mind",
+                        "spotify_track_id": "0E9ZjEAyAwOXZ7wJC0PD33",
+                        "key_artists": [
+                            {
+                                "name": "Dynoro",
+                                "url": "https://open.spotify.com/intl-es/artist/3v6Ji4uoWtKRkhuDUaxi9n"
+                            },
+                            {
+                                "name": "Imanbek",
+                                "url": "https://open.spotify.com/intl-es/artist/5rGrDvrLOV2VV8SCFVGWlj"
+                            },
+                            {
+                                "name": "VIZE",
+                                "url": "https://open.spotify.com/intl-es/artist/09agIJMxCD2k87ys9Al0f0"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -3844,8 +3886,29 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "name": "Color Bass",
+                        "description": "Color Bass (or advanced Melodic Riddim) is a subgenre of dubstep that focuses on vibrant, harmonic, and extremely melodic sound design. It utilizes complex techniques like spectral convolution and vocoders to turn atonal bass sounds into bright, colorful chords. It maintains the heavy rhythm of dubstep but replaces the darkness and industrial aggression with harmonic euphoria and neon textures.",
+                        "example": "Chime - Wait For Me",
+                        "spotify_track_id": "3vPcTKOpmwkj0P6vOui6Xc",
+                        "key_artists": [
+                            {
+                                "name": "Chime",
+                                "url": "https://open.spotify.com/intl-es/artist/3hMTYaexWgGkXqvbkt6EIS"
+                            },
+                            {
+                                "name": "Ace Aura",
+                                "url": "https://open.spotify.com/intl-es/artist/5o2KBzYUFierWmBhSemAhq"
+                            },
+                            {
+                                "name": "Virtual Riot",
+                                "url": "https://open.spotify.com/intl-es/artist/4FXGRMSHh2JjHxVwS8dhH1"
+                            }
+                        ]
                     }
                 ]
+                
             },
             {
                 "name": "Future bass",
@@ -3995,6 +4058,26 @@
                     }
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/EDM_trap_music"
+            },
+            {
+                "name": "Phonk",
+                "description": "Phonk is a genre that fuses 90s Memphis rap with modern electronic production techniques. It is characterized by the use of distorted and repetitive vocals (often samples from old cassette tapes), saturated 808 basslines, and dark or jazzy melodies. In its recent evolution, it has branched into high-energy styles driven by cowbells and fast rhythms, becoming a viral phenomenon associated with drifting culture and fitness.",
+                "example": "Kordhell - Murder In My Mind",
+                "spotify_track_id": "6v9tjIDuN0anXNoPMytvbQ",
+                "key_artists": [
+                    {
+                        "name": "Kordhell",
+                        "url": "https://open.spotify.com/intl-es/artist/2W6WP4pHQTFlbr2z9S4n54"
+                    },
+                    {
+                        "name": "DVRST",
+                        "url": "https://open.spotify.com/intl-es/artist/0XFgyr4jwM0MGeZZW0VzA5"
+                    },
+                    {
+                        "name": "Pharmacist",
+                        "url": "https://open.spotify.com/intl-es/artist/6VlPp1wb53ANKMIwZPJfM0"
+                    }
+                ]
             },
             {
                 "name": "UK bass",
