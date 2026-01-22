@@ -4019,6 +4019,49 @@
                 ]
             },
             {
+                "name": "Wave",
+                "description": "Wave is a genre that emerged in the mid-2010s from the underground internet scene, blending elements of trap, grime, and emo. Known for its emotional melodies and heavy bass, it reflects the emotional depth and personal struggles of its creators. Wave’s connection to internet subcultures, particularly on platforms like SoundCloud and Bandcamp, helped the genre gain traction among young, digitally native listeners. The genre speaks to themes of isolation, loss, and longing, and has become a vehicle for introspective and vulnerable expression. Its sound is often dark and atmospheric, capturing the tension between melancholy and empowerment, resonating with a generation confronting emotional and societal challenges in a hyper-connected, often isolating digital world.",
+                "example": "Klimeks - Eternally Yours",
+                "spotify_track_id": "3ju6S1v9i1s9hzOm7hMRQr",
+                "key_artists": [
+                    {
+                        "name": "Skeler",
+                        "url": "https://open.spotify.com/artist/7ks4LdnBvp6HUsmVJiKgsB"
+                    },
+                    {
+                        "name": "Klimeks",
+                        "url": "https://open.spotify.com/artist/5JQljNQvDpk1hhKpJHpwNU"
+                    },
+                    {
+                        "name": "Barnacle Boi",
+                        "url": "https://open.spotify.com/artist/6psDObCnL4BfpwqYzE0Dzu"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Wave_music",
+                "substyles": [
+                    {
+                        "name": "Hardwave",
+                        "description": "Hardwave is a more aggressive subgenre of wave that intensifies the genre’s emotional depth with faster tempos and heavier, more energetic beats. It retains wave’s signature melancholic melodies but amplifies them with bass-driven production, making the genre more club-friendly and intense. Hardwave reflects the growing trend of blending aggression with emotional expression, appealing to listeners who seek a cathartic release through music. The genre’s evolution mirrors broader cultural shifts in bass music, where artists are pushing sonic boundaries to capture both vulnerability and strength. Hardwave is a product of digital music communities that embrace both introspection and high-energy, visceral experiences, becoming a space where emotional tension meets powerful, confrontational sound.",
+                        "example": "Skeler - Tel Aviv",
+                        "spotify_track_id": "45KsTd0ZqKlgw0fNc8oyC5",
+                        "key_artists": [
+                            {
+                                "name": "Skeler",
+                                "url": "https://open.spotify.com/artist/7ks4LdnBvp6HUsmVJiKgsB"
+                            },
+                            {
+                                "name": "Deadcrow",
+                                "url": "https://open.spotify.com/artist/4ufkY8hmhmYl4aCnzv3dLE"
+                            },
+                            {
+                                "name": "Heimanu",
+                                "url": "https://open.spotify.com/artist/01mvWXVNW6Gz5Oxf6bQrtM"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "name": "Midtempo bass",
                 "description": "Midtempo Bass is a genre that combines elements of dubstep, electro house, and techno, typically sitting at a tempo range of 100-125 BPM. Known for its deep, punchy basslines and atmospheric sound design, this genre creates a dark, moody vibe that remains energetic without the faster tempos of other electronic styles. Midtempo Bass often features complex synth patterns, spacey melodies, and heavy drops, balancing between the heaviness of bass music and the groove of slower tempo rhythms. It’s perfect for those looking for something that hits hard without overwhelming the listener.",
                 "example": "REZZ - Edge",
@@ -4100,46 +4143,24 @@
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/UK_bass"
             },
+            
             {
-                "name": "Wave",
-                "description": "Wave is a genre that emerged in the mid-2010s from the underground internet scene, blending elements of trap, grime, and emo. Known for its emotional melodies and heavy bass, it reflects the emotional depth and personal struggles of its creators. Wave’s connection to internet subcultures, particularly on platforms like SoundCloud and Bandcamp, helped the genre gain traction among young, digitally native listeners. The genre speaks to themes of isolation, loss, and longing, and has become a vehicle for introspective and vulnerable expression. Its sound is often dark and atmospheric, capturing the tension between melancholy and empowerment, resonating with a generation confronting emotional and societal challenges in a hyper-connected, often isolating digital world.",
-                "example": "Klimeks - Eternally Yours",
-                "spotify_track_id": "3ju6S1v9i1s9hzOm7hMRQr",
+                "name": "Moombahton",
+                "description": "Moombahton is a fusion genre created by Dave Nada in 2009 that slows down Dutch House vibes to the tempo of Reggaeton (usually 108-112 BPM). It combines the thick, elastic basslines and dramatic build-ups of Electro House with the 'dembow' rhythm of Reggaeton. It became a global phenomenon, heavily influencing modern pop production and leading to subgenres like Moombahcore.",
+                "example": "Major Lazer - Lean On",
+                "spotify_track_id": "4UKJUbcuStnnxLeJmVJsSc",
                 "key_artists": [
                     {
-                        "name": "Skeler",
-                        "url": "https://open.spotify.com/artist/7ks4LdnBvp6HUsmVJiKgsB"
+                        "name": "Dave Nada",
+                        "url": "https://open.spotify.com/intl-es/artist/36lZNcPL1UMu0JVRbULfUn"
                     },
                     {
-                        "name": "Klimeks",
-                        "url": "https://open.spotify.com/artist/5JQljNQvDpk1hhKpJHpwNU"
+                        "name": "Dillon Francis",
+                        "url": "https://open.spotify.com/intl-es/artist/5R3Hr2cnCCjt220Jmt2xLf"
                     },
                     {
-                        "name": "Barnacle Boi",
-                        "url": "https://open.spotify.com/artist/6psDObCnL4BfpwqYzE0Dzu"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Wave_music",
-                "substyles": [
-                    {
-                        "name": "Hardwave",
-                        "description": "Hardwave is a more aggressive subgenre of wave that intensifies the genre’s emotional depth with faster tempos and heavier, more energetic beats. It retains wave’s signature melancholic melodies but amplifies them with bass-driven production, making the genre more club-friendly and intense. Hardwave reflects the growing trend of blending aggression with emotional expression, appealing to listeners who seek a cathartic release through music. The genre’s evolution mirrors broader cultural shifts in bass music, where artists are pushing sonic boundaries to capture both vulnerability and strength. Hardwave is a product of digital music communities that embrace both introspection and high-energy, visceral experiences, becoming a space where emotional tension meets powerful, confrontational sound.",
-                        "example": "Skeler - Tel Aviv",
-                        "spotify_track_id": "45KsTd0ZqKlgw0fNc8oyC5",
-                        "key_artists": [
-                            {
-                                "name": "Skeler",
-                                "url": "https://open.spotify.com/artist/7ks4LdnBvp6HUsmVJiKgsB"
-                            },
-                            {
-                                "name": "Deadcrow",
-                                "url": "https://open.spotify.com/artist/4ufkY8hmhmYl4aCnzv3dLE"
-                            },
-                            {
-                                "name": "Heimanu",
-                                "url": "https://open.spotify.com/artist/01mvWXVNW6Gz5Oxf6bQrtM"
-                            }
-                        ]
+                        "name": "Major Lazer",
+                        "url": "https://open.spotify.com/intl-es/artist/738wLrAtLtCtFOLvQBXOXp"
                     }
                 ]
             }
