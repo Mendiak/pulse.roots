@@ -962,6 +962,27 @@
                                 "url": "https://open.spotify.com/artist/08tQwub0ulYRq9dRBKVS1r"
                             }
                         ]
+                    },
+                    {
+                        "name": "Ghettotech",
+                        "description": "Ghettotech is a raw, high-energy genre of electronic dance music that originated in Detroit during the mid-to-late 1990s. It fuses the rapid-fire beats of Chicago Ghetto House with the heavy basslines and mechanical rhythms of Miami Bass, Electro, and Techno. Characterized by fast tempos (typically ranging from 145 to 160 BPM) and unpolished, gritty production, Ghettotech is distinct for its heavy use of repetitive, often sexually explicit or pornographic vocal samples looped over Roland TR-808 and 909 beats. It represents a bridge between Detroit’s sophisticated techno heritage and the raw, street-level energy of bass music, placing a strong emphasis on turntable skills and fast-paced DJ mixing.",
+                        "example": "DJ Assault - Sex on the Beach",
+                        "spotify_track_id": "4erJBoqNtQtSgwTmnSGY7A",
+                        "key_artists": [
+                            {
+                                "name": "DJ Assault",
+                                "url": "https://open.spotify.com/intl-es/artist/3yoyUFgb11DMp1KrsJoQZU"
+                            },
+                            {
+                                "name": "DJ Godfather",
+                                "url": "https://open.spotify.com/intl-es/artist/0cKrM2XKF7wxyfEQDauvyQ"
+                            },
+                            {
+                                "name": "Disco D'",
+                                "url": "https://open.spotify.com/intl-es/artist/6rikRjgHeeQmCi0Ygrg4RN"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Ghettotech"
                     }
                 ]
             },
