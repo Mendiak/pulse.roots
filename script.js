@@ -23,7 +23,6 @@ let colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
 // Determine the base path (e.g., "/pulse.roots" or "")
 const BASE_PATH = window.location.pathname.includes('/pulse.roots') ? '/pulse.roots' : '';
-console.log('PulseRoots: Detected BASE_PATH:', BASE_PATH || '(root)');
 
 // Create a single tooltip element to be reused for performance
 const tooltip = d3.select('body')
@@ -473,7 +472,6 @@ async function fetchData() {
     if (loadingSpinner) loadingSpinner.classList.remove('hidden');
 
     const fetchUrl = `${BASE_PATH}/pulseroots.genres.json`;
-    console.log('PulseRoots: Fetching data from:', fetchUrl);
     
     // Diagnostic alert (temp)
     // alert('Fetching data from: ' + fetchUrl + '\nBase Path: ' + (BASE_PATH || '(root)'));
