@@ -1183,21 +1183,27 @@ footer {
 @media (max-width: 768px) {
   #footer-main {
     grid-template-columns: 1fr;
-    text-align: center;
     gap: 50px;
   }
 
-  #footer-brand,
-  .footer-link,
-  #social-icons-container {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  #footer-brand {
+    align-items: flex-start;
+    text-align: left;
   }
 
   #footer-mission {
-    margin: 0 auto;
+    margin: 0;
   }
+
+  #footer-links ul {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #social-icons-container {
+    justify-content: flex-start;
+  }
+
 }
 
 .tooltip {
