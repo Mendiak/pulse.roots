@@ -1008,6 +1008,19 @@ function createMobileNav(items, parentElement, parentColor = null) {
       listItem.appendChild(itemElement);
       listItem.appendChild(subList);
     } else {
+      // Leaf node: allow clicking the whole row to see info
+      itemElement.dataset.action = 'info'; 
+      itemElement.setAttribute('role', 'button');
+      itemElement.setAttribute('tabindex', '0');
+      
+      // Allow keyboard activation for accessibility
+      itemElement.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              showInfoPanel(item, currentColor);
+          }
+      });
+      
       listItem.appendChild(itemElement);
     }
 
@@ -1040,35 +1053,95 @@ function performSearch(searchTerm) {
     const originalText = nameSpan.dataset.originalText;
     const isMatch = term && originalText.toLowerCase().includes(term);
 
-    li.style.display = 'block';
+    // If there is ANY search term, we need to filter visibility.
+    // If NO search term, show everything (reset).
+    if (term) {
+        if (isMatch) {
+            li.style.display = 'block';
+            itemElement.classList.add('searched-item');
+            const regex = new RegExp(`(${term})`, 'gi');
+            nameSpan.innerHTML = originalText.replace(regex, '<mark class="search-highlight">$1</mark>');
 
-    if (isMatch) {
-      itemElement.classList.add('searched-item');
-      const regex = new RegExp(`(${term})`, 'gi');
-      nameSpan.innerHTML = originalText.replace(regex, '<mark class="search-highlight">$1</mark>');
-
-      let parent = li.parentElement;
-      while (parent && parent.id !== 'mobile-genre-list') {
-        if (parent.classList.contains('sub-list')) {
-          parent.classList.add('expanded');
-          const controllingButton = document.querySelector(`[aria-controls="${parent.id}"]`);
-          if (controllingButton) {
-            controllingButton.setAttribute('aria-expanded', 'true');
-          }
+            // Expand parents
+            let parent = li.parentElement;
+             while (parent && parent.id !== 'mobile-genre-list') {
+                if (parent.classList.contains('sub-list')) {
+                parent.classList.add('expanded');
+                const controllingButton = document.querySelector(`[aria-controls="${parent.id}"]`);
+                if (controllingButton) {
+                    controllingButton.setAttribute('aria-expanded', 'true');
+                }
+                }
+                parent = parent.parentElement;
+            }
+        } else {
+             // If this item is NOT a match, we might still need to show it if its CHILDREN match.
+             // But existing logic hides LIs. 
+             // Simplification: logic below handles expand. 
+             // We need to hide non-matches unless they are parents of matches?
+             // The current simple search logic just hides LIs that don't match? 
+             // Wait, `li.style.display = 'block'` logic was:
+             
+             // If I set display: none on a parent LI, its children are hidden too. 
+             // The structure is nested <ul> inside <li>.
+             
+             // Let's stick to the previous simple highlight logic or improve it?
+             // The previous logic was: `li.style.display = 'block';` always at start?
+             // Line 1043 said `li.style.display = 'block';`
         }
-        parent = parent.parentElement;
-      }
     } else {
-      itemElement.classList.remove('searched-item');
-      nameSpan.innerHTML = originalText;
+        // Reset
+        li.style.display = 'block';
+        itemElement.classList.remove('searched-item');
+        nameSpan.innerHTML = originalText;
     }
   });
+  
+  // Re-apply visibility based on search (Improved logic)
+  if (term) {
+      // First hide all LIs
+      mobileListItems.forEach(li => li.style.display = 'none');
+      
+      // Then show matches and their parents
+      mobileListItems.forEach(li => {
+          const itemElement = li.querySelector('.genre-item');
+          const nameSpan = itemElement.querySelector('.genre-name');
+          const originalText = nameSpan.dataset.originalText;
+           if (originalText.toLowerCase().includes(term)) {
+               // Show this LI
+               li.style.display = 'block';
+               
+               // Show all ancestors
+               let parent = li.parentElement; // ul.sub-list or #mobile-genre-list
+               while (parent) {
+                   if (parent.tagName === 'LI') {
+                       parent.style.display = 'block';
+                   }
+                   if (parent.id === 'mobile-genre-list') break;
+                   parent = parent.parentElement;
+               }
+           }
+      });
+  }
 }
 
 // --- Main Execution ---
 document.addEventListener('DOMContentLoaded', () => {
   
   fetchData();
+  
+  // Mobile Search Logic
+  const mobileSearchInput = document.getElementById('mobile-search-input');
+  if (mobileSearchInput) {
+      const debouncedMobileSearch = debounce((term) => performSearch(term), 300);
+      mobileSearchInput.addEventListener('input', (e) => {
+          debouncedMobileSearch(e.target.value);
+      });
+      // Prevent form submission if inside a form, or just enter key behavior
+      mobileSearchInput.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter') e.preventDefault();
+      });
+  }
 
   document.getElementById('close-panel').addEventListener('click', closeInfoPanel);
   document.getElementById('modal-overlay').addEventListener('click', closeInfoPanel);

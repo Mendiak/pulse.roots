@@ -915,7 +915,8 @@ p {
 }
 
 .artist-card i {
-  color: #1DB954; /* Spotify Green */
+  color: #1DB954;
+  /* Spotify Green */
   font-size: 1.2rem;
   transition: transform 0.2s ease;
 }
@@ -1222,6 +1223,30 @@ footer {
   /* Ensures padding is included in the width */
 }
 
+#mobile-search-container {
+  margin-bottom: 15px;
+}
+
+#mobile-search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  font-size: 16px;
+  /* Prevent zoom on iOS */
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-search-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 4px rgba(255, 0, 85, 0.15);
+}
+
 #accordion-controls {
   display: flex;
   gap: 10px;
@@ -1308,14 +1333,9 @@ footer {
   border-bottom: none;
 }
 
-/* Apply cursor only to parent items that can be expanded */
-.genre-item[aria-expanded] {
+/* Apply cursor to all genre items, as they are now all interactive */
+.genre-item {
   cursor: pointer;
-}
-
-/* Add a subtle background to the currently open item to indicate its state */
-.genre-item[aria-expanded="true"] {
-  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .genre-name {
@@ -1334,6 +1354,24 @@ footer {
 
 .genre-item:hover {
   background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Style for leaf nodes (no sub-genres) */
+.genre-item:not([aria-expanded]) .genre-name::after {
+  content: '\F285';
+  /* Bootstrap Icon: chevron-right */
+  font-family: 'bootstrap-icons';
+  float: right;
+  font-size: 0.8em;
+  opacity: 0.5;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.genre-item:not([aria-expanded]):hover .genre-name::after {
+  transform: translateX(3px);
+  opacity: 1;
+  color: var(--accent-pink);
 }
 
 .genre-item .indicator {
@@ -1502,7 +1540,8 @@ footer {
     order: 2;
     position: relative;
     max-height: 150px;
-    overflow: hidden; /* Ensure content is initially hidden */
+    overflow: hidden;
+    /* Ensure content is initially hidden */
     padding-bottom: 60px;
     transition: max-height 0.5s ease-in-out;
   }
@@ -1522,16 +1561,20 @@ footer {
 
   /* Styles for when the description is expanded */
   .info-box.is-expanded {
-    max-height: 8000px; /* Large enough to show all content */
-    overflow: visible; /* Allow content to overflow when expanded */
+    max-height: 8000px;
+    /* Large enough to show all content */
+    overflow: visible;
+    /* Allow content to overflow when expanded */
   }
 
   .info-box.is-expanded::after {
-    opacity: 0; /* Hide the gradient when expanded */
+    opacity: 0;
+    /* Hide the gradient when expanded */
   }
 
   .read-more-btn {
-    display: block; /* Keep it block always on mobile */
+    display: block;
+    /* Keep it block always on mobile */
     position: absolute;
     bottom: 15px;
     left: 50%;
