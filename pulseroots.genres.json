@@ -2492,6 +2492,132 @@
                         ]
                     }
                 ]
+            },
+            {
+                "name": "Electro House",
+                "description": "Electro House rose to prominence in the mid-2000s, fusing the steady 4/4 beats of house music with the gritty, distorted basslines and analog synthesizer sounds of 80s electro. Unlike traditional house, which is often soulful or smooth, Electro House is aggressive, buzz-heavy, and energetic. It served as the precursor to the modern EDM explosion, introducing 'dirty' basslines and heavy drops to the mainstage.",
+                "example": "Benny Benassi - Satisfaction",
+                "spotify_track_id": "1n7omixiROWs5q6xpWiQuL",
+                "key_artists": [
+                    {
+                        "name": "Benny Benassi",
+                        "url": "https://open.spotify.com/artist/5LhN9Z5T7e5sYq6QW4h1G"
+                    },
+                    {
+                        "name": "Fedde Le Grand",
+                        "url": "https://open.spotify.com/intl-es/artist/7dc6hUwyuIhrZdh80eaCEE"
+                    },
+                    {
+                        "name": "Wolfgang Gartner",
+                        "url": "https://open.spotify.com/intl-es/artist/3534yWWzmxx8NbKVoNolsK"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Electro_house",
+                "substyles": [
+                    {
+                        "name": "Complextro",
+                        "description": "Complextro is a subgenre of Electro House characterized by intricate, glitchy basslines where multiple different synth sounds are chopped and arranged in rapid succession within a bar. Popularized by artists like Porter Robinson in the early 2010s, it draws heavily from chiptune and video game aesthetics.",
+                        "example": "Porter Robinson - Spitfire",
+                        "spotify_track_id": "1qmRcQV5N0oDYHcoVB11YS",
+                        "key_artists": [
+                            {
+                                "name": "Porter Robinson",
+                                "url": "https://open.spotify.com/intl-es/artist/3dz0NnIZhtKKeXZxLOxCam"
+                            },
+                            {
+                                "name": "Mord Fustang",
+                                "url": "https://open.spotify.com/intl-es/artist/34hwBP1esafQoCVtLz7F6K"
+                            },
+                            {
+                                "name": "Feed Me",
+                                "url": "https://open.spotify.com/intl-es/artist/5FWi1mowu6uiU2ZHwr1rby"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Big Room House",
+                        "description": "The quintessential 'festival' sound that dominated the 2010s. Big Room simplifies Electro House into massive, reverberating kick drums and simple, anthemic melodies designed for large crowds. It focuses on the 'drop'—a minimal, high-energy section following a long buildup.",
+                        "example": "Martin Garrix - Animals",
+                        "spotify_track_id": "0A9mHc7oYUoCECqByV8cQR",
+                        "key_artists": [
+                            {
+                                "name": "Martin Garrix",
+                                "url": "https://open.spotify.com/intl-es/artist/60d24wfXkVzDSfLS6hyCjZ"
+                            },
+                            {
+                                "name": "Hardwell",
+                                "url": "https://open.spotify.com/intl-es/artist/6BrvowZBreEkXzJQMpL174"
+                            },
+                            {
+                                "name": "Dimitri Vegas & Like Mike",
+                                "url": "https://open.spotify.com/intl-es/artist/73jBynjsVtofjRpdpRAJGk"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Progressive House",
+                "description": "Progressive House is a style that emerged in the United Kingdom in the early 1990s as a reaction to the speed of breakbeat and the simplicity of early house. It is characterized by long, evolving tracks that build tension gradually (progressively) rather than relying on instant hooks. The genre focuses on melody and emotion, often incorporating atmospheric textures from trance and the rhythmic groove of house. It defined the 'Super DJ' era of the late 90s and 2000s, bridging the gap between deep house and trance.",
+                "example": "Sasha - Xpander",
+                "spotify_track_id": "76mh0rcSJpNhoCCqazptWm",
+                "key_artists": [
+                    {
+                        "name": "Sasha",
+                        "url": "https://open.spotify.com/intl-es/artist/6u4jLGLPuarS3i2XWHVxoS"
+                    },
+                    {
+                        "name": "John Digweed",
+                        "url": "https://open.spotify.com/intl-es/artist/3xnDktxhudJR2Wv3HZDQ9W"
+                    },
+                    {
+                        "name": "Deadmau5",
+                        "url": "https://open.spotify.com/intl-es/artist/2CIMQHirSU0MQqyYHq0eOx"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Progressive_house"
+            },
+            {
+                "name": "Hard House",
+                "description": "Hard House is a style known for its fast tempo (typically 145–150 BPM), off-beat bass stabs (often called 'donks'), and energetic, uplifting vibe. Emerging in the 90s (notably in the UK club 'Trade'), it sits between House and Hard Trance. Unlike Techno, it retains a funky, swinging groove and often features diva vocal samples, but delivered with aggressive speed and intensity.",
+                "example": "Tony De Vit - The Dawn",
+                "spotify_track_id": "0QmIykIkfezWfODoHwqlnm",
+                "key_artists": [
+                    {
+                        "name": "Tony De Vit",
+                        "url": "https://open.spotify.com/intl-es/artist/17acmoMCDxCeLPYv4T5sV1"
+                    },
+                    {
+                        "name": "Tidy Boys",
+                        "url": "https://open.spotify.com/intl-es/artist/1CRR7gSk8OeT559LDpP5e0"
+                    },
+                    {
+                        "name": "Lisa Lashes",
+                        "url": "https://open.spotify.com/intl-es/artist/60McQZr6bfr1eBpvq9YQz2"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Hard_house"
+            },
+            {
+                "name": "Hip House",
+                "description": "Hip House is a genre that fused the rhythms of house music with the vocal delivery of hip-hop. Emerging from Chicago and New York in the late 1980s, it capitalized on the energy of the acid house movement but added a lyrical, MC-led structure. It was instrumental in bringing house music to the pop charts, producing massive global hits. The style is characterized by fast-paced rapping (often with a distinctive rhythmic flow) over a steady 4/4 house beat, bridging the gap between urban rap culture and the dancefloor.",
+                "example": "Technotronic - Pump Up The Jam",
+                "spotify_track_id": "21qnJAMtzC6S5SESuqQLEK",
+                "key_artists": [
+                    {
+                        "name": "Technotronic",
+                        "url": "https://open.spotify.com/intl-es/artist/2Cd98zHVdZeOCisc6Gi2sB"
+                    },
+                    {
+                        "name": "Tyree Cooper",
+                        "url": "https://open.spotify.com/intl-es/artist/0iQ58hVu6gA9nuuCgbnvOn"
+                    },
+                    {
+                        "name": "Fast Eddie",
+                        "url": "https://open.spotify.com/intl-es/artist/19slOlozrbxkEIMD8L3Qsv"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Hip_house"
             }
         ]
     },
