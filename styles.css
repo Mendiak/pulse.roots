@@ -1232,7 +1232,28 @@ footer {
 }
 
 #mobile-search-container {
+  position: relative;
   margin-bottom: 15px;
+}
+
+#mobile-clear-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mobile-clear-button.hidden {
+  display: none;
 }
 
 #mobile-search-input {

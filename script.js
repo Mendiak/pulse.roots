@@ -1130,14 +1130,26 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Mobile Search Logic
   const mobileSearchInput = document.getElementById('mobile-search-input');
+  const mobileClearButton = document.getElementById('mobile-clear-button');
   if (mobileSearchInput) {
       const debouncedMobileSearch = debounce((term) => performSearch(term), 300);
       mobileSearchInput.addEventListener('input', (e) => {
-          debouncedMobileSearch(e.target.value);
+          const term = e.target.value;
+          debouncedMobileSearch(term);
+          mobileClearButton.classList.toggle('hidden', !term);
       });
       // Prevent form submission if inside a form, or just enter key behavior
       mobileSearchInput.addEventListener('keydown', (e) => {
         if(e.key === 'Enter') e.preventDefault();
+      });
+  }
+
+  if (mobileClearButton) {
+      mobileClearButton.addEventListener('click', () => {
+        mobileSearchInput.value = '';
+        performSearch('');
+        mobileClearButton.classList.add('hidden');
+        mobileSearchInput.focus();
       });
   }
 
