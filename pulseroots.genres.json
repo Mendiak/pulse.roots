@@ -4292,6 +4292,27 @@
                 "wikipedia_url": "https://en.wikipedia.org/wiki/EDM_trap_music"
             },
             {
+                "name": "Cloud Rap",
+                "description": "Cloud Rap is a genre merging hip-hop with electronic and ambient music, emerging in the late 2000s through internet blog culture. It is defined by its hazy, dreamlike production, utilizing heavy reverb, delay, and ethereal synthesizer pads to create a 'cloudy' atmosphere. Musically, it relies on slow-tempo trap beats and unconventional samples (often from indie or choral music), while vocally it features relaxed, sometimes mumbled or melodic delivery. It serves as the direct stylistic ancestor to genres like Wave and modern Emo Rap, blurring the lines between atmospheric electronic soundscapes and rap.",
+                "example": "Yung Lean - Ginseng Strip 2002",
+                "spotify_track_id": "7v3rmoy5jcn4h5UqwQyCM3",
+                "key_artists": [
+                    {
+                        "name": "Clams Casino",
+                        "url": "https://open.spotify.com/intl-es/artist/5vSQUyT33qxr1xAX2Tkf3A"
+                    },
+                    {
+                        "name": "Yung Lean",
+                        "url": "https://open.spotify.com/intl-es/artist/67lytN32YpUxiSeWlKfHJ3"
+                    },
+                    {
+                        "name": "Lil B",
+                        "url": "https://open.spotify.com/intl-es/artist/4bbjivSh1oG4NOc7uYHfw5"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Cloud_rap"
+            },
+            {
                 "name": "Phonk",
                 "description": "Phonk is a genre that fuses 90s Memphis rap with modern electronic production techniques. It is characterized by the use of distorted and repetitive vocals (often samples from old cassette tapes), saturated 808 basslines, and dark or jazzy melodies. In its recent evolution, it has branched into high-energy styles driven by cowbells and fast rhythms, becoming a viral phenomenon associated with drifting culture and fitness.",
                 "example": "Kordhell - Murder In My Mind",
@@ -5883,6 +5904,26 @@
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Hyperpop"
+                    },
+                    {
+                        "name": "Angelcore",
+                        "description": "Angelcore is a micro-genre and internet aesthetic that emerged from the Hyperpop and Cloud Rap scenes. Musically, it focuses on creating a 'heavenly' or ethereal atmosphere, acting as a softer, dreamier counterpoint to the chaotic energy of Hyperpop. It is characterized by high-pitched, breathy vocals (often heavily processed with auto-tune), lush textures, and the use of 'divine' instrumentation such as harps, flutes, and choir pads layered over light trap beats or ambient soundscapes. The genre evokes themes of innocence, ascension, and digital nostalgia, often blurring the line between pop music and choral ambient.",
+                        "example": "Himera - Scene Before the Kiss xoxo (Himera remix)",
+                        "spotify_track_id": "4TfKlG1Gn6o0mYd1kH2xHu",
+                        "key_artists": [
+                            {
+                                "name": "Himera",
+                                "url": "https://open.spotify.com/intl-es/artist/1Vi0Dq6hC56i3a6eVA9Y6g"
+                            },
+                            {
+                                "name": "Bladee",
+                                "url": "https://open.spotify.com/intl-es/artist/2xvtxDNInKDV4AvGmjw6d1"
+                            },
+                            {
+                                "name": "Galen Tipton",
+                                "url": "https://open.spotify.com/artist/2L9IRjJj5QZ3Ww4wy5Y5Y5"
+                            }
+                        ]
                     }
                 ]
             },
