@@ -2870,6 +2870,46 @@
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Suomisaundi"
+                    },
+                    {
+                        "name": "Forest Psytrance",
+                        "description": "Forest Psytrance is a subgenre that creates a deep, organic, and mysterious atmosphere, often evoking the feeling of being in a dense, enchanted woodland. Musically, it sits between Progressive and Dark Psytrance (typically 148–152 BPM). Unlike the mechanical aggression of Dark Psy, Forest relies on 'squelchy' sounds, intricate textures that mimic insects or water, and funky, rolling basslines. It creates a hypnotic, mossy, and slightly spooky vibe without relying on sheer speed or terror.",
+                        "example": "Atriohm - Hybrid Synthesis",
+                        "spotify_track_id": "45kZdRaDckpztxTRucIQi4", 
+                        "key_artists": [
+                            {
+                                "name": "Atriohm",
+                                "url": "https://open.spotify.com/intl-es/artist/6kv03c4uwitYETlNAaQIGL"
+                            },
+                            {
+                                "name": "Derango",
+                                "url": "https://open.spotify.com/intl-es/artist/1ES3MdfFDfedLChXHCkMiI"
+                            },
+                            {
+                                "name": "EVP",
+                                "url": "https://open.spotify.com/intl-es/artist/5D9NPQT1XN44peiYNVPfQc"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Twilight Psytrance",
+                        "description": "Twilight Psytrance (often referred to as Night Full-on) acts as the bridge between the uplifting melodies of Full-on and the aggressive, faster nature of Dark Psytrance. Designed for the transition hours of dusk and dawn, it features powerful, driving basslines and high-energy rhythms but replaces euphoric melodies with twisted, metallic, and jagged sound design. It is groovy and dancefloor-oriented but maintains a darker, more serious tone.",
+                        "example": "Scorb - Epoxymoron",
+                        "spotify_track_id": "6pVAXlbJNwFQEz05tr8c8o", 
+                        "key_artists": [
+                            {
+                                "name": "Scorb",
+                                "url": "https://open.spotify.com/intl-es/artist/6LFZa0FrldSD5S7Ka49rrK"
+                            },
+                            {
+                                "name": "Absolum",
+                                "url": "https://open.spotify.com/intl-es/artist/2ctKxe2xzmIxsyiCOVxc9I"
+                            },
+                            {
+                                "name": "Shift",
+                                "url": "https://open.spotify.com/intl-es/artist/2eDyOWpseLQy601raX4K3W"
+                            }
+                        ]
                     }
                 ]
             },
