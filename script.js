@@ -167,6 +167,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
   const closeButton = document.getElementById('close-panel');
+  const scrollIndicator = document.getElementById('scroll-indicator');
 
   // --- SEO & URL Update ---
   const genreSlug = getGenrePath(itemData);
@@ -358,6 +359,26 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     spotifyEmbed.innerHTML = '';
     spotifyEmbed.style.display = 'none';
   }
+
+  // Show scroll indicator if needed
+  setTimeout(() => {
+    if (infoPanel.scrollHeight > infoPanel.clientHeight) {
+      scrollIndicator.classList.remove('hidden');
+    } else {
+      scrollIndicator.classList.add('hidden');
+    }
+  }, 500); // Delay to allow content to render
+
+  infoPanel.onscroll = () => {
+    scrollIndicator.classList.add('hidden');
+  };
+
+  scrollIndicator.onclick = () => {
+    infoPanel.scroll({
+      top: infoPanel.scrollTop + 200,
+      behavior: 'smooth'
+    });
+  };
 
   infoPanel.classList.add('visible');
 
@@ -910,6 +931,7 @@ function closeInfoPanel() {
   const infoPanel = document.getElementById('info-panel');
   const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
+  const scrollIndicator = document.getElementById('scroll-indicator');
 
   document.getElementById('main-container').removeAttribute('aria-hidden');
   document.querySelector('header').removeAttribute('aria-hidden');
@@ -917,6 +939,7 @@ function closeInfoPanel() {
 
   infoPanel.classList.remove('visible');
   overlay.classList.remove('visible');
+  scrollIndicator.classList.add('hidden');
 
   spotifyEmbed.innerHTML = '';
 
