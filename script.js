@@ -257,6 +257,23 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   desc.textContent = itemData.description || 'No description available';
   infoContent.appendChild(desc);
 
+  // --- Wikipedia Link Logic ---
+  if (itemData.wikipedia_url) {
+    const wikiLinkContainer = document.createElement('div');
+    wikiLinkContainer.className = 'external-link-container';
+
+    const wikiLink = document.createElement('a');
+    wikiLink.href = itemData.wikipedia_url;
+    wikiLink.target = '_blank';
+    wikiLink.rel = 'noopener noreferrer';
+    wikiLink.className = 'wikipedia-link';
+    
+    wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> Read more on Wikipedia`;
+
+    wikiLinkContainer.appendChild(wikiLink);
+    infoContent.appendChild(wikiLinkContainer);
+  }
+
   const example = document.createElement('p');
   example.innerHTML = `<i class="bi bi-soundwave"></i> <b>Example track: ${itemData.example || 'N/A'}</b>`;
   infoContent.appendChild(example);
@@ -329,23 +346,6 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     
     subgenresNav.appendChild(sublist);
     infoContent.appendChild(subgenresNav);
-  }
-
-  // --- Wikipedia Link Logic ---
-  if (itemData.wikipedia_url) {
-    const wikiLinkContainer = document.createElement('div');
-    wikiLinkContainer.className = 'external-link-container';
-
-    const wikiLink = document.createElement('a');
-    wikiLink.href = itemData.wikipedia_url;
-    wikiLink.target = '_blank';
-    wikiLink.rel = 'noopener noreferrer';
-    wikiLink.className = 'wikipedia-link';
-    
-    wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> Read more on Wikipedia`;
-
-    wikiLinkContainer.appendChild(wikiLink);
-    infoContent.appendChild(wikiLinkContainer);
   }
 
   const trackId = itemData.spotify_track_id;
