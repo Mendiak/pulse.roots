@@ -3,6 +3,7 @@
   /* Modern Color Palette */
   --bg-dark: #0f172a;
   --panel-dark: rgba(30, 41, 59, 0.7);
+  --secondary-dark: rgb(30, 41, 59);
   --accent-pink: #ff0055;
   --accent-cyan: #00f2ff;
   --text-main: #f8fafc;
@@ -28,7 +29,7 @@
 body.light-mode {
   --bg-dark: #f8fafc;
   --panel-dark: rgba(255, 255, 255, 0.85);
-  --secondary-dark: rgba(255, 255, 255, 0.95);
+  --secondary-dark: rgba(255, 255, 255, 1);
   --tertiary-dark: rgba(200, 200, 200, 0.5);
   --text-main: #1e293b;
   --text-muted: #64748b;
@@ -447,10 +448,11 @@ p {
   left: 0;
   width: 100%;
   max-width: 300px;
-  background-color: var(--secondary-dark);
+  background: var(--panel-dark);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--tertiary-dark);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   z-index: 2000;
   max-height: 300px;
