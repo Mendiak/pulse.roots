@@ -4330,6 +4330,48 @@
                         "name": "Pharmacist",
                         "url": "https://open.spotify.com/intl-es/artist/6VlPp1wb53ANKMIwZPJfM0"
                     }
+                ],
+                "substyles": [
+                    {
+                        "name": "Drift Phonk",
+                        "description": "The viral, high-energy evolution of Phonk characterized by the heavy use of the Roland TR-808 cowbell as a melodic instrument, extreme bass distortion, and high tempos. It moved away from the jazzy/lo-fi roots to create an aggressive sound associated with JDM car culture and gym/fitness content.",
+                        "example": "MoonDeity - Neon Blade",
+                        "spotify_track_id": "0iUrxveyNUBfj0cqjYEijt",
+                        "key_artists": [
+                            {
+                                "name": "MoonDeity",
+                                "url": "https://open.spotify.com/artist/5ja9cfKWW8Zj9aloyK8WuY"
+                            },
+                            {
+                                "name": "Kordhell",
+                                "url": "https://open.spotify.com/artist/2W6WP4pHQTFlbr2z9S4n54"
+                            },
+                            {
+                                "name": "DVRST",
+                                "url": "https://open.spotify.com/artist/0XFgyr4jwM0MGeZZW0VzA5"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Brazilian Phonk",
+                        "description": "A fusion genre that blends the distorted aesthetic and cowbells of Drift Phonk with the syncopated, percussive rhythms of Brazilian Funk Carioca (specifically the 'Mandelão' style). It features aggressive, repetitive vocal chants in Portuguese and a chaotic, high-energy atmosphere.",
+                        "example": "S3BZS - Montagem - PR Funk",
+                        "spotify_track_id": "6njJR3OIp3oA0Kc4aC9Tzf",
+                        "key_artists": [
+                            {
+                                "name": "Slowboy",
+                                "url": "https://open.spotify.com/intl-es/artist/65FHTCI8EmW94W0TdWb8ja"
+                            },
+                            {
+                                "name": "S3BZS",
+                                "url": "https://open.spotify.com/intl-es/artist/6zFMFB1JvNHkHvCSudF4id"
+                            },
+                            {
+                                "name": "Phonkha",
+                                "url": "https://open.spotify.com/intl-es/artist/5LloPEToP2oZZGdSmh1TFU"
+                            }
+                        ]
+                    }
                 ]
             },
             {
@@ -4991,6 +5033,26 @@
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Dreampunk"
+                    },
+                    {
+                        "name": "Horror Synth",
+                        "description": "Horror Synth (also known as Darksynth or Slasherwave) is a darker, more aggressive subgenre of Synthwave inspired by 1970s and 80s horror movie soundtracks. Influenced by composers like John Carpenter and Goblin, it utilizes vintage analog synthesizers to create eerie, tension-filled atmospheres mingled with driving, heavy beats. Unlike the nostalgic, sun-soaked vibes of traditional Synthwave, Horror Synth embraces the macabre, featuring distorted basslines, minor-key arpeggios, and an aesthetic rooted in slasher films and the occult. It often crosses over into metal territory due to its intensity and Satanic imagery.",
+                        "example": "Carpenter Brut - Roller Mobster",
+                        "spotify_track_id": "7oxnK2wg8qFv8EXyyxKDJ4",
+                        "key_artists": [
+                            {
+                                "name": "Carpenter Brut",
+                                "url": "https://open.spotify.com/intl-es/artist/1l2oLiukA9i5jEtIyNWIEP"
+                            },
+                            {
+                                "name": "Perturbator",
+                                "url": "https://open.spotify.com/intl-es/artist/244uLu9lkdw39BJwlul3k8"
+                            },
+                            {
+                                "name": "GosT",
+                                "url": "https://open.spotify.com/intl-es/artist/46HcJG62ky3Tj7yJpB2Qqg"
+                            }
+                        ]
                     }
                 ]
             },

@@ -1255,6 +1255,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mendiak.github.io/pulse.roots/genres/bass-music/phonk/drift-phonk.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mendiak.github.io/pulse.roots/genres/bass-music/phonk/brazilian-phonk.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mendiak.github.io/pulse.roots/genres/bass-music/uk-bass.html</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -1436,6 +1448,12 @@
   </url>
   <url>
     <loc>https://mendiak.github.io/pulse.roots/genres/chill-out/synthwave/dreampunk.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mendiak.github.io/pulse.roots/genres/chill-out/synthwave/horror-synth.html</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
