@@ -785,8 +785,11 @@ function createTree(data) {
   const nodesToShow = root.descendants().filter(d => d.depth > 0);
 
   // Link generator with smoother curves for radial
+  // Added a small offset (0.5px) to vertical coordinates in vertical layout
+  // to prevent perfectly horizontal lines, which fixes a Chrome bug where lines or their
+  // filters (glow) disappear. 0.5px is enough to force proper rendering while being visually imperceptible.
   const linkGenerator = currentLayout === 'vertical' 
-    ? d3.linkHorizontal().x(d => d.y).y(d => d.x)
+    ? d3.linkHorizontal().x(d => d.y).y(d => d.x + (d.children ? 0 : 0.5))
     : d3.linkRadial().angle(d => d.x).radius(d => d.y);
 
   // Create the links

@@ -1095,6 +1095,7 @@ p {
   background: var(--accent-pink);
   border-color: var(--accent-pink);
   transform: scale(1.05);
+  
 }
 
 #close-panel:focus-visible {
