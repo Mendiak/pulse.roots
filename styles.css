@@ -139,6 +139,46 @@ body.light-mode #search-input {
   background: rgba(255, 255, 255, 0.1);
 }
 
+#close-panel-container {
+  position: sticky;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+  z-index: 10;
+  background: transparent;
+  pointer-events: none;
+}
+
+#close-panel {
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: var(--shadow-md);
+}
+
+#close-panel:hover {
+  background: var(--accent-pink);
+  border-color: var(--accent-pink);
+  transform: scale(1.1);
+}
+
+#close-panel i {
+  font-size: 1.2rem;
+}
+
 body.light-mode #search-input::placeholder {
   color: #ccc;
 }
@@ -764,7 +804,7 @@ p {
   border: 1px solid var(--glass-border);
   border-bottom: none;
   border-top: 4px solid var(--panel-accent-color, var(--accent-pink));
-  z-index: 1001;
+  z-index: 2000;
   max-height: 90vh;
   overflow-y: auto;
   box-sizing: border-box;
