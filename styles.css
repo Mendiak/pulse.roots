@@ -802,6 +802,8 @@ p {
   border-radius: 3px;
   flex-shrink: 0;
   cursor: grab;
+  display: none;
+  /* Hidden on desktop */
 }
 
 /* --- Custom Scrollbar for the Info Panel (WebKit browsers) --- */
@@ -885,8 +887,9 @@ p {
   background: var(--panel-dark);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  padding: 15px 0 10px;
+  padding: 10px 0 8px;
   margin: 0 -30px 20px;
+  /* Increase bottom margin to prevent overlap */
   padding-left: 30px;
   padding-right: 30px;
   z-index: 5;
@@ -903,6 +906,17 @@ p {
   line-height: 1.8;
   font-size: 1rem;
   margin-bottom: 1.5em;
+}
+
+/* Ensure the first paragraph (description) clears the sticky header */
+#info-panel .panel-sticky-header+p {
+  scroll-margin-top: 150px;
+  /* Helper for scroll snapping if used */
+  padding-top: 30px;
+  /* Use padding to prevent margin collapse */
+  position: relative;
+  /* Ensure z-index works if needed */
+  z-index: 1;
 }
 
 #info-panel b {
@@ -1707,6 +1721,16 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+  }
+
+  /* Hide close button on mobile - drag handle is sufficient */
+  #close-panel {
+    display: none;
+  }
+
+  /* Show drag handle on mobile */
+  #panel-drag-handle {
+    display: block;
   }
 }
 

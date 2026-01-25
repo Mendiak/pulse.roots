@@ -434,6 +434,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     }
     
     if (isDragging) {
+      e.preventDefault(); // Prevent pull-to-refresh
       touchMoveY = e.touches[0].clientY;
       const deltaY = touchMoveY - touchStartY;
       
@@ -443,7 +444,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
         infoPanel.style.transition = 'none';
       }
     }
-  }, { passive: true });
+  }, { passive: false }); // Changed to non-passive to allow preventDefault
 
   dragHandle.addEventListener('touchend', () => {
     if (!isDragging) return;
