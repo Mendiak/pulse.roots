@@ -295,6 +295,10 @@ header {
   white-space: nowrap;
 }
 
+body.light-mode #search-nav #search-counter {
+  color: #ffffff !important;
+}
+
 .search-nav-btns {
   display: flex;
   gap: 4px;
@@ -502,6 +506,11 @@ p {
   font-size: 16px;
   font-weight: 800;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+body.light-mode .active-searched-node text {
+  fill: #1e293b !important;
+  text-shadow: none;
 }
 
 .search-highlight-rect {
