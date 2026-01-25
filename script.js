@@ -228,7 +228,6 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
 
   // Update the info panel with the node's data.
   infoContent.innerHTML = '';
-  infoContent.appendChild(breadcrumbsContainer);
   
   const title = document.createElement('h2');
   title.id = 'info-panel-title';
@@ -250,8 +249,14 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   headerWrapper.style.marginBottom = '20px';
   headerWrapper.appendChild(title);
   headerWrapper.appendChild(shareBtn);
+
+  // Create a sub-header for breadcrumbs and main title that stays relatively at the top
+  const stickyHeader = document.createElement('div');
+  stickyHeader.className = 'panel-sticky-header';
+  stickyHeader.appendChild(breadcrumbsContainer);
+  stickyHeader.appendChild(headerWrapper);
   
-  infoContent.appendChild(headerWrapper);
+  infoContent.appendChild(stickyHeader);
 
   const desc = document.createElement('p');
   desc.textContent = itemData.description || 'No description available';
@@ -409,6 +414,41 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
         e.preventDefault();
       }
     }
+  });
+
+  // --- NEW: Swipe-to-Close Logic ---
+  let touchStartY = 0;
+  let touchMoveY = 0;
+  const DRAG_THRESHOLD = 100;
+
+  infoPanel.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  infoPanel.addEventListener('touchmove', (e) => {
+    touchMoveY = e.touches[0].clientY;
+    const deltaY = touchMoveY - touchStartY;
+    
+    // Only allow swiping down
+    if (deltaY > 0 && infoPanel.scrollTop <= 0) {
+      infoPanel.style.transform = `translate(-50%, ${deltaY}px)`;
+      infoPanel.style.transition = 'none';
+    }
+  }, { passive: true });
+
+  infoPanel.addEventListener('touchend', () => {
+    const deltaY = touchMoveY - touchStartY;
+    infoPanel.style.transition = ''; // Restore transition
+    
+    if (deltaY > DRAG_THRESHOLD && infoPanel.scrollTop <= 0) {
+      closeInfoPanel();
+    } else {
+      // Snap back if not closed
+      infoPanel.style.transform = `translate(-50%, 0)`;
+    }
+    // Reset values
+    touchStartY = 0;
+    touchMoveY = 0;
   });
 }
 
