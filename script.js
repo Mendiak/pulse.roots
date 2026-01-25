@@ -435,56 +435,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     }
   });
 
-  // --- Swipe-to-Close Logic (only on drag handle) ---
-  const dragHandle = document.getElementById('panel-drag-handle');
-  let touchStartY = 0;
-  let touchMoveY = 0;
-  let isDragging = false;
-  const DRAG_THRESHOLD = 80;
 
-  dragHandle.addEventListener('touchstart', (e) => {
-    // Prevent default immediately to stop scrolling/pull-to-refresh from starting
-    e.preventDefault(); 
-    e.stopPropagation();
-    
-    touchStartY = e.touches[0].clientY;
-    isDragging = false;
-  }, { passive: false }); // MUST be non-passive to allow preventDefault
-
-  dragHandle.addEventListener('touchmove', (e) => {
-    if (!isDragging && Math.abs(e.touches[0].clientY - touchStartY) > 5) {
-      isDragging = true;
-    }
-    
-    if (isDragging) {
-      e.preventDefault(); // Prevent pull-to-refresh
-      touchMoveY = e.touches[0].clientY;
-      const deltaY = touchMoveY - touchStartY;
-      
-      // Only allow swiping down
-      if (deltaY > 0) {
-        infoPanel.style.transform = `translate(-50%, ${deltaY}px)`;
-        infoPanel.style.transition = 'none';
-      }
-    }
-  }, { passive: false }); // Changed to non-passive to allow preventDefault
-
-  dragHandle.addEventListener('touchend', () => {
-    if (!isDragging) return;
-    
-    const deltaY = touchMoveY - touchStartY;
-    infoPanel.style.transition = '';
-    
-    if (deltaY > DRAG_THRESHOLD) {
-      closeInfoPanel();
-    } else {
-      infoPanel.style.transform = `translate(-50%, 0)`;
-    }
-    
-    touchStartY = 0;
-    touchMoveY = 0;
-    isDragging = false;
-  });
 }
 
 /**
@@ -1700,6 +1651,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  // --- Keyboard Shortcuts ---
   document.addEventListener('keydown', (e) => {
     if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
       e.preventDefault();
@@ -1710,6 +1663,64 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // --- Swipe-to-Close Logic (one-time initialization) ---
+  const dragHandle = document.getElementById('panel-drag-handle');
+  const infoPanel = document.getElementById('info-panel');
+  let touchStartY = 0;
+  let touchMoveY = 0;
+  let isDragging = false;
+  const DRAG_THRESHOLD = 80;
+
+  if (dragHandle && infoPanel) {
+    dragHandle.addEventListener('touchstart', (e) => {
+      if (!infoPanel.classList.contains('visible')) return;
+      
+      // Prevent default to stop scrolling/pull-to-refresh
+      e.preventDefault(); 
+      e.stopPropagation();
+      
+      touchStartY = e.touches[0].clientY;
+      isDragging = false;
+    }, { passive: false });
+
+    dragHandle.addEventListener('touchmove', (e) => {
+      if (!infoPanel.classList.contains('visible')) return;
+
+      if (!isDragging && Math.abs(e.touches[0].clientY - touchStartY) > 5) {
+        isDragging = true;
+      }
+      
+      if (isDragging) {
+        e.preventDefault(); // Prevent pull-to-refresh
+        touchMoveY = e.touches[0].clientY;
+        const deltaY = touchMoveY - touchStartY;
+        
+        // Only allow swiping down
+        if (deltaY > 0) {
+          infoPanel.style.transform = `translate(-50%, ${deltaY}px)`;
+          infoPanel.style.transition = 'none';
+        }
+      }
+    }, { passive: false });
+
+    dragHandle.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      
+      const deltaY = touchMoveY - touchStartY;
+      infoPanel.style.transition = '';
+      
+      if (deltaY > DRAG_THRESHOLD) {
+        closeInfoPanel();
+      } else {
+        infoPanel.style.transform = `translate(-50%, 0)`;
+      }
+      
+      touchStartY = 0;
+      touchMoveY = 0;
+      isDragging = false;
+    });
+  }
 
   const shuffleBtn = document.getElementById('shuffle-button');
   if (shuffleBtn) {

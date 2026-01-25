@@ -849,6 +849,7 @@ body.light-mode .active-searched-node text {
   max-height: 85vh;
   /* Slightly lower to ensure it's not off-screen at top */
   overflow-y: auto;
+  overscroll-behavior-y: contain;
   box-sizing: border-box;
 }
 
