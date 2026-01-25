@@ -1397,14 +1397,41 @@ footer {
 
 .tooltip {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 15px;
-  border-radius: 5px;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text-main, white);
+  padding: 18px;
+  border-radius: 16px;
   font-size: 14px;
-  z-index: 100;
+  z-index: 5000;
   pointer-events: none;
-  max-width: 400px;
+  max-width: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  line-height: 1.6;
+}
+
+.tooltip h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-pink, #ff0055);
+}
+
+.tooltip p {
+  margin: 0;
+  color: #e0e0e0;
+}
+
+.tooltip p:last-child {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted, #b0b0b0);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* --- Styles for the new Mobile Navigation --- */

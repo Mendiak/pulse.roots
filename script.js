@@ -30,14 +30,29 @@ const tooltip = d3.select('body')
   .attr('class', 'tooltip')
   .style('opacity', 0);
 
+/**
+ * Truncates a string to a maximum length at the nearest word boundary.
+ * @param {string} str The string to truncate.
+ * @param {number} maxLength The maximum length.
+ * @returns {string} The truncated string.
+ */
+function truncateDescription(str, maxLength = 160) {
+  if (!str || str.length <= maxLength) return str;
+  const subString = str.substr(0, maxLength - 1);
+  return subString.substr(0, subString.lastIndexOf(' ')) + '...';
+}
+
 // Function to show the tooltip
 function showTooltip(event, d) {
   if (d.depth === 0) return; // Don't show tooltip for the root node
 
+  const desc = d.data.description || 'No description available';
+  const truncatedDesc = truncateDescription(desc);
+
   tooltip.transition().duration(200).style('opacity', 0.9);
   tooltip.html(`
     <h3>${d.data.name}</h3>
-    <p>${d.data.description || 'No description available'}</p>
+    <p>${truncatedDesc}</p>
     <p><i class="bi bi-hand-index"></i> Click the node to listen the example track.</p>
   `)
     .style('left', (event.pageX + 10) + 'px')
