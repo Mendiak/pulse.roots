@@ -868,12 +868,12 @@ body.light-mode .active-searched-node text {
   /* Extend to full width */
   padding-left: 30px;
   padding-right: 30px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--glass-border);
   position: relative;
-  /* For absolute positioning of close button */
+  /* For absolute positioning of close button if needed */
 }
 
 #panel-drag-handle {
@@ -966,7 +966,7 @@ body.light-mode .active-searched-node text {
 
 .panel-sticky-header {
   position: sticky;
-  top: 56px;
+  top: 0;
   /* Height of #panel-header (12px padding top + 5px handle + 12px padding bottom + borders) */
   background: var(--panel-dark);
   backdrop-filter: blur(15px);
@@ -1150,9 +1150,13 @@ body.light-mode .active-searched-node text {
 }
 
 #close-panel {
-  position: absolute;
-  top: 8px;
-  right: 15px;
+  position: sticky;
+  top: 10px;
+  float: right;
+  margin-bottom: -36px;
+  /* Equal to its height to prevent pushing content */
+  z-index: 1001;
+  /* Above everything */
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
@@ -1843,6 +1847,22 @@ footer {
   /* Show drag handle on mobile */
   #panel-drag-handle {
     display: block;
+  }
+
+  #panel-header {
+    display: flex;
+  }
+
+  .panel-sticky-header {
+    top: 56px;
+  }
+
+  #close-panel {
+    display: none;
+    position: absolute;
+    /* Reset from sticky for mobile if needed, though hidden anyway */
+    top: 8px;
+    right: 15px;
   }
 }
 
