@@ -277,6 +277,52 @@ header {
   display: none;
 }
 
+#search-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  margin-left: 12px;
+}
+
+#search-counter {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.search-nav-btns {
+  display: flex;
+  gap: 4px;
+}
+
+.search-nav-btns button {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-nav-btns button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent-pink);
+}
+
+.search-nav-btns button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 /* --- Main Content & Layout --- */
 
 main {
@@ -442,6 +488,31 @@ p {
 .searched-node text {
   font-weight: bold;
   fill: #ff0055;
+  text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+}
+
+.active-searched-node circle {
+  stroke: #ffcc00;
+  stroke-width: 4px;
+  r: 10;
+}
+
+.active-searched-node text {
+  fill: #fff !important;
+  font-size: 16px;
+  font-weight: 800;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.search-highlight-rect {
+  fill: rgba(255, 204, 0, 0.25);
+  stroke: #ffcc00;
+  stroke-width: 2px;
+  rx: 6px;
+  /* Rounded corners */
+  ry: 6px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 
@@ -1095,7 +1166,7 @@ p {
   background: var(--accent-pink);
   border-color: var(--accent-pink);
   transform: scale(1.05);
-  
+
 }
 
 #close-panel:focus-visible {

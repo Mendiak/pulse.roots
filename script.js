@@ -58,6 +58,10 @@ let activeSelectedNode = null; // Global state for the currently selected node i
 let currentLayout = 'vertical'; // Global state for the layout ('vertical' or 'radial')
 let lastHighlightedNode = null; // Track the node currently being highlighted
 
+// --- Search State ---
+let matchedNodes = []; // Stores the current set of matched nodes (D3 data)
+let currentMatchIndex = -1; // Index of the currently focused match
+
 /**
  * Creates a URL-friendly slug from a string.
  * @param {string} text The text to slugify.
@@ -1203,6 +1207,109 @@ function performSearch(searchTerm) {
            }
       });
   }
+
+  // --- Improved Desktop Search Navigation ---
+  const searchNav = document.getElementById('search-nav');
+  const searchCounter = document.getElementById('search-counter');
+  
+  if (!term) {
+    matchedNodes = [];
+    currentMatchIndex = -1;
+    if (searchNav) searchNav.classList.add('hidden');
+    d3.selectAll('.node').classed('active-searched-node', false);
+    d3.select('#search-highlight-box').remove();
+    return;
+  }
+
+  // Find all matched nodes in the tree
+  matchedNodes = treeNodes.filter(d => d.data.name.toLowerCase().includes(term)).data();
+  
+  if (matchedNodes.length > 0) {
+    if (searchNav) searchNav.classList.remove('hidden');
+    navigateToMatch(0);
+  } else {
+    if (searchNav) searchNav.classList.add('hidden');
+    currentMatchIndex = -1;
+  }
+}
+
+/**
+ * Navigates to a specific match in the search results.
+ * @param {number} index - The index of the match in matchedNodes.
+ */
+function navigateToMatch(index) {
+  if (matchedNodes.length === 0) return;
+  
+  // Wrap around index
+  if (index < 0) index = matchedNodes.length - 1;
+  if (index >= matchedNodes.length) index = 0;
+  
+  currentMatchIndex = index;
+  const targetData = matchedNodes[currentMatchIndex];
+  
+  // Update UI counter
+  const searchCounter = document.getElementById('search-counter');
+  if (searchCounter) {
+    searchCounter.textContent = `${currentMatchIndex + 1} of ${matchedNodes.length}`;
+  }
+  
+  // Highlight the active node
+  d3.selectAll('.node')
+    .classed('active-searched-node', false)
+    .filter(d => d === targetData)
+    .classed('active-searched-node', true);
+
+  // --- Draw Box Highlight ---
+  // 1. Remove any existing box
+  d3.select('#search-highlight-box').remove();
+  
+  // 2. Find the text element to measure it
+  const nodeSelection = d3.selectAll('.node').filter(d => d === targetData);
+  const textElement = nodeSelection.select('text');
+  
+  if (!textElement.empty()) {
+    const bbox = textElement.node().getBBox();
+    const padding = 6;
+    
+    // We append the rect to the same 'g' node as the text
+    // but BEFORE the text so it renders behind it.
+    nodeSelection.insert('rect', 'text')
+      .attr('id', 'search-highlight-box')
+      .attr('class', 'search-highlight-rect')
+      .attr('x', bbox.x - padding)
+      .attr('y', bbox.y - padding)
+      .attr('width', bbox.width + (padding * 2))
+      .attr('height', bbox.height + (padding * 2))
+      .style('opacity', 0)
+      .transition()
+      .duration(300)
+      .style('opacity', 1);
+  }
+    
+  // Scroll to the node
+  scrollToNode(targetData);
+}
+
+/**
+ * Scrolls the page to bring the specified D3 node into view.
+ * @param {Object} d - The D3 node data object.
+ */
+function scrollToNode(d) {
+  // Find the actual DOM element for this data
+  const nodeElements = d3.selectAll('.node').filter(n => n === d);
+  if (nodeElements.empty()) return;
+  
+  const element = nodeElements.node();
+  const rect = element.getBoundingClientRect();
+  
+  // Calculate the target scroll position
+  // We want the node to be roughly in the middle of the viewport
+  const scrollY = window.pageYOffset + rect.top - (window.innerHeight / 2);
+  
+  window.scrollTo({
+    top: scrollY,
+    behavior: 'smooth'
+  });
 }
 
 // --- Main Execution ---
@@ -1362,7 +1469,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentFocus > -1) {
         if (items[currentFocus]) items[currentFocus].click();
       } else {
-        performSearch(searchInput.value);
+        const term = searchInput.value;
+        if (term) {
+          // If search is already active with this term, Enter key acts as "Next"
+          if (matchedNodes.length > 0 && term.toLowerCase() === matchedNodes[0].data.name.toLowerCase().substring(0, term.length)) {
+             navigateToMatch(currentMatchIndex + 1);
+          } else {
+             performSearch(term);
+          }
+        }
         suggestionsContainer.classList.add('hidden');
       }
     } else if (event.key === 'Escape') {
@@ -1401,13 +1516,39 @@ document.addEventListener('DOMContentLoaded', () => {
     performSearch('');
     suggestionsContainer.innerHTML = '';
     suggestionsContainer.classList.add('hidden');
+    // Also reset navigation state
+    matchedNodes = [];
+    currentMatchIndex = -1;
+    const searchNav = document.getElementById('search-nav');
+    if (searchNav) searchNav.classList.add('hidden');
   });
 
+  // Search Navigation Button Listeners
+  const prevBtn = document.getElementById('search-prev');
+  const nextBtn = document.getElementById('search-next');
+  
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navigateToMatch(currentMatchIndex - 1);
+    });
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navigateToMatch(currentMatchIndex + 1);
+    });
+  }
+
+  // This duplicate listener was removed as Enter is handled above logic-wise
+  /*
   searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
     }
   });
+  */
 
   document.getElementById('current-year').textContent = new Date().getFullYear();
 
