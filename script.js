@@ -419,10 +419,12 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   // --- NEW: Swipe-to-Close Logic ---
   let touchStartY = 0;
   let touchMoveY = 0;
+  let hasMoved = false;
   const DRAG_THRESHOLD = 100;
 
   infoPanel.addEventListener('touchstart', (e) => {
     touchStartY = e.touches[0].clientY;
+    hasMoved = false;
   }, { passive: true });
 
   infoPanel.addEventListener('touchmove', (e) => {
@@ -431,12 +433,15 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     
     // Only allow swiping down
     if (deltaY > 0 && infoPanel.scrollTop <= 0) {
+      hasMoved = true;
       infoPanel.style.transform = `translate(-50%, ${deltaY}px)`;
       infoPanel.style.transition = 'none';
     }
   }, { passive: true });
 
   infoPanel.addEventListener('touchend', () => {
+    if (!hasMoved) return; // Don't interfere with simple taps
+    
     const deltaY = touchMoveY - touchStartY;
     infoPanel.style.transition = ''; // Restore transition
     
@@ -449,6 +454,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     // Reset values
     touchStartY = 0;
     touchMoveY = 0;
+    hasMoved = false;
   });
 }
 
