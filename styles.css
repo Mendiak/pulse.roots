@@ -802,6 +802,9 @@ p {
   border-radius: 3px;
   flex-shrink: 0;
   cursor: grab;
+  /* Prevent browser handling of gestures */
+  touch-action: none;
+  overscroll-behavior-y: none;
   display: none;
   /* Hidden on desktop */
 }

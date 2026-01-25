@@ -424,9 +424,13 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   const DRAG_THRESHOLD = 80;
 
   dragHandle.addEventListener('touchstart', (e) => {
+    // Prevent default immediately to stop scrolling/pull-to-refresh from starting
+    e.preventDefault(); 
+    e.stopPropagation();
+    
     touchStartY = e.touches[0].clientY;
     isDragging = false;
-  }, { passive: true });
+  }, { passive: false }); // MUST be non-passive to allow preventDefault
 
   dragHandle.addEventListener('touchmove', (e) => {
     if (!isDragging && Math.abs(e.touches[0].clientY - touchStartY) > 5) {
