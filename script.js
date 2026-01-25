@@ -416,45 +416,50 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     }
   });
 
-  // --- NEW: Swipe-to-Close Logic ---
+  // --- Swipe-to-Close Logic (only on drag handle) ---
+  const dragHandle = document.getElementById('panel-drag-handle');
   let touchStartY = 0;
   let touchMoveY = 0;
-  let hasMoved = false;
-  const DRAG_THRESHOLD = 100;
+  let isDragging = false;
+  const DRAG_THRESHOLD = 80;
 
-  infoPanel.addEventListener('touchstart', (e) => {
+  dragHandle.addEventListener('touchstart', (e) => {
     touchStartY = e.touches[0].clientY;
-    hasMoved = false;
+    isDragging = false;
   }, { passive: true });
 
-  infoPanel.addEventListener('touchmove', (e) => {
-    touchMoveY = e.touches[0].clientY;
-    const deltaY = touchMoveY - touchStartY;
+  dragHandle.addEventListener('touchmove', (e) => {
+    if (!isDragging && Math.abs(e.touches[0].clientY - touchStartY) > 5) {
+      isDragging = true;
+    }
     
-    // Only allow swiping down
-    if (deltaY > 0 && infoPanel.scrollTop <= 0) {
-      hasMoved = true;
-      infoPanel.style.transform = `translate(-50%, ${deltaY}px)`;
-      infoPanel.style.transition = 'none';
+    if (isDragging) {
+      touchMoveY = e.touches[0].clientY;
+      const deltaY = touchMoveY - touchStartY;
+      
+      // Only allow swiping down
+      if (deltaY > 0) {
+        infoPanel.style.transform = `translate(-50%, ${deltaY}px)`;
+        infoPanel.style.transition = 'none';
+      }
     }
   }, { passive: true });
 
-  infoPanel.addEventListener('touchend', () => {
-    if (!hasMoved) return; // Don't interfere with simple taps
+  dragHandle.addEventListener('touchend', () => {
+    if (!isDragging) return;
     
     const deltaY = touchMoveY - touchStartY;
-    infoPanel.style.transition = ''; // Restore transition
+    infoPanel.style.transition = '';
     
-    if (deltaY > DRAG_THRESHOLD && infoPanel.scrollTop <= 0) {
+    if (deltaY > DRAG_THRESHOLD) {
       closeInfoPanel();
     } else {
-      // Snap back if not closed
       infoPanel.style.transform = `translate(-50%, 0)`;
     }
-    // Reset values
+    
     touchStartY = 0;
     touchMoveY = 0;
-    hasMoved = false;
+    isDragging = false;
   });
 }
 

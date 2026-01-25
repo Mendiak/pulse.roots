@@ -772,17 +772,36 @@ p {
   box-sizing: border-box;
 }
 
+/* Panel header container with drag handle and close button */
+#panel-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--panel-dark);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 12px 15px;
+  margin: 0 -30px 0 -30px;
+  /* Extend to full width */
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--glass-border);
+  position: relative;
+  /* For absolute positioning of close button */
+}
+
 #panel-drag-handle {
   width: 40px;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.5);
-  /* More visible */
-  border-radius: 2px;
-  margin: 12px auto;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
   flex-shrink: 0;
-  position: relative;
-  z-index: 110;
-  /* Above sticky headers */
+  cursor: grab;
 }
 
 /* --- Custom Scrollbar for the Info Panel (WebKit browsers) --- */
@@ -861,7 +880,8 @@ p {
 
 .panel-sticky-header {
   position: sticky;
-  top: 0;
+  top: 56px;
+  /* Height of #panel-header (12px padding top + 5px handle + 12px padding bottom + borders) */
   background: var(--panel-dark);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -1031,43 +1051,33 @@ p {
   line-height: 1.4;
 }
 
-#close-panel-container {
-  position: sticky;
-  top: 0;
-  right: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 10px 0;
-  z-index: 100;
-  background: transparent;
-  pointer-events: none;
-  margin-bottom: -40px;
-  /* Overlap with the scrollable content a bit */
-}
-
 #close-panel {
-  pointer-events: auto;
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+  font-size: 1rem;
 }
 
-#close-panel:hover {
+#close-panel:hover,
+#close-panel:active {
   background: var(--accent-pink);
   border-color: var(--accent-pink);
-  transform: scale(1.1) rotate(90deg);
+  transform: scale(1.05);
 }
 
 #close-panel:focus-visible {
