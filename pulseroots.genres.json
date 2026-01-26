@@ -1069,27 +1069,6 @@
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Breakbeat#Acid_breaks"
-                    },
-                    {
-                        "name": "Acid Trance",
-                        "description": "Acid Trance merges the hypnotic basslines and synths of acid techno with the uplifting, melodic aspects of trance music. The result is a style that combines acid’s psychedelic, swirling sound with trance’s euphoric build-ups and atmospheric elements, often leading to long, immersive tracks designed for dancefloor journeys. Acid trance maintains the signature acid synth lines but layers them with sweeping pads, uplifting melodies, and driving rhythms that create a seamless blend of both genres’ iconic features.",
-                        "example": "Astrix - Poison",
-                        "spotify_track_id": "23FD4eYjBgeG2L45UAIm8U",
-                        "key_artists": [
-                            {
-                                "name": "Hardfloor",
-                                "url": "https://open.spotify.com/artist/6z9JhbmcTrVKITp9ah4mJk"
-                            },
-                            {
-                                "name": "Art of Trance",
-                                "url": "https://open.spotify.com/artist/42edDgjfmvA5cRKsF1KH5a"
-                            },
-                            {
-                                "name": "Union Jack",
-                                "url": "https://open.spotify.com/artist/2MiaJc5Vbck2Bkkm19eUx0"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Acid_trance"
                     }
                 ]
             },
@@ -1117,8 +1096,8 @@
                     {
                         "name": "Microhouse",
                         "description": "Microhouse is a minimalist subgenre of techno and house music, characterized by its subtle, intricate rhythms and sparse, refined soundscapes. It focuses on fine details and delicate textures, often incorporating faint clicks, glitches, and micro-samples that give it a distinctive, almost understated groove. With a focus on minimalism, microhouse strips down the composition to essential elements, creating a hypnotic effect through repetition and subtle changes. This style thrives on the nuances within each beat and sound, offering an intimate, refined listening experience that is as immersive as it is understated.",
-                        "example": "Ricardo Villalobos - Easy Lee",
-                        "spotify_track_id": "0GKKjmdefyDJT1RQ9Mx0rA",
+                        "example": "Akufen - T'es Con, T'es Content (Original Mix)",
+                        "spotify_track_id": "37rnvRTXkZwtkm9AuAzx87",
                         "key_artists": [
                             {
                                 "name": "Ricardo Villalobos",
@@ -1443,6 +1422,28 @@
                                 ],
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/Frenchcore"
                             },
+                            {
+                                "style": "Hardstyle",
+                                "description": "Hardstyle is a powerful subgenre of electronic dance music that emerged in the Netherlands in the late 1990s and early 2000s. It is characterized by its aggressive, distorted kick drum sound, intense 'screech' sounds, and a steady tempo typically between 145 and 155 BPM. The genre often blends the melodic sensibilities of trance with the rhythmic intensity of hardcore techno. A signature element is the 'reverse bass'—a distorted, syncopated bassline that follows the kick—alongside euphoric, anthemic melodies in its more melodic variations. Hardstyle is central to large-scale 'hard dance' festivals and is known for its high-energy atmosphere and dedicated global community.",
+                                "example": "Showtek - FTS",
+                                "spotify_track_id": "2dglR5ZrKa4rGk6a2zsDKh",
+                                "key_artists": [
+                                    {
+                                        "name": "Showtek",
+                                        "url": "https://open.spotify.com/artist/3gk0OYeLFWYupGFRHqLSR7"
+                                    },
+                                    {
+                                        "name": "Headhunterz",
+                                        "url": "https://open.spotify.com/artist/6C0KWmCdqrLU2LzzWBPbOy"
+                                    },
+                                    {
+                                        "name": "Brennan Heart",
+                                        "url": "https://open.spotify.com/artist/5QySqc6yAFDx9m7fedFZmC"
+                                    }
+                                ],
+                                "wikipedia_url": "https://en.wikipedia.org/wiki/Hardstyle",
+                                "substyles": []
+            },
                             {
                                 "name": "Makina",
                                 "description": "Makina is a Spanish subgenre of hardcore techno, primarily originating from the rave scenes of Valencia and Barcelona in the 1990s. It is known for its fast BPM, energetic beats, and an uplifting, melodic tone, often incorporating elements from trance and eurodance. Makina is popular in Spain and is characterized by its fast, upbeat rhythms and anthemic melodies.",
@@ -1869,8 +1870,8 @@
                     {
                         "name": "Dub House",
                         "description": "Dub House brings in influences from dub music, characterized by spacious echoes, reverb, and prominent basslines. The rhythm is often more laid-back, with a focus on creating an immersive, atmospheric experience through delay effects and deep, rolling bass.",
-                        "example": "Mr. Fingers - Mystery of Love",
-                        "spotify_track_id": "1E8hMeQvfgvQPjN3BZ2viF",
+                        "example": "Luomo - Tessio",
+                        "spotify_track_id": "0jfeHptByz7p6pa2LhP8lx",
                         "key_artists": [
                             {
                                 "name": "Luomo",
@@ -2706,173 +2707,173 @@
         "wikipedia_url": "https://en.wikipedia.org/wiki/Trance_music",
         "substyles": [
             {
-  "name": "Goa Trance",
-  "description": "Goa trance is a subgenre of trance music that originated in the late 1980s and early 1990s in the Goa region of India, where it was initially played at outdoor parties and raves. Known for its psychedelic and spiritual influences, Goa trance features intricate, layered synth melodies, fast-paced tempos (typically around 130-150 BPM), and deep, rolling basslines. The genre is marked by its use of evolving, hypnotic sequences and trippy, atmospheric sounds, often including samples from Indian and Eastern music, along with psychedelic and cosmic themes. Goa trance played a pivotal role in the development of the global psychedelic trance scene and remains a classic in the trance community for its vibrant, energetic, and otherworldly vibe.",
-  "example": "LSD - Hallucinogen",
-  "spotify_track_id": "5V3UMwDGWho9MvjAtMLkZv",
-  "key_artists": [
-    {
-      "name": "Goa Gil",
-      "url": "https://open.spotify.com/artist/6eqbN8Xsnoe5nYJODTiY6V"
-    },
-    {
-      "name": "The Infinity Project",
-      "url": "https://open.spotify.com/artist/3MSq3HlSCnY9LNSlkDaEMx"
-    },
-    {
-      "name": "Man With No Name",
-      "url": "https://open.spotify.com/artist/1L49RF04CKd9D70Le9FHFz"
-    }
-  ],
-  "wikipedia_url": "https://en.wikipedia.org/wiki/Goa_trance",
-  "substyles": [
-    {
-      "name": "Psytrance",
-      "description": "Psytrance (short for psychedelic trance) is a subgenre of trance music that emerged in the early 1990s, heavily influenced by Goa trance and psychedelic rock. Known for its fast tempos (usually 140-150 BPM), intricate, layered rhythms, and deep basslines, psytrance creates a hypnotic, otherworldly atmosphere.",
-      "example": "Infected Mushroom - Becoming Insane",
-      "spotify_track_id": "22DnBQIIXFPJNRGuNjWlSg",
-      "key_artists": [
-        {
-          "name": "Infected Mushroom",
-          "url": "https://open.spotify.com/artist/6S2tas4z6DyIklBajDqJxI"
-        },
-        {
-          "name": "Astrix",
-          "url": "https://open.spotify.com/artist/3dUltShd2gJQc98Kc7Syit"
-        },
-        {
-          "name": "Vini Vici",
-          "url": "https://open.spotify.com/artist/29zsVzEH33dD5QqxeL8dvy"
-        }
-      ],
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance",
-      "substyles": [
-        {
-          "name": "Psychedelic Goa",
-          "description": "Psychedelic Goa evolved from the original Goa trance sound in the mid-1990s, becoming more intense, experimental, and psychedelic. It features faster tempos, complex evolving melodies, and heavily distorted synths.",
-          "example": "Astral Projection - Mahadeva",
-          "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp",
-          "key_artists": [
-            {
-              "name": "Hallucinogen",
-              "url": "https://open.spotify.com/artist/5Lel5d14oFwC4XbKDv2AKW"
-            },
-            {
-              "name": "Astral Projection",
-              "url": "https://open.spotify.com/artist/40EsdChhIP1ZT9RYOcfUI0"
-            },
-            {
-              "name": "Electric Universe",
-              "url": "https://open.spotify.com/artist/55SDgogZ1SRUhIgmGvLyhD"
-            }
-          ]
-        },
-        {
-          "name": "Full-on Psytrance",
-          "description": "Full-on Psytrance is a high-energy subgenre characterized by uplifting melodies, fast-paced beats, and euphoric energy on the dancefloor.",
-          "example": "1200 Micrograms - Mescaline",
-          "spotify_track_id": "3G3cpknRLszl9vH9knbGHt",
-          "key_artists": [
-            {
-              "name": "1200 Micrograms",
-              "url": "https://open.spotify.com/artist/2opB8qXyAmLYSGEZxp7X3U"
-            },
-            {
-              "name": "GMS",
-              "url": "https://open.spotify.com/artist/0GOx72r5AAEKRGQFn3xqXK"
-            },
-            {
-              "name": "Talamasca",
-              "url": "https://open.spotify.com/artist/16fgoXgeTpBh4GE9XOjvn7"
-            }
-          ],
-          "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance#Full-on"
-        },
-        {
-          "name": "Dark Psytrance",
-          "description": "Dark Psytrance explores darker, more atmospheric and experimental soundscapes with twisted basslines and eerie textures.",
-          "example": "Blisargon Demogorgon - Knights Of Light",
-          "spotify_track_id": "6R5guJA1veBa35mkCgYwAe",
-          "key_artists": [
-            {
-              "name": "Kindzadza",
-              "url": "https://open.spotify.com/artist/0il4tWDQbRfSwMdk5CmP04"
-            },
-            {
-              "name": "Penta",
-              "url": "https://open.spotify.com/artist/26AHtbjWKiwYzsoGoUZq53"
-            },
-            {
-              "name": "Kashyyyk",
-              "url": "https://open.spotify.com/artist/46bKeGVnL5HWNfcDvm1HLe"
-            }
-          ]
-        },
-        {
-          "name": "Suomisaundi",
-          "description": "Suomisaundi is an experimental and quirky Finnish style of psytrance known for its playful, raw, and unpredictable sound.",
-          "example": "Shiva Chandra - Return To Atlantis",
-          "spotify_track_id": "3FsCBkbh8xIaCcnCXJ85iT",
-          "key_artists": [
-            {
-              "name": "Texas Faggott",
-              "url": "https://open.spotify.com/artist/083pFSgqfJ8sL0JHAIAPyU"
-            },
-            {
-              "name": "Mandalavandalz",
-              "url": "https://open.spotify.com/artist/4Fu8RIa73VlFpx67mZsLi0"
-            },
-            {
-              "name": "Luomuhappo",
-              "url": "https://open.spotify.com/artist/5Wh0H8d2uDDTeNnjdybr42"
-            }
-          ],
-          "wikipedia_url": "https://en.wikipedia.org/wiki/Suomisaundi"
-        },
-        {
-          "name": "Forest Psytrance",
-          "description": "Forest Psytrance creates deep, organic, and hypnotic atmospheres inspired by natural and psychedelic soundscapes.",
-          "example": "Atriohm - Hybrid Synthesis",
-          "spotify_track_id": "45kZdRaDckpztxTRucIQi4",
-          "key_artists": [
-            {
-              "name": "Atriohm",
-              "url": "https://open.spotify.com/artist/6kv03c4uwitYETlNAaQIGL"
-            },
-            {
-              "name": "Derango",
-              "url": "https://open.spotify.com/artist/1ES3MdfFDfedLChXHCkMiI"
-            },
-            {
-              "name": "EVP",
-              "url": "https://open.spotify.com/artist/5D9NPQT1XN44peiYNVPfQc"
-            }
-          ]
-        },
-        {
-          "name": "Twilight Psytrance",
-          "description": "Twilight Psytrance bridges Full-on and Dark Psytrance, featuring driving basslines and twisted, metallic sound design.",
-          "example": "Scorb - Epoxymoron",
-          "spotify_track_id": "6pVAXlbJNwFQEz05tr8c8o",
-          "key_artists": [
-            {
-              "name": "Scorb",
-              "url": "https://open.spotify.com/artist/6LFZa0FrldSD5S7Ka49rrK"
-            },
-            {
-              "name": "Absolum",
-              "url": "https://open.spotify.com/artist/2ctKxe2xzmIxsyiCOVxc9I"
-            },
-            {
-              "name": "Shift",
-              "url": "https://open.spotify.com/artist/2eDyOWpseLQy601raX4K3W"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-},
+                "name": "Goa Trance",
+                "description": "Goa trance is a subgenre of trance music that originated in the late 1980s and early 1990s in the Goa region of India, where it was initially played at outdoor parties and raves. Known for its psychedelic and spiritual influences, Goa trance features intricate, layered synth melodies, fast-paced tempos (typically around 130-150 BPM), and deep, rolling basslines. The genre is marked by its use of evolving, hypnotic sequences and trippy, atmospheric sounds, often including samples from Indian and Eastern music, along with psychedelic and cosmic themes. Goa trance played a pivotal role in the development of the global psychedelic trance scene and remains a classic in the trance community for its vibrant, energetic, and otherworldly vibe.",
+                "example": "LSD - Hallucinogen",
+                "spotify_track_id": "5V3UMwDGWho9MvjAtMLkZv",
+                "key_artists": [
+                    {
+                    "name": "Goa Gil",
+                    "url": "https://open.spotify.com/artist/6eqbN8Xsnoe5nYJODTiY6V"
+                    },
+                    {
+                    "name": "The Infinity Project",
+                    "url": "https://open.spotify.com/artist/3MSq3HlSCnY9LNSlkDaEMx"
+                    },
+                    {
+                    "name": "Man With No Name",
+                    "url": "https://open.spotify.com/artist/1L49RF04CKd9D70Le9FHFz"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Goa_trance",
+                "substyles": [
+                    {
+                    "name": "Psytrance",
+                    "description": "Psytrance (short for psychedelic trance) is a subgenre of trance music that emerged in the early 1990s, heavily influenced by Goa trance and psychedelic rock. Known for its fast tempos (usually 140-150 BPM), intricate, layered rhythms, and deep basslines, psytrance creates a hypnotic, otherworldly atmosphere.",
+                    "example": "Infected Mushroom - Becoming Insane",
+                    "spotify_track_id": "22DnBQIIXFPJNRGuNjWlSg",
+                    "key_artists": [
+                        {
+                        "name": "Infected Mushroom",
+                        "url": "https://open.spotify.com/artist/6S2tas4z6DyIklBajDqJxI"
+                        },
+                        {
+                        "name": "Astrix",
+                        "url": "https://open.spotify.com/artist/3dUltShd2gJQc98Kc7Syit"
+                        },
+                        {
+                        "name": "Vini Vici",
+                        "url": "https://open.spotify.com/artist/29zsVzEH33dD5QqxeL8dvy"
+                        }
+                    ],
+                    "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance",
+                    "substyles": [
+                        {
+                        "name": "Psychedelic Goa",
+                        "description": "Psychedelic Goa evolved from the original Goa trance sound in the mid-1990s, becoming more intense, experimental, and psychedelic. It features faster tempos, complex evolving melodies, and heavily distorted synths.",
+                        "example": "Astral Projection - Mahadeva",
+                        "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp",
+                        "key_artists": [
+                            {
+                            "name": "Hallucinogen",
+                            "url": "https://open.spotify.com/artist/5Lel5d14oFwC4XbKDv2AKW"
+                            },
+                            {
+                            "name": "Astral Projection",
+                            "url": "https://open.spotify.com/artist/40EsdChhIP1ZT9RYOcfUI0"
+                            },
+                            {
+                            "name": "Electric Universe",
+                            "url": "https://open.spotify.com/artist/55SDgogZ1SRUhIgmGvLyhD"
+                            }
+                        ]
+                        },
+                        {
+                        "name": "Full-on Psytrance",
+                        "description": "Full-on Psytrance is a high-energy subgenre characterized by uplifting melodies, fast-paced beats, and euphoric energy on the dancefloor.",
+                        "example": "1200 Micrograms - Mescaline",
+                        "spotify_track_id": "3G3cpknRLszl9vH9knbGHt",
+                        "key_artists": [
+                            {
+                            "name": "1200 Micrograms",
+                            "url": "https://open.spotify.com/artist/2opB8qXyAmLYSGEZxp7X3U"
+                            },
+                            {
+                            "name": "GMS",
+                            "url": "https://open.spotify.com/artist/0GOx72r5AAEKRGQFn3xqXK"
+                            },
+                            {
+                            "name": "Talamasca",
+                            "url": "https://open.spotify.com/artist/16fgoXgeTpBh4GE9XOjvn7"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance#Full-on"
+                        },
+                        {
+                        "name": "Dark Psytrance",
+                        "description": "Dark Psytrance explores darker, more atmospheric and experimental soundscapes with twisted basslines and eerie textures.",
+                        "example": "Blisargon Demogorgon - Knights Of Light",
+                        "spotify_track_id": "6R5guJA1veBa35mkCgYwAe",
+                        "key_artists": [
+                            {
+                            "name": "Kindzadza",
+                            "url": "https://open.spotify.com/artist/0il4tWDQbRfSwMdk5CmP04"
+                            },
+                            {
+                            "name": "Penta",
+                            "url": "https://open.spotify.com/artist/26AHtbjWKiwYzsoGoUZq53"
+                            },
+                            {
+                            "name": "Kashyyyk",
+                            "url": "https://open.spotify.com/artist/46bKeGVnL5HWNfcDvm1HLe"
+                            }
+                        ]
+                        },
+                        {
+                        "name": "Suomisaundi",
+                        "description": "Suomisaundi is an experimental and quirky Finnish style of psytrance known for its playful, raw, and unpredictable sound.",
+                        "example": "Shiva Chandra - Return To Atlantis",
+                        "spotify_track_id": "3FsCBkbh8xIaCcnCXJ85iT",
+                        "key_artists": [
+                            {
+                            "name": "Texas Faggott",
+                            "url": "https://open.spotify.com/artist/083pFSgqfJ8sL0JHAIAPyU"
+                            },
+                            {
+                            "name": "Mandalavandalz",
+                            "url": "https://open.spotify.com/artist/4Fu8RIa73VlFpx67mZsLi0"
+                            },
+                            {
+                            "name": "Luomuhappo",
+                            "url": "https://open.spotify.com/artist/5Wh0H8d2uDDTeNnjdybr42"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Suomisaundi"
+                        },
+                        {
+                        "name": "Forest Psytrance",
+                        "description": "Forest Psytrance creates deep, organic, and hypnotic atmospheres inspired by natural and psychedelic soundscapes.",
+                        "example": "Atriohm - Hybrid Synthesis",
+                        "spotify_track_id": "45kZdRaDckpztxTRucIQi4",
+                        "key_artists": [
+                            {
+                            "name": "Atriohm",
+                            "url": "https://open.spotify.com/artist/6kv03c4uwitYETlNAaQIGL"
+                            },
+                            {
+                            "name": "Derango",
+                            "url": "https://open.spotify.com/artist/1ES3MdfFDfedLChXHCkMiI"
+                            },
+                            {
+                            "name": "EVP",
+                            "url": "https://open.spotify.com/artist/5D9NPQT1XN44peiYNVPfQc"
+                            }
+                        ]
+                        },
+                        {
+                        "name": "Twilight Psytrance",
+                        "description": "Twilight Psytrance bridges Full-on and Dark Psytrance, featuring driving basslines and twisted, metallic sound design.",
+                        "example": "Scorb - Epoxymoron",
+                        "spotify_track_id": "6pVAXlbJNwFQEz05tr8c8o",
+                        "key_artists": [
+                            {
+                            "name": "Scorb",
+                            "url": "https://open.spotify.com/artist/6LFZa0FrldSD5S7Ka49rrK"
+                            },
+                            {
+                            "name": "Absolum",
+                            "url": "https://open.spotify.com/artist/2ctKxe2xzmIxsyiCOVxc9I"
+                            },
+                            {
+                            "name": "Shift",
+                            "url": "https://open.spotify.com/artist/2eDyOWpseLQy601raX4K3W"
+                            }
+                        ]
+                        }
+                    ]
+                    }
+                ]
+                },
 
             {
                 "name": "Progressive Trance",
@@ -3123,26 +3124,25 @@
                 ]
             },
             {
-                "style": "Hardstyle",
-                "description": "Hardstyle is a powerful subgenre of electronic dance music that emerged in the Netherlands in the late 1990s and early 2000s. It is characterized by its aggressive, distorted kick drum sound, intense 'screech' sounds, and a steady tempo typically between 145 and 155 BPM. The genre often blends the melodic sensibilities of trance with the rhythmic intensity of hardcore techno. A signature element is the 'reverse bass'—a distorted, syncopated bassline that follows the kick—alongside euphoric, anthemic melodies in its more melodic variations. Hardstyle is central to large-scale 'hard dance' festivals and is known for its high-energy atmosphere and dedicated global community.",
-                "example": "Showtek - FTS",
-                "spotify_track_id": "2dglR5ZrKa4rGk6a2zsDKh",
-                "key_artists": [
-                    {
-                        "name": "Showtek",
-                        "url": "https://open.spotify.com/artist/3gk0OYeLFWYupGFRHqLSR7"
-                    },
-                    {
-                        "name": "Headhunterz",
-                        "url": "https://open.spotify.com/artist/6C0KWmCdqrLU2LzzWBPbOy"
-                    },
-                    {
-                        "name": "Brennan Heart",
-                        "url": "https://open.spotify.com/artist/5QySqc6yAFDx9m7fedFZmC"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Hardstyle",
-                "substyles": []
+                        "name": "Acid Trance",
+                        "description": "Acid Trance merges the hypnotic basslines and synths of acid techno with the uplifting, melodic aspects of trance music. The result is a style that combines acid’s psychedelic, swirling sound with trance’s euphoric build-ups and atmospheric elements, often leading to long, immersive tracks designed for dancefloor journeys. Acid trance maintains the signature acid synth lines but layers them with sweeping pads, uplifting melodies, and driving rhythms that create a seamless blend of both genres’ iconic features.",
+                        "example": "Astrix - Poison",
+                        "spotify_track_id": "23FD4eYjBgeG2L45UAIm8U",
+                        "key_artists": [
+                            {
+                                "name": "Hardfloor",
+                                "url": "https://open.spotify.com/artist/6z9JhbmcTrVKITp9ah4mJk"
+                            },
+                            {
+                                "name": "Art of Trance",
+                                "url": "https://open.spotify.com/artist/42edDgjfmvA5cRKsF1KH5a"
+                            },
+                            {
+                                "name": "Union Jack",
+                                "url": "https://open.spotify.com/artist/2MiaJc5Vbck2Bkkm19eUx0"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Acid_trance"
             }
         ]
     },
@@ -3532,8 +3532,8 @@
             {
                 "name": "Drum and Bass",
                 "description": "Drum and Bass (often abbreviated as D&B or DnB) is a high-energy genre of electronic music that evolved from the UK's jungle and breakbeat hardcore scenes in the early 1990s. It is defined by its fast, complex breakbeats, typically ranging from 160 to 180 BPM, paired with heavy, prominent sub-bass lines that form the music's core. While jungle often retained a strong reggae and dancehall influence, drum and bass streamlined the sound, focusing on intricate, meticulously programmed drum patterns and a wider range of sonic textures, from dark and industrial (techstep) to smooth and melodic (liquid funk). The genre is a showcase of rhythmic complexity and sound design, creating a sound that is both physically intense and sonically diverse.",
-                "example": "Goldie - Inner City Life",
-                "spotify_track_id": "0O7xFEqePrcTUgOi4qe0uB",
+                "example": "Ed Rush & Optical - Wormhole",
+                "spotify_track_id": "5fzqE4VJJdagcQdi6LIGoC",
                 "key_artists": [
                     {
                         "name": "Goldie",
@@ -3544,8 +3544,8 @@
                         "url": "https://open.spotify.com/artist/75HK7rgkmDMTnWwwmcN53N"
                     },
                     {
-                        "name": "High Contrast",
-                        "url": "https://open.spotify.com/artist/0bxHci3JIhhKA53n8rH3tT"
+                        "name": "Ed Rush",
+                        "url": "https://open.spotify.com/intl-es/artist/6gj4aZLxVGCdFPMThH6q6q"
                     }
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Drum_and_bass",
