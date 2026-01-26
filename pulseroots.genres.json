@@ -2706,48 +2706,174 @@
         "wikipedia_url": "https://en.wikipedia.org/wiki/Trance_music",
         "substyles": [
             {
-                "name": "Goa Trance",
-                "description": "Goa trance is a subgenre of trance music that originated in the late 1980s and early 1990s in the Goa region of India, where it was initially played at outdoor parties and raves. Known for its psychedelic and spiritual influences, Goa trance features intricate, layered synth melodies, fast-paced tempos (typically around 130-150 BPM), and deep, rolling basslines. The genre is marked by its use of evolving, hypnotic sequences and trippy, atmospheric sounds, often including samples from Indian and Eastern music, along with psychedelic and cosmic themes. Goa trance played a pivotal role in the development of the global psychedelic trance scene and remains a classic in the trance community for its vibrant, energetic, and otherworldly vibe.",
-                "example": "LSD - Hallucinogen",
-                "spotify_track_id": "5V3UMwDGWho9MvjAtMLkZv",
-                "key_artists": [
-                    {
-                        "name": "Goa Gil",
-                        "url": "https://open.spotify.com/artist/6eqbN8Xsnoe5nYJODTiY6V"
-                    },
-                    {
-                        "name": "The Infinity Project",
-                        "url": "https://open.spotify.com/artist/3MSq3HlSCnY9LNSlkDaEMx"
-                    },
-                    {
-                        "name": "Man With No Name",
-                        "url": "https://open.spotify.com/artist/1L49RF04CKd9D70Le9FHFz"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Goa_trance",
-                "substyles": [
-                    {
-                        "name": "Psychedelic Goa",
-                        "description": "Psychedelic Goa, often just referred to as Goa trance, evolved from the original Goa trance sound in the mid-1990s and became more intense, experimental, and psychedelic. It features faster tempos (usually around 140-150 BPM), complex, evolving melodies, and heavily distorted, mind-bending synths. The genre is known for its deep basslines, intricate percussion, and hypnotic, trance-like qualities that create an immersive experience. Psychedelic Goa incorporates more psychedelic and surreal soundscapes, often with cosmic, spiritual, or surreal themes, and includes elements like voice samples, glitchy effects, and acid-like sounds. It became the foundation for the broader psychedelic trance movement, characterized by its high-energy, trippy atmospheres, and focus on inducing altered states of consciousness during raves and festivals.",
-                        "example": "Astral Projection - Mahadeva",
-                        "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp",
-                        "key_artists": [
-                            {
-                                "name": "Hallucinogen",
-                                "url": "https://open.spotify.com/artist/5Lel5d14oFwC4XbKDv2AKW"
-                            },
-                            {
-                                "name": "Astral Projection",
-                                "url": "https://open.spotify.com/artist/40EsdChhIP1ZT9RYOcfUI0"
-                            },
-                            {
-                                "name": "Electric Universe",
-                                "url": "https://open.spotify.com/artist/55SDgogZ1SRUhIgmGvLyhD"
-                            }
-                        ]
-                    }
-                ]
+  "name": "Goa Trance",
+  "description": "Goa trance is a subgenre of trance music that originated in the late 1980s and early 1990s in the Goa region of India, where it was initially played at outdoor parties and raves. Known for its psychedelic and spiritual influences, Goa trance features intricate, layered synth melodies, fast-paced tempos (typically around 130-150 BPM), and deep, rolling basslines. The genre is marked by its use of evolving, hypnotic sequences and trippy, atmospheric sounds, often including samples from Indian and Eastern music, along with psychedelic and cosmic themes. Goa trance played a pivotal role in the development of the global psychedelic trance scene and remains a classic in the trance community for its vibrant, energetic, and otherworldly vibe.",
+  "example": "LSD - Hallucinogen",
+  "spotify_track_id": "5V3UMwDGWho9MvjAtMLkZv",
+  "key_artists": [
+    {
+      "name": "Goa Gil",
+      "url": "https://open.spotify.com/artist/6eqbN8Xsnoe5nYJODTiY6V"
+    },
+    {
+      "name": "The Infinity Project",
+      "url": "https://open.spotify.com/artist/3MSq3HlSCnY9LNSlkDaEMx"
+    },
+    {
+      "name": "Man With No Name",
+      "url": "https://open.spotify.com/artist/1L49RF04CKd9D70Le9FHFz"
+    }
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Goa_trance",
+  "substyles": [
+    {
+      "name": "Psytrance",
+      "description": "Psytrance (short for psychedelic trance) is a subgenre of trance music that emerged in the early 1990s, heavily influenced by Goa trance and psychedelic rock. Known for its fast tempos (usually 140-150 BPM), intricate, layered rhythms, and deep basslines, psytrance creates a hypnotic, otherworldly atmosphere.",
+      "example": "Infected Mushroom - Becoming Insane",
+      "spotify_track_id": "22DnBQIIXFPJNRGuNjWlSg",
+      "key_artists": [
+        {
+          "name": "Infected Mushroom",
+          "url": "https://open.spotify.com/artist/6S2tas4z6DyIklBajDqJxI"
+        },
+        {
+          "name": "Astrix",
+          "url": "https://open.spotify.com/artist/3dUltShd2gJQc98Kc7Syit"
+        },
+        {
+          "name": "Vini Vici",
+          "url": "https://open.spotify.com/artist/29zsVzEH33dD5QqxeL8dvy"
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance",
+      "substyles": [
+        {
+          "name": "Psychedelic Goa",
+          "description": "Psychedelic Goa evolved from the original Goa trance sound in the mid-1990s, becoming more intense, experimental, and psychedelic. It features faster tempos, complex evolving melodies, and heavily distorted synths.",
+          "example": "Astral Projection - Mahadeva",
+          "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp",
+          "key_artists": [
+            {
+              "name": "Hallucinogen",
+              "url": "https://open.spotify.com/artist/5Lel5d14oFwC4XbKDv2AKW"
             },
+            {
+              "name": "Astral Projection",
+              "url": "https://open.spotify.com/artist/40EsdChhIP1ZT9RYOcfUI0"
+            },
+            {
+              "name": "Electric Universe",
+              "url": "https://open.spotify.com/artist/55SDgogZ1SRUhIgmGvLyhD"
+            }
+          ]
+        },
+        {
+          "name": "Full-on Psytrance",
+          "description": "Full-on Psytrance is a high-energy subgenre characterized by uplifting melodies, fast-paced beats, and euphoric energy on the dancefloor.",
+          "example": "1200 Micrograms - Mescaline",
+          "spotify_track_id": "3G3cpknRLszl9vH9knbGHt",
+          "key_artists": [
+            {
+              "name": "1200 Micrograms",
+              "url": "https://open.spotify.com/artist/2opB8qXyAmLYSGEZxp7X3U"
+            },
+            {
+              "name": "GMS",
+              "url": "https://open.spotify.com/artist/0GOx72r5AAEKRGQFn3xqXK"
+            },
+            {
+              "name": "Talamasca",
+              "url": "https://open.spotify.com/artist/16fgoXgeTpBh4GE9XOjvn7"
+            }
+          ],
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance#Full-on"
+        },
+        {
+          "name": "Dark Psytrance",
+          "description": "Dark Psytrance explores darker, more atmospheric and experimental soundscapes with twisted basslines and eerie textures.",
+          "example": "Blisargon Demogorgon - Knights Of Light",
+          "spotify_track_id": "6R5guJA1veBa35mkCgYwAe",
+          "key_artists": [
+            {
+              "name": "Kindzadza",
+              "url": "https://open.spotify.com/artist/0il4tWDQbRfSwMdk5CmP04"
+            },
+            {
+              "name": "Penta",
+              "url": "https://open.spotify.com/artist/26AHtbjWKiwYzsoGoUZq53"
+            },
+            {
+              "name": "Kashyyyk",
+              "url": "https://open.spotify.com/artist/46bKeGVnL5HWNfcDvm1HLe"
+            }
+          ]
+        },
+        {
+          "name": "Suomisaundi",
+          "description": "Suomisaundi is an experimental and quirky Finnish style of psytrance known for its playful, raw, and unpredictable sound.",
+          "example": "Shiva Chandra - Return To Atlantis",
+          "spotify_track_id": "3FsCBkbh8xIaCcnCXJ85iT",
+          "key_artists": [
+            {
+              "name": "Texas Faggott",
+              "url": "https://open.spotify.com/artist/083pFSgqfJ8sL0JHAIAPyU"
+            },
+            {
+              "name": "Mandalavandalz",
+              "url": "https://open.spotify.com/artist/4Fu8RIa73VlFpx67mZsLi0"
+            },
+            {
+              "name": "Luomuhappo",
+              "url": "https://open.spotify.com/artist/5Wh0H8d2uDDTeNnjdybr42"
+            }
+          ],
+          "wikipedia_url": "https://en.wikipedia.org/wiki/Suomisaundi"
+        },
+        {
+          "name": "Forest Psytrance",
+          "description": "Forest Psytrance creates deep, organic, and hypnotic atmospheres inspired by natural and psychedelic soundscapes.",
+          "example": "Atriohm - Hybrid Synthesis",
+          "spotify_track_id": "45kZdRaDckpztxTRucIQi4",
+          "key_artists": [
+            {
+              "name": "Atriohm",
+              "url": "https://open.spotify.com/artist/6kv03c4uwitYETlNAaQIGL"
+            },
+            {
+              "name": "Derango",
+              "url": "https://open.spotify.com/artist/1ES3MdfFDfedLChXHCkMiI"
+            },
+            {
+              "name": "EVP",
+              "url": "https://open.spotify.com/artist/5D9NPQT1XN44peiYNVPfQc"
+            }
+          ]
+        },
+        {
+          "name": "Twilight Psytrance",
+          "description": "Twilight Psytrance bridges Full-on and Dark Psytrance, featuring driving basslines and twisted, metallic sound design.",
+          "example": "Scorb - Epoxymoron",
+          "spotify_track_id": "6pVAXlbJNwFQEz05tr8c8o",
+          "key_artists": [
+            {
+              "name": "Scorb",
+              "url": "https://open.spotify.com/artist/6LFZa0FrldSD5S7Ka49rrK"
+            },
+            {
+              "name": "Absolum",
+              "url": "https://open.spotify.com/artist/2ctKxe2xzmIxsyiCOVxc9I"
+            },
+            {
+              "name": "Shift",
+              "url": "https://open.spotify.com/artist/2eDyOWpseLQy601raX4K3W"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+
             {
                 "name": "Progressive Trance",
                 "description": "Progressive Trance is a subgenre of trance music that emphasizes a more melodic and progressive sound, often characterized by gradual buildups, evolving soundscapes, and an emphasis on atmospheric textures. Unlike more upbeat and fast-paced styles of trance, Progressive Trance tends to maintain a steady tempo while focusing on layered melodies, hypnotic rhythms, and emotional depth. It is known for its smooth transitions and immersive quality, creating a captivating journey for listeners on the dancefloor or in more introspective listening settings.",
@@ -2825,131 +2951,6 @@
                             {
                                 "name": "Captain Hook",
                                 "url": "https://open.spotify.com/artist/5xnZNDl118VvPTvthujxpx"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Psytrance",
-                "description": "Psytrance (short for psychedelic trance) is a subgenre of trance music that emerged in the early 1990s, heavily influenced by Goa trance and psychedelic rock. Known for its fast tempos (usually 140-150 BPM), intricate, layered rhythms, and deep basslines, psytrance creates a hypnotic, otherworldly atmosphere. It often features psychedelic sound effects, distorted synths, and evolving, mind-bending melodies that aim to induce an altered state of consciousness. Psytrance is marked by its intense, high-energy vibe, with themes of spirituality, the cosmos, and psychedelia. The genre is popular in outdoor festivals and rave scenes, where its immersive, trance-like qualities enhance the experience of the music and its listeners.",
-                "example": "Infected Mushroom - Becoming Insane",
-                "spotify_track_id": "22DnBQIIXFPJNRGuNjWlSg",
-                "key_artists": [
-                    {
-                        "name": "Infected Mushroom",
-                        "url": "https://open.spotify.com/artist/6S2tas4z6DyIklBajDqJxI"
-                    },
-                    {
-                        "name": "Astrix",
-                        "url": "https://open.spotify.com/artist/3dUltShd2gJQc98Kc7Syit"
-                    },
-                    {
-                        "name": "Vini Vici",
-                        "url": "https://open.spotify.com/artist/29zsVzEH33dD5QqxeL8dvy"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance",
-                "substyles": [
-                    {
-                        "name": "Full-on Psytrance",
-                        "description": "Full-on Psytrance is a high-energy subgenre of Psytrance that emerged in the late 1990s and early 2000s, often characterized by vibrant melodies, fast-paced beats, and a focus on building intense, uplifting energy. It stands out within the broader Psytrance scene due to its focus on positivity and euphoria. The genre is known for its powerful basslines, intricate sound design, and driving rhythms, which are crafted to sustain a peak-energy atmosphere on the dancefloor. Full-on tracks often incorporate a blend of psychedelic elements with trance-like melodies, creating a balance between intense, high-tempo beats and melodic moments that drive forward the euphoric journey.",
-                        "example": "1200 Micrograms - Mescaline",
-                        "spotify_track_id": "3G3cpknRLszl9vH9knbGHt",
-                        "key_artists": [
-                            {
-                                "name": "1200 Micrograms",
-                                "url": "https://open.spotify.com/artist/2opB8qXyAmLYSGEZxp7X3U"
-                            },
-                            {
-                                "name": "GMS",
-                                "url": "https://open.spotify.com/artist/0GOx72r5AAEKRGQFn3xqXK"
-                            },
-                            {
-                                "name": "Talamasca",
-                                "url": "https://open.spotify.com/artist/16fgoXgeTpBh4GE9XOjvn7"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance#Full-on"
-                    },
-                    {
-                        "name": "Dark Psytrance",
-                        "description": "Dark Psytrance developed as a more intense, experimental branch of Psytrance, gaining traction in the late 2000s. Unlike the uplifting nature of other Psytrance subgenres, Dark Psytrance explores darker, more atmospheric and sometimes ominous soundscapes. It's known for its twisted, hypnotic basslines, eerie melodies, and complex rhythms, which evoke feelings of tension and mystery. Tracks in this subgenre typically maintain fast tempos but focus on creating a deep, immersive journey that contrasts with the more colorful, melodic side of Psytrance. The genre appeals to listeners seeking an intense and atmospheric experience, often in underground and more experimental settings.",
-                        "example": "Blisargon Demogorgon - Knights Of Light",
-                        "spotify_track_id": "6R5guJA1veBa35mkCgYwAe",
-                        "key_artists": [
-                            {
-                                "name": "Kindzadza",
-                                "url": "https://open.spotify.com/artist/0il4tWDQbRfSwMdk5CmP04"
-                            },
-                            {
-                                "name": "Penta",
-                                "url": "https://open.spotify.com/artist/26AHtbjWKiwYzsoGoUZq53"
-                            },
-                            {
-                                "name": "Kashyyyk",
-                                "url": "https://open.spotify.com/artist/46bKeGVnL5HWNfcDvm1HLe"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Suomisaundi",
-                        "description": "Suomisoundi (or Suomi trance) is a subgenre of psychedelic trance that originated in Finland in the late 1990s. Known for its experimental, eclectic, and often quirky sound, suomisoundi blends elements of traditional psytrance with a unique, offbeat approach. It features distorted basslines, fast tempos (around 140-150 BPM), and layered, psychedelic melodies, but with a more playful, unconventional style. The music often incorporates humorous or surreal samples, unexpected breaks, and strange sound effects, creating a fun and unpredictable listening experience. Suomisoundi stands out for its sense of freedom and individuality, making it a favorite within niche psychedelic trance circles, with a focus on creativity and a less-polished, more 'raw' vibe compared to other psytrance subgenres.",
-                        "example": "Shiva Chandra - Return To Atlantis",
-                        "spotify_track_id": "3FsCBkbh8xIaCcnCXJ85iT",
-                        "key_artists": [
-                            {
-                                "name": "Texas Faggott",
-                                "url": "https://open.spotify.com/artist/083pFSgqfJ8sL0JHAIAPyU"
-                            },
-                            {
-                                "name": "Mandalavandalz",
-                                "url": "https://open.spotify.com/artist/4Fu8RIa73VlFpx67mZsLi0"
-                            },
-                            {
-                                "name": "Luomuhappo",
-                                "url": "https://open.spotify.com/artist/5Wh0H8d2uDDTeNnjdybr42"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Suomisaundi"
-                    },
-                    {
-                        "name": "Forest Psytrance",
-                        "description": "Forest Psytrance is a subgenre that creates a deep, organic, and mysterious atmosphere, often evoking the feeling of being in a dense, enchanted woodland. Musically, it sits between Progressive and Dark Psytrance (typically 148–152 BPM). Unlike the mechanical aggression of Dark Psy, Forest relies on 'squelchy' sounds, intricate textures that mimic insects or water, and funky, rolling basslines. It creates a hypnotic, mossy, and slightly spooky vibe without relying on sheer speed or terror.",
-                        "example": "Atriohm - Hybrid Synthesis",
-                        "spotify_track_id": "45kZdRaDckpztxTRucIQi4", 
-                        "key_artists": [
-                            {
-                                "name": "Atriohm",
-                                "url": "https://open.spotify.com/artist/6kv03c4uwitYETlNAaQIGL"
-                            },
-                            {
-                                "name": "Derango",
-                                "url": "https://open.spotify.com/artist/1ES3MdfFDfedLChXHCkMiI"
-                            },
-                            {
-                                "name": "EVP",
-                                "url": "https://open.spotify.com/artist/5D9NPQT1XN44peiYNVPfQc"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Twilight Psytrance",
-                        "description": "Twilight Psytrance (often referred to as Night Full-on) acts as the bridge between the uplifting melodies of Full-on and the aggressive, faster nature of Dark Psytrance. Designed for the transition hours of dusk and dawn, it features powerful, driving basslines and high-energy rhythms but replaces euphoric melodies with twisted, metallic, and jagged sound design. It is groovy and dancefloor-oriented but maintains a darker, more serious tone.",
-                        "example": "Scorb - Epoxymoron",
-                        "spotify_track_id": "6pVAXlbJNwFQEz05tr8c8o", 
-                        "key_artists": [
-                            {
-                                "name": "Scorb",
-                                "url": "https://open.spotify.com/artist/6LFZa0FrldSD5S7Ka49rrK"
-                            },
-                            {
-                                "name": "Absolum",
-                                "url": "https://open.spotify.com/artist/2ctKxe2xzmIxsyiCOVxc9I"
-                            },
-                            {
-                                "name": "Shift",
-                                "url": "https://open.spotify.com/artist/2eDyOWpseLQy601raX4K3W"
                             }
                         ]
                     }
