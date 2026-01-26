@@ -254,8 +254,7 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   
   const shareBtn = document.createElement('button');
   shareBtn.className = 'nav-link-btn share-btn';
-  shareBtn.style.marginLeft = 'auto'; // Push to the right
-  shareBtn.innerHTML = `<i class="bi bi-share-fill"></i> Share`;
+  shareBtn.innerHTML = `<i class="bi bi-share-fill"></i> <span>Share</span>`;
   shareBtn.title = "Share this genre";
   shareBtn.addEventListener('click', () => {
     shareGenre(itemData);
@@ -263,11 +262,9 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   
   const headerWrapper = document.createElement('div');
   headerWrapper.className = 'panel-header-wrapper';
-  headerWrapper.style.display = 'flex';
-  headerWrapper.style.alignItems = 'center';
-  headerWrapper.style.marginBottom = '20px';
   headerWrapper.appendChild(title);
   headerWrapper.appendChild(shareBtn);
+  headerWrapper.appendChild(closeButton);
 
   // Create a sub-header for breadcrumbs and main title that stays relatively at the top
   const stickyHeader = document.createElement('div');
