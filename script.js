@@ -185,7 +185,6 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   const infoContent = document.getElementById('info-content');
   const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
-  const closeButton = document.getElementById('close-panel');
   const scrollIndicator = document.getElementById('scroll-indicator');
 
   // --- SEO & URL Update ---
@@ -260,6 +259,12 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     shareGenre(itemData);
   });
   
+  const closeButton = document.createElement('button');
+  closeButton.id = 'close-panel';
+  closeButton.setAttribute('aria-label', 'Close info panel');
+  closeButton.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i>';
+  closeButton.addEventListener('click', closeInfoPanel);
+
   const headerWrapper = document.createElement('div');
   headerWrapper.className = 'panel-header-wrapper';
   headerWrapper.appendChild(title);
@@ -298,6 +303,19 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   const example = document.createElement('p');
   example.innerHTML = `<i class="bi bi-soundwave"></i> <b>Example track: ${itemData.example || 'N/A'}</b>`;
   infoContent.appendChild(example);
+
+  // --- Spotify Embed Logic (Relocated) ---
+  const trackId = itemData.spotify_track_id;
+  if (trackId) {
+    const spotifyEmbed = document.createElement('div');
+    spotifyEmbed.id = 'spotify-embed';
+    spotifyEmbed.innerHTML = `
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p class="spotify-note"><strong>Note:</strong> Log in to Spotify in your browser to listen to the full track. Otherwise, a 30-second preview will be played.</p>
+    `;
+    spotifyEmbed.style.display = 'block';
+    infoContent.appendChild(spotifyEmbed);
+  }
 
   // --- Key Artists Section ---
   if (itemData.key_artists && itemData.key_artists.length > 0) {
@@ -369,17 +387,6 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     infoContent.appendChild(subgenresNav);
   }
 
-  const trackId = itemData.spotify_track_id;
-  if (trackId) {
-    spotifyEmbed.innerHTML = `
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <p class="spotify-note"><strong>Note:</strong> Log in to Spotify in your browser to listen to the full track. Otherwise, a 30-second preview will be played.</p>
-    `;
-    spotifyEmbed.style.display = 'block';
-  } else {
-    spotifyEmbed.innerHTML = '';
-    spotifyEmbed.style.display = 'none';
-  }
 
   // Show scroll indicator if needed
   setTimeout(() => {
@@ -967,7 +974,10 @@ function closeInfoPanel() {
   overlay.classList.remove('visible');
   scrollIndicator.classList.add('hidden');
 
-  spotifyEmbed.innerHTML = '';
+  if (spotifyEmbed) {
+    spotifyEmbed.innerHTML = '';
+    spotifyEmbed.remove();
+  }
 
   activeSelectedNode = null;
   clearBranchHighlight();
@@ -1304,8 +1314,6 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileSearchInput.focus();
       });
   }
-
-  document.getElementById('close-panel').addEventListener('click', closeInfoPanel);
   document.getElementById('modal-overlay').addEventListener('click', closeInfoPanel);
 
   window.addEventListener('keydown', (event) => {
