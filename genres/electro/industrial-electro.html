@@ -81,6 +81,13 @@
                     <input type="text" id="search-input" placeholder="Search for a genre..." autocomplete="off">
                     <div id="search-suggestions" class="hidden"></div>
                     <button id="search-button"><i class="bi bi-search"></i> Search</button>
+                    <div id="search-nav" class="hidden">
+                        <span id="search-counter">0 of 0</span>
+                        <div class="search-nav-btns">
+                            <button id="search-prev" title="Previous result"><i class="bi bi-chevron-up"></i></button>
+                            <button id="search-next" title="Next result"><i class="bi bi-chevron-down"></i></button>
+                        </div>
+                    </div>
                     <button id="clear-button"><i class="bi bi-x-lg"></i> Clear</button>
                     <button id="shuffle-button" title="Random Genre"><i class="bi bi-shuffle"></i></button>
                 </div>
@@ -99,7 +106,8 @@
             </div>
         </div>
     </header>
-    <div id="history-banner" style="display: none; background: var(--panel-dark); padding: 15px; text-align: center; border-bottom: 1px solid var(--glass-border);">
+    <div id="history-banner"
+        style="display: none; background: var(--panel-dark); padding: 15px; text-align: center; border-bottom: 1px solid var(--glass-border);">
         <p style="margin: 0; font-size: 14px;"><strong>Music History:</strong> <span id="history-fact"></span></p>
     </div>
     <main>
@@ -119,7 +127,9 @@
                         a sample track to help you understand its unique sound.</p>
 
                     <h2><i class="bi bi-person-check" aria-hidden="true"></i> Key Artists</h2>
-                    <p>For each genre, we've included a "Key Artists" section featuring pioneers and standout musicians who have significantly shaped its sound. This helps provide a richer context and a deeper dive into the genre's identity.</p>
+                    <p>For each genre, we've included a "Key Artists" section featuring pioneers and standout musicians
+                        who have significantly shaped its sound. This helps provide a richer context and a deeper dive
+                        into the genre's identity.</p>
 
                     <h2><i class="bi bi-keyboard" aria-hidden="true"></i> Accessibility</h2>
                     <p>PulseRoots is keyboard-accessible. Use the <strong>Tab</strong> key to navigate through the genre
@@ -152,7 +162,8 @@
                     <p>Thank you for visiting, and I hope you enjoy exploring the world of electronic music.</p>
 
                     <p>If you have any suggestions, improvement proposals, if you've found any errors, or just want to
-                        say 'Hi!', feel free to write to me through our <a href="/pulse.roots/contact.html" class="info-box-link">contact page</a>.</p>
+                        say 'Hi!', feel free to write to me through our <a href="/pulse.roots/contact.html"
+                            class="info-box-link">contact page</a>.</p>
                 </section>
 
             </div>
@@ -164,7 +175,7 @@
                 </div>
                 <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
                     <defs>
-                        <filter id="svg-glow" x="-100%" y="-100%" width="300%" height="300%">
+                        <filter id="svg-glow" x="-500%" y="-500%" width="1100%" height="1100%">
                             <!-- Thinner, brighter core glow -->
                             <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blurCore" />
                             <!-- Wider, softer outer glow -->
@@ -219,17 +230,11 @@
     <!-- Info panel that slides up. Moved here to avoid being blurred. -->
     <!-- ARIA attributes added for accessibility -->
     <div id="info-panel" role="dialog" aria-modal="true" aria-labelledby="info-panel-title">
-        <div id="close-panel-container">
-            <!-- Changed from <i> to <button> for semantic accessibility -->
-            <button id="close-panel" aria-label="Close info panel">
-                <i class="bi bi-x-circle" aria-hidden="true"></i>
-            </button>
-        </div>
         <div id="info-content"></div> <!-- Content will be injected by JS -->
-        <div id="spotify-embed"></div>
         <div id="scroll-indicator" class="hidden">
             <i class="bi bi-arrow-down-circle"></i>
         </div>
+    </div>
     </div>
 
     <footer>
@@ -252,7 +257,8 @@
                     <li><a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank"
                             rel="noopener noreferrer"><i class="bi bi-code-slash"></i> Portfolio</a></li>
                     <li><a class="footer-link" href="/pulse.roots/contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
-                    <li><a class="footer-link" href="/pulse.roots/privacy.html"><i class="bi bi-shield-lock"></i> Privacy Policy</a></li>
+                    <li><a class="footer-link" href="/pulse.roots/privacy.html"><i class="bi bi-shield-lock"></i> Privacy Policy</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -264,7 +270,7 @@
                         <i class="bi bi-facebook" aria-hidden="true"></i>
                     </a>
                     <a href="https://x.com/intent/tweet?url=https%3A%2F%2Fmendiak.github.io%2Fpulse.roots%2Fgenres%2Felectro%2Findustrial-electro.html&text=Explore%20Industrial%20Electro%20on%20PulseRoots!"
-                        rel="noopener noreferrer" aria-label="Share on X (Twitter)" class="social-btn">
+                        target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter)" class="social-btn">
                         <i class="bi bi-twitter-x" aria-hidden="true"></i>
                     </a>
                     <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fmendiak.github.io%2Fpulse.roots%2Fgenres%2Felectro%2Findustrial-electro.html&title=PulseRoots: Industrial Electro"
