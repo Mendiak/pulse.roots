@@ -2136,23 +2136,23 @@
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/UK_garage"
                     },
-                    {
+                   {
                         "name": "Speed Garage",
-                        "description": "Speed Garage emerged in the late 1990s and early 2000s as a more accelerated and high-energy variant of UK Garage, a genre that originated in London in the mid-'90s. While UK Garage is known for its syncopated rhythms, smooth basslines, and the use of vocal chops, Speed Garage takes these elements and injects a sense of urgency with faster tempos and more intense basslines. The genre often incorporates elements of breakbeat, dub, and house, creating a raw, dynamic sound that retains the funky groove of UK Garage while pushing it to a more dancefloor-centric direction. With its faster pace and heavy emphasis on bass, Speed Garage became a staple in the underground club scene, appealing to those seeking a faster, more aggressive take on the UK Garage sound.",
-                        "example": "DJ Armand Van Helden - U Don't Know Me",
-                        "spotify_track_id": "7BpyfQEmvi0sUmOq29plEE",
+                        "description": "Speed Garage emerged in the late 1990s in the UK as a faster and heavier variant of UK Garage. It is characterized by accelerated tempos, shuffled rhythms, chopped vocals, and heavily filtered sub-basslines. Drawing influence from house, breakbeat, and dub, speed garage emphasized bass pressure and dancefloor energy, becoming a key foundation for later UK bass genres such as grime and dubstep.",
+                        "example": "Double 99 - RipGroove",
+                        "spotify_track_id": "48ha6RZcXoYGzmWhCO7Ust",
                         "key_artists": [
                             {
-                                "name": "Armand Van Helden",
-                                "url": "https://open.spotify.com/artist/3cQA9WH8liZfeja1DxcDYE"
+                            "name": "Double 99",
+                            "url": "https://open.spotify.com/intl-es/artist/3XUgFwHXbyBHNuAfv7sWu3"
                             },
                             {
-                                "name": "Double 99",
-                                "url": "https://open.spotify.com/artist/3XUgFwHXbyBHNuAfv7sWu3"
+                            "name": "187 Lockdown",
+                            "url": "https://open.spotify.com/intl-es/artist/1tlAuGE8fWLJOWyqdBrR2p"
                             },
                             {
-                                "name": "187 Lockdown",
-                                "url": "https://open.spotify.com/artist/1tlAuGE8fWLJOWyqdBrR2p"
+                            "name": "Tuff Jam",
+                            "url": "https://open.spotify.com/intl-es/artist/75HAYbl77Jah0RGasPTXk1"
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Speed_garage"
