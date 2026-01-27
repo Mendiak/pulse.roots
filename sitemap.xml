@@ -577,12 +577,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mendiak.github.io/pulse.roots/genres/house/deep-house/amapiano.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://mendiak.github.io/pulse.roots/genres/house/tech-house.html</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -775,13 +769,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mendiak.github.io/pulse.roots/genres/house/afro-house.html</loc>
+    <loc>https://mendiak.github.io/pulse.roots/genres/house/kwaito.html</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mendiak.github.io/pulse.roots/genres/house/kwaito.html</loc>
+    <loc>https://mendiak.github.io/pulse.roots/genres/house/kwaito/afro-house.html</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mendiak.github.io/pulse.roots/genres/house/kwaito/amapiano.html</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

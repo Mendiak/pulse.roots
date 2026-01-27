@@ -1443,7 +1443,7 @@
                                 ],
                                 "wikipedia_url": "https://en.wikipedia.org/wiki/Hardstyle",
                                 "substyles": []
-            },
+                            },
                             {
                                 "name": "Makina",
                                 "description": "Makina is a Spanish subgenre of hardcore techno, primarily originating from the rave scenes of Valencia and Barcelona in the 1990s. It is known for its fast BPM, energetic beats, and an uplifting, melodic tone, often incorporating elements from trance and eurodance. Makina is popular in Spain and is characterized by its fast, upbeat rhythms and anthemic melodies.",
@@ -1947,27 +1947,6 @@
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Tropical_house"
-                    },
-                    {
-                        "name": "Amapiano",
-                        "description": "Amapiano is a subgenre of house music that emerged in South Africa, fusing deep house, jazz, and lounge music. Its most distinctive characteristic is the use of the 'Log Drum', a raw, percussive bassline sound inspired by traditional wooden drums, which drives the rhythm alongside airy pads, syncopated piano melodies, and shaker-heavy beats. It balances a laid-back, soulful atmosphere with intense, throbbing bass sections.",
-                        "example": "MFR Souls – Love You Tonight",
-                        "spotify_track_id": "2NbUnaGrjwRuRjZ5EPyOR5",
-                        "key_artists": [
-                            {
-                                "name": "Kabza De Small",
-                                "url": "https://open.spotify.com/artist/1bNjWBFWsAAzZSR59lRdpR"
-                            },
-                            {
-                                "name": "DJ Maphorisa",
-                                "url": "https://open.spotify.com/artist/0mMqD2uqwvCjFvlzo6ayGi"
-                            },
-                            {
-                                "name": "Major League Djz",
-                                "url": "https://open.spotify.com/artist/0N3AcLTAS3vcx93PxN2Agb"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Amapiano"
                     }
                 ]
             },
@@ -2136,23 +2115,23 @@
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/UK_garage"
                     },
-                   {
+                    {
                         "name": "Speed Garage",
                         "description": "Speed Garage emerged in the late 1990s in the UK as a faster and heavier variant of UK Garage. It is characterized by accelerated tempos, shuffled rhythms, chopped vocals, and heavily filtered sub-basslines. Drawing influence from house, breakbeat, and dub, speed garage emphasized bass pressure and dancefloor energy, becoming a key foundation for later UK bass genres such as grime and dubstep.",
                         "example": "Double 99 - RipGroove",
                         "spotify_track_id": "48ha6RZcXoYGzmWhCO7Ust",
                         "key_artists": [
                             {
-                            "name": "Double 99",
-                            "url": "https://open.spotify.com/intl-es/artist/3XUgFwHXbyBHNuAfv7sWu3"
+                                "name": "Double 99",
+                                "url": "https://open.spotify.com/intl-es/artist/3XUgFwHXbyBHNuAfv7sWu3"
                             },
                             {
-                            "name": "187 Lockdown",
-                            "url": "https://open.spotify.com/intl-es/artist/1tlAuGE8fWLJOWyqdBrR2p"
+                                "name": "187 Lockdown",
+                                "url": "https://open.spotify.com/intl-es/artist/1tlAuGE8fWLJOWyqdBrR2p"
                             },
                             {
-                            "name": "Tuff Jam",
-                            "url": "https://open.spotify.com/intl-es/artist/75HAYbl77Jah0RGasPTXk1"
+                                "name": "Tuff Jam",
+                                "url": "https://open.spotify.com/intl-es/artist/75HAYbl77Jah0RGasPTXk1"
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Speed_garage"
@@ -2642,27 +2621,6 @@
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Hip_house"
             },
             {
-                "name": "Afro House",
-                "description": "Afro House is a subgenre of House music rooted in South Africa (and Angola) that blends traditional African percussion, rhythms, and vocals with modern Deep House production. Characterized by a warm, soulful sound, it features polyrhythmic drums (congas, shakers, djembes) and often includes chants or vocals in African languages. Unlike generic 'Tribal House', Afro House focuses heavily on melody, emotion, and cultural identity. It has become a global phenomenon, championed by artists like Black Coffee, bridging the gap between spiritual roots and the international club scene.",
-                "example": "Black Coffee - Drive",
-                "spotify_track_id": "5cOJ2APoxJfaGjEC7CYc0K",
-                "key_artists": [
-                    {
-                        "name": "Black Coffee",
-                        "url": "https://open.spotify.com/artist/6wMr4zKPrrR0UVz08WtUWc"
-                    },
-                    {
-                        "name": "Shimza",
-                        "url": "https://open.spotify.com/artist/0WHbjg8hVel1R9kq5794HX"
-                    },
-                    {
-                        "name": "Sun-El Musician",
-                        "url": "https://open.spotify.com/artist/0W8WpLB5WoXLgiA193LXk6"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Afro_house"
-            },
-            {
                 "name": "Kwaito",
                 "description": "Kwaito is a genre that emerged in Soweto, South Africa, during the 1990s post-apartheid era. It originated from slowing down American House music tracks to a much slower tempo (typically 100–110 BPM) and infusing them with local African sounds, hip-hop attitudes, and rhythmic speech (not quite rapping, not quite singing). Known for its catchy melodic hooks, deep basslines, and 'pot-banging' percussion, Kwaito is the cultural ancestor of modern South African electronic genres like Afro House and Amapiano.",
                 "example": "Mandoza - Nkalakatha",
@@ -2681,7 +2639,51 @@
                         "url": "https://open.spotify.com/artist/5nQqlTsVIYnuyhzDcCEOvI"
                     }
                 ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Kwaito"
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Kwaito",
+                "substyles": [
+                    {
+                        "name": "Afro House",
+                        "description": "Afro House is a subgenre of House music rooted in South Africa (and Angola) that blends traditional African percussion, rhythms, and vocals with modern Deep House production. Characterized by a warm, soulful sound, it features polyrhythmic drums (congas, shakers, djembes) and often includes chants or vocals in African languages. Unlike generic 'Tribal House', Afro House focuses heavily on melody, emotion, and cultural identity. It has become a global phenomenon, championed by artists like Black Coffee, bridging the gap between spiritual roots and the international club scene.",
+                        "example": "Black Coffee - Drive",
+                        "spotify_track_id": "5cOJ2APoxJfaGjEC7CYc0K",
+                        "key_artists": [
+                            {
+                                "name": "Black Coffee",
+                                "url": "https://open.spotify.com/artist/6wMr4zKPrrR0UVz08WtUWc"
+                            },
+                            {
+                                "name": "Shimza",
+                                "url": "https://open.spotify.com/artist/0WHbjg8hVel1R9kq5794HX"
+                            },
+                            {
+                                "name": "Sun-El Musician",
+                                "url": "https://open.spotify.com/artist/0W8WpLB5WoXLgiA193LXk6"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Afro_house"
+                    },
+                    {
+                        "name": "Amapiano",
+                        "description": "Amapiano is a subgenre of house music that emerged in South Africa, fusing deep house, jazz, and lounge music. Its most distinctive characteristic is the use of the 'Log Drum', a raw, percussive bassline sound inspired by traditional wooden drums, which drives the rhythm alongside airy pads, syncopated piano melodies, and shaker-heavy beats. It balances a laid-back, soulful atmosphere with intense, throbbing bass sections.",
+                        "example": "MFR Souls – Love You Tonight",
+                        "spotify_track_id": "2NbUnaGrjwRuRjZ5EPyOR5",
+                        "key_artists": [
+                            {
+                                "name": "Kabza De Small",
+                                "url": "https://open.spotify.com/artist/1bNjWBFWsAAzZSR59lRdpR"
+                            },
+                            {
+                                "name": "DJ Maphorisa",
+                                "url": "https://open.spotify.com/artist/0mMqD2uqwvCjFvlzo6ayGi"
+                            },
+                            {
+                                "name": "Major League Djz",
+                                "url": "https://open.spotify.com/artist/0N3AcLTAS3vcx93PxN2Agb"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Amapiano"
+                    }
+                ]
             }
         ]
     },
@@ -2713,168 +2715,167 @@
                 "spotify_track_id": "5V3UMwDGWho9MvjAtMLkZv",
                 "key_artists": [
                     {
-                    "name": "Goa Gil",
-                    "url": "https://open.spotify.com/artist/6eqbN8Xsnoe5nYJODTiY6V"
+                        "name": "Goa Gil",
+                        "url": "https://open.spotify.com/artist/6eqbN8Xsnoe5nYJODTiY6V"
                     },
                     {
-                    "name": "The Infinity Project",
-                    "url": "https://open.spotify.com/artist/3MSq3HlSCnY9LNSlkDaEMx"
+                        "name": "The Infinity Project",
+                        "url": "https://open.spotify.com/artist/3MSq3HlSCnY9LNSlkDaEMx"
                     },
                     {
-                    "name": "Man With No Name",
-                    "url": "https://open.spotify.com/artist/1L49RF04CKd9D70Le9FHFz"
+                        "name": "Man With No Name",
+                        "url": "https://open.spotify.com/artist/1L49RF04CKd9D70Le9FHFz"
                     }
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Goa_trance",
                 "substyles": [
                     {
-                    "name": "Psytrance",
-                    "description": "Psytrance (short for psychedelic trance) is a subgenre of trance music that emerged in the early 1990s, heavily influenced by Goa trance and psychedelic rock. Known for its fast tempos (usually 140-150 BPM), intricate, layered rhythms, and deep basslines, psytrance creates a hypnotic, otherworldly atmosphere.",
-                    "example": "Infected Mushroom - Becoming Insane",
-                    "spotify_track_id": "22DnBQIIXFPJNRGuNjWlSg",
-                    "key_artists": [
-                        {
-                        "name": "Infected Mushroom",
-                        "url": "https://open.spotify.com/artist/6S2tas4z6DyIklBajDqJxI"
-                        },
-                        {
-                        "name": "Astrix",
-                        "url": "https://open.spotify.com/artist/3dUltShd2gJQc98Kc7Syit"
-                        },
-                        {
-                        "name": "Vini Vici",
-                        "url": "https://open.spotify.com/artist/29zsVzEH33dD5QqxeL8dvy"
-                        }
-                    ],
-                    "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance",
-                    "substyles": [
-                        {
-                        "name": "Psychedelic Goa",
-                        "description": "Psychedelic Goa evolved from the original Goa trance sound in the mid-1990s, becoming more intense, experimental, and psychedelic. It features faster tempos, complex evolving melodies, and heavily distorted synths.",
-                        "example": "Astral Projection - Mahadeva",
-                        "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp",
+                        "name": "Psytrance",
+                        "description": "Psytrance (short for psychedelic trance) is a subgenre of trance music that emerged in the early 1990s, heavily influenced by Goa trance and psychedelic rock. Known for its fast tempos (usually 140-150 BPM), intricate, layered rhythms, and deep basslines, psytrance creates a hypnotic, otherworldly atmosphere.",
+                        "example": "Infected Mushroom - Becoming Insane",
+                        "spotify_track_id": "22DnBQIIXFPJNRGuNjWlSg",
                         "key_artists": [
                             {
-                            "name": "Hallucinogen",
-                            "url": "https://open.spotify.com/artist/5Lel5d14oFwC4XbKDv2AKW"
+                                "name": "Infected Mushroom",
+                                "url": "https://open.spotify.com/artist/6S2tas4z6DyIklBajDqJxI"
                             },
                             {
-                            "name": "Astral Projection",
-                            "url": "https://open.spotify.com/artist/40EsdChhIP1ZT9RYOcfUI0"
+                                "name": "Astrix",
+                                "url": "https://open.spotify.com/artist/3dUltShd2gJQc98Kc7Syit"
                             },
                             {
-                            "name": "Electric Universe",
-                            "url": "https://open.spotify.com/artist/55SDgogZ1SRUhIgmGvLyhD"
-                            }
-                        ]
-                        },
-                        {
-                        "name": "Full-on Psytrance",
-                        "description": "Full-on Psytrance is a high-energy subgenre characterized by uplifting melodies, fast-paced beats, and euphoric energy on the dancefloor.",
-                        "example": "1200 Micrograms - Mescaline",
-                        "spotify_track_id": "3G3cpknRLszl9vH9knbGHt",
-                        "key_artists": [
-                            {
-                            "name": "1200 Micrograms",
-                            "url": "https://open.spotify.com/artist/2opB8qXyAmLYSGEZxp7X3U"
-                            },
-                            {
-                            "name": "GMS",
-                            "url": "https://open.spotify.com/artist/0GOx72r5AAEKRGQFn3xqXK"
-                            },
-                            {
-                            "name": "Talamasca",
-                            "url": "https://open.spotify.com/artist/16fgoXgeTpBh4GE9XOjvn7"
+                                "name": "Vini Vici",
+                                "url": "https://open.spotify.com/artist/29zsVzEH33dD5QqxeL8dvy"
                             }
                         ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance#Full-on"
-                        },
-                        {
-                        "name": "Dark Psytrance",
-                        "description": "Dark Psytrance explores darker, more atmospheric and experimental soundscapes with twisted basslines and eerie textures.",
-                        "example": "Blisargon Demogorgon - Knights Of Light",
-                        "spotify_track_id": "6R5guJA1veBa35mkCgYwAe",
-                        "key_artists": [
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance",
+                        "substyles": [
                             {
-                            "name": "Kindzadza",
-                            "url": "https://open.spotify.com/artist/0il4tWDQbRfSwMdk5CmP04"
+                                "name": "Psychedelic Goa",
+                                "description": "Psychedelic Goa evolved from the original Goa trance sound in the mid-1990s, becoming more intense, experimental, and psychedelic. It features faster tempos, complex evolving melodies, and heavily distorted synths.",
+                                "example": "Astral Projection - Mahadeva",
+                                "spotify_track_id": "4fKBKp6v52BBYHw3ePMXFp",
+                                "key_artists": [
+                                    {
+                                        "name": "Hallucinogen",
+                                        "url": "https://open.spotify.com/artist/5Lel5d14oFwC4XbKDv2AKW"
+                                    },
+                                    {
+                                        "name": "Astral Projection",
+                                        "url": "https://open.spotify.com/artist/40EsdChhIP1ZT9RYOcfUI0"
+                                    },
+                                    {
+                                        "name": "Electric Universe",
+                                        "url": "https://open.spotify.com/artist/55SDgogZ1SRUhIgmGvLyhD"
+                                    }
+                                ]
                             },
                             {
-                            "name": "Penta",
-                            "url": "https://open.spotify.com/artist/26AHtbjWKiwYzsoGoUZq53"
+                                "name": "Full-on Psytrance",
+                                "description": "Full-on Psytrance is a high-energy subgenre characterized by uplifting melodies, fast-paced beats, and euphoric energy on the dancefloor.",
+                                "example": "1200 Micrograms - Mescaline",
+                                "spotify_track_id": "3G3cpknRLszl9vH9knbGHt",
+                                "key_artists": [
+                                    {
+                                        "name": "1200 Micrograms",
+                                        "url": "https://open.spotify.com/artist/2opB8qXyAmLYSGEZxp7X3U"
+                                    },
+                                    {
+                                        "name": "GMS",
+                                        "url": "https://open.spotify.com/artist/0GOx72r5AAEKRGQFn3xqXK"
+                                    },
+                                    {
+                                        "name": "Talamasca",
+                                        "url": "https://open.spotify.com/artist/16fgoXgeTpBh4GE9XOjvn7"
+                                    }
+                                ],
+                                "wikipedia_url": "https://en.wikipedia.org/wiki/Psychedelic_trance#Full-on"
                             },
                             {
-                            "name": "Kashyyyk",
-                            "url": "https://open.spotify.com/artist/46bKeGVnL5HWNfcDvm1HLe"
+                                "name": "Dark Psytrance",
+                                "description": "Dark Psytrance explores darker, more atmospheric and experimental soundscapes with twisted basslines and eerie textures.",
+                                "example": "Blisargon Demogorgon - Knights Of Light",
+                                "spotify_track_id": "6R5guJA1veBa35mkCgYwAe",
+                                "key_artists": [
+                                    {
+                                        "name": "Kindzadza",
+                                        "url": "https://open.spotify.com/artist/0il4tWDQbRfSwMdk5CmP04"
+                                    },
+                                    {
+                                        "name": "Penta",
+                                        "url": "https://open.spotify.com/artist/26AHtbjWKiwYzsoGoUZq53"
+                                    },
+                                    {
+                                        "name": "Kashyyyk",
+                                        "url": "https://open.spotify.com/artist/46bKeGVnL5HWNfcDvm1HLe"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Suomisaundi",
+                                "description": "Suomisaundi is an experimental and quirky Finnish style of psytrance known for its playful, raw, and unpredictable sound.",
+                                "example": "Shiva Chandra - Return To Atlantis",
+                                "spotify_track_id": "3FsCBkbh8xIaCcnCXJ85iT",
+                                "key_artists": [
+                                    {
+                                        "name": "Texas Faggott",
+                                        "url": "https://open.spotify.com/artist/083pFSgqfJ8sL0JHAIAPyU"
+                                    },
+                                    {
+                                        "name": "Mandalavandalz",
+                                        "url": "https://open.spotify.com/artist/4Fu8RIa73VlFpx67mZsLi0"
+                                    },
+                                    {
+                                        "name": "Luomuhappo",
+                                        "url": "https://open.spotify.com/artist/5Wh0H8d2uDDTeNnjdybr42"
+                                    }
+                                ],
+                                "wikipedia_url": "https://en.wikipedia.org/wiki/Suomisaundi"
+                            },
+                            {
+                                "name": "Forest Psytrance",
+                                "description": "Forest Psytrance creates deep, organic, and hypnotic atmospheres inspired by natural and psychedelic soundscapes.",
+                                "example": "Atriohm - Hybrid Synthesis",
+                                "spotify_track_id": "45kZdRaDckpztxTRucIQi4",
+                                "key_artists": [
+                                    {
+                                        "name": "Atriohm",
+                                        "url": "https://open.spotify.com/artist/6kv03c4uwitYETlNAaQIGL"
+                                    },
+                                    {
+                                        "name": "Derango",
+                                        "url": "https://open.spotify.com/artist/1ES3MdfFDfedLChXHCkMiI"
+                                    },
+                                    {
+                                        "name": "EVP",
+                                        "url": "https://open.spotify.com/artist/5D9NPQT1XN44peiYNVPfQc"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Twilight Psytrance",
+                                "description": "Twilight Psytrance bridges Full-on and Dark Psytrance, featuring driving basslines and twisted, metallic sound design.",
+                                "example": "Scorb - Epoxymoron",
+                                "spotify_track_id": "6pVAXlbJNwFQEz05tr8c8o",
+                                "key_artists": [
+                                    {
+                                        "name": "Scorb",
+                                        "url": "https://open.spotify.com/artist/6LFZa0FrldSD5S7Ka49rrK"
+                                    },
+                                    {
+                                        "name": "Absolum",
+                                        "url": "https://open.spotify.com/artist/2ctKxe2xzmIxsyiCOVxc9I"
+                                    },
+                                    {
+                                        "name": "Shift",
+                                        "url": "https://open.spotify.com/artist/2eDyOWpseLQy601raX4K3W"
+                                    }
+                                ]
                             }
                         ]
-                        },
-                        {
-                        "name": "Suomisaundi",
-                        "description": "Suomisaundi is an experimental and quirky Finnish style of psytrance known for its playful, raw, and unpredictable sound.",
-                        "example": "Shiva Chandra - Return To Atlantis",
-                        "spotify_track_id": "3FsCBkbh8xIaCcnCXJ85iT",
-                        "key_artists": [
-                            {
-                            "name": "Texas Faggott",
-                            "url": "https://open.spotify.com/artist/083pFSgqfJ8sL0JHAIAPyU"
-                            },
-                            {
-                            "name": "Mandalavandalz",
-                            "url": "https://open.spotify.com/artist/4Fu8RIa73VlFpx67mZsLi0"
-                            },
-                            {
-                            "name": "Luomuhappo",
-                            "url": "https://open.spotify.com/artist/5Wh0H8d2uDDTeNnjdybr42"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Suomisaundi"
-                        },
-                        {
-                        "name": "Forest Psytrance",
-                        "description": "Forest Psytrance creates deep, organic, and hypnotic atmospheres inspired by natural and psychedelic soundscapes.",
-                        "example": "Atriohm - Hybrid Synthesis",
-                        "spotify_track_id": "45kZdRaDckpztxTRucIQi4",
-                        "key_artists": [
-                            {
-                            "name": "Atriohm",
-                            "url": "https://open.spotify.com/artist/6kv03c4uwitYETlNAaQIGL"
-                            },
-                            {
-                            "name": "Derango",
-                            "url": "https://open.spotify.com/artist/1ES3MdfFDfedLChXHCkMiI"
-                            },
-                            {
-                            "name": "EVP",
-                            "url": "https://open.spotify.com/artist/5D9NPQT1XN44peiYNVPfQc"
-                            }
-                        ]
-                        },
-                        {
-                        "name": "Twilight Psytrance",
-                        "description": "Twilight Psytrance bridges Full-on and Dark Psytrance, featuring driving basslines and twisted, metallic sound design.",
-                        "example": "Scorb - Epoxymoron",
-                        "spotify_track_id": "6pVAXlbJNwFQEz05tr8c8o",
-                        "key_artists": [
-                            {
-                            "name": "Scorb",
-                            "url": "https://open.spotify.com/artist/6LFZa0FrldSD5S7Ka49rrK"
-                            },
-                            {
-                            "name": "Absolum",
-                            "url": "https://open.spotify.com/artist/2ctKxe2xzmIxsyiCOVxc9I"
-                            },
-                            {
-                            "name": "Shift",
-                            "url": "https://open.spotify.com/artist/2eDyOWpseLQy601raX4K3W"
-                            }
-                        ]
-                        }
-                    ]
                     }
                 ]
-                },
-
+            },
             {
                 "name": "Progressive Trance",
                 "description": "Progressive Trance is a subgenre of trance music that emphasizes a more melodic and progressive sound, often characterized by gradual buildups, evolving soundscapes, and an emphasis on atmospheric textures. Unlike more upbeat and fast-paced styles of trance, Progressive Trance tends to maintain a steady tempo while focusing on layered melodies, hypnotic rhythms, and emotional depth. It is known for its smooth transitions and immersive quality, creating a captivating journey for listeners on the dancefloor or in more introspective listening settings.",
@@ -3124,25 +3125,25 @@
                 ]
             },
             {
-                        "name": "Acid Trance",
-                        "description": "Acid Trance merges the hypnotic basslines and synths of acid techno with the uplifting, melodic aspects of trance music. The result is a style that combines acid’s psychedelic, swirling sound with trance’s euphoric build-ups and atmospheric elements, often leading to long, immersive tracks designed for dancefloor journeys. Acid trance maintains the signature acid synth lines but layers them with sweeping pads, uplifting melodies, and driving rhythms that create a seamless blend of both genres’ iconic features.",
-                        "example": "Astrix - Poison",
-                        "spotify_track_id": "23FD4eYjBgeG2L45UAIm8U",
-                        "key_artists": [
-                            {
-                                "name": "Hardfloor",
-                                "url": "https://open.spotify.com/artist/6z9JhbmcTrVKITp9ah4mJk"
-                            },
-                            {
-                                "name": "Art of Trance",
-                                "url": "https://open.spotify.com/artist/42edDgjfmvA5cRKsF1KH5a"
-                            },
-                            {
-                                "name": "Union Jack",
-                                "url": "https://open.spotify.com/artist/2MiaJc5Vbck2Bkkm19eUx0"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Acid_trance"
+                "name": "Acid Trance",
+                "description": "Acid Trance merges the hypnotic basslines and synths of acid techno with the uplifting, melodic aspects of trance music. The result is a style that combines acid’s psychedelic, swirling sound with trance’s euphoric build-ups and atmospheric elements, often leading to long, immersive tracks designed for dancefloor journeys. Acid trance maintains the signature acid synth lines but layers them with sweeping pads, uplifting melodies, and driving rhythms that create a seamless blend of both genres’ iconic features.",
+                "example": "Astrix - Poison",
+                "spotify_track_id": "23FD4eYjBgeG2L45UAIm8U",
+                "key_artists": [
+                    {
+                        "name": "Hardfloor",
+                        "url": "https://open.spotify.com/artist/6z9JhbmcTrVKITp9ah4mJk"
+                    },
+                    {
+                        "name": "Art of Trance",
+                        "url": "https://open.spotify.com/artist/42edDgjfmvA5cRKsF1KH5a"
+                    },
+                    {
+                        "name": "Union Jack",
+                        "url": "https://open.spotify.com/artist/2MiaJc5Vbck2Bkkm19eUx0"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Acid_trance"
             }
         ]
     },
@@ -4180,7 +4181,6 @@
                         ]
                     }
                 ]
-                
             },
             {
                 "name": "Future bass",
@@ -4478,7 +4478,6 @@
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/UK_bass"
             },
-            
             {
                 "name": "Moombahton",
                 "description": "Moombahton is a fusion genre created by Dave Nada in 2009 that slows down Dutch House vibes to the tempo of Reggaeton (usually 108-112 BPM). It combines the thick, elastic basslines and dramatic build-ups of Electro House with the 'dembow' rhythm of Reggaeton. It became a global phenomenon, heavily influencing modern pop production and leading to subgenres like Moombahcore.",
