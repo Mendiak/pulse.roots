@@ -1703,20 +1703,20 @@
             {
                 "name": "French Electro",
                 "description": "A subgenre of electro that emerged in France in the late 1980s and early 1990s, characterized by its minimalist approach, repetitive rhythms, and use of synthesizers to create a hypnotic and atmospheric sound. French electro often features a darker, more industrial feel than traditional electro, exploring a minimalist and experimental approach to electronic music.",
-                "example": "Air - La Femme D'Argent",
-                "spotify_track_id": "3ZzhV6JIDKWvWR7wiKWD0C",
+                "example": "Arnaud Rebotini - 1314",
+                "spotify_track_id": "2vjlyOtAvaTmxWb3ABqkw7",
                 "key_artists": [
                     {
-                        "name": "Air",
-                        "url": "https://open.spotify.com/artist/1wKDGglKV4FsFS85r2Dmpr"
+                        "name": "Arnaud Rebotini",
+                        "url": "https://open.spotify.com/intl-es/artist/4qnTdOhzCAvoRf8PObGr1h"
                     },
                     {
-                        "name": "Daft Punk",
-                        "url": "https://open.spotify.com/artist/4tZwfgrHOc3mvqYlEYSvVi"
+                        "name": "The Hacker",
+                        "url": "https://open.spotify.com/intl-es/artist/763V8ZisRsw5kCoquzKTUp"
                     },
                     {
-                        "name": "Justice",
-                        "url": "https://open.spotify.com/artist/1gR0gsQYfi6joyO1dlp76N"
+                        "name": "Gesaffelstein",
+                        "url": "https://open.spotify.com/intl-es/artist/3hteYQFiMFbJY7wS0xDymP"
                     }
                 ]
             },
