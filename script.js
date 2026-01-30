@@ -1426,6 +1426,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const term = e.target.value;
     updateSuggestions(term);
     debouncedSearch(term);
+    document.getElementById('clear-button').classList.toggle('hidden', !term);
   });
 
   searchInput.addEventListener('keydown', (event) => {
@@ -1477,16 +1478,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  document.getElementById('search-button').addEventListener('click', () => {
-    performSearch(searchInput.value);
-    suggestionsContainer.classList.add('hidden');
-  });
-
   document.getElementById('clear-button').addEventListener('click', () => {
     searchInput.value = '';
     performSearch('');
     suggestionsContainer.innerHTML = '';
     suggestionsContainer.classList.add('hidden');
+    document.getElementById('clear-button').classList.add('hidden'); // Added this line
     // Also reset navigation state
     matchedNodes = [];
     currentMatchIndex = -1;
