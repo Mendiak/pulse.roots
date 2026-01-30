@@ -3783,43 +3783,43 @@
                 ]
             },
             {
-                "name": "Footwork",
-                "description": "Footwork is a genre of electronic dance music that originated in Chicago in the early 2000s, evolving from juke music and heavily influenced by hip-hop and house. Known for its rapid, syncopated beats (typically around 160 BPM), footwork features complex, stuttering rhythms, fast-paced percussion, and energetic, bass-heavy production. The genre is often associated with the dance style of the same name, which involves quick, intricate foot movements and spins. Footwork tracks are typically short, with chopped-up vocal samples and glitchy, experimental sounds, creating a unique, fragmented musical experience. It has gained significant recognition in underground and experimental dance scenes, influencing modern genres like juke, trap, and electronic music.",
-                "example": "DJ Rashad - Double Cup",
-                "spotify_track_id": "4PocwPW14IfS0EFBME3Hk1",
+                 "name": "Juke",
+                "description": "Juke is a fast-paced electronic dance genre from Chicago, typically around 160 BPM. It features syncopated rhythms, deep basslines, and chopped-up vocal samples. Known for its energetic, raw sound, juke focuses on rhythm and movement, often accompanying fast, intricate footwork dance styles. It is a precursor to footwork and has influenced bass-heavy electronic music.",
+                "example": "DJ Funk - Run",
+                "spotify_track_id": "09OzrUfjdciGFbVlnjUqwk",
                 "key_artists": [
                     {
-                        "name": "DJ Rashad",
-                        "url": "https://open.spotify.com/artist/4zGBj9dI63YIWmZkPl3o7V"
+                        "name": "DJ Funk",
+                        "url": "https://open.spotify.com/artist/6M0FCfVRUo5DUuziqLFjJ0"
                     },
                     {
-                        "name": "RP Boo",
-                        "url": "https://open.spotify.com/artist/678aHai0twQ5ZJcqO1KYWl"
+                        "name": "Gant-Man",
+                        "url": "https://open.spotify.com/artist/0FRf7YoRwTB4L2HVVwzks4"
                     },
                     {
-                        "name": "Traxman",
-                        "url": "https://open.spotify.com/artist/0KyFKunOclAI5jah1T55lh"
+                        "name": "DJ Deeon",
+                        "url": "https://open.spotify.com/artist/5wY9R35VmZOg7NxQvKJXdH"
                     }
                 ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_(genre)",
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_(genre)",                
                 "substyles": [
                     {
-                        "name": "Juke",
-                        "description": "Juke is a fast-paced electronic dance genre from Chicago, typically around 160 BPM. It features syncopated rhythms, deep basslines, and chopped-up vocal samples. Known for its energetic, raw sound, juke focuses on rhythm and movement, often accompanying fast, intricate footwork dance styles. It is a precursor to footwork and has influenced bass-heavy electronic music.",
-                        "example": "DJ Funk - Run",
-                        "spotify_track_id": "09OzrUfjdciGFbVlnjUqwk",
+                        "name": "Footwork",
+                        "description": "Footwork is a genre of electronic dance music that originated in Chicago in the early 2000s, evolving from juke music and heavily influenced by hip-hop and house. Known for its rapid, syncopated beats (typically around 160 BPM), footwork features complex, stuttering rhythms, fast-paced percussion, and energetic, bass-heavy production. The genre is often associated with the dance style of the same name, which involves quick, intricate foot movements and spins. Footwork tracks are typically short, with chopped-up vocal samples and glitchy, experimental sounds, creating a unique, fragmented musical experience. It has gained significant recognition in underground and experimental dance scenes, influencing modern genres like juke, trap, and electronic music.",
+                        "example": "DJ Rashad - Double Cup",
+                        "spotify_track_id": "4PocwPW14IfS0EFBME3Hk1",
                         "key_artists": [
                             {
-                                "name": "DJ Funk",
-                                "url": "https://open.spotify.com/artist/6M0FCfVRUo5DUuziqLFjJ0"
+                                "name": "DJ Rashad",
+                                "url": "https://open.spotify.com/artist/4zGBj9dI63YIWmZkPl3o7V"
                             },
                             {
-                                "name": "Gant-Man",
-                                "url": "https://open.spotify.com/artist/0FRf7YoRwTB4L2HVVwzks4"
+                                "name": "RP Boo",
+                                "url": "https://open.spotify.com/artist/678aHai0twQ5ZJcqO1KYWl"
                             },
                             {
-                                "name": "DJ Deeon",
-                                "url": "https://open.spotify.com/artist/5wY9R35VmZOg7NxQvKJXdH"
+                                "name": "Traxman",
+                                "url": "https://open.spotify.com/artist/0KyFKunOclAI5jah1T55lh"
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_(genre)"
