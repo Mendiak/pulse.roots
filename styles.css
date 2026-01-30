@@ -23,6 +23,13 @@
   /* Gradients */
   --header-glass: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8));
   --accent-gradient: linear-gradient(135deg, var(--accent-pink), #ec4899);
+
+  /* Header Consistency */
+  --header-element-height: 40px;
+  --header-btn-px: 12px;
+  --header-icon-size: 20px;
+  --header-radius: 10px;
+  --header-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Light Mode Variables */
@@ -99,20 +106,9 @@ body.light-mode #current-year {
   color: #f8fafc;
 }
 
-body.light-mode #fullscreen-btn {
-  color: #f8fafc;
-}
-
-body.light-mode #fullscreen-btn:hover {
-  color: #fff;
-}
-
-body.light-mode #theme-toggle-btn {
-  color: #f8fafc;
-}
-
 body.light-mode #theme-toggle-btn:hover {
-  color: #fff;
+  color: var(--accent-pink);
+  background: rgba(255, 0, 85, 0.1);
 }
 
 body.light-mode #close-panel {
@@ -131,16 +127,19 @@ body.light-mode #close-panel:focus-visible {
 }
 
 body.light-mode .layout-btn {
-  color: #fff;
+  color: var(--text-main);
 }
 
-body.light-mode #search-input {
+body.light-mode .layout-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .layout-btn.active {
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
 }
 
 body.light-mode #search-input::placeholder {
-  color: #ccc;
+  color: #64748b;
 }
 
 /* History Banner Light Mode */
@@ -213,11 +212,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 30px;
+  padding: 10px 30px;
   max-width: 1600px;
   margin: 0 auto;
   width: 100%;
   gap: 15px;
+  min-height: 64px;
 }
 
 .header-controls {
@@ -258,18 +258,52 @@ header {
 
 #search-button,
 #clear-button,
-#shuffle-button {
-  padding: 10px 15px;
-  border-radius: 8px;
+#shuffle-button,
+#fullscreen-btn,
+#header-share-btn,
+#theme-toggle-btn {
+  height: var(--header-element-height);
+  padding: 0 var(--header-btn-px);
+  border-radius: var(--header-radius);
   white-space: nowrap;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: var(--header-transition);
 }
 
 #search-button i,
-#clear-button i {
+#clear-button i,
+#shuffle-button i,
+#fullscreen-btn i,
+#header-share-btn i,
+#theme-toggle-btn i {
+  font-size: var(--header-icon-size);
   margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#fullscreen-btn:hover,
+#header-share-btn:hover,
+#theme-toggle-btn:hover,
+#shuffle-button:hover,
+#clear-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+#header-share-btn.success {
+  background: var(--accent-cyan);
+  color: var(--bg-dark);
 }
 
 #search-btn-text,
@@ -288,15 +322,12 @@ header {
   margin-left: 12px;
 }
 
-#search-counter {
-  font-size: 13px;
-  color: var(--text-muted);
-  font-weight: 600;
-  white-space: nowrap;
+body.light-mode #search-nav {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 body.light-mode #search-nav #search-counter {
-  color: #ffffff !important;
+  color: var(--text-main) !important;
 }
 
 .search-nav-btns {
@@ -645,41 +676,7 @@ body.light-mode .active-searched-node text {
   transform: translateY(0);
 }
 
-#fullscreen-btn {
-  background: none;
-  border: none;
-  color: var(--text-main);
-  font-size: 22px;
-  /* A good size for an icon */
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-  /* Prevent extra spacing */
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-#fullscreen-btn:hover {
-  color: var(--text-muted);
-  transform: scale(1.1);
-}
-
-#theme-toggle-btn {
-  background: none;
-  border: none;
-  color: var(--text-main);
-  font-size: 22px;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-#theme-toggle-btn:hover {
-  color: var(--text-muted);
-  transform: scale(1.1);
-}
+/* Fullscreen, Share & Theme buttons handled by shared styles above */
 
 /* --- Loading Spinner and Content Visibility --- */
 

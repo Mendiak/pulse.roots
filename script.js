@@ -1609,6 +1609,45 @@ document.addEventListener('DOMContentLoaded', () => {
     fullscreenBtn.style.display = 'none';
   }
 
+  const headerShareBtn = document.getElementById('header-share-btn');
+  if (headerShareBtn) {
+    const shareIcon = headerShareBtn.querySelector('i');
+    const originalIconClass = 'bi-share';
+    const successIconClass = 'bi-check-lg';
+
+    headerShareBtn.addEventListener('click', async () => {
+      const shareData = {
+        title: 'PulseRoots: Electronic Music Styles Tree',
+        text: 'Explore the evolution of electronic music with PulseRoots.',
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          console.error('Error sharing:', err);
+        }
+      } else {
+        // Fallback: Copy to clipboard
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          headerShareBtn.classList.add('success');
+          shareIcon.classList.replace(originalIconClass, successIconClass);
+          headerShareBtn.setAttribute('aria-label', 'Link copied!');
+
+          setTimeout(() => {
+            headerShareBtn.classList.remove('success');
+            shareIcon.classList.replace(successIconClass, originalIconClass);
+            headerShareBtn.setAttribute('aria-label', 'Share PulseRoots');
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy link: ', err);
+        }
+      }
+    });
+  }
+
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   if (themeToggleBtn) {
     const themeIcon = themeToggleBtn.querySelector('i');
