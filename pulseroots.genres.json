@@ -1762,27 +1762,6 @@
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Electro-industrial"
             },
             {
-                "name": "Synthwave Electro",
-                "description": "A retro-futuristic style of electro music inspired by 1980s synth-pop, film scores, and video game soundtracks, characterized by its use of vintage synthesizers, driving basslines, and a nostalgic, often melancholic atmosphere. Synthwave Electro blends classic electro sounds with a modern production sensibility, creating a retro-futuristic aesthetic.",
-                "example": "Kavinsky - Nightcall",
-                "spotify_track_id": "0U0ldCRmgCqhVvD6ksG63j",
-                "key_artists": [
-                    {
-                        "name": "Kavinsky",
-                        "url": "https://open.spotify.com/artist/0UF7XLthtbSF2Eur7559oV"
-                    },
-                    {
-                        "name": "The Midnight",
-                        "url": "https://open.spotify.com/artist/2NFrAuh8RQdQoS7iYFbckw"
-                    },
-                    {
-                        "name": "Gunship",
-                        "url": "https://open.spotify.com/artist/3PALZKWkpwjRvBsRmhlVSS"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Synthwave"
-            },
-            {
                 "name": "Dark Electro",
                 "description": "A darker and more atmospheric subgenre of Electro, often characterized by sinister melodies, complex synth work, and a sense of brooding intensity. Dark Electro has a focus on creating unsettling and hypnotic soundscapes, drawing influences from industrial music and gothic themes.",
                 "example": "Hocico - Poltergeist",
@@ -4840,370 +4819,368 @@
             }
         ]
     },
-    {
-        "style": "Chill-out",
-        "description": "Chill-out is an umbrella term for a variety of mellow, downtempo electronic music styles that emerged from the post-acid house culture of the early 1990s. Originally born in the 'chill-out rooms' of raves—dedicated spaces for clubbers to decompress from high-energy beats—it places emphasis on atmosphere, mood, and relaxation rather than danceability. The sound typically blends the textural depth of Ambient music with slow, groovy rhythms drawn from Dub, Hip-Hop, Jazz, and Balearic beat. Over time, it evolved beyond the club scene to become synonymous with lounge culture and sunset sessions (notably associated with Ibiza's Café del Mar), offering a sophisticated fusion of organic instrumentation and electronic production.",
-        "example": "Zero 7 - Destiny",
-        "spotify_track_id": "27ViQppP3LZPCJl2A0w9kp",
-        "key_artists": [
-            {
-                "name": "Zero 7",
-                "url": "https://open.spotify.com/artist/14H7ag1wpQOsPPQJOD6Dqr"
-            },
-            {
-                "name": "Air",
-                "url": "https://open.spotify.com/artist/1wKDGglKV4FsFS85r2Dmpr"
-            },
-            {
-                "name": "Moby",
-                "url": "https://open.spotify.com/artist/3OsRAKCvk37zwYcnzRf5XF"
-            }
-        ],
-        "wikipedia_url": "https://en.wikipedia.org/wiki/Chill-out_music",
-        "substyles": [
-            {
-                "name": "Downtempo",
-                "description": "Downtempo is a genre of electronic music characterized by slower tempos (typically between 80-110 BPM) and a relaxed, chilled-out vibe. It often features smooth, atmospheric soundscapes with elements like ambient textures, laid-back beats, melodic instrumentation, and subtle basslines. Downtempo can incorporate influences from genres like trip-hop, ambient, jazz, and funk, creating a soothing, introspective listening experience. It’s popular for background music, relaxation, and reflective moments, and is often used in cafes, lounges, or as a complement to chillout and relaxation sessions. Artists like Massive Attack, Bonobo, and Thievery Corporation are key figures in the downtempo scene.",
-                "example": "Bonobo - Black Sands",
-                "spotify_track_id": "6uoM7KHsyJsHZqBQHKjQbc",
-                "key_artists": [
-                    {
-                        "name": "Bonobo",
-                        "url": "https://open.spotify.com/artist/0cmWgDlu9CwTgxPhf403hb"
-                    },
-                    {
-                        "name": "Thievery Corporation",
-                        "url": "https://open.spotify.com/artist/25KNo5GDS6ZpLkjasaecA3"
-                    },
-                    {
-                        "name": "Morcheeba",
-                        "url": "https://open.spotify.com/artist/6bWxFw65IEJzBYjx3SxUXd"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Downtempo",
-                "substyles": [
-                    {
-                        "name": "Lo-fi Hip Hop",
-                        "description": "Lo-fi Hip Hop is a genre that blends the laid-back vibes of chill-out electronica with the rhythmic elements of hip-hop, often characterized by its mellow, imperfect sound. The term 'lo-fi' refers to the deliberately rough, 'low fidelity' production, where background noise, crackling vinyl, and other analog imperfections are embraced to create a warm, nostalgic atmosphere. The music typically features relaxed, jazzy beats, smooth basslines, and soft, soulful samples, making it popular as background music for studying, relaxing, or simply unwinding. Lo-fi Hip Hop has gained immense popularity on streaming platforms, particularly in study or relaxation playlists, due to its calm, non-intrusive nature. Artists like Nujabes were pivotal in shaping the genre, creating a unique blend of hip-hop beats with soothing melodies that have become synonymous with the genre's serene, introspective mood.",
-                        "example": "Nujabes - Feather",
-                        "spotify_track_id": "2ej1A2Ze6P2EOW7KfIosZR",
-                        "key_artists": [
-                            {
-                                "name": "Nujabes",
-                                "url": "https://open.spotify.com/artist/3Rq3YOF9YG9YfCWD4D56RZ"
-                            },
-                            {
-                                "name": "J Dilla",
-                                "url": "https://open.spotify.com/artist/0IVcLMMbm05VIjnzPkGCyp"
-                            },
-                            {
-                                "name": "L.Dre",
-                                "url": "https://open.spotify.com/artist/6gWGD0yeQYobb2sq0LUr7k"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Lofi_hip-hop"
-                    },
-                    {
-                        "name": "Nu-jazz",
-                        "description": "Nu jazz is a genre that blends elements of jazz with modern electronic music, creating a fusion of live instruments and digital production. Emerging in the late 1990s and early 2000s, nu jazz incorporates influences from genres like funk, soul, house, and ambient, while maintaining the improvisational and melodic qualities of traditional jazz. It often features smooth, groovy basslines, complex rhythms, and jazz-inspired melodies, combined with electronic effects, sampling, and synthesized sounds. The genre can range from relaxed, atmospheric tracks to more energetic, upbeat rhythms, offering a fresh take on jazz for contemporary audiences. Artists like St. Germain, The Cinematic Orchestra, and Jazzanova helped define the nu jazz sound.",
-                        "example": "St Germain - Rose Rouge",
-                        "spotify_track_id": "1divptdjcWXvF1aflfTQnw",
-                        "key_artists": [
-                            {
-                                "name": "St Germain",
-                                "url": "https://open.spotify.com/artist/484sZUYmnRXN84zmk3GY1n"
-                            },
-                            {
-                                "name": "The Cinematic Orchestra",
-                                "url": "https://open.spotify.com/artist/32ogthv0BdaSMPml02X9YB"
-                            },
-                            {
-                                "name": "Jazzanova",
-                                "url": "https://open.spotify.com/artist/0nTErwSOllrcUWt3knOG2T"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Nu_jazz"
-                    },
-                    {
-                        "name": "Bossa nova chill",
-                        "description": "Bossa Nova Chill is a genre that blends the smooth, syncopated rhythms of Brazilian bossa nova with modern electronic textures, creating a laid-back, relaxing atmosphere. It combines the intimate, jazzy guitar strumming and soothing vocal melodies typical of bossa nova with ambient sounds, soft synths, and subtle beats often found in chill-out and downtempo music. This fusion results in a mellow and atmospheric style that is perfect for unwinding or creating a peaceful background ambiance. The genre often retains the gentle, swaying rhythms of bossa nova while incorporating electronic elements that add depth and modernity, making it popular in lounge settings or as music for relaxation. Artists like Bebel Gilberto are known for contributing to this genre, creating a sound that feels both timeless and contemporary.",
-                        "example": "Bebel Gilberto - So Nice",
-                        "spotify_track_id": "5szCBBeY4xhhCT3A399Yjd",
-                        "key_artists": [
-                            {
-                                "name": "Bebel Gilberto",
-                                "url": "https://open.spotify.com/artist/6gk4ierjjSVPoZep27VfZz"
-                            },
-                            {
-                                "name": "Nouvelle Vague",
-                                "url": "https://open.spotify.com/artist/4h7NLIlg1oYdEtfQJfyto0"
-                            },
-                            {
-                                "name": "Koop",
-                                "url": "https://open.spotify.com/artist/7mW7Tv7NvywKKXqafZo0Lc"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Lounge",
-                        "description": "Lounge music is a genre that combines smooth, relaxed melodies with a laid-back, atmospheric vibe, often incorporating elements of jazz, bossa nova, and electronic music. It emerged in the mid-20th century as a form of background music in upscale bars, restaurants, and lounges, designed to create a comfortable, sophisticated ambiance without overpowering conversation. Lounge music typically features mellow tempos, soft instrumentation (such as piano, guitar, and light percussion), and soothing vocal or instrumental melodies. Over time, it has evolved to include more modern electronic influences, often blending chillout, downtempo, and ambient sounds. It remains popular for creating a calming, elegant atmosphere in social settings.",
-                        "example": "Thievery Corporation - Lebanese Blonde",
-                        "spotify_track_id": "6k5VMHrwv7mgPpkQSRQtQr",
-                        "key_artists": [
-                            {
-                                "name": "Lemongrass",
-                                "url": "https://open.spotify.com/artist/0988g1pgIlWAKBVf3DQ7db"
-                            },
-                            {
-                                "name": "De-Phazz",
-                                "url": "https://open.spotify.com/artist/0WLS16S6MJvMgWXrUezleN"
-                            },
-                            {
-                                "name": "Boozoo Bajou",
-                                "url": "https://open.spotify.com/artist/2I36EjIVz3vDfROgj1MfZ3"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Lounge_music"
-                    }
-                ]
-            },
-            {
-                "name": "Trip hop",
-                "description": "Trip hop is a genre of electronic music that emerged in the 1990s, blending elements of hip hop, ambient, jazz, and electronic music. Known for its moody, atmospheric sound, trip hop often features slow, laid-back beats (usually around 80-100 BPM), heavy basslines, and a mix of sampled and live instrumentation. The genre is marked by its use of melancholic melodies, atmospheric soundscapes, and often haunting or introspective vocals. Trip hop has a dark, introspective vibe, combining the rhythmic qualities of hip hop with the moodiness of ambient and experimental music. Pioneering artists like Massive Attack, Portishead, and Tricky helped define the genre, which is often associated with chillout and late-night listening.",
-                "example": "Massive Attack - Teardrop",
-                "spotify_track_id": "67Hna13dNDkZvBpTXRIaOJ",
-                "key_artists": [
-                    {
-                        "name": "Massive Attack",
-                        "url": "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
-                    },
-                    {
-                        "name": "Portishead",
-                        "url": "https://open.spotify.com/artist/6liAMWkVf5LH7YR9yfFy1Y"
-                    },
-                    {
-                        "name": "Tricky",
-                        "url": "https://open.spotify.com/artist/6hhA8TKRNryM8FNzqCqdDO"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Trip_hop",
-                "substyles": [
-                    {
-                        "name": "Trip rock",
-                        "description": "Trip rock is a subgenre of electronic music that blends elements of trip hop with rock, creating a fusion of atmospheric beats, slow tempos, and live instrumentation. It typically features deep basslines, haunting melodies, and a mix of electronic samples alongside guitars, drums, and other traditional rock instruments. The genre maintains the introspective, melancholic vibe of trip hop, while incorporating the energy and structure of rock, often with experimental or psychedelic elements. Trip rock tracks may have a dreamy, hypnotic feel, with a focus on mood and atmosphere, making it ideal for both relaxed listening and more dynamic, emotionally charged experiences. Artists like UNKLE and The Beta Band helped define the trip rock sound, merging electronic production with rock's organic qualities.",
-                        "example": "Portishead - Glory Box",
-                        "spotify_track_id": "3Ty7OTBNSigGEpeW2PqcsC",
-                        "key_artists": [
-                            {
-                                "name": "UNKLE",
-                                "url": "https://open.spotify.com/artist/2nszamLjZFgu3Yx77mKxuC"
-                            },
-                            {
-                                "name": "Archive",
-                                "url": "https://open.spotify.com/artist/1Q776wzj2mrtXrNu3iH6nk"
-                            },
-                            {
-                                "name": "Bowery Electric",
-                                "url": "https://open.spotify.com/artist/6a27jEzxHDgONdmADAGcej"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Trip_rock"
-                    },
-                    {
-                        "name": "Illbient",
-                        "description": "Illbient is a genre of electronic music that originated in New York City in the early 1990s. It is a form of ambient music that incorporates elements of dub, hip hop, and world music, creating a gritty, urban soundscape. The term, a portmanteau of 'ill' and 'ambient,' reflects its blend of hip-hop sensibilities with atmospheric textures and dub-inflected basslines. Often described as cinematic, Illbient is closely related to trip hop, with which it is sometimes used interchangeably.",
-                        "example": "DJ Spooky - Galactic Funk",
-                        "spotify_track_id": "62ZtyaPFFVPEKQbCdLAScn",
-                        "key_artists": [
-                            {
-                                "name": "DJ Spooky",
-                                "url": "https://open.spotify.com/artist/1O8yrjjifkCO8txB4CxuOm"
-                            },
-                            {
-                                "name": "We",
-                                "url": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
-                            },
-                            {
-                                "name": "Byzar",
-                                "url": "https://open.spotify.com/artist/716NhGYqD1jl2wI1Qkgq36"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Illbient"
-                    }
-                ]
-            },
-            {
-                "name": "Synthwave",
-                "description": "Synthwave is a genre of electronic music that draws heavily from 1980s pop culture, blending retro synth sounds with modern electronic production. It incorporates elements of electronic dance music, movie soundtracks, and early video game music, often featuring upbeat, melodic synths, catchy basslines, and nostalgic, cinematic vibes. Synthwave aims to capture the essence of the 80s, evoking a sense of nostalgia for the decade’s aesthetic and sound, while incorporating contemporary production techniques. The genre often features uplifting, energetic melodies, with a focus on creating a neon-lit, futuristic atmosphere. Artists like Kavinsky, Perturbator, and Carpenter Brut are prominent figures in the synthwave scene.",
-                "example": "Kavinsky - Nightcall",
-                "spotify_track_id": "0U0ldCRmgCqhVvD6ksG63j",
-                "key_artists": [
-                    {
-                        "name": "Kavinsky",
-                        "url": "https://open.spotify.com/artist/0UF7XLthtbSF2Eur7559oV"
-                    },
-                    {
-                        "name": "The Midnight",
-                        "url": "https://open.spotify.com/artist/2NFrAuh8RQdQoS7iYFbckw"
-                    },
-                    {
-                        "name": "Gunship",
-                        "url": "https://open.spotify.com/artist/3PALZKWkpwjRvBsRmhlVSS"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Synthwave",
-                "substyles": [
-                    {
-                        "name": "Chillwave",
-                        "description": "Chillwave is a genre of electronic music that emerged in the late 2000s, characterized by its nostalgic, dreamy sound and laid-back, lo-fi production. It blends elements of synthpop, ambient, and indie pop, often featuring warm, reverb-heavy synths, smooth basslines, and relaxed, slow tempos (typically around 60-90 BPM). Chillwave often incorporates vintage or retro aesthetics, with distorted vocals, hazy soundscapes, and a focus on creating a relaxed, introspective atmosphere. The genre evokes feelings of nostalgia and escapism, often associated with summer, youth, and lazy afternoons. Artists like Washed Out, Toro y Moi, and Neon Indian are key figures in the chillwave movement.",
-                        "example": "Washed Out - Feel It All Around",
-                        "spotify_track_id": "4V0x90QcMh4ZxwHzEWOdtK",
-                        "key_artists": [
-                            {
-                                "name": "Washed Out",
-                                "url": "https://open.spotify.com/artist/5juOkIIy18sFw9L30syt1Z"
-                            },
-                            {
-                                "name": "Toro y Moi",
-                                "url": "https://open.spotify.com/artist/6O4EGCCb6DoIiR6B1QCQgp"
-                            },
-                            {
-                                "name": "Neon Indian",
-                                "url": "https://open.spotify.com/artist/0KydPQPUUoTNhmiHKOg5Er"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Chillwave"
-                    },
-                    {
-                        "name": "Vaporwave",
-                        "description": "Vaporwave is a genre of electronic music and aesthetic that emerged in the early 2010s, characterized by its use of nostalgic, retro-futuristic sounds and visual elements. It blends smooth, ambient synths with samples from 80s and 90s pop, R&B, and smooth jazz, often slowed down or pitch-shifted to create a dreamy, surreal atmosphere. Vaporwave's music often features heavy use of reverb, glitch effects, and distorted vocals, creating a sense of detachment or irony. The genre is also known for its visual style, including 3D-rendered imagery, Japanese characters, and 90s digital aesthetics, all invoking a sense of nostalgia for past eras, often with a satirical or critical tone. Key artists include Macross 82-99, Saint Pepsi, and Vektroid.",
-                        "example": "Oneohtrix Point Never - Age Of",
-                        "spotify_track_id": "3YLzR5mhUEOY8taTn76D2k",
-                        "key_artists": [
-                            {
-                                "name": "Macintosh Plus",
-                                "url": "https://open.spotify.com/artist/2hkoUqWFI4KP39O9MViMY3"
-                            },
-                            {
-                                "name": "Saint Pepsi",
-                                "url": "https://open.spotify.com/artist/3b014NFgLGBMV2q0sGyFQM"
-                            },
-                            {
-                                "name": "Blank Banshee",
-                                "url": "https://open.spotify.com/artist/1oR9pQhucVTJyi5lH2Y2iT"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Vaporwave",
-                        "substyles": [
-                            {
-                                "name": "Dreampunk",
-                                "description": "Dreampunk is a subgenre of experimental electronic music that emerged from Vaporwave, characterized by dreamy, dark, and often unsettling atmospheres. It uses manipulated samples from ambient, easy listening, and other genres, slowing them down and adding distortion and reverb effects to create surreal and melancholic soundscapes. Dreampunk aims to evoke feelings of nostalgia, dissociation, and subconscious exploration.",
-                                "example": "2814 - 新しい日の誕生 (Birth of a New Day)",
-                                "spotify_track_id": "2dFUtZtpWydAU4QMmUOK47",
-                                "key_artists": [
-                                    {
-                                        "name": "2814",
-                                        "url": "https://open.spotify.com/artist/2wBpW4bAGYVe0yJcBeCTyd"
-                                    },
-                                    {
-                                        "name": "t e l e p a t h",
-                                        "url": "https://open.spotify.com/artist/4axKuDPr6WKcDCyh8vueTY"
-                                    },
-                                    {
-                                        "name": "HKE",
-                                        "url": "https://open.spotify.com/artist/2x6kZekpNZMll7Uq3M6ar5"
-                                    }
-                                ],
-                                "wikipedia_url": "https://en.wikipedia.org/wiki/Dreampunk"
-                            },
-                            {
-                                "name": "Mallsoft",
-                                "description": "Mallsoft (also known as plaza vapor) is a subgenre of Vaporwave that evokes the atmosphere of shopping malls and retail spaces, often from the 1980s or 1990s. It emphasizes the acoustics of the space, incorporating heavy reverb and ambient field recordings to create a sense of nostalgia and liminality.",
-                                "example": "猫 シ Corp. (Cat System Corp.) - Palm Mall Mars: Sports Centre",
-                                "spotify_track_id": "3kcS0qonyTF0nmaj3mFkrT",
-                                "key_artists": [
-                                    {
-                                        "name": "猫 シ Corp. (Cat System Corp.)",
-                                        "url": "https://open.spotify.com/artist/4eYVVrnphe4blxWuzahYQE"
-                                    },
-                                    {
-                                        "name": "NetMD",
-                                        "url": "https://open.spotify.com/intl-es/artist/2OXYtjW88cotEUYwYejUv0"
-                                    },
-                                    {
-                                        "name": "Luxury Elite",
-                                        "url": "https://open.spotify.com/intl-es/artist/28516pIwBLUO62yBiLAfdI"
-                                    }
-                                ],
-                                "wikipedia_url": "https://en.wikipedia.org/wiki/Mallsoft"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Horror Synth",
-                        "description": "Horror Synth (also known as Darksynth or Slasherwave) is a darker, more aggressive subgenre of Synthwave inspired by 1970s and 80s horror movie soundtracks. Influenced by composers like John Carpenter and Goblin, it utilizes vintage analog synthesizers to create eerie, tension-filled atmospheres mingled with driving, heavy beats. Unlike the nostalgic, sun-soaked vibes of traditional Synthwave, Horror Synth embraces the macabre, featuring distorted basslines, minor-key arpeggios, and an aesthetic rooted in slasher films and the occult. It often crosses over into metal territory due to its intensity and Satanic imagery.",
-                        "example": "Carpenter Brut - Roller Mobster",
-                        "spotify_track_id": "7oxnK2wg8qFv8EXyyxKDJ4",
-                        "key_artists": [
-                            {
-                                "name": "Carpenter Brut",
-                                "url": "https://open.spotify.com/artist/1l2oLiukA9i5jEtIyNWIEP"
-                            },
-                            {
-                                "name": "Perturbator",
-                                "url": "https://open.spotify.com/artist/244uLu9lkdw39BJwlul3k8"
-                            },
-                            {
-                                "name": "GosT",
-                                "url": "https://open.spotify.com/artist/46HcJG62ky3Tj7yJpB2Qqg"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Ambient Dub",
-                "description": "Ambient dub is a genre that fuses the atmospheric, immersive qualities of ambient music with the rhythmic elements of dub reggae. It features deep, flowing basslines, reverb-heavy effects, and echoing, spacey soundscapes, creating a meditative, trance-like vibe. The rhythms are often slow and steady, with a focus on creating a soothing, laid-back atmosphere rather than driving beats. Ambient dub may include minimal, dub-style percussion and subtle melodic elements, often used to evoke a sense of relaxation and deep immersion. The genre is ideal for background listening or creating a calm, introspective mood. Artists like The Orb and Deep Forest have explored ambient dub elements in their work.",
-                "example": "The Orb - Little Fluffy Clouds",
-                "spotify_track_id": "7FVvHGA46aU7mkwx4iHMRE",
-                "key_artists": [
-                    {
-                        "name": "The Orb",
-                        "url": "https://open.spotify.com/artist/5HAtRoEPUvGSA7ziTGB1cF"
-                    },
-                    {
-                        "name": "Pole",
-                        "url": "https://open.spotify.com/artist/7D62OQfwvslnxJn9DkZm2F"
-                    },
-                    {
-                        "name": "Loscil",
-                        "url": "https://open.spotify.com/artist/3GM5cpCBadq2PMHjFoEvhK"
-                    }
-                ]
-            },
-            {
-                "name": "Balearic Beat",
-                "description": "Balearic beat is a style of dance music that originated in the Balearic Islands, particularly Ibiza, during the 1980s. Known for its relaxed, eclectic mix of genres, Balearic beat blends elements of house, disco, ambient, and rock with smooth, laid-back rhythms. The genre is characterized by its atmospheric, sun-drenched vibes, often incorporating tropical or world music influences. Balearic beat tracks typically feature mellow beats, smooth basslines, and uplifting melodies, creating a chilled yet danceable sound that evokes the feeling of a beach party or sunset. It’s a perfect soundtrack for relaxed club environments, with artists like Danny Rampling and José Padilla helping shape the sound.",
-                "example": "José Padilla - Adios Ayer",
-                "spotify_track_id": "3inZkpVlyHfLoxwuyu2GYW",
-                "key_artists": [
-                    {
-                        "name": "José Padilla",
-                        "url": "https://open.spotify.com/artist/7rDHusYGKfhI7ZNIGeUibU"
-                    },
-                    {
-                        "name": "Chicane",
-                        "url": "https://open.spotify.com/artist/5GxyeQagayzZOg4UwffQlD"
-                    },
-                    {
-                        "name": "Aeroplane",
-                        "url": "https://open.spotify.com/artist/31CtLHmSL7Oa7TPU9YyBEu"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Balearic_beat"
-            }
-        ]
-    },
+{
+    "style": "Chill-out",
+    "description": "Chill-out is an umbrella term for a variety of mellow, downtempo electronic music styles that emerged from the post-acid house culture of the early 1990s. Originally born in the 'chill-out rooms' of raves—dedicated spaces for clubbers to decompress from high-energy beats—it places emphasis on atmosphere, mood, and relaxation rather than danceability. The sound typically blends the textural depth of Ambient music with slow, groovy rhythms drawn from Dub, Hip-Hop, Jazz, and Balearic beat. Over time, it evolved beyond the club scene to become synonymous with lounge culture and sunset sessions (notably associated with Ibiza's Café del Mar), offering a sophisticated fusion of organic instrumentation and electronic production.",
+    "example": "Zero 7 - Destiny",
+    "spotify_track_id": "27ViQppP3LZPCJl2A0w9kp",
+    "key_artists": [
+        {
+            "name": "Zero 7",
+            "url": "https://open.spotify.com/artist/14H7ag1wpQOsPPQJOD6Dqr"
+        },
+        {
+            "name": "Air",
+            "url": "https://open.spotify.com/artist/1wKDGglKV4FsFS85r2Dmpr"
+        },
+        {
+            "name": "Moby",
+            "url": "https://open.spotify.com/artist/3OsRAKCvk37zwYcnzRf5XF"
+        }
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chill-out_music",
+    "substyles": [
+        {
+            "name": "Balearic Beat",
+            "description": "Balearic beat is a style of dance music that originated in the Balearic Islands, particularly Ibiza, during the 1980s. Known for its relaxed, eclectic mix of genres, Balearic beat blends elements of house, disco, ambient, and rock with smooth, laid-back rhythms. The genre is characterized by its atmospheric, sun-drenched vibes, often incorporating tropical or world music influences. Balearic beat tracks typically feature mellow beats, smooth basslines, and uplifting melodies, creating a chilled yet danceable sound that evokes the feeling of a beach party or sunset. It’s a perfect soundtrack for relaxed club environments, with artists like Danny Rampling and José Padilla helping shape the sound.",
+            "example": "José Padilla - Adios Ayer",
+            "spotify_track_id": "3inZkpVlyHfLoxwuyu2GYW",
+            "key_artists": [
+                {
+                    "name": "José Padilla",
+                    "url": "https://open.spotify.com/artist/7rDHusYGKfhI7ZNIGeUibU"
+                },
+                {
+                    "name": "Chicane",
+                    "url": "https://open.spotify.com/artist/5GxyeQagayzZOg4UwffQlD"
+                },
+                {
+                    "name": "Aeroplane",
+                    "url": "https://open.spotify.com/artist/31CtLHmSL7Oa7TPU9YyBEu"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Balearic_beat"
+        },
+        {
+            "name": "Ambient Dub",
+            "description": "Ambient dub is a genre that fuses the atmospheric, immersive qualities of ambient music with the rhythmic elements of dub reggae. It features deep, flowing basslines, reverb-heavy effects, and echoing, spacey soundscapes, creating a meditative, trance-like vibe. The rhythms are often slow and steady, with a focus on creating a soothing, laid-back atmosphere rather than driving beats. Ambient dub may include minimal, dub-style percussion and subtle melodic elements, often used to evoke a sense of relaxation and deep immersion. The genre is ideal for background listening or creating a calm, introspective mood. Artists like The Orb and Deep Forest have explored ambient dub elements in their work.",
+            "example": "The Orb - Little Fluffy Clouds",
+            "spotify_track_id": "7FVvHGA46aU7mkwx4iHMRE",
+            "key_artists": [
+                {
+                    "name": "The Orb",
+                    "url": "https://open.spotify.com/artist/5HAtRoEPUvGSA7ziTGB1cF"
+                },
+                {
+                    "name": "Pole",
+                    "url": "https://open.spotify.com/artist/7D62OQfwvslnxJn9DkZm2F"
+                },
+                {
+                    "name": "Loscil",
+                    "url": "https://open.spotify.com/artist/3GM5cpCBadq2PMHjFoEvhK"
+                }
+            ]
+        },
+        {
+            "name": "Downtempo",
+            "description": "Downtempo is a genre of electronic music characterized by slower tempos (typically between 80-110 BPM) and a relaxed, chilled-out vibe. It often features smooth, atmospheric soundscapes with elements like ambient textures, laid-back beats, melodic instrumentation, and subtle basslines. Downtempo can incorporate influences from genres like trip-hop, ambient, jazz, and funk, creating a soothing, introspective listening experience. It’s popular for background music, relaxation, and reflective moments, and is often used in cafes, lounges, or as a complement to chillout and relaxation sessions. Artists like Massive Attack, Bonobo, and Thievery Corporation are key figures in the downtempo scene.",
+            "example": "Bonobo - Black Sands",
+            "spotify_track_id": "6uoM7KHsyJsHZqBQHKjQbc",
+            "key_artists": [
+                {
+                    "name": "Bonobo",
+                    "url": "https://open.spotify.com/artist/0cmWgDlu9CwTgxPhf403hb"
+                },
+                {
+                    "name": "Thievery Corporation",
+                    "url": "https://open.spotify.com/artist/25KNo5GDS6ZpLkjasaecA3"
+                },
+                {
+                    "name": "Morcheeba",
+                    "url": "https://open.spotify.com/artist/6bWxFw65IEJzBYjx3SxUXd"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Downtempo",
+            "substyles": [
+                {
+                    "name": "Lounge",
+                    "description": "Lounge music is a genre that combines smooth, relaxed melodies with a laid-back, atmospheric vibe, often incorporating elements of jazz, bossa nova, and electronic music. It emerged in the mid-20th century as a form of background music in upscale bars, restaurants, and lounges, designed to create a comfortable, sophisticated ambiance without overpowering conversation. Lounge music typically features mellow tempos, soft instrumentation (such as piano, guitar, and light percussion), and soothing vocal or instrumental melodies. Over time, it has evolved to include more modern electronic influences, often blending chillout, downtempo, and ambient sounds. It remains popular for creating a calming, elegant atmosphere in social settings.",
+                    "example": "Thievery Corporation - Lebanese Blonde",
+                    "spotify_track_id": "6k5VMHrwv7mgPpkQSRQtQr",
+                    "key_artists": [
+                        {
+                            "name": "Lemongrass",
+                            "url": "https://open.spotify.com/artist/0988g1pgIlWAKBVf3DQ7db"
+                        },
+                        {
+                            "name": "De-Phazz",
+                            "url": "https://open.spotify.com/artist/0WLS16S6MJvMgWXrUezleN"
+                        },
+                        {
+                            "name": "Boozoo Bajou",
+                            "url": "https://open.spotify.com/artist/2I36EjIVz3vDfROgj1MfZ3"
+                        }
+                    ],
+                    "wikipedia_url": "https://en.wikipedia.org/wiki/Lounge_music"
+                },
+                {
+                    "name": "Bossa nova chill",
+                    "description": "Bossa Nova Chill is a genre that blends the smooth, syncopated rhythms of Brazilian bossa nova with modern electronic textures, creating a laid-back, relaxing atmosphere. It combines the intimate, jazzy guitar strumming and soothing vocal melodies typical of bossa nova with ambient sounds, soft synths, and subtle beats often found in chill-out and downtempo music. This fusion results in a mellow and atmospheric style that is perfect for unwinding or creating a peaceful background ambiance. The genre often retains the gentle, swaying rhythms of bossa nova while incorporating electronic elements that add depth and modernity, making it popular in lounge settings or as music for relaxation. Artists like Bebel Gilberto are known for contributing to this genre, creating a sound that feels both timeless and contemporary.",
+                    "example": "Bebel Gilberto - So Nice",
+                    "spotify_track_id": "5szCBBeY4xhhCT3A399Yjd",
+                    "key_artists": [
+                        {
+                            "name": "Bebel Gilberto",
+                            "url": "https://open.spotify.com/artist/6gk4ierjjSVPoZep27VfZz"
+                        },
+                        {
+                            "name": "Nouvelle Vague",
+                            "url": "https://open.spotify.com/artist/4h7NLIlg1oYdEtfQJfyto0"
+                        },
+                        {
+                            "name": "Koop",
+                            "url": "https://open.spotify.com/artist/7mW7Tv7NvywKKXqafZo0Lc"
+                        }
+                    ]
+                },
+                {
+                    "name": "Nu-jazz",
+                    "description": "Nu jazz is a genre that blends elements of jazz with modern electronic music, creating a fusion of live instruments and digital production. Emerging in the late 1990s and early 2000s, nu jazz incorporates influences from genres like funk, soul, house, and ambient, while maintaining the improvisational and melodic qualities of traditional jazz. It often features smooth, groovy basslines, complex rhythms, and jazz-inspired melodies, combined with electronic effects, sampling, and synthesized sounds. The genre can range from relaxed, atmospheric tracks to more energetic, upbeat rhythms, offering a fresh take on jazz for contemporary audiences. Artists like St. Germain, The Cinematic Orchestra, and Jazzanova helped define the nu jazz sound.",
+                    "example": "St Germain - Rose Rouge",
+                    "spotify_track_id": "1divptdjcWXvF1aflfTQnw",
+                    "key_artists": [
+                        {
+                            "name": "St Germain",
+                            "url": "https://open.spotify.com/artist/484sZUYmnRXN84zmk3GY1n"
+                        },
+                        {
+                            "name": "The Cinematic Orchestra",
+                            "url": "https://open.spotify.com/artist/32ogthv0BdaSMPml02X9YB"
+                        },
+                        {
+                            "name": "Jazzanova",
+                            "url": "https://open.spotify.com/artist/0nTErwSOllrcUWt3knOG2T"
+                        }
+                    ],
+                    "wikipedia_url": "https://en.wikipedia.org/wiki/Nu_jazz"
+                },
+                {
+                    "name": "Lo-fi Hip Hop",
+                    "description": "Lo-fi Hip Hop is a genre that blends the laid-back vibes of chill-out electronica with the rhythmic elements of hip-hop, often characterized by its mellow, imperfect sound. The term 'lo-fi' refers to the deliberately rough, 'low fidelity' production, where background noise, crackling vinyl, and other analog imperfections are embraced to create a warm, nostalgic atmosphere. The music typically features relaxed, jazzy beats, smooth basslines, and soft, soulful samples, making it popular as background music for studying, relaxing, or simply unwinding. Lo-fi Hip Hop has gained immense popularity on streaming platforms, particularly in study or relaxation playlists, due to its calm, non-intrusive nature. Artists like Nujabes were pivotal in shaping the genre, creating a unique blend of hip-hop beats with soothing melodies that have become synonymous with the genre's serene, introspective mood.",
+                    "example": "Nujabes - Feather",
+                    "spotify_track_id": "2ej1A2Ze6P2EOW7KfIosZR",
+                    "key_artists": [
+                        {
+                            "name": "Nujabes",
+                            "url": "https://open.spotify.com/artist/3Rq3YOF9YG9YfCWD4D56RZ"
+                        },
+                        {
+                            "name": "J Dilla",
+                            "url": "https://open.spotify.com/artist/0IVcLMMbm05VIjnzPkGCyp"
+                        },
+                        {
+                            "name": "L.Dre",
+                            "url": "https://open.spotify.com/artist/6gWGD0yeQYobb2sq0LUr7k"
+                        }
+                    ],
+                    "wikipedia_url": "https://en.wikipedia.org/wiki/Lofi_hip-hop"
+                }
+            ]
+        },
+        {
+            "name": "Trip hop",
+            "description": "Trip hop is a genre of electronic music that emerged in the 1990s, blending elements of hip hop, ambient, jazz, and electronic music. Known for its moody, atmospheric sound, trip hop often features slow, laid-back beats (usually around 80-100 BPM), heavy basslines, and a mix of sampled and live instrumentation. The genre is marked by its use of melancholic melodies, atmospheric soundscapes, and often haunting or introspective vocals. Trip hop has a dark, introspective vibe, combining the rhythmic qualities of hip hop with the moodiness of ambient and experimental music. Pioneering artists like Massive Attack, Portishead, and Tricky helped define the genre, which is often associated with chillout and late-night listening.",
+            "example": "Massive Attack - Teardrop",
+            "spotify_track_id": "67Hna13dNDkZvBpTXRIaOJ",
+            "key_artists": [
+                {
+                    "name": "Massive Attack",
+                    "url": "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+                },
+                {
+                    "name": "Portishead",
+                    "url": "https://open.spotify.com/artist/6liAMWkVf5LH7YR9yfFy1Y"
+                },
+                {
+                    "name": "Tricky",
+                    "url": "https://open.spotify.com/artist/6hhA8TKRNryM8FNzqCqdDO"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Trip_hop",
+            "substyles": [
+                {
+                    "name": "Illbient",
+                    "description": "Illbient is a genre of electronic music that originated in New York City in the early 1990s. It is a form of ambient music that incorporates elements of dub, hip hop, and world music, creating a gritty, urban soundscape. The term, a portmanteau of 'ill' and 'ambient,' reflects its blend of hip-hop sensibilities with atmospheric textures and dub-inflected basslines. Often described as cinematic, Illbient is closely related to trip hop, with which it is sometimes used interchangeably.",
+                    "example": "DJ Spooky - Galactic Funk",
+                    "spotify_track_id": "62ZtyaPFFVPEKQbCdLAScn",
+                    "key_artists": [
+                        {
+                            "name": "DJ Spooky",
+                            "url": "https://open.spotify.com/artist/1O8yrjjifkCO8txB4CxuOm"
+                        },
+                        {
+                            "name": "We",
+                            "url": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
+                        },
+                        {
+                            "name": "Byzar",
+                            "url": "https://open.spotify.com/artist/716NhGYqD1jl2wI1Qkgq36"
+                        }
+                    ],
+                    "wikipedia_url": "https://en.wikipedia.org/wiki/Illbient"
+                },
+                {
+                    "name": "Trip rock",
+                    "description": "Trip rock is a subgenre of electronic music that blends elements of trip hop with rock, creating a fusion of atmospheric beats, slow tempos, and live instrumentation. It typically features deep basslines, haunting melodies, and a mix of electronic samples alongside guitars, drums, and other traditional rock instruments. The genre maintains the introspective, melancholic vibe of trip hop, while incorporating the energy and structure of rock, often with experimental or psychedelic elements. Trip rock tracks may have a dreamy, hypnotic feel, with a focus on mood and atmosphere, making it ideal for both relaxed listening and more dynamic, emotionally charged experiences. Artists like UNKLE and The Beta Band helped define the trip rock sound, merging electronic production with rock's organic qualities.",
+                    "example": "Portishead - Glory Box",
+                    "spotify_track_id": "3Ty7OTBNSigGEpeW2PqcsC",
+                    "key_artists": [
+                        {
+                            "name": "UNKLE",
+                            "url": "https://open.spotify.com/artist/2nszamLjZFgu3Yx77mKxuC"
+                        },
+                        {
+                            "name": "Archive",
+                            "url": "https://open.spotify.com/artist/1Q776wzj2mrtXrNu3iH6nk"
+                        },
+                        {
+                            "name": "Bowery Electric",
+                            "url": "https://open.spotify.com/artist/6a27jEzxHDgONdmADAGcej"
+                        }
+                    ],
+                    "wikipedia_url": "https://en.wikipedia.org/wiki/Trip_rock"
+                }
+            ]
+        },
+        {
+            "name": "Chillwave",
+            "description": "Chillwave is a genre of electronic music that emerged in the late 2000s, characterized by its nostalgic, dreamy sound and laid-back, lo-fi production. It blends elements of synthpop, ambient, and indie pop, often featuring warm, reverb-heavy synths, smooth basslines, and relaxed, slow tempos (typically around 60-90 BPM). Chillwave often incorporates vintage or retro aesthetics, with distorted vocals, hazy soundscapes, and a focus on creating a relaxed, introspective atmosphere. The genre evokes feelings of nostalgia and escapism, often associated with summer, youth, and lazy afternoons. Artists like Washed Out, Toro y Moi, and Neon Indian are key figures in the chillwave movement.",
+            "example": "Washed Out - Feel It All Around",
+            "spotify_track_id": "4V0x90QcMh4ZxwHzEWOdtK",
+            "key_artists": [
+                {
+                    "name": "Washed Out",
+                    "url": "https://open.spotify.com/artist/5juOkIIy18sFw9L30syt1Z"
+                },
+                {
+                    "name": "Toro y Moi",
+                    "url": "https://open.spotify.com/artist/6O4EGCCb6DoIiR6B1QCQgp"
+                },
+                {
+                    "name": "Neon Indian",
+                    "url": "https://open.spotify.com/artist/0KydPQPUUoTNhmiHKOg5Er"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Chillwave"
+        },
+        {
+            "name": "Vaporwave",
+            "description": "Vaporwave is a genre of electronic music and aesthetic that emerged in the early 2010s, characterized by its use of nostalgic, retro-futuristic sounds and visual elements. It blends smooth, ambient synths with samples from 80s and 90s pop, R&B, and smooth jazz, often slowed down or pitch-shifted to create a dreamy, surreal atmosphere. Vaporwave's music often features heavy use of reverb, glitch effects, and distorted vocals, creating a sense of detachment or irony. The genre is also known for its visual style, including 3D-rendered imagery, Japanese characters, and 90s digital aesthetics, all invoking a sense of nostalgia for past eras, often with a satirical or critical tone. Key artists include Macross 82-99, Saint Pepsi, and Vektroid.",
+            "example": "Oneohtrix Point Never - Age Of",
+            "spotify_track_id": "3YLzR5mhUEOY8taTn76D2k",
+            "key_artists": [
+                {
+                    "name": "Macintosh Plus",
+                    "url": "https://open.spotify.com/artist/2hkoUqWFI4KP39O9MViMY3"
+                },
+                {
+                    "name": "Saint Pepsi",
+                    "url": "https://open.spotify.com/artist/3b014NFgLGBMV2q0sGyFQM"
+                },
+                {
+                    "name": "Blank Banshee",
+                    "url": "https://open.spotify.com/artist/1oR9pQhucVTJyi5lH2Y2iT"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Vaporwave",
+            "substyles": [
+                {
+                    "name": "Dreampunk",
+                    "description": "Dreampunk is a subgenre of experimental electronic music that emerged from Vaporwave, characterized by dreamy, dark, and often unsettling atmospheres. It uses manipulated samples from ambient, easy listening, and other genres, slowing them down and adding distortion and reverb effects to create surreal and melancholic soundscapes. Dreampunk aims to evoke feelings of nostalgia, dissociation, and subconscious exploration.",
+                    "example": "2814 - 新しい日の誕生 (Birth of a New Day)",
+                    "spotify_track_id": "2dFUtZtpWydAU4QMmUOK47",
+                    "key_artists": [
+                        {
+                            "name": "2814",
+                            "url": "https://open.spotify.com/artist/2wBpW4bAGYVe0yJcBeCTyd"
+                        },
+                        {
+                            "name": "t e l e p a t h",
+                            "url": "https://open.spotify.com/artist/4axKuDPr6WKcDCyh8vueTY"
+                        },
+                        {
+                            "name": "HKE",
+                            "url": "https://open.spotify.com/artist/2x6kZekpNZMll7Uq3M6ar5"
+                        }
+                    ],
+                    "wikipedia_url": "https://en.wikipedia.org/wiki/Dreampunk"
+                },
+                {
+                    "name": "Mallsoft",
+                    "description": "Mallsoft (also known as plaza vapor) is a subgenre of Vaporwave that evokes the atmosphere of shopping malls and retail spaces, often from the 1980s or 1990s. It emphasizes the acoustics of the space, incorporating heavy reverb and ambient field recordings to create a sense of nostalgia and liminality.",
+                    "example": "猫 シ Corp. (Cat System Corp.) - Palm Mall Mars: Sports Centre",
+                    "spotify_track_id": "3kcS0qonyTF0nmaj3mFkrT",
+                    "key_artists": [
+                        {
+                            "name": "猫 シ Corp. (Cat System Corp.)",
+                            "url": "https://open.spotify.com/artist/4eYVVrnphe4blxWuzahYQE"
+                        },
+                        {
+                            "name": "NetMD",
+                            "url": "https://open.spotify.com/intl-es/artist/2OXYtjW88cotEUYwYejUv0"
+                        },
+                        {
+                            "name": "Luxury Elite",
+                            "url": "https://open.spotify.com/intl-es/artist/28516pIwBLUO62yBiLAfdI"
+                        }
+                    ],
+                    "wikipedia_url": "https://en.wikipedia.org/wiki/Mallsoft"
+                }
+            ]
+        },
+        {
+            "name": "Synthwave",
+            "description": "Synthwave is a genre of electronic music that draws heavily from 1980s pop culture, blending retro synth sounds with modern electronic production. It incorporates elements of electronic dance music, movie soundtracks, and early video game music, often featuring upbeat, melodic synths, catchy basslines, and nostalgic, cinematic vibes. Synthwave aims to capture the essence of the 80s, evoking a sense of nostalgia for the decade’s aesthetic and sound, while incorporating contemporary production techniques. The genre often features uplifting, energetic melodies, with a focus on creating a neon-lit, futuristic atmosphere. Artists like Kavinsky, Perturbator, and Carpenter Brut are prominent figures in the synthwave scene.",
+            "example": "Kavinsky - Nightcall",
+            "spotify_track_id": "0U0ldCRmgCqhVvD6ksG63j",
+            "key_artists": [
+                {
+                    "name": "Kavinsky",
+                    "url": "https://open.spotify.com/artist/0UF7XLthtbSF2Eur7559oV"
+                },
+                {
+                    "name": "The Midnight",
+                    "url": "https://open.spotify.com/artist/2NFrAuh8RQdQoS7iYFbckw"
+                },
+                {
+                    "name": "Gunship",
+                    "url": "https://open.spotify.com/artist/3PALZKWkpwjRvBsRmhlVSS"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Synthwave"
+        },
+        {
+            "name": "Horror Synth",
+            "description": "Horror Synth (also known as Darksynth or Slasherwave) is a darker, more aggressive subgenre of Synthwave inspired by 1970s and 80s horror movie soundtracks. Influenced by composers like John Carpenter and Goblin, it utilizes vintage analog synthesizers to create eerie, tension-filled atmospheres mingled with driving, heavy beats. Unlike the nostalgic, sun-soaked vibes of traditional Synthwave, Horror Synth embraces the macabre, featuring distorted basslines, minor-key arpeggios, and an aesthetic rooted in slasher films and the occult. It often crosses over into metal territory due to its intensity and Satanic imagery.",
+            "example": "Carpenter Brut - Roller Mobster",
+            "spotify_track_id": "7oxnK2wg8qFv8EXyyxKDJ4",
+            "key_artists": [
+                {
+                    "name": "Carpenter Brut",
+                    "url": "https://open.spotify.com/artist/1l2oLiukA9i5jEtIyNWIEP"
+                },
+                {
+                    "name": "Perturbator",
+                    "url": "https://open.spotify.com/artist/244uLu9lkdw39BJwlul3k8"
+                },
+                {
+                    "name": "GosT",
+                    "url": "https://open.spotify.com/artist/46HcJG62ky3Tj7yJpB2Qqg"
+                }
+            ]
+        }
+    ]
+},
     {
         "style": "Global Club",
         "description": "Global Club (also known as Global Bass or World Club) refers to a diverse movement of electronic dance music that emerges from local scenes outside the Western mainstream. It is characterized by the fusion of traditional regional rhythms with modern electronic production, often born in urban peripheries. This genre bridges the gap between local folk identities and global underground club culture, emphasizing syncopation, polyrhythms, and high-energy social expression.",
