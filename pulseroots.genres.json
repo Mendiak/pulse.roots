@@ -3783,7 +3783,7 @@
                 ]
             },
             {
-                 "name": "Juke",
+                "name": "Juke",
                 "description": "Juke is a fast-paced electronic dance genre from Chicago, typically around 160 BPM. It features syncopated rhythms, deep basslines, and chopped-up vocal samples. Known for its energetic, raw sound, juke focuses on rhythm and movement, often accompanying fast, intricate footwork dance styles. It is a precursor to footwork and has influenced bass-heavy electronic music.",
                 "example": "DJ Funk - Run",
                 "spotify_track_id": "09OzrUfjdciGFbVlnjUqwk",
@@ -3801,7 +3801,7 @@
                         "url": "https://open.spotify.com/artist/5wY9R35VmZOg7NxQvKJXdH"
                     }
                 ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_(genre)",                
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Footwork_(genre)",
                 "substyles": [
                     {
                         "name": "Footwork",
@@ -5093,28 +5093,51 @@
                                 "url": "https://open.spotify.com/artist/1oR9pQhucVTJyi5lH2Y2iT"
                             }
                         ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Vaporwave"
-                    },
-                    {
-                        "name": "Dreampunk",
-                        "description": "Dreampunk is a subgenre of experimental electronic music that emerged from Vaporwave, characterized by dreamy, dark, and often unsettling atmospheres. It uses manipulated samples from ambient, easy listening, and other genres, slowing them down and adding distortion and reverb effects to create surreal and melancholic soundscapes. Dreampunk aims to evoke feelings of nostalgia, dissociation, and subconscious exploration.",
-                        "example": "2814 - 新しい日の誕生 (Birth of a New Day)",
-                        "spotify_track_id": "2dFUtZtpWydAU4QMmUOK47",
-                        "key_artists": [
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Vaporwave",
+                        "substyles": [
                             {
-                                "name": "2814",
-                                "url": "https://open.spotify.com/artist/2wBpW4bAGYVe0yJcBeCTyd"
+                                "name": "Dreampunk",
+                                "description": "Dreampunk is a subgenre of experimental electronic music that emerged from Vaporwave, characterized by dreamy, dark, and often unsettling atmospheres. It uses manipulated samples from ambient, easy listening, and other genres, slowing them down and adding distortion and reverb effects to create surreal and melancholic soundscapes. Dreampunk aims to evoke feelings of nostalgia, dissociation, and subconscious exploration.",
+                                "example": "2814 - 新しい日の誕生 (Birth of a New Day)",
+                                "spotify_track_id": "2dFUtZtpWydAU4QMmUOK47",
+                                "key_artists": [
+                                    {
+                                        "name": "2814",
+                                        "url": "https://open.spotify.com/artist/2wBpW4bAGYVe0yJcBeCTyd"
+                                    },
+                                    {
+                                        "name": "t e l e p a t h",
+                                        "url": "https://open.spotify.com/artist/4axKuDPr6WKcDCyh8vueTY"
+                                    },
+                                    {
+                                        "name": "HKE",
+                                        "url": "https://open.spotify.com/artist/2x6kZekpNZMll7Uq3M6ar5"
+                                    }
+                                ],
+                                "wikipedia_url": "https://en.wikipedia.org/wiki/Dreampunk"
                             },
                             {
-                                "name": "t e l e p a t h",
-                                "url": "https://open.spotify.com/artist/4axKuDPr6WKcDCyh8vueTY"
-                            },
-                            {
-                                "name": "HKE",
-                                "url": "https://open.spotify.com/artist/2x6kZekpNZMll7Uq3M6ar5"
+                                "name": "Mallsoft",
+                                "description": "Mallsoft (also known as plaza vapor) is a subgenre of Vaporwave that evokes the atmosphere of shopping malls and retail spaces, often from the 1980s or 1990s. It emphasizes the acoustics of the space, incorporating heavy reverb and ambient field recordings to create a sense of nostalgia and liminality.",
+                                "example": "猫 シ Corp. (Cat System Corp.) - Palm Mall Mars: Sports Centre",
+                                "spotify_track_id": "3kcS0qonyTF0nmaj3mFkrT",
+                                "key_artists": [
+                                    {
+                                        "name": "猫 シ Corp. (Cat System Corp.)",
+                                        "url": "https://open.spotify.com/artist/4eYVVrnphe4blxWuzahYQE"
+                                    },
+                                    {
+                                        "name": "NetMD",
+                                        "url": "https://open.spotify.com/intl-es/artist/2OXYtjW88cotEUYwYejUv0"
+                                    },
+                                    {
+                                        "name": "Luxury Elite",
+                                        "url": "https://open.spotify.com/intl-es/artist/28516pIwBLUO62yBiLAfdI"
+                                    }
+                                ],
+                                "wikipedia_url": "https://en.wikipedia.org/wiki/Mallsoft"
                             }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Dreampunk"
+                        ]
                     },
                     {
                         "name": "Horror Synth",
