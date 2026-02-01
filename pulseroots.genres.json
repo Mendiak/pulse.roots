@@ -1490,6 +1490,27 @@
                         ]
                     }
                 ]
+            },
+            {
+            "name": "Ambient Techno",
+            "description": "Ambient Techno is a subgenre of techno that emerged in the early 1990s, blending the rhythmic structures of techno with the atmospheric textures of ambient music. It emphasizes mood, space, and subtle progression over dancefloor intensity, often featuring softer beats, dub-influenced sound design, and immersive soundscapes. Originally associated with artists on labels like Warp Records, Ambient Techno was designed as electronic music for home listening rather than club environments.",
+            "example": "B12 - Hall of Mirrors",
+            "spotify_track_id": "5MpfKZh2pjNkCkaDlvPWAv",
+            "key_artists": [
+                {
+                "name": "B12",
+                "url": "https://open.spotify.com/intl-es/artist/66I0uUVKgpOPlEjTiy87nm"
+                },
+                {
+                "name": "The Black Dog",
+                "url": "https://open.spotify.com/intl-es/artist/7qdsk0UXx2jCX7jbp6rxeq"
+                },
+                {
+                "name": "The Future Sound Of London",
+                "url": "https://open.spotify.com/artist/2qhmNI4ZHPpeDutdg473Z3"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Ambient_techno"
             }
         ]
     },
