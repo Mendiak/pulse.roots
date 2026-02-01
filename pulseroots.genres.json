@@ -924,46 +924,6 @@
                         ]
                     },
                     {
-                        "name": "Hard Detroit Techno",
-                        "description": "Hard Detroit Techno takes the Detroit sound in a more aggressive, intense direction. This style is faster and heavier, with pounding kick drums, relentless rhythms, and darker, industrial elements. Hard Detroit techno is raw and uncompromising, focusing on high-energy, dancefloor-driven tracks that retain Detroit’s innovative spirit.",
-                        "example": "Jeff Mills - The Bells",
-                        "spotify_track_id": "0ISxyAhfop0MoMeAUw72RN",
-                        "key_artists": [
-                            {
-                                "name": "Jeff Mills",
-                                "url": "https://open.spotify.com/artist/2eIDAcLKnWc4D350YyzvgS"
-                            },
-                            {
-                                "name": "Robert Hood",
-                                "url": "https://open.spotify.com/artist/5ipQlfnpRCtyOuhYqvPvQ8"
-                            },
-                            {
-                                "name": "DJ Bone",
-                                "url": "https://open.spotify.com/artist/5nAtXl2yhbQubn2gT9lhIg"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Minimal Detroit Techno",
-                        "description": "Minimal Detroit Techno is a stripped-down, minimalist version of Detroit techno that emphasizes simplicity and precision. With a focus on repetitive grooves, sparse arrangements, and clean, subtle soundscapes, this style captures the essence of Detroit’s hypnotic rhythms while reducing elements to their core, creating an understated yet powerful listening experience.",
-                        "example": "Robert Hood - Rhythm Of Vision",
-                        "spotify_track_id": "3PxI10OJhF7y9txEcEMukZ",
-                        "key_artists": [
-                            {
-                                "name": "Robert Hood",
-                                "url": "https://open.spotify.com/artist/5ipQlfnpRCtyOuhYqvPvQ8"
-                            },
-                            {
-                                "name": "Daniel Bell",
-                                "url": "https://open.spotify.com/artist/6xtK8iJS59y80uh95EFAlR"
-                            },
-                            {
-                                "name": "DBX",
-                                "url": "https://open.spotify.com/artist/08tQwub0ulYRq9dRBKVS1r"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Ghettotech",
                         "description": "Ghettotech is a raw, high-energy genre of electronic dance music that originated in Detroit during the mid-to-late 1990s. It fuses the rapid-fire beats of Chicago Ghetto House with the heavy basslines and mechanical rhythms of Miami Bass, Electro, and Techno. Characterized by fast tempos (typically ranging from 145 to 160 BPM) and unpolished, gritty production, Ghettotech is distinct for its heavy use of repetitive, often sexually explicit or pornographic vocal samples looped over Roland TR-808 and 909 beats. It represents a bridge between Detroit’s sophisticated techno heritage and the raw, street-level energy of bass music, placing a strong emphasis on turntable skills and fast-paced DJ mixing.",
                         "example": "DJ Assault - Sex on the Beach",
@@ -983,6 +943,26 @@
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Ghettotech"
+                    },
+                    {
+                        "name": "Hard Detroit Techno",
+                        "description": "Hard Detroit Techno takes the Detroit sound in a more aggressive, intense direction. This style is faster and heavier, with pounding kick drums, relentless rhythms, and darker, industrial elements. Hard Detroit techno is raw and uncompromising, focusing on high-energy, dancefloor-driven tracks that retain Detroit’s innovative spirit.",
+                        "example": "Jeff Mills - The Bells",
+                        "spotify_track_id": "0ISxyAhfop0MoMeAUw72RN",
+                        "key_artists": [
+                            {
+                                "name": "Jeff Mills",
+                                "url": "https://open.spotify.com/artist/2eIDAcLKnWc4D350YyzvgS"
+                            },
+                            {
+                                "name": "Robert Hood",
+                                "url": "https://open.spotify.com/artist/5ipQlfnpRCtyOuhYqvPvQ8"
+                            },
+                            {
+                                "name": "DJ Bone",
+                                "url": "https://open.spotify.com/artist/5nAtXl2yhbQubn2gT9lhIg"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1083,8 +1063,8 @@
                         "url": "https://open.spotify.com/artist/5ipQlfnpRCtyOuhYqvPvQ8"
                     },
                     {
-                        "name": "Richie Hawtin",
-                        "url": "https://open.spotify.com/artist/3AhwIUus3pIaA3CvYBEtpy"
+                        "name": "Daniel Bell",
+                        "url": "https://open.spotify.com/artist/6xtK8iJS59y80uh95EFAlR"
                     },
                     {
                         "name": "Plastikman",
@@ -1217,26 +1197,6 @@
                     }
                 ],
                 "substyles": [
-                    {
-                        "name": "Hard Acid",
-                        "description": "Hard Acid is a subgenre of acid techno that amplifies the intense, squelchy sounds of the classic 303 bassline, pushing them to more aggressive and distorted extremes. It features fast tempos, heavy bass, and sharp, acidic synthesizer lines that are often manipulated and modulated for a raw, abrasive sound. The genre retains the trippy, hypnotic qualities of acid techno but adds a darker, more industrial edge with harder, punchier kicks and more intense sound design. Hard acid is focused on creating a relentless, high-energy atmosphere that appeals to those who enjoy intense, gritty acid sounds with a driving, hard-hitting rhythm.",
-                        "example": "Phuture - Acid Trax",
-                        "spotify_track_id": "5j72kVstS2gHKl8zWJDNz0",
-                        "key_artists": [
-                            {
-                                "name": "A*S*Y*S",
-                                "url": "https://open.spotify.com/artist/4xfA60YoR4UbBxuOn9WXJq"
-                            },
-                            {
-                                "name": "Kai Tracid",
-                                "url": "https://open.spotify.com/artist/0frSMmZSEdr8pVRi8PBSwF"
-                            },
-                            {
-                                "name": "Thomas P. Heckmann",
-                                "url": "https://open.spotify.com/artist/4QLCqJ3RSF3y6DdvboPk9m"
-                            }
-                        ]
-                    },
                     {
                         "name": "Industrial Techno",
                         "description": "Industrial Techno blends the mechanical, harsh sounds of industrial music with the repetitive rhythms of techno. It is characterized by abrasive, distorted kicks, metallic percussion, and dark, atmospheric elements that create a sense of tension and power. Industrial techno often incorporates noisy, experimental textures, broken beats, and dystopian soundscapes, creating an intense and unsettling atmosphere. The genre emphasizes a raw, underground aesthetic, and while it shares techno’s focus on rhythm and movement, industrial techno adds an abrasive, industrial quality that sets it apart, often making it suited for darker, more intense dancefloor environments.",
@@ -1675,26 +1635,6 @@
                             {
                                 "name": "Egyptian Lover",
                                 "url": "https://open.spotify.com/artist/6GGVr7WgIWhsnJNdGyPklP"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Ghetto Bass",
-                        "description": "Ghetto Bass is a subgenre of bass music that originated in urban and underground scenes, characterized by its heavily syncopated, low-frequency basslines and hip-hop-inspired rhythms. It incorporates elements from genres like Miami bass, electro, and hip-hop, but with a focus on raw, unpolished, and gritty sound. The bass is often deep and distorted, with rhythms that are designed to be energetic and heavy, while the production tends to have a rough, underground quality. Ghetto bass often incorporates samples, vocal chops, and beats that give it a street-level, dancefloor-oriented vibe, blending electronic music with hip-hop’s swagger and attitude.",
-                        "example": "DJ Assault - Ass N Titties",
-                        "spotify_track_id": "5y1OahNB1xZWNEWB6zgWzf",
-                        "key_artists": [
-                            {
-                                "name": "DJ Assault",
-                                "url": "https://open.spotify.com/artist/3yoyUFgb11DMp1KrsJoQZU"
-                            },
-                            {
-                                "name": "Godfather",
-                                "url": "https://open.spotify.com/artist/3Gf6z7kuVRjZ2e3W2cxoXN"
-                            },
-                            {
-                                "name": "DJ Funk",
-                                "url": "https://open.spotify.com/artist/6M0FCfVRUo5DUuziqLFjJ0"
                             }
                         ]
                     }
