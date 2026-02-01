@@ -5913,381 +5913,385 @@
         "spotify_track_id": "6WK9dVrRABMkUXFLNlgWFh",
         "key_artists": [
             {
-                "name": "Depeche Mode",
-                "url": "https://open.spotify.com/artist/762310PdDnwsDxAQxzQkfX"
+            "name": "Depeche Mode",
+            "url": "https://open.spotify.com/artist/762310PdDnwsDxAQxzQkfX"
             },
             {
-                "name": "New Order",
-                "url": "https://open.spotify.com/artist/0yNLKJebCb8Aueb54LYya3"
+            "name": "New Order",
+            "url": "https://open.spotify.com/artist/0yNLKJebCb8Aueb54LYya3"
             },
             {
-                "name": "The Cure",
-                "url": "https://open.spotify.com/artist/7bu3H8JO7d0UbMoVzbo70s"
+            "name": "The Cure",
+            "url": "https://open.spotify.com/artist/7bu3H8JO7d0UbMoVzbo70s"
             }
         ],
         "substyles": [
             {
-                "name": "Synth-pop",
-                "description": "Synthpop is a genre of electronic music that emerged in the late 1970s and early 1980s, characterized by its use of synthesizers, drum machines, and electronic production to create catchy, melodic pop music. Synthpop combines the accessibility and structure of pop music with the futuristic and synthetic sounds of electronic instruments. The genre often features clean, bright synthesizer melodies, simple but effective drum patterns, and vocals that are either smooth or slightly robotic. Synthpop’s sound is often polished and radio-friendly, blending the upbeat, danceable qualities of pop with the experimental, electronic elements of early electronic music. Artists like Depeche Mode, Kraftwerk, Gary Numan, and Pet Shop Boys are key figures in the synthpop movement, which influenced a wide range of pop, dance, and electronic music that followed.",
-                "example": "Pet Shop Boys - West End Girls",
-                "spotify_track_id": "5Dqik1P9toCJTLj5rEm78s",
+            "name": "New Wave",
+            "description": "New wave is a genre of music that emerged in the late 1970s and early 1980s, combining elements of punk rock with more experimental, electronic, and pop influences. It is characterized by its use of synthesizers, quirky melodies, and often a more polished, commercial sound compared to punk’s raw energy. New wave bands typically embraced the emerging electronic technologies of the time, incorporating synthetic sounds, catchy pop hooks, and a wide variety of stylistic influences, including disco, funk, and post-punk. The genre often has an art-pop sensibility, with an emphasis on visual style, fashion, and innovation. Notable new wave bands include Depeche Mode, Talking Heads, Blondie, and Duran Duran.",
+            "example": "The Cars - Just What I Needed",
+            "spotify_track_id": "4alHo6RGd0D3OUbTPExTHN",
+            "key_artists": [
+                {
+                "name": "The Cars",
+                "url": "https://open.spotify.com/artist/6DCIj8jNaNpBz8e5oKFPtp"
+                },
+                {
+                "name": "Talking Heads",
+                "url": "https://open.spotify.com/artist/2x9SpqnPi8rlE9pjHBwmSC"
+                },
+                {
+                "name": "Blondie",
+                "url": "https://open.spotify.com/artist/4tpUmLEVLCGFr93o8hFFIB"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/New_wave_music",
+            "substyles": [
+                {
+                "name": "Darkwave",
+                "description": "Darkwave is a genre that emerged in the late 1970s, coinciding with the popularity of New Wave and Post-Punk. It combines the sorrowful lyrics and dark atmosphere of Gothic Rock with the electronic production of Synth-pop. Unlike the drier, mechanical sound of Coldwave, Darkwave is often characterized by lush, swirling synthesizer soundscapes, heavy use of reverb, and a blend of drum machines with chorus-laden guitars. While it originated with bands like Clan of Xymox on the 4AD label, it has evolved to encompass a wide range of dark, danceable electronic music popular in the goth club scene.",
+                "example": "Clan of Xymox - A Day",
+                "spotify_track_id": "7MMSyA40xk4UmpZHjLTbmv",
                 "key_artists": [
                     {
-                        "name": "Pet Shop Boys",
-                        "url": "https://open.spotify.com/artist/2ycnb8Er79LoH2AsR5ldjh"
+                    "name": "Clan of Xymox",
+                    "url": "https://open.spotify.com/intl-es/artist/1wHmR7I0UlF58WFQexCPha"
                     },
                     {
-                        "name": "Depeche Mode",
-                        "url": "https://open.spotify.com/artist/762310PdDnwsDxAQxzQkfX"
+                    "name": "She Past Away",
+                    "url": "https://open.spotify.com/intl-es/artist/6paE8ghTau4qwwNzVRSgjR"
                     },
                     {
-                        "name": "Erasure",
-                        "url": "https://open.spotify.com/artist/0z5DFXmhT4ZNzWElsM7V89"
+                    "name": "Drab Majesty",
+                    "url": "https://open.spotify.com/intl-es/artist/2CSEKlTT9empsZ8vZWsrKO"
                     }
                 ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Synth-pop",
-                "substyles": [
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Dark_wave"
+                },
+                {
+                "name": "Coldwave",
+                "description": "Coldwave is a genre that emerged in the late 1970s and early 1980s, primarily in France and Belgium, acting as a darker, electronic evolution of Post-Punk. It is characterized by its bleak, melancholic atmosphere, distinctively 'cold' analog synthesizer sounds, mechanical drum machine rhythms, and angular, chorus-laden guitars. Unlike the more commercial Synth-pop, Coldwave embraces a lo-fi, detached aesthetic with monotone vocals and existential lyrics. It represents the bridge between the raw attitude of Punk and the synthetic textures of Industrial and Minimal Synth.",
+                "example": "Lebanon Hanover - Gallowdance",
+                "spotify_track_id": "74SUn8w4lYSwgOGPvVZiEo",
+                "key_artists": [
                     {
-                        "name": "Electropop",
-                        "description": "Electropop is a genre of pop music that blends traditional pop melodies and structures with electronic production, often featuring synthesizers, drum machines, and digital effects. Emerging in the late 1990s and early 2000s, electropop is characterized by its polished, catchy hooks, energetic rhythms, and a clean, futuristic sound that emphasizes electronic elements without losing the accessibility of pop music. It often incorporates influences from genres like synthpop, dance music, and new wave, creating a hybrid of traditional pop sensibilities with the innovative textures of electronic music. Vocals in electropop are typically clear and melodic, sometimes treated with electronic effects or pitch manipulation. Artists like Robyn, La Roux, Grimes, and CHVRCHES are well-known for defining and popularizing electropop, merging catchy tunes with electronic experimentation for a sound that's both mainstream and forward-thinking.",
-                        "example": "Grimes - Oblivion",
-                        "spotify_track_id": "4BY4V1T0RJK1HmD2Q0ClyK",
-                        "key_artists": [
-                            {
-                                "name": "Grimes",
-                                "url": "https://open.spotify.com/artist/053q0ukIDRgzwTr4vNSwab"
-                            },
-                            {
-                                "name": "CHVRCHES",
-                                "url": "https://open.spotify.com/artist/3CjlHNtplJyTf9npxaPl5w"
-                            },
-                            {
-                                "name": "La Roux",
-                                "url": "https://open.spotify.com/artist/3K2zB87GZv1krx031en5VA"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Electropop"
+                    "name": "Lebanon Hanover",
+                    "url": "https://open.spotify.com/artist/6w8h2uD28BEdg7bX4k3Lh7"
                     },
                     {
-                        "name": "Futurepop",
-                        "description": "Futurepop is a subgenre of electronic music that blends elements of EBM (Electronic Body Music), synthpop, and trance, characterized by its melodic, uplifting, and accessible sound while retaining a strong electronic foundation. Emerging in the late 1990s and early 2000s, futurepop combines the rhythmic, bass-heavy beats of EBM with catchy, emotional melodies, and often features atmospheric synths and trance-like elements. The vocals are typically melodic, clear, and sometimes emotionally charged, often addressing themes of love, loss, and human connection, in contrast to the darker themes of traditional EBM. Futurepop has a polished, radio-friendly appeal, while still maintaining the rhythmic intensity and futuristic atmosphere that fans of EBM appreciate. Key artists in the futurepop scene include VNV Nation, Covenant, and Apoptygma Berzerk.",
-                        "example": "VNV Nation - Illusion",
-                        "spotify_track_id": "273tTmuqkEXRpYdFKx9iKm",
-                        "key_artists": [
-                            {
-                                "name": "VNV Nation",
-                                "url": "https://open.spotify.com/artist/4KlYg0F5KG9QNDFKaeTNAy"
-                            },
-                            {
-                                "name": "Covenant",
-                                "url": "https://open.spotify.com/artist/11zG3SH7tJ36wYmCJ2oWyB"
-                            },
-                            {
-                                "name": "Apoptygma Berzerk",
-                                "url": "https://open.spotify.com/artist/3OHbToMuJihWhRcqzKjpBd"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Futurepop"
+                    "name": "Trisomie 21",
+                    "url": "https://open.spotify.com/artist/4T01AXq67OdpoYhTZY3FbR"
                     },
                     {
-                        "name": "New Wave",
-                        "description": "New wave is a genre of music that emerged in the late 1970s and early 1980s, combining elements of punk rock with more experimental, electronic, and pop influences. It is characterized by its use of synthesizers, quirky melodies, and often a more polished, commercial sound compared to punk’s raw energy. New wave bands typically embraced the emerging electronic technologies of the time, incorporating synthetic sounds, catchy pop hooks, and a wide variety of stylistic influences, including disco, funk, and post-punk. The genre often has an art-pop sensibility, with an emphasis on visual style, fashion, and innovation. Notable new wave bands include Depeche Mode, Talking Heads, Blondie, and Duran Duran.",
-                        "example": "The Cars - Just What I Needed",
-                        "spotify_track_id": "4alHo6RGd0D3OUbTPExTHN",
-                        "key_artists": [
-                            {
-                                "name": "The Cars",
-                                "url": "https://open.spotify.com/artist/6DCIj8jNaNpBz8e5oKFPtp"
-                            },
-                            {
-                                "name": "Talking Heads",
-                                "url": "https://open.spotify.com/artist/2x9SpqnPi8rlE9pjHBwmSC"
-                            },
-                            {
-                                "name": "Blondie",
-                                "url": "https://open.spotify.com/artist/4tpUmLEVLCGFr93o8hFFIB"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/New_wave_music"
-                    },
-                    {
-                        "name": "Coldwave",
-                        "description": "Coldwave is a genre that emerged in the late 1970s and early 1980s, primarily in France and Belgium, acting as a darker, electronic evolution of Post-Punk. It is characterized by its bleak, melancholic atmosphere, distinctively 'cold' analog synthesizer sounds, mechanical drum machine rhythms, and angular, chorus-laden guitars. Unlike the more commercial Synth-pop, Coldwave embraces a lo-fi, detached aesthetic with monotone vocals and existential lyrics. It represents the bridge between the raw attitude of Punk and the synthetic textures of Industrial and Minimal Synth.",
-                        "example": "Lebanon Hanover - Gallowdance",
-                        "spotify_track_id": "74SUn8w4lYSwgOGPvVZiEo",
-                        "key_artists": [
-                            {
-                                "name": "Lebanon Hanover",
-                                "url": "https://open.spotify.com/artist/6w8h2uD28BEdg7bX4k3Lh7"
-                            },
-                            {
-                                "name": "Trisomie 21",
-                                "url": "https://open.spotify.com/artist/4T01AXq67OdpoYhTZY3FbR"
-                            },
-                            {
-                                "name": "Martin Dupont",
-                                "url": "https://open.spotify.com/artist/0VluRa9xSnSeZYfYoy9q15"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Cold_wave_(music)"
-                    },
-                    {
-                        "name": "Minimal Wave",
-                        "description": "Minimal Wave is a genre characterized by stripped-down, lo-fi electronic structures that emerged in the late 1970s and early 1980s. Originally circulated on limited-run cassettes by underground artists, it sits between Synth-pop and Industrial. The sound is defined by the use of vintage analog synthesizers and drum machines (like the Roland CR-78), monotonous or robotic vocals, and catchy but melancholic melodies. The term was popularized in the 2000s by Veronica Vasicka to describe this specific wave of DIY electronic music that favored minimalism over the commercial polish of mainstream New Wave.",
-                        "example": "Oppenheimer Analysis - The Devil's Dancers",
-                        "spotify_track_id": "2trHIaWqFVqC7xMQKX3haJ",
-                        "key_artists": [
-                            {
-                                "name": "Oppenheimer Analysis",
-                                "url": "https://open.spotify.com//artist/7aTcPE8gGcR0W8mrmGaK6w"
-                            },
-                            {
-                                "name": "Linear Movement",
-                                "url": "https://open.spotify.com/artist/7KltORSuLEml1oONhXI3Uz"
-                            },
-                            {
-                                "name": "Crash Course In Science",
-                                "url": "https://open.spotify.com/artist/7mifyf6uQQKKffciTy7sOK"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Minimal_wave"
-                    },
-                    {
-                        "name": "Darkwave",
-                        "description": "Darkwave is a genre that emerged in the late 1970s, coinciding with the popularity of New Wave and Post-Punk. It combines the sorrowful lyrics and dark atmosphere of Gothic Rock with the electronic production of Synth-pop. Unlike the drier, mechanical sound of Coldwave, Darkwave is often characterized by lush, swirling synthesizer soundscapes, heavy use of reverb, and a blend of drum machines with chorus-laden guitars. While it originated with bands like Clan of Xymox on the 4AD label, it has evolved to encompass a wide range of dark, danceable electronic music popular in the goth club scene.",
-                        "example": "Clan of Xymox - A Day",
-                        "spotify_track_id": "7MMSyA40xk4UmpZHjLTbmv",
-                        "key_artists": [
-                            {
-                                "name": "Clan of Xymox",
-                                "url": "https://open.spotify.com/intl-es/artist/1wHmR7I0UlF58WFQexCPha"
-                            },
-                            {
-                                "name": "She Past Away",
-                                "url": "https://open.spotify.com/intl-es/artist/6paE8ghTau4qwwNzVRSgjR"
-                            },
-                            {
-                                "name": "Drab Majesty",
-                                "url": "https://open.spotify.com/intl-es/artist/2CSEKlTT9empsZ8vZWsrKO"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Dark_wave"
-                    },
-                    {
-                        "name": "Hyperpop",
-                        "description": "Hyperpop is a genre that emerged in the 2010s, characterized by its maximalist approach to pop music, blending hyperactive, high-energy beats with experimental, exaggerated production. It often features distorted vocals, rapid tempo changes, and an eclectic mix of influences from pop, electronic, and avant-garde music. Hyperpop is known for pushing the boundaries of pop music, using glitchy, pitch-shifted vocals, high-pitched synths, and surreal soundscapes, creating a sound that is intentionally exaggerated and sometimes chaotic. The genre embraces a sense of fun, freedom, and futurism, often incorporating themes of internet culture, digital identity, and subverting traditional pop structures. Key artists in hyperpop include 100 gecs, SOPHIE, and A.G. Cook.",
-                        "example": "100 gecs - Money Machine",
-                        "spotify_track_id": "61bwFjzXGG1x2aZsANdLyl",
-                        "key_artists": [
-                            {
-                                "name": "100 gecs",
-                                "url": "https://open.spotify.com/artist/6PfSUFtkMVoDkx4MQkzOi3"
-                            },
-                            {
-                                "name": "SOPHIE",
-                                "url": "https://open.spotify.com/artist/5a2w2tgpLwv26BYJf2qYwu"
-                            },
-                            {
-                                "name": "Charli XCX",
-                                "url": "https://open.spotify.com/artist/25uiPmTg16RbhZWAqwLBy5"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Hyperpop"
-                    },
-                    {
-                        "name": "Angelcore",
-                        "description": "Angelcore is a micro-genre and internet aesthetic that emerged from the Hyperpop and Cloud Rap scenes. Musically, it focuses on creating a 'heavenly' or ethereal atmosphere, acting as a softer, dreamier counterpoint to the chaotic energy of Hyperpop. It is characterized by high-pitched, breathy vocals (often heavily processed with auto-tune), lush textures, and the use of 'divine' instrumentation such as harps, flutes, and choir pads layered over light trap beats or ambient soundscapes. The genre evokes themes of innocence, ascension, and digital nostalgia, often blurring the line between pop music and choral ambient.",
-                        "example": "Himera - Scene Before the Kiss xoxo (Himera remix)",
-                        "spotify_track_id": "4TfKlG1Gn6o0mYd1kH2xHu",
-                        "key_artists": [
-                            {
-                                "name": "Himera",
-                                "url": "https://open.spotify.com/artist/1Vi0Dq6hC56i3a6eVA9Y6g"
-                            },
-                            {
-                                "name": "Bladee",
-                                "url": "https://open.spotify.com/artist/2xvtxDNInKDV4AvGmjw6d1"
-                            },
-                            {
-                                "name": "Galen Tipton",
-                                "url": "https://open.spotify.com/artist/2L9IRjJj5QZ3Ww4wy5Y5Y5"
-                            }
-                        ]
+                    "name": "Martin Dupont",
+                    "url": "https://open.spotify.com/artist/0VluRa9xSnSeZYfYoy9q15"
                     }
-                ]
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Cold_wave_(music)"
+                },
+                {
+                "name": "Minimal Wave",
+                "description": "Minimal Wave is a genre characterized by stripped-down, lo-fi electronic structures that emerged in the late 1970s and early 1980s. Originally circulated on limited-run cassettes by underground artists, it sits between Synth-pop and Industrial. The sound is defined by the use of vintage analog synthesizers and drum machines (like the Roland CR-78), monotonous or robotic vocals, and catchy but melancholic melodies. The term was popularized in the 2000s by Veronica Vasicka to describe this specific wave of DIY electronic music that favored minimalism over the commercial polish of mainstream New Wave.",
+                "example": "Oppenheimer Analysis - The Devil's Dancers",
+                "spotify_track_id": "2trHIaWqFVqC7xMQKX3haJ",
+                "key_artists": [
+                    {
+                    "name": "Oppenheimer Analysis",
+                    "url": "https://open.spotify.com//artist/7aTcPE8gGcR0W8mrmGaK6w"
+                    },
+                    {
+                    "name": "Linear Movement",
+                    "url": "https://open.spotify.com/artist/7KltORSuLEml1oONhXI3Uz"
+                    },
+                    {
+                    "name": "Crash Course In Science",
+                    "url": "https://open.spotify.com/artist/7mifyf6uQQKKffciTy7sOK"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Minimal_wave"
+                }
+            ]
             },
             {
-                "name": "Electronic Rock",
-                "description": "Electronic Rock is a broad fusion genre that combines the amplified instrumentation and song structures of rock music with the production techniques of electronic music. Rather than simply adding synthesizers to a rock band, it fundamentally integrates digital tools into the composition process. This often involves processing electric guitars through computer effects, utilizing hybrid drumming (blending live acoustic kits with programmed breakbeats or samples), and using synthesizers to drive the melody or bass. Spanning from the experimental sounds of the late 60s to modern alternative rock, the genre seeks to expand the traditional sonic palette of the rock band, creating a sound that possesses the visceral aggression of rock but the textural depth and precision of electronica.",
-                "example": "Linkin Park - Somewhere I Belong",
-                "spotify_track_id": "3fjmSxt0PskST13CSdBUFx",
+            "name": "Synth-pop",
+            "description": "Synthpop is a genre of electronic music that emerged in the late 1970s and early 1980s, characterized by its use of synthesizers, drum machines, and electronic production to create catchy, melodic pop music. Synthpop combines the accessibility and structure of pop music with the futuristic and synthetic sounds of electronic instruments. The genre often features clean, bright synthesizer melodies, simple but effective drum patterns, and vocals that are either smooth or slightly robotic. Synthpop’s sound is often polished and radio-friendly, blending the upbeat, danceable qualities of pop with the experimental, electronic elements of early electronic music. Artists like Depeche Mode, Kraftwerk, Gary Numan, and Pet Shop Boys are key figures in the synthpop movement, which influenced a wide range of pop, dance, and electronic music that followed.",
+            "example": "Pet Shop Boys - West End Girls",
+            "spotify_track_id": "5Dqik1P9toCJTLj5rEm78s",
+            "key_artists": [
+                {
+                "name": "Pet Shop Boys",
+                "url": "https://open.spotify.com/artist/2ycnb8Er79LoH2AsR5ldjh"
+                },
+                {
+                "name": "Depeche Mode",
+                "url": "https://open.spotify.com/artist/762310PdDnwsDxAQxzQkfX"
+                },
+                {
+                "name": "Erasure",
+                "url": "https://open.spotify.com/artist/0z5DFXmhT4ZNzWElsM7V89"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Synth-pop",
+            "substyles": [
+                {
+                "name": "Electropop",
+                "description": "Electropop is a genre of pop music that blends traditional pop melodies and structures with electronic production, often featuring synthesizers, drum machines, and digital effects. Emerging in the late 1990s and early 2000s, electropop is characterized by its polished, catchy hooks, energetic rhythms, and a clean, futuristic sound that emphasizes electronic elements without losing the accessibility of pop music. It often incorporates influences from genres like synthpop, dance music, and new wave, creating a hybrid of traditional pop sensibilities with the innovative textures of electronic music. Vocals in electropop are typically clear and melodic, sometimes treated with electronic effects or pitch manipulation. Artists like Robyn, La Roux, Grimes, and CHVRCHES are well-known for defining and popularizing electropop, merging catchy tunes with electronic experimentation for a sound that's both mainstream and forward-thinking.",
+                "example": "Grimes - Oblivion",
+                "spotify_track_id": "4BY4V1T0RJK1HmD2Q0ClyK",
                 "key_artists": [
                     {
-                        "name": "Nine Inch Nails",
-                        "url": "https://open.spotify.com/artist/0X380XXQSNBYuleKzav5UO"
+                    "name": "Grimes",
+                    "url": "https://open.spotify.com/artist/053q0ukIDRgzwTr4vNSwab"
                     },
                     {
-                        "name": "The Prodigy",
-                        "url": "https://open.spotify.com/artist/4k1ELeJKT1ISyDv8JivPpB"
+                    "name": "CHVRCHES",
+                    "url": "https://open.spotify.com/artist/3CjlHNtplJyTf9npxaPl5w"
                     },
                     {
-                        "name": "Pendulum",
-                        "url": "https://open.spotify.com/artist/7MqnCTCAX6SsIYYdJCQj9B"
+                    "name": "La Roux",
+                    "url": "https://open.spotify.com/artist/3K2zB87GZv1krx031en5VA"
                     }
                 ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Electronic_rock",
-                "substyles": [
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Electropop"
+                },
+                {
+                "name": "Futurepop",
+                "description": "Futurepop is a subgenre of electronic music that blends elements of EBM (Electronic Body Music), synthpop, and trance, characterized by its melodic, uplifting, and accessible sound while retaining a strong electronic foundation. Emerging in the late 1990s and early 2000s, futurepop combines the rhythmic, bass-heavy beats of EBM with catchy, emotional melodies, and often features atmospheric synths and trance-like elements. The vocals are typically melodic, clear, and sometimes emotionally charged, often addressing themes of love, loss, and human connection, in contrast to the darker themes of traditional EBM. Futurepop has a polished, radio-friendly appeal, while still maintaining the rhythmic intensity and futuristic atmosphere that fans of EBM appreciate. Key artists in the futurepop scene include VNV Nation, Covenant, and Apoptygma Berzerk.",
+                "example": "VNV Nation - Illusion",
+                "spotify_track_id": "273tTmuqkEXRpYdFKx9iKm",
+                "key_artists": [
                     {
-                        "name": "Krautrock",
-                        "description": "A genre of experimental, electronic-influenced rock music that emerged in Germany in the late 1960s and 1970s, characterized by repetitive, hypnotic rhythms, synthesizers, and atmospheric, avant-garde soundscapes.",
-                        "example": "Kraftwerk - Autobahn",
-                        "spotify_track_id": "31uidLEHAcF8Cw1cX1VCS8",
-                        "key_artists": [
-                            {
-                                "name": "Kraftwerk",
-                                "url": "https://open.spotify.com/artist/0dmPX6ovclgOy8WWJaFEUU"
-                            },
-                            {
-                                "name": "Can",
-                                "url": "https://open.spotify.com/artist/60ZOYUFnCYEeKYsxgvPxOS"
-                            },
-                            {
-                                "name": "Neu!",
-                                "url": "https://open.spotify.com/artist/2CqEOngQOOMstJupNn6Hmf"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Krautrock"
+                    "name": "VNV Nation",
+                    "url": "https://open.spotify.com/artist/4KlYg0F5KG9QNDFKaeTNAy"
                     },
                     {
-                        "name": "Post-Rock",
-                        "description": "Post-rock is a genre of music that emerged in the 1990s, characterized by its departure from traditional rock structures and an emphasis on instrumental soundscapes, atmospheric textures, and experimental techniques. Post-rock often incorporates elements from ambient, classical, and electronic music, using guitars, bass, and drums in unconventional ways—such as creating lush, layered soundscapes or building gradual, cinematic crescendos. The music is typically instrumental, with a focus on mood, dynamics, and the emotional resonance of sound rather than lyrics or traditional song structures. Post-rock compositions can range from quiet, introspective passages to intense, explosive climaxes, often eschewing conventional verse-chorus forms in favor of more fluid, evolving pieces. Bands like Sigur Rós, Godspeed You! Black Emperor, Explosions in the Sky, and Mogwai are key contributors to the post-rock movement. The genre has influenced various other styles, such as shoegaze, ambient, and electronic music, as well as cinematic film scores.",
-                        "example": "Explosions in the Sky - Your Hand in Mine",
-                        "spotify_track_id": "4mZofk9oND0AA4sJfzTH0R",
-                        "key_artists": [
-                            {
-                                "name": "Explosions in the Sky",
-                                "url": "https://open.spotify.com/artist/1uQWmt1OhuHGRKmZ2ZcL6p"
-                            },
-                            {
-                                "name": "Godspeed You! Black Emperor",
-                                "url": "https://open.spotify.com/artist/0bRpSBtMd3stO4J6TWclMb"
-                            },
-                            {
-                                "name": "Mogwai",
-                                "url": "https://open.spotify.com/artist/34UhPkLbtFKRq3nmfFgejG"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Post-rock"
+                    "name": "Covenant",
+                    "url": "https://open.spotify.com/artist/11zG3SH7tJ36wYmCJ2oWyB"
                     },
                     {
-                        "name": "Dance-punk",
-                        "description": "Dance-punk (also known as Disco-punk) is a genre that fuses the raw energy and attitude of punk rock with the rhythmic groove of disco and funk. Emerging initially in the post-punk era of the late 70s and experiencing a massive revival in the early 2000s (spearheaded by the New York scene and DFA Records), it is characterized by 'angular' or jagged guitar riffs, driving melodic basslines, and dance-floor friendly drum patterns—often blending live percussion with drum machines. The genre bridges the divide between the rock club and the discotheque, combining the aggression and shouted vocals of punk with the hypnotic, syncopated loops of electronic dance music, often creating a sweaty, high-energy atmosphere.",
-                        "example": "LCD Soundsystem - Dance Yrself Clean",
-                        "spotify_track_id": "2cmRpmO04TLaKPzmAzySYZ",
-                        "key_artists": [
-                            {
-                                "name": "LCD Soundsystem",
-                                "url": "https://open.spotify.com/artist/066X20Nz7iquqkkCW6Jxy6"
-                            },
-                            {
-                                "name": "!!!",
-                                "url": "https://open.spotify.com/artist/2Jc4AEeBTE47KwuKgYOtcL"
-                            },
-                            {
-                                "name": "The Rapture",
-                                "url": "https://open.spotify.com/artist/166Dz1GX3xonSQ3Z6CQW26"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Dance-punk"
-                    },
-                    {
-                        "name": "Indie Electronic",
-                        "description": "Indie Electronic is a genre that blends the experimental and DIY ethos of indie music with the digital sounds and production techniques of electronic music. Emerging in the 2000s, indie electronic incorporates elements from a wide range of genres, including synthpop, ambient, downtempo, and electro, while maintaining the distinctive, often introspective qualities of indie rock or folk. It features an eclectic mix of electronic beats, synthesized melodies, and organic instrumentation, often with a focus on emotional, personal themes and atmospheric soundscapes. Vocals in indie electronic music can range from dreamy and ethereal to more conventional, but the overall sound tends to be less polished than mainstream electronic music, retaining an intimate, handmade feel. Artists like Tycho, Washed Out, and Passion Pit helped define the genre, creating music that blends the warmth and creativity of indie with the futuristic textures of electronic music.",
-                        "example": "Passion Pit - Sleepyhead",
-                        "spotify_track_id": "4prEPl61C8qZpeo3IkYSMl",
-                        "key_artists": [
-                            {
-                                "name": "Passion Pit",
-                                "url": "https://open.spotify.com/artist/7gjAu1qr5C2grXeQFFOGeh"
-                            },
-                            {
-                                "name": "MGMT",
-                                "url": "https://open.spotify.com/artist/0SwO7SWeDHJijQ3XNS7xEE"
-                            },
-                            {
-                                "name": "Tycho",
-                                "url": "https://open.spotify.com/artist/5oOhM2DFWab8XhSdQiITry"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Electronic_music#Indie_electronic"
+                    "name": "Apoptygma Berzerk",
+                    "url": "https://open.spotify.com/artist/3OHbToMuJihWhRcqzKjpBd"
                     }
-                ]
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Futurepop"
+                }
+            ]
             },
             {
-                "name": "Dance-pop",
-                "description": "Dance-pop is a ubiquitous genre that combines the structured songwriting and catchy vocal hooks of Pop music with the rhythmic energy and production techniques of Electronic Dance Music (EDM). Originating in the post-disco era of the early 1980s, it distinguishes itself from pure dance music by prioritizing the 'song' (verse-chorus structure, melody, lyrics) over extended instrumental grooves or DJ-focused mixing. Dance-pop is a 'chameleon' genre, constantly evolving by absorbing current underground electronic trends—from House and Techno to Trap and Disco—and repackaging them with polished, high-fidelity production for a mainstream audience. It is designed to function equally well on commercial radio and the club dancefloor.",
-                "example": "Lady Gaga - Just Dance",
-                "spotify_track_id": "1dzQoRqT5ucxXVaAhTcT0J",
+            "name": "Hyperpop",
+            "description": "Hyperpop is a genre that emerged in the 2010s, characterized by its maximalist approach to pop music, blending hyperactive, high-energy beats with experimental, exaggerated production. It often features distorted vocals, rapid tempo changes, and an eclectic mix of influences from pop, electronic, and avant-garde music. Hyperpop is known for pushing the boundaries of pop music, using glitchy, pitch-shifted vocals, high-pitched synths, and surreal soundscapes, creating a sound that is intentionally exaggerated and sometimes chaotic. The genre embraces a sense of fun, freedom, and futurism, often incorporating themes of internet culture, digital identity, and subverting traditional pop structures. Key artists in hyperpop include 100 gecs, SOPHIE, and A.G. Cook.",
+            "example": "100 gecs - Money Machine",
+            "spotify_track_id": "61bwFjzXGG1x2aZsANdLyl",
+            "key_artists": [
+                {
+                "name": "100 gecs",
+                "url": "https://open.spotify.com/artist/6PfSUFtkMVoDkx4MQkzOi3"
+                },
+                {
+                "name": "SOPHIE",
+                "url": "https://open.spotify.com/artist/5a2w2tgpLwv26BYJf2qYwu"
+                },
+                {
+                "name": "Charli XCX",
+                "url": "https://open.spotify.com/artist/25uiPmTg16RbhZWAqwLBy5"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Hyperpop",
+            "substyles": [
+                {
+                "name": "Angelcore",
+                "description": "Angelcore is a micro-genre and internet aesthetic that emerged from the Hyperpop and Cloud Rap scenes. Musically, it focuses on creating a 'heavenly' or ethereal atmosphere, acting as a softer, dreamier counterpoint to the chaotic energy of Hyperpop. It is characterized by high-pitched, breathy vocals (often heavily processed with auto-tune), lush textures, and the use of 'divine' instrumentation such as harps, flutes, and choir pads layered over light trap beats or ambient soundscapes. The genre evokes themes of innocence, ascension, and digital nostalgia, often blurring the line between pop music and choral ambient.",
+                "example": "Himera - Scene Before the Kiss xoxo (Himera remix)",
+                "spotify_track_id": "4TfKlG1Gn6o0mYd1kH2xHu",
                 "key_artists": [
                     {
-                        "name": "Lady Gaga",
-                        "url": "https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms"
+                    "name": "Himera",
+                    "url": "https://open.spotify.com/artist/1Vi0Dq6hC56i3a6eVA9Y6g"
                     },
                     {
-                        "name": "Madonna",
-                        "url": "https://open.spotify.com/artist/6tbjWDEIzxoDsBA1FuhfPW"
+                    "name": "Bladee",
+                    "url": "https://open.spotify.com/artist/2xvtxDNInKDV4AvGmjw6d1"
                     },
                     {
-                        "name": "Kylie Minogue",
-                        "url": "https://open.spotify.com/artist/4RVnAU35WRWra6OZ3CbbMA"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Dance-pop",
-                "substyles": [
-                    {
-                        "name": "Bubblegum Pop",
-                        "description": "Bubblegum Pop is a genre of pop music that emerged in the 1960s, characterized by its catchy melodies, upbeat rhythms, simple lyrics, and overall lighthearted, sugary sound. It is often aimed at a young audience and features bright, fun, and energetic tunes with an emphasis on sing-along choruses and accessible production. The genre draws inspiration from 1960s pop, doo-wop, and teen idol music, typically using simple, repetitive song structures and playful lyrics about love, youth, and innocence. While bubblegum pop is often criticized for being overly commercial or formulaic, its infectious, feel-good nature has made it highly popular and enduring. Key artists associated with bubblegum pop include The Archies, The Monkees, and later acts like Britney Spears and NSYNC, who carried the spirit of the genre into the 1990s and 2000s with a more modern, glossy pop sound.",
-                        "example": "Aqua - Barbie Girl",
-                        "spotify_track_id": "5ZrDlcxIDZyjOzHdYW1ydr",
-                        "key_artists": [
-                            {
-                                "name": "Aqua",
-                                "url": "https://open.spotify.com/artist/6kBjAFKyd0he7LiA5GQ3Gz"
-                            },
-                            {
-                                "name": "Vengaboys",
-                                "url": "https://open.spotify.com/artist/0cwmNvclzPd8mQnoHuIksj"
-                            },
-                            {
-                                "name": "S Club 7",
-                                "url": "https://open.spotify.com/artist/0HNGrIbq1ZNO2mTp3tMW4L"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Bubblegum_music"
-                    },
-                    {
-                        "name": "Eurodance",
-                        "description": "Eurodance is a genre of electronic dance music that emerged in the early 1990s, characterized by a fusion of electronic beats, high-energy rhythms, and catchy, often anthemic melodies. It combines elements of house, techno, and hi-NRG with elements of pop and hip-hop, and typically features a blend of male and female vocals, with the male vocals often rapping and the female vocals providing melodic, chorus-driven hooks. The music is designed to be uplifting and highly danceable, with a fast tempo and a focus on creating an energetic, party atmosphere. Eurodance also often incorporates elements of trance, with its melodic and expansive soundscapes. The genre became particularly popular in Europe during the 1990s, but also achieved commercial success internationally. Key artists in the genre include 2 Unlimited, Scooter, La Bouche, and Snap!, who helped define the Eurodance sound with hits like 'Rhythm is a Dancer' and Be My Lover'.",
-                        "example": "Haddaway - What Is Love",
-                        "spotify_track_id": "7JkZ2hQdDonRURJjlMuh8q",
-                        "key_artists": [
-                            {
-                                "name": "Haddaway",
-                                "url": "https://open.spotify.com/artist/0Suv0tRrNrUlRzAy8aXjma"
-                            },
-                            {
-                                "name": "2 Unlimited",
-                                "url": "https://open.spotify.com/artist/18JD8DVlD1fakDAw7E9LFC"
-                            },
-                            {
-                                "name": "Snap!",
-                                "url": "https://open.spotify.com/artist/2FrKQPjJe4pVMZOgm0ESOx"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Eurodance"
+                    "name": "Galen Tipton",
+                    "url": "https://open.spotify.com/artist/2L9IRjJj5QZ3Ww4wy5Y5Y5"
                     }
                 ]
+                }
+            ]
+            },
+            {
+            "name": "Electronic Rock",
+            "description": "Electronic Rock is a broad fusion genre that combines the amplified instrumentation and song structures of rock music with the production techniques of electronic music. Rather than simply adding synthesizers to a rock band, it fundamentally integrates digital tools into the composition process. This often involves processing electric guitars through computer effects, utilizing hybrid drumming (blending live acoustic kits with programmed breakbeats or samples), and using synthesizers to drive the melody or bass. Spanning from the experimental sounds of the late 60s to modern alternative rock, the genre seeks to expand the traditional sonic palette of the rock band, creating a sound that possesses the visceral aggression of rock but the textural depth and precision of electronica.",
+            "example": "Linkin Park - Somewhere I Belong",
+            "spotify_track_id": "3fjmSxt0PskST13CSdBUFx",
+            "key_artists": [
+                {
+                "name": "Nine Inch Nails",
+                "url": "https://open.spotify.com/artist/0X380XXQSNBYuleKzav5UO"
+                },
+                {
+                "name": "The Prodigy",
+                "url": "https://open.spotify.com/artist/4k1ELeJKT1ISyDv8JivPpB"
+                },
+                {
+                "name": "Pendulum",
+                "url": "https://open.spotify.com/artist/7MqnCTCAX6SsIYYdJCQj9B"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Electronic_rock",
+            "substyles": [
+                {
+                "name": "Krautrock",
+                "description": "A genre of experimental, electronic-influenced rock music that emerged in Germany in the late 1960s and 1970s, characterized by repetitive, hypnotic rhythms, synthesizers, and atmospheric, avant-garde soundscapes.",
+                "example": "Kraftwerk - Autobahn",
+                "spotify_track_id": "31uidLEHAcF8Cw1cX1VCS8",
+                "key_artists": [
+                    {
+                    "name": "Kraftwerk",
+                    "url": "https://open.spotify.com/artist/0dmPX6ovclgOy8WWJaFEUU"
+                    },
+                    {
+                    "name": "Can",
+                    "url": "https://open.spotify.com/artist/60ZOYUFnCYEeKYsxgvPxOS"
+                    },
+                    {
+                    "name": "Neu!",
+                    "url": "https://open.spotify.com/artist/2CqEOngQOOMstJupNn6Hmf"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Krautrock"
+                },
+                {
+                "name": "Post-Rock",
+                "description": "Post-rock is a genre of music that emerged in the 1990s, characterized by its departure from traditional rock structures and an emphasis on instrumental soundscapes, atmospheric textures, and experimental techniques. Post-rock often incorporates elements from ambient, classical, and electronic music, using guitars, bass, and drums in unconventional ways—such as creating lush, layered soundscapes or building gradual, cinematic crescendos. The music is typically instrumental, with a focus on mood, dynamics, and the emotional resonance of sound rather than lyrics or traditional song structures. Post-rock compositions can range from quiet, introspective passages to intense, explosive climaxes, often eschewing conventional verse-chorus forms in favor of more fluid, evolving pieces. Bands like Sigur Rós, Godspeed You! Black Emperor, Explosions in the Sky, and Mogwai are key contributors to the post-rock movement. The genre has influenced various other styles, such as shoegaze, ambient, and electronic music, as well as cinematic film scores.",
+                "example": "Explosions in the Sky - Your Hand in Mine",
+                "spotify_track_id": "4mZofk9oND0AA4sJfzTH0R",
+                "key_artists": [
+                    {
+                    "name": "Explosions in the Sky",
+                    "url": "https://open.spotify.com/artist/1uQWmt1OhuHGRKmZ2ZcL6p"
+                    },
+                    {
+                    "name": "Godspeed You! Black Emperor",
+                    "url": "https://open.spotify.com/artist/0bRpSBtMd3stO4J6TWclMb"
+                    },
+                    {
+                    "name": "Mogwai",
+                    "url": "https://open.spotify.com/artist/34UhPkLbtFKRq3nmfFgejG"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Post-rock"
+                },
+                {
+                "name": "Dance-punk",
+                "description": "Dance-punk (also known as Disco-punk) is a genre that fuses the raw energy and attitude of punk rock with the rhythmic groove of disco and funk. Emerging initially in the post-punk era of the late 70s and experiencing a massive revival in the early 2000s (spearheaded by the New York scene and DFA Records), it is characterized by 'angular' or jagged guitar riffs, driving melodic basslines, and dance-floor friendly drum patterns—often blending live percussion with drum machines. The genre bridges the divide between the rock club and the discotheque, combining the aggression and shouted vocals of punk with the hypnotic, syncopated loops of electronic dance music, often creating a sweaty, high-energy atmosphere.",
+                "example": "LCD Soundsystem - Dance Yrself Clean",
+                "spotify_track_id": "2cmRpmO04TLaKPzmAzySYZ",
+                "key_artists": [
+                    {
+                    "name": "LCD Soundsystem",
+                    "url": "https://open.spotify.com/artist/066X20Nz7iquqkkCW6Jxy6"
+                    },
+                    {
+                    "name": "!!!",
+                    "url": "https://open.spotify.com/artist/2Jc4AEeBTE47KwuKgYOtcL"
+                    },
+                    {
+                    "name": "The Rapture",
+                    "url": "https://open.spotify.com/artist/166Dz1GX3xonSQ3Z6CQW26"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Dance-punk"
+                },
+                {
+                "name": "Indie Electronic",
+                "description": "Indie Electronic is a genre that blends the experimental and DIY ethos of indie music with the digital sounds and production techniques of electronic music. Emerging in the 2000s, indie electronic incorporates elements from a wide range of genres, including synthpop, ambient, downtempo, and electro, while maintaining the distinctive, often introspective qualities of indie rock or folk. It features an eclectic mix of electronic beats, synthesized melodies, and organic instrumentation, often with a focus on emotional, personal themes and atmospheric soundscapes. Vocals in indie electronic music can range from dreamy and ethereal to more conventional, but the overall sound tends to be less polished than mainstream electronic music, retaining an intimate, handmade feel. Artists like Tycho, Washed Out, and Passion Pit helped define the genre, creating music that blends the warmth and creativity of indie with the futuristic textures of electronic music.",
+                "example": "Passion Pit - Sleepyhead",
+                "spotify_track_id": "4prEPl61C8qZpeo3IkYSMl",
+                "key_artists": [
+                    {
+                    "name": "Passion Pit",
+                    "url": "https://open.spotify.com/artist/7gjAu1qr5C2grXeQFFOGeh"
+                    },
+                    {
+                    "name": "MGMT",
+                    "url": "https://open.spotify.com/artist/0SwO7SWeDHJijQ3XNS7xEE"
+                    },
+                    {
+                    "name": "Tycho",
+                    "url": "https://open.spotify.com/artist/5oOhM2DFWab8XhSdQiITry"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Electronic_music#Indie_electronic"
+                }
+            ]
+            },
+            {
+            "name": "Dance-pop",
+            "description": "Dance-pop is a ubiquitous genre that combines the structured songwriting and catchy vocal hooks of Pop music with the rhythmic energy and production techniques of Electronic Dance Music (EDM). Originating in the post-disco era of the early 1980s, it distinguishes itself from pure dance music by prioritizing the 'song' (verse-chorus structure, melody, lyrics) over extended instrumental grooves or DJ-focused mixing. Dance-pop is a 'chameleon' genre, constantly evolving by absorbing current underground electronic trends—from House and Techno to Trap and Disco—and repackaging them with polished, high-fidelity production for a mainstream audience. It is designed to function equally well on commercial radio and the club dancefloor.",
+            "example": "Lady Gaga - Just Dance",
+            "spotify_track_id": "1dzQoRqT5ucxXVaAhTcT0J",
+            "key_artists": [
+                {
+                "name": "Lady Gaga",
+                "url": "https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms"
+                },
+                {
+                "name": "Madonna",
+                "url": "https://open.spotify.com/artist/6tbjWDEIzxoDsBA1FuhfPW"
+                },
+                {
+                "name": "Kylie Minogue",
+                "url": "https://open.spotify.com/artist/4RVnAU35WRWra6OZ3CbbMA"
+                }
+            ],
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Dance-pop",
+            "substyles": [
+                {
+                "name": "Bubblegum Pop",
+                "description": "Bubblegum Pop is a genre of pop music that emerged in the 1960s, characterized by its catchy melodies, upbeat rhythms, simple lyrics, and overall lighthearted, sugary sound. It is often aimed at a young audience and features bright, fun, and energetic tunes with an emphasis on sing-along choruses and accessible production. The genre draws inspiration from 1960s pop, doo-wop, and teen idol music, typically using simple, repetitive song structures and playful lyrics about love, youth, and innocence. While bubblegum pop is often criticized for being overly commercial or formulaic, its infectious, feel-good nature has made it highly popular and enduring. Key artists associated with bubblegum pop include The Archies, The Monkees, and later acts like Britney Spears and NSYNC, who carried the spirit of the genre into the 1990s and 2000s with a more modern, glossy pop sound.",
+                "example": "Aqua - Barbie Girl",
+                "spotify_track_id": "5ZrDlcxIDZyjOzHdYW1ydr",
+                "key_artists": [
+                    {
+                    "name": "Aqua",
+                    "url": "https://open.spotify.com/artist/6kBjAFKyd0he7LiA5GQ3Gz"
+                    },
+                    {
+                    "name": "Vengaboys",
+                    "url": "https://open.spotify.com/artist/0cwmNvclzPd8mQnoHuIksj"
+                    },
+                    {
+                    "name": "S Club 7",
+                    "url": "https://open.spotify.com/artist/0HNGrIbq1ZNO2mTp3tMW4L"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Bubblegum_music"
+                },
+                {
+                "name": "Eurodance",
+                "description": "Eurodance is a genre of electronic dance music that emerged in the early 1990s, characterized by a fusion of electronic beats, high-energy rhythms, and catchy, often anthemic melodies. It combines elements of house, techno, and hi-NRG with elements of pop and hip-hop, and typically features a blend of male and female vocals, with the male vocals often rapping and the female vocals providing melodic, chorus-driven hooks. The music is designed to be uplifting and highly danceable, with a fast tempo and a focus on creating an energetic, party atmosphere. Eurodance also often incorporates elements of trance, with its melodic and expansive soundscapes. The genre became particularly popular in Europe during the 1990s, but also achieved commercial success internationally. Key artists in the genre include 2 Unlimited, Scooter, La Bouche, and Snap!, who helped define the Eurodance sound with hits like 'Rhythm is a Dancer' and Be My Lover'.",
+                "example": "Haddaway - What Is Love",
+                "spotify_track_id": "7JkZ2hQdDonRURJjlMuh8q",
+                "key_artists": [
+                    {
+                    "name": "Haddaway",
+                    "url": "https://open.spotify.com/artist/0Suv0tRrNrUlRzAy8aXjma"
+                    },
+                    {
+                    "name": "2 Unlimited",
+                    "url": "https://open.spotify.com/artist/18JD8DVlD1fakDAw7E9LFC"
+                    },
+                    {
+                    "name": "Snap!",
+                    "url": "https://open.spotify.com/artist/2FrKQPjJe4pVMZOgm0ESOx"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Eurodance"
+                }
+            ]
             }
         ]
-    }
+}
 ]
