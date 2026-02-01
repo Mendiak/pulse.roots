@@ -4352,6 +4352,7 @@
                         "url": "https://open.spotify.com/artist/6VlPp1wb53ANKMIwZPJfM0"
                     }
                 ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Phonk",
                 "substyles": [
                     {
                         "name": "Rare Phonk",
@@ -4392,7 +4393,8 @@
                                 "name": "DVRST",
                                 "url": "https://open.spotify.com/artist/0XFgyr4jwM0MGeZZW0VzA5"
                             }
-                        ]
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Phonk#Drift_phonk"
                     },
                     {
                         "name": "Brazilian Phonk",
@@ -6007,6 +6009,69 @@
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/New_wave_music"
+                    },
+                    {
+                        "name": "Coldwave",
+                        "description": "Coldwave is a genre that emerged in the late 1970s and early 1980s, primarily in France and Belgium, acting as a darker, electronic evolution of Post-Punk. It is characterized by its bleak, melancholic atmosphere, distinctively 'cold' analog synthesizer sounds, mechanical drum machine rhythms, and angular, chorus-laden guitars. Unlike the more commercial Synth-pop, Coldwave embraces a lo-fi, detached aesthetic with monotone vocals and existential lyrics. It represents the bridge between the raw attitude of Punk and the synthetic textures of Industrial and Minimal Synth.",
+                        "example": "Lebanon Hanover - Gallowdance",
+                        "spotify_track_id": "74SUn8w4lYSwgOGPvVZiEo",
+                        "key_artists": [
+                            {
+                                "name": "Lebanon Hanover",
+                                "url": "https://open.spotify.com/artist/6w8h2uD28BEdg7bX4k3Lh7"
+                            },
+                            {
+                                "name": "Trisomie 21",
+                                "url": "https://open.spotify.com/artist/4T01AXq67OdpoYhTZY3FbR"
+                            },
+                            {
+                                "name": "Martin Dupont",
+                                "url": "https://open.spotify.com/artist/0VluRa9xSnSeZYfYoy9q15"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Cold_wave_(music)"
+                    },
+                    {
+                        "name": "Minimal Wave",
+                        "description": "Minimal Wave is a genre characterized by stripped-down, lo-fi electronic structures that emerged in the late 1970s and early 1980s. Originally circulated on limited-run cassettes by underground artists, it sits between Synth-pop and Industrial. The sound is defined by the use of vintage analog synthesizers and drum machines (like the Roland CR-78), monotonous or robotic vocals, and catchy but melancholic melodies. The term was popularized in the 2000s by Veronica Vasicka to describe this specific wave of DIY electronic music that favored minimalism over the commercial polish of mainstream New Wave.",
+                        "example": "Oppenheimer Analysis - The Devil's Dancers",
+                        "spotify_track_id": "2trHIaWqFVqC7xMQKX3haJ",
+                        "key_artists": [
+                            {
+                                "name": "Oppenheimer Analysis",
+                                "url": "https://open.spotify.com//artist/7aTcPE8gGcR0W8mrmGaK6w"
+                            },
+                            {
+                                "name": "Linear Movement",
+                                "url": "https://open.spotify.com/artist/7KltORSuLEml1oONhXI3Uz"
+                            },
+                            {
+                                "name": "Crash Course In Science",
+                                "url": "https://open.spotify.com/artist/7mifyf6uQQKKffciTy7sOK"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Minimal_wave"
+                    },
+                    {
+                        "name": "Darkwave",
+                        "description": "Darkwave is a genre that emerged in the late 1970s, coinciding with the popularity of New Wave and Post-Punk. It combines the sorrowful lyrics and dark atmosphere of Gothic Rock with the electronic production of Synth-pop. Unlike the drier, mechanical sound of Coldwave, Darkwave is often characterized by lush, swirling synthesizer soundscapes, heavy use of reverb, and a blend of drum machines with chorus-laden guitars. While it originated with bands like Clan of Xymox on the 4AD label, it has evolved to encompass a wide range of dark, danceable electronic music popular in the goth club scene.",
+                        "example": "Clan of Xymox - A Day",
+                        "spotify_track_id": "7MMSyA40xk4UmpZHjLTbmv",
+                        "key_artists": [
+                            {
+                                "name": "Clan of Xymox",
+                                "url": "https://open.spotify.com/intl-es/artist/1wHmR7I0UlF58WFQexCPha"
+                            },
+                            {
+                                "name": "She Past Away",
+                                "url": "https://open.spotify.com/intl-es/artist/6paE8ghTau4qwwNzVRSgjR"
+                            },
+                            {
+                                "name": "Drab Majesty",
+                                "url": "https://open.spotify.com/intl-es/artist/2CSEKlTT9empsZ8vZWsrKO"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Dark_wave"
                     },
                     {
                         "name": "Hyperpop",
