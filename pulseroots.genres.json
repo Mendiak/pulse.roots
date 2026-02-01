@@ -1499,11 +1499,11 @@
             "key_artists": [
                 {
                 "name": "B12",
-                "url": "https://open.spotify.com/intl-es/artist/66I0uUVKgpOPlEjTiy87nm"
+                "url": "https://open.spotify.com/artist/66I0uUVKgpOPlEjTiy87nm"
                 },
                 {
                 "name": "The Black Dog",
-                "url": "https://open.spotify.com/intl-es/artist/7qdsk0UXx2jCX7jbp6rxeq"
+                "url": "https://open.spotify.com/artist/7qdsk0UXx2jCX7jbp6rxeq"
                 },
                 {
                 "name": "The Future Sound Of London",
@@ -1669,15 +1669,15 @@
                 "key_artists": [
                     {
                         "name": "Arnaud Rebotini",
-                        "url": "https://open.spotify.com/intl-es/artist/4qnTdOhzCAvoRf8PObGr1h"
+                        "url": "https://open.spotify.com/artist/4qnTdOhzCAvoRf8PObGr1h"
                     },
                     {
                         "name": "The Hacker",
-                        "url": "https://open.spotify.com/intl-es/artist/763V8ZisRsw5kCoquzKTUp"
+                        "url": "https://open.spotify.com/artist/763V8ZisRsw5kCoquzKTUp"
                     },
                     {
                         "name": "Gesaffelstein",
-                        "url": "https://open.spotify.com/intl-es/artist/3hteYQFiMFbJY7wS0xDymP"
+                        "url": "https://open.spotify.com/artist/3hteYQFiMFbJY7wS0xDymP"
                     }
                 ]
             },
@@ -2063,15 +2063,15 @@
                         "key_artists": [
                             {
                                 "name": "Double 99",
-                                "url": "https://open.spotify.com/intl-es/artist/3XUgFwHXbyBHNuAfv7sWu3"
+                                "url": "https://open.spotify.com/artist/3XUgFwHXbyBHNuAfv7sWu3"
                             },
                             {
                                 "name": "187 Lockdown",
-                                "url": "https://open.spotify.com/intl-es/artist/1tlAuGE8fWLJOWyqdBrR2p"
+                                "url": "https://open.spotify.com/artist/1tlAuGE8fWLJOWyqdBrR2p"
                             },
                             {
                                 "name": "Tuff Jam",
-                                "url": "https://open.spotify.com/intl-es/artist/75HAYbl77Jah0RGasPTXk1"
+                                "url": "https://open.spotify.com/artist/75HAYbl77Jah0RGasPTXk1"
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Speed_garage"
@@ -3423,11 +3423,11 @@
                         "url": "https://open.spotify.com/artist/5KbIofwaAvbvvkzG2zbmGD"
                     }
                 ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Space_ambient",
-                "substyles": [
-                    {
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Space_ambient"
+            },
+            {
                         "name": "Berlin School Ambient",
-                        "description": "A style of space ambient influenced by the Berlin School of electronic music, often featuring sequenced synthesizers and cosmic textures.",
+                        "description": "Berlin School Ambient is a style of ambient and electronic music rooted in the Berlin School movement of the 1970s. It is characterized by long-form compositions built around slowly evolving sequencer patterns, analog synthesizer arpeggios, and expansive, cosmic soundscapes. Rather than focusing on rhythm in a dancefloor sense, the genre emphasizes hypnotic repetition, gradual transformation, and a sense of temporal suspension. Berlin School Ambient often evokes themes of space, inner exploration, and futurism, blending minimalist structures with rich analog textures. Its sound is immersive and meditative, designed for deep listening rather than immediate impact.",
                         "example": "Tangerine Dream - Phaedra",
                         "spotify_track_id": "4QLqhrjTzz90jkYw4Q64y2",
                         "key_artists": [
@@ -3445,8 +3445,6 @@
                             }
                         ]
                     }
-                ]
-            }
         ]
     },
     {
@@ -3486,7 +3484,7 @@
                     },
                     {
                         "name": "Ed Rush",
-                        "url": "https://open.spotify.com/intl-es/artist/6gj4aZLxVGCdFPMThH6q6q"
+                        "url": "https://open.spotify.com/artist/6gj4aZLxVGCdFPMThH6q6q"
                     }
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Drum_and_bass",
@@ -4356,6 +4354,27 @@
                 ],
                 "substyles": [
                     {
+                        "name": "Rare Phonk",
+                        "description": "Rare Phonk is an underground and purist form of Phonk that stays closer to its Memphis rap roots. It emphasizes lo-fi aesthetics, dusty samples ripped from 1990s horrorcore and Southern rap tapes, minimal drum patterns, and deep, murky basslines. Unlike Drift Phonk, Rare Phonk is slower, more hypnotic, and sample-focused, often featuring chopped and looped vocal phrases with heavy tape saturation and distortion. The genre prioritizes mood, repetition, and raw texture over energy or drop-based structures, maintaining a strong connection to underground internet culture and beat tapes.",
+                        "example": "DJ Smokey - Codeine Demonz",
+                        "spotify_track_id": "4sSzott2uVK5VTk4jZIZJf",
+                        "key_artists": [
+                            {
+                                "name": "DJ Smokey",
+                                "url": "https://open.spotify.com/artist/6o5wSBDuLpn2vRpPvGuGBy"
+                            },
+                            {
+                                "name": "Soudiere",
+                                "url": "https://open.spotify.com/artist/01oeaKF2UI2pmIHljhewRN"
+                            },
+                            {
+                                "name": "NxxxxS",
+                                "url": "https://open.spotify.com/artist/36r4ltZmLqtiDBdAs9XSqn"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Phonk#Rare_phonk"
+                    },
+                    {
                         "name": "Drift Phonk",
                         "description": "The viral, high-energy evolution of Phonk characterized by the heavy use of the Roland TR-808 cowbell as a melodic instrument, extreme bass distortion, and high tempos. It moved away from the jazzy/lo-fi roots to create an aggressive sound associated with JDM car culture and gym/fitness content.",
                         "example": "MoonDeity - Neon Blade",
@@ -5088,11 +5107,11 @@
                         },
                         {
                             "name": "NetMD",
-                            "url": "https://open.spotify.com/intl-es/artist/2OXYtjW88cotEUYwYejUv0"
+                            "url": "https://open.spotify.com/artist/2OXYtjW88cotEUYwYejUv0"
                         },
                         {
                             "name": "Luxury Elite",
-                            "url": "https://open.spotify.com/intl-es/artist/28516pIwBLUO62yBiLAfdI"
+                            "url": "https://open.spotify.com/artist/28516pIwBLUO62yBiLAfdI"
                         }
                     ],
                     "wikipedia_url": "https://en.wikipedia.org/wiki/Mallsoft"
