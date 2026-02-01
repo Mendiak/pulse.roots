@@ -3703,6 +3703,90 @@
                 ]
             },
             {
+                "name": "Jungle",
+                "description": "Jungle is a high-energy subgenre of electronic dance music that emerged in the UK in the early 1990s, blending elements of reggae, dancehall, and hip-hop with fast, breakbeat rhythms. Known for its rapid tempos (usually 160-180 BPM), jungle is characterized by heavily syncopated, chopped-up drum patterns, often using the iconic “Amen break” sample, along with deep, rolling basslines and reggae-inspired vocal samples. Jungle’s gritty, raw sound and complex rhythms make it intense and immersive, laying the groundwork for drum and bass and influencing much of the UK’s rave and bass music scenes.",
+                "example": "Shy FX - Original Nuttah 25",
+                "spotify_track_id": "55K24vPjLgAX8yLAq8fErj",
+                "key_artists": [
+                    {
+                        "name": "Shy FX",
+                        "url": "https://open.spotify.com/artist/5oDtp2FC8VqBjTx1aT4P5j"
+                    },
+                    {
+                        "name": "Congo Natty",
+                        "url": "https://open.spotify.com/artist/1NngQUSMHaauD7UjKuaH2W"
+                    },
+                    {
+                        "name": "General Levy",
+                        "url": "https://open.spotify.com/artist/2bHgAaZ7qbGbMMXwAQm48I"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Jungle_music",
+                "substyles": [
+                    {
+                        "name": "Ragga Jungle",
+                        "description": "Ragga Jungle blends the rhythmic energy of jungle music with the dub and vocal stylings of reggae and dancehall. Characterized by fast-paced breakbeats, deep basslines, and the incorporation of reggae's offbeat rhythms and MC chants, Ragga Jungle creates a vibrant, energetic atmosphere. This fusion combines the raw intensity of jungle with the laid-back, soulful vibe of reggae, often bringing dancehall-style vocal samples and dub echoes into the mix. The result is a dynamic genre that’s perfect for both the dancefloor and relaxed listening.",
+                        "example": "Congo Natty - Junglist",
+                        "spotify_track_id": "1sap7FwEuCQqFv3bOpnh6A",
+                        "key_artists": [
+                            {
+                                "name": "Congo Natty",
+                                "url": "https://open.spotify.com/artist/1NngQUSMHaauD7UjKuaH2W"
+                            },
+                            {
+                                "name": "Top Cat",
+                                "url": "https://open.spotify.com/artist/3QR3QV1qQuTpcy1DIqOw9j"
+                            },
+                            {
+                                "name": "Tenor Fly",
+                                "url": "https://open.spotify.com/artist/37uswdRBtJ0qyXas292Uo0"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Jungle_music"
+                    },
+                    {
+                        "name": "Jungle Terror",
+                        "description": "Jungle Terror is an intense fusion of hardstyle, big room house, and trap music, characterized by heavy bass, aggressive drops, and tribal-inspired rhythms. Known for its high energy and raw, pounding beats, Jungle Terror often incorporates distinctive, percussive elements that evoke a primal, energetic feel. The genre combines the festival-ready atmosphere of big room house with the hard-hitting power of trap, creating a sound that’s designed to dominate the dancefloor with its driving, relentless rhythm and bold sound design.",
+                        "example": "Wiwek - Angry Birdz",
+                        "spotify_track_id": "0zPmHSGQgXAdaf31cE7JLU",
+                        "key_artists": [
+                            {
+                                "name": "Wiwek",
+                                "url": "https://open.spotify.com/artist/4b2v3PBjJJCF2BX14lIAsT"
+                            },
+                            {
+                                "name": "Skrillex",
+                                "url": "https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX"
+                            },
+                            {
+                                "name": "Valentino Khan",
+                                "url": "https://open.spotify.com/artist/0deIjoDjl9g9Zpw0sCIOHh"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Drumfunk",
+                        "description": "Drumfunk emphasizes complex rhythms and percussions, focusing more on the interplay of drums than on melodic or harmonic content. The subgenre features intricate, breakbeat-driven rhythms, creating a rhythmic landscape that showcases the art of drumming and percussion in an experimental, often cerebral way.",
+                        "example": "Paradox - Drumfunk",
+                        "spotify_track_id": "5tfiwO64InFkOPxgdDWTFN",
+                        "key_artists": [
+                            {
+                                "name": "Paradox",
+                                "url": "https://open.spotify.com/artist/2XousncwCHWcQCAU8mEG2W"
+                            },
+                            {
+                                "name": "Seba",
+                                "url": "https://open.spotify.com/artist/07YUOmWljBTXwIseAUd9TW"
+                            },
+                            {
+                                "name": "Alaska",
+                                "url": "https://open.spotify.com/artist/2mDlFcPtgXtLF1gEshEInh"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "name": "Juke",
                 "description": "Juke is a fast-paced electronic dance genre from Chicago, typically around 160 BPM. It features syncopated rhythms, deep basslines, and chopped-up vocal samples. Known for its energetic, raw sound, juke focuses on rhythm and movement, often accompanying fast, intricate footwork dance styles. It is a precursor to footwork and has influenced bass-heavy electronic music.",
                 "example": "DJ Funk - Run",
@@ -4143,90 +4227,6 @@
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Future_bass"
-                    }
-                ]
-            },
-            {
-                "name": "Jungle",
-                "description": "Jungle is a high-energy subgenre of electronic dance music that emerged in the UK in the early 1990s, blending elements of reggae, dancehall, and hip-hop with fast, breakbeat rhythms. Known for its rapid tempos (usually 160-180 BPM), jungle is characterized by heavily syncopated, chopped-up drum patterns, often using the iconic “Amen break” sample, along with deep, rolling basslines and reggae-inspired vocal samples. Jungle’s gritty, raw sound and complex rhythms make it intense and immersive, laying the groundwork for drum and bass and influencing much of the UK’s rave and bass music scenes.",
-                "example": "Shy FX - Original Nuttah 25",
-                "spotify_track_id": "55K24vPjLgAX8yLAq8fErj",
-                "key_artists": [
-                    {
-                        "name": "Shy FX",
-                        "url": "https://open.spotify.com/artist/5oDtp2FC8VqBjTx1aT4P5j"
-                    },
-                    {
-                        "name": "Congo Natty",
-                        "url": "https://open.spotify.com/artist/1NngQUSMHaauD7UjKuaH2W"
-                    },
-                    {
-                        "name": "General Levy",
-                        "url": "https://open.spotify.com/artist/2bHgAaZ7qbGbMMXwAQm48I"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Jungle_music",
-                "substyles": [
-                    {
-                        "name": "Ragga Jungle",
-                        "description": "Ragga Jungle blends the rhythmic energy of jungle music with the dub and vocal stylings of reggae and dancehall. Characterized by fast-paced breakbeats, deep basslines, and the incorporation of reggae's offbeat rhythms and MC chants, Ragga Jungle creates a vibrant, energetic atmosphere. This fusion combines the raw intensity of jungle with the laid-back, soulful vibe of reggae, often bringing dancehall-style vocal samples and dub echoes into the mix. The result is a dynamic genre that’s perfect for both the dancefloor and relaxed listening.",
-                        "example": "Congo Natty - Junglist",
-                        "spotify_track_id": "1sap7FwEuCQqFv3bOpnh6A",
-                        "key_artists": [
-                            {
-                                "name": "Congo Natty",
-                                "url": "https://open.spotify.com/artist/1NngQUSMHaauD7UjKuaH2W"
-                            },
-                            {
-                                "name": "Top Cat",
-                                "url": "https://open.spotify.com/artist/3QR3QV1qQuTpcy1DIqOw9j"
-                            },
-                            {
-                                "name": "Tenor Fly",
-                                "url": "https://open.spotify.com/artist/37uswdRBtJ0qyXas292Uo0"
-                            }
-                        ],
-                        "wikipedia_url": "https://en.wikipedia.org/wiki/Jungle_music"
-                    },
-                    {
-                        "name": "Jungle Terror",
-                        "description": "Jungle Terror is an intense fusion of hardstyle, big room house, and trap music, characterized by heavy bass, aggressive drops, and tribal-inspired rhythms. Known for its high energy and raw, pounding beats, Jungle Terror often incorporates distinctive, percussive elements that evoke a primal, energetic feel. The genre combines the festival-ready atmosphere of big room house with the hard-hitting power of trap, creating a sound that’s designed to dominate the dancefloor with its driving, relentless rhythm and bold sound design.",
-                        "example": "Wiwek - Angry Birdz",
-                        "spotify_track_id": "0zPmHSGQgXAdaf31cE7JLU",
-                        "key_artists": [
-                            {
-                                "name": "Wiwek",
-                                "url": "https://open.spotify.com/artist/4b2v3PBjJJCF2BX14lIAsT"
-                            },
-                            {
-                                "name": "Skrillex",
-                                "url": "https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX"
-                            },
-                            {
-                                "name": "Valentino Khan",
-                                "url": "https://open.spotify.com/artist/0deIjoDjl9g9Zpw0sCIOHh"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Drumfunk",
-                        "description": "Drumfunk emphasizes complex rhythms and percussions, focusing more on the interplay of drums than on melodic or harmonic content. The subgenre features intricate, breakbeat-driven rhythms, creating a rhythmic landscape that showcases the art of drumming and percussion in an experimental, often cerebral way.",
-                        "example": "Paradox - Drumfunk",
-                        "spotify_track_id": "5tfiwO64InFkOPxgdDWTFN",
-                        "key_artists": [
-                            {
-                                "name": "Paradox",
-                                "url": "https://open.spotify.com/artist/2XousncwCHWcQCAU8mEG2W"
-                            },
-                            {
-                                "name": "Seba",
-                                "url": "https://open.spotify.com/artist/07YUOmWljBTXwIseAUd9TW"
-                            },
-                            {
-                                "name": "Alaska",
-                                "url": "https://open.spotify.com/artist/2mDlFcPtgXtLF1gEshEInh"
-                            }
-                        ]
                     }
                 ]
             },
