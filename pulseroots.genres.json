@@ -3638,26 +3638,6 @@
                         ]
                     },
                     {
-                        "name": "Drumfunk",
-                        "description": "Drumfunk emphasizes complex rhythms and percussions, focusing more on the interplay of drums than on melodic or harmonic content. The subgenre features intricate, breakbeat-driven rhythms, creating a rhythmic landscape that showcases the art of drumming and percussion in an experimental, often cerebral way.",
-                        "example": "Paradox - Drumfunk",
-                        "spotify_track_id": "5tfiwO64InFkOPxgdDWTFN",
-                        "key_artists": [
-                            {
-                                "name": "Paradox",
-                                "url": "https://open.spotify.com/artist/2XousncwCHWcQCAU8mEG2W"
-                            },
-                            {
-                                "name": "Seba",
-                                "url": "https://open.spotify.com/artist/07YUOmWljBTXwIseAUd9TW"
-                            },
-                            {
-                                "name": "Alaska",
-                                "url": "https://open.spotify.com/artist/2mDlFcPtgXtLF1gEshEInh"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Jump Up",
                         "description": "Jump Up is a more upbeat, energetic style of Drum and Bass, known for its bouncy, fast rhythms and party-friendly vibe. The style incorporates catchy basslines and high-energy beats designed to get crowds moving. Its cheerful, bass-driven sound is perfect for the dancefloor, and its infectious grooves make it a staple of Drum and Bass events.",
                         "example": "Loadstar - Bomber",
@@ -4225,6 +4205,26 @@
                             {
                                 "name": "Valentino Khan",
                                 "url": "https://open.spotify.com/artist/0deIjoDjl9g9Zpw0sCIOHh"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Drumfunk",
+                        "description": "Drumfunk emphasizes complex rhythms and percussions, focusing more on the interplay of drums than on melodic or harmonic content. The subgenre features intricate, breakbeat-driven rhythms, creating a rhythmic landscape that showcases the art of drumming and percussion in an experimental, often cerebral way.",
+                        "example": "Paradox - Drumfunk",
+                        "spotify_track_id": "5tfiwO64InFkOPxgdDWTFN",
+                        "key_artists": [
+                            {
+                                "name": "Paradox",
+                                "url": "https://open.spotify.com/artist/2XousncwCHWcQCAU8mEG2W"
+                            },
+                            {
+                                "name": "Seba",
+                                "url": "https://open.spotify.com/artist/07YUOmWljBTXwIseAUd9TW"
+                            },
+                            {
+                                "name": "Alaska",
+                                "url": "https://open.spotify.com/artist/2mDlFcPtgXtLF1gEshEInh"
                             }
                         ]
                     }
