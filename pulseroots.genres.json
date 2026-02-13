@@ -5184,69 +5184,6 @@
         ],
         "substyles": [
             {
-                "name": "Gqom",
-                "description": "Originating from the townships of Durban, South Africa, Gqom is a raw, minimalist, and atmospheric subgenre of electronic dance music. Characterized by its dark, moody aesthetic and heavy, syncopated drum patterns, it eschews the traditional four-on-the-floor house beat in favor of broken, hypnotic rhythms. Often set at a steady 127 BPM, the genre focuses on deep sub-bass, industrial-sounding percussive loops, and a repetitive, trance-inducing energy. The term 'Gqom' derives from a Zulu onomatopoeic word representing a hitting drum, reflecting its hard-hitting and percussive nature.",
-                "example": "DJ Lag - Trip To New York",
-                "spotify_track_id": "7C1kNw3qy2eH8nLd48qcRr",
-                "key_artists": [
-                    {
-                        "name": "DJ Lag",
-                        "url": "https://open.spotify.com/artist/1svX5cMlY22N60RxwzeJNO"
-                    },
-                    {
-                        "name": "Babes Wodumo",
-                        "url": "https://open.spotify.com/artist/3jfVtv9mWfW0c5b3Fx440e"
-                    },
-                    {
-                        "name": "Distruction Boyz",
-                        "url": "https://open.spotify.com/artist/44MG6uiTa2VeYlcy6VKDXe"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Gqom"
-            },
-            {
-                "name": "Kuduro",
-                "description": "Originating in Luanda, Angola, in the late 1980s, Kuduro is a high-energy genre that fuses Western house and techno with traditional African percussion and rhythms like semba and soca. Characterized by its fast tempo (around 140 BPM), aggressive 4/4 beats, and raw, minimalist production, it was born in the streets as a form of urban expression. While the original Angolan sound is gritty and percussive, it gained massive international influence through the 'Progressive Kuduro' movement in Lisbon, which blended it with heavy bass and European club aesthetics.",
-                "example": "Buraka Som Sistema - Sound of Kuduro",
-                "spotify_track_id": "0pKhBNnBdZtPA8lqKZ4xpi",
-                "key_artists": [
-                    {
-                        "name": "Buraka Som Sistema",
-                        "url": "https://open.spotify.com/artist/6zUiRChNyL3HEezOd1Wjam"
-                    },
-                    {
-                        "name": "Pongo",
-                        "url": "https://open.spotify.com/artist/17MjqHVqjHRfIKAKen6o34"
-                    },
-                    {
-                        "name": "DJ Marfox",
-                        "url": "https://open.spotify.com/artist/4XG3TgASrkAnYdp58tWvLb"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Kuduro"
-            },
-            {
-                "name": "Singeli",
-                "description": "Singeli is a high-velocity electronic dance music genre from Dar es Salaam, Tanzania. It is characterized by its breakneck speed, typically ranging from 180 to 300 BPM, featuring frantic, repetitive loops and rapid-fire MCing in Swahili. Emerging from working-class neighborhoods, it blends traditional Tanzanian sounds like taarab and mchiriku with a raw, DIY electronic aesthetic. Known for its intense energy and frenetic rhythms, Singeli has moved from Tanzanian street parties to global experimental club stages, championed by labels like Nyege Nyege Tapes.",
-                "example": "Bamba Pana - Agaba Kibati",
-                "spotify_track_id": "1PHwATzL7LLfI8Vk4jB0oq",
-                "key_artists": [
-                    {
-                        "name": "Slickback",
-                        "url": "https://open.spotify.com/artist/0NwRAG9DawUqqgur9925fA"
-                    },
-                    {
-                        "name": "Duke",
-                        "url": "https://open.spotify.com/artist/1ZvtTaNp6MzFp0a69FB2xZ"
-                    },
-                    {
-                        "name": "Jay Mitta",
-                        "url": "https://open.spotify.com/artist/3IsLmcVQQz0mojIXUnxREm"
-                    }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Singeli"
-            },
-            {
                 "name": "Funk Carioca",
                 "description": "Funk Carioca, also known as Brazilian Funk or Baile Funk, is a rhythmic powerhouse born in the favelas of Rio de Janeiro. Originating in the 1980s as a localized evolution of Miami Bass and Electro-funk, it transitioned from using imported loops to creating the 'Tamborzão'—a signature syncopated beat that blends African percussion with heavy electronic sub-bass. The genre serves as a vital tool for social identity and urban expression, characterized by its DIY aesthetic, raw vocals, and high-energy loops. It has evolved from 90s social chronicles to modern high-speed and experimental forms that dominate global underground club circuits.",
                 "example": "Cidinho & Doca - Rap da Felicidade",
@@ -5473,6 +5410,69 @@
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Neoperreo"
                     }
                 ]
+            },
+            {
+                "name": "Gqom",
+                "description": "Originating from the townships of Durban, South Africa, Gqom is a raw, minimalist, and atmospheric subgenre of electronic dance music. Characterized by its dark, moody aesthetic and heavy, syncopated drum patterns, it eschews the traditional four-on-the-floor house beat in favor of broken, hypnotic rhythms. Often set at a steady 127 BPM, the genre focuses on deep sub-bass, industrial-sounding percussive loops, and a repetitive, trance-inducing energy. The term 'Gqom' derives from a Zulu onomatopoeic word representing a hitting drum, reflecting its hard-hitting and percussive nature.",
+                "example": "DJ Lag - Trip To New York",
+                "spotify_track_id": "7C1kNw3qy2eH8nLd48qcRr",
+                "key_artists": [
+                    {
+                        "name": "DJ Lag",
+                        "url": "https://open.spotify.com/artist/1svX5cMlY22N60RxwzeJNO"
+                    },
+                    {
+                        "name": "Babes Wodumo",
+                        "url": "https://open.spotify.com/artist/3jfVtv9mWfW0c5b3Fx440e"
+                    },
+                    {
+                        "name": "Distruction Boyz",
+                        "url": "https://open.spotify.com/artist/44MG6uiTa2VeYlcy6VKDXe"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Gqom"
+            },
+            {
+                "name": "Kuduro",
+                "description": "Originating in Luanda, Angola, in the late 1980s, Kuduro is a high-energy genre that fuses Western house and techno with traditional African percussion and rhythms like semba and soca. Characterized by its fast tempo (around 140 BPM), aggressive 4/4 beats, and raw, minimalist production, it was born in the streets as a form of urban expression. While the original Angolan sound is gritty and percussive, it gained massive international influence through the 'Progressive Kuduro' movement in Lisbon, which blended it with heavy bass and European club aesthetics.",
+                "example": "Buraka Som Sistema - Sound of Kuduro",
+                "spotify_track_id": "0pKhBNnBdZtPA8lqKZ4xpi",
+                "key_artists": [
+                    {
+                        "name": "Buraka Som Sistema",
+                        "url": "https://open.spotify.com/artist/6zUiRChNyL3HEezOd1Wjam"
+                    },
+                    {
+                        "name": "Pongo",
+                        "url": "https://open.spotify.com/artist/17MjqHVqjHRfIKAKen6o34"
+                    },
+                    {
+                        "name": "DJ Marfox",
+                        "url": "https://open.spotify.com/artist/4XG3TgASrkAnYdp58tWvLb"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Kuduro"
+            },
+            {
+                "name": "Singeli",
+                "description": "Singeli is a high-velocity electronic dance music genre from Dar es Salaam, Tanzania. It is characterized by its breakneck speed, typically ranging from 180 to 300 BPM, featuring frantic, repetitive loops and rapid-fire MCing in Swahili. Emerging from working-class neighborhoods, it blends traditional Tanzanian sounds like taarab and mchiriku with a raw, DIY electronic aesthetic. Known for its intense energy and frenetic rhythms, Singeli has moved from Tanzanian street parties to global experimental club stages, championed by labels like Nyege Nyege Tapes.",
+                "example": "Bamba Pana - Agaba Kibati",
+                "spotify_track_id": "1PHwATzL7LLfI8Vk4jB0oq",
+                "key_artists": [
+                    {
+                        "name": "Slickback",
+                        "url": "https://open.spotify.com/artist/0NwRAG9DawUqqgur9925fA"
+                    },
+                    {
+                        "name": "Duke",
+                        "url": "https://open.spotify.com/artist/1ZvtTaNp6MzFp0a69FB2xZ"
+                    },
+                    {
+                        "name": "Jay Mitta",
+                        "url": "https://open.spotify.com/artist/3IsLmcVQQz0mojIXUnxREm"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Singeli"
             },
             {
                 "name": "Nortec",
