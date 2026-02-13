@@ -5377,15 +5377,15 @@
                 "key_artists": [
                     {
                         "name": "Daddy Yankee",
-                        "url": "https://open.spotify.com/intl-es/artist/4VMYDCV2IEDYJArk749S6m"
+                        "url": "https://open.spotify.com/artist/4VMYDCV2IEDYJArk749S6m"
                     },
                     {
                         "name": "Ivy Queen",
-                        "url": "https://open.spotify.com/intl-es/artist/6p2442ymrT9lZEuCZJdYcH"
+                        "url": "https://open.spotify.com/artist/6p2442ymrT9lZEuCZJdYcH"
                     },
                     {
                         "name": "Bad Bunny",
-                        "url": "https://open.spotify.com/intl-es/artist/4q3ewBCX7sLwd24euuV69X"
+                        "url": "https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X"
                     }
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Reggaeton",
@@ -5398,15 +5398,15 @@
                         "key_artists": [
                             {
                                 "name": "DJ Playero",
-                                "url": "https://open.spotify.com/intl-es/artist/2YTyoyU90b3CF5x91YjVaQ"
+                                "url": "https://open.spotify.com/artist/2YTyoyU90b3CF5x91YjVaQ"
                             },
                             {
                                 "name": "Tego Calderón",
-                                "url": "https://open.spotify.com/intl-es/artist/3SUT1jjM5hzZj9TLfLZGIP"
+                                "url": "https://open.spotify.com/artist/3SUT1jjM5hzZj9TLfLZGIP"
                             },
                             {
                                 "name": "Vico C",
-                                "url": "https://open.spotify.com/intl-es/artist/0GutRVONcyyBj1WduodFc6"
+                                "url": "https://open.spotify.com/artist/0GutRVONcyyBj1WduodFc6"
                             }
                         ]
                     },
@@ -5418,15 +5418,15 @@
                         "key_artists": [
                             {
                                 "name": "R.K.M & Ken-Y",
-                                "url": "https://open.spotify.com/intl-es/artist/3jFjgKOGfVLWfXX8q5wrsg"
+                                "url": "https://open.spotify.com/artist/3jFjgKOGfVLWfXX8q5wrsg"
                             },
                             {
                                 "name": "Zion & Lennox",
-                                "url": "https://open.spotify.com/intl-es/artist/21451j1KhjAiaYKflxBjr1"
+                                "url": "https://open.spotify.com/artist/21451j1KhjAiaYKflxBjr1"
                             },
                             {
                                 "name": "Flex (Nigga)",
-                                "url": "https://open.spotify.com/intl-es/artist/13VwGEitoK8J0qjNjbgeTN"
+                                "url": "https://open.spotify.com/artist/13VwGEitoK8J0qjNjbgeTN"
                             }
                         ]
                     },
@@ -5438,15 +5438,15 @@
                         "key_artists": [
                             {
                                 "name": "El Alfa",
-                                "url": "https://open.spotify.com/intl-es/artist/2oQX8QiMXOyuqbcZEFsZfm"
+                                "url": "https://open.spotify.com/artist/2oQX8QiMXOyuqbcZEFsZfm"
                             },
                             {
                                 "name": "Tokischa",
-                                "url": "https://open.spotify.com/intl-es/artist/4VVEpEhC8NcR7AqNEds42U"
+                                "url": "https://open.spotify.com/artist/4VVEpEhC8NcR7AqNEds42U"
                             },
                             {
                                 "name": "Rochy RD",
-                                "url": "https://open.spotify.com/intl-es/artist/4riOEaOW5hCeqomFDBk0aP"
+                                "url": "https://open.spotify.com/artist/4riOEaOW5hCeqomFDBk0aP"
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Dembow_beat"
@@ -5459,20 +5459,41 @@
                         "key_artists": [
                             {
                                 "name": "Tomasa del Real",
-                                "url": "https://open.spotify.com/intl-es/artist/3Dz4sliAAIVOlALfHW9TtD"
+                                "url": "https://open.spotify.com/artist/3Dz4sliAAIVOlALfHW9TtD"
                             },
                             {
                                 "name": "Ms Nina",
-                                "url": "https://open.spotify.com/intl-es/artist/43Hr2FjhVehkROIIEb7EfQ"
+                                "url": "https://open.spotify.com/artist/43Hr2FjhVehkROIIEb7EfQ"
                             },
                             {
                                 "name": "Isabella Lovestory",
-                                "url": "https://open.spotify.com/intl-es/artist/4wMQTWavQZgr8ySlo5s2Tt"
+                                "url": "https://open.spotify.com/artist/4wMQTWavQZgr8ySlo5s2Tt"
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Neoperreo"
                     }
                 ]
+            },
+            {
+                "name": "Nortec",
+                "description": "Nortec is an electronic dance music genre that emerged from Tijuana, Mexico, in the late 1990s. Its name is a portmanteau of 'norteño' and 'techno,' reflecting its unique fusion of traditional northern Mexican sounds (accordion, tuba, banda brass) with club-focused electronic production. It represents a trans-cultural aesthetic that bridges regional border traditions with global underground electronic music.",
+                "example": "Nortec: Bostich + Fussible - Tijuana Makes Me Happy",
+                "spotify_track_id": "2GKva36e90AM0B0WF1J0YY",
+                "key_artists": [
+                    {
+                        "name": "Nortec: Bostich + Fussible",
+                        "url": "https://open.spotify.com/artist/3Jarv4dvk7d9k6AkqDUVJg"
+                    },
+                    {
+                        "name": "Clorofila",
+                        "url": "https://open.spotify.com/artist/5ns1lY8egNoPsITbbNpli6"
+                    },
+                    {
+                        "name": "Nortec Collective",
+                        "url": "https://open.spotify.com/artist/7rAlT8ekkzP9ScdBbBkRou"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Nortec"
             }
         ]
     },
@@ -6060,15 +6081,15 @@
                         "key_artists": [
                             {
                                 "name": "Clan of Xymox",
-                                "url": "https://open.spotify.com/intl-es/artist/1wHmR7I0UlF58WFQexCPha"
+                                "url": "https://open.spotify.com/artist/1wHmR7I0UlF58WFQexCPha"
                             },
                             {
                                 "name": "She Past Away",
-                                "url": "https://open.spotify.com/intl-es/artist/6paE8ghTau4qwwNzVRSgjR"
+                                "url": "https://open.spotify.com/artist/6paE8ghTau4qwwNzVRSgjR"
                             },
                             {
                                 "name": "Drab Majesty",
-                                "url": "https://open.spotify.com/intl-es/artist/2CSEKlTT9empsZ8vZWsrKO"
+                                "url": "https://open.spotify.com/artist/2CSEKlTT9empsZ8vZWsrKO"
                             }
                         ],
                         "wikipedia_url": "https://en.wikipedia.org/wiki/Dark_wave"
