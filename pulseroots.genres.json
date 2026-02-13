@@ -5370,46 +5370,109 @@
                 ]
             },
             {
-                "name": "Dembow",
-                "description": "Dembow is a high-energy Caribbean urban rhythm that originated in Panama in the early 1990s, derived from Jamaican dancehall and reggae. Named after Shabba Ranks' 1990 track 'Dem Bow,' it features a distinctive syncopated rhythm pattern (known as the 'dembow riddim') characterized by a kick-snare-kick-kick pattern that has become the rhythmic foundation of reggaetón and modern Latin urban music. While initially developed in Panama, dembow evolved into its own distinct genre in the Dominican Republic during the 2010s, where it developed a faster tempo (around 110-115 BPM), minimalist production, and raw, street-oriented aesthetic. Dominican dembow is characterized by aggressive, repetitive loops, sparse instrumentation, heavy sub-bass, and a DIY approach that connects it to other Global Club movements. The genre has become a dominant force in Latin American urban music, influencing reggaetón, trap latino, and global club culture.",
-                "example": "Shabba Ranks - Dem Bow",
-                "spotify_track_id": "0jValXrMKM6Fk59NaVIzFx",
+                "name": "Reggaeton",
+                "description": "Reggaeton is a global phenomenon originating in Puerto Rico (with roots in Panama) that blends Jamaican dancehall rhythms—specifically the 'dembow' beat—with Latin American elements like bomba and plena, hip hop, and electronic production. It emerged in the early 1990s as an underground movement before exploding into the mainstream in the early 2000s. Characterized by its hypnotic 3+3+2 rhythmic pattern and Spanish-language vocals, reggaeton has evolved from its raw street beginnings into a dominant force in global pop music, constantly absorbing new electronic trends while maintaining its core dance-focused identity.",
+                "example": "Daddy Yankee - Gasolina",
+                "spotify_track_id": "5YoITs1m0q8UOQ4AW7N5ga",
                 "key_artists": [
                     {
-                        "name": "El Alfa",
-                        "url": "https://open.spotify.com/intl-es/artist/2oQX8QiMXOyuqbcZEFsZfm"
+                        "name": "Daddy Yankee",
+                        "url": "https://open.spotify.com/intl-es/artist/4VMYDCV2IEDYJArk749S6m"
                     },
                     {
-                        "name": "Chimbala",
-                        "url": "https://open.spotify.com/intl-es/artist/4VVEpEhC8NcR7AqNEds42U"
+                        "name": "Ivy Queen",
+                        "url": "https://open.spotify.com/intl-es/artist/6p2442ymrT9lZEuCZJdYcH"
                     },
                     {
-                        "name": "Rochy RD",
-                        "url": "https://open.spotify.com/intl-es/artist/4riOEaOW5hCeqomFDBk0aP"
+                        "name": "Bad Bunny",
+                        "url": "https://open.spotify.com/intl-es/artist/4q3ewBCX7sLwd24euuV69X"
                     }
                 ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Dembow_beat"
-            },
-            {
-                "name": "Neoperreo",
-                "description": "Neoperreo is a subversive, digital-first underground movement that deconstructs and reimagines Reggaeton through a futuristic, industrial, and often DIY lens. Coined by Chilean artist Tomasa del Real, it reflects an electronic evolution of 'perreo' culture, centering inclusive, feminist, and LGBTQ+ voices. Sonically, it maintains the iconic 'dembow' rhythm but hybridizes it with elements of hyperpop, glitch, trap, and deconstructed club production, creating a dark, experimental, and high-energy club sound that connects underground scenes in Latin America and Spain.",
-                "example": "Tomasa del Real - Barre con el Pelo",
-                "spotify_track_id": "0VBbbLKnpayQeBKZdYamhi",
-                "key_artists": [
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Reggaeton",
+                "substyles": [
                     {
-                        "name": "Tomasa del Real",
-                        "url": "https://open.spotify.com/intl-es/artist/3Dz4sliAAIVOlALfHW9TtD"
+                        "name": "Reggaeton Old School / Clásico",
+                        "description": "The foundational era of reggaeton, also known as 'underground,' originating in the 1990s Puerto Rican club scene. Characterized by raw, stripped-back production, heavy dancehall and hip hop crossover, and extensive use of loops from pioneers like DJ Playero and DJ Nelson. It features a rawer, street-centric energy and focuses on the 'maratón' style of continuous mixing.",
+                        "example": "Tego Calderón - Pa' Que Retozen",
+                        "spotify_track_id": "5YJ4BVvTFmVCxUyhKejHfR",
+                        "key_artists": [
+                            {
+                                "name": "DJ Playero",
+                                "url": "https://open.spotify.com/intl-es/artist/2YTyoyU90b3CF5x91YjVaQ"
+                            },
+                            {
+                                "name": "Tego Calderón",
+                                "url": "https://open.spotify.com/intl-es/artist/3SUT1jjM5hzZj9TLfLZGIP"
+                            },
+                            {
+                                "name": "Vico C",
+                                "url": "https://open.spotify.com/intl-es/artist/0GutRVONcyyBj1WduodFc6"
+                            }
+                        ]
                     },
                     {
-                        "name": "Ms Nina",
-                        "url": "https://open.spotify.com/intl-es/artist/43Hr2FjhVehkROIIEb7EfQ"
+                        "name": "Reggaeton Romántico",
+                        "description": "A melodic and radio-friendly subgenre that emerged in the mid-2000s, emphasizing romantic themes and pop-influenced structures over a slower, smoother reggaeton beat. It pioneered the crossover of reggaeton into the global pop market by softening the genre's harder edges and focusing on vocal hooks and sentimental lyrics.",
+                        "example": "Flex - Te Quiero",
+                        "spotify_track_id": "6aS26FrP9rKm27VzYEryfw",
+                        "key_artists": [
+                            {
+                                "name": "R.K.M & Ken-Y",
+                                "url": "https://open.spotify.com/intl-es/artist/3jFjgKOGfVLWfXX8q5wrsg"
+                            },
+                            {
+                                "name": "Zion & Lennox",
+                                "url": "https://open.spotify.com/intl-es/artist/21451j1KhjAiaYKflxBjr1"
+                            },
+                            {
+                                "name": "Flex (Nigga)",
+                                "url": "https://open.spotify.com/intl-es/artist/13VwGEitoK8J0qjNjbgeTN"
+                            }
+                        ]
                     },
                     {
-                        "name": "Isabella Lovestory",
-                        "url": "https://open.spotify.com/intl-es/artist/4wMQTWavQZgr8ySlo5s2Tt"
+                        "name": "Dembow",
+                        "description": "Dominican Dembow is a high-velocity evolution of the original dembow rhythm, originating from the streets of Santo Domingo. Characterized by a significantly faster tempo (115-130 BPM), minimalist and aggressive production, and repetitive, percussive loops, it strips reggaeton down to its most dance-oriented essence. It has developed into a distinct global club phenomenon with a raw, DIY aesthetic.",
+                        "example": "El Alfa - La Mamá de la Mamá",
+                        "spotify_track_id": "0jValXrMKM6Fk59NaVIzFx",
+                        "key_artists": [
+                            {
+                                "name": "El Alfa",
+                                "url": "https://open.spotify.com/intl-es/artist/2oQX8QiMXOyuqbcZEFsZfm"
+                            },
+                            {
+                                "name": "Tokischa",
+                                "url": "https://open.spotify.com/intl-es/artist/4VVEpEhC8NcR7AqNEds42U"
+                            },
+                            {
+                                "name": "Rochy RD",
+                                "url": "https://open.spotify.com/intl-es/artist/4riOEaOW5hCeqomFDBk0aP"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Dembow_beat"
+                    },
+                    {
+                        "name": "Neoperreo",
+                        "description": "Neoperreo is a subversive, digital-first underground movement that deconstructs and reimagines Reggaeton through a futuristic, industrial, and often DIY lens. It reflects an electronic evolution of 'perreo' culture, centering inclusive, feminist, and LGBTQ+ voices. Sonically, it maintains the iconic 'dembow' rhythm but hybridizes it with elements of hyperpop, glitch, trap, and deconstructed club production.",
+                        "example": "Tomasa del Real - Barre con el Pelo",
+                        "spotify_track_id": "0VBbbLKnpayQeBKZdYamhi",
+                        "key_artists": [
+                            {
+                                "name": "Tomasa del Real",
+                                "url": "https://open.spotify.com/intl-es/artist/3Dz4sliAAIVOlALfHW9TtD"
+                            },
+                            {
+                                "name": "Ms Nina",
+                                "url": "https://open.spotify.com/intl-es/artist/43Hr2FjhVehkROIIEb7EfQ"
+                            },
+                            {
+                                "name": "Isabella Lovestory",
+                                "url": "https://open.spotify.com/intl-es/artist/4wMQTWavQZgr8ySlo5s2Tt"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Neoperreo"
                     }
-                ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Neoperreo"
+                ]
             }
         ]
     },
