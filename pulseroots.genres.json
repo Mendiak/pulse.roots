@@ -5389,6 +5389,27 @@
                     }
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Dembow_beat"
+            },
+            {
+                "name": "Neoperreo",
+                "description": "Neoperreo is a subversive, digital-first underground movement that deconstructs and reimagines Reggaeton through a futuristic, industrial, and often DIY lens. Coined by Chilean artist Tomasa del Real, it reflects an electronic evolution of 'perreo' culture, centering inclusive, feminist, and LGBTQ+ voices. Sonically, it maintains the iconic 'dembow' rhythm but hybridizes it with elements of hyperpop, glitch, trap, and deconstructed club production, creating a dark, experimental, and high-energy club sound that connects underground scenes in Latin America and Spain.",
+                "example": "Tomasa del Real - Barre con el Pelo",
+                "spotify_track_id": "0VBbbLKnpayQeBKZdYamhi",
+                "key_artists": [
+                    {
+                        "name": "Tomasa del Real",
+                        "url": "https://open.spotify.com/intl-es/artist/3Dz4sliAAIVOlALfHW9TtD"
+                    },
+                    {
+                        "name": "Ms Nina",
+                        "url": "https://open.spotify.com/intl-es/artist/43Hr2FjhVehkROIIEb7EfQ"
+                    },
+                    {
+                        "name": "Isabella Lovestory",
+                        "url": "https://open.spotify.com/intl-es/artist/4wMQTWavQZgr8ySlo5s2Tt"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Neoperreo"
             }
         ]
     },
