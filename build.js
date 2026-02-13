@@ -80,6 +80,7 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
         newHtml = newHtml.replace(/href="index\.html"/g, `href="${CONFIG.baseReplacement}/index.html"`);
         newHtml = newHtml.replace(/href="contact\.html"/g, `href="${CONFIG.baseReplacement}/contact.html"`);
         newHtml = newHtml.replace(/href="privacy\.html"/g, `href="${CONFIG.baseReplacement}/privacy.html"`);
+        newHtml = newHtml.replace(/<link rel=\"sitemap\" type=\"application\/xml\" title=\"Sitemap\" href=\".*\">/, `<link rel="sitemap" type="application/xml" title="Sitemap" href="${CONFIG.baseUrl}/sitemap.xml">`);
         newHtml = newHtml.replace(/content="https:\/\/mendiak\.github.io\/pulse\.roots\/assets\/og_image\.webp"/, `content="${CONFIG.baseUrl}/assets/og_image.webp"`);
 
         // Update title
