@@ -563,8 +563,8 @@ async function fetchData() {
             currentLayout = 'vertical';
             treeBtn.classList.add('active');
             radialBtn.classList.remove('active');
-            createTree(allGenreData);
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => createTree(allGenreData), 300); // allow scroll to start before freezing thread
         });
 
         radialBtn.addEventListener('click', () => {
@@ -572,8 +572,8 @@ async function fetchData() {
             currentLayout = 'radial';
             radialBtn.classList.add('active');
             treeBtn.classList.remove('active');
-            createTree(allGenreData);
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => createTree(allGenreData), 300);
         });
     }
 
