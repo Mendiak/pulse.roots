@@ -247,6 +247,11 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   // Update the info panel with the node's data.
   infoContent.innerHTML = '';
   
+  // Restart the CSS entry animation for the panel
+  infoContent.classList.remove('animate-entry');
+  void infoContent.offsetWidth; // Force reflow
+  infoContent.classList.add('animate-entry');
+  
   const title = document.createElement('h2');
   title.id = 'info-panel-title';
   title.innerHTML = `<i class="bi bi-tag-fill"></i> ${itemData.name || itemData.style}`;
@@ -795,6 +800,11 @@ function createTree(data) {
     .append('path')
     .attr('class', 'link')
     .attr('d', linkGenerator)
+    .style('stroke', d => {
+      const topLevelAncestor = d.target.ancestors().find(ancestor => ancestor.depth === 1);
+      return topLevelAncestor ? colorScale(topLevelAncestor.data.name) : 'rgba(255, 255, 255, 0.2)';
+    })
+    .style('stroke-opacity', 0.4) // Slightly faded so it's not overwhelming unless hovered
     .style('opacity', 0);
 
   // Dash animation (drawing effect)
@@ -929,6 +939,12 @@ function highlightBranch(element, d) {
     .filter(link => ancestors.includes(link.target) && ancestors.includes(link.source))
     .classed('faded', false)
     .classed('path-highlight-link', true);
+    
+  // Subtly pulse the active selected node
+  d3.selectAll('.node').classed('active-node-pulse', false);
+  if (activeSelectedNode) {
+     d3.selectAll('.node').filter(n => n === activeSelectedNode).classed('active-node-pulse', true);
+  }
 }
 
 /**
@@ -951,6 +967,8 @@ function clearBranchHighlight() {
     .classed('faded', false)
     .classed('path-highlight-node', false)
     .classed('path-highlight-link', false);
+    
+  d3.selectAll('.node').classed('active-node-pulse', false);
 }
 
 /**
@@ -1817,4 +1835,68 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   startHistoryBanner();
+  
+  initParticles();
 });
+
+// --- Particle Background Implementation ---
+function initParticles() {
+  const canvas = document.createElement('canvas');
+  canvas.id = 'particles-canvas';
+  document.body.insertBefore(canvas, document.body.firstChild);
+  const ctx = canvas.getContext('2d');
+  
+  let width, height;
+  let particles = [];
+  
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+  
+  window.addEventListener('resize', resize);
+  resize();
+  
+  class Particle {
+    constructor() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.size = Math.random() * 2.5 + 0.5; // Bigger minimum size
+      this.speedX = (Math.random() * 0.8) - 0.4; // Slightly faster movement
+      this.speedY = (Math.random() * 0.8) - 0.4;
+      this.opacity = Math.random() * 0.6 + 0.2; // Increase base opacity to be more visible
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+      
+      if (this.x > width) this.x = 0;
+      else if (this.x < 0) this.x = width;
+      if (this.y > height) this.y = 0;
+      else if (this.y < 0) this.y = height;
+    }
+    draw() {
+      ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  
+  // Create initial particles based on screen size (denser field)
+  const particleCount = Math.floor((width * height) / 9000); 
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new Particle());
+  }
+  
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
+    }
+    requestAnimationFrame(animate);
+  }
+  
+  animate();
+}

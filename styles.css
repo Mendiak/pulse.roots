@@ -186,14 +186,25 @@ body {
 
 /* Keyframe animation for the background fade-in */
 @keyframes fadeInBackground {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
+/* --- Particles Canvas --- */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  pointer-events: none;
+  opacity: 0.6;
+}
+body.light-mode #particles-canvas {
+  opacity: 0.3;
+}
+
 
 /* --- Header --- */
 
@@ -775,13 +786,35 @@ body.light-mode .active-searched-node text {
   stroke-width: 5px;
   transition: stroke 0.3s ease;
   filter: url(#svg-glow);
+  opacity: 1 !important;
 }
 
 .link {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.25);
+  /* Stroke is now applied via D3 dynamically, but fallback here */
   stroke-width: 1.5px;
   transition: all 0.3s ease, stroke 0.3s, filter 0.3s;
+}
+
+/* --- Active Pulsing Node --- */
+.active-node-pulse circle {
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    stroke-width: 1.5px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  }
+  50% {
+    stroke-width: 8px;
+    stroke: var(--highlight-color, var(--accent-pink));
+    filter: drop-shadow(0 0 15px var(--highlight-color, var(--accent-pink)));
+  }
+  100% {
+    stroke-width: 1.5px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  }
 }
 
 .clickable-node text:hover {
@@ -927,6 +960,32 @@ body.light-mode .active-searched-node text {
   min-width: 0;
   /* Allow shrinking */
 }
+
+/* --- Staggered Panel Entry Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-entry > * {
+  opacity: 0;
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-entry > *:nth-child(1) { animation-delay: 0.1s; }
+.animate-entry > *:nth-child(2) { animation-delay: 0.2s; }
+.animate-entry > *:nth-child(3) { animation-delay: 0.3s; }
+.animate-entry > *:nth-child(4) { animation-delay: 0.4s; }
+.animate-entry > *:nth-child(5) { animation-delay: 0.5s; }
+.animate-entry > *:nth-child(6) { animation-delay: 0.6s; }
+.animate-entry > *:nth-child(7) { animation-delay: 0.7s; }
+
 
 .panel-sticky-header {
   position: sticky;
