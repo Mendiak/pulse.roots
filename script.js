@@ -329,7 +329,14 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     itemData.key_artists.forEach(artist => {
       const artistCard = document.createElement('a');
       artistCard.className = 'artist-card';
-      artistCard.href = artist.url;
+      
+      // Check if it's already a full URL (for backwards compatibility or non-Spotify links)
+      // Otherwise, construct the Spotify artist URL
+      const artistUrl = artist.url.startsWith('http') 
+        ? artist.url 
+        : `https://open.spotify.com/artist/${artist.url}`;
+        
+      artistCard.href = artistUrl;
       artistCard.target = '_blank';
       artistCard.rel = 'noopener noreferrer';
       artistCard.innerHTML = `
