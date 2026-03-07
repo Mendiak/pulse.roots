@@ -718,6 +718,21 @@ function createTree(data) {
     .attr("height", height)
     .attr("viewBox", `0 0 ${containerWidth} ${height}`);
 
+  // Add SVG filter for glow effect
+  const defs = svg.append("defs");
+  const filter = defs.append("filter")
+    .attr("id", "svg-glow")
+    .attr("x", "-50%")
+    .attr("y", "-50%")
+    .attr("width", "200%")
+    .attr("height", "200%");
+  filter.append("feGaussianBlur")
+    .attr("stdDeviation", "3") // Glow spread
+    .attr("result", "coloredBlur");
+  const feMerge = filter.append("feMerge");
+  feMerge.append("feMergeNode").attr("in", "coloredBlur");
+  feMerge.append("feMergeNode").attr("in", "SourceGraphic");
+
   // Add a background rect to handle clicks on whitespace for deselecting (if planned)
   svg.append("rect")
     .attr("width", containerWidth)
@@ -774,16 +789,28 @@ function createTree(data) {
     : d3.linkRadial().angle(d => d.x).radius(d => d.y);
 
   // Create the links
-  g.selectAll('.link')
+  const links = g.selectAll('.link')
     .data(root.links().filter(l => l.target.depth > 0)) // Show all links to visible nodes (including from root)
     .enter()
     .append('path')
     .attr('class', 'link')
     .attr('d', linkGenerator)
-    .style('opacity', 0)
-    .transition()
-    .duration(800)
-    .style('opacity', 1);
+    .style('opacity', 0);
+
+  // Dash animation (drawing effect)
+  links.each(function(d) {
+    const length = this.getTotalLength();
+    // Default to a small number if length is 0 to avoid NaN
+    const validLength = length || 100; 
+    d3.select(this)
+      .attr("stroke-dasharray", validLength + " " + validLength)
+      .attr("stroke-dashoffset", validLength)
+      .transition()
+      .duration(700)
+      .delay(d.target.depth * 150) // Stagger drawing by tree depth
+      .style('opacity', 1)
+      .attr("stroke-dashoffset", 0);
+  });
 
   // Create the nodes
   const node = g.selectAll('.node')
@@ -830,10 +857,10 @@ function createTree(data) {
       showInfoPanel(d.data, nodeColor);
     });
 
-  // Entry animation for nodes
+  // Entry animation for nodes (fading in and slightly scaling up)
   node.transition()
-    .duration(800)
-    .delay((d, i) => i * 2)
+    .duration(500)
+    .delay(d => (d.depth * 150) + 400) // Appear right after the line reaches them
     .style('opacity', 1);
 
   node.each(function(d) { d.gNode = this; });
