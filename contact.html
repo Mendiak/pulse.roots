@@ -79,6 +79,15 @@
             <input type="hidden" name="access_key" value="41398cfd-0efd-45fa-859e-50b9e66d6f31">
             <input type="text" name="name" required placeholder="Your Name...">
             <input type="email" name="email" required placeholder="Your Email...">
+            
+            <select name="subject" id="subject-select" required>
+                <option value="" disabled selected>Select a subject...</option>
+                <option value="Suggestion">Suggest a New Genre</option>
+                <option value="Error Report">Report an Error / Fix</option>
+                <option value="General">General Inquiry</option>
+                <option value="Other">Other</option>
+            </select>
+
             <textarea name="message" required placeholder="Your Message..."></textarea>
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <input type="hidden" name="redirect" value="https://mendiak.github.io/pulse.roots/thanks.html">
@@ -87,5 +96,35 @@
         
         <p style="text-align: center; margin-top: 30px;"><a href="index.html" class="back-button">Back to PulseRoots</a></p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const genre = urlParams.get('genre');
+            const subjectParam = urlParams.get('subject');
+            
+            const messageArea = document.querySelector('textarea[name="message"]');
+            const subjectSelect = document.getElementById('subject-select');
+
+            if (subjectParam && subjectSelect) {
+                // Try to match the subject parameter with an option value
+                for (let i = 0; i < subjectSelect.options.length; i++) {
+                    if (subjectSelect.options[i].value === subjectParam) {
+                        subjectSelect.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            if (genre && messageArea) {
+                const decodedGenre = decodeURIComponent(genre);
+                if (subjectParam === 'Error Report') {
+                    messageArea.value = `Hi! I found an error in the genre "${decodedGenre}": \n\n[Please describe the error here...]`;
+                } else {
+                    messageArea.value = `Hi! I have a suggestion regarding "${decodedGenre}": \n\n[Your suggestion here...]`;
+                }
+            }
+        });
+    </script>
 </body>
 </html>

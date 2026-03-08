@@ -305,6 +305,25 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
     infoContent.appendChild(wikiLinkContainer);
   }
 
+  // --- Report Error Link ---
+  const reportLinkContainer = document.createElement('div');
+  reportLinkContainer.className = 'external-link-container report-error-container';
+  reportLinkContainer.style.marginTop = '10px';
+  reportLinkContainer.style.paddingTop = '0';
+  reportLinkContainer.style.borderTop = 'none';
+
+  const reportLink = document.createElement('a');
+  const genreNameEncoded = encodeURIComponent(itemData.name || itemData.style);
+  reportLink.href = `contact.html?genre=${genreNameEncoded}&subject=Error%20Report`;
+  reportLink.className = 'wikipedia-link report-link'; // Reuse wikipedia-link style for consistency
+  reportLink.style.fontSize = '0.8em';
+  reportLink.style.opacity = '0.7';
+  
+  reportLink.innerHTML = `<i class="bi bi-exclamation-triangle"></i> Spotted an error? Report it here`;
+
+  reportLinkContainer.appendChild(reportLink);
+  infoContent.appendChild(reportLinkContainer);
+
   const example = document.createElement('p');
   example.innerHTML = `<i class="bi bi-soundwave"></i> <b>Example track: ${itemData.example || 'N/A'}</b>`;
   infoContent.appendChild(example);

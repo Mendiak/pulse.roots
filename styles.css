@@ -82,7 +82,8 @@ body.light-mode #clear-button,
 body.light-mode #shuffle-button,
 body.light-mode #fullscreen-btn,
 body.light-mode #header-share-btn,
-body.light-mode #theme-toggle-btn {
+body.light-mode #theme-toggle-btn,
+body.light-mode #header-contact-btn {
   color: #1e293b;
 }
 
@@ -91,7 +92,8 @@ body.light-mode #clear-button:hover,
 body.light-mode #shuffle-button:hover,
 body.light-mode #fullscreen-btn:hover,
 body.light-mode #header-share-btn:hover,
-body.light-mode #theme-toggle-btn:hover {
+body.light-mode #theme-toggle-btn:hover,
+body.light-mode #header-contact-btn:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -308,7 +310,8 @@ header {
 #shuffle-button,
 #fullscreen-btn,
 #header-share-btn,
-#theme-toggle-btn {
+#theme-toggle-btn,
+#header-contact-btn {
   height: var(--header-element-height);
   padding: 0 var(--header-btn-px);
   border-radius: var(--header-radius);
@@ -324,6 +327,7 @@ header {
   color: var(--text-main);
   cursor: pointer;
   transition: var(--header-transition);
+  text-decoration: none;
 }
 
 #search-button i,
@@ -331,7 +335,8 @@ header {
 #shuffle-button i,
 #fullscreen-btn i,
 #header-share-btn i,
-#theme-toggle-btn i {
+#theme-toggle-btn i,
+#header-contact-btn i {
   font-size: var(--header-icon-size);
   margin-right: 0;
   display: flex;
@@ -342,6 +347,7 @@ header {
 #fullscreen-btn:hover,
 #header-share-btn:hover,
 #theme-toggle-btn:hover,
+#header-contact-btn:hover,
 #shuffle-button:hover,
 #clear-button:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -1255,7 +1261,8 @@ form {
 }
 
 input,
-textarea {
+textarea,
+select {
   padding: 12px 16px;
   border: 1px solid var(--glass-border);
   background: rgba(255, 255, 255, 0.05);
@@ -1266,12 +1273,31 @@ textarea {
   transition: all 0.3s ease;
 }
 
+select option {
+  background: var(--secondary-dark);
+  color: var(--text-main);
+}
+
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--accent-pink);
   box-shadow: 0 0 0 4px rgba(255, 0, 85, 0.15);
+}
+
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+body.light-mode select option {
+  background: #ffffff;
+  color: #1e293b;
 }
 
 textarea {
@@ -1789,30 +1815,52 @@ footer {
 
   /* --- Header Responsive Styles --- */
   #header-container {
-    /* Revert to a row layout for a compact header */
-    flex-direction: row;
     padding: 10px 15px;
     gap: 10px;
-    /* Add position relative to act as a container for the absolute search bar */
-    position: relative;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
   h1 {
-    font-size: 16px;
-    /* Smaller title for mobile to fit */
+    font-size: 18px;
+    /* Show only "PulseRoots" on very small screens if needed */
+  }
+
+  /* Hide the subtitle part of the h1 on mobile to save space */
+  h1::after {
+    content: '';
+  }
+  
+  #logo-link h1 {
+    font-size: 18px;
+    margin: 0;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   #logo {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
   }
 
-  /* Hide the search bar on mobile */
+  /* Hide non-essential controls on mobile header to prevent overflow */
   #search-container,
   #layout-controls,
   #fullscreen-btn,
   #theme-toggle-btn {
     display: none;
+  }
+
+  .header-controls {
+    gap: 5px;
+  }
+
+  #header-share-btn,
+  #header-contact-btn {
+    display: flex !important; /* Ensure these two stay */
+    padding: 0 8px;
   }
 
   footer {
