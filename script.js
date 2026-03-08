@@ -801,8 +801,9 @@ function createTree(data) {
     .attr('class', 'link')
     .attr('d', linkGenerator)
     .style('stroke', d => {
+      const isLight = document.body.classList.contains('light-mode');
       const topLevelAncestor = d.target.ancestors().find(ancestor => ancestor.depth === 1);
-      return topLevelAncestor ? colorScale(topLevelAncestor.data.name) : 'rgba(255, 255, 255, 0.2)';
+      return topLevelAncestor ? colorScale(topLevelAncestor.data.name) : (isLight ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.2)');
     })
     .style('stroke-opacity', 0.4) // Slightly faded so it's not overwhelming unless hovered
     .style('opacity', 0);
@@ -903,7 +904,7 @@ function createTree(data) {
     })
     .style('font-family', '"Outfit", sans-serif')
     .style('font-size', '14px')
-    .style('fill', document.body.classList.contains('light-mode') ? '#333' : '#fff')
+    .style('fill', document.body.classList.contains('light-mode') ? '#0f172a' : '#fff')
     .style('font-weight', d => d.children ? '600' : '400')
     .text(d => d.data.name);
 
@@ -1717,12 +1718,23 @@ document.addEventListener('DOMContentLoaded', () => {
       const isLight = document.body.classList.contains('light-mode');
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
       
-      colorScale = isLight ? d3.scaleOrdinal(d3.schemeSet2) : d3.scaleOrdinal(d3.schemeTableau10);
+      colorScale = isLight ? d3.scaleOrdinal(d3.schemeTableau10) : d3.scaleOrdinal(d3.schemeTableau10);
       
-      const linkColor = isLight ? '#9ca3af' : d => colorScale(d.target.data.name);
-      d3.selectAll('.node circle').attr('fill', d => colorScale(d.data.name));
+      const linkColor = d => {
+        const topLevelAncestor = d.target.ancestors().find(ancestor => ancestor.depth === 1);
+        return topLevelAncestor ? colorScale(topLevelAncestor.data.name) : (isLight ? 'rgba(0, 0, 0, 0.2)' : 'rgba(255, 255, 255, 0.2)');
+      };
+
+      d3.selectAll('.node circle').style('fill', d => {
+        const topLevelAncestor = d.ancestors().find(ancestor => ancestor.depth === 1);
+        if (topLevelAncestor) {
+          return colorScale(topLevelAncestor.data.name);
+        }
+        return '#999';
+      });
+
       d3.selectAll('.link').attr('stroke', linkColor);
-      d3.selectAll('.node text').style('fill', isLight ? '#333' : '#fff');
+      d3.selectAll('.node text').style('fill', isLight ? '#0f172a' : '#fff');
       
       if (isLight) {
         themeIcon.classList.replace('bi-moon', 'bi-sun');
@@ -1876,7 +1888,8 @@ function initParticles() {
       else if (this.y < 0) this.y = height;
     }
     draw() {
-      ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+      const isLight = document.body.classList.contains('light-mode');
+      ctx.fillStyle = isLight ? `rgba(15, 23, 42, ${this.opacity})` : `rgba(255, 255, 255, ${this.opacity})`;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
