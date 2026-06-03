@@ -1866,6 +1866,17 @@ body.light-mode #genre-tree summary:hover {
 
 @media (max-width: 768px) {
 
+  /* --- Performance: remove background image on mobile --- */
+  body {
+    background-image:
+      radial-gradient(at 0% 0%, rgba(255, 0, 85, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.1) 0px, transparent 50%);
+  }
+
+  body.light-mode::before {
+    background-image: none;
+  }
+
   /* --- Header Responsive Styles --- */
   #header-container {
     padding: 10px 15px;

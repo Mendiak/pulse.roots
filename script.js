@@ -209,6 +209,12 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
   document.querySelector('meta[property="og:title"]').setAttribute('content', newTitle);
   document.querySelector('meta[name="twitter:title"]').setAttribute('content', newTitle);
 
+  // Update theme-color to match the accent color
+  const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute('content', accentColor);
+  }
+
 
   // --- Accessibility: Store focus and hide background content ---
   focusedElementBeforePanel = document.activeElement;
@@ -1085,6 +1091,12 @@ function closeInfoPanel() {
   // Reset the URL to the base if we are on a genre page
   if (window.location.pathname.includes('/genres/')) {
     history.pushState(null, '', '/pulse.roots/');
+  }
+
+  // Reset theme-color to default
+  const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute('content', '#1a1a2e');
   }
 
   if (focusedElementBeforePanel) {

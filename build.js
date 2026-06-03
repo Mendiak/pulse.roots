@@ -98,6 +98,30 @@ function buildLinkRelTags(baseUrl, fullSlugPath, breadcrumbs) {
 }
 
 /**
+ * Build MusicGenre + WebPage JSON-LD structured data for a genre page
+ */
+function buildMusicGenreLd(genreName, description, baseUrl, fullSlugPath, wikipediaUrl) {
+    const url = `${baseUrl}/genres/${fullSlugPath}.html`;
+    const desc = description || `Explore the ${genreName} style in electronic music on PulseRoots.`;
+
+    const webPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": `PulseRoots: ${genreName}`,
+        "description": desc,
+        "url": url,
+        "about": {
+            "@type": "MusicGenre",
+            "name": genreName
+        }
+    };
+
+    let result = `<script type="application/ld+json">\n${JSON.stringify(webPageSchema, null, 2)}\n</script>\n`;
+
+    return result;
+}
+
+/**
  * Generate HTML tree of all genres for the footer
  */
 function generateGenreTreeHtml(allGenreInfos, relativePrefix = '') {
@@ -187,7 +211,10 @@ function getAllGenres(genres) {
                 fullSlugPath,
                 breadcrumbs: [...breadcrumbs],
                 children,
-                description: item.description || ''
+                description: item.description || '',
+                wikipediaUrl: item.wikipedia_url || '',
+                spotifyTrackId: item.spotify_track_id || '',
+                exampleTrack: item.example || ''
             });
 
             if (item.substyles && item.substyles.length > 0) {
@@ -239,7 +266,7 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
     let generatedCount = 0;
 
     allGenresWithSlugs.forEach(genreInfo => {
-        const { genreName, fullSlugPath, breadcrumbs, children, description } = genreInfo;
+        const { genreName, fullSlugPath, breadcrumbs, children, description, wikipediaUrl } = genreInfo;
         const slugFileName = path.basename(fullSlugPath);
 
         const genreOutputDir = path.join(CONFIG.outputDir, path.dirname(fullSlugPath));
@@ -267,11 +294,12 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
         newHtml = newHtml.replace(/<link rel=\"sitemap\" type=\"application\/xml\" title=\"Sitemap\" href=\".*\">/, `<link rel="sitemap" type="application/xml" title="Sitemap" href="${CONFIG.baseUrl}/sitemap.xml">`);
         newHtml = newHtml.replace(/content="https:\/\/mendiak\.github.io\/pulse\.roots\/assets\/og_image\.webp"/, `content="${CONFIG.baseUrl}/assets/og_image.webp"`);
 
-        // Update title
+        // Update title and H1
         const newTitle = `PulseRoots: ${genreName}`;
         newHtml = newHtml.replace(/<title>.*<\/title>/, `<title>${newTitle}</title>`);
         newHtml = newHtml.replace(/<meta property="og:title" content=".*">/, `<meta property="og:title" content="${newTitle}">`);
         newHtml = newHtml.replace(/<meta name="twitter:title" content=".*">/, `<meta name="twitter:title" content="${newTitle}">`);
+        newHtml = newHtml.replace(/(<h1>).*?(<\/h1>)/, `$1${genreName}$2`);
 
         // Generate unique meta description from genre description
         const metaDesc = truncateText(description, 155) || `Explore the ${genreName} style in electronic music on PulseRoots. Discover its history, key artists, and sample tracks in our interactive visualization.`;
@@ -310,23 +338,16 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
             `href="https://www.reddit.com/submit?url=${encodedUrl}&title=${newTitle}"`
         );
 
-        // Inject breadcrumb navigation after <main>
-        const breadcrumbHtml = buildBreadcrumbHtml(breadcrumbs, genreName, relativePrefix);
-        newHtml = newHtml.replace('<main>', `<main>\n    ${breadcrumbHtml}`);
-
-        // Inject BreadcrumbList JSON-LD + link rel tags for crawler navigation
+        // Inject BreadcrumbList + MusicGenre/WebPage JSON-LD + link rel tags for crawler navigation
         const breadcrumbLd = buildBreadcrumbLd(breadcrumbs, genreName, CONFIG.baseUrl, fullSlugPath);
+        const musicLd = buildMusicGenreLd(genreName, description, CONFIG.baseUrl, fullSlugPath, wikipediaUrl);
         const linkRelTags = buildLinkRelTags(CONFIG.baseUrl, fullSlugPath, breadcrumbs);
-        newHtml = newHtml.replace('</head>', `${breadcrumbLd}\n${linkRelTags}\n</head>`);
+        newHtml = newHtml.replace('</head>', `${breadcrumbLd}\n${musicLd}\n${linkRelTags}\n</head>`);
 
-        // Inject subgenre links before </footer>
+        // Inject subgenre links before </footer (full tree already in nav#footer-genres)
         const subgenreHtml = buildSubgenreHtml(children, relativePrefix);
-        const genreTreeHtml = generateGenreTreeHtml(allGenresWithSlugs, relativePrefix);
-        const footerInject = `<div id="genre-tree">\n    <h3>All Genres</h3>\n${genreTreeHtml}    </div>\n  `;
         if (subgenreHtml) {
-            newHtml = newHtml.replace('</footer>', `${subgenreHtml}\n${footerInject}</footer>`);
-        } else {
-            newHtml = newHtml.replace('</footer>', `${footerInject}</footer>`);
+            newHtml = newHtml.replace('</footer>', `${subgenreHtml}\n  </footer>`);
         }
 
         // Inject script for dynamic loading
