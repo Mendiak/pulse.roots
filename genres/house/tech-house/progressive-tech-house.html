@@ -21,8 +21,7 @@
     </script>
 
     <!-- SEO & General Meta Tags -->
-    <meta name="description"
-        content="Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and sample tracks.">
+    <meta name="description" content="Tech house with a progressive structure, building up tension and releasing it with melodic elements.">
     <meta name="keywords"
         content="electronic music, music genres, techno, house, ambient, trance, music visualization, music tree">
     <meta name="author" content="PulseRoots">
@@ -33,23 +32,21 @@
 
     <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
     <meta property="og:title" content="PulseRoots: Progressive Tech House">
-    <meta property="og:description"
-        content="Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and sample tracks.">
+    <meta property="og:description" content="Tech house with a progressive structure, building up tension and releasing it with melodic elements.">
     <meta property="og:image" content="https://mendiak.github.io/pulse.roots/assets/og_image.webp">
     <meta property="og:url" content="https://mendiak.github.io/pulse.roots/genres/house/tech-house/progressive-tech-house.html">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PulseRoots: Progressive Tech House">
-    <meta name="twitter:description"
-        content="Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and sample tracks.">
+    <meta name="twitter:description" content="Tech house with a progressive structure, building up tension and releasing it with melodic elements.">
     <meta name="twitter:image" content="https://mendiak.github.io/pulse.roots/assets/og_image.webp">
 
     <meta name="google-site-verification" content="7tAbK2WB9Cx4uF76izgXcrBdBXVeqDfUd9A97KrLewU" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>PulseRoots: Progressive Tech House</title>
-    <link rel="stylesheet" href="/pulse.roots/styles.css">
-    <link rel="icon" href="/pulse.roots/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="icon" href="../../../assets/favicon.png" type="image/x-icon">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -73,8 +70,8 @@
     </div>
     <header>
         <div id="header-container">
-            <a href="/pulse.roots/index.html" id="logo-link" aria-label="Home">
-                <img src="/pulse.roots/assets/logo.png" id="logo" alt="PulseRoots Logo">
+            <a href="../../../index.html" id="logo-link" aria-label="Home">
+                <img src="../../../assets/logo.png" id="logo" alt="PulseRoots Logo">
                 <h1>PulseRoots: Electronic Music Styles Tree</h1>
             </a>
             <div class="header-controls">
@@ -106,6 +103,9 @@
                 <button id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Light/Dark Mode">
                     <i class="bi bi-moon"></i>
                 </button>
+                <a href="../../../contact.html" id="header-contact-btn" title="Suggest a Genre / Fix an Error" aria-label="Suggest a Genre / Fix an Error">
+                    <i class="bi bi-patch-question"></i>
+                </a>
             </div>
         </div>
     </header>
@@ -114,6 +114,12 @@
         <p style="margin: 0; font-size: 14px;"><strong>Music History:</strong> <span id="history-fact"></span></p>
     </div>
     <main>
+    <nav id="breadcrumbs" aria-label="Breadcrumb">
+    <a href="../../../index.html">Home</a>
+    <span class="breadcrumb-sep">›</span> <a href="../../../genres/house.html">House</a>
+    <span class="breadcrumb-sep">›</span> <a href="../../../genres/house/tech-house.html">Tech House</a>
+    <span class="breadcrumb-sep">›</span> <span class="breadcrumb-current">Progressive Tech House</span>
+  </nav>
         <div id="main-container">
             <div id="tooltip" class="info-box" aria-labelledby="intro-title">
                 <section>
@@ -165,7 +171,7 @@
                     <p>Thank you for visiting, and I hope you enjoy exploring the world of electronic music.</p>
 
                     <p>If you have any suggestions, improvement proposals, if you've found any errors, or just want to
-                        say 'Hi!', feel free to write to me through our <a href="/pulse.roots/contact.html"
+                        say 'Hi!', feel free to write to me through our <a href="../../../contact.html"
                             class="info-box-link">contact page</a>.</p>
                 </section>
 
@@ -243,7 +249,7 @@
     <footer>
         <div id="footer-main">
             <div id="footer-brand">
-                <img src="/pulse.roots/assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo">
+                <img src="../../../assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo">
                 <p id="footer-mission">Explore the deep connections and evolution of electronic music through an
                     interactive lens. A journey from roots to future rhythms.</p>
             </div>
@@ -259,9 +265,31 @@
                             rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> Logo</a></li>
                     <li><a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank"
                             rel="noopener noreferrer"><i class="bi bi-code-slash"></i> Portfolio</a></li>
-                    <li><a class="footer-link" href="/pulse.roots/contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
-                    <li><a class="footer-link" href="/pulse.roots/privacy.html"><i class="bi bi-shield-lock"></i> Privacy Policy</a>
+                    <li><a class="footer-link" href="../../../contact.html"><i class="bi bi-patch-question"></i> Suggest a Genre / Fix an Error</a></li>
+                    <li><a class="footer-link" href="../../../privacy.html"><i class="bi bi-shield-lock"></i> Privacy Policy</a>
                     </li>
+                    <li><a class="footer-link" href="sitemap.html"><i class="bi bi-diagram-3"></i> Sitemap</a></li>
+                    <li><a href="https://www.buymeacoffee.com/Mendiak" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Mendiak&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" alt="Buy Me A Coffee" /></a></li>
+                </ul>
+            </nav>
+
+            <nav id="footer-genres" aria-label="Genre Pages">
+                <h3>Genres</h3>
+                <ul>
+                    <li><a class="footer-link" href="../../../genres/experimental.html">Experimental</a></li>
+                    <li><a class="footer-link" href="../../../genres/techno.html">Techno</a></li>
+                    <li><a class="footer-link" href="../../../genres/electro.html">Electro</a></li>
+                    <li><a class="footer-link" href="../../../genres/house.html">House</a></li>
+                    <li><a class="footer-link" href="../../../genres/trance.html">Trance</a></li>
+                    <li><a class="footer-link" href="../../../genres/ambient.html">Ambient</a></li>
+                    <li><a class="footer-link" href="../../../genres/bass-music.html">Bass Music</a></li>
+                    <li><a class="footer-link" href="../../../genres/breakbeat.html">Breakbeat</a></li>
+                    <li><a class="footer-link" href="../../../genres/chill-out.html">Chill-out</a></li>
+                    <li><a class="footer-link" href="../../../genres/global-club.html">Global Club</a></li>
+                    <li><a class="footer-link" href="../../../genres/disco.html">Disco</a></li>
+                    <li><a class="footer-link" href="../../../genres/funk-and-soul-fusion.html">Funk and Soul Fusion</a></li>
+                    <li><a class="footer-link" href="../../../genres/industrial-and-post-industrial.html">Industrial & Post-Industrial</a></li>
+                    <li><a class="footer-link" href="../../../genres/pop-and-rock-fusion.html">Pop and Rock Fusion</a></li>
                 </ul>
             </nav>
 
@@ -292,7 +320,7 @@
         </div>
     </footer>
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="/pulse.roots/script.js"></script>
+    <script src="../../../script.js"></script>
 
     <script>
         window.PR_GENRE_TO_LOAD = "Progressive Tech House";

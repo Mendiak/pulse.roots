@@ -72,6 +72,7 @@ let genreMap = new Map(); // Helper to find genres and their parents
 let activeSelectedNode = null; // Global state for the currently selected node in the tree
 let currentLayout = 'vertical'; // Global state for the layout ('vertical' or 'radial')
 let lastHighlightedNode = null; // Track the node currently being highlighted
+let treeRoot = null; // Root of the D3 hierarchy, used for node lookup
 
 // --- Search State ---
 let matchedNodes = []; // Stores the current set of matched nodes (D3 data)
@@ -674,6 +675,21 @@ function handleUrl() {
                 const topLevelAncestor = current.data;
                 const accentColor = colorScale(topLevelAncestor.name || topLevelAncestor.style);
                 showInfoPanel(targetGenre, accentColor);
+
+                // Find the D3 tree node and scroll/highlight it
+                if (treeRoot) {
+                    const genreName = targetGenre.name || targetGenre.style;
+                    const d3Node = treeRoot.descendants().find(d => d.data.name === genreName && d.depth > 0);
+                    if (d3Node) {
+                        const nodeElements = d3.selectAll('.node').filter(n => n === d3Node);
+                        if (!nodeElements.empty()) {
+                            const element = nodeElements.node();
+                            activeSelectedNode = d3Node;
+                            highlightBranch(element, d3Node);
+                            scrollToNode(d3Node);
+                        }
+                    }
+                }
             }
         }
     } else {
@@ -799,6 +815,7 @@ function createTree(data) {
   };
 
   const root = d3.hierarchy(hierarchicalData);
+  treeRoot = root;
   treeLayout(root);
 
   // Filter out the "Electronic Music" root node from showing up in the graph
