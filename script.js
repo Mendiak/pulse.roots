@@ -1817,22 +1817,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const nodeColor = nodeSelection.select('circle').style('fill');
         showInfoPanel(randomNode.data, nodeColor);
 
-        d3.selectAll('.node').classed('faded', true);
-        d3.selectAll('.link').classed('faded', true);
-        d3.selectAll('.node').classed('path-highlight-node', false);
-        d3.selectAll('.link').classed('path-highlight-link', false);
-
-        randomNode.ancestors().forEach(ancestor => {
-            d3.selectAll('.node').filter(d => d === ancestor)
-                .classed('faded', false)
-                .classed('path-highlight-node', true);
-        });
-
-        d3.selectAll('.link')
-            .filter(link => randomNode.ancestors().includes(link.target))
-            .classed('faded', false)
-            .classed('path-highlight-link', true);
-            
+        const nodeElement = nodeSelection.node();
+        if (nodeElement) {
+          highlightBranch(nodeElement, randomNode);
+        }
       }
     });
   }
@@ -1842,15 +1830,20 @@ document.addEventListener('DOMContentLoaded', () => {
   historyFactSpan.style.opacity = '1';
   let historyInterval;
 
-  async function fetchHistoryFacts() {
-    try {
-      const response = await fetch(`${BASE_PATH}/music_history.json`);
-      const facts = await response.json();
-      return facts;
-    } catch (error) {
-      console.error('Error fetching music history facts:', error);
-      return [];
+  async function fetchHistoryFacts(retries = 2) {
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      try {
+        const response = await fetch(`${BASE_PATH}/music_history.json`);
+        const facts = await response.json();
+        return facts;
+      } catch (error) {
+        console.error('Error fetching music history facts:', error);
+        if (attempt < retries) {
+          await new Promise(r => setTimeout(r, 2000));
+        }
+      }
     }
+    return [];
   }
 
   function displayRandomFact(facts) {
@@ -1934,14 +1927,23 @@ function initParticles() {
     particles.push(new Particle());
   }
   
+  let animationId;
   function animate() {
     ctx.clearRect(0, 0, width, height);
     for (let i = 0; i < particles.length; i++) {
       particles[i].update();
       particles[i].draw();
     }
-    requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
   }
+  
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      cancelAnimationFrame(animationId);
+    } else {
+      animate();
+    }
+  });
   
   animate();
 }

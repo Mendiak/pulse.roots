@@ -1206,7 +1206,7 @@ body.light-mode .active-searched-node text {
 
 /* NEW: Style for the note about Spotify login in the info panel */
 .spotify-note {
-  font-size: 0.50rem;
+  font-size: 0.75rem;
   /* 12px */
   color: #b0b0b0;
   /* A lighter grey for secondary text */
