@@ -69,12 +69,12 @@ body.light-mode::before {
 }
 
 body.light-mode #tooltip {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--panel-dark);
   backdrop-filter: var(--glass-blur);
 }
 
 body.light-mode header h1 {
-  color: #0f172a;
+  color: var(--text-main);
 }
 
 body.light-mode #clear-button,
@@ -83,7 +83,7 @@ body.light-mode #fullscreen-btn,
 body.light-mode #header-share-btn,
 body.light-mode #theme-toggle-btn,
 body.light-mode #header-contact-btn {
-  color: #1e293b;
+  color: var(--text-main);
 }
 
 body.light-mode #clear-button:hover,
@@ -92,7 +92,7 @@ body.light-mode #fullscreen-btn:hover,
 body.light-mode #header-share-btn:hover,
 body.light-mode #theme-toggle-btn:hover,
 body.light-mode #header-contact-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--glass-bg);
 }
 
 body.light-mode footer {
@@ -126,8 +126,8 @@ body.light-mode #theme-toggle-btn:hover {
 }
 
 body.light-mode #close-panel {
-  color: #1e293b;
-  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-main);
+  background: var(--glass-bg);
 }
 
 body.light-mode #close-panel:hover {
@@ -141,11 +141,11 @@ body.light-mode #close-panel:focus-visible {
 }
 
 body.light-mode .layout-btn {
-  color: #1e293b;
+  color: var(--text-main);
 }
 
 body.light-mode .layout-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--glass-bg);
 }
 
 body.light-mode .layout-btn.active {
@@ -153,9 +153,9 @@ body.light-mode .layout-btn.active {
 }
 
 body.light-mode #search-input {
-  background: #ffffff;
+  background: var(--secondary-dark);
   border-color: #cbd5e1;
-  color: #1e293b;
+  color: var(--text-main);
 }
 
 body.light-mode #search-input::placeholder {
@@ -295,7 +295,7 @@ header {
 
 #search-input:focus {
   outline: none;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
   border-color: var(--accent-pink);
   box-shadow: 0 0 0 4px rgba(255, 0, 85, 0.15);
   width: 260px;
@@ -344,7 +344,7 @@ header {
 #header-contact-btn:hover,
 #shuffle-button:hover,
 #clear-button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
   transform: translateY(-1px);
 }
 
@@ -361,7 +361,7 @@ header {
 
 
 body.light-mode #search-nav {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--glass-bg);
 }
 
 body.light-mode #search-nav #search-counter {
@@ -387,7 +387,7 @@ body.light-mode #search-nav #search-counter {
 }
 
 .search-nav-btns button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
   color: var(--accent-pink);
 }
 
@@ -552,14 +552,14 @@ p {
 }
 
 .searched-node circle {
-  stroke: #ff0055;
+  stroke: var(--accent-pink);
   stroke-width: 4px;
   r: 10;
 }
 
 .searched-node text {
   font-weight: bold;
-  fill: #ff0055;
+  fill: var(--accent-pink);
   text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
 }
 
@@ -577,7 +577,7 @@ p {
 }
 
 body.light-mode .active-searched-node text {
-  fill: #1e293b !important;
+  fill: var(--text-main) !important;
   text-shadow: none;
 }
 
@@ -702,7 +702,7 @@ body.light-mode .active-searched-node text {
 
 .layout-btn:hover {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
   transform: translateY(-1px);
 }
 
@@ -921,7 +921,7 @@ body.light-mode .active-searched-node text {
 }
 
 #info-panel::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--glass-border);
   border-radius: 10px;
   border: 2px solid transparent;
   background-clip: content-box;
@@ -1076,7 +1076,7 @@ body.light-mode .active-searched-node text {
 }
 
 .nav-link-btn {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   color: var(--text-main);
   padding: 8px 16px;
@@ -1092,7 +1092,7 @@ body.light-mode .active-searched-node text {
 }
 
 .nav-link-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
   border-color: var(--panel-accent-color, var(--accent-pink));
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -1125,7 +1125,7 @@ body.light-mode .active-searched-node text {
 
 .parent-link {
   font-weight: bold;
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--glass-border);
 }
 
 /* --- Key Artists Slider --- */
@@ -1135,7 +1135,7 @@ body.light-mode .active-searched-node text {
   overflow-x: auto;
   padding: 10px 0;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  scrollbar-color: var(--glass-border) transparent;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -1144,7 +1144,7 @@ body.light-mode .active-searched-node text {
 }
 
 .artists-slider::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
   border-radius: 10px;
 }
 
@@ -1152,7 +1152,7 @@ body.light-mode .active-searched-node text {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   padding: 12px 18px;
   border-radius: 14px;
@@ -1273,14 +1273,14 @@ select:focus {
 body.light-mode input,
 body.light-mode textarea,
 body.light-mode select {
-  background: #ffffff;
+  background: var(--secondary-dark);
   border-color: #cbd5e1;
-  color: #1e293b;
+  color: var(--text-main);
 }
 
 body.light-mode select option {
-  background: #ffffff;
-  color: #1e293b;
+  background: var(--secondary-dark);
+  color: var(--text-main);
 }
 
 textarea {
@@ -1309,7 +1309,7 @@ textarea {
 }
 
 #clear-button {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
   color: var(--text-main);
   box-shadow: none;
 }
@@ -1557,7 +1557,7 @@ body.light-mode #genre-tree summary:hover {
   z-index: 5000;
   pointer-events: none;
   max-width: 320px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   transition: opacity 0.3s ease, transform 0.3s ease;
   line-height: 1.6;
@@ -1635,7 +1635,7 @@ body.light-mode #genre-tree summary:hover {
 
 #mobile-search-input:focus {
   outline: none;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
   border-color: var(--accent-pink);
   box-shadow: 0 0 0 4px rgba(255, 0, 85, 0.15);
 }
@@ -1746,7 +1746,7 @@ body.light-mode #genre-tree summary:hover {
 }
 
 .genre-item:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--glass-bg);
 }
 
 /* Style for leaf nodes (no sub-genres) */
@@ -2085,7 +2085,7 @@ body.light-mode #genre-tree summary:hover {
 
 /* 1. Custom Text Selection */
 ::selection {
-  background-color: #ff0055;
+  background-color: var(--accent-pink);
   /* The site's pink accent */
   color: #fff;
 }
@@ -2095,7 +2095,7 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #ff0055;
+  border-color: var(--accent-pink);
   box-shadow: 0 0 0 3px rgba(255, 0, 85, 0.2);
   /* Subtle pink glow */
 }
@@ -2117,7 +2117,7 @@ select:focus {
 
 #scroll-progress-bar {
   height: 100%;
-  background: linear-gradient(to right, #ff0055, #ff5500);
+  background: linear-gradient(to right, var(--accent-pink), #ff5500);
   /* Dynamic gradient */
   width: 0%;
   transition: width 0.1s ease-out;
@@ -2284,11 +2284,11 @@ body.light-mode .share-popover-arrow {
 }
 
 body.light-mode .share-popover-btn {
-  color: #1e293b;
+  color: var(--text-main);
 }
 
 body.light-mode .share-popover-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--glass-bg);
 }
 
 @media (max-width: 600px) {
