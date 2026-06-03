@@ -178,19 +178,19 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
         newHtml = newHtml.replace(/<link rel="canonical" href=".*">/, `<link rel="canonical" href="${newUrl}">`);
         newHtml = newHtml.replace(/<meta property="og:url" content=".*">/, `<meta property="og:url" content="${newUrl}">`);
 
-        // Update social sharing links
+        // Update social sharing links (both footer and header popover)
         const encodedUrl = encodeURIComponent(newUrl);
         const encodedText = encodeURIComponent(`Explore ${genreName} on PulseRoots!`);
         newHtml = newHtml.replace(
-            /href="https:\/\/www.facebook.com\/sharer\/sharer.php\?u=.*"/,
+            /href="https:\/\/www.facebook.com\/sharer\/sharer.php\?u=[^"]*"/g,
             `href="https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}"`
         );
         newHtml = newHtml.replace(
-            /href="https:\/\/x.com\/intent\/tweet\?url=.*"/,
+            /href="https:\/\/x.com\/intent\/tweet\?url=[^"]*"/g,
             `href="https://x.com/intent/tweet?url=${encodedUrl}&text=${encodedText}"`
         );
         newHtml = newHtml.replace(
-            /href="https:\/\/www.reddit.com\/submit\?url=.*"/,
+            /href="https:\/\/www.reddit.com\/submit\?url=[^"]*"/g,
             `href="https://www.reddit.com/submit?url=${encodedUrl}&title=${newTitle}"`
         );
 

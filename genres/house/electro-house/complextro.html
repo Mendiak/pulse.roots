@@ -76,8 +76,8 @@
             </a>
             <div class="header-controls">
                 <div id="search-container">
-                    <input type="text" id="search-input" placeholder="Search for a genre..." autocomplete="off">
-                    <div id="search-suggestions" class="hidden"></div>
+                    <input type="text" id="search-input" placeholder="Search for a genre..." autocomplete="off" role="combobox" aria-expanded="false" aria-controls="search-suggestions" aria-autocomplete="list">
+                    <div id="search-suggestions" class="hidden" role="listbox"></div>
                     <div id="search-nav" class="hidden">
                         <span id="search-counter">0 of 0</span>
                         <div class="search-nav-btns">
@@ -85,7 +85,7 @@
                             <button id="search-next" title="Next result"><i class="bi bi-chevron-down"></i></button>
                         </div>
                     </div>
-                    <button id="clear-button" class="hidden"><i class="bi bi-x-lg"></i> Clear</button>
+                    <button id="clear-button" class="hidden"><i class="bi bi-x-lg" aria-hidden="true"></i> Clear</button>
                     <button id="shuffle-button" title="Random Genre"><i class="bi bi-shuffle"></i></button>
                 </div>
                 <div id="layout-controls" class="header-control-group">
@@ -97,9 +97,35 @@
                 <button id="fullscreen-btn" title="Toggle Fullscreen" aria-label="Enter Fullscreen">
                     <i class="bi bi-fullscreen"></i>
                 </button>
-                <button id="header-share-btn" title="Share PulseRoots" aria-label="Share PulseRoots">
-                    <i class="bi bi-share"></i>
-                </button>
+                <div class="share-btn-wrapper">
+                    <button id="header-share-btn" title="Share PulseRoots" aria-label="Share PulseRoots">
+                        <i class="bi bi-share"></i>
+                    </button>
+                    <div id="share-popover" role="dialog" aria-label="Share options">
+                        <div class="share-popover-arrow"></div>
+                        <div class="share-popover-content">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmendiak.github.io%2Fpulse.roots%2Fgenres%2Fhouse%2Felectro-house%2Fcomplextro.html"
+                                target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-popover-btn">
+                                <i class="bi bi-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://x.com/intent/tweet?url=https%3A%2F%2Fmendiak.github.io%2Fpulse.roots%2Fgenres%2Fhouse%2Felectro-house%2Fcomplextro.html&text=Explore%20Complextro%20on%20PulseRoots!"
+                                target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter)" class="share-popover-btn">
+                                <i class="bi bi-twitter-x"></i>
+                                <span>X</span>
+                            </a>
+                            <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fmendiak.github.io%2Fpulse.roots%2Fgenres%2Fhouse%2Felectro-house%2Fcomplextro.html&title=PulseRoots: Complextro"
+                                target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" class="share-popover-btn">
+                                <i class="bi bi-reddit"></i>
+                                <span>Reddit</span>
+                            </a>
+                            <button id="share-popover-copy" aria-label="Copy link" class="share-popover-btn">
+                                <i class="bi bi-clipboard"></i>
+                                <span>Copy Link</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <button id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Light/Dark Mode">
                     <i class="bi bi-moon"></i>
                 </button>
@@ -109,9 +135,8 @@
             </div>
         </div>
     </header>
-    <div id="history-banner"
-        style="display: none; background: var(--panel-dark); padding: 15px; text-align: center; border-bottom: 1px solid var(--glass-border);">
-        <p style="margin: 0; font-size: 14px;"><strong>Music History:</strong> <span id="history-fact"></span></p>
+    <div id="history-banner">
+        <p><strong>Music History:</strong> <span id="history-fact"></span></p>
     </div>
     <main>
     <nav id="breadcrumbs" aria-label="Breadcrumb">
@@ -182,39 +207,13 @@
                     <div class="spinner"></div>
                     <p>Loading genres...</p>
                 </div>
-                <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
-                    <defs>
-                        <filter id="svg-glow" x="-500%" y="-500%" width="1100%" height="1100%">
-                            <!-- Thinner, brighter core glow -->
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blurCore" />
-                            <!-- Wider, softer outer glow -->
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blurOuter" />
-
-                            <!-- Combine blurs -->
-                            <feMerge result="combinedBlur">
-                                <feMergeNode in="blurOuter" />
-                                <feMergeNode in="blurCore" />
-                            </feMerge>
-
-                            <feColorMatrix in="combinedBlur" type="matrix"
-                                values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 2.5 0" result="mask" />
-                            <feFlood flood-color="var(--highlight-color, #00f2ff)" result="flood" />
-                            <feComposite in="flood" in2="mask" operator="in" result="glow" />
-
-                            <feMerge>
-                                <feMergeNode in="glow" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
-                    </defs>
-                </svg>
                 <svg id="treemap"></svg>
             </div>
             <!-- NUEVO: El contenedor para la navegación en MÓVIL -->
             <div id="mobile-nav-container">
                 <h2>Explore Genres</h2>
                 <div id="mobile-search-container">
-                    <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off">
+                    <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off" aria-label="Filter genres">
                     <button id="mobile-clear-button" class="hidden"><i class="bi bi-x-lg"></i></button>
                 </div>
                 <div id="accordion-controls">
@@ -316,7 +315,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> PulseRoots. Mapping the pulse of electronic music.</p>
+            <p>&copy; <span id="current-year">2026</span> PulseRoots. Mapping the pulse of electronic music.</p>
         </div>
     </footer>
     <script src="https://d3js.org/d3.v6.min.js"></script>

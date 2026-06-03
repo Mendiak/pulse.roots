@@ -77,7 +77,6 @@ body.light-mode header h1 {
   color: #0f172a;
 }
 
-body.light-mode #search-button,
 body.light-mode #clear-button,
 body.light-mode #shuffle-button,
 body.light-mode #fullscreen-btn,
@@ -87,7 +86,6 @@ body.light-mode #header-contact-btn {
   color: #1e293b;
 }
 
-body.light-mode #search-button:hover,
 body.light-mode #clear-button:hover,
 body.light-mode #shuffle-button:hover,
 body.light-mode #fullscreen-btn:hover,
@@ -303,7 +301,6 @@ header {
   width: 260px;
 }
 
-#search-button,
 #clear-button,
 #shuffle-button,
 #fullscreen-btn,
@@ -328,7 +325,6 @@ header {
   text-decoration: none;
 }
 
-#search-button i,
 #clear-button i,
 #shuffle-button i,
 #fullscreen-btn i,
@@ -352,26 +348,17 @@ header {
   transform: translateY(-1px);
 }
 
+.share-btn-wrapper {
+  position: relative;
+  display: flex;
+}
+
 #header-share-btn.success {
   background: var(--accent-cyan);
   color: var(--bg-dark);
 }
 
-#search-btn-text,
-#clear-btn-text {
-  display: none;
-}
 
-#search-nav {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 4px 12px;
-  border-radius: 10px;
-  border: 1px solid var(--glass-border);
-  margin-left: 12px;
-}
 
 body.light-mode #search-nav {
   background: rgba(0, 0, 0, 0.05);
@@ -568,7 +555,6 @@ p {
   stroke: #ff0055;
   stroke-width: 4px;
   r: 10;
-  /* Make the circle bigger */
 }
 
 .searched-node text {
@@ -831,9 +817,8 @@ body.light-mode .active-searched-node text {
 
 .link {
   fill: none;
-  /* Stroke is now applied via D3 dynamically, but fallback here */
   stroke-width: 1.5px;
-  transition: all 0.3s ease, stroke 0.3s, filter 0.3s;
+  transition: stroke 0.3s ease, stroke-width 0.3s ease, filter 0.3s ease;
 }
 
 /* --- Active Pulsing Node --- */
@@ -1303,7 +1288,6 @@ textarea {
 }
 
 #submitbutton,
-#search-button,
 #clear-button {
   background: var(--accent-gradient);
   color: white;
@@ -1318,7 +1302,6 @@ textarea {
 }
 
 #submitbutton:hover,
-#search-button:hover,
 #clear-button:hover {
   transform: translateY(-2px);
   filter: brightness(1.1);
@@ -2124,7 +2107,139 @@ select:focus {
   }
 }
 
-/* History Banner Animation */
+/* Share Popover */
+#share-popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 5000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+#share-popover.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.share-popover-arrow {
+  position: absolute;
+  top: -6px;
+  right: 18px;
+  width: 12px;
+  height: 12px;
+  background: var(--panel-dark);
+  border: 1px solid var(--glass-border);
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.share-popover-content {
+  display: flex;
+  gap: 4px;
+  background: var(--panel-dark);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 6px;
+  backdrop-filter: blur(25px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.share-popover-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.share-popover-btn i {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.share-popover-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.share-popover-btn:hover i {
+  transform: scale(1.15);
+}
+
+.share-popover-btn:active {
+  transform: scale(0.95);
+}
+
+#share-popover-copy.success i {
+  color: var(--accent-cyan);
+}
+
+body.light-mode .share-popover-content {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .share-popover-arrow {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .share-popover-btn {
+  color: #1e293b;
+}
+
+body.light-mode .share-popover-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 600px) {
+  #share-popover {
+    right: -10px;
+  }
+  .share-popover-arrow {
+    right: 28px;
+  }
+  .share-popover-btn span {
+    display: none;
+  }
+  .share-popover-btn {
+    padding: 10px 14px;
+  }
+  .share-popover-btn i {
+    font-size: 1.3rem;
+  }
+}
+
+/* History Banner */
+#history-banner {
+  display: none;
+  background: var(--panel-dark);
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+#history-banner p {
+  margin: 0;
+  font-size: 14px;
+}
+
 #history-banner #history-fact {
   transition: opacity 0.5s ease-in-out;
 }

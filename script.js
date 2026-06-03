@@ -908,15 +908,12 @@ function createTree(data) {
     });
 
   // Entry animation for nodes (fading in and slightly scaling up)
-  node.transition()
-    .duration(500)
-    .delay(d => (d.depth * 150) + 400) // Appear right after the line reaches them
-    .style('opacity', 1);
+  node.style('opacity', 0);
 
   node.each(function(d) { d.gNode = this; });
 
   node.append('circle')
-    .attr('r', 6)
+    .attr('r', d => d.children ? 8 : 5)
     .style('fill', d => {
       const topLevelAncestor = d.ancestors().find(ancestor => ancestor.depth === 1);
       if (topLevelAncestor) {
@@ -946,6 +943,12 @@ function createTree(data) {
     .style('fill', document.body.classList.contains('light-mode') ? '#0f172a' : '#fff')
     .style('font-weight', d => d.children ? '600' : '400')
     .text(d => d.data.name);
+
+  // Fade in after all children are appended
+  node.transition()
+    .duration(500)
+    .delay(d => (d.depth * 150) + 400)
+    .style('opacity', 1);
 
   // Add a radial gradient or glow effect if desired (via CSS is easier)
 }
@@ -1437,6 +1440,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!term) {
       suggestionsContainer.innerHTML = '';
       suggestionsContainer.classList.add('hidden');
+      searchInput.setAttribute('aria-expanded', 'false');
       return;
     }
 
@@ -1471,6 +1475,7 @@ document.addEventListener('DOMContentLoaded', () => {
           searchInput.value = name;
           suggestionsContainer.innerHTML = '';
           suggestionsContainer.classList.add('hidden');
+          searchInput.setAttribute('aria-expanded', 'false');
           
           performSearch(name);
           
@@ -1484,9 +1489,11 @@ document.addEventListener('DOMContentLoaded', () => {
         suggestionsContainer.appendChild(div);
       });
       suggestionsContainer.classList.remove('hidden');
+      searchInput.setAttribute('aria-expanded', 'true');
     } else {
       suggestionsContainer.innerHTML = '';
       suggestionsContainer.classList.add('hidden');
+      searchInput.setAttribute('aria-expanded', 'false');
     }
   }
 
@@ -1511,17 +1518,18 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         const term = searchInput.value;
         if (term) {
-          // If search is already active with this term, Enter key acts as "Next"
           if (matchedNodes.length > 0 && term.toLowerCase() === matchedNodes[0].data.name.toLowerCase().substring(0, term.length)) {
-             navigateToMatch(currentMatchIndex + 1);
+            navigateToMatch(currentMatchIndex + 1);
           } else {
-             performSearch(term);
+            performSearch(term);
           }
+          suggestionsContainer.classList.add('hidden');
+          searchInput.setAttribute('aria-expanded', 'false');
         }
-        suggestionsContainer.classList.add('hidden');
       }
     } else if (event.key === 'Escape') {
-        suggestionsContainer.classList.add('hidden');
+      suggestionsContainer.classList.add('hidden');
+      searchInput.setAttribute('aria-expanded', 'false');
     }
   });
 
@@ -1546,6 +1554,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => {
     if (e.target !== searchInput && e.target !== suggestionsContainer) {
       suggestionsContainer.classList.add('hidden');
+      searchInput.setAttribute('aria-expanded', 'false');
     }
   });
 
@@ -1554,6 +1563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     performSearch('');
     suggestionsContainer.innerHTML = '';
     suggestionsContainer.classList.add('hidden');
+    searchInput.setAttribute('aria-expanded', 'false');
     document.getElementById('clear-button').classList.add('hidden'); // Added this line
     // Also reset navigation state
     matchedNodes = [];
@@ -1672,42 +1682,65 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const headerShareBtn = document.getElementById('header-share-btn');
-  if (headerShareBtn) {
-    const shareIcon = headerShareBtn.querySelector('i');
-    const originalIconClass = 'bi-share';
-    const successIconClass = 'bi-check-lg';
+  const sharePopover = document.getElementById('share-popover');
+  if (headerShareBtn && sharePopover) {
+    function updateShareLinks() {
+      const url = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent(document.title || 'PulseRoots: Electronic Music Styles Tree');
+      const text = encodeURIComponent('Explore the evolution of electronic music with PulseRoots!');
+      const links = sharePopover.querySelectorAll('a.share-popover-btn');
+      if (links[0]) links[0].href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      if (links[1]) links[1].href = `https://x.com/intent/tweet?url=${url}&text=${text}`;
+      if (links[2]) links[2].href = `https://www.reddit.com/submit?url=${url}&title=${title}`;
+    }
 
-    headerShareBtn.addEventListener('click', async () => {
-      const shareData = {
-        title: 'PulseRoots: Electronic Music Styles Tree',
-        text: 'Explore the evolution of electronic music with PulseRoots.',
-        url: window.location.href
-      };
+    function openSharePopover() {
+      updateShareLinks();
+      sharePopover.classList.add('visible');
+    }
 
-      if (navigator.share) {
-        try {
-          await navigator.share(shareData);
-        } catch (err) {
-          console.error('Error sharing:', err);
-        }
+    function closeSharePopover() {
+      sharePopover.classList.remove('visible');
+    }
+
+    headerShareBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (sharePopover.classList.contains('visible')) {
+        closeSharePopover();
       } else {
-        // Fallback: Copy to clipboard
-        try {
-          await navigator.clipboard.writeText(window.location.href);
-          headerShareBtn.classList.add('success');
-          shareIcon.classList.replace(originalIconClass, successIconClass);
-          headerShareBtn.setAttribute('aria-label', 'Link copied!');
-
-          setTimeout(() => {
-            headerShareBtn.classList.remove('success');
-            shareIcon.classList.replace(successIconClass, originalIconClass);
-            headerShareBtn.setAttribute('aria-label', 'Share PulseRoots');
-          }, 2000);
-        } catch (err) {
-          console.error('Failed to copy link: ', err);
-        }
+        openSharePopover();
       }
     });
+
+    document.addEventListener('click', (e) => {
+      if (!headerShareBtn.contains(e.target) && !sharePopover.contains(e.target)) {
+        closeSharePopover();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSharePopover();
+    });
+
+    const popoverCopyBtn = document.getElementById('share-popover-copy');
+    if (popoverCopyBtn) {
+      const popoverCopyIcon = popoverCopyBtn.querySelector('i');
+      popoverCopyBtn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          const originalIcon = popoverCopyIcon.className;
+          popoverCopyIcon.className = 'bi bi-check-lg';
+          popoverCopyBtn.classList.add('success');
+          setTimeout(() => {
+            popoverCopyIcon.className = originalIcon;
+            popoverCopyBtn.classList.remove('success');
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy link:', err);
+        }
+      });
+    }
   }
 
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
