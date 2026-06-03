@@ -184,7 +184,6 @@ function showInfoPanel(inputData, accentColor = '#ff0055') {
 
   const infoPanel = document.getElementById('info-panel');
   const infoContent = document.getElementById('info-content');
-  const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
   const scrollIndicator = document.getElementById('scroll-indicator');
 
@@ -1093,23 +1092,25 @@ function closeInfoPanel() {
  */
 function createMobileNav(items, parentElement, parentColor = null) {
   items.forEach(item => {
-    const baseId = `${slugify(item.style || item.name)}-${Math.random().toString(36).substr(2, 9)}`;
+    const baseId = `${slugify(item.name || item.style)}-${Math.random().toString(36).substr(2, 9)}`;
     const subListId = `sub-list-${baseId}`;
 
     const listItem = document.createElement('li');
-    const itemElement = document.createElement(item.substyles && item.substyles.length > 0 ? 'button' : 'div');
+    const isButton = item.substyles && item.substyles.length > 0;
+    const itemElement = document.createElement(isButton ? 'button' : 'div');
+    if (isButton) itemElement.setAttribute('type', 'button');
 
     itemElement.dataset.action = 'toggle';
     itemElement.dataset.itemData = JSON.stringify(item); 
     itemElement.className = 'genre-item';
 
-    const currentColor = parentColor || colorScale(item.style || item.name);
+    const currentColor = parentColor || colorScale(item.name || item.style);
     itemElement.style.setProperty('--genre-color', currentColor);
 
     const nameSpan = document.createElement('span');
     nameSpan.className = 'genre-name';
-    nameSpan.textContent = item.style || item.name;
-    nameSpan.dataset.originalText = item.style || item.name;
+    nameSpan.textContent = item.name || item.style;
+    nameSpan.dataset.originalText = item.name || item.style;
     itemElement.appendChild(nameSpan);
 
     const actionsDiv = document.createElement('div');
@@ -1122,14 +1123,14 @@ function createMobileNav(items, parentElement, parentColor = null) {
       wikiIconLink.rel = 'noopener noreferrer';
       wikiIconLink.className = 'bi bi-wikipedia wiki-icon';
       wikiIconLink.dataset.action = 'wiki';
-      wikiIconLink.setAttribute('aria-label', `Read more about ${item.style || item.name} on Wikipedia`);
+      wikiIconLink.setAttribute('aria-label', `Read more about ${item.name || item.style} on Wikipedia`);
       actionsDiv.appendChild(wikiIconLink);
     }
 
     const infoIcon = document.createElement('i');
     infoIcon.className = 'bi bi-info-circle-fill info-icon';
     infoIcon.dataset.action = 'info';
-    infoIcon.setAttribute('aria-label', `Info for ${item.style || item.name}`);
+    infoIcon.setAttribute('aria-label', `Info for ${item.name || item.style}`);
     actionsDiv.appendChild(infoIcon);
 
 
@@ -1483,6 +1484,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const div = document.createElement('div');
         div.className = 'suggestion-item';
+        div.setAttribute('role', 'option');
+        div.setAttribute('aria-selected', 'false');
         div.innerHTML = `
           <span class="suggestion-name">${name}</span>
           <span class="suggestion-family">${familyNode}</span>
@@ -1547,17 +1550,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function addActive(items) {
-    if (!items) return false;
+    if (!items) return;
     removeActive(items);
     if (currentFocus >= items.length) currentFocus = 0;
     if (currentFocus < 0) currentFocus = (items.length - 1);
     items[currentFocus].classList.add('active');
+    items[currentFocus].setAttribute('aria-selected', 'true');
     items[currentFocus].scrollIntoView({ block: 'nearest' });
   }
 
   function removeActive(items) {
     for (let i = 0; i < items.length; i++) {
       items[i].classList.remove('active');
+      items[i].setAttribute('aria-selected', 'false');
     }
   }
 
@@ -1597,15 +1602,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navigateToMatch(currentMatchIndex + 1);
     });
   }
-
-  // This duplicate listener was removed as Enter is handled above logic-wise
-  /*
-  searchInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-    }
-  });
-  */
 
   document.getElementById('current-year').textContent = new Date().getFullYear();
 

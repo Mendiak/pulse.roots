@@ -80,7 +80,7 @@
             <div class="header-controls">
                 <div id="search-container">
                     <input type="text" id="search-input" placeholder="Search for a genre..." autocomplete="off">
-                    <div id="search-suggestions" class="hidden"></div>
+                    <div id="search-suggestions" class="hidden" role="listbox"></div>
                     <div id="search-nav" class="hidden">
                         <span id="search-counter">0 of 0</span>
                         <div class="search-nav-btns">
@@ -211,7 +211,7 @@
             <div id="mobile-nav-container">
                 <h2>Explore Genres</h2>
                 <div id="mobile-search-container">
-                    <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off">
+                    <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off" aria-label="Filter genres">
                     <button id="mobile-clear-button" class="hidden"><i class="bi bi-x-lg"></i></button>
                 </div>
                 <div id="accordion-controls">
@@ -313,7 +313,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> PulseRoots. Mapping the pulse of electronic music.</p>
+            <p>&copy; <span id="current-year">2026</span> PulseRoots. Mapping the pulse of electronic music.</p>
         </div>
     </footer>
     <script src="https://d3js.org/d3.v6.min.js"></script>

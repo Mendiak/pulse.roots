@@ -155,21 +155,6 @@ body.light-mode .layout-btn.active {
 }
 
 body.light-mode #search-input {
-  background: #ffffff !important;
-  border: 1px solid #94a3b8 !important;
-  color: #0f172a !important;
-}
-
-body.light-mode #search-input::placeholder {
-  color: #4b5563 !important;
-  opacity: 1 !important;
-}
-
-body.light-mode .layout-btn.active {
-  color: #fff;
-}
-
-body.light-mode #search-input {
   background: #ffffff;
   border-color: #cbd5e1;
   color: #1e293b;
