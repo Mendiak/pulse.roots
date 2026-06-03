@@ -27,12 +27,6 @@
             color: var(--text-main);
             background-color: var(--bg-dark);
             line-height: 1.6;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
         }
         .container {
@@ -42,7 +36,7 @@
             border: 1px solid var(--glass-border);
             border-radius: 16px;
             padding: 40px;
-            margin-top: 40px;
+            margin: 40px auto;
             box-shadow: var(--shadow-lg);
             width: 100%;
             max-width: 600px;
@@ -105,6 +99,60 @@
         
         <p style="text-align: center; margin-top: 30px;"><a href="index.html" class="back-button">Back to PulseRoots</a></p>
     </div>
+
+    <footer>
+        <div id="footer-main">
+            <div id="footer-brand">
+                <img src="assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo" loading="lazy">
+                <p id="footer-mission">Explore the deep connections and evolution of electronic music through an
+                    interactive lens. A journey from roots to future rhythms.</p>
+            </div>
+
+            <nav id="footer-links" aria-label="Links and Credits">
+                <h3>Links & Credits</h3>
+                <ul>
+                    <li><a class="footer-link" href="https://github.com/Mendiak/pulse.roots" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-github"></i> Github</a></li>
+                    <li><a class="footer-link" href="https://unsplash.com/es/@kshar2" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-camera"></i> Background Picture</a></li>
+                    <li><a class="footer-link" href="https://www.flaticon.com/" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> Logo</a></li>
+                    <li><a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank"
+                            rel="noopener noreferrer"><i class="bi bi-code-slash"></i> Portfolio</a></li>
+                    <li><a class="footer-link" href="contact.html"><i class="bi bi-patch-question"></i> Contact</a></li>
+                    <li><a class="footer-link" href="privacy.html"><i class="bi bi-shield-lock"></i> Privacy Policy</a>
+                    </li>
+                    <li><a class="footer-link" href="sitemap.html"><i class="bi bi-diagram-3"></i> Sitemap</a></li>
+                    <li><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Mendiak" data-color="#FFDD00" data-emoji="☕" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script></li>
+                </ul>
+            </nav>
+
+            <div id="footer-social-section">
+                <h3>Share This</h3>
+                <div id="social-icons-container">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://mendiak.github.io/pulse.roots/"
+                        target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="social-btn">
+                        <i class="bi bi-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://x.com/intent/tweet?url=https://mendiak.github.io/pulse.roots/&text=Explore%20the%20evolution%20of%20electronic%20music%20with%20PulseRoots!%20%23ElectronicMusic%20%23MusicGenres"
+                        target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter)" class="social-btn">
+                        <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.reddit.com/submit?url=https://mendiak.github.io/pulse.roots/&title=PulseRoots:%20Electronic%20Music%20Styles%20Tree"
+                        target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" class="social-btn">
+                        <i class="bi bi-reddit" aria-hidden="true"></i>
+                    </a>
+                    <button id="copy-link-btn" aria-label="Copy link to clipboard" class="social-btn">
+                        <i class="bi bi-clipboard" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2026</span> PulseRoots. Mapping the pulse of electronic music.</p>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

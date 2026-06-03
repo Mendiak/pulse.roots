@@ -271,6 +271,29 @@ export function showInfoPanel(inputData, accentColor = '#ff0055') {
     infoContent.appendChild(subgenresNav);
   }
 
+  const donationContainer = document.createElement('div');
+  donationContainer.style.marginTop = '24px';
+  donationContainer.style.textAlign = 'center';
+
+  const donationLink = document.createElement('a');
+  donationLink.href = 'https://www.buymeacoffee.com/Mendiak';
+  donationLink.target = '_blank';
+  donationLink.rel = 'noopener noreferrer';
+  donationLink.style.display = 'inline-flex';
+  donationLink.style.alignItems = 'center';
+  donationLink.style.gap = '6px';
+  donationLink.style.color = 'var(--text-muted)';
+  donationLink.style.textDecoration = 'none';
+  donationLink.style.fontSize = '0.8em';
+  donationLink.style.opacity = '0.6';
+  donationLink.style.transition = 'opacity 0.2s ease';
+  donationLink.innerHTML = '<i class="bi bi-cup-hot"></i> Buy me a coffee';
+  donationLink.addEventListener('mouseenter', () => { donationLink.style.opacity = '1'; });
+  donationLink.addEventListener('mouseleave', () => { donationLink.style.opacity = '0.6'; });
+
+  donationContainer.appendChild(donationLink);
+  infoContent.appendChild(donationContainer);
+
   setTimeout(() => {
     if (infoPanel.scrollHeight > infoPanel.clientHeight) {
       scrollIndicator.classList.remove('hidden');
