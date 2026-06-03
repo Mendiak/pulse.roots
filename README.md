@@ -31,7 +31,7 @@ PulseRoots is an interactive visualization of the evolution of electronic music.
 
 ## Data Structure
 
-The project's heart is `pulseroots.genres.json`. It follows a recursive tree structure:
+The project's heart is `data/pulseroots.genres.json`. It follows a recursive tree structure:
 
 ```json
 {
@@ -50,20 +50,40 @@ The project's heart is `pulseroots.genres.json`. It follows a recursive tree str
 ```
 
 ### Node.js (Maintenance)
-- `build.js`: Consolidates SEO and data maintenance. It generates `sitemap.xml` and all individual genre HTML pages in the `genres/` directory based on the hierarchy in `pulseroots.genres.json`.
+- `build.js`: Consolidates SEO and data maintenance. It generates `sitemap.xml` and all individual genre HTML pages in the `genres/` directory based on the hierarchy in `data/pulseroots.genres.json`.
 - **Usage**: `node build.js`
 
 ## Project Structure
 
-- `index.html`: Main entry point and layout.
-- `script.js`: Core logic for D3.js visualization, search, and interactions.
-- `styles.css`: Custom styling and responsive design.
-- `pulseroots.genres.json`: The database of genres.
-- `assets/`: Images, icons, and branding assets.
-- `generate-sitemap.js`: Sitemap generator (Node.js).
-- `build.js`: Build and maintenance script (Node.js).
-- `sitemap.xml` / `robots.txt`: SEO files.
-- `thanks.html`: Redirection page for the contact form.
+```
+pulse.roots/
+├── src/
+│   └── js/                    # ES6 modules (type="module")
+│       ├── main.js            # Entry point, orchestration
+│       ├── state.js           # Shared state between modules
+│       ├── utils.js           # Utilities (debounce, slugify, etc.)
+│       ├── tree.js            # D3.js tree visualization
+│       ├── panel.js           # Genre info panel
+│       ├── mobile-nav.js      # Mobile accordion navigation
+│       ├── search.js          # Search with suggestions
+│       ├── particles.js       # Particle background
+│       └── theme.js           # Theme toggle, fullscreen, shuffle
+├── data/
+│   ├── pulseroots.genres.json # The database of genres
+│   └── music_history.json     # Historical music facts
+├── assets/                    # Images, icons, branding
+├── genres/                    # Generated genre pages (via build.js)
+├── index.html                 # Main entry point
+├── styles.css                 # Custom styling and responsive design
+├── build.js                   # Build and maintenance script (Node.js)
+├── package.json               # Project metadata
+├── contact.html               # Contact page
+├── privacy.html               # Privacy policy
+├── thanks.html                # Redirection page for the contact form
+├── sitemap.xml                # SEO sitemap
+├── sitemap.html               # HTML sitemap
+└── robots.txt                 # Robots exclusion
+```
 
 ## Contributing
 

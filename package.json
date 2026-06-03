@@ -1,0 +1,19 @@
+{
+  "name": "pulse-roots",
+  "version": "1.0.0",
+  "description": "PulseRoots: Electronic Music Styles Tree - Interactive visualization of the evolution of electronic music.",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  },
+  "license": "MIT",
+  "author": "PulseRoots",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mendiak/pulse.roots.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mendiak/pulse.roots/issues"
+  },
+  "homepage": "https://mendiak.github.io/pulse.roots/"
+}
