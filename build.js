@@ -37,6 +37,122 @@ function truncateText(text, maxLen) {
 }
 
 /**
+ * Escape HTML special characters in text
+ */
+function escapeHtml(text) {
+    return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+/**
+ * Get genre depth from its path (1 = top-level)
+ */
+function getGenreDepth(fullSlugPath) {
+    return fullSlugPath.split('/').length;
+}
+
+/**
+ * Build BreadcrumbList JSON-LD structured data
+ */
+function buildBreadcrumbLd(breadcrumbs, currentGenreName, baseUrl, fullSlugPath) {
+    const items = [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": baseUrl + "/"
+        }
+    ];
+
+    let pos = 2;
+    for (const crumb of breadcrumbs) {
+        items.push({
+            "@type": "ListItem",
+            "position": pos++,
+            "name": crumb.name,
+            "item": `${baseUrl}/${crumb.url}`
+        });
+    }
+
+    items.push({
+        "@type": "ListItem",
+        "position": pos,
+        "name": currentGenreName,
+        "item": `${baseUrl}/genres/${fullSlugPath}.html`
+    });
+
+    return `<script type="application/ld+json">
+${JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items }, null, 2)}
+</script>`;
+}
+
+/**
+ * Build link rel tags for crawl navigation
+ */
+function buildLinkRelTags(baseUrl, fullSlugPath, breadcrumbs) {
+    const indexTag = `    <link rel="index" href="${baseUrl}/">\n`;
+    if (breadcrumbs.length > 0) {
+        const lastCrumb = breadcrumbs[breadcrumbs.length - 1];
+        return indexTag + `    <link rel="up" href="${baseUrl}/${lastCrumb.url}">\n`;
+    }
+    return indexTag;
+}
+
+/**
+ * Generate HTML tree of all genres for the footer
+ */
+function generateGenreTreeHtml(allGenreInfos, relativePrefix = '') {
+    const childrenMap = {};
+    for (const info of allGenreInfos) {
+        const parts = info.fullSlugPath.split('/');
+        const parentKey = parts.slice(0, -1).join('/');
+        if (!childrenMap[parentKey]) {
+            childrenMap[parentKey] = [];
+        }
+        childrenMap[parentKey].push(info);
+    }
+
+    for (const key of Object.keys(childrenMap)) {
+        childrenMap[key].sort((a, b) => a.genreName.localeCompare(b.genreName));
+    }
+
+    function buildNestedList(parentKey) {
+        const children = childrenMap[parentKey];
+        if (!children || children.length === 0) return '';
+
+        let html = '        <ul>\n';
+        for (const child of children) {
+            const url = `${relativePrefix}genres/${child.fullSlugPath}.html`;
+            const grandChildren = childrenMap[child.fullSlugPath];
+
+            if (grandChildren && grandChildren.length > 0) {
+                html += `          <li>\n`;
+                html += `            <details>\n`;
+                html += `              <summary><a href="${url}">${escapeHtml(child.genreName)}</a></summary>\n`;
+                html += buildNestedList(child.fullSlugPath);
+                html += `            </details>\n`;
+                html += `          </li>\n`;
+            } else {
+                html += `          <li><a href="${url}">${escapeHtml(child.genreName)}</a></li>\n`;
+            }
+        }
+        html += '        </ul>\n';
+        return html;
+    }
+
+    const topLevel = childrenMap[''] || [];
+    topLevel.sort((a, b) => a.genreName.localeCompare(b.genreName));
+
+    let html = '';
+    for (const top of topLevel) {
+        const url = `${relativePrefix}genres/${top.fullSlugPath}.html`;
+        html += `      <details>\n        <summary><a href="${url}">${escapeHtml(top.genreName)}</a></summary>\n`;
+        html += buildNestedList(top.fullSlugPath);
+        html += `      </details>\n`;
+    }
+    return html;
+}
+
+/**
  * Recursively get all genres from the JSON structure with full hierarchical info
  */
 function getAllGenres(genres) {
@@ -198,10 +314,19 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
         const breadcrumbHtml = buildBreadcrumbHtml(breadcrumbs, genreName, relativePrefix);
         newHtml = newHtml.replace('<main>', `<main>\n    ${breadcrumbHtml}`);
 
+        // Inject BreadcrumbList JSON-LD + link rel tags for crawler navigation
+        const breadcrumbLd = buildBreadcrumbLd(breadcrumbs, genreName, CONFIG.baseUrl, fullSlugPath);
+        const linkRelTags = buildLinkRelTags(CONFIG.baseUrl, fullSlugPath, breadcrumbs);
+        newHtml = newHtml.replace('</head>', `${breadcrumbLd}\n${linkRelTags}\n</head>`);
+
         // Inject subgenre links before </footer>
         const subgenreHtml = buildSubgenreHtml(children, relativePrefix);
+        const genreTreeHtml = generateGenreTreeHtml(allGenresWithSlugs, relativePrefix);
+        const footerInject = `<div id="genre-tree">\n    <h3>All Genres</h3>\n${genreTreeHtml}    </div>\n  `;
         if (subgenreHtml) {
-            newHtml = newHtml.replace('</footer>', `${subgenreHtml}\n  </footer>`);
+            newHtml = newHtml.replace('</footer>', `${subgenreHtml}\n${footerInject}</footer>`);
+        } else {
+            newHtml = newHtml.replace('</footer>', `${footerInject}</footer>`);
         }
 
         // Inject script for dynamic loading
@@ -236,11 +361,18 @@ function generateSitemap(allGenreInfos) {
 
     allGenreInfos.forEach(genreInfo => {
         if (genreInfo.fullSlugPath) {
+            const depth = getGenreDepth(genreInfo.fullSlugPath);
+            let priority;
+            if (depth === 1) priority = '0.9';
+            else if (depth === 2) priority = '0.8';
+            else if (depth === 3) priority = '0.7';
+            else priority = '0.6';
+
             urls.push({
                 loc: `${baseUrlWithSlash}genres/${genreInfo.fullSlugPath}.html`,
                 lastmod: today,
                 changefreq: 'monthly',
-                priority: '0.8',
+                priority: priority,
             });
         }
     });
@@ -358,6 +490,67 @@ ${linkHtml}
     console.log(`✓ HTML Sitemap generated successfully.`);
 }
 
+/**
+ * Generate genres/index.html with crawlable links to all genre pages
+ */
+function generateGenresIndexPage(allGenreInfos) {
+    console.log("Generating genres/index.html...");
+
+    const baseUrl = CONFIG.baseUrl;
+    const relativePrefix = '../';
+
+    let linkHtml = '';
+    for (const info of allGenreInfos) {
+        const url = `${baseUrl}/genres/${info.fullSlugPath}.html`;
+        const indent = getGenreDepth(info.fullSlugPath);
+        linkHtml += `${'  '.repeat(indent)}<li><a href="${url}">${escapeHtml(info.genreName)}</a></li>\n`;
+    }
+
+    const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Genres - PulseRoots</title>
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Browse all electronic music genres on PulseRoots - from Techno and House to Ambient and Experimental.">
+  <link rel="canonical" href="${baseUrl}/genres/">
+  <link rel="stylesheet" href="${relativePrefix}styles.css">
+  <link rel="icon" href="${relativePrefix}assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div id="header-container">
+      <a href="${baseUrl}/" id="logo-link" aria-label="Home">
+        <h1>PulseRoots - All Genres</h1>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div id="main-container" style="padding: 20px; max-width: 800px; margin: 0 auto;">
+      <h2>All Genres</h2>
+      <ul>
+        <li><a href="${baseUrl}/">Home</a></li>
+      </ul>
+      <h3>Genre Pages</h3>
+      <ul>
+${linkHtml}
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> PulseRoots. Mapping the pulse of electronic music.</p>
+    </div>
+  </footer>
+</body>
+</html>`;
+
+    const indexPath = path.join(CONFIG.outputDir, 'index.html');
+    fs.writeFileSync(indexPath, html, 'utf-8');
+    console.log(`✓ genres/index.html generated with ${allGenreInfos.length} genre links.`);
+}
+
 // Main Execution
 try {
     if (!fs.existsSync(CONFIG.outputDir)) {
@@ -371,6 +564,25 @@ try {
     generateGenrePages(allGenresWithSlugs, templateHtml);
     generateSitemap(allGenresWithSlugs);
     generateSitemapHtml(allGenresWithSlugs);
+    generateGenresIndexPage(allGenresWithSlugs);
+
+    // Inject full genre tree into index.html footer
+    console.log("Updating index.html with full genre tree...");
+    const indexHtml = fs.readFileSync(CONFIG.templatePath, 'utf-8');
+    const genreTreeHtml = generateGenreTreeHtml(allGenresWithSlugs);
+    const startMarker = '<!--GENRE_TREE_START-->';
+    const endMarker = '<!--GENRE_TREE_END-->';
+    const startIdx = indexHtml.indexOf(startMarker);
+    const endIdx = indexHtml.indexOf(endMarker);
+    if (startIdx !== -1 && endIdx !== -1) {
+        const before = indexHtml.substring(0, startIdx + startMarker.length);
+        const after = indexHtml.substring(endIdx);
+        const updatedIndexHtml = before + '\n' + genreTreeHtml + after;
+        fs.writeFileSync(CONFIG.templatePath, updatedIndexHtml, 'utf-8');
+        console.log("✓ index.html updated with genre tree.");
+    } else {
+        console.log("⚠ Markers not found in index.html. Skipping.");
+    }
 
     console.log('\nBuild complete!');
 } catch (error) {

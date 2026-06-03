@@ -1473,6 +1473,78 @@ footer {
 
 }
 
+/* --- Genre Tree Footer --- */
+#footer-genres details,
+#genre-tree details {
+  margin: 0;
+}
+
+#footer-genres summary,
+#genre-tree summary {
+  cursor: pointer;
+  padding: 4px 0;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  transition: color 0.3s ease;
+}
+
+#footer-genres summary:hover,
+#genre-tree summary:hover {
+  color: var(--accent-pink);
+}
+
+#footer-genres a,
+#genre-tree a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#footer-genres a:hover,
+#genre-tree a:hover {
+  color: var(--accent-pink);
+  text-decoration: underline;
+}
+
+#footer-genres ul,
+#genre-tree ul {
+  list-style: none;
+  padding: 0 0 0 16px;
+  margin: 4px 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#footer-genres > details > summary,
+#genre-tree > details > summary {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+body.light-mode #footer-genres a,
+body.light-mode #genre-tree a {
+  color: var(--text-muted);
+}
+
+body.light-mode #footer-genres a:hover,
+body.light-mode #genre-tree a:hover {
+  color: var(--accent-pink);
+}
+
+body.light-mode #footer-genres summary,
+body.light-mode #genre-tree summary {
+  color: var(--text-main);
+}
+
+body.light-mode #footer-genres summary:hover,
+body.light-mode #genre-tree summary:hover {
+  color: var(--accent-pink);
+}
+
 .tooltip {
   position: absolute;
   background: rgba(13, 17, 23, 0.85);
