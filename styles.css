@@ -434,7 +434,7 @@ main {
 .info-box,
 #treemap,
 #mobile-nav-container {
-  background: rgba(15, 23, 42, 0.85);
+  background: var(--panel-dark);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   box-shadow: var(--shadow-lg);
