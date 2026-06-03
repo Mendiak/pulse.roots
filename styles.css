@@ -98,28 +98,28 @@ body.light-mode #header-contact-btn:hover {
 }
 
 body.light-mode footer {
-  color: #f8fafc;
+  color: var(--text-main);
 }
 
 body.light-mode #footer-mission {
-  color: #f8fafc;
+  color: var(--text-muted);
 }
 
 body.light-mode #footer-links h3,
 body.light-mode #footer-social-section h3 {
-  color: #f8fafc;
+  color: var(--text-main);
 }
 
 body.light-mode .footer-link {
-  color: #f8fafc;
+  color: var(--text-muted);
 }
 
 body.light-mode .footer-bottom {
-  color: #f8fafc;
+  color: var(--text-muted);
 }
 
 body.light-mode #current-year {
-  color: #f8fafc;
+  color: var(--text-main);
 }
 
 body.light-mode #theme-toggle-btn:hover {
@@ -187,6 +187,19 @@ body.light-mode #history-banner p {
 
 body.light-mode #treemap {
   background: rgba(255, 255, 255, 0.85);
+}
+
+body.light-mode #logo,
+body.light-mode #footer-logo {
+  filter: invert(1);
+}
+
+body.light-mode #logo:hover {
+  filter: invert(1) drop-shadow(0 3px 5px rgba(0, 0, 0, 0.4));
+}
+
+body.light-mode #footer-logo {
+  filter: invert(1) drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 }
 
 * {
