@@ -6,9 +6,10 @@ PulseRoots is an interactive visualization of the evolution of electronic music.
 
 ## Features
 
-- **Interactive Visualization**: Choose between Tree and Radial layouts powered by D3.js.
+- **Interactive Visualization**: Choose between Tree, Radial, and **Timeline** layouts powered by D3.js.
 - **Deep Historical Context**: Detailed descriptions and Wikipedia links for hundreds of genres.
 - **Curated Listening**: Sample tracks via integrated Spotify embeds for every style.
+- **Music History Timeline**: Explore 107 key milestones in electronic music history (1897–2024) — 47 events include external links to Wikipedia, official sites, and festival pages.
 - **Search & Discover**: Find specific genres or use the "Shuffle" feature for random discovery.
 - **Responsive Design**: Fully optimized for both desktop (interactive map) and mobile (accordion navigation).
 - **SEO Optimized**: Dynamic sitemap generation and JSON-LD structured data.
@@ -49,6 +50,20 @@ The project's heart is `data/pulseroots.genres.json`. It follows a recursive tre
 }
 ```
 
+The project also includes `data/music_history.json`, a linear array of historical milestones used by the interactive timeline:
+
+```json
+{
+  "date": "1994",
+  "fact": "The first Sónar festival takes place in Barcelona...",
+  "url": "https://sonar.es"
+}
+```
+
+- **`date`** (string): Year of the event.
+- **`fact`** (string): Description of the milestone.
+- **`url`** (string, optional): External link to Wikipedia, official site, or related content.
+
 ### Node.js (Maintenance)
 - `build.js`: Consolidates SEO and data maintenance. It generates `sitemap.xml` and all individual genre HTML pages in the `genres/` directory based on the hierarchy in `data/pulseroots.genres.json`.
 - **Usage**: `node build.js`
@@ -63,6 +78,7 @@ pulse.roots/
 │       ├── state.js           # Shared state between modules
 │       ├── utils.js           # Utilities (debounce, slugify, etc.)
 │       ├── tree.js            # D3.js tree visualization
+│       ├── timeline.js        # D3.js music history timeline
 │       ├── panel.js           # Genre info panel
 │       ├── mobile-nav.js      # Mobile accordion navigation
 │       ├── search.js          # Search with suggestions

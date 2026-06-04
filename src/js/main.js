@@ -7,6 +7,7 @@ import { performSearch, navigateToMatch, setupDesktopSearch } from './search.js'
 import { initParticles } from './particles.js';
 import { initThemeToggle, initFullscreen, initShuffle } from './theme.js';
 import { renderStats } from './stats.js';
+import { createTimeline } from './timeline.js';
 
 async function fetchData() {
   const loadingSpinner = document.getElementById('loading-spinner');
@@ -33,26 +34,25 @@ async function fetchData() {
 
     const treeBtn = document.getElementById('tree-layout-btn');
     const radialBtn = document.getElementById('radial-layout-btn');
+    const timelineBtn = document.getElementById('timeline-layout-btn');
 
-    if (treeBtn && radialBtn) {
-      treeBtn.addEventListener('click', () => {
-        if (state.currentLayout === 'vertical') return;
-        state.currentLayout = 'vertical';
-        treeBtn.classList.add('active');
-        radialBtn.classList.remove('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        setTimeout(() => createTree(state.allGenreData), 300);
-      });
-
-      radialBtn.addEventListener('click', () => {
-        if (state.currentLayout === 'radial') return;
-        state.currentLayout = 'radial';
-        radialBtn.classList.add('active');
-        treeBtn.classList.remove('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        setTimeout(() => createTree(state.allGenreData), 300);
-      });
+    function setLayout(layout) {
+      if (state.currentLayout === layout) return;
+      state.currentLayout = layout;
+      [treeBtn, radialBtn, timelineBtn].forEach(btn => btn && btn.classList.toggle('active', btn.id === `${layout}-layout-btn`));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        if (layout === 'timeline') {
+          createTimeline();
+        } else {
+          createTree(state.allGenreData);
+        }
+      }, 300);
     }
+
+    if (treeBtn) treeBtn.addEventListener('click', () => setLayout('vertical'));
+    if (radialBtn) radialBtn.addEventListener('click', () => setLayout('radial'));
+    if (timelineBtn) timelineBtn.addEventListener('click', () => setLayout('timeline'));
 
     const expandAllBtn = document.getElementById('expand-all-btn');
     const collapseAllBtn = document.getElementById('collapse-all-btn');
@@ -82,7 +82,13 @@ async function fetchData() {
       });
     }
 
-    const debouncedCreateTree = debounce(() => createTree(data), 250);
+    const debouncedCreateTree = debounce(() => {
+      if (state.currentLayout === 'timeline') {
+        createTimeline();
+      } else {
+        createTree(data);
+      }
+    }, 250);
     window.addEventListener('resize', debouncedCreateTree);
 
     handleUrl();

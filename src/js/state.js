@@ -10,4 +10,5 @@ export const state = {
   treeRoot: null,
   matchedNodes: [],
   currentMatchIndex: -1,
+  historyFacts: null,
 };
