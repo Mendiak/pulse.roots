@@ -12,13 +12,18 @@
         rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"></noscript>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S86REQ0046"></script>
+    <!-- Google tag (gtag.js) - deferred to not block initial load -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-S86REQ0046');
+        window.addEventListener('load', function () {
+            var s = document.createElement('script');
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-S86REQ0046';
+            s.async = true;
+            document.head.appendChild(s);
+        });
     </script>
 
     <!-- SEO & General Meta Tags -->
@@ -252,7 +257,7 @@
 
     <!-- Info panel that slides up. Moved here to avoid being blurred. -->
     <!-- ARIA attributes added for accessibility -->
-    <div id="info-panel" role="dialog" aria-modal="true" aria-labelledby="info-panel-title">
+    <div id="info-panel" role="dialog" aria-modal="true" aria-label="Genre Information" aria-labelledby="info-panel-title">
         <div id="info-content"></div> <!-- Content will be injected by JS -->
         <div id="scroll-indicator" class="hidden">
             <i class="bi bi-arrow-down-circle"></i>

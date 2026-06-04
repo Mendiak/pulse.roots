@@ -25,7 +25,7 @@
   --accent-gradient: linear-gradient(135deg, var(--accent-pink), #ec4899);
 
   /* Header Consistency */
-  --header-element-height: 40px;
+  --header-element-height: 48px;
   --header-btn-px: 12px;
   --header-icon-size: 20px;
   --header-radius: 10px;
@@ -290,6 +290,7 @@ header {
 #header-share-btn,
 #theme-toggle-btn,
 #header-contact-btn {
+  min-width: 48px;
   height: var(--header-element-height);
   padding: 0 var(--header-btn-px);
   border-radius: var(--header-radius);
@@ -363,6 +364,8 @@ body.light-mode #search-nav #search-counter {
   border: none;
   color: var(--text-main);
   padding: 4px 8px;
+  min-width: 48px;
+  min-height: 48px;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
