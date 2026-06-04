@@ -179,6 +179,9 @@ export function createTree(data) {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
         const nodeColor = d3.select(event.currentTarget).select('circle').style('fill');
+        state.activeSelectedNode = d;
+        highlightBranch(event.currentTarget, d);
+        scrollToNode(d);
         const { showInfoPanel } = await import('./panel.js');
         showInfoPanel(d.data, nodeColor);
       }
@@ -199,6 +202,7 @@ export function createTree(data) {
 
       state.activeSelectedNode = d;
       highlightBranch(event.currentTarget, d);
+      scrollToNode(d);
 
       const { showInfoPanel } = await import('./panel.js');
       showInfoPanel(d.data, nodeColor);
@@ -209,7 +213,7 @@ export function createTree(data) {
   node.each(function (d) { d.gNode = this; });
 
   node.append('circle')
-    .attr('r', d => d.children ? 8 : 5)
+    .attr('r', 0)
     .style('fill', d => {
       const topLevelAncestor = d.ancestors().find(ancestor => ancestor.depth === 1);
       if (topLevelAncestor) {
@@ -241,9 +245,19 @@ export function createTree(data) {
     .text(d => d.data.name);
 
   node.transition()
-    .duration(500)
+    .duration(600)
     .delay(d => (d.depth * 150) + 400)
     .style('opacity', 1);
+
+  node.select('circle')
+    .transition()
+    .duration(600)
+    .delay(d => (d.depth * 150) + 400)
+    .ease(d3.easeCubicOut)
+    .attrTween('r', function(d) {
+      const target = d.children ? 8 : 5;
+      return function(t) { return target * t; };
+    });
 }
 
 export function highlightBranch(element, d) {
@@ -302,11 +316,22 @@ export function scrollToNode(d) {
 
   const element = nodeElements.node();
   const rect = element.getBoundingClientRect();
-
   const scrollY = window.pageYOffset + rect.top - (window.innerHeight / 2);
 
   window.scrollTo({
     top: scrollY,
     behavior: 'smooth'
   });
+
+  const circle = d3.select(element).select('circle');
+  const currentR = parseFloat(circle.attr('r'));
+  if (currentR) {
+    circle.transition()
+      .duration(200)
+      .attr('r', currentR * 1.6)
+      .transition()
+      .duration(500)
+      .ease(d3.easeCubicOut)
+      .attr('r', currentR);
+  }
 }

@@ -53,21 +53,6 @@ body.light-mode {
     radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.03) 0px, transparent 50%);
 }
 
-body.light-mode::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('assets/background.webp');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  filter: grayscale(100%) opacity(0.15);
-  z-index: -1;
-}
-
 body.light-mode #tooltip {
   background: var(--panel-dark);
   backdrop-filter: var(--glass-blur);
@@ -104,8 +89,15 @@ body.light-mode #footer-mission {
 }
 
 body.light-mode #footer-links h3,
-body.light-mode #footer-social-section h3 {
+body.light-mode #footer-social-section h3,
+body.light-mode #footer-support h3 {
   color: var(--text-main);
+}
+
+body.light-mode .support-bmc {
+  background: rgba(255, 221, 0, 0.15);
+  border-color: rgba(255, 221, 0, 0.4);
+  color: #b8860b;
 }
 
 body.light-mode .footer-link {
@@ -207,21 +199,12 @@ body {
   background-color: var(--bg-dark);
   background-image:
     radial-gradient(at 0% 0%, rgba(255, 0, 85, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.1) 0px, transparent 50%),
-    url('assets/background.webp');
+    radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.1) 0px, transparent 50%);
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  animation: fadeInBackground 2s ease-in-out;
   font-family: "Outfit", "Aleo", serif;
   color: var(--text-main);
   line-height: 1.6;
-}
-
-/* Keyframe animation for the background fade-in */
-@keyframes fadeInBackground {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 /* --- Particles Canvas --- */
@@ -323,6 +306,8 @@ header {
   cursor: pointer;
   transition: var(--header-transition);
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
 #clear-button i,
@@ -536,6 +521,28 @@ h1 {
   margin: 0;
 }
 
+body:not(.light-mode) #logo-link h1 {
+  background: linear-gradient(90deg, var(--text-main) 30%, rgba(255, 0, 85, 0.5) 50%, var(--text-main) 70%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 5s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body.light-mode #logo-link h1 {
+  background: none;
+  -webkit-text-fill-color: var(--text-main);
+  color: var(--text-main);
+  animation: none;
+}
+
 p {
   font-size: 16px;
 }
@@ -665,6 +672,7 @@ body.light-mode .active-searched-node text {
 .breadcrumb-separator {
   opacity: 0.4;
   font-size: 0.7rem;
+  color: var(--panel-accent-color, inherit);
 }
 
 .breadcrumb-current {
@@ -698,6 +706,8 @@ body.light-mode .active-searched-node text {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .layout-btn:hover {
@@ -906,6 +916,12 @@ body.light-mode .active-searched-node text {
   overflow-y: auto;
   overscroll-behavior-y: contain;
   box-sizing: border-box;
+  animation: borderColorShift 4s ease-in-out infinite;
+}
+
+@keyframes borderColorShift {
+  0%, 100% { border-top-color: var(--panel-accent-color, var(--accent-pink)); }
+  50% { border-top-color: var(--accent-cyan); }
 }
 
 
@@ -1100,7 +1116,7 @@ body.light-mode .active-searched-node text {
 
 .subgenre-link {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--panel-accent-color, var(--glass-border));
   font-size: 0.8rem;
 }
 
@@ -1114,6 +1130,11 @@ body.light-mode .active-searched-node text {
 .nav-link-btn i {
   font-size: 1.1em;
   opacity: 0.8;
+}
+
+.parent-link i,
+#info-panel .bi-soundwave {
+  color: var(--panel-accent-color, inherit);
 }
 
 .subgenres-grid {
@@ -1337,7 +1358,7 @@ footer {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 60px;
   margin-bottom: 60px;
 }
@@ -1358,6 +1379,68 @@ footer {
   color: var(--text-muted);
   line-height: 1.8;
   max-width: 400px;
+}
+
+#footer-support {
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  align-self: start;
+}
+
+#footer-support h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+#footer-support-text {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+#footer-support-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.support-bmc {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #d4a017;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 221, 0, 0.08);
+  border: 1px solid rgba(255, 221, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.support-bmc:hover {
+  color: #000;
+  background: #FFDD00;
+  border-color: #FFDD00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);
+}
+
+.support-bmc i {
+  font-size: 1rem;
 }
 
 #footer-links h3,
@@ -1427,6 +1510,10 @@ footer {
   color: white;
 }
 
+#footer-social-section {
+  grid-column: 1 / -1;
+}
+
 .footer-bottom {
   border-top: 1px solid var(--glass-border);
   padding-top: 30px;
@@ -1460,6 +1547,15 @@ footer {
 
   #footer-mission {
     margin: 0;
+  }
+
+  #footer-support {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #footer-support-links {
+    justify-content: flex-start;
   }
 
   #footer-links ul {
@@ -1846,6 +1942,7 @@ body.light-mode #genre-tree summary:hover {
 
 .wikipedia-link .bi-wikipedia {
   font-size: 1.2em;
+  color: var(--panel-accent-color, inherit);
 }
 
 .wiki-icon {
@@ -1871,10 +1968,6 @@ body.light-mode #genre-tree summary:hover {
     background-image:
       radial-gradient(at 0% 0%, rgba(255, 0, 85, 0.15) 0px, transparent 50%),
       radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.1) 0px, transparent 50%);
-  }
-
-  body.light-mode::before {
-    background-image: none;
   }
 
   /* --- Header Responsive Styles --- */
@@ -2062,6 +2155,7 @@ body.light-mode #genre-tree summary:hover {
   box-shadow: var(--shadow-neon);
   transition: opacity 0.3s, transform 0.3s, background-color 0.3s;
   padding: 0;
+  overflow: hidden;
 }
 
 #back-to-top-btn:hover {
@@ -2249,6 +2343,8 @@ select:focus {
   font-weight: 500;
   transition: all 0.2s ease;
   line-height: 1;
+  position: relative;
+  overflow: hidden;
 }
 
 .share-popover-btn i {
@@ -2324,7 +2420,8 @@ body.light-mode .share-popover-btn:hover {
 }
 
 #history-banner #history-fact {
-  transition: opacity 0.5s ease-in-out;
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .donation-link {
@@ -2346,4 +2443,26 @@ body.light-mode .share-popover-btn:hover {
 
 .donation-link i {
   font-size: 1em;
+}
+
+/* --- Ripple Effect --- */
+.ripple-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0);
+  animation: rippleAnim 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes rippleAnim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }

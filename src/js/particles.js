@@ -1,4 +1,6 @@
 export function initParticles() {
+  if (window.innerWidth <= 1024) return;
+
   const canvas = document.createElement('canvas');
   canvas.id = 'particles-canvas';
   document.body.insertBefore(canvas, document.body.firstChild);

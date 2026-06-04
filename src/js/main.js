@@ -371,6 +371,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   initShuffle();
 
+  function createRipple(e) {
+    const btn = e.currentTarget;
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple';
+    const rect = btn.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    btn.appendChild(ripple);
+    ripple.addEventListener('animationend', () => ripple.remove());
+  }
+
+  document.querySelectorAll('#clear-button, #shuffle-button, #fullscreen-btn, #header-share-btn, #theme-toggle-btn, #header-contact-btn, .layout-btn, #back-to-top-btn, .share-popover-btn').forEach(btn => {
+    btn.addEventListener('click', createRipple);
+  });
+
   const historyBanner = document.getElementById('history-banner');
   const historyFactSpan = document.getElementById('history-fact');
   historyFactSpan.style.opacity = '1';
@@ -399,13 +418,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     historyFactSpan.style.opacity = '0';
+    historyFactSpan.style.transform = 'translateY(8px)';
 
     setTimeout(() => {
       const randomIndex = Math.floor(Math.random() * facts.length);
       const fact = facts[randomIndex];
       historyFactSpan.innerHTML = `<strong>${fact.date}:</strong> ${fact.fact}`;
       historyBanner.style.display = 'block';
-      historyFactSpan.style.opacity = '1';
+      requestAnimationFrame(() => {
+        historyFactSpan.style.opacity = '1';
+        historyFactSpan.style.transform = 'translateY(0)';
+      });
     }, 500);
   }
 
@@ -419,5 +442,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   startHistoryBanner();
 
-  initParticles();
+  if (window.innerWidth > 1024) {
+    initParticles();
+  }
 });
