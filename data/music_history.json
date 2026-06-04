@@ -59,5 +59,21 @@
   { "date": "2016", "fact": "Modular synthesizers experience a global resurgence." },
   { "date": "2018", "fact": "Artificial intelligence begins influencing experimental electronic music." },
   { "date": "2020", "fact": "The COVID-19 pandemic forces clubs and festivals to close, accelerating livestreamed electronic events." },
-  { "date": "2022", "fact": "Hybrid live sets combining modular synths, visuals, and real-time performance become common at festivals." }
+  { "date": "2022", "fact": "Hybrid live sets combining modular synths, visuals, and real-time performance become common at festivals." },
+  { "date": "1935", "fact": "Laurens Hammond and John M. Hanert introduce the electromechanical Hammond Organ, utilizing rotating tone wheels to generate stable additive synthesis." },
+  { "date": "1963", "fact": "Don Buchla designs his first modular synthesizers, replacing traditional keyboards with touch-sensitive plates to encourage experimental composition." },
+  { "date": "1963", "fact": "The first Mellotron (Mk I) is released in England, utilizing playback of magnetic tape strips to act as one of the earliest electro-mechanical samplers." },
+  { "date": "1978", "fact": "Roland releases the CompuRhythm CR-78, the first drum machine to feature a microprocessor for programmable rhythmic patterns." },
+  { "date": "1979", "fact": "Peter Vogel and Kim Ryrie introduce the Fairlight CMI, the first commercially available digital sampling synthesizer and audio workstation." },
+  { "date": "1979", "fact": "Boss releases the DR-55 Doctor Rhythm, one of the earliest and most affordable programmable step-write drum machines for home studios." },
+  { "date": "1980", "fact": "Roger Linn introduces the Linn LM-1, the first commercial digital drum machine to use real acoustic drum samples." },
+  { "date": "1983", "fact": "Roland releases the TR-909 Rhythm Composer, a hybrid analog-digital drum machine that becomes the first to feature MIDI connectivity." },
+  { "date": "1983", "fact": "Yamaha releases the DX7, the first highly successful digital synthesizer, utilizing FM synthesis and shifting the industry away from analog sounds." },
+  { "date": "1988", "fact": "Akai releases the MPC60, co-designed by Roger Linn, combining a 12-bit sampler, 16 velocity-sensitive pads, and a swing-quantized sequencer." },
+  { "date": "1990", "fact": "The release of 'The Age of Love' marks the foundational birth of European trance music, characterized by hypnotic, arpeggiated synths." },
+  { "date": "1994", "fact": "Pioneer releases the CDJ-500, introducing a jog dial and enabling DJs to play and manipulate digital audio files from CDs." },
+  { "date": "1994", "fact": "UK Garage begins to emerge in London's underground, featuring syncopated 2-step rhythm patterns, heavy sub-bass, and pitch-shifted vocals." },
+  { "date": "1996", "fact": "Steinberg releases Cubase VST, introducing virtual studio technology plugins and the first VST instrument, Neon, shifting production to the computer." },
+  { "date": "2013", "fact": "A. G. Cook founds the PC Music record label and art collective, pioneering hyperpop with pitch-shifted vocals and high-octane synthetic textures." },
+  { "date": "2013", "fact": "SOPHIE co-pioneers the bubblegum bass movement, using physical modeling synthesis to recreate tactile, industrial materials in pop music." }
 ]
