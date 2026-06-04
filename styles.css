@@ -1644,6 +1644,66 @@ body.light-mode #genre-tree summary:hover {
   color: var(--accent-pink);
 }
 
+/* --- Footer Stats --- */
+#footer-stats {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 30px;
+  margin-top: 20px;
+}
+
+#footer-stats h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+
+#stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--accent-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent-pink);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+body.light-mode .stat-value {
+  color: #d6006e;
+}
+
 .tooltip {
   position: absolute;
   background: rgba(13, 17, 23, 0.85);

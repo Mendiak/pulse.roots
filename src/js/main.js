@@ -6,6 +6,7 @@ import { createMobileNav, saveAccordionState, restoreAccordionState } from './mo
 import { performSearch, navigateToMatch, setupDesktopSearch } from './search.js';
 import { initParticles } from './particles.js';
 import { initThemeToggle, initFullscreen, initShuffle } from './theme.js';
+import { renderStats } from './stats.js';
 
 async function fetchData() {
   const loadingSpinner = document.getElementById('loading-spinner');
@@ -21,6 +22,7 @@ async function fetchData() {
     const data = await response.json();
     state.allGenreData = data;
     buildGenreMap(data);
+    renderStats(data);
     createTree(data);
     createMobileNav(data, document.getElementById('mobile-genre-list'));
 
