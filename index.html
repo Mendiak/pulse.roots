@@ -12,18 +12,10 @@
         rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"></noscript>
 
-    <!-- Google tag (gtag.js) - deferred to not block initial load -->
+    <!-- Google tag (gtag.js) - dataLayer stub only; actual script loads after consent -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-S86REQ0046');
-        window.addEventListener('load', function () {
-            var s = document.createElement('script');
-            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-S86REQ0046';
-            s.async = true;
-            document.head.appendChild(s);
-        });
     </script>
 
     <!-- SEO & General Meta Tags -->
@@ -1116,6 +1108,19 @@
         </div>
     </footer>
     <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="src/js/cookie-consent.js"></script>
+
+    <div id="cookie-consent-banner" role="dialog" aria-label="Cookie Consent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use <a href="privacy.html">cookies</a> to analyze site traffic with Google Analytics. You can accept or reject non-essential cookies. No personal data is stored on our servers.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept-btn" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-reject-btn" class="cookie-btn cookie-btn-reject">Reject</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

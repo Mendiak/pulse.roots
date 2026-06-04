@@ -9,15 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"></noscript>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S86REQ0046"></script>
+    <!-- Google tag (gtag.js) - dataLayer stub only; actual script loads after consent -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-S86REQ0046');
     </script>
 
     <!-- SEO & General Meta Tags -->
@@ -43,9 +41,11 @@
     <meta name="twitter:image" content="https://mendiak.github.io/pulse.roots/assets/og_image.webp">
 
     <meta name="google-site-verification" content="7tAbK2WB9Cx4uF76izgXcrBdBXVeqDfUd9A97KrLewU" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></noscript>
     <title>PulseRoots: Techno Soul</title>
-    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
     <link rel="icon" href="../../../assets/favicon.png" type="image/x-icon">
     <link rel="preload" href="data/pulseroots.genres.json" as="fetch" crossorigin="anonymous">
     <script src="https://d3js.org/d3.v6.min.js" defer></script>
@@ -131,7 +131,7 @@
     <header>
         <div id="header-container">
             <a href="../../../index.html" id="logo-link" aria-label="Home">
-                <img src="../../../assets/logo.png" id="logo" alt="PulseRoots Logo" loading="lazy">
+                <img src="../../../assets/logo.png" id="logo" alt="PulseRoots Logo" width="64" height="64">
                 <h1>Techno Soul</h1>
             </a>
             <div class="header-controls">
@@ -295,7 +295,7 @@
 
     <!-- Info panel that slides up. Moved here to avoid being blurred. -->
     <!-- ARIA attributes added for accessibility -->
-    <div id="info-panel" role="dialog" aria-modal="true" aria-labelledby="info-panel-title">
+    <div id="info-panel" role="dialog" aria-modal="true" aria-label="Genre Information" aria-labelledby="info-panel-title">
         <div id="info-content"></div> <!-- Content will be injected by JS -->
         <div id="scroll-indicator" class="hidden">
             <i class="bi bi-arrow-down-circle"></i>
@@ -306,7 +306,7 @@
     <footer>
         <div id="footer-main">
             <div id="footer-brand">
-                <img src="../../../assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo" loading="lazy">
+                <img src="../../../assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo" width="128" height="128" fetchpriority="high">
                 <p id="footer-mission">Explore the deep connections and evolution of electronic music through an
                     interactive lens. A journey from roots to future rhythms.</p>
             </div>
@@ -323,6 +323,7 @@
                     </a>
                 </div>
             </div>
+
             <nav id="footer-links" aria-label="Links and Credits">
                 <h3>Links & Credits</h3>
                 <ul>
@@ -1153,6 +1154,19 @@
         </div>
     </footer>
     <script type="module" src="../../../src/js/main.js"></script>
+    <script type="module" src="../../../src/js/cookie-consent.js"></script>
+
+    <div id="cookie-consent-banner" role="dialog" aria-label="Cookie Consent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use <a href="../../../privacy.html">cookies</a> to analyze site traffic with Google Analytics. You can accept or reject non-essential cookies. No personal data is stored on our servers.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept-btn" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-reject-btn" class="cookie-btn cookie-btn-reject">Reject</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         window.PR_GENRE_TO_LOAD = "Techno Soul";

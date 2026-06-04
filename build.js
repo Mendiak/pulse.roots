@@ -284,6 +284,7 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
         // Make all asset paths relative (works in both local dev and GitHub Pages)
         newHtml = newHtml.replace(/href="styles\.css"/, `href="${relativePrefix}styles.css"`);
         newHtml = newHtml.replace(/src="src\/js\/main\.js"/, `src="${relativePrefix}src/js/main.js"`);
+        newHtml = newHtml.replace(/src="src\/js\/cookie-consent\.js"/, `src="${relativePrefix}src/js/cookie-consent.js"`);
         newHtml = newHtml.replace(/src="assets\/logo\.png"/, `src="${relativePrefix}assets/logo.png"`);
         newHtml = newHtml.replace(/src="assets\/footer-logo\.png"/, `src="${relativePrefix}assets/footer-logo.png"`);
         newHtml = newHtml.replace(/rel="icon" href="assets\/favicon\.png"/, `rel="icon" href="${relativePrefix}assets/favicon.png"`);
