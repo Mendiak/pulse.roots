@@ -1,3 +1,4 @@
+import { t, applyI18nToDOM } from './i18n.js';
 import { state } from './state.js';
 import { buildGenreMap, debounce, slugify, findGenre } from './utils.js';
 import { createTree, highlightBranch, clearBranchHighlight, scrollToNode } from './tree.js';
@@ -14,7 +15,8 @@ async function fetchData() {
   try {
     if (loadingSpinner) loadingSpinner.classList.remove('hidden');
 
-    const fetchUrl = `${state.BASE_PATH}/data/pulseroots.genres.json`;
+    const langSuffix = window.PR_LANG && window.PR_LANG !== 'en' ? `.${window.PR_LANG}` : '';
+    const fetchUrl = `${state.BASE_PATH}/data/pulseroots.genres${langSuffix}.json`;
 
     const response = await fetch(fetchUrl);
     if (!response.ok) {
@@ -153,7 +155,22 @@ function handleUrl() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+  applyI18nToDOM();
   fetchData();
+
+  // Language selector: set correct URLs and highlight current language
+  const langBase = state.BASE_PATH || '';
+  const enBtn = document.getElementById('lang-btn-en');
+  const esBtn = document.getElementById('lang-btn-es');
+  if (enBtn) enBtn.href = langBase + '/';
+  if (esBtn) esBtn.href = langBase + '/es/';
+  const langBtns = document.querySelectorAll('.lang-btn');
+  const currentLang = window.PR_LANG || 'en';
+  langBtns.forEach(btn => {
+    if (btn.dataset.lang === currentLang) {
+      btn.classList.add('active');
+    }
+  });
 
   const mobileSearchInput = document.getElementById('mobile-search-input');
   const mobileClearButton = document.getElementById('mobile-clear-button');
@@ -232,14 +249,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   const infoBox = document.getElementById('tooltip');
   if (infoBox) {
     const readMoreBtn = document.createElement('button');
-    readMoreBtn.textContent = 'Read More';
+    readMoreBtn.textContent = t('infoPanel.readMore');
     readMoreBtn.className = 'read-more-btn';
 
     infoBox.appendChild(readMoreBtn);
 
     readMoreBtn.addEventListener('click', () => {
       const isExpanded = infoBox.classList.toggle('is-expanded');
-      readMoreBtn.textContent = isExpanded ? 'Read Less' : 'Read More';
+      readMoreBtn.textContent = isExpanded ? t('infoPanel.readLess') : t('infoPanel.readMore');
     });
   }
 
@@ -253,16 +270,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         const icon = copyBtn.querySelector('i');
         icon.classList.remove(originalIconClass);
         icon.classList.add(successIconClass);
-        copyBtn.setAttribute('aria-label', 'Link copied!');
+        copyBtn.setAttribute('aria-label', t('infoPanel.linkCopied'));
 
         setTimeout(() => {
           icon.classList.remove(successIconClass);
           icon.classList.add(originalIconClass);
-          copyBtn.setAttribute('aria-label', 'Copy link to clipboard');
+          copyBtn.setAttribute('aria-label', t('infoPanel.copyLinkToClipboard'));
         }, 2000);
       }).catch(err => {
         console.error('Failed to copy link: ', err);
-        copyBtn.setAttribute('aria-label', 'Failed to copy!');
+        copyBtn.setAttribute('aria-label', t('infoPanel.failedToCopy'));
       });
     });
   }
@@ -406,7 +423,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   async function fetchHistoryFacts(retries = 2) {
     for (let attempt = 0; attempt <= retries; attempt++) {
       try {
-        const response = await fetch(`${state.BASE_PATH}/data/music_history.json`);
+    const langSuffix = window.PR_LANG && window.PR_LANG !== 'en' ? `.${window.PR_LANG}` : '';
+        const response = await fetch(`${state.BASE_PATH}/data/music_history${langSuffix}.json`);
         const facts = await response.json();
         return facts;
       } catch (error) {

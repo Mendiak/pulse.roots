@@ -697,6 +697,41 @@ body.light-mode .active-searched-node text {
   gap: 2px;
 }
 
+#lang-selector {
+  display: flex;
+  gap: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn.active {
+  background: var(--accent-gradient);
+  color: #fff;
+}
+
 .layout-btn {
   background: none;
   border: none;

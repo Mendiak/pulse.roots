@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "lang": "en",
+    "name": "English",
+    "englishName": "English"
+  },
+  "seo": {
+    "title": "PulseRoots: Electronic Music Styles Tree",
+    "description": "Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and example tracks.",
+    "keywords": "electronic music, music genres, techno, house, ambient, trance, music visualization, music tree",
+    "ogTitle": "PulseRoots: Electronic Music Styles Tree",
+    "ogDescription": "Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping music genres.",
+    "twitterTitle": "PulseRoots: Electronic Music Styles Tree",
+    "twitterDescription": "Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping music genres.",
+    "jsonldDescription": "Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles and example tracks."
+  },
+  "header": {
+    "searchPlaceholder": "Search for a genre...",
+    "clearButton": "Clear",
+    "shuffleTitle": "Random Genre",
+    "treeLayoutTitle": "Tree Layout",
+    "radialLayoutTitle": "Radial Layout",
+    "timelineTitle": "Timeline",
+    "fullscreenTitle": "Toggle Fullscreen",
+    "fullscreenLabel": "Enter Fullscreen",
+    "shareTitle": "Share PulseRoots",
+    "shareLabel": "Share PulseRoots",
+    "themeTitle": "Toggle Theme",
+    "themeLabel": "Toggle Light/Dark Mode",
+    "contactTitle": "Suggest a Genre / Fix an Error",
+    "contactLabel": "Suggest a Genre / Fix an Error",
+    "h1": "PulseRoots: Electronic Music Styles Tree",
+    "homeLabel": "Home"
+  },
+  "search": {
+    "searchNav": {
+      "counter": "0 of 0",
+      "prevTitle": "Previous result",
+      "nextTitle": "Next result"
+    },
+    "mobilePlaceholder": "Filter genres...",
+    "mobileLabel": "Filter genres"
+  },
+  "infoPanel": {
+    "ariaLabel": "Genre information",
+    "readMore": "Read More",
+    "readLess": "Read Less",
+    "linkCopied": "Link copied!",
+    "copyLinkToClipboard": "Copy link to clipboard",
+    "failedToCopy": "Failed to copy!"
+  },
+  "panel": {
+    "share": "Share",
+    "shareTitle": "Share this genre",
+    "closePanel": "Close info panel",
+    "noDescription": "No description available",
+    "readMoreWikipedia": "Read more on Wikipedia",
+    "reportError": "Spotted an error? Report it here",
+    "exampleTrack": "Example track",
+    "spotifyNote": "Note: Log in to Spotify in your browser to listen to the full track. Otherwise, a 30-second preview will be played.",
+    "keyArtists": "Key Artists:",
+    "partOf": "Part of:",
+    "goToParent": "Go to parent genre {name}",
+    "subgenres": "Subgenres:",
+    "buyCoffee": "Buy me a coffee"
+  },
+  "intro": {
+    "welcomeTitle": "How to Explore",
+    "welcomeText": "Welcome to PulseRoots! This guide will help you navigate the vast world of electronic music using our interactive tools.",
+    "desktopText": "On <strong>desktop</strong>, you'll find an immersive <strong>tree map</strong> visualizing the connections between genres. On <strong>mobile</strong>, genres are organized in a clear and accessible <strong>accordion list</strong>.",
+    "stylesTitle": "Styles and Substyles",
+    "stylesText": "Both views start with broad \"Families\" (like Techno or House) and branch into specific styles and substyles. Click or tap any genre to open a panel with a detailed description and an example track.",
+    "timelineTitle": "Music Timeline",
+    "timelineText": "Click the <strong>Timeline</strong> button (<i class=\"bi bi-clock-history\"></i>) to explore <strong>107 key milestones</strong> in electronic music history, from 1897 to the present. Hover over any dot to read the story; dots with a <strong>dashed ring</strong> include an external link.",
+    "artistsTitle": "Key Artists",
+    "artistsText": "For each genre, we've included a \"Key Artists\" section featuring notable pioneers and musicians who have significantly shaped its sound.",
+    "accessibilityTitle": "Accessibility",
+    "accessibilityText": "PulseRoots is keyboard accessible. Use the <strong>Tab</strong> key to navigate the genre tree nodes and press <strong>Enter</strong> or <strong>Space</strong> to open the details panel.",
+    "noteTitle": "A Note on Classification",
+    "noteText": "This visualization represents one interpretation of how electronic music genres are categorized. Music is fluid, and other classifications may group styles differently.",
+    "inspirationsTitle": "Inspirations",
+    "inspirationsText": "PulseRoots is inspired by the incredible work of other music exploration projects. Special thanks to <a href=\"https://music.ishkur.com/\" class=\"info-box-link\" target=\"_blank\" rel=\"noopener noreferrer\">Ishkur's Guide to Electronic Music</a>, <a href=\"https://musicmap.info/\" class=\"info-box-link\" target=\"_blank\" rel=\"noopener noreferrer\">Musicmap</a>, and <a href=\"https://everynoise.com/\" class=\"info-box-link\" target=\"_blank\" rel=\"noopener noreferrer\">Every Noise at Once</a> for paving the way.",
+    "spotifyTitle": "Listening to Tracks",
+    "spotifyText": "To listen to the example tracks, you may need a Spotify account. The embedded player provides a 30-second preview for all users. <a href=\"https://accounts.spotify.com/login\" id=\"spotify-login-link\" class=\"info-box-link\" target=\"_blank\" rel=\"noopener noreferrer\">Logging into Spotify</a> may unlock the full track.",
+    "contactTitle": "Contact",
+    "contactText": "Thank you for visiting. I hope you enjoy exploring the world of electronic music.",
+    "contactLinkText": "If you have any suggestions, improvement proposals, if you have found any errors, or just want to say Hi!, feel free to write to me through our <a href=\"contact.html\" class=\"info-box-link\">contact page</a>.",
+    "buyCoffee": "Buy me a coffee"
+  },
+  "mobileNav": {
+    "title": "Explore Genres",
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "readOnWikipedia": "Read more about {name} on Wikipedia",
+    "infoFor": "Info for {name}"
+  },
+  "loading": {
+    "text": "Loading genres..."
+  },
+  "historyBanner": {
+    "label": "Music History:"
+  },
+  "footer": {
+    "mission": "Explore the deep connections and evolution of electronic music through an interactive lens. A journey from the roots to the rhythms of the future.",
+    "supportTitle": "Support",
+    "supportText": "A free website built with passion for electronic music. Any token of support helps keep it alive.",
+    "portfolio": "Portfolio",
+    "buyCoffee": "Buy me a coffee",
+    "linksTitle": "Links & Credits",
+    "github": "Github",
+    "background": "Background Image",
+    "logoCredit": "Logo",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "sitemap": "Sitemap",
+    "genresTitle": "Genres",
+    "statsTitle": "Stats",
+    "totalGenres": "Total Genres",
+    "families": "Families",
+    "largestFamily": "Largest Family",
+    "deepestLevel": "Deepest Level",
+    "keyArtists": "Key Artists",
+    "shareTitle": "Share",
+    "copyright": "PulseRoots. Mapping the pulse of electronic music."
+  },
+  "sharePopover": {
+    "ariaLabel": "Share options",
+    "facebookLabel": "Share on Facebook",
+    "xLabel": "Share on X (Twitter)",
+    "redditLabel": "Share on Reddit",
+    "copyLink": "Copy Link",
+    "shareText": "Explore the evolution of electronic music with PulseRoots!"
+  },
+  "cookieConsent": {
+    "text": "We use <a href=\"privacy.html\">cookies</a> to analyze site traffic via Google Analytics. You may accept or reject non-essential cookies. We don't store personal data on our servers.",
+    "accept": "Accept",
+    "reject": "Reject",
+    "ariaLabel": "Cookie Consent"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "intro": "Got ideas for the site, found a bug, or just want to say hi? Don't be shy, drop me a message! I'd love to hear from you.",
+    "namePlaceholder": "Your Name...",
+    "emailPlaceholder": "Your Email...",
+    "subjectLabel": "Select a subject...",
+    "subjectSuggestion": "Suggest a New Genre",
+    "subjectError": "Report an Error",
+    "subjectGeneral": "General Inquiry",
+    "subjectOther": "Other",
+    "messagePlaceholder": "Your Message...",
+    "submitButton": "Send",
+    "backButton": "Back to PulseRoots"
+  },
+  "thanks": {
+    "title": "Message Sent!",
+    "text": "Thank you for reaching out. I'll review your message and get back to you as soon as possible.",
+    "backButton": "Back to PulseRoots"
+  },
+  "privacy": {
+    "title": "PulseRoots Privacy Policy",
+    "lastUpdated": "January 16, 2026",
+    "intro": "This Privacy Policy describes how PulseRoots (\"we\", \"us\", or \"our\") collects, uses, and discloses information we obtain from visitors to our website."
+  },
+  "layouts": {
+    "tree": "Tree",
+    "radial": "Radial",
+    "timeline": "Timeline"
+  }
+}

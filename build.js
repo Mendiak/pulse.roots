@@ -1,15 +1,34 @@
 const fs = require('fs');
 const path = require('path');
 
+// --- Multi-language support ---
+const args = process.argv.slice(2);
+const LANG = args.includes('--lang') ? args[args.indexOf('--lang') + 1] : 'en';
+const isDefaultLang = LANG === 'en';
+
+let i18n = {};
+const i18nPath = path.join(__dirname, 'data', 'i18n', `${LANG}.json`);
+if (fs.existsSync(i18nPath)) {
+    i18n = JSON.parse(fs.readFileSync(i18nPath, 'utf-8'));
+    console.log(`Loaded i18n for language: ${LANG}`);
+} else {
+    console.warn(`Warning: i18n file not found: ${i18nPath}`);
+}
+
+const LANG_PREFIX = isDefaultLang ? '' : `/${LANG}`;
+const SITE_LANG = isDefaultLang ? 'en' : LANG;
+
 // Configuration
 const CONFIG = {
-    genresFilePath: path.join(__dirname, 'data', 'pulseroots.genres.json'),
+    genresFilePath: path.join(__dirname, 'data', isDefaultLang ? 'pulseroots.genres.json' : `pulseroots.genres.${LANG}.json`),
     templatePath: path.join(__dirname, 'index.html'),
-    outputDir: path.join(__dirname, 'genres'),
-    sitemapPath: path.join(__dirname, 'sitemap.xml'),
-    sitemapHtmlPath: path.join(__dirname, 'sitemap.html'),
-    baseUrl: 'https://mendiak.github.io/pulse.roots',
-    baseReplacement: '/pulse.roots'
+    outputDir: path.join(__dirname, isDefaultLang ? 'genres' : `${LANG}/genres`),
+    sitemapPath: path.join(__dirname, isDefaultLang ? 'sitemap.xml' : `${LANG}/sitemap.xml`),
+    sitemapHtmlPath: path.join(__dirname, isDefaultLang ? 'sitemap.html' : `${LANG}/sitemap.html`),
+    baseUrl: `https://mendiak.github.io/pulse.roots${LANG_PREFIX}`,
+    baseReplacement: `/pulse.roots${LANG_PREFIX}`,
+    lang: SITE_LANG,
+    isDefaultLang
 };
 
 /**
@@ -259,6 +278,77 @@ function buildSubgenreHtml(children, relativePrefix) {
 }
 
 /**
+ * Apply SEO-only i18n to HTML (meta tags that crawlers need at build time)
+ */
+function applySeoI18n(html) {
+    if (isDefaultLang || !i18n || !i18n.seo) return html;
+    let result = html;
+
+    result = result.replace(/<html lang="en"/, `<html lang="${LANG}"`);
+
+    const seo = i18n.seo;
+    if (seo.title) result = result.replace(/<title>.*?<\/title>/, `<title>${seo.title}</title>`);
+    if (seo.description) result = result.replace(/<meta name="description"[\s\S]*?>/, `<meta name="description" content="${seo.description.replace(/"/g, '&quot;')}">`);
+    if (seo.keywords) result = result.replace(/<meta name="keywords"[\s\S]*?>/, `<meta name="keywords" content="${seo.keywords}">`);
+    if (seo.ogTitle) result = result.replace(/<meta property="og:title"[\s\S]*?>/, `<meta property="og:title" content="${seo.ogTitle}">`);
+    if (seo.ogDescription) result = result.replace(/<meta property="og:description"[\s\S]*?>/, `<meta property="og:description" content="${seo.ogDescription.replace(/"/g, '&quot;')}">`);
+    if (seo.twitterTitle) result = result.replace(/<meta name="twitter:title"[\s\S]*?>/, `<meta name="twitter:title" content="${seo.twitterTitle}">`);
+    if (seo.twitterDescription) result = result.replace(/<meta name="twitter:description"[\s\S]*?>/, `<meta name="twitter:description" content="${seo.twitterDescription.replace(/"/g, '&quot;')}">`);
+
+    if (seo.jsonldDescription) {
+        result = result.replace(/"description": "Explore the evolution of electronic music with PulseRoots\.([^"]+)"/, `"description": "${seo.jsonldDescription.replace(/"/g, '\\"')}"`);
+    }
+    if (seo.keywords) {
+        result = result.replace(/"keywords": "([^"]+)"/, `"keywords": "${seo.keywords}"`);
+    }
+
+    return result;
+}
+
+/**
+ * Inject runtime language and i18n globals into HTML
+ * For non-English pages, also inject English dictionary as fallback
+ */
+function injectRuntimeGlobals(html) {
+    const i18nJson = JSON.stringify(i18n).replace(/</g, '\\u003C');
+    let script = `window.PR_LANG = '${LANG}'; window.PR_I18N = ${i18nJson};`;
+
+    // Load English dictionary as fallback for non-English pages
+    if (!isDefaultLang) {
+        const enI18nPath = path.join(__dirname, 'data', 'i18n', 'en.json');
+        if (fs.existsSync(enI18nPath)) {
+            const enI18n = JSON.parse(fs.readFileSync(enI18nPath, 'utf-8'));
+            const enI18nJson = JSON.stringify(enI18n).replace(/</g, '\\u003C');
+            script += ` window.PR_I18N_FALLBACK = ${enI18nJson};`;
+        }
+    }
+
+    // Replace any existing PR_LANG script tag, or insert before </head>
+    const existing = /<script>window\.PR_LANG\s*=.*?<\/script>/;
+    if (existing.test(html)) {
+        return html.replace(existing, `<script>${script}</script>`);
+    }
+    if (html.includes('<script type="application/ld+json">')) {
+        return html.replace(
+            '<script type="application/ld+json">',
+            `<script>${script}</script>\n    <script type="application/ld+json">`
+        );
+    }
+    return html.replace('</head>', `<script>${script}</script>\n</head>`);
+}
+
+/**
+ * Add hreflang alternate links to the head section
+ */
+function addHreflangLinks(html, baseUrl, fullSlugPath) {
+    if (/hreflang="en"/.test(html)) return html;
+    const englishUrl = `https://mendiak.github.io/pulse.roots/${fullSlugPath}`;
+    const spanishUrl = `https://mendiak.github.io/pulse.roots/es/${fullSlugPath}`;
+    const hreflangHtml = `\n    <link rel="alternate" hreflang="en" href="${englishUrl}">\n    <link rel="alternate" hreflang="es" href="${spanishUrl}">\n    <link rel="alternate" hreflang="x-default" href="${englishUrl}">`;
+    return html.replace('</head>', hreflangHtml + '\n</head>');
+}
+
+/**
  * Generate individual HTML pages for each genre
  */
 function generateGenrePages(allGenresWithSlugs, templateHtml) {
@@ -277,12 +367,18 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
         const newFilePath = path.join(genreOutputDir, `${slugFileName}.html`);
         let newHtml = templateHtml;
 
+        newHtml = injectRuntimeGlobals(newHtml);
+
+        // Add hreflang alternate links
+        newHtml = addHreflangLinks(newHtml, CONFIG.baseUrl, `genres/${fullSlugPath}.html`);
+
         // Calculate relative path prefix based on genre depth
         const depth = fullSlugPath.split('/').length;
         const relativePrefix = depth > 0 ? '../'.repeat(depth) : './';
 
         // Make all asset paths relative (works in both local dev and GitHub Pages)
         newHtml = newHtml.replace(/href="styles\.css"/, `href="${relativePrefix}styles.css"`);
+        newHtml = newHtml.replace(new RegExp(`<noscript><link rel="stylesheet" href="styles\\.css">`), `<noscript><link rel="stylesheet" href="${relativePrefix}styles.css">`);
         newHtml = newHtml.replace(/src="src\/js\/main\.js"/, `src="${relativePrefix}src/js/main.js"`);
         newHtml = newHtml.replace(/src="src\/js\/cookie-consent\.js"/, `src="${relativePrefix}src/js/cookie-consent.js"`);
         newHtml = newHtml.replace(/src="assets\/logo\.png"/, `src="${relativePrefix}assets/logo.png"`);
@@ -296,14 +392,18 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
         newHtml = newHtml.replace(/content="https:\/\/mendiak\.github.io\/pulse\.roots\/assets\/og_image\.webp"/, `content="${CONFIG.baseUrl}/assets/og_image.webp"`);
 
         // Update title and H1
-        const newTitle = `PulseRoots: ${genreName}`;
+        const siteTitlePrefix = isDefaultLang ? 'PulseRoots: ' : (i18n.seo?.title ? i18n.seo.title.split(':')[0] + ': ' : 'PulseRoots: ');
+        const newTitle = `${siteTitlePrefix}${genreName}`;
         newHtml = newHtml.replace(/<title>.*<\/title>/, `<title>${newTitle}</title>`);
         newHtml = newHtml.replace(/<meta property="og:title" content=".*">/, `<meta property="og:title" content="${newTitle}">`);
         newHtml = newHtml.replace(/<meta name="twitter:title" content=".*">/, `<meta name="twitter:title" content="${newTitle}">`);
         newHtml = newHtml.replace(/(<h1>).*?(<\/h1>)/, `$1${genreName}$2`);
 
         // Generate unique meta description from genre description
-        const metaDesc = truncateText(description, 155) || `Explore the ${genreName} style in electronic music on PulseRoots. Discover its history, key artists, and sample tracks in our interactive visualization.`;
+        const fallbackDesc = isDefaultLang
+            ? `Explore the ${genreName} style in electronic music on PulseRoots. Discover its history, key artists, and sample tracks in our interactive visualization.`
+            : `Explora el estilo ${genreName} en la música electrónica en PulseRoots. Descubre su historia, artistas clave y pistas de ejemplo en nuestra visualización interactiva.`;
+        const metaDesc = truncateText(description, 155) || fallbackDesc;
         const metaDescEscaped = metaDesc.replace(/"/g, '&quot;');
         newHtml = newHtml.replace(
             /<meta name="description"[\s\S]*?>/,
@@ -367,19 +467,43 @@ function generateGenrePages(allGenresWithSlugs, templateHtml) {
 }
 
 /**
- * Generate sitemap.xml
+ * Generate sitemap.xml with hreflang alternate links
  */
 function generateSitemap(allGenreInfos) {
     console.log("Generating sitemap.xml...");
     const today = new Date().toISOString().split('T')[0];
     const baseUrlWithSlash = CONFIG.baseUrl.endsWith('/') ? CONFIG.baseUrl : CONFIG.baseUrl + '/';
+    const ns = 'xmlns:xhtml="http://www.w3.org/1999/xhtml"';
 
-    const urls = [
-        { loc: baseUrlWithSlash, lastmod: today, changefreq: 'monthly', priority: '1.0' },
-        { loc: `${baseUrlWithSlash}contact.html`, lastmod: today, changefreq: 'yearly', priority: '0.7' },
-        { loc: `${baseUrlWithSlash}privacy.html`, lastmod: today, changefreq: 'yearly', priority: '0.7' },
-        { loc: `${baseUrlWithSlash}sitemap.html`, lastmod: today, changefreq: 'monthly', priority: '0.5' },
+    const baseUrls = [
+        { path: '', lastmod: today, changefreq: 'monthly', priority: '1.0' },
+        { path: 'contact.html', lastmod: today, changefreq: 'yearly', priority: '0.7' },
+        { path: 'privacy.html', lastmod: today, changefreq: 'yearly', priority: '0.7' },
+        { path: 'sitemap.html', lastmod: today, changefreq: 'monthly', priority: '0.5' },
     ];
+
+    // Determine alternate language URLs
+    const altLang = isDefaultLang ? 'es' : 'en';
+    const altPrefix = isDefaultLang ? 'https://mendiak.github.io/pulse.roots/es' : 'https://mendiak.github.io/pulse.roots';
+    const defaultLang = isDefaultLang ? 'en' : 'es';
+
+    function hreflangHtml(path) {
+        const thisUrl = `${baseUrlWithSlash}${path}`.replace(/\/+$/, '/');
+        const altUrl = `${altPrefix}/${path}`.replace(/\/+$/, '/');
+        return `\n    <xhtml:link rel="alternate" hreflang="${defaultLang}" href="${thisUrl}"/>\n    <xhtml:link rel="alternate" hreflang="${altLang}" href="${altUrl}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${thisUrl}"/>`;
+    }
+
+    const urls = [];
+
+    for (const u of baseUrls) {
+        const urlPath = u.path ? u.path : '';
+        urls.push(`  <url>
+    <loc>${baseUrlWithSlash}${urlPath}</loc>${hreflangHtml(urlPath)}
+    <lastmod>${u.lastmod}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`);
+    }
 
     allGenreInfos.forEach(genreInfo => {
         if (genreInfo.fullSlugPath) {
@@ -390,25 +514,19 @@ function generateSitemap(allGenreInfos) {
             else if (depth === 3) priority = '0.7';
             else priority = '0.6';
 
-            urls.push({
-                loc: `${baseUrlWithSlash}genres/${genreInfo.fullSlugPath}.html`,
-                lastmod: today,
-                changefreq: 'monthly',
-                priority: priority,
-            });
+            const path = `genres/${genreInfo.fullSlugPath}.html`;
+            urls.push(`  <url>
+    <loc>${baseUrlWithSlash}${path}</loc>${hreflangHtml(path)}
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>${priority}</priority>
+  </url>`);
         }
     });
 
-    const urlset = urls.map(url => `  <url>
-    <loc>${url.loc.replace(/&/g, '&amp;').replace(/'/g, '&apos;').replace(/"/g, '&quot;')}</loc>
-    <lastmod>${url.lastmod}</lastmod>
-    <changefreq>${url.changefreq}</changefreq>
-    <priority>${url.priority}</priority>
-  </url>`).join('\n');
-
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urlset}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" ${ns}>
+${urls.join('\n')}
 </urlset>`;
 
     fs.writeFileSync(CONFIG.sitemapPath, sitemap, 'utf-8');
@@ -588,22 +706,154 @@ try {
     generateSitemapHtml(allGenresWithSlugs);
     generateGenresIndexPage(allGenresWithSlugs);
 
-    // Inject full genre tree into index.html footer
-    console.log("Updating index.html with full genre tree...");
-    const indexHtml = fs.readFileSync(CONFIG.templatePath, 'utf-8');
-    const genreTreeHtml = generateGenreTreeHtml(allGenresWithSlugs);
-    const startMarker = '<!--GENRE_TREE_START-->';
-    const endMarker = '<!--GENRE_TREE_END-->';
-    const startIdx = indexHtml.indexOf(startMarker);
-    const endIdx = indexHtml.indexOf(endMarker);
-    if (startIdx !== -1 && endIdx !== -1) {
-        const before = indexHtml.substring(0, startIdx + startMarker.length);
-        const after = indexHtml.substring(endIdx);
-        const updatedIndexHtml = before + '\n' + genreTreeHtml + after;
-        fs.writeFileSync(CONFIG.templatePath, updatedIndexHtml, 'utf-8');
-        console.log("✓ index.html updated with genre tree.");
+    // Generate language-specific index page and inject genre tree
+    if (isDefaultLang) {
+        // For English: update the main index.html with genre tree + hreflang
+        console.log("Updating index.html with full genre tree...");
+        const indexHtml = fs.readFileSync(CONFIG.templatePath, 'utf-8');
+        let enIndexHtml = addHreflangLinks(indexHtml, CONFIG.baseUrl, '');
+        const genreTreeHtml = generateGenreTreeHtml(allGenresWithSlugs);
+        const startMarker = '<!--GENRE_TREE_START-->';
+        const endMarker = '<!--GENRE_TREE_END-->';
+        const startIdx = enIndexHtml.indexOf(startMarker);
+        const endIdx = enIndexHtml.indexOf(endMarker);
+        if (startIdx !== -1 && endIdx !== -1) {
+            const before = enIndexHtml.substring(0, startIdx + startMarker.length);
+            const after = enIndexHtml.substring(endIdx);
+            enIndexHtml = before + '\n' + genreTreeHtml + after;
+            enIndexHtml = injectRuntimeGlobals(enIndexHtml);
+            fs.writeFileSync(CONFIG.templatePath, enIndexHtml, 'utf-8');
+            console.log("✓ index.html updated with genre tree + hreflang.");
+        } else {
+            console.log("⚠ Markers not found in index.html. Skipping.");
+        }
     } else {
-        console.log("⚠ Markers not found in index.html. Skipping.");
+        // For non-English: create a language-specific index page
+        console.log(`Creating ${LANG}/index.html with i18n and genre tree...`);
+        const indexHtml = fs.readFileSync(CONFIG.templatePath, 'utf-8');
+        let langIndexHtml = applySeoI18n(indexHtml);
+        langIndexHtml = injectRuntimeGlobals(langIndexHtml);
+        langIndexHtml = addHreflangLinks(langIndexHtml, CONFIG.baseUrl, '');
+
+        // Adjust asset paths for subdirectory depth (same as depth-1 genre pages)
+        const relPrefix = '../';
+        langIndexHtml = langIndexHtml.replace(/href="styles\.css"/, `href="${relPrefix}styles.css"`);
+        langIndexHtml = langIndexHtml.replace(/src="src\/js\/main\.js"/, `src="${relPrefix}src/js/main.js"`);
+        langIndexHtml = langIndexHtml.replace(/src="src\/js\/cookie-consent\.js"/, `src="${relPrefix}src/js/cookie-consent.js"`);
+        langIndexHtml = langIndexHtml.replace(/src="assets\/logo\.png"/, `src="${relPrefix}assets/logo.png"`);
+        langIndexHtml = langIndexHtml.replace(/src="assets\/footer-logo\.png"/, `src="${relPrefix}assets/footer-logo.png"`);
+        langIndexHtml = langIndexHtml.replace(/rel="icon" href="assets\/favicon\.png"/, `rel="icon" href="${relPrefix}assets/favicon.png"`);
+        langIndexHtml = langIndexHtml.replace(/href="index\.html"/g, `href="${relPrefix}index.html"`);
+        langIndexHtml = langIndexHtml.replace(/href="genres\//g, `href="${relPrefix}genres/`);
+        langIndexHtml = langIndexHtml.replace(
+            /<link rel=\"sitemap\" type=\"application\/xml\" title=\"Sitemap\" href=\".*\">/,
+            `<link rel="sitemap" type="application/xml" title="Sitemap" href="${CONFIG.baseUrl}/sitemap.xml">`
+        );
+        langIndexHtml = langIndexHtml.replace(
+            /content="https:\/\/mendiak\.github\.io\/pulse\.roots\/assets\/og_image\.webp"/,
+            `content="${CONFIG.baseUrl}/assets/og_image.webp"`
+        );
+        // Adjust rel="preload" for the JSON data file
+        langIndexHtml = langIndexHtml.replace(
+            /href="data\/pulseroots\.genres\.json"/,
+            `href="${relPrefix}data/pulseroots.genres.${LANG}.json"`
+        );
+        // Also fix the noscript fallback CSS path (second occurrence)
+        langIndexHtml = langIndexHtml.replace(
+            new RegExp('<noscript><link rel="stylesheet" href="styles\\.css">'),
+            `<noscript><link rel="stylesheet" href="${relPrefix}styles.css">`
+        );
+
+        // Regenerate genre tree with adjusted relative prefix for subdirectory
+        const genreTreeHtml = generateGenreTreeHtml(allGenresWithSlugs, '../');
+        const startMarker = '<!--GENRE_TREE_START-->';
+        const endMarker = '<!--GENRE_TREE_END-->';
+        const startIdx = langIndexHtml.indexOf(startMarker);
+        const endIdx = langIndexHtml.indexOf(endMarker);
+        if (startIdx !== -1 && endIdx !== -1) {
+            const before = langIndexHtml.substring(0, startIdx + startMarker.length);
+            const after = langIndexHtml.substring(endIdx);
+            langIndexHtml = before + '\n' + genreTreeHtml + after;
+        }
+        const langIndexPath = path.join(__dirname, `${LANG}/index.html`);
+        fs.writeFileSync(langIndexPath, langIndexHtml, 'utf-8');
+        console.log(`✓ ${LANG}/index.html created.`);
+
+        // Generate non-English static pages (contact, privacy, thanks)
+        const pages = ['contact', 'privacy', 'thanks'];
+        for (const page of pages) {
+            const srcPath = path.join(__dirname, `${page}.html`);
+            const dstPath = path.join(__dirname, `${LANG}/${page}.html`);
+            if (fs.existsSync(srcPath)) {
+                let pageHtml = fs.readFileSync(srcPath, 'utf-8');
+                pageHtml = pageHtml.replace(/<html lang="en"/, `<html lang="${LANG}"`);
+
+                // Fix asset paths for subdirectory
+                pageHtml = pageHtml.replace(
+                    /href="(styles\.css)"/g,
+                    `href="../$1"`
+                );
+                pageHtml = pageHtml.replace(
+                    /href="assets\//g,
+                    'href="../assets/'
+                );
+                pageHtml = pageHtml.replace(
+                    /src="assets\//g,
+                    'src="../assets/'
+                );
+                pageHtml = pageHtml.replace(/href="genres\//g, 'href="../genres/');
+
+                // Update page-specific SEO meta tags
+                const pageI18n = i18n[page];
+                if (pageI18n && pageI18n.title) {
+                    const pageTitle = `${pageI18n.title} - PulseRoots`;
+                    pageHtml = pageHtml.replace(/<title>.*?<\/title>/, `<title>${pageTitle}</title>`);
+                    pageHtml = pageHtml.replace(/<meta property="og:title" content=".*?">/, `<meta property="og:title" content="${pageTitle}">`);
+                    pageHtml = pageHtml.replace(/<meta name="twitter:title" content=".*?">/, `<meta name="twitter:title" content="${pageTitle}">`);
+                }
+
+                // Fix og:url for Spanish version
+                const pageUrl = `${CONFIG.baseUrl}/${page}.html`;
+                pageHtml = pageHtml.replace(/<meta property="og:url" content=".*?">/, `<meta property="og:url" content="${pageUrl}">`);
+
+                // Fix form redirect for contact page
+                if (page === 'contact') {
+                    pageHtml = pageHtml.replace(
+                        /value="https:\/\/mendiak\.github\.io\/pulse\.roots\/thanks\.html"/,
+                        `value="${CONFIG.baseUrl}/thanks.html"`
+                    );
+                }
+
+                pageHtml = addHreflangLinks(pageHtml, CONFIG.baseUrl, `${page}.html`);
+                pageHtml = injectRuntimeGlobals(pageHtml);
+
+                // Inject inline i18n DOM renderer for static pages (they don't import main.js)
+                const renderScript = `
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var dict = window.PR_I18N;
+            function rt(key) {
+                if (!dict) return key;
+                var parts = key.split('.'), val = dict;
+                for (var i = 0; i < parts.length; i++) {
+                    if (val && typeof val === 'object') val = val[parts[i]];
+                    else return key;
+                }
+                return typeof val === 'string' ? val : key;
+            }
+            document.querySelectorAll('[data-i18n]').forEach(function(el) { el.textContent = rt(el.getAttribute('data-i18n')); });
+            document.querySelectorAll('[data-i18n-html]').forEach(function(el) { el.innerHTML = rt(el.getAttribute('data-i18n-html')); });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) { el.placeholder = rt(el.getAttribute('data-i18n-placeholder')); });
+            document.querySelectorAll('[data-i18n-title]').forEach(function(el) { el.title = rt(el.getAttribute('data-i18n-title')); });
+            document.querySelectorAll('[data-i18n-aria-label]').forEach(function(el) { el.setAttribute('aria-label', rt(el.getAttribute('data-i18n-aria-label'))); });
+        });
+    </script>`;
+                pageHtml = pageHtml.replace('</body>', renderScript + '\n</body>');
+
+                fs.writeFileSync(dstPath, pageHtml, 'utf-8');
+                console.log(`  ✓ ${LANG}/${page}.html created.`);
+            }
+        }
     }
 
     console.log('\nBuild complete!');

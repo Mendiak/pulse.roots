@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "lang": "es",
+    "name": "Español",
+    "englishName": "Spanish"
+  },
+  "seo": {
+    "title": "PulseRoots: Árbol de Estilos de Música Electrónica",
+    "description": "Explora la evolución de la música electrónica con PulseRoots. Una visualización interactiva en árbol que mapea géneros desde el Techno y House hasta el Ambient y Experimental. Descubre estilos, subestilos y pistas de ejemplo.",
+    "keywords": "música electrónica, géneros musicales, techno, house, ambient, trance, visualización musical, árbol musical",
+    "ogTitle": "PulseRoots: Árbol de Estilos de Música Electrónica",
+    "ogDescription": "Explora la evolución de la música electrónica con PulseRoots. Una visualización interactiva en árbol que mapea géneros musicales.",
+    "twitterTitle": "PulseRoots: Árbol de Estilos de Música Electrónica",
+    "twitterDescription": "Explora la evolución de la música electrónica con PulseRoots. Una visualización interactiva en árbol que mapea géneros musicales.",
+    "jsonldDescription": "Explora la evolución de la música electrónica con PulseRoots. Una visualización interactiva en árbol que mapea géneros desde el Techno y House hasta el Ambient y Experimental. Descubre estilos, subestilos y pistas de ejemplo."
+  },
+  "header": {
+    "searchPlaceholder": "Buscar un género...",
+    "clearButton": "Limpiar",
+    "shuffleTitle": "Género Aleatorio",
+    "treeLayoutTitle": "Vista de Árbol",
+    "radialLayoutTitle": "Vista Radial",
+    "timelineTitle": "Línea de Tiempo",
+    "fullscreenTitle": "Pantalla Completa",
+    "fullscreenLabel": "Activar Pantalla Completa",
+    "shareTitle": "Compartir PulseRoots",
+    "shareLabel": "Compartir PulseRoots",
+    "themeTitle": "Cambiar Tema",
+    "themeLabel": "Cambiar Modo Claro/Oscuro",
+    "contactTitle": "Sugerir un Género / Reportar Error",
+    "contactLabel": "Sugerir un Género / Reportar un Error",
+    "h1": "PulseRoots: Árbol de Estilos de Música Electrónica",
+    "homeLabel": "Inicio"
+  },
+  "search": {
+    "searchNav": {
+      "counter": "0 de 0",
+      "prevTitle": "Resultado anterior",
+      "nextTitle": "Siguiente resultado"
+    },
+    "mobilePlaceholder": "Filtrar géneros...",
+    "mobileLabel": "Filtrar géneros"
+  },
+  "infoPanel": {
+    "ariaLabel": "Información del género",
+    "readMore": "Leer más",
+    "readLess": "Leer menos",
+    "linkCopied": "¡Enlace copiado!",
+    "copyLinkToClipboard": "Copiar enlace al portapapeles",
+    "failedToCopy": "¡Error al copiar!"
+  },
+  "panel": {
+    "share": "Compartir",
+    "shareTitle": "Compartir este género",
+    "closePanel": "Cerrar panel de información",
+    "noDescription": "No hay descripción disponible",
+    "readMoreWikipedia": "Leer más en Wikipedia",
+    "reportError": "¿Has encontrado un error? Repórtalo aquí",
+    "exampleTrack": "Pista de ejemplo",
+    "spotifyNote": "Nota: Inicia sesión en Spotify en tu navegador para escuchar la pista completa. De lo contrario, se reproducirá una vista previa de 30 segundos.",
+    "keyArtists": "Artistas clave:",
+    "partOf": "Parte de:",
+    "goToParent": "Ir al género padre {name}",
+    "subgenres": "Subgéneros:",
+    "buyCoffee": "Invítame a un café"
+  },
+  "intro": {
+    "welcomeTitle": "Cómo Explorar",
+    "welcomeText": "¡Bienvenido a PulseRoots! Esta guía te ayuda a navegar por el vasto mundo de la música electrónica usando nuestras herramientas interactivas.",
+    "desktopText": "En <strong>ordenador</strong>, encontrarás un <strong>mapa de árbol</strong> inmersivo que visualiza las conexiones entre géneros. En <strong>móvil</strong>, los géneros están organizados en una <strong>lista de acordeón</strong> clara y accesible.",
+    "stylesTitle": "Estilos y Subestilos",
+    "stylesText": "Ambas vistas comienzan con amplias \"Familias\" (como Techno o House) y se ramifican en estilos y subestilos específicos. Haz clic o toca cualquier género para abrir un panel con una descripción detallada y una pista de ejemplo.",
+    "timelineTitle": "Línea de Tiempo Musical",
+    "timelineText": "Haz clic en el botón <strong>Línea de Tiempo</strong> (<i class=\"bi bi-clock-history\"></i>) para explorar <strong>107 hitos clave</strong> en la historia de la música electrónica, desde 1897 hasta el presente. Pasa el cursor sobre cualquier punto para leer la historia; los puntos con un <strong>anillo discontinuo</strong> incluyen un enlace externo.",
+    "artistsTitle": "Artistas Clave",
+    "artistsText": "Para cada género, hemos incluido una sección de \"Artistas Clave\" con pioneros y músicos destacados que han moldeado significativamente su sonido.",
+    "accessibilityTitle": "Accesibilidad",
+    "accessibilityText": "PulseRoots es accesible mediante teclado. Usa la tecla <strong>Tab</strong> para navegar por los nodos del árbol de géneros y pulsa <strong>Enter</strong> o <strong>Espacio</strong> para abrir el panel de detalles.",
+    "noteTitle": "Nota sobre la Clasificación",
+    "noteText": "Esta visualización representa una interpretación de cómo se categorizan los géneros de música electrónica. La música es fluida y otras clasificaciones podrían agrupar los estilos de manera diferente.",
+    "inspirationsTitle": "Inspiraciones",
+    "inspirationsText": "PulseRoots está inspirado en el increíble trabajo de otros proyectos de exploración musical. Agradecimientos especiales a <a href=\"https://music.ishkur.com/\" class=\"info-box-link\" target=\"_blank\" rel=\"noopener noreferrer\">Ishkur's Guide to Electronic Music</a>, <a href=\"https://musicmap.info/\" class=\"info-box-link\" target=\"_blank\" rel=\"noopener noreferrer\">Musicmap</a> y <a href=\"https://everynoise.com/\" class=\"info-box-link\" target=\"_blank\" rel=\"noopener noreferrer\">Every Noise at Once</a> por allanar el camino.",
+    "spotifyTitle": "Escuchar Pistas",
+    "spotifyText": "Para escuchar las pistas de ejemplo, es posible que necesites una cuenta de Spotify. El reproductor integrado ofrece una vista previa de 30 segundos para todos los usuarios. <a href=\"https://accounts.spotify.com/login\" id=\"spotify-login-link\" class=\"info-box-link\" target=\"_blank\" rel=\"noopener noreferrer\">Iniciar sesión en Spotify</a> puede desbloquear la pista completa.",
+    "contactTitle": "Contacto",
+    "contactText": "Gracias por visitarnos. Espero que disfrutes explorando el mundo de la música electrónica.",
+    "contactLinkText": "Si tienes sugerencias, propuestas de mejora, has encontrado errores o simplemente quieres saludar, no dudes en escribirme a través de nuestra <a href=\"contact.html\" class=\"info-box-link\">página de contacto</a>.",
+    "buyCoffee": "Invítame a un café"
+  },
+  "mobileNav": {
+    "title": "Explorar Géneros",
+    "expandAll": "Expandir Todo",
+    "collapseAll": "Colapsar Todo",
+    "readOnWikipedia": "Leer más sobre {name} en Wikipedia",
+    "infoFor": "Información de {name}"
+  },
+  "loading": {
+    "text": "Cargando géneros..."
+  },
+  "historyBanner": {
+    "label": "Historia Musical:"
+  },
+  "footer": {
+    "mission": "Explora las conexiones profundas y la evolución de la música electrónica a través de una lente interactiva. Un viaje desde las raíces hasta los ritmos del futuro.",
+    "supportTitle": "Apoyo",
+    "supportText": "Un sitio web gratuito construido con pasión por la música electrónica. Cualquier muestra de apoyo ayuda a mantenerlo vivo.",
+    "portfolio": "Portafolio",
+    "buyCoffee": "Invítame a un café",
+    "linksTitle": "Enlaces y Créditos",
+    "github": "Github",
+    "background": "Imagen de Fondo",
+    "logoCredit": "Logo",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidad",
+    "sitemap": "Mapa del Sitio",
+    "genresTitle": "Géneros",
+    "statsTitle": "Estadísticas",
+    "totalGenres": "Géneros Totales",
+    "families": "Familias",
+    "largestFamily": "Familia Más Grande",
+    "deepestLevel": "Nivel Más Profundo",
+    "keyArtists": "Artistas Clave",
+    "shareTitle": "Compartir",
+    "copyright": "PulseRoots. Mapeando el pulso de la música electrónica."
+  },
+  "sharePopover": {
+    "ariaLabel": "Opciones para compartir",
+    "facebookLabel": "Compartir en Facebook",
+    "xLabel": "Compartir en X (Twitter)",
+    "redditLabel": "Compartir en Reddit",
+    "copyLink": "Copiar Enlace",
+    "shareText": "¡Explora la evolución de la música electrónica con PulseRoots!"
+  },
+  "cookieConsent": {
+    "text": "Usamos <a href=\"privacy.html\">cookies</a> para analizar el tráfico del sitio con Google Analytics. Puedes aceptar o rechazar las cookies no esenciales. No almacenamos datos personales en nuestros servidores.",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "ariaLabel": "Consentimiento de Cookies"
+  },
+  "contact": {
+    "title": "Contáctame",
+    "intro": "¿Tienes ideas para el sitio, has encontrado un error o simplemente quieres saludar? ¡No seas tímido, escríbeme! Me encantará saber de ti.",
+    "namePlaceholder": "Tu Nombre...",
+    "emailPlaceholder": "Tu Email...",
+    "subjectLabel": "Selecciona un asunto...",
+    "subjectSuggestion": "Sugerir un Nuevo Género",
+    "subjectError": "Reportar un Error",
+    "subjectGeneral": "Consulta General",
+    "subjectOther": "Otro",
+    "messagePlaceholder": "Tu Mensaje...",
+    "submitButton": "Enviar",
+    "backButton": "Volver a PulseRoots"
+  },
+  "thanks": {
+    "title": "¡Mensaje Enviado!",
+    "text": "Gracias por escribirme. Revisaré tu mensaje y te responderé lo antes posible.",
+    "backButton": "Volver a PulseRoots"
+  },
+  "privacy": {
+    "title": "Política de Privacidad de PulseRoots",
+    "lastUpdated": "16 de enero de 2026",
+    "intro": "Esta Política de Privacidad describe cómo PulseRoots (\"nosotros\", \"nuestro\") recopila, usa y divulga la información que obtenemos de los visitantes de nuestro sitio web."
+  },
+  "layouts": {
+    "tree": "Árbol",
+    "radial": "Radial",
+    "timeline": "Línea de Tiempo"
+  }
+}

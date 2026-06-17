@@ -75,84 +75,84 @@
 </head>
 <body>
     <div class="container">
-        <h2><i class="bi bi-envelope" aria-hidden="true"></i> Contact Me</h2>
-        <p>Got any cool ideas for the site, spotted a bug, or just wanna say hi? Don't be shy, drop me a line! I'd love to hear from you.</p>
+        <h2 data-i18n-html="contact.title"><i class="bi bi-envelope" aria-hidden="true"></i> Contact Me</h2>
+        <p data-i18n="contact.intro">Got any cool ideas for the site, spotted a bug, or just wanna say hi? Don't be shy, drop me a line! I'd love to hear from you.</p>
 
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="41398cfd-0efd-45fa-859e-50b9e66d6f31">
-            <input type="text" name="name" required placeholder="Your Name...">
-            <input type="email" name="email" required placeholder="Your Email...">
+            <input type="text" name="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Your Name...">
+            <input type="email" name="email" required data-i18n-placeholder="contact.emailPlaceholder" placeholder="Your Email...">
             
             <select name="subject" id="subject-select" required>
-                <option value="" disabled selected>Select a subject...</option>
-                <option value="Suggestion">Suggest a New Genre</option>
-                <option value="Error Report">Report an Error / Fix</option>
-                <option value="General">General Inquiry</option>
-                <option value="Other">Other</option>
+                <option value="" disabled selected data-i18n="contact.subjectLabel">Select a subject...</option>
+                <option value="Suggestion" data-i18n="contact.subjectSuggestion">Suggest a New Genre</option>
+                <option value="Error Report" data-i18n="contact.subjectError">Report an Error / Fix</option>
+                <option value="General" data-i18n="contact.subjectGeneral">General Inquiry</option>
+                <option value="Other" data-i18n="contact.subjectOther">Other</option>
             </select>
 
-            <textarea name="message" required placeholder="Your Message..."></textarea>
+            <textarea name="message" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Your Message..."></textarea>
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <input type="hidden" name="redirect" value="https://mendiak.github.io/pulse.roots/thanks.html">
-            <button id="submitbutton" type="submit"><i class="bi bi-send"></i> Submit</button>
+            <button id="submitbutton" type="submit"><i class="bi bi-send"></i> <span data-i18n="contact.submitButton">Submit</span></button>
         </form>
         
-        <p style="text-align: center; margin-top: 30px;"><a href="index.html" class="back-button">Back to PulseRoots</a></p>
+        <p style="text-align: center; margin-top: 30px;"><a href="index.html" class="back-button"><span data-i18n="contact.backButton">Back to PulseRoots</span></a></p>
     </div>
 
     <footer>
         <div id="footer-main">
             <div id="footer-brand">
                 <img src="assets/footer-logo.png" id="footer-logo" alt="PulseRoots Logo" loading="lazy">
-                <p id="footer-mission">Explore the deep connections and evolution of electronic music through an
+                <p id="footer-mission" data-i18n="footer.mission">Explore the deep connections and evolution of electronic music through an
                     interactive lens. A journey from roots to future rhythms.</p>
             </div>
 
             <div id="footer-support">
-                <h3>Support</h3>
-                <p id="footer-support-text">A free website built with passion for electronic music. Any token of support helps keep it alive.</p>
+                <h3 data-i18n="footer.supportTitle">Support</h3>
+                <p id="footer-support-text" data-i18n="footer.supportText">A free website built with passion for electronic music. Any token of support helps keep it alive.</p>
                 <div id="footer-support-links">
                     <a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-code-slash"></i> Portfolio
+                        <i class="bi bi-code-slash"></i> <span data-i18n="footer.portfolio">Portfolio</span>
                     </a>
                     <a href="https://www.buymeacoffee.com/Mendiak" target="_blank" rel="noopener noreferrer" class="support-bmc">
-                        <i class="bi bi-cup-hot"></i> Buy me a coffee
+                        <i class="bi bi-cup-hot"></i> <span data-i18n="footer.buyCoffee">Buy me a coffee</span>
                     </a>
                 </div>
             </div>
 
             <nav id="footer-links" aria-label="Links and Credits">
-                <h3>Links & Credits</h3>
+                <h3 data-i18n="footer.linksTitle">Links & Credits</h3>
                 <ul>
                     <li><a class="footer-link" href="https://github.com/Mendiak/pulse.roots" target="_blank"
-                            rel="noopener noreferrer"><i class="bi bi-github"></i> Github</a></li>
+                            rel="noopener noreferrer"><i class="bi bi-github"></i> <span data-i18n="footer.github">Github</span></a></li>
                     <li><a class="footer-link" href="https://unsplash.com/es/@kshar2" target="_blank"
-                            rel="noopener noreferrer"><i class="bi bi-camera"></i> Background Picture</a></li>
+                            rel="noopener noreferrer"><i class="bi bi-camera"></i> <span data-i18n="footer.background">Background Picture</span></a></li>
                     <li><a class="footer-link" href="https://www.flaticon.com/" target="_blank"
-                            rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> Logo</a></li>
-                    <li><a class="footer-link" href="contact.html"><i class="bi bi-patch-question"></i> Contact</a></li>
-                    <li><a class="footer-link" href="privacy.html"><i class="bi bi-shield-lock"></i> Privacy Policy</a>
+                            rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> <span data-i18n="footer.logoCredit">Logo</span></a></li>
+                    <li><a class="footer-link" href="contact.html"><i class="bi bi-patch-question"></i> <span data-i18n="footer.contact">Contact</span></a></li>
+                    <li><a class="footer-link" href="privacy.html"><i class="bi bi-shield-lock"></i> <span data-i18n="footer.privacy">Privacy Policy</span></a>
                     </li>
-                    <li><a class="footer-link" href="sitemap.html"><i class="bi bi-diagram-3"></i> Sitemap</a></li>
+                    <li><a class="footer-link" href="sitemap.html"><i class="bi bi-diagram-3"></i> <span data-i18n="footer.sitemap">Sitemap</span></a></li>
                 </ul>
             </nav>
 
             <div id="footer-social-section">
-                <h3>Share This</h3>
+                <h3 data-i18n="footer.shareTitle">Share This</h3>
                 <div id="social-icons-container">
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://mendiak.github.io/pulse.roots/"
-                        target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="social-btn">
+                        target="_blank" rel="noopener noreferrer" data-i18n-aria-label="sharePopover.facebookLabel" aria-label="Share on Facebook" class="social-btn">
                         <i class="bi bi-facebook" aria-hidden="true"></i>
                     </a>
                     <a href="https://x.com/intent/tweet?url=https://mendiak.github.io/pulse.roots/&text=Explore%20the%20evolution%20of%20electronic%20music%20with%20PulseRoots!%20%23ElectronicMusic%20%23MusicGenres"
-                        target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter)" class="social-btn">
+                        target="_blank" rel="noopener noreferrer" data-i18n-aria-label="sharePopover.xLabel" aria-label="Share on X (Twitter)" class="social-btn">
                         <i class="bi bi-twitter-x" aria-hidden="true"></i>
                     </a>
                     <a href="https://www.reddit.com/submit?url=https://mendiak.github.io/pulse.roots/&title=PulseRoots:%20Electronic%20Music%20Styles%20Tree"
-                        target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" class="social-btn">
+                        target="_blank" rel="noopener noreferrer" data-i18n-aria-label="sharePopover.redditLabel" aria-label="Share on Reddit" class="social-btn">
                         <i class="bi bi-reddit" aria-hidden="true"></i>
                     </a>
-                    <button id="copy-link-btn" aria-label="Copy link to clipboard" class="social-btn">
+                    <button id="copy-link-btn" data-i18n-aria-label="infoPanel.copyLinkToClipboard" aria-label="Copy link to clipboard" class="social-btn">
                         <i class="bi bi-clipboard" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -160,7 +160,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2026</span> PulseRoots. Mapping the pulse of electronic music.</p>
+            <p>&copy; <span id="current-year">2026</span> <span data-i18n="footer.copyright">PulseRoots. Mapping the pulse of electronic music.</span></p>
         </div>
     </footer>
 

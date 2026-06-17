@@ -1,3 +1,4 @@
+import { t } from './i18n.js';
 import { state } from './state.js';
 import { slugify } from './utils.js';
 import { showInfoPanel } from './panel.js';
@@ -35,14 +36,14 @@ export function createMobileNav(items, parentElement, parentColor = null) {
       wikiIconLink.rel = 'noopener noreferrer';
       wikiIconLink.className = 'bi bi-wikipedia wiki-icon';
       wikiIconLink.dataset.action = 'wiki';
-      wikiIconLink.setAttribute('aria-label', `Read more about ${item.name || item.style} on Wikipedia`);
+      wikiIconLink.setAttribute('aria-label', t('mobileNav.readOnWikipedia').replace('{name}', item.name || item.style));
       actionsDiv.appendChild(wikiIconLink);
     }
 
     const infoIcon = document.createElement('i');
     infoIcon.className = 'bi bi-info-circle-fill info-icon';
     infoIcon.dataset.action = 'info';
-    infoIcon.setAttribute('aria-label', `Info for ${item.name || item.style}`);
+    infoIcon.setAttribute('aria-label', t('mobileNav.infoFor').replace('{name}', item.name || item.style));
     actionsDiv.appendChild(infoIcon);
 
     if (item.substyles && item.substyles.length > 0) {
