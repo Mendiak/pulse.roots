@@ -550,18 +550,7 @@ h1 {
 }
 
 body:not(.light-mode) #logo-link h1 {
-  background: linear-gradient(90deg, var(--text-main) 30%, rgba(255, 0, 102, 0.5) 50%, var(--text-main) 70%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textShimmer 5s ease-in-out infinite;
-}
-
-@keyframes textShimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  color: var(--text-main);
 }
 
 body.light-mode #logo-link h1 {
@@ -1450,7 +1439,7 @@ footer {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   color: var(--text-main);
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
   padding: 60px 30px 30px;
   font-size: 0.95rem;
   margin-top: 80px;
@@ -1541,6 +1530,11 @@ footer {
   transform: translateY(-1px);
 }
 
+.support-bmc:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
+}
+
 .support-bmc i {
   font-size: 1rem;
 }
@@ -1578,6 +1572,11 @@ footer {
   transform: translateX(4px);
 }
 
+.footer-link:focus-visible {
+  outline: none;
+  color: var(--accent-pink);
+}
+
 .footer-link i {
   font-size: 1.1rem;
 }
@@ -1607,9 +1606,14 @@ footer {
 .social-btn:hover {
   background: var(--accent-gradient);
   border-color: transparent;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(255, 0, 102, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 102, 0.15);
   color: white;
+}
+
+.social-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
 }
 
 #footer-social-section {
@@ -1634,12 +1638,20 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+
+  #footer-genres {
+    grid-column: 1 / -1;
+  }
+
+  #footer-stats {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 768px) {
   #footer-main {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
   }
 
   #footer-brand {
@@ -1669,6 +1681,10 @@ footer {
     justify-content: flex-start;
   }
 
+  footer {
+    padding: 40px 20px 24px;
+  }
+
 }
 
 /* --- Genre Tree Footer --- */
@@ -1688,6 +1704,12 @@ footer {
 
 #footer-genres summary:hover,
 #genre-tree summary:hover {
+  color: var(--accent-pink);
+}
+
+#footer-genres summary:focus-visible,
+#genre-tree summary:focus-visible {
+  outline: none;
   color: var(--accent-pink);
 }
 
