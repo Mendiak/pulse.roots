@@ -166,22 +166,6 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
     infoContent.appendChild(wikiLinkContainer);
   }
 
-  const reportLinkContainer = document.createElement('div');
-  reportLinkContainer.className = 'external-link-container report-error-container';
-  reportLinkContainer.style.marginTop = '8px';
-  reportLinkContainer.style.paddingTop = '0';
-  reportLinkContainer.style.borderTop = 'none';
-
-  const reportLink = document.createElement('a');
-  const genreNameEncoded = encodeURIComponent(itemData.name || itemData.style);
-  reportLink.href = `contact.html?genre=${genreNameEncoded}&subject=Error%20Report`;
-  reportLink.className = 'report-link';
-
-  reportLink.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${t('panel.reportError')}`;
-
-  reportLinkContainer.appendChild(reportLink);
-  infoContent.appendChild(reportLinkContainer);
-
   const example = document.createElement('p');
   example.className = 'example-track';
   example.innerHTML = `<i class="bi bi-soundwave"></i> <span>${t('panel.exampleTrack')}: <b>${itemData.example || 'N/A'}</b></span>`;
@@ -271,19 +255,25 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
     infoContent.appendChild(subgenresNav);
   }
 
-  const donationContainer = document.createElement('div');
-  donationContainer.style.marginTop = '24px';
-  donationContainer.style.textAlign = 'center';
+  const panelFooter = document.createElement('div');
+  panelFooter.className = 'panel-footer';
 
   const donationLink = document.createElement('a');
   donationLink.href = 'https://www.buymeacoffee.com/Mendiak';
   donationLink.target = '_blank';
   donationLink.rel = 'noopener noreferrer';
-  donationLink.className = 'panel-donation-link';
+  donationLink.className = 'panel-footer-link';
   donationLink.innerHTML = '<i class="bi bi-cup-hot"></i> ' + t('panel.buyCoffee');
+  panelFooter.appendChild(donationLink);
 
-  donationContainer.appendChild(donationLink);
-  infoContent.appendChild(donationContainer);
+  const genreNameEncoded = encodeURIComponent(itemData.name || itemData.style);
+  const reportLink = document.createElement('a');
+  reportLink.href = `contact.html?genre=${genreNameEncoded}&subject=Error%20Report`;
+  reportLink.className = 'panel-footer-link';
+  reportLink.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${t('panel.reportError')}`;
+  panelFooter.appendChild(reportLink);
+
+  infoContent.appendChild(panelFooter);
 
   setTimeout(() => {
     if (infoPanel.scrollHeight > infoPanel.clientHeight) {

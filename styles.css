@@ -1129,7 +1129,17 @@ body.light-mode .active-searched-node text {
   border-radius: 12px;
 }
 
-.panel-donation-link {
+.panel-footer {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.panel-footer-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -1137,25 +1147,16 @@ body.light-mode .active-searched-node text {
   text-decoration: none;
   font-size: 0.8em;
   opacity: 0.6;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
-.panel-donation-link:hover {
+.panel-footer-link:hover {
   opacity: 1;
   color: var(--accent-pink);
 }
 
-.panel-donation-link i {
+.panel-footer-link i {
   font-size: 1em;
-}
-
-.report-link {
-  font-size: 0.8em !important;
-  opacity: 0.6;
-}
-
-.report-link:hover {
-  opacity: 1 !important;
 }
 
 /* --- NEW: Navigation Sections in Info Panel --- */
