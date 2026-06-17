@@ -43,13 +43,17 @@ async function fetchData() {
       state.currentLayout = layout;
       [treeBtn, radialBtn, timelineBtn].forEach(btn => btn && btn.classList.toggle('active', btn.id === `${layout}-layout-btn`));
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      const container = document.getElementById('visualization-container');
+      container.classList.add('switching');
       setTimeout(() => {
         if (layout === 'timeline') {
           createTimeline();
         } else {
           createTree(state.allGenreData);
         }
-      }, 300);
+        container.classList.remove('switching');
+      }, 250);
     }
 
     if (treeBtn) treeBtn.addEventListener('click', () => setLayout('vertical'));

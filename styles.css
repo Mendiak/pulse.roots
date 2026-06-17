@@ -346,6 +346,16 @@ header {
   transform: scale(0.95);
 }
 
+#fullscreen-btn:focus-visible,
+#header-share-btn:focus-visible,
+#theme-toggle-btn:focus-visible,
+#header-contact-btn:focus-visible,
+#shuffle-button:focus-visible,
+#clear-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
+}
+
 .share-btn-wrapper {
   position: relative;
   display: flex;
@@ -784,6 +794,11 @@ body.light-mode .active-searched-node text {
   box-shadow: var(--shadow-neon);
 }
 
+.layout-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
+}
+
 /* Fullscreen, Share & Theme buttons handled by shared styles above */
 
 /* --- Loading Spinner and Content Visibility --- */
@@ -843,8 +858,13 @@ body.light-mode .active-searched-node text {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  /* Allow the container to shrink and prevent overflow */
   min-width: 0;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+#visualization-container.switching {
+  opacity: 0;
 }
 
 .node text {
@@ -1069,7 +1089,7 @@ body.light-mode .active-searched-node text {
 .panel-sticky-header {
   position: sticky;
   top: 0;
-  background: rgba(17, 17, 17, 0.7);
+  background: var(--panel-dark);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 12px 30px 10px;
@@ -1953,6 +1973,12 @@ body.light-mode .stat-value {
   transform: scale(0.97);
 }
 
+#expand-all-btn:focus-visible,
+#collapse-all-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
+}
+
 #mobile-genre-list,
 .sub-list {
   list-style: none;
@@ -2001,6 +2027,12 @@ body.light-mode .stat-value {
 
 .genre-item:active {
   background: rgba(255, 255, 255, 0.04);
+}
+
+.genre-item:focus-visible {
+  outline: none;
+  background: rgba(255, 255, 255, 0.04);
+  border-left-color: var(--accent-pink);
 }
 
 /* Remove the bottom border from the last item in any list for a cleaner look */
@@ -2108,6 +2140,11 @@ body.light-mode .stat-value {
 
 .read-more-btn:active {
   transform: scale(0.96);
+}
+
+.read-more-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
 }
 
 /* --- NEW: Styles for External Links in Info Panel --- */
@@ -2368,6 +2405,11 @@ body.light-mode .stat-value {
   transform: scale(1.05);
 }
 
+#back-to-top-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
+}
+
 /* --- Accessibility Focus Styles for Tree Nodes --- */
 .node:focus {
   outline: none;
@@ -2389,15 +2431,7 @@ body.light-mode .stat-value {
   color: #fff;
 }
 
-/* 2. Custom Input Focus */
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--accent-pink);
-  box-shadow: 0 0 0 3px rgba(255, 0, 102, 0.2);
-  /* Subtle pink glow */
-}
+
 
 /* --- Scroll Progress Bar --- */
 #scroll-progress-container {
@@ -2567,6 +2601,11 @@ select:focus {
 
 .share-popover-btn:active {
   transform: scale(0.95);
+}
+
+.share-popover-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
 }
 
 #share-popover-copy.success i {
