@@ -7,6 +7,7 @@
   --accent-pink: #ff0066;
   --text-main: #f5f5f5;
   --text-muted: #888888;
+  --text-tertiary: #555555;
 
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.03);
@@ -39,6 +40,7 @@ body.light-mode {
   --tertiary-dark: rgba(0, 0, 0, 0.06);
   --text-main: #1a1a1a;
   --text-muted: #666666;
+  --text-tertiary: #999999;
   --glass-bg: rgba(0, 0, 0, 0.04);
   --glass-border: rgba(0, 0, 0, 0.08);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -199,9 +201,11 @@ body {
     radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "Outfit", "Aleo", serif;
+  font-family: "Outfit", sans-serif;
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* --- Particles Canvas --- */
@@ -459,14 +463,14 @@ main {
 
 /* Style headings inside the intro box for better hierarchy */
 #tooltip h2 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--text-main);
   margin-top: 2.5em;
   margin-bottom: 1em;
   display: flex;
   align-items: center;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
 }
 
 #tooltip h2 i {
@@ -483,8 +487,8 @@ main {
 
 /* Style paragraphs for better readability */
 #tooltip p {
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 0.9rem;
+  line-height: 1.75;
   color: var(--text-muted);
 }
 
@@ -518,6 +522,8 @@ main {
 
 h1 {
   font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text-main);
   margin: 0;
 }
@@ -546,6 +552,15 @@ body.light-mode #logo-link h1 {
 
 p {
   font-size: 16px;
+  line-height: 1.75;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  margin: 1.5em 0 0.75em;
 }
 
 /* --- D3 Visualization --- */
@@ -652,7 +667,9 @@ body.light-mode .active-searched-node text {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 12px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   color: var(--text-muted);
   align-items: center;
 }
@@ -1027,12 +1044,12 @@ body.light-mode .active-searched-node text {
 #info-panel h2 {
   margin: 0;
   color: var(--text-main);
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-size: 1.625rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 12px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.03em;
   flex: 1;
   min-width: 0;
   /* Allow shrinking */
@@ -1090,8 +1107,8 @@ body.light-mode .active-searched-node text {
 
 #info-panel p {
   color: var(--text-muted);
-  line-height: 1.8;
-  font-size: 1rem;
+  line-height: 1.75;
+  font-size: 0.95rem;
   margin-bottom: 1.5em;
 }
 
@@ -1119,12 +1136,12 @@ body.light-mode .active-searched-node text {
 }
 
 .nav-label {
-  font-size: 0.7rem !important;
+  font-size: 0.65rem !important;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   color: var(--text-muted) !important;
   margin-bottom: 8px !important;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .nav-link-btn {
@@ -1135,8 +1152,9 @@ body.light-mode .active-searched-node text {
   border-radius: 12px;
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
@@ -1228,8 +1246,8 @@ body.light-mode .active-searched-node text {
 }
 
 .artist-card .artist-name {
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 500;
+  font-size: 0.9rem;
   letter-spacing: -0.01em;
 }
 
@@ -1248,13 +1266,12 @@ body.light-mode .active-searched-node text {
 
 /* NEW: Style for the note about Spotify login in the info panel */
 .spotify-note {
-  font-size: 0.75rem;
-  /* 12px */
-  color: #b0b0b0;
-  /* A lighter grey for secondary text */
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--text-tertiary);
   text-align: left;
   margin-top: 12px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 #close-panel {
@@ -1718,19 +1735,19 @@ body.light-mode #genre-tree summary:hover {
 }
 
 .stat-value {
-  font-size: 1.6rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--accent-pink);
   line-height: 1;
   letter-spacing: -0.03em;
 }
 
 .stat-label {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 body.light-mode .stat-value {
