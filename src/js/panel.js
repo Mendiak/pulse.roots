@@ -168,16 +168,14 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   const reportLinkContainer = document.createElement('div');
   reportLinkContainer.className = 'external-link-container report-error-container';
-  reportLinkContainer.style.marginTop = '10px';
+  reportLinkContainer.style.marginTop = '8px';
   reportLinkContainer.style.paddingTop = '0';
   reportLinkContainer.style.borderTop = 'none';
 
   const reportLink = document.createElement('a');
   const genreNameEncoded = encodeURIComponent(itemData.name || itemData.style);
   reportLink.href = `contact.html?genre=${genreNameEncoded}&subject=Error%20Report`;
-  reportLink.className = 'wikipedia-link report-link';
-  reportLink.style.fontSize = '0.8em';
-  reportLink.style.opacity = '0.7';
+  reportLink.className = 'report-link';
 
   reportLink.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${t('panel.reportError')}`;
 
@@ -185,7 +183,8 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   infoContent.appendChild(reportLinkContainer);
 
   const example = document.createElement('p');
-  example.innerHTML = `<i class="bi bi-soundwave"></i> <b>${t('panel.exampleTrack')}: ${itemData.example || 'N/A'}</b>`;
+  example.className = 'example-track';
+  example.innerHTML = `<i class="bi bi-soundwave"></i> <span>${t('panel.exampleTrack')}: <b>${itemData.example || 'N/A'}</b></span>`;
   infoContent.appendChild(example);
 
   const trackId = itemData.spotify_track_id;
@@ -280,17 +279,8 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   donationLink.href = 'https://www.buymeacoffee.com/Mendiak';
   donationLink.target = '_blank';
   donationLink.rel = 'noopener noreferrer';
-  donationLink.style.display = 'inline-flex';
-  donationLink.style.alignItems = 'center';
-  donationLink.style.gap = '6px';
-  donationLink.style.color = 'var(--text-muted)';
-  donationLink.style.textDecoration = 'none';
-  donationLink.style.fontSize = '0.8em';
-  donationLink.style.opacity = '0.6';
-  donationLink.style.transition = 'opacity 0.2s ease';
+  donationLink.className = 'panel-donation-link';
   donationLink.innerHTML = '<i class="bi bi-cup-hot"></i> ' + t('panel.buyCoffee');
-  donationLink.addEventListener('mouseenter', () => { donationLink.style.opacity = '1'; });
-  donationLink.addEventListener('mouseleave', () => { donationLink.style.opacity = '0.6'; });
 
   donationContainer.appendChild(donationLink);
   infoContent.appendChild(donationContainer);
