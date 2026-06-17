@@ -333,6 +333,18 @@ header {
   background: var(--glass-border);
 }
 
+#fullscreen-btn:active,
+#header-share-btn:active,
+#theme-toggle-btn:active,
+#header-contact-btn:active,
+#shuffle-button:active,
+#clear-button:active,
+.layout-btn:active,
+#back-to-top-btn:active,
+.share-popover-btn:active {
+  transform: scale(0.95);
+}
+
 .share-btn-wrapper {
   position: relative;
   display: flex;
@@ -441,7 +453,7 @@ main {
 
 .info-box:hover,
 #treemap:hover {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .info-box {
@@ -1183,12 +1195,12 @@ body.light-mode .active-searched-node text {
 .nav-link-btn:hover {
   background: var(--glass-border);
   border-color: var(--panel-accent-color, var(--accent-pink));
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .subgenre-link {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg);
   border: 1px solid var(--panel-accent-color, var(--glass-border));
   font-size: 0.8rem;
 }
@@ -1197,7 +1209,6 @@ body.light-mode .active-searched-node text {
   background: var(--accent-gradient);
   border-color: transparent;
   color: white;
-  box-shadow: var(--shadow-neon);
 }
 
 .nav-link-btn i {
@@ -1258,10 +1269,9 @@ body.light-mode .active-searched-node text {
 }
 
 .artist-card:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
   border-color: var(--panel-accent-color, var(--accent-pink));
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 .artist-card .artist-name {
@@ -1506,8 +1516,7 @@ footer {
   color: #000;
   background: #FFDD00;
   border-color: #FFDD00;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3);
+  transform: translateY(-1px);
 }
 
 .support-bmc i {
@@ -1536,7 +1545,7 @@ footer {
 .footer-link {
   color: var(--text-muted);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1544,7 +1553,7 @@ footer {
 
 .footer-link:hover {
   color: var(--accent-pink);
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 
 .footer-link i {
@@ -1576,8 +1585,8 @@ footer {
 .social-btn:hover {
   background: var(--accent-gradient);
   border-color: transparent;
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-neon);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 0, 102, 0.2);
   color: white;
 }
 
@@ -1748,8 +1757,7 @@ body.light-mode #genre-tree summary:hover {
 
 .stat-card:hover {
   border-color: var(--accent-pink);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 
 .stat-value {
@@ -2328,8 +2336,8 @@ body.light-mode .stat-value {
 }
 
 #back-to-top-btn:hover {
-  filter: brightness(1.1);
-  transform: scale(1.1);
+  filter: brightness(1.15);
+  transform: scale(1.05);
 }
 
 /* --- Accessibility Focus Styles for Tree Nodes --- */
@@ -2404,8 +2412,8 @@ select:focus {
 }
 
 #shuffle-button:hover {
-  transform: scale(1.1) rotate(10deg);
-  box-shadow: 0 0 15px rgba(255, 0, 102, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 0, 102, 0.3);
 }
 
 
@@ -2522,12 +2530,12 @@ select:focus {
 }
 
 .share-popover-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
 }
 
 .share-popover-btn:hover i {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 .share-popover-btn:active {
@@ -2623,9 +2631,9 @@ body.light-mode .share-popover-btn:hover {
 .ripple {
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 0, 102, 0.25);
   transform: scale(0);
-  animation: rippleAnim 0.6s ease-out;
+  animation: rippleAnim 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
 
@@ -2713,9 +2721,8 @@ body.light-mode .share-popover-btn:hover {
 }
 
 #cookie-consent-banner .cookie-btn-accept:hover {
-  filter: brightness(1.15);
+  filter: brightness(1.1);
   transform: translateY(-1px);
-  box-shadow: 0 0 15px rgba(255, 0, 102, 0.4);
 }
 
 #cookie-consent-banner .cookie-btn-reject {
