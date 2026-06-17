@@ -364,6 +364,7 @@ body.light-mode #search-nav #search-counter {
   border: none;
   color: var(--text-main);
   padding: 4px 8px;
+  font-size: var(--header-icon-size);
   min-width: 48px;
   min-height: 48px;
   border-radius: 6px;
@@ -736,7 +737,7 @@ body.light-mode .active-searched-node text {
   background: none;
   border: none;
   color: var(--text-muted);
-  font-size: 18px;
+  font-size: var(--header-icon-size);
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 8px;
@@ -2486,7 +2487,7 @@ select:focus {
 }
 
 .share-popover-btn i {
-  font-size: 1.2rem;
+  font-size: var(--header-icon-size);
   transition: transform 0.2s ease;
 }
 
