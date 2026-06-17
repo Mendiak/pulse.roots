@@ -206,6 +206,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* --- Particles Canvas --- */
@@ -1935,20 +1936,21 @@ body.light-mode .stat-value {
   border-radius: 8px;
   font-family: inherit;
   font-weight: 600;
+  font-size: 0.85rem;
   color: var(--text-main);
-  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
 }
 
 #expand-all-btn:hover,
 #collapse-all-btn:hover {
   background: var(--accent-gradient);
   border-color: transparent;
-  transform: translateY(-1px);
 }
 
 #expand-all-btn:active,
 #collapse-all-btn:active {
-  transform: translateY(0);
+  transform: scale(0.97);
 }
 
 #mobile-genre-list,
@@ -1959,26 +1961,23 @@ body.light-mode .stat-value {
 
 .sub-list {
   padding-left: 20px;
-  /* Indent sub-genres */
   max-height: 0;
   opacity: 0;
-  /* Start fully transparent */
   visibility: hidden;
-  /* Hide from accessibility tree when collapsed */
   overflow: hidden;
-  transition: max-height 0.4s ease-out, opacity 0.3s ease-out, visibility 0s 0.4s;
-  /* Add opacity to transition */
+  will-change: max-height;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.25s ease,
+              visibility 0s 0.35s;
 }
 
 .sub-list.expanded {
-  max-height: 1000px;
-  /* A large enough value to show all items */
+  max-height: 2000px;
   opacity: 1;
-  /* Fade in to full opacity */
   visibility: visible;
-  /* Make it visible for accessibility */
-  transition: max-height 0.5s ease-in, opacity 0.4s ease-in 0.1s, visibility 0s;
-  /* Fade in after a slight delay */
+  transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease 0.1s,
+              visibility 0s;
 }
 
 .genre-item {
@@ -1996,7 +1995,12 @@ body.light-mode .stat-value {
   justify-content: space-between;
   align-items: center;
   color: var(--text-main);
-  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.2s ease, border-left-color 0.2s ease;
+}
+
+.genre-item:active {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 /* Remove the bottom border from the last item in any list for a cleaner look */
@@ -2047,19 +2051,18 @@ body.light-mode .stat-value {
 }
 
 .genre-item .indicator {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   font-size: 1.2em;
   font-weight: bold;
+  line-height: 1;
 }
 
 .genre-actions {
   display: flex;
   align-items: center;
   gap: 15px;
-  /* Reduced space between icons */
 }
 
-/* Rotate the indicator when expanded */
 .genre-item[aria-expanded="true"] .indicator {
   transform: rotate(45deg);
 }
@@ -2067,7 +2070,8 @@ body.light-mode .stat-value {
 .info-icon {
   font-size: 1.25rem;
   color: var(--text-muted);
-  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .info-icon:hover {
@@ -2075,21 +2079,35 @@ body.light-mode .stat-value {
   transform: scale(1.1);
 }
 
+.info-icon:active {
+  color: var(--accent-pink);
+  transform: scale(0.9);
+}
+
 /* NEW: Styles for the "Read More" button on mobile */
 .read-more-btn {
   display: none;
-  /* Hide by default on desktop */
   margin: 0;
-  /* Reset margin */
   padding: 8px 16px;
-  background: var(--accent-pink);
-  color: var(--text-main);
+  background: var(--accent-gradient);
+  color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-family: inherit;
+  font-size: 0.8rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  -webkit-tap-highlight-color: transparent;
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.read-more-btn:hover {
+  filter: brightness(1.1);
+}
+
+.read-more-btn:active {
+  transform: scale(0.96);
 }
 
 /* --- NEW: Styles for External Links in Info Panel --- */
@@ -2136,10 +2154,18 @@ body.light-mode .stat-value {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
+.wiki-icon {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .wiki-icon:hover {
   color: var(--text-main);
-  /* Darken on hover for better feedback */
   transform: scale(1.1);
+}
+
+.wiki-icon:active {
+  transform: scale(0.9);
+  color: var(--accent-pink);
 }
 
 /* --- Media Queries for Responsiveness --- */
@@ -2233,9 +2259,8 @@ body.light-mode .stat-value {
     position: relative;
     max-height: 150px;
     overflow: hidden;
-    /* Ensure content is initially hidden */
     padding-bottom: 60px;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Add a gradient to indicate there's more content */
@@ -2245,18 +2270,16 @@ body.light-mode .stat-value {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background: linear-gradient(to top, var(--bg-dark), transparent);
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.35s ease;
   }
 
   /* Styles for when the description is expanded */
   .info-box.is-expanded {
     max-height: 8000px;
-    /* Large enough to show all content */
     overflow: visible;
-    /* Allow content to overflow when expanded */
   }
 
   .info-box.is-expanded::after {
@@ -2266,12 +2289,16 @@ body.light-mode .stat-value {
 
   .read-more-btn {
     display: block;
-    /* Keep it block always on mobile */
     position: absolute;
-    bottom: 15px;
+    bottom: 14px;
     left: 50%;
-    transform: translateX(-50%);
+    translate: -50% 0;
     z-index: 2;
+  }
+
+  .read-more-btn:active {
+    translate: -50% 0;
+    transform: none;
   }
 
   #info-panel {
@@ -2389,10 +2416,9 @@ select:focus {
 
 #scroll-progress-bar {
   height: 100%;
-  background: var(--accent-pink);
-  /* Dynamic gradient */
+  background: var(--accent-gradient);
   width: 0%;
-  transition: width 0.1s ease-out;
+  transition: width 0.15s ease-out;
 }
 
 /* --- Cool Features: Pulse, Neon & Shuffle --- */
@@ -2458,7 +2484,7 @@ select:focus {
 @media (max-width: 768px) {
   #scroll-progress-container {
     display: block;
-    /* Show only on mobile */
+    height: 3px;
   }
 }
 
