@@ -21,14 +21,14 @@
   --shadow-neon: 0 0 20px rgba(255, 0, 102, 0.25);
 
   /* Gradients */
-  --header-glass: linear-gradient(180deg, rgba(8, 8, 8, 0.95), rgba(17, 17, 17, 0.85));
+  --header-glass: linear-gradient(180deg, rgba(8, 8, 8, 0.85), rgba(17, 17, 17, 0.75));
   --accent-gradient: linear-gradient(135deg, var(--accent-pink), #cc0052);
 
   /* Header Consistency */
-  --header-element-height: 48px;
-  --header-btn-px: 12px;
-  --header-icon-size: 20px;
-  --header-radius: 10px;
+  --header-element-height: 40px;
+  --header-btn-px: 10px;
+  --header-icon-size: 18px;
+  --header-radius: 8px;
   --header-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -47,7 +47,7 @@ body.light-mode {
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1);
   --shadow-neon: 0 0 15px rgba(230, 0, 92, 0.12);
-  --header-glass: linear-gradient(180deg, #ffffff, #f0efea);
+  --header-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(240, 239, 234, 0.9));
   background-color: var(--bg-dark);
   background-image:
     radial-gradient(ellipse at 50% 0%, rgba(0, 0, 0, 0.02) 0%, transparent 60%);
@@ -234,55 +234,54 @@ header {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--glass-border);
-  box-shadow: var(--shadow-lg);
 }
 
 #header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 8px 24px;
   max-width: 1600px;
   margin: 0 auto;
   width: 100%;
-  gap: 15px;
-  min-height: 64px;
+  gap: 12px;
+  min-height: 56px;
 }
 
 .header-controls {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   flex-shrink: 0;
   flex-wrap: nowrap;
 }
 
 #search-container {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
   position: relative;
   flex-wrap: nowrap;
 }
 
 #search-input {
-  width: 220px;
-  padding: 10px 16px;
-  border-radius: 10px;
+  width: 200px;
+  padding: 8px 14px;
+  border-radius: 8px;
   border: 1px solid var(--glass-border);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg);
   color: var(--text-main);
-  font-size: 14px;
+  font-size: 13px;
   font-family: inherit;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #search-input:focus {
   outline: none;
-  background: var(--glass-border);
+  background: var(--glass-bg);
   border-color: var(--accent-pink);
-  box-shadow: 0 0 0 4px rgba(255, 0, 102, 0.15);
-  width: 260px;
+  box-shadow: 0 0 0 3px rgba(255, 0, 102, 0.12);
+  width: 240px;
 }
 
 #clear-button,
@@ -291,14 +290,14 @@ header {
 #header-share-btn,
 #theme-toggle-btn,
 #header-contact-btn {
-  min-width: 48px;
+  min-width: 40px;
   height: var(--header-element-height);
   padding: 0 var(--header-btn-px);
   border-radius: var(--header-radius);
   white-space: nowrap;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,7 +331,6 @@ header {
 #shuffle-button:hover,
 #clear-button:hover {
   background: var(--glass-border);
-  transform: translateY(-1px);
 }
 
 .share-btn-wrapper {
@@ -364,10 +362,10 @@ body.light-mode #search-nav #search-counter {
   background: none;
   border: none;
   color: var(--text-main);
-  padding: 4px 8px;
-  font-size: var(--header-icon-size);
-  min-width: 48px;
-  min-height: 48px;
+  padding: 4px 6px;
+  font-size: 14px;
+  min-width: 36px;
+  min-height: 36px;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -393,8 +391,8 @@ main {
 }
 
 #logo {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   transition: transform 0.3s ease;
 }
 
@@ -402,15 +400,15 @@ main {
   text-decoration: none;
   color: inherit;
   display: flex;
-  gap: 15px;
+  gap: 12px;
   align-items: center;
   flex-shrink: 0;
   white-space: nowrap;
 }
 
 #logo:hover {
-  transform: rotate(5deg) scale(1.1);
-  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.4));
+  transform: rotate(3deg) scale(1.08);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 #main-container {
@@ -706,18 +704,18 @@ body.light-mode .active-searched-node text {
 /* NEW: Wrapper for layout switch controls */
 .header-control-group {
   display: flex;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 3px;
+  background: var(--glass-bg);
+  border-radius: 6px;
+  padding: 2px;
   gap: 2px;
 }
 
 #lang-selector {
   display: flex;
   gap: 1px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 3px;
+  background: var(--glass-bg);
+  border-radius: 6px;
+  padding: 2px;
 }
 
 .lang-btn {
@@ -725,10 +723,10 @@ body.light-mode .active-searched-node text {
   border: none;
   color: var(--text-muted);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  padding: 6px 8px;
-  border-radius: 6px;
+  padding: 4px 7px;
+  border-radius: 5px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -739,7 +737,7 @@ body.light-mode .active-searched-node text {
 
 .lang-btn:hover {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
 }
 
 .lang-btn.active {
@@ -751,10 +749,10 @@ body.light-mode .active-searched-node text {
   background: none;
   border: none;
   color: var(--text-muted);
-  font-size: var(--header-icon-size);
+  font-size: 16px;
   cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -766,14 +764,12 @@ body.light-mode .active-searched-node text {
 .layout-btn:hover {
   color: var(--text-main);
   background: var(--glass-border);
-  transform: translateY(-1px);
 }
 
 .layout-btn.active {
   color: white;
   background: var(--accent-gradient);
   box-shadow: var(--shadow-neon);
-  transform: translateY(0);
 }
 
 /* Fullscreen, Share & Theme buttons handled by shared styles above */
@@ -2124,34 +2120,25 @@ body.light-mode .stat-value {
 
   /* --- Header Responsive Styles --- */
   #header-container {
-    padding: 10px 15px;
-    gap: 10px;
+    padding: 6px 12px;
+    gap: 8px;
     flex-wrap: nowrap;
     justify-content: space-between;
+    min-height: 48px;
   }
 
-  h1 {
-    font-size: 18px;
-    /* Show only "PulseRoots" on very small screens if needed */
-  }
-
-  /* Hide the subtitle part of the h1 on mobile to save space */
-  h1::after {
-    content: '';
-  }
-  
   #logo-link h1 {
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
-    max-width: 150px;
+    max-width: 130px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   #logo {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
 
   /* Hide non-essential controls on mobile header to prevent overflow */
@@ -2163,13 +2150,13 @@ body.light-mode .stat-value {
   }
 
   .header-controls {
-    gap: 5px;
+    gap: 4px;
   }
 
   #header-share-btn,
   #header-contact-btn {
-    display: flex !important; /* Ensure these two stay */
-    padding: 0 8px;
+    display: flex !important;
+    padding: 0 6px;
   }
 
   footer {
