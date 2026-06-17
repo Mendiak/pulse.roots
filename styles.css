@@ -574,40 +574,39 @@ h3 {
 
 .searched-node circle {
   stroke: var(--accent-pink);
-  stroke-width: 4px;
-  r: 10;
+  stroke-width: 2.5px;
+  r: 9;
+  filter: drop-shadow(0 0 5px rgba(255, 0, 102, 0.3));
 }
 
 .searched-node text {
-  font-weight: bold;
+  font-weight: 500;
   fill: var(--accent-pink);
-  text-shadow: 0 0 10px rgba(255, 0, 102, 0.5);
 }
 
 .active-searched-node circle {
-  stroke: #ffcc00;
-  stroke-width: 4px;
+  stroke: var(--accent-pink);
+  stroke-width: 3px;
   r: 10;
+  filter: drop-shadow(0 0 6px rgba(255, 0, 102, 0.4));
 }
 
 .active-searched-node text {
-  fill: #fff !important;
-  font-size: 16px;
-  font-weight: 800;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  fill: var(--accent-pink) !important;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 body.light-mode .active-searched-node text {
-  fill: var(--text-main) !important;
-  text-shadow: none;
+  fill: var(--accent-pink) !important;
 }
 
 .search-highlight-rect {
-  fill: rgba(255, 204, 0, 0.25);
-  stroke: #ffcc00;
-  stroke-width: 2px;
+  fill: rgba(255, 0, 102, 0.08);
+  stroke: var(--accent-pink);
+  stroke-width: 1.5px;
+  stroke-dasharray: 4 2;
   rx: 6px;
-  /* Rounded corners */
   ry: 6px;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -842,33 +841,35 @@ body.light-mode .active-searched-node text {
 
 .node.faded,
 .link.faded {
-  opacity: 0.15;
-  transition: opacity 0.4s ease;
+  opacity: 0.2;
+  transition: opacity 0.5s ease;
 }
 
 .node circle {
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.1));
 }
 
 .node:hover circle {
-  r: 9;
   filter: url(#svg-glow);
 }
 
+.node:hover {
+  cursor: pointer;
+}
+
 .path-highlight-node circle {
-  r: 8;
   filter: url(#svg-glow);
 }
 
 .path-highlight-node text {
-  font-weight: 700;
-  fill: #fff;
+  font-weight: 600;
+  fill: var(--text-main);
 }
 
 .path-highlight-link {
   stroke: var(--highlight-color, var(--accent-pink));
-  stroke-width: 5px;
+  stroke-width: 3px;
   transition: stroke 0.3s ease;
   filter: url(#svg-glow);
   opacity: 1 !important;
@@ -876,28 +877,28 @@ body.light-mode .active-searched-node text {
 
 .link {
   fill: none;
-  stroke-width: 1.5px;
+  stroke-width: 1px;
   transition: stroke 0.3s ease, stroke-width 0.3s ease, filter 0.3s ease;
 }
 
 /* --- Active Pulsing Node --- */
 .active-node-pulse circle {
-  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: pulse-ring 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 @keyframes pulse-ring {
   0% {
-    stroke-width: 1.5px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+    stroke-width: 2px;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1));
   }
   50% {
-    stroke-width: 8px;
+    stroke-width: 5px;
     stroke: var(--highlight-color, var(--accent-pink));
-    filter: drop-shadow(0 0 15px var(--highlight-color, var(--accent-pink)));
+    filter: drop-shadow(0 0 12px var(--highlight-color, var(--accent-pink)));
   }
   100% {
-    stroke-width: 1.5px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+    stroke-width: 2px;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1));
   }
 }
 
@@ -1753,37 +1754,40 @@ body.light-mode .stat-value {
 .tooltip {
   position: absolute;
   background: var(--panel-dark);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--text-main, white);
-  padding: 18px;
-  border-radius: 16px;
-  font-size: 14px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--text-main);
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 13px;
   z-index: 5000;
   pointer-events: none;
-  max-width: 320px;
+  max-width: 280px;
   border: 1px solid var(--glass-border);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  line-height: 1.6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  line-height: 1.5;
 }
 
 .tooltip h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--accent-pink, #ff0066);
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--accent-pink);
 }
 
 .tooltip p {
   margin: 0;
-  color: #e0e0e0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-muted);
 }
 
 .tooltip p:last-child {
-  margin-top: 12px;
-  font-size: 0.8rem;
-  color: var(--text-muted, #b0b0b0);
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
   display: flex;
   align-items: center;
   gap: 6px;

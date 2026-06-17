@@ -9,17 +9,17 @@ const tooltip = d3.select('body')
 function showTooltip(event, d) {
   if (d.depth === 0) return;
 
-  const desc = d.data.description || 'No description available';
-  const truncatedDesc = desc.length > 160 ? desc.substr(0, 160).replace(/\s+\S*$/, '') + '...' : desc;
+  const desc = d.data.description || '';
+  const truncatedDesc = desc.length > 120 ? desc.substr(0, 120).replace(/\s+\S*$/, '') + '…' : desc;
 
-  tooltip.transition().duration(200).style('opacity', 0.9);
+  tooltip.transition().duration(200).style('opacity', 0.95);
   tooltip.html(`
     <h3>${d.data.name}</h3>
-    <p>${truncatedDesc}</p>
-    <p><i class="bi bi-hand-index"></i> Click the node to listen the example track.</p>
+    ${truncatedDesc ? `<p>${truncatedDesc}</p>` : ''}
+    <p><i class="bi bi-arrow-up-right-circle"></i> Click para detalles</p>
   `)
-    .style('left', (event.pageX + 10) + 'px')
-    .style('top', (event.pageY - 28) + 'px');
+    .style('left', Math.min(event.pageX + 12, window.innerWidth - 300) + 'px')
+    .style('top', (event.pageY - 24) + 'px');
 }
 
 function hideTooltip() {
@@ -142,9 +142,9 @@ export function createTree(data) {
     .style('stroke', d => {
       const isLight = document.body.classList.contains('light-mode');
       const topLevelAncestor = d.target.ancestors().find(ancestor => ancestor.depth === 1);
-      return topLevelAncestor ? state.colorScale(topLevelAncestor.data.name) : (isLight ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.2)');
+      return topLevelAncestor ? state.colorScale(topLevelAncestor.data.name) : (isLight ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.15)');
     })
-    .style('stroke-opacity', 0.4)
+    .style('stroke-opacity', 0.25)
     .style('opacity', 0);
 
   links.each(function (d) {
@@ -219,10 +219,9 @@ export function createTree(data) {
       if (topLevelAncestor) {
         return state.colorScale(topLevelAncestor.data.name);
       }
-      return '#999';
+      return '#666';
     })
-    .style('stroke', '#fff')
-    .style('stroke-width', '1.5px');
+    .style('stroke', 'none');
 
   node.append('text')
     .attr('dy', '0.31em')
@@ -239,9 +238,11 @@ export function createTree(data) {
       return d.x >= Math.PI ? 'rotate(180)' : null;
     })
     .style('font-family', '"Outfit", sans-serif')
-    .style('font-size', '14px')
-    .style('fill', document.body.classList.contains('light-mode') ? '#1a1a1a' : '#fff')
-    .style('font-weight', d => d.children ? '600' : '400')
+    .style('font-size', d => d.children ? '14px' : '13px')
+    .style('fill', document.body.classList.contains('light-mode') ? '#1a1a1a' : '#f5f5f5')
+    .style('font-weight', d => d.children ? '500' : '400')
+    .style('letter-spacing', '0.01em')
+    .style('opacity', d => d.children ? 1 : 0.85)
     .text(d => d.data.name);
 
   node.transition()
