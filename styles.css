@@ -1,28 +1,27 @@
 /* --- Root Variables & General Styles --- */
 :root {
-  /* Modern Color Palette */
-  --bg-dark: #0f172a;
-  --panel-dark: rgba(30, 41, 59, 0.7);
-  --secondary-dark: rgb(30, 41, 59);
-  --accent-pink: #ff0055;
-  --accent-cyan: #00f2ff;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
+  /* Modern Color Palette — Monochromatic + Magenta Accent */
+  --bg-dark: #080808;
+  --panel-dark: rgba(17, 17, 17, 0.85);
+  --secondary-dark: rgb(17, 17, 17);
+  --accent-pink: #ff0066;
+  --text-main: #f5f5f5;
+  --text-muted: #888888;
 
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.06);
   --glass-blur: blur(12px);
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-neon: 0 0 20px rgba(255, 0, 85, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
+  --shadow-neon: 0 0 20px rgba(255, 0, 102, 0.25);
 
   /* Gradients */
-  --header-glass: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8));
-  --accent-gradient: linear-gradient(135deg, var(--accent-pink), #ec4899);
+  --header-glass: linear-gradient(180deg, rgba(8, 8, 8, 0.95), rgba(17, 17, 17, 0.85));
+  --accent-gradient: linear-gradient(135deg, var(--accent-pink), #cc0052);
 
   /* Header Consistency */
   --header-element-height: 48px;
@@ -32,25 +31,24 @@
   --header-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light Mode Variables */
+/* Light Mode Variables — Editorial / Artbook */
 body.light-mode {
-  --bg-dark: #f8fafc;
+  --bg-dark: #f5f5f0;
   --panel-dark: rgba(255, 255, 255, 0.95);
   --secondary-dark: rgba(255, 255, 255, 1);
-  --tertiary-dark: rgba(226, 232, 240, 0.8);
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --glass-bg: rgba(0, 0, 0, 0.05);
-  --glass-border: rgba(0, 0, 0, 0.15);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-neon: 0 0 15px rgba(255, 0, 85, 0.1);
-  --header-glass: linear-gradient(180deg, #ffffff, #f1f5f9);
+  --tertiary-dark: rgba(0, 0, 0, 0.06);
+  --text-main: #1a1a1a;
+  --text-muted: #666666;
+  --glass-bg: rgba(0, 0, 0, 0.04);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --shadow-neon: 0 0 15px rgba(230, 0, 92, 0.12);
+  --header-glass: linear-gradient(180deg, #ffffff, #f0efea);
   background-color: var(--bg-dark);
   background-image:
-    radial-gradient(at 0% 0%, rgba(255, 0, 85, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.03) 0px, transparent 50%);
+    radial-gradient(ellipse at 50% 0%, rgba(0, 0, 0, 0.02) 0%, transparent 60%);
 }
 
 body.light-mode #tooltip {
@@ -114,7 +112,7 @@ body.light-mode #current-year {
 
 body.light-mode #theme-toggle-btn:hover {
   color: var(--accent-pink);
-  background: rgba(255, 0, 85, 0.1);
+  background: rgba(255, 0, 102, 0.1);
 }
 
 body.light-mode #close-panel {
@@ -124,7 +122,7 @@ body.light-mode #close-panel {
 
 body.light-mode #close-panel:hover {
   color: var(--accent-pink);
-  background: rgba(255, 0, 85, 0.1);
+  background: rgba(255, 0, 102, 0.1);
   border-color: var(--accent-pink);
 }
 
@@ -198,8 +196,7 @@ body {
   flex-direction: column;
   background-color: var(--bg-dark);
   background-image:
-    radial-gradient(at 0% 0%, rgba(255, 0, 85, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.1) 0px, transparent 50%);
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Outfit", "Aleo", serif;
@@ -219,7 +216,7 @@ body {
   opacity: 0.6;
 }
 body.light-mode #particles-canvas {
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 
@@ -280,7 +277,7 @@ header {
   outline: none;
   background: var(--glass-border);
   border-color: var(--accent-pink);
-  box-shadow: 0 0 0 4px rgba(255, 0, 85, 0.15);
+  box-shadow: 0 0 0 4px rgba(255, 0, 102, 0.15);
   width: 260px;
 }
 
@@ -340,7 +337,7 @@ header {
 }
 
 #header-share-btn.success {
-  background: var(--accent-cyan);
+  background: var(--accent-pink);
   color: var(--bg-dark);
 }
 
@@ -455,7 +452,7 @@ main {
 
 /* --- Tooltip / Intro Box --- */
 #tooltip {
-  background: rgba(15, 23, 42, 0.85);
+  background: var(--panel-dark);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
 }
@@ -510,13 +507,13 @@ main {
   color: var(--accent-pink);
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 2px solid rgba(255, 0, 85, 0.2);
+  border-bottom: 2px solid rgba(255, 0, 102, 0.2);
   transition: all 0.3s ease;
 }
 
 .info-box-link:hover {
   border-bottom-color: var(--accent-pink);
-  background: rgba(255, 0, 85, 0.1);
+  background: rgba(255, 0, 102, 0.1);
 }
 
 h1 {
@@ -526,7 +523,7 @@ h1 {
 }
 
 body:not(.light-mode) #logo-link h1 {
-  background: linear-gradient(90deg, var(--text-main) 30%, rgba(255, 0, 85, 0.5) 50%, var(--text-main) 70%);
+  background: linear-gradient(90deg, var(--text-main) 30%, rgba(255, 0, 102, 0.5) 50%, var(--text-main) 70%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -571,7 +568,7 @@ p {
 .searched-node text {
   font-weight: bold;
   fill: var(--accent-pink);
-  text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+  text-shadow: 0 0 10px rgba(255, 0, 102, 0.5);
 }
 
 .active-searched-node circle {
@@ -857,7 +854,7 @@ body.light-mode .active-searched-node text {
 }
 
 .path-highlight-link {
-  stroke: var(--highlight-color, var(--accent-cyan));
+  stroke: var(--highlight-color, var(--accent-pink));
   stroke-width: 5px;
   transition: stroke 0.3s ease;
   filter: url(#svg-glow);
@@ -960,7 +957,7 @@ body.light-mode .active-searched-node text {
 
 @keyframes borderColorShift {
   0%, 100% { border-top-color: var(--panel-accent-color, var(--accent-pink)); }
-  50% { border-top-color: var(--accent-cyan); }
+  50% { border-top-color: var(--accent-pink); }
 }
 
 
@@ -1327,7 +1324,7 @@ select:focus {
   outline: none;
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--accent-pink);
-  box-shadow: 0 0 0 4px rgba(255, 0, 85, 0.15);
+  box-shadow: 0 0 0 4px rgba(255, 0, 102, 0.15);
 }
 
 body.light-mode input,
@@ -1365,7 +1362,7 @@ textarea {
 #clear-button:hover {
   transform: translateY(-2px);
   filter: brightness(1.1);
-  box-shadow: 0 0 25px rgba(255, 0, 85, 0.5);
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.5);
 }
 
 #clear-button {
@@ -1737,12 +1734,12 @@ body.light-mode #genre-tree summary:hover {
 }
 
 body.light-mode .stat-value {
-  color: #d6006e;
+  color: var(--accent-pink);
 }
 
 .tooltip {
   position: absolute;
-  background: rgba(13, 17, 23, 0.85);
+  background: var(--panel-dark);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--text-main, white);
@@ -1762,7 +1759,7 @@ body.light-mode .stat-value {
   margin: 0 0 8px 0;
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--accent-pink, #ff0055);
+  color: var(--accent-pink, #ff0066);
 }
 
 .tooltip p {
@@ -1872,7 +1869,7 @@ body.light-mode .stat-value {
   outline: none;
   background: var(--glass-border);
   border-color: var(--accent-pink);
-  box-shadow: 0 0 0 4px rgba(255, 0, 85, 0.15);
+  box-shadow: 0 0 0 4px rgba(255, 0, 102, 0.15);
 }
 
 #accordion-controls {
@@ -2102,11 +2099,10 @@ body.light-mode .stat-value {
 
 @media (max-width: 768px) {
 
-  /* --- Performance: remove background image on mobile --- */
+  /* --- Performance: subtle background on mobile --- */
   body {
     background-image:
-      radial-gradient(at 0% 0%, rgba(255, 0, 85, 0.15) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.1) 0px, transparent 50%);
+      radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
   }
 
   /* --- Header Responsive Styles --- */
@@ -2329,7 +2325,7 @@ textarea:focus,
 select:focus {
   outline: none;
   border-color: var(--accent-pink);
-  box-shadow: 0 0 0 3px rgba(255, 0, 85, 0.2);
+  box-shadow: 0 0 0 3px rgba(255, 0, 102, 0.2);
   /* Subtle pink glow */
 }
 
@@ -2350,7 +2346,7 @@ select:focus {
 
 #scroll-progress-bar {
   height: 100%;
-  background: linear-gradient(to right, var(--accent-pink), #ff5500);
+  background: var(--accent-pink);
   /* Dynamic gradient */
   width: 0%;
   transition: width 0.1s ease-out;
@@ -2360,7 +2356,7 @@ select:focus {
 
 /* 1. Shuffle Button Style */
 #shuffle-button {
-  background: linear-gradient(to bottom, #d6006e, #9e0052);
+  background: linear-gradient(to bottom, #ff0066, #cc0052);
   /* Purple/Pink gradient */
   color: #fff;
   border: none;
@@ -2370,12 +2366,12 @@ select:focus {
   margin-left: 5px;
   /* Spacing from other buttons */
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 10px rgba(255, 0, 110, 0.4);
+  box-shadow: 0 0 10px rgba(255, 0, 102, 0.25);
 }
 
 #shuffle-button:hover {
   transform: scale(1.1) rotate(10deg);
-  box-shadow: 0 0 15px rgba(255, 0, 110, 0.7);
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.4);
 }
 
 
@@ -2505,7 +2501,7 @@ select:focus {
 }
 
 #share-popover-copy.success i {
-  color: var(--accent-cyan);
+  color: var(--accent-pink);
 }
 
 body.light-mode .share-popover-content {
@@ -2652,7 +2648,7 @@ body.light-mode .share-popover-btn:hover {
 }
 
 #cookie-consent-banner .cookie-text a {
-  color: var(--accent-cyan);
+  color: var(--accent-pink);
   text-decoration: none;
 }
 
@@ -2685,7 +2681,7 @@ body.light-mode .share-popover-btn:hover {
 #cookie-consent-banner .cookie-btn-accept:hover {
   filter: brightness(1.15);
   transform: translateY(-1px);
-  box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.4);
 }
 
 #cookie-consent-banner .cookie-btn-reject {

@@ -58,7 +58,7 @@ function updateD3Colors(isLight) {
   });
 
   d3.selectAll('.link').attr('stroke', linkColor);
-  d3.selectAll('.node text').style('fill', isLight ? '#0f172a' : '#fff');
+  d3.selectAll('.node text').style('fill', isLight ? '#1a1a1a' : '#fff');
 }
 
 export function initFullscreen() {

@@ -240,7 +240,7 @@ export function createTree(data) {
     })
     .style('font-family', '"Outfit", sans-serif')
     .style('font-size', '14px')
-    .style('fill', document.body.classList.contains('light-mode') ? '#0f172a' : '#fff')
+    .style('fill', document.body.classList.contains('light-mode') ? '#1a1a1a' : '#fff')
     .style('font-weight', d => d.children ? '600' : '400')
     .text(d => d.data.name);
 

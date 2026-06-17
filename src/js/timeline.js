@@ -3,11 +3,11 @@ import { state } from './state.js';
 let cachedFacts = null;
 
 const ERAS = [
-  { label: 'Pioneers', start: 1897, end: 1979, color: 'rgba(255, 0, 85, 0.05)' },
-  { label: '80s', start: 1980, end: 1989, color: 'rgba(0, 242, 255, 0.05)' },
-  { label: '90s', start: 1990, end: 1999, color: 'rgba(255, 0, 85, 0.03)' },
-  { label: '00s', start: 2000, end: 2009, color: 'rgba(0, 242, 255, 0.03)' },
-  { label: '10s+', start: 2010, end: 2022, color: 'rgba(255, 0, 85, 0.05)' },
+  { label: 'Pioneers', start: 1897, end: 1979, color: 'rgba(128, 128, 128, 0.06)' },
+  { label: '80s', start: 1980, end: 1989, color: 'rgba(128, 128, 128, 0.04)' },
+  { label: '90s', start: 1990, end: 1999, color: 'rgba(128, 128, 128, 0.06)' },
+  { label: '00s', start: 2000, end: 2009, color: 'rgba(128, 128, 128, 0.04)' },
+  { label: '10s+', start: 2010, end: 2022, color: 'rgba(128, 128, 128, 0.06)' },
 ];
 
 async function fetchFacts() {
@@ -61,8 +61,8 @@ function renderTimeline(facts) {
   }
 
   const isLight = document.body.classList.contains('light-mode');
-  const textMuted = isLight ? '#475569' : '#94a3b8';
-  const accentColor = isLight ? '#d6006e' : '#ff0055';
+  const textMuted = isLight ? '#666666' : '#888888';
+  const accentColor = '#ff0066';
   const gridColor = isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.06)';
 
   g.selectAll('.era-band')
@@ -123,7 +123,7 @@ function renderTimeline(facts) {
   g.append('path')
     .attr('class', 'density-curve')
     .attr('d', areaGenerator(densityData))
-    .attr('fill', isLight ? 'rgba(255, 0, 85, 0.07)' : 'rgba(255, 0, 85, 0.1)')
+    .attr('fill', isLight ? 'rgba(255, 0, 102, 0.06)' : 'rgba(255, 0, 102, 0.08)')
     .style('opacity', 0)
     .transition()
     .duration(800)
@@ -299,7 +299,7 @@ export async function createTimeline() {
       .attr('x', w / 2)
       .attr('y', h / 2)
       .attr('text-anchor', 'middle')
-      .attr('fill', '#94a3b8')
+      .attr('fill', '#888888')
       .attr('font-family', '"Outfit", sans-serif')
       .attr('font-size', '14px')
       .text('Loading timeline...');

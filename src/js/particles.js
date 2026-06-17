@@ -37,7 +37,7 @@ export function initParticles() {
     }
     draw() {
       const isLight = document.body.classList.contains('light-mode');
-      ctx.fillStyle = isLight ? `rgba(15, 23, 42, ${this.opacity})` : `rgba(255, 255, 255, ${this.opacity})`;
+      ctx.fillStyle = isLight ? `rgba(0, 0, 0, ${this.opacity * 0.5})` : `rgba(255, 255, 255, ${this.opacity * 0.6})`;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();

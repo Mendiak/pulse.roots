@@ -43,7 +43,7 @@ function updateSchemaOrg(itemData) {
   document.head.appendChild(script);
 }
 
-export function showInfoPanel(inputData, accentColor = '#ff0055') {
+export function showInfoPanel(inputData, accentColor = '#ff0066') {
   const genreNameForLookup = inputData.name || inputData.style;
   const genreEntry = state.genreMap.get(genreNameForLookup);
   const itemData = genreEntry ? genreEntry.data : inputData;
@@ -380,7 +380,7 @@ export async function closeInfoPanel() {
 
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
   if (themeColorMeta) {
-    themeColorMeta.setAttribute('content', '#1a1a2e');
+    themeColorMeta.setAttribute('content', '#080808');
   }
 
   if (state.focusedElementBeforePanel) {
@@ -411,7 +411,7 @@ export async function shareGenre(itemData) {
       const shareBtn = document.querySelector('.share-btn');
       const originalHTML = shareBtn.innerHTML;
       shareBtn.innerHTML = `<i class="bi bi-check-lg"></i> Copied!`;
-      shareBtn.style.background = 'var(--accent-cyan)';
+      shareBtn.style.background = 'var(--accent-pink)';
 
       setTimeout(() => {
         shareBtn.innerHTML = originalHTML;

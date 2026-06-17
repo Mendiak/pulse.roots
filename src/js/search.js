@@ -198,7 +198,7 @@ export function setupDesktopSearch() {
           const d3Node = d3.selectAll('.clickable-node').filter(d => (d.data.name || d.data.style) === name).datum();
           if (d3Node) {
             const topLevelAncestor = d3Node.ancestors().find(ancestor => ancestor.depth === 1);
-            const color = topLevelAncestor ? state.colorScale(topLevelAncestor.data.name) : '#ff0055';
+            const color = topLevelAncestor ? state.colorScale(topLevelAncestor.data.name) : '#ff0066';
             const { showInfoPanel } = await import('./panel.js');
             showInfoPanel(d3Node.data, color);
           }
