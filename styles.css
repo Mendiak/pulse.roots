@@ -899,7 +899,7 @@ body.light-mode .active-searched-node text {
 
 .link {
   fill: none;
-  stroke-width: 1px;
+  stroke-width: 2px;
   transition: stroke 0.3s ease, stroke-width 0.3s ease, filter 0.3s ease;
 }
 
