@@ -1,0 +1,73 @@
+---
+const basePath = '/pulse.roots';
+const currentLang = Astro.currentLocale || 'en';
+---
+
+<header>
+  <div id="header-container">
+    <a href={`${basePath}/${currentLang === 'en' ? '' : currentLang}`} id="logo-link" aria-label="Home">
+      <img src={`${basePath}/assets/logo.png`} id="logo" alt="PulseRoots Logo" width="64" height="64">
+      <h1>PulseRoots: Electronic Music Styles Tree</h1>
+    </a>
+    <div class="header-controls">
+      <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search for a genre..." autocomplete="off"
+          role="combobox" aria-expanded="false" aria-controls="search-suggestions" aria-autocomplete="list">
+        <div id="search-suggestions" class="hidden" role="listbox"></div>
+        <div id="search-nav" class="hidden">
+          <span id="search-counter">0 of 0</span>
+          <div class="search-nav-btns">
+            <button id="search-prev" title="Previous result"><i class="bi bi-chevron-up"></i></button>
+            <button id="search-next" title="Next result"><i class="bi bi-chevron-down"></i></button>
+          </div>
+        </div>
+        <button id="clear-button" class="hidden"><i class="bi bi-x-lg" aria-hidden="true"></i> <span>Clear</span></button>
+        <button id="shuffle-button" title="Random Genre"><i class="bi bi-shuffle"></i></button>
+      </div>
+      <div id="layout-controls" class="header-control-group">
+        <button id="tree-layout-btn" class="layout-btn active" title="Tree Layout"><i class="bi bi-diagram-3-fill"></i></button>
+        <button id="radial-layout-btn" class="layout-btn" title="Radial Layout"><i class="bi bi-bullseye"></i></button>
+        <button id="timeline-layout-btn" class="layout-btn" title="Timeline"><i class="bi bi-clock-history"></i></button>
+      </div>
+      <button id="fullscreen-btn" title="Toggle Fullscreen" aria-label="Enter Fullscreen">
+        <i class="bi bi-fullscreen"></i>
+      </button>
+      <div class="share-btn-wrapper">
+        <button id="header-share-btn" title="Share PulseRoots" aria-label="Share PulseRoots">
+          <i class="bi bi-share"></i>
+        </button>
+        <div id="share-popover" role="dialog" aria-label="Share options">
+          <div class="share-popover-arrow"></div>
+          <div class="share-popover-content">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://mendiak.github.io/pulse.roots/"
+              target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-popover-btn">
+              <i class="bi bi-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="https://x.com/intent/tweet?url=https://mendiak.github.io/pulse.roots/&text=Explore%20the%20evolution%20of%20electronic%20music%20with%20PulseRoots!%20%23ElectronicMusic%20%23MusicGenres"
+              target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter)" class="share-popover-btn">
+              <i class="bi bi-twitter-x"></i> <span>X</span>
+            </a>
+            <a href="https://www.reddit.com/submit?url=https://mendiak.github.io/pulse.roots/&title=PulseRoots:%20Electronic%20Music%20Styles%20Tree"
+              target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" class="share-popover-btn">
+              <i class="bi bi-reddit"></i> <span>Reddit</span>
+            </a>
+            <button id="share-popover-copy" aria-label="Copy link" class="share-popover-btn">
+              <i class="bi bi-clipboard"></i> <span>Copy Link</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="lang-selector">
+        <a data-lang="en" href="/pulse.roots/" class:list={['lang-btn', { 'lang-btn-active': currentLang === 'en' }]}>EN</a>
+        <a data-lang="es" href="/pulse.roots/es/" class:list={['lang-btn', { 'lang-btn-active': currentLang === 'es' }]}>ES</a>
+      </div>
+      <button id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Light/Dark Mode">
+        <i class="bi bi-moon"></i>
+      </button>
+      <a href={`${basePath}/${currentLang === 'en' ? '' : currentLang + '/'}contact/`} id="header-contact-btn"
+        title="Suggest a Genre / Fix an Error" aria-label="Suggest a Genre / Fix an Error">
+        <i class="bi bi-patch-question"></i>
+      </a>
+    </div>
+  </div>
+</header>

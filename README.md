@@ -12,12 +12,15 @@ PulseRoots is an interactive visualization of the evolution of electronic music.
 - **Music History Timeline**: Explore 107 key milestones in electronic music history (1897–2024) — 47 events include external links to Wikipedia, official sites, and festival pages.
 - **Search & Discover**: Find specific genres or use the "Shuffle" feature for random discovery.
 - **Responsive Design**: Fully optimized for both desktop (interactive map) and mobile (accordion navigation).
-- **SEO Optimized**: Dynamic sitemap generation and JSON-LD structured data.
+- **SEO Optimized**: Automatic sitemap generation, per-genre pages, JSON-LD structured data.
+- **Multi-language**: English and Spanish with Astro i18n.
 
 ## Technologies Used
 
+- **Framework**: [Astro](https://astro.build/) (static site generation)
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+), D3.js (v6), Bootstrap Icons.
 - **Data & Tools**: Spotify Web API.
+- **Deployment**: GitHub Pages via GitHub Actions.
 
 ## Setup & Local Development
 
@@ -27,8 +30,27 @@ PulseRoots is an interactive visualization of the evolution of electronic music.
    cd pulse.roots
    ```
 
-2. **Run Locally**:
-   Simply open `index.html` in a modern web browser, or use a local server like `Live Server` in VS Code for the best experience.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+5. **Preview production build**:
+   ```bash
+   npm run preview
+   ```
+
+The built site is output to `dist/` and is ready for deployment.
 
 ## Data Structure
 
@@ -64,41 +86,30 @@ The project also includes `data/music_history.json`, a linear array of historica
 - **`fact`** (string): Description of the milestone.
 - **`url`** (string, optional): External link to Wikipedia, official site, or related content.
 
-### Node.js (Maintenance)
-- `build.js`: Consolidates SEO and data maintenance. It generates `sitemap.xml` and all individual genre HTML pages in the `genres/` directory based on the hierarchy in `data/pulseroots.genres.json`.
-- **Usage**: `node build.js`
-
 ## Project Structure
 
 ```
 pulse.roots/
 ├── src/
-│   └── js/                    # ES6 modules (type="module")
-│       ├── main.js            # Entry point, orchestration
-│       ├── state.js           # Shared state between modules
-│       ├── utils.js           # Utilities (debounce, slugify, etc.)
-│       ├── tree.js            # D3.js tree visualization
-│       ├── timeline.js        # D3.js music history timeline
-│       ├── panel.js           # Genre info panel
-│       ├── mobile-nav.js      # Mobile accordion navigation
-│       ├── search.js          # Search with suggestions
-│       ├── particles.js       # Particle background
-│       └── theme.js           # Theme toggle, fullscreen, shuffle
+│   ├── components/         # Astro UI components (Header, Footer)
+│   ├── layouts/            # BaseLayout.astro
+│   ├── pages/              # Routes (index, contact, privacy, thanks, sitemap, genres/[...slug])
+│   │   └── es/             # Spanish page overrides
+│   ├── scripts/            # Shared JS utilities (genres-data.js)
+│   ├── js/                 # ES6 modules (main.js, tree.js, panel.js, search.js, etc.)
+│   └── styles/             # Astro-scoped CSS (unused, styles live in public/)
 ├── data/
-│   ├── pulseroots.genres.json # The database of genres
-│   └── music_history.json     # Historical music facts
-├── assets/                    # Images, icons, branding
-├── genres/                    # Generated genre pages (via build.js)
-├── index.html                 # Main entry point
-├── styles.css                 # Custom styling and responsive design
-├── build.js                   # Build and maintenance script (Node.js)
-├── package.json               # Project metadata
-├── contact.html               # Contact page
-├── privacy.html               # Privacy policy
-├── thanks.html                # Redirection page for the contact form
-├── sitemap.xml                # SEO sitemap
-├── sitemap.html               # HTML sitemap
-└── robots.txt                 # Robots exclusion
+│   ├── pulseroots.genres.json  # The database of genres
+│   └── music_history.json      # Historical music facts
+├── public/
+│   ├── styles.css           # Global CSS
+│   ├── robots.txt
+│   └── assets/              # Images, icons, branding
+├── dist/                    # Production build output (generated)
+├── scripts/                 # Legacy utilities
+├── astro.config.mjs         # Astro configuration
+├── tsconfig.json
+└── package.json
 ```
 
 ## Contributing

@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const basePath = '/pulse.roots';
+---
+
+<BaseLayout lang="en">
+  <div id="scroll-progress-container">
+    <div id="scroll-progress-bar"></div>
+  </div>
+
+  <Header />
+
+  <div id="history-banner">
+    <p><strong>Music History:</strong> <span id="history-fact"></span></p>
+  </div>
+
+  <main>
+    <div id="main-container">
+      <div id="tooltip" class="info-box" aria-labelledby="intro-title">
+        <section>
+          <h2 id="intro-title"><i class="bi bi-compass" aria-hidden="true"></i> How to Explore</h2>
+          <p>Welcome to PulseRoots! This guide helps you navigate the vast world of electronic music using our interactive tools.</p>
+          <p>On <strong>desktop</strong>, you'll find an immersive <strong>treemap</strong> that visually maps out the connections between genres. On <strong>mobile</strong>, the genres are organized into a clear and accessible <strong>accordion list</strong>.</p>
+
+          <h2><i class="bi bi-soundwave" aria-hidden="true"></i> Styles and Substyles</h2>
+          <p>Both views start with broad "Families" (like Techno or House) and branch down into specific styles and substyles. Click or tap on any genre to open a panel with a detailed description and a sample track to help you understand its unique sound.</p>
+
+          <h2><i class="bi bi-clock-history" aria-hidden="true"></i> Music History Timeline</h2>
+          <p>Click the <strong>Timeline</strong> button to explore <strong>107 key milestones</strong> in electronic music history, from 1897 to the present day. Hover over any dot to read the story.</p>
+
+          <h2><i class="bi bi-person-check" aria-hidden="true"></i> Key Artists</h2>
+          <p>For each genre, we've included a "Key Artists" section featuring pioneers and standout musicians who have significantly shaped its sound.</p>
+
+          <h2><i class="bi bi-keyboard" aria-hidden="true"></i> Accessibility</h2>
+          <p>PulseRoots is keyboard-accessible. Use the <strong>Tab</strong> key to navigate through the genre tree nodes, and press <strong>Enter</strong> or <strong>Space</strong> to open the details panel for a selected genre.</p>
+
+          <h2><i class="bi bi-journal-text" aria-hidden="true"></i> Note on Classification</h2>
+          <p>This visualization represents one interpretation of how electronic music genres are categorized. Music is fluid, and other classifications might group styles differently based on cultural, historical, or sonic perspectives.</p>
+
+          <h2 class="section-divider"><i class="bi bi-lightbulb" aria-hidden="true"></i> Inspirations</h2>
+          <p>PulseRoots is inspired by the incredible work of other music exploration projects. Special thanks to <a href="https://music.ishkur.com/" class="info-box-link" target="_blank" rel="noopener noreferrer">Ishkur's Guide to Electronic Music</a>, <a href="https://musicmap.info/" class="info-box-link" target="_blank" rel="noopener noreferrer">Musicmap</a>, and <a href="https://everynoise.com/" class="info-box-link" target="_blank" rel="noopener noreferrer">Every Noise at Once</a> for paving the way.</p>
+
+          <h2 class="section-divider"><i class="bi bi-spotify" aria-hidden="true"></i> Listening to Tracks</h2>
+          <p>To listen to the example tracks, a Spotify account may be required. The embedded player provides a 30-second preview for all users. <a href="https://accounts.spotify.com/login" class="info-box-link" target="_blank" rel="noopener noreferrer">Logging into Spotify</a> may unlock the full track, depending on your subscription.</p>
+
+          <h2 class="section-divider"><i class="bi bi-envelope" aria-hidden="true"></i> Contact</h2>
+          <p>Thank you for visiting, and I hope you enjoy exploring the world of electronic music.</p>
+          <p>If you have any suggestions, improvement proposals, if you've found any errors, or just want to say 'Hi!', feel free to write to me through our <a href="/pulse.roots/contact/" class="info-box-link">contact page</a>.</p>
+
+          <p style="margin-top: 24px; text-align: center;">
+            <a href="https://www.buymeacoffee.com/Mendiak" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:0.8em;opacity:0.6;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="bi bi-cup-hot"></i> Buy me a coffee</a>
+          </p>
+        </section>
+      </div>
+
+      <div id="visualization-container">
+        <div id="loading-spinner" class="hidden">
+          <div class="spinner"></div>
+          <p>Loading genres...</p>
+        </div>
+        <svg id="treemap"></svg>
+      </div>
+
+      <div id="mobile-nav-container">
+        <h2>Explore Genres</h2>
+        <div id="mobile-search-container">
+          <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off" aria-label="Filter genres">
+          <button id="mobile-clear-button" class="hidden"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div id="accordion-controls">
+          <button id="expand-all-btn">Expand All</button>
+          <button id="collapse-all-btn">Collapse All</button>
+        </div>
+        <ul id="mobile-genre-list"></ul>
+      </div>
+    </div>
+
+    <button id="back-to-top-btn" aria-label="Back to Top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+  </main>
+
+  <div id="modal-overlay"></div>
+
+  <div id="info-panel" role="dialog" aria-modal="true" aria-label="Genre Information" aria-labelledby="info-panel-title">
+    <div id="info-content"></div>
+    <div id="scroll-indicator" class="hidden">
+      <i class="bi bi-arrow-down-circle"></i>
+    </div>
+  </div>
+
+  <Footer />
+
+  <script is:inline>
+    window.PR_LANG = 'en';
+    window.PR_I18N = {};
+    window.PR_I18N_FALLBACK = {};
+  </script>
+
+  <script>
+    import '../scripts/main.js';
+  </script>
+</BaseLayout>
+
+

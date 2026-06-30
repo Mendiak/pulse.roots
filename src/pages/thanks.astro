@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+
+const canonical = 'https://mendiak.github.io/pulse.roots/thanks.html';
+---
+
+<BaseLayout
+  title="Thank You - PulseRoots"
+  description="Thank you for contacting PulseRoots. Your message has been sent successfully."
+  canonical={canonical}
+>
+  <div class="container">
+    <h2><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Message Sent!</h2>
+    <p>Thanks for reaching out. I'll review your message and get back to you as soon as possible.</p>
+    <a href="/pulse.roots/" class="back-button">Back to PulseRoots</a>
+  </div>
+
+  <Footer />
+
+  <style>
+    body {
+      font-family: "Outfit", "Aleo", sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .container {
+      background: var(--panel-dark);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 40px auto;
+      box-shadow: var(--shadow-lg);
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+    h2 {
+      color: var(--text-main);
+      margin-top: 0;
+      font-size: 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    h2 i {
+      color: var(--accent-cyan);
+    }
+    p {
+      color: var(--text-muted);
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: var(--accent-gradient);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .back-button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+      box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+    }
+  </style>
+</BaseLayout>

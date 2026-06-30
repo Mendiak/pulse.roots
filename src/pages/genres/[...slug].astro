@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { slugify, loadGenres, flattenGenres } from '../../scripts/genres-data.js';
+
+const currentLang = Astro.currentLocale || 'en';
+const genres = loadGenres(currentLang);
+
+export async function getStaticPaths() {
+  const genres = loadGenres('en');
+  const allGenres = flattenGenres(genres, 'en');
+
+  return allGenres.map(g => ({
+    params: { slug: g.fullSlugPath },
+    props: {
+      genreName: g.genreName,
+      fullSlugPath: g.fullSlugPath,
+      description: g.description,
+      wikipediaUrl: g.wikipediaUrl,
+      spotifyTrackId: g.spotifyTrackId,
+      exampleTrack: g.exampleTrack,
+      keyArtists: g.keyArtists,
+      children: g.children,
+      breadcrumbs: g.breadcrumbs,
+      childrenNames: g.children.map(c => c.name),
+    },
+  }));
+}
+
+const {
+  genreName,
+  fullSlugPath,
+  description,
+  breadcrumbs,
+} = Astro.props;
+
+const canonical = `https://mendiak.github.io/pulse.roots/genres/${fullSlugPath}/`;
+const metaDesc = description ? description.substring(0, 155).replace(/\s+\S*$/, '') : `Explore the ${genreName} style in electronic music on PulseRoots.`;
+const title = `PulseRoots: ${genreName}`;
+
+function buildBreadcrumbHtml() {
+  let html = '<nav id="breadcrumbs" aria-label="Breadcrumb">';
+  html += `<a href="/pulse.roots/">Home</a>`;
+  for (const crumb of breadcrumbs) {
+    html += ` <span class="breadcrumb-sep">›</span> <a href="/pulse.roots/genres/${crumb.slug}/">${crumb.name}</a>`;
+  }
+  html += ` <span class="breadcrumb-sep">›</span> <span class="breadcrumb-current">${genreName}</span>`;
+  html += '</nav>';
+  return html;
+}
+
+const genreScript = `window.PR_LANG='en';window.PR_I18N={};window.PR_I18N_FALLBACK={};window.PR_GENRE_TO_LOAD=${JSON.stringify(genreName)};`;
+---
+
+<BaseLayout
+  title={title}
+  description={metaDesc}
+  canonical={canonical}
+  ogTitle={title}
+  ogDescription={metaDesc}
+>
+  <div id="scroll-progress-container">
+    <div id="scroll-progress-bar"></div>
+  </div>
+
+  <Header />
+
+  <div id="history-banner">
+    <p><strong>Music History:</strong> <span id="history-fact"></span></p>
+  </div>
+
+  <main>
+    <div id="main-container">
+      <div id="tooltip" class="info-box" aria-labelledby="intro-title">
+        <section>
+          <Fragment set:html={buildBreadcrumbHtml()} />
+          {description && <p>{description}</p>}
+        </section>
+      </div>
+
+      <div id="visualization-container">
+        <div id="loading-spinner" class="hidden">
+          <div class="spinner"></div>
+          <p>Loading genres...</p>
+        </div>
+        <svg id="treemap"></svg>
+      </div>
+
+      <div id="mobile-nav-container">
+        <h2>Explore Genres</h2>
+        <div id="mobile-search-container">
+          <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off" aria-label="Filter genres">
+          <button id="mobile-clear-button" class="hidden"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div id="accordion-controls">
+          <button id="expand-all-btn">Expand All</button>
+          <button id="collapse-all-btn">Collapse All</button>
+        </div>
+        <ul id="mobile-genre-list"></ul>
+      </div>
+    </div>
+
+    <button id="back-to-top-btn" aria-label="Back to Top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+  </main>
+
+  <div id="modal-overlay"></div>
+
+  <div id="info-panel" role="dialog" aria-modal="true" aria-label="Genre Information" aria-labelledby="info-panel-title">
+    <div id="info-content"></div>
+    <div id="scroll-indicator" class="hidden">
+      <i class="bi bi-arrow-down-circle"></i>
+    </div>
+  </div>
+
+  <Footer />
+
+  <script is:inline set:html={genreScript} />
+
+  <script>
+    import '../../scripts/main.js';
+  </script>
+</BaseLayout>

@@ -4,7 +4,9 @@
   "description": "PulseRoots: Electronic Music Styles Tree - Interactive visualization of the evolution of electronic music.",
   "private": true,
   "scripts": {
-    "build": "node build.js"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "license": "MIT",
   "author": "PulseRoots",
@@ -15,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/Mendiak/pulse.roots/issues"
   },
-  "homepage": "https://mendiak.github.io/pulse.roots/"
+  "homepage": "https://mendiak.github.io/pulse.roots/",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.0.4",
+    "d3": "^6.7.0"
+  }
 }

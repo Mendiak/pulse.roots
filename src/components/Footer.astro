@@ -1,0 +1,149 @@
+---
+import fs from 'fs';
+import path from 'path';
+
+const dataDir = path.resolve(process.cwd(), 'data');
+const basePath = '/pulse.roots';
+const currentLang = Astro.currentLocale || 'en';
+const langPrefix = currentLang === 'en' ? '' : `${currentLang}/`;
+const now = new Date().getFullYear();
+
+function slugify(text) {
+  if (!text) return '';
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/\//g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+}
+
+function escapeHtml(text) {
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// Load genre data
+const isDefaultLang = currentLang === 'en';
+const fileName = isDefaultLang ? 'pulseroots.genres.json' : `pulseroots.genres.${currentLang}.json`;
+let genreHtml = '';
+
+try {
+  const filePath = path.join(dataDir, fileName);
+  const fileExists = fs.existsSync(filePath);
+  const sourcePath = fileExists ? filePath : path.join(dataDir, 'pulseroots.genres.json');
+
+  if (fs.existsSync(sourcePath)) {
+    const data = JSON.parse(fs.readFileSync(sourcePath, 'utf-8'));
+
+    // Build flat list of all genres with full paths
+    const allGenres = [];
+    const traverse = (items, slugParts) => {
+      for (const item of items) {
+        const name = item.name || item.style;
+        if (!name) continue;
+        const slug = slugify(name);
+        const fullPath = [...slugParts, slug].join('/');
+        allGenres.push({ genreName: name, fullSlugPath: fullPath });
+
+        if (item.substyles && item.substyles.length > 0) {
+          traverse(item.substyles, [...slugParts, slug]);
+        }
+      }
+    };
+    traverse(data, []);
+
+    // Build hierarchical tree HTML
+    const childrenMap = {};
+    for (const info of allGenres) {
+      const parts = info.fullSlugPath.split('/');
+      const parentKey = parts.slice(0, -1).join('/');
+      if (!childrenMap[parentKey]) childrenMap[parentKey] = [];
+      childrenMap[parentKey].push(info);
+    }
+
+    for (const key of Object.keys(childrenMap)) {
+      childrenMap[key].sort((a, b) => a.genreName.localeCompare(b.genreName));
+    }
+
+    const prefix = `/pulse.roots${isDefaultLang ? '' : `/${currentLang}`}`;
+
+    function buildList(parentKey) {
+      const items = childrenMap[parentKey];
+      if (!items || items.length === 0) return '';
+
+      let html = '<ul>\n';
+      for (const item of items) {
+        const url = `${prefix}/genres/${item.fullSlugPath}/`;
+        const hasChildren = childrenMap[item.fullSlugPath]?.length > 0;
+
+        if (hasChildren) {
+          html += `<li>\n<details>\n<summary><a href="${url}">${escapeHtml(item.genreName)}</a></summary>\n`;
+          html += buildList(item.fullSlugPath);
+          html += `</details>\n</li>\n`;
+        } else {
+          html += `<li><a href="${url}">${escapeHtml(item.genreName)}</a></li>\n`;
+        }
+      }
+      html += '</ul>\n';
+      return html;
+    }
+
+    const topLevel = (childrenMap[''] || []).sort((a, b) => a.genreName.localeCompare(b.genreName));
+    for (const top of topLevel) {
+      const url = `${prefix}/genres/${top.fullSlugPath}/`;
+      genreHtml += `<details>\n<summary><a href="${url}">${escapeHtml(top.genreName)}</a></summary>\n`;
+      genreHtml += buildList(top.fullSlugPath);
+      genreHtml += `</details>\n`;
+    }
+  }
+} catch (e) {
+  console.error('Error loading genre tree:', e);
+}
+---
+
+<footer>
+  <div id="footer-main">
+    <div id="footer-brand">
+      <img src={`/pulse.roots/assets/footer-logo.png`} id="footer-logo" alt="PulseRoots Logo" width="128" height="128" fetchpriority="high">
+      <p id="footer-mission">Explore the deep connections and evolution of electronic music through an interactive lens. A journey from roots to future rhythms.</p>
+    </div>
+
+    <div id="footer-support">
+      <h3>Support</h3>
+      <p id="footer-support-text">A free website built with passion for electronic music. Any token of support helps keep it alive.</p>
+      <div id="footer-support-links">
+        <a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-code-slash"></i> <span>Portfolio</span>
+        </a>
+        <a href="https://www.buymeacoffee.com/Mendiak" target="_blank" rel="noopener noreferrer" class="support-bmc">
+          <i class="bi bi-cup-hot"></i> <span>Buy me a coffee</span>
+        </a>
+      </div>
+    </div>
+
+    <nav id="footer-links" aria-label="Links and Credits">
+      <h3>Links & Credits</h3>
+      <ul>
+        <li><a class="footer-link" href="https://github.com/Mendiak/pulse.roots" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> <span>Github</span></a></li>
+        <li><a class="footer-link" href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> <span>Logo (Flaticon)</span></a></li>
+        <li><a class="footer-link" href={`${basePath}/${langPrefix}contact/`}><i class="bi bi-patch-question"></i> <span>Contact</span></a></li>
+        <li><a class="footer-link" href={`${basePath}/${langPrefix}privacy/`}><i class="bi bi-shield-lock"></i> <span>Privacy Policy</span></a></li>
+        <li><a class="footer-link" href={`${basePath}/${langPrefix}sitemap/`}><i class="bi bi-diagram-3"></i> <span>Sitemap</span></a></li>
+      </ul>
+    </nav>
+
+    <nav id="footer-genres" aria-label="Genre Pages">
+      <h3>Genres</h3>
+      <div set:html={genreHtml} />
+    </nav>
+  </div>
+
+  <div id="footer-stats">
+    <div id="footer-stats-content"></div>
+  </div>
+
+  <div id="footer-bottom">
+    <p>&copy; {now} PulseRoots. Mapping the pulse of electronic music.</p>
+  </div>
+</footer>

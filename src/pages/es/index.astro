@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout lang="es">
+  <div id="scroll-progress-container">
+    <div id="scroll-progress-bar"></div>
+  </div>
+
+  <Header />
+
+  <div id="history-banner">
+    <p><strong>Music History:</strong> <span id="history-fact"></span></p>
+  </div>
+
+  <main>
+    <div id="main-container">
+      <div id="tooltip" class="info-box" aria-labelledby="intro-title">
+        <section>
+          <h2 id="intro-title"><i class="bi bi-compass" aria-hidden="true"></i> Cómo explorar</h2>
+          <p>¡Bienvenido a PulseRoots! Esta guía te ayuda a navegar por el vasto mundo de la música electrónica usando nuestras herramientas interactivas.</p>
+          <p>En <strong>escritorio</strong>, encontrarás un <strong>treemap</strong> inmersivo que mapea visualmente las conexiones entre géneros. En <strong>móvil</strong>, los géneros están organizados en una <strong>lista de acordeón</strong> clara y accesible.</p>
+
+          <h2><i class="bi bi-soundwave" aria-hidden="true"></i> Estilos y subestilos</h2>
+          <p>Ambas vistas comienzan con amplias "Familias" (como Techno o House) y se ramifican en estilos y subestilos específicos. Haz clic o toca cualquier género para abrir un panel con una descripción detallada y una pista de ejemplo.</p>
+
+          <h2><i class="bi bi-clock-history" aria-hidden="true"></i> Línea de tiempo musical</h2>
+          <p>Haz clic en el botón <strong>Timeline</strong> para explorar <strong>107 hitos clave</strong> en la historia de la música electrónica, desde 1897 hasta hoy. Pasa el cursor sobre cualquier punto para leer la historia.</p>
+
+          <h2><i class="bi bi-person-check" aria-hidden="true"></i> Artistas clave</h2>
+          <p>Para cada género, incluimos una sección de "Artistas clave" con pioneros y músicos destacados que han moldeado su sonido.</p>
+
+          <h2><i class="bi bi-keyboard" aria-hidden="true"></i> Accesibilidad</h2>
+          <p>PulseRoots es accesible por teclado. Usa la tecla <strong>Tab</strong> para navegar por los nodos del árbol de géneros y presiona <strong>Enter</strong> o <strong>Space</strong> para abrir el panel de detalles.</p>
+
+          <h2><i class="bi bi-journal-text" aria-hidden="true"></i> Nota sobre la clasificación</h2>
+          <p>Esta visualización representa una interpretación de cómo se categorizan los géneros de música electrónica. La música es fluida y otras clasificaciones podrían agrupar los estilos de manera diferente.</p>
+
+          <h2 class="section-divider"><i class="bi bi-lightbulb" aria-hidden="true"></i> Inspiraciones</h2>
+          <p>PulseRoots está inspirado en el increíble trabajo de otros proyectos de exploración musical. Agradecimientos especiales a <a href="https://music.ishkur.com/" class="info-box-link" target="_blank" rel="noopener noreferrer">Ishkur's Guide to Electronic Music</a>, <a href="https://musicmap.info/" class="info-box-link" target="_blank" rel="noopener noreferrer">Musicmap</a>, y <a href="https://everynoise.com/" class="info-box-link" target="_blank" rel="noopener noreferrer">Every Noise at Once</a>.</p>
+
+          <h2 class="section-divider"><i class="bi bi-spotify" aria-hidden="true"></i> Escuchar pistas</h2>
+          <p>Para escuchar las pistas de ejemplo, puede ser necesaria una cuenta de Spotify. El reproductor integrado proporciona una vista previa de 30 segundos para todos los usuarios.</p>
+
+          <h2 class="section-divider"><i class="bi bi-envelope" aria-hidden="true"></i> Contacto</h2>
+          <p>Gracias por visitarnos, espero que disfrutes explorando el mundo de la música electrónica.</p>
+          <p>Si tienes sugerencias, propuestas de mejora, has encontrado errores, o solo quieres decir "¡Hola!", no dudes en escribirme a través de nuestra <a href="contact.html" class="info-box-link">página de contacto</a>.</p>
+
+          <p style="margin-top: 24px; text-align: center;">
+            <a href="https://www.buymeacoffee.com/Mendiak" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:0.8em;opacity:0.6;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="bi bi-cup-hot"></i> Buy me a coffee</a>
+          </p>
+        </section>
+      </div>
+
+      <div id="visualization-container">
+        <div id="loading-spinner" class="hidden">
+          <div class="spinner"></div>
+          <p>Loading genres...</p>
+        </div>
+        <svg id="treemap"></svg>
+      </div>
+
+      <div id="mobile-nav-container">
+        <h2>Explore Genres</h2>
+        <div id="mobile-search-container">
+          <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off" aria-label="Filter genres">
+          <button id="mobile-clear-button" class="hidden"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div id="accordion-controls">
+          <button id="expand-all-btn">Expand All</button>
+          <button id="collapse-all-btn">Collapse All</button>
+        </div>
+        <ul id="mobile-genre-list"></ul>
+      </div>
+    </div>
+
+    <button id="back-to-top-btn" aria-label="Back to Top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+  </main>
+
+  <div id="modal-overlay"></div>
+
+  <div id="info-panel" role="dialog" aria-modal="true" aria-label="Genre Information" aria-labelledby="info-panel-title">
+    <div id="info-content"></div>
+    <div id="scroll-indicator" class="hidden">
+      <i class="bi bi-arrow-down-circle"></i>
+    </div>
+  </div>
+
+  <Footer />
+
+  <script is:inline>
+    window.PR_LANG = 'es';
+    window.PR_I18N = {};
+    window.PR_I18N_FALLBACK = {};
+  </script>
+
+  <script>
+    import '../../scripts/main.js';
+  </script>
+</BaseLayout>

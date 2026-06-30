@@ -29,6 +29,10 @@ wheels/
 .installed.cfg
 *.egg
 
+# Node
+node_modules/
+.astro/
+
 # IDE
 .vscode/
 .idea/
