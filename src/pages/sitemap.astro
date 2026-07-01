@@ -20,7 +20,7 @@ const baseUrl = 'https://mendiak.github.io/pulse.roots';
 let genreLinks = '';
 
 try {
-  const filePath = path.resolve(process.cwd(), 'data', 'pulseroots.genres.json');
+  const filePath = path.resolve(process.cwd(), 'public', 'data', 'pulseroots.genres.json');
   if (fs.existsSync(filePath)) {
     const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 

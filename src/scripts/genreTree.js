@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dataDir = path.resolve(__dirname, '../../data');
+const dataDir = path.resolve(__dirname, '../../public/data');
 
 function slugify(text) {
   if (!text) return '';

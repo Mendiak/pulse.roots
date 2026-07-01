@@ -13,7 +13,7 @@ export function slugify(text) {
 }
 
 export function loadGenres(lang) {
-  const dataDir = path.resolve(process.cwd(), 'data');
+  const dataDir = path.resolve(process.cwd(), 'public', 'data');
   const isDefaultLang = lang === 'en';
   const fileName = isDefaultLang ? 'pulseroots.genres.json' : `pulseroots.genres.${lang}.json`;
   let filePath = path.join(dataDir, fileName);

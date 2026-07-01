@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const dataDir = path.resolve(process.cwd(), 'data');
+const dataDir = path.resolve(process.cwd(), 'public', 'data');
 const basePath = '/pulse.roots';
 const currentLang = Astro.currentLocale || 'en';
 const langPrefix = currentLang === 'en' ? '' : `${currentLang}/`;
