@@ -54,7 +54,7 @@ The built site is output to `dist/` and is ready for deployment.
 
 ## Data Structure
 
-The project's heart is `data/pulseroots.genres.json`. It follows a recursive tree structure:
+The project's heart is `public/data/pulseroots.genres.json`. It follows a recursive tree structure:
 
 ```json
 {
@@ -72,7 +72,7 @@ The project's heart is `data/pulseroots.genres.json`. It follows a recursive tre
 }
 ```
 
-The project also includes `data/music_history.json`, a linear array of historical milestones used by the interactive timeline:
+The project also includes `public/data/music_history.json`, a linear array of historical milestones used by the interactive timeline:
 
 ```json
 {
@@ -98,10 +98,10 @@ pulse.roots/
 │   ├── scripts/            # Shared JS utilities (genres-data.js)
 │   ├── js/                 # ES6 modules (main.js, tree.js, panel.js, search.js, etc.)
 │   └── styles/             # Astro-scoped CSS (unused, styles live in public/)
-├── data/
-│   ├── pulseroots.genres.json  # The database of genres
-│   └── music_history.json      # Historical music facts
 ├── public/
+│   ├── data/
+│   │   ├── pulseroots.genres.json  # The database of genres
+│   │   └── music_history.json      # Historical music facts
 │   ├── styles.css           # Global CSS
 │   ├── robots.txt
 │   └── assets/              # Images, icons, branding
