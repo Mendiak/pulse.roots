@@ -3,13 +3,37 @@ import { t, applyI18nToDOM } from './i18n.js';
 import { state } from './state.js';
 import { buildGenreMap, debounce, slugify, findGenre } from './utils.js';
 import { createTree, highlightBranch, clearBranchHighlight, scrollToNode } from './tree.js';
-import { showInfoPanel, closeInfoPanel } from './panel.js';
+import { showInfoPanel, closeInfoPanel, reopenPanel, stopMiniPlayer } from './panel.js';
 import { createMobileNav, saveAccordionState, restoreAccordionState } from './mobile-nav.js';
 import { performSearch, navigateToMatch, setupDesktopSearch } from './search.js';
 import { initParticles } from './particles.js';
 import { initThemeToggle, initFullscreen, initShuffle } from './theme.js';
 import { renderStats } from './stats.js';
 import { createTimeline } from './timeline.js';
+
+const STRINGS = {
+  en: {
+    readMore: 'Read more',
+    readLess: 'Read less',
+    linkCopied: 'Link copied!',
+    copyLinkToClipboard: 'Copy link to clipboard',
+    failedToCopy: 'Failed to copy'
+  },
+  es: {
+    readMore: 'Leer más',
+    readLess: 'Leer menos',
+    linkCopied: '¡Enlace copiado!',
+    copyLinkToClipboard: 'Copiar enlace al portapapeles',
+    failedToCopy: 'Error al copiar'
+  }
+};
+
+function str(key) {
+  const lang = (window.PR_LANG === 'es') ? 'es' : 'en';
+  let val = STRINGS[lang][key];
+  if (val === undefined) val = STRINGS.en[key];
+  return typeof val === 'string' ? val : key;
+}
 
 async function fetchData() {
   const loadingSpinner = document.getElementById('loading-spinner');
@@ -249,19 +273,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   setupDesktopSearch();
 
-  document.getElementById('current-year').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const infoBox = document.getElementById('tooltip');
   if (infoBox) {
     const readMoreBtn = document.createElement('button');
-    readMoreBtn.textContent = t('infoPanel.readMore');
+    readMoreBtn.textContent = str('readMore');
     readMoreBtn.className = 'read-more-btn';
 
     infoBox.appendChild(readMoreBtn);
 
     readMoreBtn.addEventListener('click', () => {
       const isExpanded = infoBox.classList.toggle('is-expanded');
-      readMoreBtn.textContent = isExpanded ? t('infoPanel.readLess') : t('infoPanel.readMore');
+      readMoreBtn.textContent = isExpanded ? str('readLess') : str('readMore');
     });
   }
 
@@ -275,16 +300,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         const icon = copyBtn.querySelector('i');
         icon.classList.remove(originalIconClass);
         icon.classList.add(successIconClass);
-        copyBtn.setAttribute('aria-label', t('infoPanel.linkCopied'));
+        copyBtn.setAttribute('aria-label', str('linkCopied'));
 
         setTimeout(() => {
           icon.classList.remove(successIconClass);
           icon.classList.add(originalIconClass);
-          copyBtn.setAttribute('aria-label', t('infoPanel.copyLinkToClipboard'));
+          copyBtn.setAttribute('aria-label', str('copyLinkToClipboard'));
         }, 2000);
       }).catch(err => {
         console.error('Failed to copy link: ', err);
-        copyBtn.setAttribute('aria-label', t('infoPanel.failedToCopy'));
+        copyBtn.setAttribute('aria-label', str('failedToCopy'));
       });
     });
   }
@@ -377,6 +402,23 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   initThemeToggle();
+
+  // Persistent mini-player handlers
+  const miniPlayer = document.getElementById('mini-player');
+  if (miniPlayer) {
+    miniPlayer.addEventListener('click', (event) => {
+      if (event.target.closest('#mini-player-close')) return;
+      reopenPanel();
+    });
+  }
+
+  const miniPlayerClose = document.getElementById('mini-player-close');
+  if (miniPlayerClose) {
+    miniPlayerClose.addEventListener('click', (event) => {
+      event.stopPropagation();
+      stopMiniPlayer();
+    });
+  }
 
   const progressBar = document.getElementById('scroll-progress-bar');
   if (progressBar) {

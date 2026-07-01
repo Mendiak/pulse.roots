@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { t, applyI18nToDOM } from './i18n.js';
 import { state } from './state.js';
 import { buildGenreMap, debounce, slugify, findGenre } from './utils.js';
@@ -9,6 +10,31 @@ import { initParticles } from './particles.js';
 import { initThemeToggle, initFullscreen, initShuffle } from './theme.js';
 import { renderStats } from './stats.js';
 import { createTimeline } from './timeline.js';
+import { initMiniPlayer } from './mini-player.js';
+
+const STRINGS = {
+  en: {
+    readMore: 'Read more',
+    readLess: 'Read less',
+    linkCopied: 'Link copied!',
+    copyLinkToClipboard: 'Copy link to clipboard',
+    failedToCopy: 'Failed to copy'
+  },
+  es: {
+    readMore: 'Leer más',
+    readLess: 'Leer menos',
+    linkCopied: '¡Enlace copiado!',
+    copyLinkToClipboard: 'Copiar enlace al portapapeles',
+    failedToCopy: 'Error al copiar'
+  }
+};
+
+function str(key) {
+  const lang = (window.PR_LANG === 'es') ? 'es' : 'en';
+  let val = STRINGS[lang][key];
+  if (val === undefined) val = STRINGS.en[key];
+  return typeof val === 'string' ? val : key;
+}
 
 async function fetchData() {
   const loadingSpinner = document.getElementById('loading-spinner');
@@ -238,7 +264,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
       case 'info':
         event.stopPropagation();
-        showInfoPanel(itemData, accentColor);
+        (async () => {
+          if (itemData.spotify_track_id) {
+            const { playGenre } = await import('./mini-player.js');
+            playGenre(itemData, accentColor);
+          }
+          showInfoPanel(itemData, accentColor);
+        })();
         break;
       case 'wiki':
         event.stopPropagation();
@@ -248,19 +280,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   setupDesktopSearch();
 
-  document.getElementById('current-year').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const infoBox = document.getElementById('tooltip');
   if (infoBox) {
     const readMoreBtn = document.createElement('button');
-    readMoreBtn.textContent = t('infoPanel.readMore');
+    readMoreBtn.textContent = str('readMore');
     readMoreBtn.className = 'read-more-btn';
 
     infoBox.appendChild(readMoreBtn);
 
     readMoreBtn.addEventListener('click', () => {
       const isExpanded = infoBox.classList.toggle('is-expanded');
-      readMoreBtn.textContent = isExpanded ? t('infoPanel.readLess') : t('infoPanel.readMore');
+      readMoreBtn.textContent = isExpanded ? str('readLess') : str('readMore');
     });
   }
 
@@ -274,16 +307,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         const icon = copyBtn.querySelector('i');
         icon.classList.remove(originalIconClass);
         icon.classList.add(successIconClass);
-        copyBtn.setAttribute('aria-label', t('infoPanel.linkCopied'));
+        copyBtn.setAttribute('aria-label', str('linkCopied'));
 
         setTimeout(() => {
           icon.classList.remove(successIconClass);
           icon.classList.add(originalIconClass);
-          copyBtn.setAttribute('aria-label', t('infoPanel.copyLinkToClipboard'));
+          copyBtn.setAttribute('aria-label', str('copyLinkToClipboard'));
         }, 2000);
       }).catch(err => {
         console.error('Failed to copy link: ', err);
-        copyBtn.setAttribute('aria-label', t('infoPanel.failedToCopy'));
+        copyBtn.setAttribute('aria-label', str('failedToCopy'));
       });
     });
   }
@@ -376,6 +409,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   initThemeToggle();
+  initMiniPlayer();
 
   const progressBar = document.getElementById('scroll-progress-bar');
   if (progressBar) {

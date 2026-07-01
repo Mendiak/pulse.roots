@@ -182,8 +182,13 @@ export function createTree(data) {
         state.activeSelectedNode = d;
         highlightBranch(event.currentTarget, d);
         scrollToNode(d);
-        const { showInfoPanel } = await import('./panel.js');
-        showInfoPanel(d.data, nodeColor);
+        if (d.data.spotify_track_id) {
+          const { playGenre } = await import('./mini-player.js');
+          playGenre(d.data, nodeColor);
+        } else {
+          const { showInfoPanel } = await import('./panel.js');
+          showInfoPanel(d.data, nodeColor);
+        }
       }
     })
     .on('mouseover', (event, d) => {
@@ -204,8 +209,13 @@ export function createTree(data) {
       highlightBranch(event.currentTarget, d);
       scrollToNode(d);
 
-      const { showInfoPanel } = await import('./panel.js');
-      showInfoPanel(d.data, nodeColor);
+      if (d.data.spotify_track_id) {
+        const { playGenre } = await import('./mini-player.js');
+        playGenre(d.data, nodeColor);
+      } else {
+        const { showInfoPanel } = await import('./panel.js');
+        showInfoPanel(d.data, nodeColor);
+      }
     });
 
   node.style('opacity', 0);

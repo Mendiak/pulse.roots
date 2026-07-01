@@ -161,6 +161,11 @@
     "lastUpdated": "January 16, 2026",
     "intro": "This Privacy Policy describes how PulseRoots (\"we\", \"us\", or \"our\") collects, uses, and discloses information we obtain from visitors to our website."
   },
+  "miniPlayer": {
+    "nowPlaying": "Now Playing",
+    "viewDetails": "View Details",
+    "close": "Close player"
+  },
   "layouts": {
     "tree": "Tree",
     "radial": "Radial",

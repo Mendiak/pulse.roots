@@ -1,6 +1,53 @@
-import { t } from './i18n.js';
 import { state } from './state.js';
 import { slugify, getGenrePath, truncateDescription } from './utils.js';
+
+const STRINGS = {
+  en: {
+    share: 'Share',
+    shareTitle: 'Share this genre',
+    closePanel: 'Close info panel',
+    noDescription: 'No description available.',
+    readMoreWikipedia: 'Read more on Wikipedia',
+    exampleTrack: 'Example track',
+    spotifyNote: 'A Spotify account may be required to listen to the full track.',
+    keyArtists: 'Key Artists',
+    partOf: 'Part of',
+    goToParent: 'Go to {name}',
+    subgenres: 'Subgenres & Related',
+    buyCoffee: 'Buy me a coffee',
+    reportError: 'Report an error',
+    nowPlaying: 'Now Playing',
+    showMore: 'Show more',
+    showLess: 'Show less'
+  },
+  es: {
+    share: 'Compartir',
+    shareTitle: 'Compartir este género',
+    closePanel: 'Cerrar panel de información',
+    noDescription: 'No hay descripción disponible.',
+    readMoreWikipedia: 'Leer más en Wikipedia',
+    exampleTrack: 'Pista de ejemplo',
+    spotifyNote: 'Es posible que se necesite una cuenta de Spotify para escuchar la pista completa.',
+    keyArtists: 'Artistas clave',
+    partOf: 'Parte de',
+    goToParent: 'Ir a {name}',
+    subgenres: 'Subgéneros y relacionados',
+    buyCoffee: 'Invítame a un café',
+    reportError: 'Reportar un error',
+    nowPlaying: 'Reproduciendo',
+    showMore: 'Ver más',
+    showLess: 'Ver menos'
+  }
+};
+
+function str(key, replacements = {}) {
+  const lang = (window.PR_LANG === 'es') ? 'es' : 'en';
+  let val = STRINGS[lang][key];
+  if (val === undefined) val = STRINGS.en[key];
+  if (typeof val !== 'string') return key;
+  if (Object.keys(replacements).length === 0) return val;
+  return val.replace(/\{(\w+)\}/g, (_, k) => replacements[k] != null ? replacements[k] : `{${k}}`);
+}
 
 function updateSchemaOrg(itemData) {
   const existingSchema = document.getElementById('genre-schema');
@@ -43,6 +90,9 @@ function updateSchemaOrg(itemData) {
   document.head.appendChild(script);
 }
 
+let persistentGenreData = null;
+let persistentAccentColor = null;
+
 export function showInfoPanel(inputData, accentColor = '#ff0066') {
   const genreNameForLookup = inputData.name || inputData.style;
   const genreEntry = state.genreMap.get(genreNameForLookup);
@@ -54,6 +104,9 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   const infoContent = document.getElementById('info-content');
   const overlay = document.getElementById('modal-overlay');
   const scrollIndicator = document.getElementById('scroll-indicator');
+
+  const miniPlayer = document.getElementById('mini-player');
+  if (miniPlayer) miniPlayer.classList.remove('visible');
 
   const genreSlug = getGenrePath(itemData);
   const newPath = `${state.BASE_PATH}/genres/${genreSlug}.html`;
@@ -121,15 +174,15 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   const shareBtn = document.createElement('button');
   shareBtn.className = 'nav-link-btn share-btn';
-  shareBtn.innerHTML = `<i class="bi bi-share-fill"></i> <span>${t('panel.share')}</span>`;
-  shareBtn.title = t('panel.shareTitle');
+  shareBtn.innerHTML = `<i class="bi bi-share-fill"></i> <span>${str('share')}</span>`;
+  shareBtn.title = str('shareTitle');
   shareBtn.addEventListener('click', () => {
     shareGenre(itemData);
   });
 
   const closeButton = document.createElement('button');
   closeButton.id = 'close-panel';
-  closeButton.setAttribute('aria-label', t('panel.closePanel'));
+  closeButton.setAttribute('aria-label', str('closePanel'));
   closeButton.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i>';
   closeButton.addEventListener('click', closeInfoPanel);
 
@@ -146,47 +199,142 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   infoContent.appendChild(stickyHeader);
 
-  const desc = document.createElement('p');
-  desc.textContent = itemData.description || t('panel.noDescription');
-  infoContent.appendChild(desc);
+  if (itemData.spotify_track_id) {
+    const hero = document.createElement('div');
+    hero.className = 'panel-hero';
 
-  if (itemData.wikipedia_url) {
-    const wikiLinkContainer = document.createElement('div');
-    wikiLinkContainer.className = 'external-link-container';
-
-    const wikiLink = document.createElement('a');
-    wikiLink.href = itemData.wikipedia_url;
-    wikiLink.target = '_blank';
-    wikiLink.rel = 'noopener noreferrer';
-    wikiLink.className = 'wikipedia-link';
-
-    wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${t('panel.readMoreWikipedia')}`;
-
-    wikiLinkContainer.appendChild(wikiLink);
-    infoContent.appendChild(wikiLinkContainer);
-  }
-
-  const example = document.createElement('p');
-  example.className = 'example-track';
-  example.innerHTML = `<i class="bi bi-soundwave"></i> <span>${t('panel.exampleTrack')}: <b>${itemData.example || 'N/A'}</b></span>`;
-  infoContent.appendChild(example);
-
-  const trackId = itemData.spotify_track_id;
-  if (trackId) {
-    const spotifyEmbed = document.createElement('div');
-    spotifyEmbed.id = 'spotify-embed';
-    spotifyEmbed.innerHTML = `
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <p class="spotify-note">${t('panel.spotifyNote')}</p>
+    const embedDiv = document.createElement('div');
+    embedDiv.className = 'panel-hero-embed';
+    embedDiv.innerHTML = `
+      <iframe
+        src="https://open.spotify.com/embed/track/${itemData.spotify_track_id}?utm_source=generator"
+        width="100%"
+        height="80"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        title="Spotify track preview"
+        style="border-radius:8px;display:block"
+      ></iframe>
     `;
-    spotifyEmbed.style.display = 'block';
-    infoContent.appendChild(spotifyEmbed);
+    hero.appendChild(embedDiv);
+
+    const infoDiv = document.createElement('div');
+    infoDiv.className = 'panel-hero-info';
+
+    const label = document.createElement('span');
+    label.className = 'now-playing-label';
+    label.textContent = str('nowPlaying');
+    infoDiv.appendChild(label);
+
+    const heroTitle = document.createElement('div');
+    heroTitle.className = 'panel-hero-title';
+    heroTitle.textContent = itemData.name || itemData.style;
+    infoDiv.appendChild(heroTitle);
+
+    if (itemData.example) {
+      const track = document.createElement('div');
+      track.className = 'panel-hero-track';
+      track.textContent = `\u2014 ${itemData.example}`;
+      infoDiv.appendChild(track);
+    }
+
+    if (itemData.description) {
+      const descWrapper = document.createElement('div');
+      descWrapper.className = 'panel-hero-desc-wrapper';
+      const descP = document.createElement('p');
+      descP.className = 'panel-hero-desc';
+      descP.textContent = itemData.description;
+      descWrapper.appendChild(descP);
+
+      if (itemData.description.length > 150) {
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'hero-desc-toggle';
+        toggleBtn.textContent = str('showMore');
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = descWrapper.classList.toggle('hero-desc-expanded');
+          toggleBtn.textContent = isExpanded ? str('showLess') : str('showMore');
+        });
+        descWrapper.appendChild(toggleBtn);
+      }
+
+      infoDiv.appendChild(descWrapper);
+    }
+
+    if (itemData.key_artists && itemData.key_artists.length > 0) {
+      const chipsLabel = document.createElement('span');
+      chipsLabel.className = 'panel-hero-artists-label';
+      chipsLabel.textContent = str('keyArtists');
+      infoDiv.appendChild(chipsLabel);
+
+      const chipsDiv = document.createElement('div');
+      chipsDiv.className = 'panel-hero-artists';
+      itemData.key_artists.forEach(artist => {
+        const chip = document.createElement('a');
+        chip.className = 'artist-chip';
+        const artistUrl = artist.url.startsWith('http')
+          ? artist.url
+          : `https://open.spotify.com/artist/${artist.url}`;
+        chip.href = artistUrl;
+        chip.target = '_blank';
+        chip.rel = 'noopener noreferrer';
+        chip.innerHTML = `<i class="bi bi-spotify"></i> ${artist.name}`;
+        chipsDiv.appendChild(chip);
+      });
+      infoDiv.appendChild(chipsDiv);
+    }
+
+    if (itemData.wikipedia_url) {
+      const wikiLink = document.createElement('a');
+      wikiLink.href = itemData.wikipedia_url;
+      wikiLink.target = '_blank';
+      wikiLink.rel = 'noopener noreferrer';
+      wikiLink.className = 'panel-hero-wiki';
+      wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${str('readMoreWikipedia')}`;
+      infoDiv.appendChild(wikiLink);
+    }
+
+    hero.appendChild(infoDiv);
+    infoContent.appendChild(hero);
+
+    const divider = document.createElement('div');
+    divider.className = 'panel-divider';
+    infoContent.appendChild(divider);
+
+    persistentGenreData = itemData;
+    persistentAccentColor = accentColor;
+  } else {
+    const desc = document.createElement('p');
+    desc.textContent = itemData.description || str('noDescription');
+    infoContent.appendChild(desc);
+
+    if (itemData.wikipedia_url) {
+      const wikiLinkContainer = document.createElement('div');
+      wikiLinkContainer.className = 'external-link-container';
+
+      const wikiLink = document.createElement('a');
+      wikiLink.href = itemData.wikipedia_url;
+      wikiLink.target = '_blank';
+      wikiLink.rel = 'noopener noreferrer';
+      wikiLink.className = 'wikipedia-link';
+
+      wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${str('readMoreWikipedia')}`;
+
+      wikiLinkContainer.appendChild(wikiLink);
+      infoContent.appendChild(wikiLinkContainer);
+    }
   }
 
-  if (itemData.key_artists && itemData.key_artists.length > 0) {
+  if (!itemData.spotify_track_id) {
+    const example = document.createElement('p');
+    example.className = 'example-track';
+    example.innerHTML = `<i class="bi bi-soundwave"></i> <span>${str('exampleTrack')}: <b>${itemData.example || 'N/A'}</b></span>`;
+    infoContent.appendChild(example);
+  }
+
+  if (!itemData.spotify_track_id && itemData.key_artists && itemData.key_artists.length > 0) {
     const artistsSection = document.createElement('div');
     artistsSection.className = 'nav-section artists-section';
-    artistsSection.innerHTML = `<p class="nav-label">${t('panel.keyArtists')}</p>`;
+    artistsSection.innerHTML = `<p class="nav-label">${str('keyArtists')}</p>`;
 
     const artistsSlider = document.createElement('div');
     artistsSlider.className = 'artists-slider';
@@ -220,8 +368,8 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
     const parentNav = document.createElement('div');
     parentNav.className = 'nav-section parent-nav';
     parentNav.innerHTML = `
-      <p class="nav-label">${t('panel.partOf')}</p>
-      <button class="nav-link-btn parent-link" aria-label="${t('panel.goToParent').replace('{name}', parentName)}">
+      <p class="nav-label">${str('partOf')}</p>
+      <button class="nav-link-btn parent-link" aria-label="${str('goToParent', { name: parentName })}">
         <i class="bi bi-arrow-up-circle"></i> ${parentName}
       </button>
     `;
@@ -236,7 +384,7 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   if (itemData.substyles && itemData.substyles.length > 0) {
     const subgenresNav = document.createElement('div');
     subgenresNav.className = 'nav-section subgenres-nav';
-    subgenresNav.innerHTML = `<p class="nav-label">${t('panel.subgenres')}</p>`;
+    subgenresNav.innerHTML = `<p class="nav-label">${str('subgenres')}</p>`;
 
     const sublist = document.createElement('div');
     sublist.className = 'subgenres-grid';
@@ -263,14 +411,14 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   donationLink.target = '_blank';
   donationLink.rel = 'noopener noreferrer';
   donationLink.className = 'panel-footer-link';
-  donationLink.innerHTML = '<i class="bi bi-cup-hot"></i> ' + t('panel.buyCoffee');
+  donationLink.innerHTML = '<i class="bi bi-cup-hot"></i> ' + str('buyCoffee');
   panelFooter.appendChild(donationLink);
 
   const genreNameEncoded = encodeURIComponent(itemData.name || itemData.style);
   const reportLink = document.createElement('a');
   reportLink.href = `contact.html?genre=${genreNameEncoded}&subject=Error%20Report`;
   reportLink.className = 'panel-footer-link';
-  reportLink.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${t('panel.reportError')}`;
+  reportLink.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${str('reportError')}`;
   panelFooter.appendChild(reportLink);
 
   infoContent.appendChild(panelFooter);
@@ -328,7 +476,6 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
 export async function closeInfoPanel() {
   const infoPanel = document.getElementById('info-panel');
-  const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
   const scrollIndicator = document.getElementById('scroll-indicator');
 
@@ -340,9 +487,26 @@ export async function closeInfoPanel() {
   overlay.classList.remove('visible');
   scrollIndicator.classList.add('hidden');
 
-  if (spotifyEmbed) {
-    spotifyEmbed.innerHTML = '';
-    spotifyEmbed.remove();
+  // Show persistent mini-player with text info (iframe stays in panel)
+  if (persistentGenreData && persistentGenreData.spotify_track_id) {
+    const miniPlayer = document.getElementById('mini-player');
+    const miniPlayerLabel = document.getElementById('mini-player-label');
+    const miniPlayerGenre = document.getElementById('mini-player-genre');
+    const miniPlayerTrack = document.getElementById('mini-player-track');
+    const miniPlayerClose = document.getElementById('mini-player-close');
+
+    if (miniPlayer) {
+      if (miniPlayerGenre) miniPlayerGenre.textContent = persistentGenreData.name || persistentGenreData.style;
+      if (miniPlayerTrack && persistentGenreData.example) {
+        miniPlayerTrack.textContent = `\u2014 ${persistentGenreData.example}`;
+      } else if (miniPlayerTrack) {
+        miniPlayerTrack.textContent = '';
+      }
+      if (miniPlayerClose) {
+        miniPlayerClose.style.setProperty('--mini-accent', persistentAccentColor || '#ff0066');
+      }
+      miniPlayer.classList.add('visible');
+    }
   }
 
   state.activeSelectedNode = null;
@@ -401,4 +565,53 @@ export async function shareGenre(itemData) {
       console.error('Error copying to clipboard:', err);
     }
   }
+}
+
+export function reopenPanel() {
+  const infoPanel = document.getElementById('info-panel');
+  const overlay = document.getElementById('modal-overlay');
+  const scrollIndicator = document.getElementById('scroll-indicator');
+  const miniPlayer = document.getElementById('mini-player');
+
+  if (!infoPanel || !overlay) return;
+
+  document.getElementById('main-container').setAttribute('aria-hidden', 'true');
+  document.querySelector('header').setAttribute('aria-hidden', 'true');
+  document.querySelector('footer').setAttribute('aria-hidden', 'true');
+
+  overlay.classList.add('visible');
+  infoPanel.classList.add('visible');
+  if (scrollIndicator) {
+    scrollIndicator.classList.remove('hidden');
+    infoPanel.scrollTop = 0;
+  }
+  if (miniPlayer) miniPlayer.classList.remove('visible');
+
+  if (persistentAccentColor) {
+    infoPanel.style.setProperty('--panel-accent-color', persistentAccentColor);
+  }
+
+  const closeButton = document.getElementById('close-panel');
+  if (closeButton) {
+    closeButton.classList.add('programmatic-focus');
+    closeButton.focus();
+    setTimeout(() => closeButton.classList.remove('programmatic-focus'), 150);
+  }
+}
+
+export function stopMiniPlayer() {
+  const miniPlayer = document.getElementById('mini-player');
+  const embed = document.querySelector('.panel-hero-embed');
+  if (embed) embed.innerHTML = '';
+  if (miniPlayer) miniPlayer.classList.remove('visible');
+  persistentGenreData = null;
+  persistentAccentColor = null;
+}
+
+export function getPersistentGenreData() {
+  return persistentGenreData;
+}
+
+export function getPersistentAccentColor() {
+  return persistentAccentColor;
 }

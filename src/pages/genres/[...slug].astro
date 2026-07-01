@@ -115,6 +115,31 @@ const genreScript = `window.PR_LANG='en';window.PR_I18N={};window.PR_I18N_FALLBA
     </div>
   </div>
 
+  <div id="mini-player" aria-label="Music player" role="region">
+    <div id="mini-player-content">
+      <div id="mini-player-info">
+        <span id="mini-player-label"></span>
+        <span id="mini-player-genre"></span>
+        <span id="mini-player-track"></span>
+        <span id="mini-player-desc"></span>
+        <div id="mini-player-artists" class="hidden"></div>
+      </div>
+      <div id="mini-player-embed"></div>
+      <div id="mini-player-actions">
+        <a id="mini-player-wiki" href="#" target="_blank" rel="noopener noreferrer" class="hidden" aria-label="">
+          <i class="bi bi-wikipedia"></i>
+        </a>
+        <button id="mini-player-details">
+          <i class="bi bi-info-circle"></i>
+          <span id="mini-player-details-text"></span>
+        </button>
+        <button id="mini-player-close" aria-label="">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <Footer />
 
   <script is:inline set:html={genreScript} />

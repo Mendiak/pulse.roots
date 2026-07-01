@@ -1,6 +1,47 @@
-import { t } from './i18n.js';
 import { state } from './state.js';
 import { slugify, getGenrePath, truncateDescription } from './utils.js';
+
+const STRINGS = {
+  en: {
+    share: 'Share',
+    shareTitle: 'Share this genre',
+    closePanel: 'Close info panel',
+    noDescription: 'No description available.',
+    readMoreWikipedia: 'Read more on Wikipedia',
+    exampleTrack: 'Example track',
+    spotifyNote: 'A Spotify account may be required to listen to the full track.',
+    keyArtists: 'Key Artists',
+    partOf: 'Part of',
+    goToParent: 'Go to {name}',
+    subgenres: 'Subgenres & Related',
+    buyCoffee: 'Buy me a coffee',
+    reportError: 'Report an error'
+  },
+  es: {
+    share: 'Compartir',
+    shareTitle: 'Compartir este género',
+    closePanel: 'Cerrar panel de información',
+    noDescription: 'No hay descripción disponible.',
+    readMoreWikipedia: 'Leer más en Wikipedia',
+    exampleTrack: 'Pista de ejemplo',
+    spotifyNote: 'Es posible que se necesite una cuenta de Spotify para escuchar la pista completa.',
+    keyArtists: 'Artistas clave',
+    partOf: 'Parte de',
+    goToParent: 'Ir a {name}',
+    subgenres: 'Subgéneros y relacionados',
+    buyCoffee: 'Invítame a un café',
+    reportError: 'Reportar un error'
+  }
+};
+
+function str(key, replacements = {}) {
+  const lang = (window.PR_LANG === 'es') ? 'es' : 'en';
+  let val = STRINGS[lang][key];
+  if (val === undefined) val = STRINGS.en[key];
+  if (typeof val !== 'string') return key;
+  if (Object.keys(replacements).length === 0) return val;
+  return val.replace(/\{(\w+)\}/g, (_, k) => replacements[k] != null ? replacements[k] : `{${k}}`);
+}
 
 function updateSchemaOrg(itemData) {
   const existingSchema = document.getElementById('genre-schema');
@@ -121,15 +162,15 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   const shareBtn = document.createElement('button');
   shareBtn.className = 'nav-link-btn share-btn';
-  shareBtn.innerHTML = `<i class="bi bi-share-fill"></i> <span>${t('panel.share')}</span>`;
-  shareBtn.title = t('panel.shareTitle');
+  shareBtn.innerHTML = `<i class="bi bi-share-fill"></i> <span>${str('share')}</span>`;
+  shareBtn.title = str('shareTitle');
   shareBtn.addEventListener('click', () => {
     shareGenre(itemData);
   });
 
   const closeButton = document.createElement('button');
   closeButton.id = 'close-panel';
-  closeButton.setAttribute('aria-label', t('panel.closePanel'));
+  closeButton.setAttribute('aria-label', str('closePanel'));
   closeButton.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i>';
   closeButton.addEventListener('click', closeInfoPanel);
 
@@ -147,7 +188,7 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   infoContent.appendChild(stickyHeader);
 
   const desc = document.createElement('p');
-  desc.textContent = itemData.description || t('panel.noDescription');
+  desc.textContent = itemData.description || str('noDescription');
   infoContent.appendChild(desc);
 
   if (itemData.wikipedia_url) {
@@ -160,7 +201,7 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
     wikiLink.rel = 'noopener noreferrer';
     wikiLink.className = 'wikipedia-link';
 
-    wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${t('panel.readMoreWikipedia')}`;
+    wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${str('readMoreWikipedia')}`;
 
     wikiLinkContainer.appendChild(wikiLink);
     infoContent.appendChild(wikiLinkContainer);
@@ -168,25 +209,13 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   const example = document.createElement('p');
   example.className = 'example-track';
-  example.innerHTML = `<i class="bi bi-soundwave"></i> <span>${t('panel.exampleTrack')}: <b>${itemData.example || 'N/A'}</b></span>`;
+  example.innerHTML = `<i class="bi bi-soundwave"></i> <span>${str('exampleTrack')}: <b>${itemData.example || 'N/A'}</b></span>`;
   infoContent.appendChild(example);
-
-  const trackId = itemData.spotify_track_id;
-  if (trackId) {
-    const spotifyEmbed = document.createElement('div');
-    spotifyEmbed.id = 'spotify-embed';
-    spotifyEmbed.innerHTML = `
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <p class="spotify-note">${t('panel.spotifyNote')}</p>
-    `;
-    spotifyEmbed.style.display = 'block';
-    infoContent.appendChild(spotifyEmbed);
-  }
 
   if (itemData.key_artists && itemData.key_artists.length > 0) {
     const artistsSection = document.createElement('div');
     artistsSection.className = 'nav-section artists-section';
-    artistsSection.innerHTML = `<p class="nav-label">${t('panel.keyArtists')}</p>`;
+    artistsSection.innerHTML = `<p class="nav-label">${str('keyArtists')}</p>`;
 
     const artistsSlider = document.createElement('div');
     artistsSlider.className = 'artists-slider';
@@ -220,8 +249,8 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
     const parentNav = document.createElement('div');
     parentNav.className = 'nav-section parent-nav';
     parentNav.innerHTML = `
-      <p class="nav-label">${t('panel.partOf')}</p>
-      <button class="nav-link-btn parent-link" aria-label="${t('panel.goToParent').replace('{name}', parentName)}">
+      <p class="nav-label">${str('partOf')}</p>
+      <button class="nav-link-btn parent-link" aria-label="${str('goToParent', { name: parentName })}">
         <i class="bi bi-arrow-up-circle"></i> ${parentName}
       </button>
     `;
@@ -236,7 +265,7 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   if (itemData.substyles && itemData.substyles.length > 0) {
     const subgenresNav = document.createElement('div');
     subgenresNav.className = 'nav-section subgenres-nav';
-    subgenresNav.innerHTML = `<p class="nav-label">${t('panel.subgenres')}</p>`;
+    subgenresNav.innerHTML = `<p class="nav-label">${str('subgenres')}</p>`;
 
     const sublist = document.createElement('div');
     sublist.className = 'subgenres-grid';
@@ -263,17 +292,22 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   donationLink.target = '_blank';
   donationLink.rel = 'noopener noreferrer';
   donationLink.className = 'panel-footer-link';
-  donationLink.innerHTML = '<i class="bi bi-cup-hot"></i> ' + t('panel.buyCoffee');
+  donationLink.innerHTML = '<i class="bi bi-cup-hot"></i> ' + str('buyCoffee');
   panelFooter.appendChild(donationLink);
 
   const genreNameEncoded = encodeURIComponent(itemData.name || itemData.style);
   const reportLink = document.createElement('a');
   reportLink.href = `contact.html?genre=${genreNameEncoded}&subject=Error%20Report`;
   reportLink.className = 'panel-footer-link';
-  reportLink.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${t('panel.reportError')}`;
+  reportLink.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${str('reportError')}`;
   panelFooter.appendChild(reportLink);
 
   infoContent.appendChild(panelFooter);
+
+  const miniPlayer = document.getElementById('mini-player');
+  if (miniPlayer && miniPlayer.classList.contains('visible')) {
+    infoContent.style.paddingBottom = (miniPlayer.offsetHeight + 16) + 'px';
+  }
 
   setTimeout(() => {
     if (infoPanel.scrollHeight > infoPanel.clientHeight) {

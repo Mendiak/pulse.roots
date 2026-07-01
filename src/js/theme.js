@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import { state } from './state.js';
 
 export function initThemeToggle() {

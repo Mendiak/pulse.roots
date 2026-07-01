@@ -199,8 +199,13 @@ export function setupDesktopSearch() {
           if (d3Node) {
             const topLevelAncestor = d3Node.ancestors().find(ancestor => ancestor.depth === 1);
             const color = topLevelAncestor ? state.colorScale(topLevelAncestor.data.name) : '#ff0066';
-            const { showInfoPanel } = await import('./panel.js');
-            showInfoPanel(d3Node.data, color);
+            if (d3Node.data.spotify_track_id) {
+              const { playGenre } = await import('./mini-player.js');
+              playGenre(d3Node.data, color);
+            } else {
+              const { showInfoPanel } = await import('./panel.js');
+              showInfoPanel(d3Node.data, color);
+            }
           }
         });
         suggestionsContainer.appendChild(div);
