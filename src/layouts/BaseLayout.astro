@@ -83,6 +83,16 @@ const {
   <link rel="alternate" hreflang="x-default" href="https://mendiak.github.io/pulse.roots/">
 </head>
 <body>
+  <script is:inline>
+    (function() {
+      try {
+        if (localStorage.getItem('theme') === 'light') {
+          document.body.classList.add('light-mode');
+        }
+      } catch(e) {}
+    })();
+  </script>
+
   <CookieConsent />
 
   <div id="cookie-consent-banner">
