@@ -1,4 +1,6 @@
 ---
+import CookieConsent from '../islands/CookieConsent.astro';
+
 export interface Props {
   title?: string;
   description?: string;
@@ -81,6 +83,24 @@ const {
   <link rel="alternate" hreflang="x-default" href="https://mendiak.github.io/pulse.roots/">
 </head>
 <body>
+  <CookieConsent />
+
+  <div id="cookie-consent-banner">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        {lang === 'es' ? (
+          <p>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra <a href="/pulse.roots/privacy/">Política de Privacidad</a>.</p>
+        ) : (
+          <p>We use cookies to improve your experience. By continuing, you agree to our <a href="/pulse.roots/privacy/">Privacy Policy</a>.</p>
+        )}
+      </div>
+      <div class="cookie-buttons">
+        <button id="cookie-accept-btn" class="cookie-btn cookie-btn-accept">{lang === 'es' ? 'Aceptar' : 'Accept'}</button>
+        <button id="cookie-reject-btn" class="cookie-btn cookie-btn-reject">{lang === 'es' ? 'Rechazar' : 'Reject'}</button>
+      </div>
+    </div>
+  </div>
+
   <slot />
 </body>
 </html>
