@@ -1,0 +1,119 @@
+/* --- Main Content & Layout --- */
+
+main {
+  margin-bottom: 40px;
+}
+
+#logo {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+#logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+#logo:hover {
+  transform: rotate(3deg) scale(1.08);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+#main-container {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Shared styles for main content boxes */
+.container,
+.info-box,
+#treemap,
+#mobile-nav-container {
+  background: var(--panel-dark);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-lg);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+#mobile-nav-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
+}
+
+.info-box:hover,
+#treemap:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.info-box {
+  max-width: 320px;
+  min-width: 280px;
+  text-align: left;
+  padding: 30px;
+  color: var(--text-main);
+}
+
+/* --- Tooltip / Intro Box --- */
+#tooltip {
+  background: var(--panel-dark);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+/* Style headings inside the intro box for better hierarchy */
+#tooltip h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.03em;
+}
+
+#tooltip h2 i {
+  color: var(--accent-pink);
+  margin-right: 0.6em;
+  font-size: 1.1em;
+}
+
+/* Remove top margin for the very first heading */
+#tooltip h2:first-of-type {
+  margin-top: 0;
+}
+
+/* Style paragraphs for better readability */
+#tooltip p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+#tooltip strong {
+  color: var(--text-main);
+}
+
+/* Add a visual separator for key sections */
+.section-divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1.5em;
+}
+
+#thanks {
+  margin: 30px;
+}

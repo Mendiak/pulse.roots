@@ -1,4 +1,18 @@
 ---
+import '../styles/variables.css';
+import '../styles/base.css';
+import '../styles/header.css';
+import '../styles/layout.css';
+import '../styles/typography.css';
+import '../styles/visualization.css';
+import '../styles/controls.css';
+import '../styles/panel.css';
+import '../styles/forms.css';
+import '../styles/footer.css';
+import '../styles/tooltips.css';
+import '../styles/mobile-nav.css';
+import '../styles/responsive.css';
+import '../styles/components.css';
 import CookieConsent from '../islands/CookieConsent.astro';
 
 export interface Props {
@@ -73,8 +87,6 @@ const {
   </noscript>
 
   <title>{title}</title>
-  <link rel="stylesheet" href="/pulse.roots/styles.css">
-  <noscript><link rel="stylesheet" href="/pulse.roots/styles.css"></noscript>
 
   {jsonLd && <script type="application/ld+json" set:html={jsonLd}></script>}
 
@@ -119,23 +131,10 @@ const {
       if (!btn) return;
       const icon = btn.querySelector('i');
       const savedTheme = localStorage.getItem('theme');
-
       if (savedTheme === 'light') {
         icon.classList.replace('bi-moon', 'bi-sun');
         btn.setAttribute('aria-label', 'Switch to Dark Mode');
       }
-
-      btn.addEventListener('click', function() {
-        const isLight = document.body.classList.toggle('light-mode');
-        localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        if (isLight) {
-          icon.classList.replace('bi-moon', 'bi-sun');
-          btn.setAttribute('aria-label', 'Switch to Dark Mode');
-        } else {
-          icon.classList.replace('bi-sun', 'bi-moon');
-          btn.setAttribute('aria-label', 'Switch to Light Mode');
-        }
-      });
     })();
   </script>
 </body>

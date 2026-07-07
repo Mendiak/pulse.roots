@@ -1,0 +1,45 @@
+/* NEW: General style for links inside the main info box */
+.info-box-link {
+  color: var(--accent-pink);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 0, 102, 0.2);
+  transition: all 0.3s ease;
+}
+
+.info-box-link:hover {
+  border-bottom-color: var(--accent-pink);
+  background: rgba(255, 0, 102, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  margin: 0;
+}
+
+body:not(.light-mode) #logo-link h1 {
+  color: var(--text-main);
+}
+
+body.light-mode #logo-link h1 {
+  background: none;
+  -webkit-text-fill-color: var(--text-main);
+  color: var(--text-main);
+  animation: none;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  margin: 1.5em 0 0.75em;
+}

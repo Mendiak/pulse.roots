@@ -1,0 +1,137 @@
+/* --- D3 Visualization --- */
+#treemap {
+  min-width: 250px;
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.searched-node circle {
+  stroke: var(--accent-pink);
+  stroke-width: 2.5px;
+  r: 9;
+  filter: drop-shadow(0 0 5px rgba(255, 0, 102, 0.3));
+}
+
+.searched-node text {
+  font-weight: 500;
+  fill: var(--accent-pink);
+}
+
+.active-searched-node circle {
+  stroke: var(--accent-pink);
+  stroke-width: 3px;
+  r: 10;
+  filter: drop-shadow(0 0 6px rgba(255, 0, 102, 0.4));
+}
+
+.active-searched-node text {
+  fill: var(--accent-pink) !important;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+body.light-mode .active-searched-node text {
+  fill: var(--accent-pink) !important;
+}
+
+.search-highlight-rect {
+  fill: rgba(255, 0, 102, 0.08);
+  stroke: var(--accent-pink);
+  stroke-width: 1.5px;
+  stroke-dasharray: 4 2;
+  rx: 6px;
+  ry: 6px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+
+#search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-width: 300px;
+  background: var(--panel-dark);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--tertiary-dark);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item.active {
+  background-color: var(--tertiary-dark);
+  color: var(--text-main);
+}
+
+.suggestion-family {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* --- Breadcrumbs --- */
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+  align-items: center;
+}
+
+.breadcrumb-item {
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breadcrumb-item:hover {
+  color: var(--text-main);
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  opacity: 0.4;
+  font-size: 0.7rem;
+  color: var(--panel-accent-color, inherit);
+}
+
+.breadcrumb-current {
+  color: var(--text-main);
+  font-weight: bold;
+  cursor: default;
+}
+
+.breadcrumb-current:hover {
+  text-decoration: none;
+}

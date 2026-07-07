@@ -1,0 +1,86 @@
+/* --- Form Styles --- */
+
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+select option {
+  background: var(--secondary-dark);
+  color: var(--text-main);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 4px rgba(255, 0, 102, 0.15);
+}
+
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select {
+  background: var(--secondary-dark);
+  border-color: #cbd5e1;
+  color: var(--text-main);
+}
+
+body.light-mode select option {
+  background: var(--secondary-dark);
+  color: var(--text-main);
+}
+
+textarea {
+  min-height: 100px;
+}
+
+#submitbutton,
+#clear-button {
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  box-shadow: var(--shadow-neon);
+}
+
+#submitbutton:hover,
+#clear-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.5);
+}
+
+#clear-button {
+  background: var(--glass-border);
+  color: var(--text-main);
+  box-shadow: none;
+}
+
+#clear-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-sm);
+}

@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--accent-pink);
+  color: white;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Outfit", "Aleo", sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --- Particles Canvas --- */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+body.light-mode #particles-canvas {
+  opacity: 0.2;
+}
