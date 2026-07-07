@@ -112,5 +112,31 @@ const {
   </div>
 
   <slot />
+
+  <script>
+    (function() {
+      const btn = document.getElementById('theme-toggle-btn');
+      if (!btn) return;
+      const icon = btn.querySelector('i');
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme === 'light') {
+        icon.classList.replace('bi-moon', 'bi-sun');
+        btn.setAttribute('aria-label', 'Switch to Dark Mode');
+      }
+
+      btn.addEventListener('click', function() {
+        const isLight = document.body.classList.toggle('light-mode');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        if (isLight) {
+          icon.classList.replace('bi-moon', 'bi-sun');
+          btn.setAttribute('aria-label', 'Switch to Dark Mode');
+        } else {
+          icon.classList.replace('bi-sun', 'bi-moon');
+          btn.setAttribute('aria-label', 'Switch to Light Mode');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

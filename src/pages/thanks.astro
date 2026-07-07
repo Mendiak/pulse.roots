@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const canonical = 'https://mendiak.github.io/pulse.roots/thanks.html';
+const canonical = 'https://mendiak.github.io/pulse.roots/thanks/';
 ---
 
 <BaseLayout
@@ -10,7 +11,8 @@ const canonical = 'https://mendiak.github.io/pulse.roots/thanks.html';
   description="Thank you for contacting PulseRoots. Your message has been sent successfully."
   canonical={canonical}
 >
-  <div class="container">
+  <Header simple />
+  <div id="main-container" class="container">
     <h2><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Message Sent!</h2>
     <p>Thanks for reaching out. I'll review your message and get back to you as soon as possible.</p>
     <a href="/pulse.roots/" class="back-button">Back to PulseRoots</a>
@@ -26,6 +28,7 @@ const canonical = 'https://mendiak.github.io/pulse.roots/thanks.html';
       line-height: 1.6;
       min-height: 100vh;
     }
+    #main-container { flex-direction: column; }
     .container {
       background: var(--panel-dark);
       backdrop-filter: var(--glass-blur);

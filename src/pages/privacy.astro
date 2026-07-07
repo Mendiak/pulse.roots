@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const canonical = 'https://mendiak.github.io/pulse.roots/privacy.html';
+const canonical = 'https://mendiak.github.io/pulse.roots/privacy/';
 ---
 
 <BaseLayout
@@ -10,7 +11,8 @@ const canonical = 'https://mendiak.github.io/pulse.roots/privacy.html';
   description="Privacy policy for PulseRoots - how we handle your data when you use our interactive electronic music genre explorer."
   canonical={canonical}
 >
-  <div class="container">
+  <Header simple />
+  <div id="main-container" class="container">
     <h1>Privacy Policy for PulseRoots</h1>
     <p><strong>Last Updated:</strong> 16 de enero de 2026</p>
 
@@ -66,6 +68,7 @@ const canonical = 'https://mendiak.github.io/pulse.roots/privacy.html';
     a:hover {
       text-decoration: underline;
     }
+    #main-container { flex-direction: column; margin: 40px auto; width: 100%; max-width: 800px; }
     .container {
       background: var(--panel-dark);
       backdrop-filter: var(--glass-blur);
@@ -73,9 +76,7 @@ const canonical = 'https://mendiak.github.io/pulse.roots/privacy.html';
       border: 1px solid var(--glass-border);
       border-radius: 16px;
       padding: 30px;
-      margin: 40px auto;
       box-shadow: var(--shadow-lg);
-      max-width: 800px;
     }
     .back-button {
       display: inline-block;

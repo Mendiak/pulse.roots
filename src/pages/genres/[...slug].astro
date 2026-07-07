@@ -50,7 +50,7 @@ function buildBreadcrumbHtml() {
   return html;
 }
 
-const genreScript = `window.PR_LANG='en';window.PR_I18N={};window.PR_I18N_FALLBACK={};window.PR_GENRE_TO_LOAD=${JSON.stringify(genreName)};`;
+const genreScript = `window.PR_LANG='${currentLang}';window.PR_I18N={};window.PR_I18N_FALLBACK={};window.PR_GENRE_TO_LOAD=${JSON.stringify(genreName)};`;
 ---
 
 <BaseLayout

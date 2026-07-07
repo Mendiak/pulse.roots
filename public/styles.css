@@ -1,3 +1,25 @@
+/* Skip to content link — accessible keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 50%;
+  z-index: 10001;
+  background: var(--accent-pink);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 0 0 8px 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.skip-link:focus {
+  top: 0;
+  transform: translateX(-50%);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 /* --- Root Variables & General Styles --- */
 :root {
   /* Modern Color Palette — Monochromatic + Magenta Accent */
@@ -3144,5 +3166,15 @@ body.light-mode .share-popover-btn:hover {
 
   #cookie-consent-banner {
     padding: 14px 16px;
+  }
+}
+
+/* Reduced motion — respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
