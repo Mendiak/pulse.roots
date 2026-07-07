@@ -170,5 +170,19 @@
     "tree": "Tree",
     "radial": "Radial",
     "timeline": "Timeline"
+  },
+  "timeline": {
+    "loading": "Loading timeline...",
+    "summary": "{totalFacts} milestones · {yearSpan} years of electronic music",
+    "linkWikipedia": "Wikipedia",
+    "linkOfficialSite": "Official site",
+    "linkLearnMore": "Learn more",
+    "eras": {
+      "pioneers": "Pioneers",
+      "80s": "80s",
+      "90s": "90s",
+      "00s": "00s",
+      "10s+": "10s+"
+    }
   }
 }

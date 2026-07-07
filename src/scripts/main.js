@@ -184,6 +184,20 @@ function handleUrl() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+  const lang = window.PR_LANG || 'en';
+  try {
+    const [enResp, langResp] = await Promise.all([
+      fetch(`${state.BASE_PATH}/data/i18n/en.json`),
+      lang !== 'en' ? fetch(`${state.BASE_PATH}/data/i18n/${lang}.json`) : Promise.resolve(null)
+    ]);
+    window.PR_I18N_FALLBACK = await enResp.json();
+    window.PR_I18N = langResp ? await langResp.json() : window.PR_I18N_FALLBACK;
+  } catch (e) {
+    console.warn('Failed to load i18n files:', e);
+    window.PR_I18N = {};
+    window.PR_I18N_FALLBACK = {};
+  }
+
   applyI18nToDOM();
   fetchData();
 

@@ -1,19 +1,26 @@
 import * as d3 from 'd3';
 import { state } from './state.js';
+import { t } from './i18n.js';
+
+function _tl(key, replacements, fallback) {
+  const val = t(key, replacements);
+  return val !== key ? val : (fallback ?? key);
+}
 
 let cachedFacts = null;
 
 const ERAS = [
-  { label: 'Pioneers', start: 1897, end: 1979, color: 'rgba(128, 128, 128, 0.06)' },
-  { label: '80s', start: 1980, end: 1989, color: 'rgba(128, 128, 128, 0.04)' },
-  { label: '90s', start: 1990, end: 1999, color: 'rgba(128, 128, 128, 0.06)' },
-  { label: '00s', start: 2000, end: 2009, color: 'rgba(128, 128, 128, 0.04)' },
-  { label: '10s+', start: 2010, end: 2022, color: 'rgba(128, 128, 128, 0.06)' },
+  { label: 'Pioneers', labelKey: 'timeline.eras.pioneers', start: 1897, end: 1979, color: 'rgba(128, 128, 128, 0.06)' },
+  { label: '80s', labelKey: 'timeline.eras.80s', start: 1980, end: 1989, color: 'rgba(128, 128, 128, 0.04)' },
+  { label: '90s', labelKey: 'timeline.eras.90s', start: 1990, end: 1999, color: 'rgba(128, 128, 128, 0.06)' },
+  { label: '00s', labelKey: 'timeline.eras.00s', start: 2000, end: 2009, color: 'rgba(128, 128, 128, 0.04)' },
+  { label: '10s+', labelKey: 'timeline.eras.10s+', start: 2010, end: 2022, color: 'rgba(128, 128, 128, 0.06)' },
 ];
 
 async function fetchFacts() {
   try {
-    const resp = await fetch(`${state.BASE_PATH}/data/music_history.json`);
+    const langSuffix = window.PR_LANG && window.PR_LANG !== 'en' ? `.${window.PR_LANG}` : '';
+    const resp = await fetch(`${state.BASE_PATH}/data/music_history${langSuffix}.json`);
     return await resp.json();
   } catch {
     return [];
@@ -95,7 +102,7 @@ function renderTimeline(facts) {
     .attr('font-weight', 600)
     .attr('letter-spacing', '1.5px')
     .attr('opacity', 0.4)
-    .text(d => d.label);
+    .text(d => _tl(d.labelKey, {}, d.label));
 
   const decadeTicks = [];
   const firstDecade = Math.ceil(minYear / 10) * 10;
@@ -172,7 +179,7 @@ function renderTimeline(facts) {
     tooltip.transition().duration(200).style('opacity', 0.95);
     const maxW = 340;
     const left = Math.min(event.pageX + 12, window.innerWidth - maxW - 10);
-    const linkLabel = d.url?.includes('wikipedia.org') ? 'Wikipedia' : d.url?.includes('roland.com') || d.url?.includes('ableton.com') || d.url?.includes('native-instruments.com') ? 'Official site' : 'Learn more';
+    const linkLabel = d.url?.includes('wikipedia.org') ? _tl('timeline.linkWikipedia', {}, 'Wikipedia') : d.url?.includes('roland.com') || d.url?.includes('ableton.com') || d.url?.includes('native-instruments.com') ? _tl('timeline.linkOfficialSite', {}, 'Official site') : _tl('timeline.linkLearnMore', {}, 'Learn more');
     const linkHtml = d.url ? `<br><a href="${d.url}" target="_blank" rel="noopener noreferrer" class="tl-link">${linkLabel} ↗</a>` : '';
     tooltip.html(`<strong>${d.date}</strong> ${d.fact}${linkHtml}`)
       .style('left', left + 'px')
@@ -279,7 +286,7 @@ function renderTimeline(facts) {
     .attr('font-size', '12px')
     .attr('font-weight', 500)
     .style('opacity', 0)
-    .text(`${totalFacts} milestones · ${yearSpan} years of electronic music`)
+    .text(_tl('timeline.summary', { totalFacts, yearSpan }, `${totalFacts} milestones · ${yearSpan} years of electronic music`))
     .transition()
     .duration(600)
     .style('opacity', 1);
@@ -303,7 +310,7 @@ export async function createTimeline() {
       .attr('fill', '#888888')
       .attr('font-family', '"Outfit", sans-serif')
       .attr('font-size', '14px')
-      .text('Loading timeline...');
+      .text(_tl('timeline.loading', {}, 'Loading timeline...'));
     cachedFacts = await fetchFacts();
     state.historyFacts = cachedFacts;
   }

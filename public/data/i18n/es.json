@@ -170,5 +170,19 @@
     "tree": "Árbol",
     "radial": "Radial",
     "timeline": "Línea de Tiempo"
+  },
+  "timeline": {
+    "loading": "Cargando línea de tiempo...",
+    "summary": "{totalFacts} hitos · {yearSpan} años de música electrónica",
+    "linkWikipedia": "Wikipedia",
+    "linkOfficialSite": "Sitio oficial",
+    "linkLearnMore": "Saber más",
+    "eras": {
+      "pioneers": "Pioneros",
+      "80s": "Años 80",
+      "90s": "Años 90",
+      "00s": "Años 2000",
+      "10s+": "Años 2010+"
+    }
   }
 }
