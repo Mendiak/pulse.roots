@@ -487,26 +487,10 @@ export async function closeInfoPanel() {
   overlay.classList.remove('visible');
   scrollIndicator.classList.add('hidden');
 
-  // Show persistent mini-player with text info (iframe stays in panel)
-  if (persistentGenreData && persistentGenreData.spotify_track_id) {
-    const miniPlayer = document.getElementById('mini-player');
-    const miniPlayerLabel = document.getElementById('mini-player-label');
-    const miniPlayerGenre = document.getElementById('mini-player-genre');
-    const miniPlayerTrack = document.getElementById('mini-player-track');
-    const miniPlayerClose = document.getElementById('mini-player-close');
-
-    if (miniPlayer) {
-      if (miniPlayerGenre) miniPlayerGenre.textContent = persistentGenreData.name || persistentGenreData.style;
-      if (miniPlayerTrack && persistentGenreData.example) {
-        miniPlayerTrack.textContent = `\u2014 ${persistentGenreData.example}`;
-      } else if (miniPlayerTrack) {
-        miniPlayerTrack.textContent = '';
-      }
-      if (miniPlayerClose) {
-        miniPlayerClose.style.setProperty('--mini-accent', persistentAccentColor || '#ff0066');
-      }
-      miniPlayer.classList.add('visible');
-    }
+  const iframe = document.querySelector('#info-content iframe');
+  if (iframe) {
+    iframe.src = 'about:blank';
+    iframe.remove();
   }
 
   state.activeSelectedNode = null;
@@ -565,47 +549,6 @@ export async function shareGenre(itemData) {
       console.error('Error copying to clipboard:', err);
     }
   }
-}
-
-export function reopenPanel() {
-  const infoPanel = document.getElementById('info-panel');
-  const overlay = document.getElementById('modal-overlay');
-  const scrollIndicator = document.getElementById('scroll-indicator');
-  const miniPlayer = document.getElementById('mini-player');
-
-  if (!infoPanel || !overlay) return;
-
-  document.getElementById('main-container').setAttribute('aria-hidden', 'true');
-  document.querySelector('header').setAttribute('aria-hidden', 'true');
-  document.querySelector('footer').setAttribute('aria-hidden', 'true');
-
-  overlay.classList.add('visible');
-  infoPanel.classList.add('visible');
-  if (scrollIndicator) {
-    scrollIndicator.classList.remove('hidden');
-    infoPanel.scrollTop = 0;
-  }
-  if (miniPlayer) miniPlayer.classList.remove('visible');
-
-  if (persistentAccentColor) {
-    infoPanel.style.setProperty('--panel-accent-color', persistentAccentColor);
-  }
-
-  const closeButton = document.getElementById('close-panel');
-  if (closeButton) {
-    closeButton.classList.add('programmatic-focus');
-    closeButton.focus();
-    setTimeout(() => closeButton.classList.remove('programmatic-focus'), 150);
-  }
-}
-
-export function stopMiniPlayer() {
-  const miniPlayer = document.getElementById('mini-player');
-  const embed = document.querySelector('.panel-hero-embed');
-  if (embed) embed.innerHTML = '';
-  if (miniPlayer) miniPlayer.classList.remove('visible');
-  persistentGenreData = null;
-  persistentAccentColor = null;
 }
 
 export function getPersistentGenreData() {

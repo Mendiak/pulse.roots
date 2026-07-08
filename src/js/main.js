@@ -3,7 +3,7 @@ import { t, applyI18nToDOM } from './i18n.js';
 import { state } from './state.js';
 import { buildGenreMap, debounce, slugify, findGenre } from './utils.js';
 import { createTree, highlightBranch, clearBranchHighlight, scrollToNode } from './tree.js';
-import { showInfoPanel, closeInfoPanel, reopenPanel, stopMiniPlayer } from './panel.js';
+import { showInfoPanel, closeInfoPanel } from './panel.js';
 import { createMobileNav, saveAccordionState, restoreAccordionState } from './mobile-nav.js';
 import { performSearch, navigateToMatch, setupDesktopSearch } from './search.js';
 import { initParticles } from './particles.js';
@@ -424,23 +424,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   initThemeToggle();
-
-  // Persistent mini-player handlers
-  const miniPlayer = document.getElementById('mini-player');
-  if (miniPlayer) {
-    miniPlayer.addEventListener('click', (event) => {
-      if (event.target.closest('#mini-player-close')) return;
-      reopenPanel();
-    });
-  }
-
-  const miniPlayerClose = document.getElementById('mini-player-close');
-  if (miniPlayerClose) {
-    miniPlayerClose.addEventListener('click', (event) => {
-      event.stopPropagation();
-      stopMiniPlayer();
-    });
-  }
 
   const progressBar = document.getElementById('scroll-progress-bar');
   if (progressBar) {
