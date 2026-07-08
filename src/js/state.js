@@ -1,3 +1,5 @@
+import * as d3 from 'd3';
+
 export const state = {
   colorScale: d3.scaleOrdinal(d3.schemeTableau10),
   BASE_PATH: window.location.pathname.includes('/pulse.roots') ? '/pulse.roots' : '',

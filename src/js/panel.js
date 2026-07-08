@@ -15,7 +15,10 @@ const STRINGS = {
     goToParent: 'Go to {name}',
     subgenres: 'Subgenres & Related',
     buyCoffee: 'Buy me a coffee',
-    reportError: 'Report an error'
+    reportError: 'Report an error',
+    nowPlaying: 'Now Playing',
+    showMore: 'Show more',
+    showLess: 'Show less'
   },
   es: {
     share: 'Compartir',
@@ -30,7 +33,10 @@ const STRINGS = {
     goToParent: 'Ir a {name}',
     subgenres: 'Subgéneros y relacionados',
     buyCoffee: 'Invítame a un café',
-    reportError: 'Reportar un error'
+    reportError: 'Reportar un error',
+    nowPlaying: 'Reproduciendo',
+    showMore: 'Ver más',
+    showLess: 'Ver menos'
   }
 };
 
@@ -84,6 +90,9 @@ function updateSchemaOrg(itemData) {
   document.head.appendChild(script);
 }
 
+let persistentGenreData = null;
+let persistentAccentColor = null;
+
 export function showInfoPanel(inputData, accentColor = '#ff0066') {
   const genreNameForLookup = inputData.name || inputData.style;
   const genreEntry = state.genreMap.get(genreNameForLookup);
@@ -95,6 +104,9 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   const infoContent = document.getElementById('info-content');
   const overlay = document.getElementById('modal-overlay');
   const scrollIndicator = document.getElementById('scroll-indicator');
+
+  const miniPlayer = document.getElementById('mini-player');
+  if (miniPlayer) miniPlayer.classList.remove('visible');
 
   const genreSlug = getGenrePath(itemData);
   const newPath = `${state.BASE_PATH}/genres/${genreSlug}.html`;
@@ -187,32 +199,139 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   infoContent.appendChild(stickyHeader);
 
-  const desc = document.createElement('p');
-  desc.textContent = itemData.description || str('noDescription');
-  infoContent.appendChild(desc);
+  if (itemData.spotify_track_id) {
+    const hero = document.createElement('div');
+    hero.className = 'panel-hero';
 
-  if (itemData.wikipedia_url) {
-    const wikiLinkContainer = document.createElement('div');
-    wikiLinkContainer.className = 'external-link-container';
+    const embedDiv = document.createElement('div');
+    embedDiv.className = 'panel-hero-embed';
+    embedDiv.innerHTML = `
+      <iframe
+        src="https://open.spotify.com/embed/track/${itemData.spotify_track_id}?utm_source=generator"
+        width="100%"
+        height="80"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        title="Spotify track preview"
+        style="border-radius:8px;display:block"
+      ></iframe>
+    `;
+    hero.appendChild(embedDiv);
 
-    const wikiLink = document.createElement('a');
-    wikiLink.href = itemData.wikipedia_url;
-    wikiLink.target = '_blank';
-    wikiLink.rel = 'noopener noreferrer';
-    wikiLink.className = 'wikipedia-link';
+    const infoDiv = document.createElement('div');
+    infoDiv.className = 'panel-hero-info';
 
-    wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${str('readMoreWikipedia')}`;
+    const label = document.createElement('span');
+    label.className = 'now-playing-label';
+    label.textContent = str('nowPlaying');
+    infoDiv.appendChild(label);
 
-    wikiLinkContainer.appendChild(wikiLink);
-    infoContent.appendChild(wikiLinkContainer);
+    const heroTitle = document.createElement('div');
+    heroTitle.className = 'panel-hero-title';
+    heroTitle.textContent = itemData.name || itemData.style;
+    infoDiv.appendChild(heroTitle);
+
+    if (itemData.example) {
+      const track = document.createElement('div');
+      track.className = 'panel-hero-track';
+      track.textContent = `\u2014 ${itemData.example}`;
+      infoDiv.appendChild(track);
+    }
+
+    if (itemData.description) {
+      const descWrapper = document.createElement('div');
+      descWrapper.className = 'panel-hero-desc-wrapper';
+      const descP = document.createElement('p');
+      descP.className = 'panel-hero-desc';
+      descP.textContent = itemData.description;
+      descWrapper.appendChild(descP);
+
+      if (itemData.description.length > 150) {
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'hero-desc-toggle';
+        toggleBtn.textContent = str('showMore');
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = descWrapper.classList.toggle('hero-desc-expanded');
+          toggleBtn.textContent = isExpanded ? str('showLess') : str('showMore');
+        });
+        descWrapper.appendChild(toggleBtn);
+      }
+
+      infoDiv.appendChild(descWrapper);
+    }
+
+    if (itemData.key_artists && itemData.key_artists.length > 0) {
+      const chipsLabel = document.createElement('span');
+      chipsLabel.className = 'panel-hero-artists-label';
+      chipsLabel.textContent = str('keyArtists');
+      infoDiv.appendChild(chipsLabel);
+
+      const chipsDiv = document.createElement('div');
+      chipsDiv.className = 'panel-hero-artists';
+      itemData.key_artists.forEach(artist => {
+        const chip = document.createElement('a');
+        chip.className = 'artist-chip';
+        const artistUrl = artist.url.startsWith('http')
+          ? artist.url
+          : `https://open.spotify.com/artist/${artist.url}`;
+        chip.href = artistUrl;
+        chip.target = '_blank';
+        chip.rel = 'noopener noreferrer';
+        chip.innerHTML = `<i class="bi bi-spotify"></i> ${artist.name}`;
+        chipsDiv.appendChild(chip);
+      });
+      infoDiv.appendChild(chipsDiv);
+    }
+
+    if (itemData.wikipedia_url) {
+      const wikiLink = document.createElement('a');
+      wikiLink.href = itemData.wikipedia_url;
+      wikiLink.target = '_blank';
+      wikiLink.rel = 'noopener noreferrer';
+      wikiLink.className = 'panel-hero-wiki';
+      wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${str('readMoreWikipedia')}`;
+      infoDiv.appendChild(wikiLink);
+    }
+
+    hero.appendChild(infoDiv);
+    infoContent.appendChild(hero);
+
+    const divider = document.createElement('div');
+    divider.className = 'panel-divider';
+    infoContent.appendChild(divider);
+
+    persistentGenreData = itemData;
+    persistentAccentColor = accentColor;
+  } else {
+    const desc = document.createElement('p');
+    desc.textContent = itemData.description || str('noDescription');
+    infoContent.appendChild(desc);
+
+    if (itemData.wikipedia_url) {
+      const wikiLinkContainer = document.createElement('div');
+      wikiLinkContainer.className = 'external-link-container';
+
+      const wikiLink = document.createElement('a');
+      wikiLink.href = itemData.wikipedia_url;
+      wikiLink.target = '_blank';
+      wikiLink.rel = 'noopener noreferrer';
+      wikiLink.className = 'wikipedia-link';
+
+      wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${str('readMoreWikipedia')}`;
+
+      wikiLinkContainer.appendChild(wikiLink);
+      infoContent.appendChild(wikiLinkContainer);
+    }
   }
 
-  const example = document.createElement('p');
-  example.className = 'example-track';
-  example.innerHTML = `<i class="bi bi-soundwave"></i> <span>${str('exampleTrack')}: <b>${itemData.example || 'N/A'}</b></span>`;
-  infoContent.appendChild(example);
+  if (!itemData.spotify_track_id) {
+    const example = document.createElement('p');
+    example.className = 'example-track';
+    example.innerHTML = `<i class="bi bi-soundwave"></i> <span>${str('exampleTrack')}: <b>${itemData.example || 'N/A'}</b></span>`;
+    infoContent.appendChild(example);
+  }
 
-  if (itemData.key_artists && itemData.key_artists.length > 0) {
+  if (!itemData.spotify_track_id && itemData.key_artists && itemData.key_artists.length > 0) {
     const artistsSection = document.createElement('div');
     artistsSection.className = 'nav-section artists-section';
     artistsSection.innerHTML = `<p class="nav-label">${str('keyArtists')}</p>`;
@@ -304,11 +423,6 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   infoContent.appendChild(panelFooter);
 
-  const miniPlayer = document.getElementById('mini-player');
-  if (miniPlayer && miniPlayer.classList.contains('visible')) {
-    infoContent.style.paddingBottom = (miniPlayer.offsetHeight + 16) + 'px';
-  }
-
   setTimeout(() => {
     if (infoPanel.scrollHeight > infoPanel.clientHeight) {
       scrollIndicator.classList.remove('hidden');
@@ -362,7 +476,6 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
 export async function closeInfoPanel() {
   const infoPanel = document.getElementById('info-panel');
-  const spotifyEmbed = document.getElementById('spotify-embed');
   const overlay = document.getElementById('modal-overlay');
   const scrollIndicator = document.getElementById('scroll-indicator');
 
@@ -374,9 +487,26 @@ export async function closeInfoPanel() {
   overlay.classList.remove('visible');
   scrollIndicator.classList.add('hidden');
 
-  if (spotifyEmbed) {
-    spotifyEmbed.innerHTML = '';
-    spotifyEmbed.remove();
+  // Show persistent mini-player with text info (iframe stays in panel)
+  if (persistentGenreData && persistentGenreData.spotify_track_id) {
+    const miniPlayer = document.getElementById('mini-player');
+    const miniPlayerLabel = document.getElementById('mini-player-label');
+    const miniPlayerGenre = document.getElementById('mini-player-genre');
+    const miniPlayerTrack = document.getElementById('mini-player-track');
+    const miniPlayerClose = document.getElementById('mini-player-close');
+
+    if (miniPlayer) {
+      if (miniPlayerGenre) miniPlayerGenre.textContent = persistentGenreData.name || persistentGenreData.style;
+      if (miniPlayerTrack && persistentGenreData.example) {
+        miniPlayerTrack.textContent = `\u2014 ${persistentGenreData.example}`;
+      } else if (miniPlayerTrack) {
+        miniPlayerTrack.textContent = '';
+      }
+      if (miniPlayerClose) {
+        miniPlayerClose.style.setProperty('--mini-accent', persistentAccentColor || '#ff0066');
+      }
+      miniPlayer.classList.add('visible');
+    }
   }
 
   state.activeSelectedNode = null;
@@ -435,4 +565,53 @@ export async function shareGenre(itemData) {
       console.error('Error copying to clipboard:', err);
     }
   }
+}
+
+export function reopenPanel() {
+  const infoPanel = document.getElementById('info-panel');
+  const overlay = document.getElementById('modal-overlay');
+  const scrollIndicator = document.getElementById('scroll-indicator');
+  const miniPlayer = document.getElementById('mini-player');
+
+  if (!infoPanel || !overlay) return;
+
+  document.getElementById('main-container').setAttribute('aria-hidden', 'true');
+  document.querySelector('header').setAttribute('aria-hidden', 'true');
+  document.querySelector('footer').setAttribute('aria-hidden', 'true');
+
+  overlay.classList.add('visible');
+  infoPanel.classList.add('visible');
+  if (scrollIndicator) {
+    scrollIndicator.classList.remove('hidden');
+    infoPanel.scrollTop = 0;
+  }
+  if (miniPlayer) miniPlayer.classList.remove('visible');
+
+  if (persistentAccentColor) {
+    infoPanel.style.setProperty('--panel-accent-color', persistentAccentColor);
+  }
+
+  const closeButton = document.getElementById('close-panel');
+  if (closeButton) {
+    closeButton.classList.add('programmatic-focus');
+    closeButton.focus();
+    setTimeout(() => closeButton.classList.remove('programmatic-focus'), 150);
+  }
+}
+
+export function stopMiniPlayer() {
+  const miniPlayer = document.getElementById('mini-player');
+  const embed = document.querySelector('.panel-hero-embed');
+  if (embed) embed.innerHTML = '';
+  if (miniPlayer) miniPlayer.classList.remove('visible');
+  persistentGenreData = null;
+  persistentAccentColor = null;
+}
+
+export function getPersistentGenreData() {
+  return persistentGenreData;
+}
+
+export function getPersistentAccentColor() {
+  return persistentAccentColor;
 }

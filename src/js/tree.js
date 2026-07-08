@@ -1,5 +1,7 @@
+import * as d3 from 'd3';
 import { state } from './state.js';
 import { slugify } from './utils.js';
+import { t } from './i18n.js';
 
 const tooltip = d3.select('body')
   .append('div')
@@ -16,7 +18,7 @@ function showTooltip(event, d) {
   tooltip.html(`
     <h3>${d.data.name}</h3>
     ${truncatedDesc ? `<p>${truncatedDesc}</p>` : ''}
-    <p><i class="bi bi-arrow-up-right-circle"></i> Click para detalles</p>
+    <p><i class="bi bi-arrow-up-right-circle"></i> ${t('panel.clickForDetails')}</p>
   `)
     .style('left', Math.min(event.pageX + 12, window.innerWidth - 300) + 'px')
     .style('top', (event.pageY - 24) + 'px');
@@ -182,13 +184,8 @@ export function createTree(data) {
         state.activeSelectedNode = d;
         highlightBranch(event.currentTarget, d);
         scrollToNode(d);
-        if (d.data.spotify_track_id) {
-          const { playGenre } = await import('./mini-player.js');
-          playGenre(d.data, nodeColor);
-        } else {
-          const { showInfoPanel } = await import('./panel.js');
-          showInfoPanel(d.data, nodeColor);
-        }
+        const { showInfoPanel } = await import('./panel.js');
+        showInfoPanel(d.data, nodeColor);
       }
     })
     .on('mouseover', (event, d) => {
@@ -209,13 +206,8 @@ export function createTree(data) {
       highlightBranch(event.currentTarget, d);
       scrollToNode(d);
 
-      if (d.data.spotify_track_id) {
-        const { playGenre } = await import('./mini-player.js');
-        playGenre(d.data, nodeColor);
-      } else {
-        const { showInfoPanel } = await import('./panel.js');
-        showInfoPanel(d.data, nodeColor);
-      }
+      const { showInfoPanel } = await import('./panel.js');
+      showInfoPanel(d.data, nodeColor);
     });
 
   node.style('opacity', 0);

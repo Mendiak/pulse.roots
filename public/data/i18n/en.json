@@ -85,7 +85,8 @@
     "contactTitle": "Contact",
     "contactText": "Thank you for visiting. I hope you enjoy exploring the world of electronic music.",
     "contactLinkText": "If you have any suggestions, improvement proposals, if you have found any errors, or just want to say Hi!, feel free to write to me through our <a href=\"contact.html\" class=\"info-box-link\">contact page</a>.",
-    "buyCoffee": "Buy me a coffee"
+    "buyCoffee": "Buy me a coffee",
+    "clickForDetails": "Click for details"
   },
   "mobileNav": {
     "title": "Explore Genres",

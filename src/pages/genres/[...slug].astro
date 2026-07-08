@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { slugify, loadGenres, flattenGenres } from '../../scripts/genres-data.js';
+import { slugify, loadGenres, flattenGenres } from '../../utils/genres-data.js';
 
 const currentLang = Astro.currentLocale || 'en';
 const genres = loadGenres(currentLang);
@@ -145,6 +145,6 @@ const genreScript = `window.PR_LANG='${currentLang}';window.PR_I18N={};window.PR
   <script is:inline set:html={genreScript} />
 
   <script>
-    import '../../scripts/main.js';
+    import '../../js/main.js';
   </script>
 </BaseLayout>

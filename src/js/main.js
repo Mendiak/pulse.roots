@@ -3,14 +3,13 @@ import { t, applyI18nToDOM } from './i18n.js';
 import { state } from './state.js';
 import { buildGenreMap, debounce, slugify, findGenre } from './utils.js';
 import { createTree, highlightBranch, clearBranchHighlight, scrollToNode } from './tree.js';
-import { showInfoPanel, closeInfoPanel } from './panel.js';
+import { showInfoPanel, closeInfoPanel, reopenPanel, stopMiniPlayer } from './panel.js';
 import { createMobileNav, saveAccordionState, restoreAccordionState } from './mobile-nav.js';
 import { performSearch, navigateToMatch, setupDesktopSearch } from './search.js';
 import { initParticles } from './particles.js';
 import { initThemeToggle, initFullscreen, initShuffle } from './theme.js';
 import { renderStats } from './stats.js';
 import { createTimeline } from './timeline.js';
-import { initMiniPlayer } from './mini-player.js';
 
 const STRINGS = {
   en: {
@@ -57,7 +56,8 @@ async function fetchData() {
 
     restoreAccordionState();
 
-    document.getElementById('mobile-nav-container').classList.add('loaded');
+    const mobileNavContainerEl = document.getElementById('mobile-nav-container');
+    if (mobileNavContainerEl) mobileNavContainerEl.classList.add('loaded');
     if (loadingSpinner) loadingSpinner.classList.add('hidden');
 
     const treeBtn = document.getElementById('tree-layout-btn');
@@ -185,6 +185,20 @@ function handleUrl() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+  const lang = window.PR_LANG || 'en';
+  try {
+    const [enResp, langResp] = await Promise.all([
+      fetch(`${state.BASE_PATH}/data/i18n/en.json`),
+      lang !== 'en' ? fetch(`${state.BASE_PATH}/data/i18n/${lang}.json`) : Promise.resolve(null)
+    ]);
+    window.PR_I18N_FALLBACK = await enResp.json();
+    window.PR_I18N = langResp ? await langResp.json() : window.PR_I18N_FALLBACK;
+  } catch (e) {
+    console.warn('Failed to load i18n files:', e);
+    window.PR_I18N = {};
+    window.PR_I18N_FALLBACK = {};
+  }
+
   applyI18nToDOM();
   fetchData();
 
@@ -225,7 +239,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  document.getElementById('modal-overlay').addEventListener('click', closeInfoPanel);
+  const modalOverlay = document.getElementById('modal-overlay');
+  if (modalOverlay) modalOverlay.addEventListener('click', closeInfoPanel);
 
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
@@ -241,13 +256,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   const mobileNavContainer = document.getElementById('mobile-genre-list');
+  if (!mobileNavContainer) return;
   mobileNavContainer.addEventListener('click', (event) => {
     const target = event.target;
     const itemElement = target.closest('.genre-item');
     if (!itemElement) return;
 
     const action = target.dataset.action || itemElement.dataset.action;
-    const itemData = JSON.parse(itemElement.dataset.itemData);
+    let itemData;
+    try {
+      itemData = JSON.parse(itemElement.dataset.itemData);
+    } catch {
+      return;
+    }
     const accentColor = itemElement.style.getPropertyValue('--genre-color');
 
     switch (action) {
@@ -264,13 +285,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
       case 'info':
         event.stopPropagation();
-        (async () => {
-          if (itemData.spotify_track_id) {
-            const { playGenre } = await import('./mini-player.js');
-            playGenre(itemData, accentColor);
-          }
-          showInfoPanel(itemData, accentColor);
-        })();
+        showInfoPanel(itemData, accentColor);
         break;
       case 'wiki':
         event.stopPropagation();
@@ -409,7 +424,23 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   initThemeToggle();
-  initMiniPlayer();
+
+  // Persistent mini-player handlers
+  const miniPlayer = document.getElementById('mini-player');
+  if (miniPlayer) {
+    miniPlayer.addEventListener('click', (event) => {
+      if (event.target.closest('#mini-player-close')) return;
+      reopenPanel();
+    });
+  }
+
+  const miniPlayerClose = document.getElementById('mini-player-close');
+  if (miniPlayerClose) {
+    miniPlayerClose.addEventListener('click', (event) => {
+      event.stopPropagation();
+      stopMiniPlayer();
+    });
+  }
 
   const progressBar = document.getElementById('scroll-progress-bar');
   if (progressBar) {

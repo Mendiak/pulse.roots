@@ -19,7 +19,7 @@ PulseRoots is an interactive visualization of the evolution of electronic music.
 
 - **Framework**: [Astro](https://astro.build/) (static site generation)
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+), D3.js (v6), Bootstrap Icons.
-- **Data & Tools**: Spotify Web API.
+- **Data & Tools**: Spotify Embed API (public iframes), Web3Forms (contact form).
 - **Deployment**: GitHub Pages via GitHub Actions.
 
 ## Setup & Local Development
@@ -72,6 +72,8 @@ The project's heart is `public/data/pulseroots.genres.json`. It follows a recurs
 }
 ```
 
+Translations are stored in `public/data/i18n/` (en.json, es.json) with ~188 keys each, loaded at runtime by the client-side i18n module.
+
 The project also includes `public/data/music_history.json`, a linear array of historical milestones used by the interactive timeline:
 
 ```json
@@ -91,22 +93,28 @@ The project also includes `public/data/music_history.json`, a linear array of hi
 ```
 pulse.roots/
 ├── src/
-│   ├── components/         # Astro UI components (Header, Footer)
-│   ├── layouts/            # BaseLayout.astro
-│   ├── pages/              # Routes (index, contact, privacy, thanks, sitemap, genres/[...slug])
-│   │   └── es/             # Spanish page overrides
-│   ├── scripts/            # Shared JS utilities (genres-data.js)
-│   ├── js/                 # ES6 modules (main.js, tree.js, panel.js, search.js, etc.)
-│   └── styles/             # Astro-scoped CSS (unused, styles live in public/)
+│   ├── js/                  # Client-side ES6 modules (main.js, tree.js, panel.js, search.js, etc.)
+│   ├── utils/               # Build-time Node.js scripts (genres-data.js, genreTree.js)
+│   ├── components/          # Astro UI components (Header.astro, Footer.astro)
+│   ├── islands/             # Astro interactive islands (CookieConsent.astro)
+│   ├── layouts/             # BaseLayout.astro
+│   ├── pages/               # Routes (index, contact, privacy, thanks, sitemap, genres/[...slug])
+│   │   └── es/              # Spanish page overrides
+│   └── styles/              # Modular CSS (variables, base, header, panel, footer, responsive, etc.)
 ├── public/
 │   ├── data/
+│   │   ├── i18n/            # Translation JSON files (en.json, es.json)
 │   │   ├── pulseroots.genres.json  # The database of genres
-│   │   └── music_history.json      # Historical music facts
-│   ├── styles.css           # Global CSS
+│   │   ├── pulseroots.genres.es.json
+│   │   ├── music_history.json      # Historical music facts
+│   │   └── music_history.es.json
+│   ├── assets/              # Images, icons, branding
 │   ├── robots.txt
-│   └── assets/              # Images, icons, branding
+│   └── .nojekyll
 ├── dist/                    # Production build output (generated)
-├── scripts/                 # Legacy utilities
+├── scripts/                 # Legacy translation utilities
+├── .env                     # Local environment variables (gitignored)
+├── .env.example             # Environment variable template
 ├── astro.config.mjs         # Astro configuration
 ├── tsconfig.json
 └── package.json

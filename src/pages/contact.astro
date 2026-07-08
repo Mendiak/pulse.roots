@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const canonical = 'https://mendiak.github.io/pulse.roots/contact/';
+const web3formsKey = import.meta.env.WEB3FORMS_ACCESS_KEY || '41398cfd-0efd-45fa-859e-50b9e66d6f31';
 ---
 
 <BaseLayout
@@ -17,7 +18,7 @@ const canonical = 'https://mendiak.github.io/pulse.roots/contact/';
     <p>Got any cool ideas for the site, spotted a bug, or just wanna say hi? Don't be shy, drop me a line! I'd love to hear from you.</p>
 
     <form action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="41398cfd-0efd-45fa-859e-50b9e66d6f31">
+      <input type="hidden" name="access_key" value={web3formsKey}>
       <label for="contact-name">Your Name</label>
       <input type="text" id="contact-name" name="name" required placeholder="Your Name...">
       <label for="contact-email">Your Email</label>
