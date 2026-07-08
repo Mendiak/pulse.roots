@@ -39,6 +39,32 @@ const canonical = `https://mendiak.github.io/pulse.roots/genres/${fullSlugPath}/
 const metaDesc = description ? description.substring(0, 155).replace(/\s+\S*$/, '') : `Explore the ${genreName} style in electronic music on PulseRoots.`;
 const title = `PulseRoots: ${genreName}`;
 
+const breadcrumbItems = breadcrumbs.map((crumb, i) => ({
+  "@type": "ListItem",
+  "position": i + 1,
+  "name": crumb.name,
+  "item": `https://mendiak.github.io/pulse.roots/genres/${crumb.slug}/`
+}));
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mendiak.github.io/pulse.roots/" },
+        ...breadcrumbItems,
+        { "@type": "ListItem", "position": breadcrumbItems.length + 2, "name": genreName }
+      ]
+    },
+    {
+      "@type": "MusicGenre",
+      "name": genreName,
+      "description": metaDesc
+    }
+  ]
+});
+
 function buildBreadcrumbHtml() {
   let html = '<nav id="breadcrumbs" aria-label="Breadcrumb">';
   html += `<a href="/pulse.roots/">Home</a>`;
@@ -59,6 +85,7 @@ const genreScript = `window.PR_LANG='${currentLang}';window.PR_I18N={};window.PR
   canonical={canonical}
   ogTitle={title}
   ogDescription={metaDesc}
+  jsonLd={jsonLd}
 >
   <div id="scroll-progress-container">
     <div id="scroll-progress-bar"></div>

@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const canonical = 'https://mendiak.github.io/pulse.roots/es/privacy/';
+---
+
+<BaseLayout
+  title="Política de Privacidad - PulseRoots"
+  description="Política de privacidad de PulseRoots - cómo manejamos tus datos cuando usas nuestro explorador interactivo de géneros de música electrónica."
+  canonical={canonical}
+  lang="es"
+>
+  <Header simple />
+  <div id="main-container" class="container">
+    <h1>Política de Privacidad de PulseRoots</h1>
+    <p><strong>Última actualización:</strong> 16 de enero de 2026</p>
+
+    <p>Esta Política de Privacidad describe cómo PulseRoots ("nosotros", "nuestro") recopila, usa y divulga la información que obtenemos de los visitantes de nuestro sitio web, <a href="https://mendiak.github.io/pulse.roots/es/">https://mendiak.github.io/pulse.roots/es/</a> (el "Sitio").</p>
+
+    <h2>1. Información que Recopilamos</h2>
+    <p>No recopilamos directamente ningún dato personal identificable de nuestros usuarios a través del Sitio. No almacenamos datos personales en nuestros servidores. Usamos cookies de Google Analytics (con tu consentimiento) para entender el uso del sitio — consulta la sección 2 para más detalles.</p>
+    <p>Nuestro formulario de contacto funciona con <a href="https://web3forms.com" target="_blank">Web3Forms</a>. Cuando envías el formulario de contacto, la información que proporcionas (nombre, email, mensaje) se envía directamente a Web3Forms y luego se nos reenvía por correo electrónico. No almacenamos esta información en el servidor de nuestro Sitio. Consulta la política de privacidad de Web3Forms para más detalles sobre cómo manejan tus datos.</p>
+
+    <h2>2. Cookies y Google Analytics</h2>
+    <p>Usamos Google Analytics para entender cómo se usa nuestro Sitio. Google Analytics recopila datos anónimos sobre tu visita, como tu dirección IP (anonimizada), tipo de navegador, sistema operativo, fuente de referencia, páginas visitadas y tiempo en el Sitio. Esta información se utiliza para mejorar la funcionalidad y el contenido del Sitio. La capacidad de Google para usar y compartir la información recopilada por Google Analytics sobre tus visitas al Sitio está restringida por los <a href="https://www.google.com/analytics/terms/" target="_blank">Términos de Servicio de Google Analytics</a> y la <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a>.</p>
+    <p>Cuando visitas nuestro Sitio por primera vez, aparecerá un banner de consentimiento de cookies pidiendo tu permiso antes de cargar Google Analytics. Puedes aceptar o rechazar las cookies no esenciales en cualquier momento. Tu preferencia se almacena en el almacenamiento local de tu navegador. Si rechazas las cookies de analytics, Google Analytics no se cargará.</p>
+
+    <h2>3. Servicios de Terceros</h2>
+    <p>Usamos los siguientes servicios de terceros, que pueden tener sus propias políticas de privacidad:</p>
+    <ul>
+      <li><strong>Web3Forms:</strong> Para nuestro formulario de contacto. (<a href="https://web3forms.com/privacy" target="_blank">Política de Privacidad de Web3Forms</a>)</li>
+      <li><strong>Google Analytics:</strong> Para análisis del sitio web. (<a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a>)</li>
+      <li><strong>Spotify:</strong> Para reproducción de música integrada. Tu interacción con los contenidos de Spotify se rige por la política de privacidad de Spotify. (<a href="https://www.spotify.com/us/legal/privacy-policy/" target="_blank">Política de Privacidad de Spotify</a>)</li>
+    </ul>
+
+    <h2>4. Enlaces a Otros Sitios Web</h2>
+    <p>Nuestro Sitio contiene enlaces a otros sitios web. No somos responsables de las prácticas de privacidad ni del contenido de estos sitios web de terceros. Te recomendamos leer las políticas de privacidad de cualquier sitio enlazado que visites.</p>
+
+    <h2>5. Cambios a Esta Política de Privacidad</h2>
+    <p>Podemos actualizar nuestra Política de Privacidad de vez en cuando. Te notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página. Te recomendamos revisar esta Política de Privacidad periódicamente para estar al tanto de cualquier cambio. Los cambios a esta Política de Privacidad son efectivos cuando se publican en esta página.</p>
+
+    <h2>6. Contáctanos</h2>
+    <p>Si tienes alguna pregunta sobre esta Política de Privacidad, contáctanos a través del formulario de contacto en nuestra página principal.</p>
+    <p style="text-align: center; margin-top: 30px;"><a href="/pulse.roots/es/" class="back-button">Volver a PulseRoots</a></p>
+  </div>
+
+  <Footer />
+
+  <style>
+    h1, h2 {
+      color: var(--accent-pink);
+      margin-top: 1.5em;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    #main-container { flex-direction: column; margin: 40px auto; width: 100%; max-width: 800px; }
+    .container { padding: 30px; }
+  </style>
+</BaseLayout>

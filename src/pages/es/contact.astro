@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const canonical = 'https://mendiak.github.io/pulse.roots/es/contact/';
+const web3formsKey = import.meta.env.WEB3FORMS_ACCESS_KEY || '41398cfd-0efd-45fa-859e-50b9e66d6f31';
+---
+
+<BaseLayout
+  title="Contacto - PulseRoots"
+  description="Sugiere un nuevo género de música electrónica, reporta un error o envía tu opinión sobre PulseRoots - la visualización interactiva de géneros musicales."
+  canonical={canonical}
+  lang="es"
+>
+  <Header simple />
+  <div id="main-container" class="container">
+    <h2><i class="bi bi-envelope" aria-hidden="true"></i> Contáctame</h2>
+    <p>¿Tienes ideas para el sitio, has encontrado un error o simplemente quieres saludar? ¡No seas tímido, escríbeme! Me encantará saber de ti.</p>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value={web3formsKey}>
+      <label for="contact-name">Tu Nombre</label>
+      <input type="text" id="contact-name" name="name" required placeholder="Tu Nombre...">
+      <label for="contact-email">Tu Email</label>
+      <input type="email" id="contact-email" name="email" required placeholder="Tu Email...">
+      <label for="subject-select">Asunto</label>
+      <select name="subject" id="subject-select" required>
+        <option value="" disabled selected>Selecciona un asunto...</option>
+        <option value="Suggestion">Sugerir un Nuevo Género</option>
+        <option value="Error Report">Reportar un Error</option>
+        <option value="General">Consulta General</option>
+        <option value="Other">Otro</option>
+      </select>
+      <label for="contact-message">Tu Mensaje</label>
+      <textarea name="message" id="contact-message" required placeholder="Tu Mensaje..."></textarea>
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      <input type="hidden" name="redirect" value="https://mendiak.github.io/pulse.roots/es/thanks/">
+      <button id="submitbutton" type="submit">
+        <i class="bi bi-send" id="submit-icon"></i>
+        <span id="submit-text">Enviar</span>
+        <span id="submit-spinner" class="hidden"><i class="bi bi-arrow-repeat spin"></i> Enviando...</span>
+      </button>
+    </form>
+
+    <p style="text-align: center; margin-top: 30px;"><a href="/pulse.roots/es/" class="back-button">Volver a PulseRoots</a></p>
+  </div>
+
+  <Footer />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const genre = urlParams.get('genre');
+      const subjectParam = urlParams.get('subject');
+      const messageArea = document.querySelector('textarea[name="message"]');
+      const subjectSelect = document.getElementById('subject-select');
+      if (subjectParam && subjectSelect) {
+        for (let i = 0; i < subjectSelect.options.length; i++) {
+          if (subjectSelect.options[i].value === subjectParam) { subjectSelect.selectedIndex = i; break; }
+        }
+      }
+      if (genre && messageArea) {
+        const decodedGenre = decodeURIComponent(genre);
+        messageArea.value = subjectParam === 'Error Report'
+          ? `¡Hola! Encontré un error en el género "${decodedGenre}": \n\n[Describe el error aquí...]`
+          : `¡Hola! Tengo una sugerencia sobre "${decodedGenre}": \n\n[Tu sugerencia aquí...]`;
+      }
+
+      const form = document.querySelector('form');
+      const submitBtn = document.getElementById('submitbutton');
+      const submitIcon = document.getElementById('submit-icon');
+      const submitText = document.getElementById('submit-text');
+      const submitSpinner = document.getElementById('submit-spinner');
+
+      if (form && submitBtn) {
+        form.addEventListener('submit', () => {
+          submitBtn.disabled = true;
+          if (submitIcon) submitIcon.classList.add('hidden');
+          if (submitText) submitText.classList.add('hidden');
+          if (submitSpinner) submitSpinner.classList.remove('hidden');
+        });
+      }
+    });
+  </script>
+
+  <style>
+    #main-container { flex-direction: column; margin: 40px auto; width: 100%; max-width: 600px; }
+    .container { padding: 40px; }
+    h2 { color: var(--text-main); margin-top: 0; font-size: 1.75rem; display: flex; align-items: center; gap: 12px; }
+    h2 i { color: var(--accent-pink); }
+    p { color: var(--text-muted); }
+    .container label { display: block; margin-top: 16px; margin-bottom: 4px; font-size: 0.9em; color: var(--text-muted); font-weight: 500; }
+    .container label:first-of-type { margin-top: 0; }
+    #submitbutton:disabled { opacity: 0.7; cursor: not-allowed; }
+    .spin { display: inline-block; animation: spin 1s linear infinite; }
+  </style>
+</BaseLayout>

@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const canonical = 'https://mendiak.github.io/pulse.roots/es/thanks/';
+---
+
+<BaseLayout
+  title="Gracias - PulseRoots"
+  description="Gracias por contactar a PulseRoots. Tu mensaje ha sido enviado con éxito."
+  canonical={canonical}
+  lang="es"
+>
+  <Header simple />
+  <div id="main-container" class="container">
+    <h2><i class="bi bi-check-circle-fill" aria-hidden="true"></i> ¡Mensaje Enviado!</h2>
+    <p>Gracias por escribirme. Revisaré tu mensaje y te responderé lo antes posible.</p>
+    <a href="/pulse.roots/es/" class="back-button">Volver a PulseRoots</a>
+  </div>
+
+  <Footer />
+
+  <style>
+    #main-container { flex-direction: column; margin: 40px auto; width: 100%; max-width: 600px; }
+    .container { padding: 40px; text-align: center; }
+    h2 {
+      color: var(--text-main);
+      margin-top: 0;
+      font-size: 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    h2 i {
+      color: var(--accent-cyan);
+    }
+    p {
+      color: var(--text-muted);
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</BaseLayout>

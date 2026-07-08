@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import fs from 'fs';
+import path from 'path';
+
+const canonical = 'https://mendiak.github.io/pulse.roots/es/sitemap/';
+
+function slugify(text) {
+  if (!text) return '';
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/\//g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+}
+
+const baseUrl = 'https://mendiak.github.io/pulse.roots';
+let genreLinks = '';
+
+try {
+  const filePath = path.resolve(process.cwd(), 'public', 'data', 'pulseroots.genres.es.json');
+  const fallbackPath = path.resolve(process.cwd(), 'public', 'data', 'pulseroots.genres.json');
+  const dataPath = fs.existsSync(filePath) ? filePath : fallbackPath;
+  if (fs.existsSync(dataPath)) {
+    const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+
+    const allGenres = [];
+    const traverse = (items, slugParts, depth) => {
+      for (const item of items) {
+        const name = item.name || item.style;
+        if (!name) continue;
+        const slug = slugify(name);
+        const fullSlugPath = [...slugParts, slug].join('/');
+        allGenres.push({ genreName: name, fullSlugPath, depth });
+        if (item.substyles && item.substyles.length > 0) {
+          traverse(item.substyles, [...slugParts, slug], depth + 1);
+        }
+      }
+    };
+    traverse(data, [], 0);
+
+    genreLinks = allGenres.map(g => {
+      const url = `${baseUrl}/genres/${g.fullSlugPath}/`;
+      const indent = g.depth > 0 ? '  '.repeat(g.depth) : '';
+      return `${indent}<li><a href="${url}">${g.genreName}</a></li>`;
+    }).join('\n    ');
+  }
+} catch (e) {
+  console.error('Error loading genre data for sitemap:', e);
+}
+---
+
+<BaseLayout
+  title="Mapa del Sitio - PulseRoots"
+  description="Mapa del sitio de PulseRoots - una visualización interactiva de géneros de música electrónica. Explora todas las páginas de géneros disponibles."
+  canonical={canonical}
+  lang="es"
+>
+  <header>
+    <div id="header-container">
+      <a href="/pulse.roots/es/" id="logo-link" aria-label="Inicio">
+        <h1>PulseRoots - Mapa del Sitio</h1>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div id="main-container" style="padding: 20px; max-width: 800px; margin: 0 auto;">
+      <h2>Todas las Páginas</h2>
+      <ul>
+        <li><a href="https://mendiak.github.io/pulse.roots/es/">Inicio</a></li>
+        <li><a href="https://mendiak.github.io/pulse.roots/es/contact/">Contacto</a></li>
+        <li><a href="https://mendiak.github.io/pulse.roots/es/privacy/">Política de Privacidad</a></li>
+        <li><a href="https://mendiak.github.io/pulse.roots/es/thanks/">Gracias</a></li>
+      </ul>
+      <h2>Todos los Géneros</h2>
+      <ul>
+        {genreLinks}
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PulseRoots. Mapeando el pulso de la música electrónica.</p>
+    </div>
+  </footer>
+</BaseLayout>

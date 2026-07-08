@@ -19,6 +19,7 @@
   },
   "homepage": "https://mendiak.github.io/pulse.roots/",
   "dependencies": {
+    "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.0.4",
     "d3": "^6.7.0"

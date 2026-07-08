@@ -54,6 +54,13 @@ try {
   title="Sitemap - PulseRoots"
   description="Sitemap of PulseRoots - an interactive visualization of electronic music genres. Browse all available genre pages."
   canonical={canonical}
+  jsonLd={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Sitemap - PulseRoots",
+    "description": "Sitemap of PulseRoots - an interactive visualization of electronic music genres. Browse all available genre pages.",
+    "url": canonical
+  })}
 >
   <header>
     <div id="header-container">
