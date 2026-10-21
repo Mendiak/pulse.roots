@@ -26,6 +26,7 @@ export interface Props {
   canonical?: string;
   lang?: string;
   jsonLd?: string;
+  noindex?: boolean;
 }
 
 const baseUrl = 'https://mendiak.github.io/pulse.roots';
@@ -50,6 +51,7 @@ const {
   canonical = baseUrl + '/',
   lang = currentLang,
   jsonLd = '',
+  noindex = false,
 } = Astro.props;
 
 const ogLocale = lang === 'es' ? 'es_ES' : 'en_US';
@@ -74,7 +76,7 @@ const hasSpanish = !isGenrePage;
   <meta name="description" content={description}>
   <meta name="keywords" content={keywords}>
   <meta name="author" content="PulseRoots">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'}>
   <meta name="theme-color" content="#080808">
 
   <meta property="og:title" content={ogTitle}>

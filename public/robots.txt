@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://mendiak.github.io/pulse.roots/sitemap-index.xml
-
 Disallow: /pulse.roots/thanks/
+Disallow: /pulse.roots/es/thanks/
 
+Sitemap: https://mendiak.github.io/pulse.roots/sitemap-index.xml

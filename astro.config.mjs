@@ -23,6 +23,7 @@ export default defineConfig({
 
   integrations: [
     sitemap({
+      filter: (page) => !page.includes('/thanks/'),
       i18n: {
         defaultLocale: 'en',
         locales: {
