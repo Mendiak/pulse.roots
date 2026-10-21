@@ -98,17 +98,23 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   const genreEntry = state.genreMap.get(genreNameForLookup);
   const itemData = genreEntry ? genreEntry.data : inputData;
 
-  updateSchemaOrg(itemData);
-
   const infoPanel = document.getElementById('info-panel');
   const infoContent = document.getElementById('info-content');
   const overlay = document.getElementById('modal-overlay');
   const scrollIndicator = document.getElementById('scroll-indicator');
+  const genreSlug = getGenrePath(itemData);
+
+  // Rebuilding the panel destroys the Spotify iframe, which restarts the player.
+  // If the same genre is already open, leave everything untouched.
+  if (infoPanel.classList.contains('visible') && infoContent.dataset.genrePath === genreSlug) {
+    return;
+  }
+
+  updateSchemaOrg(itemData);
 
   const miniPlayer = document.getElementById('mini-player');
   if (miniPlayer) miniPlayer.classList.remove('visible');
 
-  const genreSlug = getGenrePath(itemData);
   const newPath = `${state.BASE_PATH}/genres/${genreSlug}/`;
   const newUrl = `${window.location.origin}${newPath}`;
 
@@ -165,6 +171,7 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   });
 
   infoContent.innerHTML = '';
+  infoContent.dataset.genrePath = genreSlug;
 
   infoContent.classList.remove('animate-entry');
   void infoContent.offsetWidth;
@@ -228,17 +235,12 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
     label.textContent = str('nowPlaying');
     infoDiv.appendChild(label);
 
+    // The genre name already lives in the sticky header, so the hero shows the
+    // track instead of repeating it.
     const heroTitle = document.createElement('div');
     heroTitle.className = 'panel-hero-title';
-    heroTitle.textContent = itemData.name || itemData.style;
+    heroTitle.textContent = itemData.example || itemData.name || itemData.style;
     infoDiv.appendChild(heroTitle);
-
-    if (itemData.example) {
-      const track = document.createElement('div');
-      track.className = 'panel-hero-track';
-      track.textContent = `\u2014 ${itemData.example}`;
-      infoDiv.appendChild(track);
-    }
 
     if (itemData.description) {
       const descWrapper = document.createElement('div');
@@ -247,18 +249,6 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
       descP.className = 'panel-hero-desc';
       descP.textContent = itemData.description;
       descWrapper.appendChild(descP);
-
-      if (itemData.description.length > 150) {
-        const toggleBtn = document.createElement('button');
-        toggleBtn.className = 'hero-desc-toggle';
-        toggleBtn.textContent = str('showMore');
-        toggleBtn.addEventListener('click', () => {
-          const isExpanded = descWrapper.classList.toggle('hero-desc-expanded');
-          toggleBtn.textContent = isExpanded ? str('showLess') : str('showMore');
-        });
-        descWrapper.appendChild(toggleBtn);
-      }
-
       infoDiv.appendChild(descWrapper);
     }
 
@@ -418,7 +408,8 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   const genreNameEncoded = encodeURIComponent(itemData.name || itemData.style);
   const reportLink = document.createElement('a');
-  reportLink.href = `contact.html?genre=${genreNameEncoded}&subject=Error%20Report`;
+  const contactBase = `${state.BASE_PATH}${window.PR_LANG === 'es' ? '/es' : ''}/contact/`;
+  reportLink.href = `${contactBase}?genre=${genreNameEncoded}&subject=Error%20Report`;
   reportLink.className = 'panel-footer-link';
   reportLink.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${str('reportError')}`;
   panelFooter.appendChild(reportLink);

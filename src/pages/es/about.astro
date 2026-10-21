@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const SITE = 'https://mendiak.github.io/pulse.roots';
+const canonical = `${SITE}/es/about/`;
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${canonical}#about`,
+      "url": canonical,
+      "name": "Sobre PulseRoots",
+      "description": "Quién hace PulseRoots, cómo se construye el árbol de géneros de música electrónica y cómo sugerir correcciones.",
+      "isPartOf": { "@id": `${SITE}/#website` },
+      "mainEntity": { "@id": `${SITE}/#person` },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE}/#person`,
+      "name": "Mikel Aramendia",
+      "url": "https://mendiak.github.io/portfolio/",
+      "sameAs": [
+        "https://github.com/Mendiak",
+        "https://www.buymeacoffee.com/Mendiak"
+      ],
+      "knowsAbout": ["Electronic music", "Music genres", "Music history"],
+      "worksFor": { "@id": `${SITE}/#website` }
+    }
+  ]
+});
+---
+
+<BaseLayout
+  title="Sobre PulseRoots — Mikel Aramendia"
+  description="Quién hace PulseRoots, cómo se construye el árbol de géneros de música electrónica y cómo sugerir correcciones o nuevos estilos."
+  canonical={canonical}
+  lang="es"
+  jsonLd={jsonLd}
+>
+  <Header simple brandAs="div" />
+  <main>
+    <article id="about-page" class="container">
+      <h1>Sobre PulseRoots</h1>
+
+      <p class="about-lead">
+        PulseRoots es un mapa interactivo de la música electrónica: un único árbol que conecta
+        familias amplias como Techno o House con los estilos y subestilos que nacieron de ellas.
+      </p>
+
+      <section>
+        <h2>Qué puedes hacer aquí</h2>
+        <p>
+          Explora el árbol para ver cómo se relacionan los estilos, abre cualquier género para
+          leer su descripción, conocer a sus artistas clave y escuchar una pista de ejemplo, y
+          usa la línea temporal para recorrer más de un siglo de historia de la música electrónica.
+        </p>
+      </section>
+
+      <section>
+        <h2>Quién lo hace</h2>
+        <p>
+          PulseRoots está diseñado, desarrollado y curado por
+          <strong>Mikel Aramendia</strong>. Es un proyecto personal, no un catálogo comercial.
+          Puedes ver otros trabajos en
+          <a href="https://mendiak.github.io/portfolio/" target="_blank" rel="noopener noreferrer">mi portfolio</a>,
+          seguir el código en
+          <a href="https://github.com/Mendiak/pulse.roots" target="_blank" rel="noopener noreferrer">GitHub</a>
+          o apoyar el proyecto en
+          <a href="https://www.buymeacoffee.com/Mendiak" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Cómo se construye el árbol</h2>
+        <p>
+          Cada género se sitúa en una familia, y las familias se ramifican en estilos y
+          subestilos. Las descripciones están escritas y editadas a mano, usando fuentes
+          enciclopédicas como Wikipedia como punto de partida para los datos históricos. Las
+          listas de artistas y las pistas de ejemplo están seleccionadas y enlazadas a Spotify
+          para que puedas escuchar el sonido que se describe.
+        </p>
+        <p>
+          La jerarquía es una interpretación, no una ley. Los géneros se solapan, se dividen y se
+          fusionan con el tiempo, y escenas distintas pueden describir el mismo sonido con nombres
+          diferentes.
+        </p>
+      </section>
+
+      <section>
+        <h2>Limitaciones</h2>
+        <p>
+          Clasificar música es subjetivo por naturaleza. Un estilo que aquí aparece bajo Techno
+          puede estar bajo House o Breakbeat en otra taxonomía, y eso es correcto: el objetivo es
+          mostrar relaciones que ayuden a entender el panorama, no zanjar debates.
+        </p>
+      </section>
+
+      <section>
+        <h2>Correcciones y sugerencias</h2>
+        <p>
+          Si una descripción es incorrecta, falta un género, un artista está mal atribuido o una
+          pista no representa el estilo, dímelo. Las correcciones son la contribución más útil
+          que puedes hacer.
+          <a href="/pulse.roots/es/contact/">Escríbeme desde la página de contacto</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Actualizaciones</h2>
+        <p>
+          El conjunto de datos y la interfaz se revisan periódicamente. Se añaden géneros,
+          mejores descripciones y nuevas pistas de ejemplo, y el sitemap refleja el estado
+          actual del sitio.
+        </p>
+      </section>
+
+      <p class="about-back">
+        <a href="/pulse.roots/es/">&larr; Volver al árbol de géneros</a>
+        &nbsp;·&nbsp;
+        <a href="/pulse.roots/about/">Read in English</a>
+      </p>
+    </article>
+  </main>
+  <Footer />
+
+  <style>
+    #about-page {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 40px;
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    #about-page h1 {
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+    }
+
+    #about-page h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 32px 0 8px;
+    }
+
+    #about-page p {
+      margin: 0 0 12px;
+    }
+
+    #about-page a {
+      color: var(--accent-pink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 0, 102, 0.35);
+    }
+
+    #about-page a:hover {
+      border-bottom-color: var(--accent-pink);
+    }
+
+    .about-lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .about-back {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--glass-border);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      #about-page {
+        margin: 20px;
+        padding: 22px;
+      }
+    }
+  </style>
+</BaseLayout>

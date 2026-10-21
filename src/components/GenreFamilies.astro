@@ -1,0 +1,67 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { slugify } from '../utils/slug.js';
+import { loadGenres, flattenGenres } from '../utils/genres-data.js';
+
+export interface Props {
+  lang?: 'en' | 'es';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const labels = lang === 'es'
+  ? {
+      heading: 'Explora por familia',
+      intro: 'Las familias son el punto de partida del árbol. Cada una agrupa los estilos y subestilos que comparten origen, época o sonido.',
+      styles: 'estilos',
+      all: 'Ver todos los géneros',
+      sitemap: '/es/sitemap/',
+    }
+  : {
+      heading: 'Browse by family',
+      intro: 'Families are the starting point of the tree. Each one groups the styles and substyles that share an origin, era or sound.',
+      styles: 'styles',
+      all: 'See all genres',
+      sitemap: '/sitemap/',
+    };
+
+function truncate(text, max) {
+  if (!text) return '';
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  return cut.slice(0, cut.lastIndexOf(' ')) + '…';
+}
+
+const families = loadGenres('en')
+  .map(family => {
+    const name = family.style || family.name;
+    if (!name) return null;
+    return {
+      name,
+      slug: slugify(name),
+      count: flattenGenres(family.substyles || [], 'en').length + 1,
+      description: truncate(family.description || '', 96),
+    };
+  })
+  .filter(Boolean);
+---
+
+<section id="genre-families" aria-labelledby="genre-families-title">
+  <h2 id="genre-families-title">{labels.heading}</h2>
+  <p class="genre-families-intro">{labels.intro}</p>
+
+  <ul class="genre-families-grid">
+    {families.map(family => (
+      <li>
+        <a href={`/pulse.roots/genres/${family.slug}/`}>
+          <span class="family-name">{family.name}</span>
+          <span class="family-count">{family.count} {labels.styles}</span>
+          {family.description && <span class="family-desc">{family.description}</span>}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <a class="genre-families-all" href={`/pulse.roots${labels.sitemap}`}>{labels.all} &rarr;</a>
+</section>

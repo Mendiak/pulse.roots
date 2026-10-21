@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const SITE = 'https://mendiak.github.io/pulse.roots';
+const canonical = `${SITE}/about/`;
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${canonical}#about`,
+      "url": canonical,
+      "name": "About PulseRoots",
+      "description": "Who builds PulseRoots, how the electronic music genre tree is put together and how to suggest corrections.",
+      "isPartOf": { "@id": `${SITE}/#website` },
+      "mainEntity": { "@id": `${SITE}/#person` },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE}/#person`,
+      "name": "Mikel Aramendia",
+      "url": "https://mendiak.github.io/portfolio/",
+      "sameAs": [
+        "https://github.com/Mendiak",
+        "https://www.buymeacoffee.com/Mendiak"
+      ],
+      "knowsAbout": ["Electronic music", "Music genres", "Music history"],
+      "worksFor": { "@id": `${SITE}/#website` }
+    }
+  ]
+});
+---
+
+<BaseLayout
+  title="About PulseRoots — Mikel Aramendia"
+  description="Who builds PulseRoots, how the electronic music genre tree is put together and how to suggest corrections or new styles."
+  canonical={canonical}
+  jsonLd={jsonLd}
+>
+  <Header simple brandAs="div" />
+  <main>
+    <article id="about-page" class="container">
+      <h1>About PulseRoots</h1>
+
+      <p class="about-lead">
+        PulseRoots is an interactive map of electronic music: a single tree that connects
+        broad families such as Techno or House with the styles and substyles that grew out of them.
+      </p>
+
+      <section>
+        <h2>What you can do here</h2>
+        <p>
+          Explore the tree to see how styles relate to each other, open any genre to read a
+          description, meet its key artists and listen to an example track, and use the
+          timeline to follow more than a century of electronic music history.
+        </p>
+      </section>
+
+      <section>
+        <h2>Who builds it</h2>
+        <p>
+          PulseRoots is designed, built and curated by
+          <strong>Mikel Aramendia</strong>. It is a personal project, not a commercial catalogue.
+          You can see other work on
+          <a href="https://mendiak.github.io/portfolio/" target="_blank" rel="noopener noreferrer">my portfolio</a>,
+          follow the code on
+          <a href="https://github.com/Mendiak/pulse.roots" target="_blank" rel="noopener noreferrer">GitHub</a>
+          or support the project on
+          <a href="https://www.buymeacoffee.com/Mendiak" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>How the tree is built</h2>
+        <p>
+          Each genre is placed in a family, and families branch down into styles and substyles.
+          Descriptions are written and edited by hand, using encyclopaedic sources such as
+          Wikipedia as a starting point for the historical facts. Artist lists and example
+          tracks are curated and linked to Spotify so you can listen to the sound being described.
+        </p>
+        <p>
+          The hierarchy is an interpretation, not a law. Genres overlap, split and merge over
+          time, and different scenes may describe the same sound with different names.
+        </p>
+      </section>
+
+      <section>
+        <h2>Limitations</h2>
+        <p>
+          Classifying music is inherently subjective. A style placed under Techno here may sit
+          under House or Breakbeat in another taxonomy, and that is fine: the goal is to show
+          relationships that help you understand the landscape, not to settle debates.
+        </p>
+      </section>
+
+      <section>
+        <h2>Corrections and suggestions</h2>
+        <p>
+          If a description is wrong, a genre is missing, an artist is miscredited or a track
+          does not represent the style, tell me. Corrections are the most useful contribution
+          you can make.
+          <a href="/pulse.roots/contact/">Send a message through the contact page</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Updates</h2>
+        <p>
+          The dataset and the interface are reviewed periodically. New genres, better
+          descriptions and additional example tracks are added over time, and the sitemap
+          reflects the current state of the site.
+        </p>
+      </section>
+
+      <p class="about-back">
+        <a href="/pulse.roots/">&larr; Back to the genre tree</a>
+        &nbsp;·&nbsp;
+        <a href="/pulse.roots/es/about/">Leer en español</a>
+      </p>
+    </article>
+  </main>
+  <Footer />
+
+  <style>
+    #about-page {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 40px;
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    #about-page h1 {
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+    }
+
+    #about-page h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 32px 0 8px;
+    }
+
+    #about-page p {
+      margin: 0 0 12px;
+    }
+
+    #about-page a {
+      color: var(--accent-pink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 0, 102, 0.35);
+    }
+
+    #about-page a:hover {
+      border-bottom-color: var(--accent-pink);
+    }
+
+    .about-lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .about-back {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--glass-border);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      #about-page {
+        margin: 20px;
+        padding: 22px;
+      }
+    }
+  </style>
+</BaseLayout>

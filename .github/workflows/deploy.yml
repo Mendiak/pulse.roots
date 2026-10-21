@@ -45,3 +45,19 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Submit URLs to IndexNow
+        continue-on-error: true
+        run: |
+          if git diff --name-only HEAD~1 HEAD -- public/data/pulseroots.genres.json | grep -q .; then
+            node scripts/indexnow.mjs --all
+          else
+            node scripts/indexnow.mjs
+          fi

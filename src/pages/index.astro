@@ -2,32 +2,33 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import GenreFamilies from '../components/GenreFamilies.astro';
 
 const basePath = '/pulse.roots';
+const SITE = 'https://mendiak.github.io/pulse.roots';
 
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
+      "@id": `${SITE}/#website`,
       "name": "PulseRoots",
-      "url": "https://mendiak.github.io/pulse.roots/",
-      "description": "Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and sample tracks.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://mendiak.github.io/pulse.roots/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "url": `${SITE}/`,
+      "description": "Explore electronic music genres with PulseRoots, an interactive tree mapping styles from Techno to Ambient, with artists and example tracks.",
+      "inLanguage": ["en", "es"],
+      "publisher": { "@id": `${SITE}/#person` }
     },
     {
-      "@type": "Organization",
-      "name": "PulseRoots",
-      "url": "https://mendiak.github.io/pulse.roots/",
-      "logo": "https://mendiak.github.io/pulse.roots/assets/favicon.png",
-      "sameAs": ["https://github.com/Mendiak/pulse.roots"]
+      "@type": "Person",
+      "@id": `${SITE}/#person`,
+      "name": "Mikel Aramendia",
+      "url": "https://mendiak.github.io/portfolio/",
+      "sameAs": [
+        "https://github.com/Mendiak",
+        "https://www.buymeacoffee.com/Mendiak"
+      ],
+      "knowsAbout": ["Electronic music", "Music genres", "Music history"]
     }
   ]
 });
@@ -104,6 +105,8 @@ const jsonLd = JSON.stringify({
         <ul id="mobile-genre-list"></ul>
       </div>
     </div>
+
+    <GenreFamilies lang="en" />
 
     <button id="back-to-top-btn" aria-label="Back to Top">
       <i class="bi bi-arrow-up"></i>
