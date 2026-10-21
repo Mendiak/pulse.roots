@@ -19,15 +19,25 @@ export async function getStaticPaths() {
   // Comparison is case-insensitive because the dataset is inconsistent
   // ("Acid Breaks" vs "Acid breaks").
   const byName = new Map();
+  const byParent = new Map();
   for (const g of allGenres) {
     const key = g.genreName.trim().toLowerCase();
     if (!byName.has(key)) byName.set(key, []);
     byName.get(key).push(g);
+
+    const parentKey = g.fullSlugPath.split('/').slice(0, -1).join('/');
+    if (!byParent.has(parentKey)) byParent.set(parentKey, []);
+    byParent.get(parentKey).push(g);
   }
 
   return allGenres.map(g => {
     const parent = g.breadcrumbs[g.breadcrumbs.length - 1] || null;
     const sameName = byName.get(g.genreName.trim().toLowerCase()) || [];
+    const parentKey = g.fullSlugPath.split('/').slice(0, -1).join('/');
+    const siblings = (byParent.get(parentKey) || [])
+      .filter(s => s.fullSlugPath !== g.fullSlugPath)
+      .map(s => ({ name: s.genreName, fullSlugPath: s.fullSlugPath }))
+      .slice(0, 12);
     const isAmbiguous = sameName.length > 1;
     const alternate = isAmbiguous
       ? sameName.find(o => o.fullSlugPath !== g.fullSlugPath) || null
@@ -47,6 +57,7 @@ export async function getStaticPaths() {
         breadcrumbs: g.breadcrumbs,
         isAmbiguous,
         contextLabel: parent ? parent.name : '',
+        siblings,
         alternate: alternate
           ? {
               path: alternate.fullSlugPath,
@@ -73,6 +84,7 @@ const {
   isAmbiguous = false,
   contextLabel = '',
   alternate = null,
+  siblings = [],
 } = Astro.props;
 
 const parent = breadcrumbs[breadcrumbs.length - 1] || null;
@@ -230,6 +242,17 @@ const genreScript = `window.PR_LANG='${currentLang}';window.PR_I18N={};window.PR
           <ul class="genre-list">
             {children.map(child => (
               <li><a href={`/pulse.roots/genres/${child.fullSlugPath}/`}>{child.name}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {siblings.length > 0 && (
+        <section class="genre-block">
+          <h2>Related styles</h2>
+          <ul class="genre-list">
+            {siblings.map(sibling => (
+              <li><a href={`/pulse.roots/genres/${sibling.fullSlugPath}/`}>{sibling.name}</a></li>
             ))}
           </ul>
         </section>

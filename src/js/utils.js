@@ -1,4 +1,7 @@
 import { state } from './state.js';
+import { slugify } from '../utils/slug.js';
+
+export { slugify };
 
 export function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -20,17 +23,6 @@ export function truncateDescription(str, maxLength = 160) {
   if (!str || str.length <= maxLength) return str;
   const subString = str.substr(0, maxLength - 1);
   return subString.substr(0, subString.lastIndexOf(' ')) + '...';
-}
-
-export function slugify(text) {
-  if (!text) return '';
-  return text.toString().toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/\//g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
 }
 
 export function buildGenreMap(data, parent = null) {
@@ -79,7 +71,6 @@ export function findGenre(identifier) {
   let foundGenre = null;
 
   for (const segment of pathSegments) {
-    const segmentName = segment.replace(/-/g, ' ');
     const nextGenre = currentLevel.find(g => slugify(g.name || g.style) === segment);
 
     if (nextGenre) {

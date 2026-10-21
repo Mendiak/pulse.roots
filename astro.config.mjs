@@ -26,6 +26,17 @@ export default defineConfig({
   trailingSlash: 'always',
   prefetch: true,
 
+  // Old URLs produced by the previous slugify(), which stripped diacritics.
+  // Static builds get a meta-refresh page so the few existing links keep working.
+  // Targets are absolute because Astro does not prefix `base` for static redirects.
+  redirects: {
+    '/genres/experimental/musique-concrte/': 'https://mendiak.github.io/pulse.roots/genres/experimental/musique-concrete/',
+    '/genres/global-club/funk-carioca/funk-proibido/': 'https://mendiak.github.io/pulse.roots/genres/global-club/funk-carioca/funk-proibidao/',
+    '/genres/global-club/funk-carioca/funk-ostentao/': 'https://mendiak.github.io/pulse.roots/genres/global-club/funk-carioca/funk-ostentacao/',
+    '/genres/global-club/reggaeton/reggaeton-old-school-clsico/': 'https://mendiak.github.io/pulse.roots/genres/global-club/reggaeton/reggaeton-old-school-clasico/',
+    '/genres/global-club/reggaeton/reggaeton-romntico/': 'https://mendiak.github.io/pulse.roots/genres/global-club/reggaeton/reggaeton-romantico/',
+  },
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es'],

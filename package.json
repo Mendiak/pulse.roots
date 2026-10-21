@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check:seo": "node scripts/verify-seo.mjs",
+    "verify": "npm run build && npm run check:seo"
   },
   "license": "MIT",
   "author": "PulseRoots",

@@ -1,23 +1,13 @@
 ---
 import fs from 'fs';
 import path from 'path';
+import { slugify } from '../utils/slug.js';
 
 const dataDir = path.resolve(process.cwd(), 'public', 'data');
 const basePath = '/pulse.roots';
 const currentLang = Astro.currentLocale || 'en';
 const langPrefix = currentLang === 'en' ? '' : `${currentLang}/`;
 const now = new Date().getFullYear();
-
-function slugify(text) {
-  if (!text) return '';
-  return text.toString().toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/\//g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
-}
 
 function escapeHtml(text) {
   return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

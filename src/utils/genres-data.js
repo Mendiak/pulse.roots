@@ -1,16 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import { slugify } from './slug.js';
 
-export function slugify(text) {
-  if (!text) return '';
-  return text.toString().toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/\//g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
-}
+export { slugify };
 
 export function loadGenres(lang) {
   const dataDir = path.resolve(process.cwd(), 'public', 'data');

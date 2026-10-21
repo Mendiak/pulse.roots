@@ -2,19 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import fs from 'fs';
 import path from 'path';
+import { slugify } from '../utils/slug.js';
 
 const canonical = 'https://mendiak.github.io/pulse.roots/sitemap/';
-
-function slugify(text) {
-  if (!text) return '';
-  return text.toString().toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/\//g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
-}
 
 const baseUrl = 'https://mendiak.github.io/pulse.roots';
 let genreLinks = '';
