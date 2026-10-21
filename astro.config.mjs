@@ -1,6 +1,36 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { execSync } from 'node:child_process';
+import fs from 'node:fs';
+import { slugify } from './src/utils/slug.js';
+
+const SITE = 'https://mendiak.github.io/pulse.roots';
+
+/**
+ * The old SPA pushed /genres/<path>.html into the address bar and the share
+ * button handed those URLs out, so they exist in the wild (and in Search
+ * Console) but 404. Generate a meta-refresh page for every genre.
+ */
+function buildLegacyGenreRedirects() {
+  const redirects = {};
+  try {
+    const data = JSON.parse(fs.readFileSync('public/data/pulseroots.genres.json', 'utf-8'));
+    const walk = (items, parts) => {
+      for (const item of items) {
+        const name = item.name || item.style;
+        if (!name) continue;
+        const slug = slugify(name);
+        const fullPath = [...parts, slug].join('/');
+        redirects[`/genres/${fullPath}.html`] = `${SITE}/genres/${fullPath}/`;
+        if (item.substyles?.length) walk(item.substyles, [...parts, slug]);
+      }
+    };
+    walk(data, []);
+  } catch (error) {
+    console.warn('Could not build legacy genre redirects:', error.message);
+  }
+  return redirects;
+}
 
 /**
  * Date of the last change to the genre dataset, used as <lastmod> for genre
@@ -29,6 +59,7 @@ export default defineConfig({
   // Static builds get a meta-refresh page so the few existing links keep working.
   // Targets are absolute because Astro does not prefix `base` for static redirects.
   redirects: {
+    ...buildLegacyGenreRedirects(),
     '/genres/experimental/musique-concrte/': 'https://mendiak.github.io/pulse.roots/genres/experimental/musique-concrete/',
     '/genres/global-club/funk-carioca/funk-proibido/': 'https://mendiak.github.io/pulse.roots/genres/global-club/funk-carioca/funk-proibidao/',
     '/genres/global-club/funk-carioca/funk-ostentao/': 'https://mendiak.github.io/pulse.roots/genres/global-club/funk-carioca/funk-ostentacao/',

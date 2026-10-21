@@ -5,13 +5,13 @@
     "englishName": "English"
   },
   "seo": {
-    "title": "PulseRoots: Electronic Music Styles Tree",
-    "description": "Explore electronic music genres with PulseRoots, an interactive tree mapping styles from Techno to Ambient, with artists and example tracks.",
+    "title": "Electronic Music Map & Genre Tree | PulseRoots",
+    "description": "Explore an interactive map and genre tree of electronic music: 300+ styles from Techno to Ambient, with key artists and example tracks.",
     "keywords": "electronic music, music genres, techno, house, ambient, trance, music visualization, music tree",
-    "ogTitle": "PulseRoots: Electronic Music Styles Tree",
-    "ogDescription": "Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping music genres.",
-    "twitterTitle": "PulseRoots: Electronic Music Styles Tree",
-    "twitterDescription": "Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping music genres.",
+    "ogTitle": "Electronic Music Map & Genre Tree | PulseRoots",
+    "ogDescription": "An interactive map and genre tree of electronic music: 300+ styles from Techno to Ambient, with key artists and example tracks.",
+    "twitterTitle": "Electronic Music Map & Genre Tree | PulseRoots",
+    "twitterDescription": "An interactive map and genre tree of electronic music: 300+ styles, key artists and example tracks.",
     "jsonldDescription": "Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles and example tracks."
   },
   "header": {
