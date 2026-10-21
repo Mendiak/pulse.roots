@@ -14,8 +14,8 @@ select {
   width: 100%;
   padding: 12px 16px;
   border: 1px solid var(--glass-border);
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
+  background: var(--overlay-2);
+  border-radius: var(--radius-lg);
   font-size: 14px;
   font-family: inherit;
   color: var(--text-main);
@@ -31,7 +31,7 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--overlay-3);
   border-color: var(--accent-pink);
   box-shadow: 0 0 0 4px rgba(255, 0, 102, 0.15);
 }
@@ -40,7 +40,7 @@ body.light-mode input,
 body.light-mode textarea,
 body.light-mode select {
   background: var(--secondary-dark);
-  border-color: #cbd5e1;
+  border-color: var(--color-input-border);
   color: var(--text-main);
 }
 
@@ -59,7 +59,7 @@ textarea {
   color: white;
   border: none;
   padding: 10px 24px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

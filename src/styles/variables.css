@@ -26,21 +26,93 @@
   --bg-dark: #080808;
   --panel-dark: rgba(17, 17, 17, 0.85);
   --secondary-dark: rgb(17, 17, 17);
+  --tertiary-dark: rgba(255, 255, 255, 0.06);
   --accent-pink: #ff0066;
   --text-main: #f5f5f5;
   --text-muted: #888888;
   --text-tertiary: #555555;
+
+  /* Brand colours used by third-party integrations */
+  --brand-spotify: #1db954;
+  --brand-coffee: #ffdd00;
+  --brand-coffee-ink: #d4a017;
+  --text-on-coffee: #000000;
+  --color-input-border: #cbd5e1;
+
+  /* Semantic colours */
+  --text-on-accent: #ffffff;
+  --accent-dark: #cc0052;
+  --color-danger: #d9534f;
 
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.06);
   --glass-blur: blur(12px);
 
+  /* Surface tints (theme aware) */
+  --overlay-1: rgba(255, 255, 255, 0.02);
+  --overlay-2: rgba(255, 255, 255, 0.05);
+  --overlay-3: rgba(255, 255, 255, 0.08);
+  --overlay-4: rgba(255, 255, 255, 0.1);
+  --overlay-strong: rgba(255, 255, 255, 0.16);
+
+  /* Accent with alpha */
+  --accent-05: rgba(255, 0, 102, 0.05);
+  --accent-10: rgba(255, 0, 102, 0.1);
+  --accent-20: rgba(255, 0, 102, 0.2);
+  --accent-25: rgba(255, 0, 102, 0.25);
+  --accent-35: rgba(255, 0, 102, 0.35);
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* Radius scale */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 20px;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  /* Type scale */
+  --text-2xs: 0.65rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.85rem;
+  --text-base: 0.95rem;
+  --text-md: 1rem;
+  --text-lg: 1.15rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.75rem;
+
+  /* Z-index scale */
+  --z-sticky: 10;
+  --z-header: 100;
+  --z-overlay: 1000;
+  --z-panel: 1001;
+  --z-tooltip: 2000;
+  --z-skip: 10001;
+
+  /* Layout
+     Breakpoints are not tokenised on purpose: CSS custom properties cannot be
+     used inside @media queries. Keep them in sync: 560px (panel meta),
+     768px (mobile), 1024px (tablet). */
+  --content-max: 900px;
+
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
-  --shadow-neon: 0 0 20px rgba(255, 0, 102, 0.25);
+  --shadow-neon: 0 0 20px var(--accent-25);
 
   /* Gradients */
   --header-glass: linear-gradient(180deg, rgba(8, 8, 8, 0.85), rgba(17, 17, 17, 0.75));
@@ -65,6 +137,11 @@ body.light-mode {
   --text-tertiary: #999999;
   --glass-bg: rgba(0, 0, 0, 0.04);
   --glass-border: rgba(0, 0, 0, 0.08);
+  --overlay-1: rgba(0, 0, 0, 0.02);
+  --overlay-2: rgba(0, 0, 0, 0.04);
+  --overlay-3: rgba(0, 0, 0, 0.06);
+  --overlay-4: rgba(0, 0, 0, 0.08);
+  --overlay-strong: rgba(0, 0, 0, 0.12);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -168,7 +245,7 @@ body.light-mode .layout-btn.active {
 
 body.light-mode #search-input {
   background: var(--secondary-dark);
-  border-color: #cbd5e1;
+  border-color: var(--color-input-border);
   color: var(--text-main);
 }
 

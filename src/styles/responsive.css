@@ -1,11 +1,32 @@
 /* --- Media Queries for Responsiveness --- */
 
-@media (max-width: 768px) {
-
-  body {
-    background-image:
-      radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+/* Tablet: the header carries more controls than fit. Free up space in stages
+   instead of letting the row overflow horizontally. */
+@media (max-width: 1180px) {
+  #search-input {
+    width: 160px;
   }
+
+  #search-input:focus {
+    width: 200px;
+  }
+}
+
+/* Between the desktop and the mobile layouts the header carries more controls
+   than fit in one row, so it becomes two rows instead of overflowing. */
+@media (max-width: 1100px) and (min-width: 769px) {
+  #header-container {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .header-controls {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
 
   #header-container {
     padding: 6px 12px;

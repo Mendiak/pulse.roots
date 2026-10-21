@@ -2,7 +2,7 @@
 .header-control-group {
   display: flex;
   background: var(--glass-bg);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   padding: 2px;
   gap: 2px;
 }
@@ -11,7 +11,7 @@
   display: flex;
   gap: 1px;
   background: var(--glass-bg);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   padding: 2px;
 }
 
@@ -23,7 +23,7 @@
   font-weight: 600;
   cursor: pointer;
   padding: 4px 7px;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@
 
 .lang-btn.active {
   background: var(--accent-gradient);
-  color: #fff;
+  color: var(--text-on-accent);
 }
 
 .layout-btn {
@@ -49,7 +49,7 @@
   font-size: 16px;
   cursor: pointer;
   padding: 6px 10px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -95,15 +95,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: var(--primary-dark);
+  color: var(--accent-pink);
 }
 
 .spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid rgba(0, 0, 0, 0.1);
-  border-top-color: var(--primary-dark);
-  border-radius: 50%;
+  border: 5px solid var(--overlay-4);
+  border-top-color: var(--accent-pink);
+  border-radius: var(--radius-circle);
   animation: spin 1s linear infinite;
   margin: 0 auto 15px;
 }
@@ -116,7 +116,7 @@
 
 #error-message {
   text-align: center;
-  color: #d9534f;
+  color: var(--color-danger);
   padding: 20px;
 }
 

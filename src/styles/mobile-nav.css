@@ -35,9 +35,9 @@
 #mobile-search-input {
   width: 100%;
   padding: 12px 16px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--glass-border);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--overlay-2);
   color: var(--text-main);
   font-size: 16px;
   font-family: inherit;
@@ -62,9 +62,9 @@
   flex-grow: 1;
   padding: 10px;
   border: 1px solid var(--glass-border);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--overlay-2);
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-family: inherit;
   font-weight: 600;
   font-size: 0.85rem;
@@ -137,12 +137,12 @@
 }
 
 .genre-item:active {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--overlay-2);
 }
 
 .genre-item:focus-visible {
   outline: none;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--overlay-2);
   border-left-color: var(--accent-pink);
 }
 
@@ -227,9 +227,9 @@
   margin: 0;
   padding: 8px 16px;
   background: var(--accent-gradient);
-  color: #fff;
+  color: var(--text-on-accent);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   font-family: inherit;
   font-size: 0.8rem;

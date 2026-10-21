@@ -252,37 +252,50 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
       infoDiv.appendChild(descWrapper);
     }
 
-    if (itemData.key_artists && itemData.key_artists.length > 0) {
-      const chipsLabel = document.createElement('span');
-      chipsLabel.className = 'panel-hero-artists-label';
-      chipsLabel.textContent = str('keyArtists');
-      infoDiv.appendChild(chipsLabel);
+    const hasArtists = itemData.key_artists && itemData.key_artists.length > 0;
 
-      const chipsDiv = document.createElement('div');
-      chipsDiv.className = 'panel-hero-artists';
-      itemData.key_artists.forEach(artist => {
-        const chip = document.createElement('a');
-        chip.className = 'artist-chip';
-        const artistUrl = artist.url.startsWith('http')
-          ? artist.url
-          : `https://open.spotify.com/artist/${artist.url}`;
-        chip.href = artistUrl;
-        chip.target = '_blank';
-        chip.rel = 'noopener noreferrer';
-        chip.innerHTML = `<i class="bi bi-spotify"></i> ${artist.name}`;
-        chipsDiv.appendChild(chip);
-      });
-      infoDiv.appendChild(chipsDiv);
-    }
+    if (hasArtists || itemData.wikipedia_url) {
+      const metaRow = document.createElement('div');
+      metaRow.className = 'panel-hero-meta';
 
-    if (itemData.wikipedia_url) {
-      const wikiLink = document.createElement('a');
-      wikiLink.href = itemData.wikipedia_url;
-      wikiLink.target = '_blank';
-      wikiLink.rel = 'noopener noreferrer';
-      wikiLink.className = 'panel-hero-wiki';
-      wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${str('readMoreWikipedia')}`;
-      infoDiv.appendChild(wikiLink);
+      if (hasArtists) {
+        const artistsBlock = document.createElement('div');
+        artistsBlock.className = 'panel-hero-artists-block';
+
+        const chipsLabel = document.createElement('span');
+        chipsLabel.className = 'panel-hero-artists-label';
+        chipsLabel.textContent = str('keyArtists');
+        artistsBlock.appendChild(chipsLabel);
+
+        const chipsDiv = document.createElement('div');
+        chipsDiv.className = 'panel-hero-artists';
+        itemData.key_artists.forEach(artist => {
+          const chip = document.createElement('a');
+          chip.className = 'artist-chip';
+          const artistUrl = artist.url.startsWith('http')
+            ? artist.url
+            : `https://open.spotify.com/artist/${artist.url}`;
+          chip.href = artistUrl;
+          chip.target = '_blank';
+          chip.rel = 'noopener noreferrer';
+          chip.innerHTML = `<i class="bi bi-spotify"></i> ${artist.name}`;
+          chipsDiv.appendChild(chip);
+        });
+        artistsBlock.appendChild(chipsDiv);
+        metaRow.appendChild(artistsBlock);
+      }
+
+      if (itemData.wikipedia_url) {
+        const wikiLink = document.createElement('a');
+        wikiLink.href = itemData.wikipedia_url;
+        wikiLink.target = '_blank';
+        wikiLink.rel = 'noopener noreferrer';
+        wikiLink.className = 'panel-hero-wiki';
+        wikiLink.innerHTML = `<i class="bi bi-wikipedia"></i> ${str('readMoreWikipedia')}`;
+        metaRow.appendChild(wikiLink);
+      }
+
+      infoDiv.appendChild(metaRow);
     }
 
     hero.appendChild(infoDiv);

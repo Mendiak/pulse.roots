@@ -131,12 +131,12 @@
 
 #info-panel::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
 }
 
 #info-panel::-webkit-scrollbar-thumb {
   background-color: var(--glass-border);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   border: 2px solid transparent;
   background-clip: content-box;
 }
@@ -278,7 +278,7 @@
 }
 
 #spotify-embed iframe {
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
 }
 
 .panel-footer {
@@ -333,7 +333,7 @@
   border: 1px solid var(--glass-border);
   color: var(--text-main);
   padding: 8px 16px;
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   cursor: pointer;
   font-family: inherit;
   font-size: 0.8rem;
@@ -403,7 +403,7 @@
 
 .artists-slider::-webkit-scrollbar-thumb {
   background: var(--glass-border);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
 }
 
 .artist-card {
@@ -422,7 +422,7 @@
 }
 
 .artist-card:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--overlay-2);
   border-color: var(--panel-accent-color, var(--accent-pink));
   transform: translateY(-2px);
 }
@@ -464,7 +464,7 @@
   height: 32px;
   min-width: 32px;
   min-height: 32px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -479,7 +479,7 @@
 #close-panel:active {
   background: var(--accent-pink);
   border-color: var(--accent-pink);
-  color: #fff;
+  color: var(--text-on-accent);
 }
 
 #close-panel:focus-visible {
@@ -550,17 +550,12 @@
   width: 100%;
   max-width: 100%;
   height: 80px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  /* The Spotify iframe is cross-origin and cannot be themed, so the genre accent
-     is applied as a frame around it. box-shadow avoids affecting the layout. */
-  box-shadow:
-    0 0 0 1px var(--panel-accent-color, var(--glass-border)),
-    0 12px 32px -20px var(--panel-accent-color, transparent);
 }
 
 .panel-hero-embed iframe {
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   display: block;
   width: 100%;
   height: 80px;
@@ -606,11 +601,28 @@
   overflow: visible;
 }
 
+.panel-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-top: 14px;
+}
+
+.panel-hero-artists-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  min-width: 0;
+}
+
 .panel-hero-artists {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  margin-top: 6px;
+  margin-top: 0;
 }
 
 .panel-hero-artists .artist-chip {
@@ -619,16 +631,16 @@
   gap: 4px;
   font-size: 0.68rem;
   color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--overlay-2);
   padding: 2px 8px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   white-space: nowrap;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .panel-hero-artists .artist-chip:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--overlay-4);
   color: var(--text-main);
 }
 
@@ -637,7 +649,7 @@
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: var(--text-tertiary);
-  margin-top: 8px;
+  margin-top: 0;
   font-weight: 500;
 }
 
@@ -649,16 +661,22 @@
 .panel-hero-wiki {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  font-size: 0.75rem;
+  gap: 6px;
+  margin-left: auto;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--glass-border);
+  font-size: 0.72rem;
   color: var(--text-muted);
   text-decoration: none;
-  margin-top: 6px;
-  transition: color 0.2s ease;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .panel-hero-wiki:hover {
   color: var(--text-main);
+  border-color: var(--panel-accent-color, var(--accent-pink));
+  background: var(--overlay-2);
 }
 
 .panel-hero-wiki i {
@@ -687,6 +705,16 @@
 
   .panel-hero-desc {
     font-size: 0.9rem;
+  }
+
+  .panel-hero-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .panel-hero-wiki {
+    margin-left: 0;
   }
 }
 

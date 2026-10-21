@@ -3,13 +3,13 @@
   color: var(--accent-pink);
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 2px solid rgba(255, 0, 102, 0.2);
+  border-bottom: 2px solid var(--accent-20);
   transition: all 0.3s ease;
 }
 
 .info-box-link:hover {
   border-bottom-color: var(--accent-pink);
-  background: rgba(255, 0, 102, 0.1);
+  background: var(--accent-10);
 }
 
 h1 {

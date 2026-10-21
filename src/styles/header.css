@@ -41,7 +41,7 @@ header {
 #search-input {
   width: 200px;
   padding: 8px 14px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--glass-border);
   background: var(--glass-bg);
   color: var(--text-main);
@@ -161,7 +161,7 @@ body.light-mode #search-nav #search-counter {
   font-size: 14px;
   min-width: 36px;
   min-height: 36px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
