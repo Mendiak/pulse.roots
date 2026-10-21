@@ -15,7 +15,8 @@
     min-height: 48px;
   }
 
-  #logo-link h1 {
+  #logo-link h1,
+  #logo-link .site-title {
     font-size: 16px;
     margin: 0;
     max-width: 130px;

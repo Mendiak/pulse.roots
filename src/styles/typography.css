@@ -20,6 +20,39 @@ h1 {
   margin: 0;
 }
 
+#logo-link .site-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* Page-specific heading used on genre pages */
+.genre-heading {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  color: var(--text-main);
+}
+
+.genre-parent {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0 0 20px;
+}
+
+.genre-parent a {
+  color: var(--accent-pink);
+  text-decoration: none;
+}
+
+.genre-parent a:hover {
+  text-decoration: underline;
+}
+
 body:not(.light-mode) #logo-link h1 {
   color: var(--text-main);
 }

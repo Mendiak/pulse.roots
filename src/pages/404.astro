@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const canonical = 'https://mendiak.github.io/pulse.roots/404/';
+---
+
+<BaseLayout
+  title="Page not found - PulseRoots"
+  description="The page you are looking for does not exist. Explore the electronic music genre tree instead."
+  canonical={canonical}
+  noindex
+>
+  <Header simple brandAs="div" />
+  <main>
+    <section id="not-found" class="container">
+      <h1>Page not found</h1>
+      <p>The page you are looking for does not exist or has been moved.</p>
+      <p>
+        <a href="/pulse.roots/">Back to the genre tree</a>
+        &nbsp;·&nbsp;
+        <a href="/pulse.roots/sitemap/">Browse all genres</a>
+      </p>
+    </section>
+  </main>
+  <Footer />
+
+  <style>
+    #not-found {
+      max-width: 640px;
+      margin: 80px auto;
+      padding: 40px;
+      text-align: center;
+      color: var(--text-main);
+    }
+
+    #not-found p {
+      margin: 12px 0;
+    }
+
+    #not-found a {
+      color: var(--accent-pink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 0, 102, 0.35);
+    }
+
+    #not-found a:hover {
+      border-bottom-color: var(--accent-pink);
+    }
+  </style>
+</BaseLayout>

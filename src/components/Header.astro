@@ -1,11 +1,17 @@
 ---
 export interface Props {
   simple?: boolean;
+  /**
+   * Tag used for the site name. Pages that carry their own <h1> pass "div"
+   * so the document keeps a single, page-specific heading.
+   */
+  brandAs?: 'h1' | 'div';
 }
 
 const basePath = '/pulse.roots';
 const currentLang = Astro.currentLocale || 'en';
-const { simple = false } = Astro.props;
+const { simple = false, brandAs = 'h1' } = Astro.props;
+const BrandTag = brandAs;
 ---
 
 <header>
@@ -13,7 +19,7 @@ const { simple = false } = Astro.props;
   <div id="header-container">
     <a href={`${basePath}/${currentLang === 'en' ? '' : currentLang}`} id="logo-link" aria-label="Home">
       <img src={`${basePath}/assets/logo.png`} id="logo" alt="PulseRoots Logo" width="64" height="64">
-      <h1>PulseRoots: Electronic Music Styles Tree</h1>
+      <BrandTag class="site-title">PulseRoots: Electronic Music Styles Tree</BrandTag>
     </a>
     <div class="header-controls">
       {!simple && (

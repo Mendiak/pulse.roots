@@ -109,7 +109,7 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   if (miniPlayer) miniPlayer.classList.remove('visible');
 
   const genreSlug = getGenrePath(itemData);
-  const newPath = `${state.BASE_PATH}/genres/${genreSlug}.html`;
+  const newPath = `${state.BASE_PATH}/genres/${genreSlug}/`;
   const newUrl = `${window.location.origin}${newPath}`;
 
   if (window.location.pathname !== newPath) {
@@ -118,7 +118,9 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   document.querySelector('link[rel="canonical"]').setAttribute('href', newUrl);
   document.querySelector('meta[property="og:url"]').setAttribute('content', newUrl);
-  const newTitle = `PulseRoots: ${itemData.name || itemData.style}`;
+  const genreDisplayName = itemData.name || itemData.style;
+  const longTitle = `${genreDisplayName}: Subgenres, Artists & Tracks | PulseRoots`;
+  const newTitle = longTitle.length <= 60 ? longTitle : `${genreDisplayName} | PulseRoots`;
   document.title = newTitle;
   document.querySelector('meta[property="og:title"]').setAttribute('content', newTitle);
   document.querySelector('meta[name="twitter:title"]').setAttribute('content', newTitle);
@@ -519,7 +521,7 @@ export async function closeInfoPanel() {
 export async function shareGenre(itemData) {
   const genreName = itemData.name || itemData.style;
   const genreSlug = getGenrePath(itemData);
-  const shareUrl = `${window.location.origin}${state.BASE_PATH}/genres/${genreSlug}.html`;
+  const shareUrl = `${window.location.origin}${state.BASE_PATH}/genres/${genreSlug}/`;
   const shareText = `Discover ${genreName} on PulseRoots: Electronic Music Styles Tree`;
 
   if (navigator.share) {

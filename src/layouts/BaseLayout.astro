@@ -55,7 +55,6 @@ const {
 } = Astro.props;
 
 const ogLocale = lang === 'es' ? 'es_ES' : 'en_US';
-const keywords = seo.keywords || 'electronic music, music genres, techno, house, ambient, trance, music visualization, music tree';
 
 // Dynamic hreflang computation
 const isGenrePage = canonical.includes('/genres/');
@@ -74,7 +73,6 @@ const hasSpanish = !isGenrePage;
 
   <link rel="canonical" href={canonical}>
   <meta name="description" content={description}>
-  <meta name="keywords" content={keywords}>
   <meta name="author" content="PulseRoots">
   <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'}>
   <meta name="theme-color" content="#080808">

@@ -117,3 +117,65 @@ main {
 #thanks {
   margin: 30px;
 }
+
+/* --- Genre detail block (server-rendered content) --- */
+#genre-details {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 32px;
+  color: var(--text-main);
+}
+
+#genre-details .genre-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  margin: 0 0 8px;
+}
+
+#genre-details .genre-block {
+  margin-top: 28px;
+}
+
+#genre-details .genre-block h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-pink);
+  margin: 0 0 10px;
+}
+
+#genre-details .genre-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+#genre-details a {
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 0, 102, 0.35);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#genre-details a:hover {
+  color: var(--accent-pink);
+  border-bottom-color: var(--accent-pink);
+}
+
+#genre-details .genre-source {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  #genre-details {
+    margin: 20px;
+    padding: 22px;
+  }
+}

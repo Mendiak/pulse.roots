@@ -84,7 +84,7 @@ function buildTreeHtml(allGenres, lang) {
 
     let html = '        <ul>\n';
     for (const child of children) {
-      const url = `${prefix}/genres/${child.fullSlugPath}.html`;
+      const url = `${prefix}/genres/${child.fullSlugPath}/`;
       const grandChildren = childrenMap[child.fullSlugPath];
 
       if (grandChildren && grandChildren.length > 0) {
@@ -107,7 +107,7 @@ function buildTreeHtml(allGenres, lang) {
 
   let html = '';
   for (const top of topLevel) {
-    const url = `${prefix}/genres/${top.fullSlugPath}.html`;
+    const url = `${prefix}/genres/${top.fullSlugPath}/`;
     html += `      <details>\n        <summary><a href="${url}">${escapeHtml(top.genreName)}</a></summary>\n`;
     html += buildNestedList(top.fullSlugPath);
     html += `      </details>\n`;

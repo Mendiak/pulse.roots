@@ -2,7 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { slugify, loadGenres, flattenGenres } from '../../utils/genres-data.js';
+import { loadGenres, flattenGenres } from '../../utils/genres-data.js';
+
+const SITE = 'https://mendiak.github.io/pulse.roots';
 
 const currentLang = Astro.currentLocale || 'en';
 const genres = loadGenres(currentLang);
@@ -11,21 +13,51 @@ export async function getStaticPaths() {
   const genres = loadGenres('en');
   const allGenres = flattenGenres(genres, 'en');
 
-  return allGenres.map(g => ({
-    params: { slug: g.fullSlugPath },
-    props: {
-      genreName: g.genreName,
-      fullSlugPath: g.fullSlugPath,
-      description: g.description,
-      wikipediaUrl: g.wikipediaUrl,
-      spotifyTrackId: g.spotifyTrackId,
-      exampleTrack: g.exampleTrack,
-      keyArtists: g.keyArtists,
-      children: g.children,
-      breadcrumbs: g.breadcrumbs,
-      childrenNames: g.children.map(c => c.name),
-    },
-  }));
+  // Some styles live in more than one branch of the tree (e.g. Acid House under
+  // Chicago House and under Acid Techno). Detect them so the heading and title
+  // can carry the parent name instead of publishing duplicate metadata.
+  // Comparison is case-insensitive because the dataset is inconsistent
+  // ("Acid Breaks" vs "Acid breaks").
+  const byName = new Map();
+  for (const g of allGenres) {
+    const key = g.genreName.trim().toLowerCase();
+    if (!byName.has(key)) byName.set(key, []);
+    byName.get(key).push(g);
+  }
+
+  return allGenres.map(g => {
+    const parent = g.breadcrumbs[g.breadcrumbs.length - 1] || null;
+    const sameName = byName.get(g.genreName.trim().toLowerCase()) || [];
+    const isAmbiguous = sameName.length > 1;
+    const alternate = isAmbiguous
+      ? sameName.find(o => o.fullSlugPath !== g.fullSlugPath) || null
+      : null;
+
+    return {
+      params: { slug: g.fullSlugPath },
+      props: {
+        genreName: g.genreName,
+        fullSlugPath: g.fullSlugPath,
+        description: g.description,
+        wikipediaUrl: g.wikipediaUrl,
+        spotifyTrackId: g.spotifyTrackId,
+        exampleTrack: g.exampleTrack,
+        keyArtists: g.keyArtists,
+        children: g.children,
+        breadcrumbs: g.breadcrumbs,
+        isAmbiguous,
+        contextLabel: parent ? parent.name : '',
+        alternate: alternate
+          ? {
+              path: alternate.fullSlugPath,
+              contextLabel: alternate.breadcrumbs.length
+                ? alternate.breadcrumbs[alternate.breadcrumbs.length - 1].name
+                : '',
+            }
+          : null,
+      },
+    };
+  });
 }
 
 const {
@@ -33,18 +65,35 @@ const {
   fullSlugPath,
   description,
   breadcrumbs,
+  wikipediaUrl,
+  spotifyTrackId,
+  exampleTrack,
+  keyArtists = [],
+  children = [],
+  isAmbiguous = false,
+  contextLabel = '',
+  alternate = null,
 } = Astro.props;
 
-const canonical = `https://mendiak.github.io/pulse.roots/genres/${fullSlugPath}/`;
-const metaDesc = description ? description.substring(0, 155).replace(/\s+\S*$/, '') : `Explore the ${genreName} style in electronic music on PulseRoots.`;
-const title = `PulseRoots: ${genreName}`;
+const parent = breadcrumbs[breadcrumbs.length - 1] || null;
+const displayName = isAmbiguous && contextLabel ? `${genreName} (${contextLabel})` : genreName;
 
-const breadcrumbItems = breadcrumbs.map((crumb, i) => ({
-  "@type": "ListItem",
-  "position": i + 1,
-  "name": crumb.name,
-  "item": `https://mendiak.github.io/pulse.roots/genres/${crumb.slug}/`
-}));
+const canonical = `${SITE}/genres/${fullSlugPath}/`;
+const metaDesc = description
+  ? description.substring(0, 155).replace(/\s+\S*$/, '')
+  : `Explore ${genreName} in electronic music on PulseRoots.`;
+
+// Keyword-first title, trimmed to stay inside the ~60 character SERP limit.
+const longTitle = `${displayName}: Subgenres, Artists & Tracks | PulseRoots`;
+const title = longTitle.length <= 60 ? longTitle : `${displayName} | PulseRoots`;
+
+const breadcrumbEntries = [
+  { name: 'Home', url: `${SITE}/` },
+  ...breadcrumbs.map(crumb => ({
+    name: crumb.name,
+    url: `${SITE}/genres/${crumb.slug}/`,
+  })),
+];
 
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
@@ -52,17 +101,28 @@ const jsonLd = JSON.stringify({
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mendiak.github.io/pulse.roots/" },
-        ...breadcrumbItems,
-        { "@type": "ListItem", "position": breadcrumbItems.length + 2, "name": genreName }
-      ]
+        ...breadcrumbEntries.map((entry, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": entry.name,
+          "item": entry.url,
+        })),
+        {
+          "@type": "ListItem",
+          "position": breadcrumbEntries.length + 1,
+          "name": displayName,
+          "item": canonical,
+        },
+      ],
     },
     {
       "@type": "MusicGenre",
-      "name": genreName,
-      "description": metaDesc
-    }
-  ]
+      "name": displayName,
+      "description": description || metaDesc,
+      "url": canonical,
+      ...(wikipediaUrl ? { "sameAs": [wikipediaUrl] } : {}),
+    },
+  ],
 });
 
 function buildBreadcrumbHtml() {
@@ -71,7 +131,7 @@ function buildBreadcrumbHtml() {
   for (const crumb of breadcrumbs) {
     html += ` <span class="breadcrumb-sep">›</span> <a href="/pulse.roots/genres/${crumb.slug}/">${crumb.name}</a>`;
   }
-  html += ` <span class="breadcrumb-sep">›</span> <span class="breadcrumb-current">${genreName}</span>`;
+  html += ` <span class="breadcrumb-sep">›</span> <span class="breadcrumb-current">${displayName}</span>`;
   html += '</nav>';
   return html;
 }
@@ -91,7 +151,7 @@ const genreScript = `window.PR_LANG='${currentLang}';window.PR_I18N={};window.PR
     <div id="scroll-progress-bar"></div>
   </div>
 
-  <Header />
+  <Header brandAs="div" />
 
   <div id="history-banner">
     <p><strong>Music History:</strong> <span id="history-fact"></span></p>
@@ -99,10 +159,9 @@ const genreScript = `window.PR_LANG='${currentLang}';window.PR_I18N={};window.PR
 
   <main>
     <div id="main-container">
-      <div id="tooltip" class="info-box" aria-labelledby="intro-title">
+      <div id="tooltip" class="info-box" aria-label="Breadcrumb">
         <section>
           <Fragment set:html={buildBreadcrumbHtml()} />
-          {description && <p>{description}</p>}
         </section>
       </div>
 
@@ -127,6 +186,72 @@ const genreScript = `window.PR_LANG='${currentLang}';window.PR_I18N={};window.PR
         <ul id="mobile-genre-list"></ul>
       </div>
     </div>
+
+    <section id="genre-details" class="container" aria-labelledby="genre-heading">
+      <h1 id="genre-heading" class="genre-heading">{displayName}</h1>
+
+      {parent && (
+        <p class="genre-parent">
+          Part of <a href={`/pulse.roots/genres/${parent.slug}/`}>{parent.name}</a>
+        </p>
+      )}
+
+      {description && <p class="genre-description">{description}</p>}
+
+      {keyArtists.length > 0 && (
+        <section class="genre-block">
+          <h2>Key artists</h2>
+          <ul class="genre-list">
+            {keyArtists.map(artist => (
+              <li>
+                {artist.url
+                  ? <a href={`https://open.spotify.com/artist/${artist.url}`} target="_blank" rel="noopener noreferrer">{artist.name}</a>
+                  : <span>{artist.name}</span>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {exampleTrack && (
+        <section class="genre-block">
+          <h2>Listen to an example</h2>
+          <p>
+            {spotifyTrackId
+              ? <a href={`https://open.spotify.com/track/${spotifyTrackId}`} target="_blank" rel="noopener noreferrer">{exampleTrack}</a>
+              : exampleTrack}
+          </p>
+        </section>
+      )}
+
+      {children.length > 0 && (
+        <section class="genre-block">
+          <h2>Subgenres</h2>
+          <ul class="genre-list">
+            {children.map(child => (
+              <li><a href={`/pulse.roots/genres/${child.fullSlugPath}/`}>{child.name}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {wikipediaUrl && (
+        <p class="genre-source">
+          <a href={wikipediaUrl} target="_blank" rel="noopener noreferrer">
+            Read more about {genreName} on Wikipedia
+          </a>
+        </p>
+      )}
+
+      {alternate && (
+        <p class="genre-source">
+          This page covers {genreName} within {contextLabel || 'this branch'}.
+          {alternate.contextLabel
+            ? <> See also <a href={`/pulse.roots/genres/${alternate.path}/`}>{genreName} in {alternate.contextLabel}</a>.</>
+            : <> See also <a href={`/pulse.roots/genres/${alternate.path}/`}>the other {genreName} page</a>.</>}
+        </p>
+      )}
+    </section>
 
     <button id="back-to-top-btn" aria-label="Back to Top">
       <i class="bi bi-arrow-up"></i>

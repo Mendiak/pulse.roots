@@ -42,13 +42,19 @@ export function flattenGenres(genres, lang = 'en') {
         exampleTrack: item.example || '',
         keyArtists: item.key_artists || [],
         substyles: item.substyles || [],
-        children: (item.substyles || []).map(child => ({
-          name: child.name || child.style,
-          slug: slugify(child.name || child.style || ''),
-        })),
+        children: (item.substyles || []).map(child => {
+          const childName = child.name || child.style || '';
+          const childSlug = slugify(childName);
+          return {
+            name: childName,
+            slug: childSlug,
+            fullSlugPath: `${fullSlugPath}/${childSlug}`,
+          };
+        }),
       });
       if (item.substyles && item.substyles.length > 0) {
-        traverse(item.substyles, [...slugParts, slug], [...breadcrumbs, { name, slug }]);
+        // `slug` must be the cumulative path so breadcrumb links resolve correctly.
+        traverse(item.substyles, [...slugParts, slug], [...breadcrumbs, { name, slug: fullSlugPath }]);
       }
     }
   };

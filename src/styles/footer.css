@@ -389,3 +389,15 @@ body.light-mode #genre-tree summary:hover {
 body.light-mode .stat-value {
   color: var(--accent-pink);
 }
+
+/* --- Footer genre families --- */
+#footer-genres ul.footer-genre-families {
+  padding-left: 0;
+}
+
+#footer-genres .footer-all-genres {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--accent-pink);
+}
