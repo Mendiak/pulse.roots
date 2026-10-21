@@ -12,6 +12,11 @@ const basePath = '/pulse.roots';
 const currentLang = Astro.currentLocale || 'en';
 const { simple = false, brandAs = 'h1' } = Astro.props;
 const BrandTag = brandAs;
+
+// Campaign tagging so shared visits are attributable in GA4.
+const siteUrl = 'https://mendiak.github.io/pulse.roots/';
+const shareLink = source =>
+  encodeURIComponent(`${siteUrl}?utm_source=${source}&utm_medium=social&utm_campaign=share`);
 ---
 
 <header>
@@ -53,15 +58,15 @@ const BrandTag = brandAs;
             <div id="share-popover" role="dialog" aria-label="Share options">
               <div class="share-popover-arrow"></div>
               <div class="share-popover-content">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://mendiak.github.io/pulse.roots/"
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareLink('facebook')}`}
                   target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" class="share-popover-btn">
                   <i class="bi bi-facebook"></i> <span>Facebook</span>
                 </a>
-                <a href="https://x.com/intent/tweet?url=https://mendiak.github.io/pulse.roots/&text=Explore%20the%20evolution%20of%20electronic%20music%20with%20PulseRoots!%20%23ElectronicMusic%20%23MusicGenres"
+                <a href={`https://x.com/intent/tweet?url=${shareLink('x')}&text=Explore%20the%20evolution%20of%20electronic%20music%20with%20PulseRoots!%20%23ElectronicMusic%20%23MusicGenres`}
                   target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter)" class="share-popover-btn">
                   <i class="bi bi-twitter-x"></i> <span>X</span>
                 </a>
-                <a href="https://www.reddit.com/submit?url=https://mendiak.github.io/pulse.roots/&title=PulseRoots:%20Electronic%20Music%20Styles%20Tree"
+                <a href={`https://www.reddit.com/submit?url=${shareLink('reddit')}&title=PulseRoots:%20Electronic%20Music%20Styles%20Tree`}
                   target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit" class="share-popover-btn">
                   <i class="bi bi-reddit"></i> <span>Reddit</span>
                 </a>

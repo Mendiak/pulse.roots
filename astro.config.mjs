@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import partytown from '@astrojs/partytown';
 import { execSync } from 'node:child_process';
 
 /**
@@ -62,11 +61,6 @@ export default defineConfig({
           en: 'en',
           es: 'es',
         },
-      },
-    }),
-    partytown({
-      config: {
-        forward: ['dataLayer.push'],
       },
     }),
   ],

@@ -16,9 +16,7 @@ const STRINGS = {
     subgenres: 'Subgenres & Related',
     buyCoffee: 'Buy me a coffee',
     reportError: 'Report an error',
-    nowPlaying: 'Now Playing',
-    showMore: 'Show more',
-    showLess: 'Show less'
+    nowPlaying: 'Now Playing'
   },
   es: {
     share: 'Compartir',
@@ -34,9 +32,7 @@ const STRINGS = {
     subgenres: 'Subgéneros y relacionados',
     buyCoffee: 'Invítame a un café',
     reportError: 'Reportar un error',
-    nowPlaying: 'Reproduciendo',
-    showMore: 'Ver más',
-    showLess: 'Ver menos'
+    nowPlaying: 'Reproduciendo'
   }
 };
 
@@ -525,7 +521,8 @@ export async function closeInfoPanel() {
 export async function shareGenre(itemData) {
   const genreName = itemData.name || itemData.style;
   const genreSlug = getGenrePath(itemData);
-  const shareUrl = `${window.location.origin}${state.BASE_PATH}/genres/${genreSlug}/`;
+  const pageUrl = `${window.location.origin}${state.BASE_PATH}/genres/${genreSlug}/`;
+  const shareUrl = `${pageUrl}?utm_source=share&utm_medium=social&utm_campaign=genre_share`;
   const shareText = `Discover ${genreName} on PulseRoots: Electronic Music Styles Tree`;
 
   if (navigator.share) {
@@ -540,7 +537,8 @@ export async function shareGenre(itemData) {
     }
   } else {
     try {
-      await navigator.clipboard.writeText(shareUrl);
+      // Copy the clean URL: canonical stays untouched, the receiver gets no tracking.
+      await navigator.clipboard.writeText(pageUrl);
 
       const shareBtn = document.querySelector('.share-btn');
       const originalHTML = shareBtn.innerHTML;

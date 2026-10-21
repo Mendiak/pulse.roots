@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check:seo": "node scripts/verify-seo.mjs",
+    "check:seo": "node scripts/verify-seo.mjs && node scripts/verify-i18n.mjs",
     "verify": "npm run build && npm run check:seo"
   },
   "license": "MIT",
@@ -21,7 +21,6 @@
   },
   "homepage": "https://mendiak.github.io/pulse.roots/",
   "dependencies": {
-    "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.0.4",
     "d3": "^6.7.0"

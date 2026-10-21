@@ -18,7 +18,7 @@ function showTooltip(event, d) {
   tooltip.html(`
     <h3>${d.data.name}</h3>
     ${truncatedDesc ? `<p>${truncatedDesc}</p>` : ''}
-    <p><i class="bi bi-arrow-up-right-circle"></i> ${t('panel.clickForDetails')}</p>
+    <p><i class="bi bi-arrow-up-right-circle"></i> ${t('intro.clickForDetails')}</p>
   `)
     .style('left', Math.min(event.pageX + 12, window.innerWidth - 300) + 'px')
     .style('top', (event.pageY - 24) + 'px');
