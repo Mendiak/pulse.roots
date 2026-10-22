@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { slugify } from '../utils/slug.js';
+import CoffeeLink from './CoffeeLink.astro';
 
 const dataDir = path.resolve(process.cwd(), 'public', 'data');
 const basePath = '/pulse.roots';
@@ -56,9 +57,8 @@ try {
       childrenMap[key].sort((a, b) => a.genreName.localeCompare(b.genreName));
     }
 
-    // Genre pages only exist in the default locale, so this path never takes a language prefix.
-    // Keeping the sitemap-link node count low avoids 300+ sitewide links on every page.
-    const genreBase = `${basePath}/genres`;
+    // Genre pages exist in both locales, so the footer follows the current one.
+    const genreBase = `${basePath}/${langPrefix}genres`;
 
     const topLevel = (childrenMap[''] || []).sort((a, b) => a.genreName.localeCompare(b.genreName));
     genreHtml += '<ul class="footer-genre-families">\n';
@@ -66,7 +66,7 @@ try {
       genreHtml += `  <li><a href="${genreBase}/${top.fullSlugPath}/">${escapeHtml(top.genreName)}</a></li>\n`;
     }
     genreHtml += '</ul>\n';
-    genreHtml += `<a class="footer-all-genres" href="${basePath}/genres/">All genres &rarr;</a>\n`;
+    genreHtml += `<a class="footer-all-genres" href="${basePath}/${langPrefix}genres/">All genres &rarr;</a>\n`;
   }
 } catch (e) {
   console.error('Error loading genre tree:', e);
@@ -87,9 +87,7 @@ try {
         <a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-code-slash"></i> <span>Portfolio</span>
         </a>
-        <a href="https://www.buymeacoffee.com/Mendiak" target="_blank" rel="noopener noreferrer" class="support-bmc">
-          <i class="bi bi-cup-hot"></i> <span>Buy me a coffee</span>
-        </a>
+        <CoffeeLink variant="pill" lang={currentLang} />
       </div>
     </div>
 

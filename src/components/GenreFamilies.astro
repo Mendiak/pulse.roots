@@ -16,15 +16,17 @@ const labels = lang === 'es'
       intro: 'Las familias son el punto de partida del árbol. Cada una agrupa los estilos y subestilos que comparten origen, época o sonido.',
       styles: 'estilos',
       all: 'Ver todos los géneros',
-      sitemap: '/es/sitemap/',
+      hub: '/es/genres/',
     }
   : {
       heading: 'Browse by family',
       intro: 'Families are the starting point of the tree. Each one groups the styles and substyles that share an origin, era or sound.',
       styles: 'styles',
       all: 'See all genres',
-      sitemap: '/sitemap/',
+      hub: '/genres/',
     };
+
+const genreBase = lang === 'es' ? '/pulse.roots/es/genres' : '/pulse.roots/genres';
 
 function truncate(text, max) {
   if (!text) return '';
@@ -33,14 +35,14 @@ function truncate(text, max) {
   return cut.slice(0, cut.lastIndexOf(' ')) + '…';
 }
 
-const families = loadGenres('en')
+const families = loadGenres(lang)
   .map(family => {
     const name = family.style || family.name;
     if (!name) return null;
     return {
       name,
       slug: slugify(name),
-      count: flattenGenres(family.substyles || [], 'en').length + 1,
+      count: flattenGenres(family.substyles || [], lang).length + 1,
       description: truncate(family.description || '', 96),
     };
   })
@@ -54,7 +56,7 @@ const families = loadGenres('en')
   <ul class="genre-families-grid">
     {families.map(family => (
       <li>
-        <a href={`/pulse.roots/genres/${family.slug}/`}>
+        <a href={`${genreBase}/${family.slug}/`}>
           <span class="family-name">{family.name}</span>
           <span class="family-count">{family.count} {labels.styles}</span>
           {family.description && <span class="family-desc">{family.description}</span>}
@@ -63,5 +65,5 @@ const families = loadGenres('en')
     ))}
   </ul>
 
-  <a class="genre-families-all" href={`/pulse.roots${labels.sitemap}`}>{labels.all} &rarr;</a>
+  <a class="genre-families-all" href={`/pulse.roots${labels.hub}`}>{labels.all} &rarr;</a>
 </section>

@@ -42,7 +42,7 @@ const jsonLd = JSON.stringify({
           "@type": "ListItem",
           "position": index + 1,
           "name": family.name,
-          "url": `${SITE}/genres/${family.slug}/`,
+          "url": `${SITE}/es/genres/${family.slug}/`,
         })),
       },
     },
@@ -75,13 +75,13 @@ const jsonLd = JSON.stringify({
     <div id="main-container" class="sitemap-page">
       <p class="sitemap-lead">
         Explora los {totalStyles} estilos de música electrónica de PulseRoots, agrupados por familia, o abre la
-        <a href="/pulse.roots/genres/">vista general de familias</a>.
+        <a href="/pulse.roots/es/genres/">vista general de familias</a>.
       </p>
 
       <h2>Todas las Páginas</h2>
       <ul>
         <li><a href="/pulse.roots/es/">Inicio</a></li>
-        <li><a href="/pulse.roots/genres/">Géneros</a></li>
+        <li><a href="/pulse.roots/es/genres/">Géneros</a></li>
         <li><a href="/pulse.roots/es/contact/">Contacto</a></li>
         <li><a href="/pulse.roots/es/about/">Sobre PulseRoots</a></li>
         <li><a href="/pulse.roots/es/privacy/">Política de Privacidad</a></li>
@@ -90,10 +90,10 @@ const jsonLd = JSON.stringify({
       <h2>Todos los Géneros</h2>
       {families.map(family => (
         <section class="sitemap-family">
-          <h3><a href={`/pulse.roots/genres/${family.slug}/`}>{family.name}</a></h3>
+          <h3><a href={`/pulse.roots/es/genres/${family.slug}/`}>{family.name}</a></h3>
           <ul>
             {family.styles.map(style => (
-              <li><a href={`/pulse.roots/genres/${style.fullSlugPath}/`}>{style.genreName}</a></li>
+              <li><a href={`/pulse.roots/es/genres/${style.fullSlugPath}/`}>{style.genreName}</a></li>
             ))}
           </ul>
         </section>

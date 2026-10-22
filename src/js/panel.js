@@ -124,7 +124,8 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   const miniPlayer = document.getElementById('mini-player');
   if (miniPlayer) miniPlayer.classList.remove('visible');
 
-  const newPath = `${state.BASE_PATH}/genres/${genreSlug}/`;
+  const langPrefix = window.PR_LANG === 'es' ? '/es' : '';
+  const newPath = `${state.BASE_PATH}${langPrefix}/genres/${genreSlug}/`;
   const newUrl = `${window.location.origin}${newPath}`;
 
   if (window.location.pathname !== newPath) {
@@ -444,7 +445,7 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   donationLink.href = 'https://www.buymeacoffee.com/Mendiak';
   donationLink.target = '_blank';
   donationLink.rel = 'noopener noreferrer';
-  donationLink.className = 'panel-footer-link';
+  donationLink.className = 'coffee-link coffee-link--inline';
   donationLink.innerHTML = '<i class="bi bi-cup-hot"></i> ' + str('buyCoffee');
   panelFooter.appendChild(donationLink);
 
@@ -558,9 +559,12 @@ export async function closeInfoPanel() {
 export async function shareGenre(itemData) {
   const genreName = itemData.name || itemData.style;
   const genreSlug = getGenrePath(itemData);
-  const pageUrl = `${window.location.origin}${state.BASE_PATH}/genres/${genreSlug}/`;
+  const langPrefix = window.PR_LANG === 'es' ? '/es' : '';
+  const pageUrl = `${window.location.origin}${state.BASE_PATH}${langPrefix}/genres/${genreSlug}/`;
   const shareUrl = `${pageUrl}?utm_source=share&utm_medium=social&utm_campaign=genre_share`;
-  const shareText = `Discover ${genreName} on PulseRoots: Electronic Music Styles Tree`;
+  const shareText = window.PR_LANG === 'es'
+    ? `Descubre ${genreName} en PulseRoots: el árbol de estilos de música electrónica`
+    : `Discover ${genreName} on PulseRoots: Electronic Music Styles Tree`;
 
   if (navigator.share) {
     try {

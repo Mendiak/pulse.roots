@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { loadGenres, flattenGenres, slugify } from '../../../utils/genres-data.js';
+
+const SITE = 'https://mendiak.github.io/pulse.roots';
+const canonical = `${SITE}/es/genres/`;
+
+const families = loadGenres('es')
+  .map(family => {
+    const name = family.style || family.name;
+    if (!name) return null;
+    const styles = flattenGenres(family.substyles || [], 'es');
+    const description = (family.description || '').trim();
+    return {
+      name,
+      slug: slugify(name),
+      count: styles.length + 1,
+      description: description.length > 180
+        ? `${description.slice(0, 177).replace(/\s+\S*$/, '')}...`
+        : description,
+    };
+  })
+  .filter(Boolean)
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const totalStyles = families.reduce((sum, family) => sum + family.count, 0);
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${canonical}#collection`,
+      "url": canonical,
+      "name": "Géneros de música electrónica: el árbol completo",
+      "description": "Todas las familias de música electrónica de PulseRoots, del Techno y el House al Ambient, el Experimental y el Global Club.",
+      "isPartOf": { "@id": `${SITE}/#website` },
+      "inLanguage": "es",
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": families.length,
+        "itemListElement": families.map((family, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": family.name,
+          "url": `${SITE}/es/genres/${family.slug}/`,
+        })),
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": `${SITE}/es/` },
+        { "@type": "ListItem", "position": 2, "name": "Géneros", "item": canonical },
+      ],
+    },
+  ],
+});
+---
+
+<BaseLayout
+  title="Géneros de música electrónica: árbol completo | PulseRoots"
+  description="Explora todas las familias de música electrónica de PulseRoots: Techno, House, Trance, Ambient, Bass, Breakbeat, Experimental y más, con estilos y subestilos."
+  canonical={canonical}
+  lang="es"
+  jsonLd={jsonLd}
+  esAvailable
+>
+  <Header brandAs="div" />
+  <main>
+    <article id="genres-hub" class="container">
+      <h1>Géneros de música electrónica: el árbol completo</h1>
+      <p class="genres-lead">
+        PulseRoots agrupa más de {totalStyles} estilos de música electrónica en {families.length} familias.
+        Empieza por una familia para ver cómo evolucionaron sus estilos y subestilos, o abre la
+        <a href="/pulse.roots/es/sitemap/">lista completa de géneros</a>.
+      </p>
+
+      <ul class="genres-family-grid">
+        {families.map(family => (
+          <li>
+            <a href={`/pulse.roots/es/genres/${family.slug}/`}>
+              <h2>{family.name}</h2>
+              <p class="genres-family-count">{family.count} estilos</p>
+              {family.description && <p class="genres-family-desc">{family.description}</p>}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <section aria-labelledby="genres-about">
+        <h2 id="genres-about">Cómo está organizado este árbol de géneros</h2>
+        <p>
+          Cada familia es un punto de partida: Techno, House, Trance, Ambient, Bass Music, Breakbeat,
+          Electro, Disco, Chill Out, Experimental, Industrial, Pop and Rock Fusion, Funk and Soul Fusion
+          y Global Club. Las familias se ramifican en estilos y subestilos, así que una página como
+          Detroit Techno cuelga de Techno, y Ghettotech cuelga de Detroit Techno.
+        </p>
+        <p>
+          La jerarquía es una interpretación, no una regla. Los géneros se solapan, se dividen y se
+          fusionan, y el mismo sonido puede clasificarse de otra forma en otro lugar. Cada página de
+          género enlaza con su estilo padre, sus subestilos y sus vecinos más cercanos, para que puedas
+          recorrer el árbol en cualquier dirección.
+        </p>
+        <p>
+          ¿Buscas algo concreto? Usa el buscador de la cabecera o consulta el
+          <a href="/pulse.roots/es/sitemap/">mapa del sitio</a>.
+        </p>
+      </section>
+    </article>
+  </main>
+  <Footer />
+
+  <style>
+    #genres-hub { max-width: 1000px; margin: 40px auto; padding: 40px; color: var(--text-main); }
+    #genres-hub h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 16px; }
+    #genres-hub h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 4px; }
+    .genres-lead { color: var(--text-muted); margin-bottom: 28px; }
+    .genres-lead a, #genres-hub section a { color: var(--accent-pink); text-decoration: none; border-bottom: 1px solid rgba(255, 0, 102, 0.35); }
+    .genres-family-grid { list-style: none; margin: 0 0 40px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .genres-family-grid li a { display: block; height: 100%; padding: 16px 18px; border: 1px solid var(--glass-border); border-radius: 12px; text-decoration: none; color: inherit; background: rgba(255, 255, 255, 0.02); transition: border-color 0.2s ease, transform 0.2s ease; }
+    .genres-family-grid li a:hover { border-color: var(--accent-pink); transform: translateY(-2px); }
+    .genres-family-count { color: var(--accent-pink); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 8px; }
+    .genres-family-desc { color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.5; }
+    #genres-hub section p { color: var(--text-muted); line-height: 1.7; }
+    @media (max-width: 768px) { #genres-hub { margin: 20px; padding: 20px; } }
+  </style>
+</BaseLayout>

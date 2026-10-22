@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import { slugify } from './src/utils/slug.js';
+import { genreDatasetLastmod } from './src/utils/dataset-meta.js';
 
 const SITE = 'https://mendiak.github.io/pulse.roots';
 
@@ -33,19 +33,12 @@ function buildLegacyGenreRedirects() {
 }
 
 /**
- * Date of the last change to the genre dataset, used as <lastmod> for genre
+ * Date of the last change to each genre dataset, used as <lastmod> for genre
  * pages. Falls back to an empty string (no lastmod) when git is unavailable,
  * e.g. in a shallow clone where the file has no history.
  */
-let genreDataLastmod = '';
-try {
-  genreDataLastmod = execSync(
-    'git log -1 --format=%cI -- public/data/pulseroots.genres.json',
-    { encoding: 'utf-8', stdio: ['ignore', 'pipe', 'ignore'] }
-  ).trim();
-} catch {
-  genreDataLastmod = '';
-}
+const genreDataLastmod = genreDatasetLastmod('en');
+const genreDataLastmodEs = genreDatasetLastmod('es');
 
 export default defineConfig({
   site: 'https://mendiak.github.io',
@@ -81,8 +74,10 @@ export default defineConfig({
     sitemap({
       filter: (page) => !page.includes('/thanks/'),
       serialize(item) {
-        if (genreDataLastmod && item.url.includes('/genres/')) {
-          return { ...item, lastmod: new Date(genreDataLastmod).toISOString() };
+        const isSpanish = item.url.includes('/es/genres/');
+        const lastmod = isSpanish ? genreDataLastmodEs : genreDataLastmod;
+        if (lastmod && item.url.includes('/genres/')) {
+          return { ...item, lastmod: new Date(lastmod).toISOString() };
         }
         return item;
       },
