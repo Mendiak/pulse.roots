@@ -14,8 +14,8 @@ export const siteFaq = {
       a: 'There is no official number, because genres overlap and new scenes appear every year. PulseRoots documents more than 300 styles and substyles, from early experimental and tape music to contemporary hyperpop, phonk and amapiano.',
     },
     {
-      q: 'What is the difference between house and techno?',
-      a: 'House grew out of Chicago in the early 1980s with a four-on-the-floor beat around 120 BPM, soulful vocals and piano riffs. Techno emerged in Detroit a few years later with a colder, more mechanical sound, faster tempos and a focus on synthesis and rhythm rather than vocals. Both are families in the tree, and each branches into dozens of substyles.',
+      q: 'How is the PulseRoots genre tree organised?',
+      a: 'Each genre sits inside a family and under a parent style. For example, Detroit Techno is inside Techno, and Ghettotech is inside Detroit Techno. Every page links up to its parent and down to its subgenres, so you can move between broad families and micro-genres in both directions.',
     },
     {
       q: 'Can I listen to an example of each genre?',
@@ -32,8 +32,8 @@ export const siteFaq = {
       a: 'No hay una cifra oficial, porque los géneros se solapan y cada año aparecen escenas nuevas. PulseRoots documenta más de 300 estilos y subestilos, desde la música experimental y de cinta hasta el hyperpop, el phonk o el amapiano contemporáneos.',
     },
     {
-      q: '¿Cuál es la diferencia entre house y techno?',
-      a: 'El house nació en Chicago a principios de los ochenta con un pulso de cuatro tiempos a unos 120 BPM, voces con alma y riffs de piano. El techno surgió en Detroit pocos años después con un sonido más frío y mecánico, tempos más rápidos y más peso de la síntesis y el ritmo que de la voz. Ambas son familias del árbol y cada una se ramifica en decenas de subestilos.',
+      q: '¿Cómo se organiza el árbol de géneros de PulseRoots?',
+      a: 'Cada género pertenece a una familia y cuelga de un estilo padre. Por ejemplo, el Detroit Techno está dentro del Techno, y el Ghettotech dentro del Detroit Techno. Cada página enlaza hacia arriba con su estilo padre y hacia abajo con sus subestilos, así que puedes moverte entre familias amplias y microgéneros en ambos sentidos.',
     },
     {
       q: '¿Puedo escuchar un ejemplo de cada género?',
