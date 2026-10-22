@@ -18,7 +18,7 @@ export function initThemeToggle() {
     document.body.classList.remove('light-mode');
     state.colorScale = d3.scaleOrdinal(d3.schemeTableau10);
     d3.selectAll('.node text').style('fill', '#fff');
-    d3.selectAll('.link').attr('stroke', d => {
+    d3.selectAll('.link').style('stroke', d => {
       const topLevelAncestor = d.target.ancestors().find(ancestor => ancestor.depth === 1);
       return topLevelAncestor ? state.colorScale(topLevelAncestor.data.name) : 'rgba(255, 255, 255, 0.2)';
     });
@@ -58,7 +58,7 @@ function updateD3Colors(isLight) {
     return '#999';
   });
 
-  d3.selectAll('.link').attr('stroke', linkColor);
+  d3.selectAll('.link').style('stroke', linkColor);
   d3.selectAll('.node text').style('fill', isLight ? '#1a1a1a' : '#fff');
 }
 

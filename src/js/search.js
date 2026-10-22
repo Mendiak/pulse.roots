@@ -154,7 +154,7 @@ function scrollToNode(d) {
 
   window.scrollTo({
     top: scrollY,
-    behavior: 'smooth'
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
   });
 }
 
