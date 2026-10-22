@@ -74,37 +74,6 @@ footer {
   margin-top: 4px;
 }
 
-.support-bmc {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--brand-coffee-ink);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: var(--radius-3xl);
-  background: rgba(255, 221, 0, 0.08);
-  border: 1px solid rgba(255, 221, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.support-bmc:hover {
-  color: var(--text-on-coffee);
-  background: #FFDD00;
-  border-color: #FFDD00;
-  transform: translateY(-1px);
-}
-
-.support-bmc:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--accent-pink);
-}
-
-.support-bmc i {
-  font-size: 1rem;
-}
-
 #footer-links h3,
 #footer-social-section h3 {
   font-size: 0.85rem;

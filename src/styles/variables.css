@@ -196,12 +196,6 @@ body.light-mode #footer-support h3 {
   color: var(--text-main);
 }
 
-body.light-mode .support-bmc {
-  background: rgba(255, 221, 0, 0.15);
-  border-color: rgba(255, 221, 0, 0.4);
-  color: #b8860b;
-}
-
 body.light-mode .footer-link {
   color: var(--text-muted);
 }
