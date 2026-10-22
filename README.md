@@ -4,6 +4,12 @@ PulseRoots is an interactive visualization of the evolution of electronic music.
 
 **Live Demo:** [https://mendiak.github.io/pulse.roots/](https://mendiak.github.io/pulse.roots/)
 
+## Screenshots
+
+| Light mode | Dark mode |
+|:---:|:---:|
+| <img src="docs/screenshots/screenshot-light.webp" alt="PulseRoots – light mode" width="420"> | <img src="docs/screenshots/screenshot-dark.webp" alt="PulseRoots – dark mode" width="420"> |
+
 ## Features
 
 - **Interactive Visualization**: Choose between Tree, Radial, and **Timeline** layouts powered by D3.js.
@@ -111,6 +117,8 @@ pulse.roots/
 │   ├── assets/              # Images, icons, branding
 │   ├── robots.txt
 │   └── .nojekyll
+├── docs/
+│   └── screenshots/         # README screenshots (light and dark mode)
 ├── dist/                    # Production build output (generated)
 ├── scripts/                 # Legacy translation utilities
 ├── .env                     # Local environment variables (gitignored)
