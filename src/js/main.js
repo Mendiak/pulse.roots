@@ -72,6 +72,17 @@ async function fetchData() {
     state.allGenreData = data;
     buildGenreMap(data);
     renderStats(data);
+
+    // The tree sizes its margins from measured label widths, so wait for the
+    // webfont to load before drawing to avoid measuring the fallback font.
+    if (document.fonts && document.fonts.ready) {
+      try {
+        await document.fonts.ready;
+      } catch (error) {
+        console.warn('Fonts did not finish loading before rendering the tree:', error);
+      }
+    }
+
     createTree(data);
 
     // The accordion is only visible on small screens; build it lazily so the
