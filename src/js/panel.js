@@ -17,7 +17,10 @@ const STRINGS = {
     subgenres: 'Subgenres & Related',
     buyCoffee: 'Buy me a coffee',
     reportError: 'Report an error',
-    nowPlaying: 'Now Playing'
+    nowPlaying: 'Now Playing',
+    titleSuffix: 'Subgenres, Artists & Tracks',
+    titleFallback: '{name} | PulseRoots',
+    homeTitle: 'Electronic Music Map & Genre Tree | PulseRoots'
   },
   es: {
     share: 'Compartir',
@@ -34,7 +37,10 @@ const STRINGS = {
     subgenres: 'Subgéneros y relacionados',
     buyCoffee: 'Invítame a un café',
     reportError: 'Reportar un error',
-    nowPlaying: 'Reproduciendo'
+    nowPlaying: 'Reproduciendo',
+    titleSuffix: 'subgéneros, artistas y pistas',
+    titleFallback: '{name} en PulseRoots',
+    homeTitle: 'Mapa de géneros de música electrónica | PulseRoots'
   }
 };
 
@@ -135,8 +141,10 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   document.querySelector('link[rel="canonical"]').setAttribute('href', newUrl);
   document.querySelector('meta[property="og:url"]').setAttribute('content', newUrl);
   const genreDisplayName = itemData.name || itemData.style;
-  const longTitle = `${genreDisplayName}: Subgenres, Artists & Tracks | PulseRoots`;
-  const newTitle = longTitle.length <= 60 ? longTitle : `${genreDisplayName} | PulseRoots`;
+  const longTitle = `${genreDisplayName}: ${str('titleSuffix')} | PulseRoots`;
+  const newTitle = longTitle.length <= 60
+    ? longTitle
+    : str('titleFallback', { name: genreDisplayName });
   document.title = newTitle;
   document.querySelector('meta[property="og:title"]').setAttribute('content', newTitle);
   document.querySelector('meta[name="twitter:title"]').setAttribute('content', newTitle);
@@ -542,7 +550,21 @@ export async function closeInfoPanel() {
   }
 
   if (window.location.pathname.includes('/genres/')) {
-    history.pushState(null, '', `${state.BASE_PATH}${window.PR_LANG === 'es' ? '/es' : '/'}`);
+    const homePath = `${state.BASE_PATH}${window.PR_LANG === 'es' ? '/es' : '/'}`;
+    history.pushState(null, '', homePath);
+
+    // Keep the document metadata in sync with the URL the panel is closing to,
+    // otherwise a JS-rendering crawler keeps the genre canonical on the home view.
+    const homeUrl = `${window.location.origin}${homePath}`;
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', homeUrl);
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', homeUrl);
+    document.title = str('homeTitle');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', str('homeTitle'));
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) twitterTitle.setAttribute('content', str('homeTitle'));
   }
 
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
