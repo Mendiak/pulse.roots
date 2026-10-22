@@ -1,0 +1,383 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import ExploreIntro from './ExploreIntro.astro';
+import { genreDatasetLastmod } from '../utils/dataset-meta.js';
+
+export interface Props {
+  lang?: 'en' | 'es';
+  genreName: string;
+  fullSlugPath: string;
+  description?: string;
+  wikipediaUrl?: string;
+  spotifyTrackId?: string;
+  exampleTrack?: string;
+  keyArtists?: Array<{ name: string; url?: string }>;
+  children?: Array<{ name: string; slug: string; fullSlugPath: string }>;
+  breadcrumbs?: Array<{ name: string; slug: string }>;
+  isAmbiguous?: boolean;
+  contextLabel?: string;
+  siblings?: Array<{ name: string; fullSlugPath: string }>;
+  related?: Array<{ name: string; fullSlugPath: string; shared: number }>;
+  descendantCount?: number;
+  alternate?: { path: string; contextLabel: string } | null;
+}
+
+const SITE = 'https://mendiak.github.io/pulse.roots';
+
+const {
+  lang = 'en',
+  genreName,
+  fullSlugPath,
+  description,
+  wikipediaUrl,
+  spotifyTrackId,
+  exampleTrack,
+  keyArtists = [],
+  children = [],
+  breadcrumbs = [],
+  isAmbiguous = false,
+  contextLabel = '',
+  siblings = [],
+  related = [],
+  descendantCount = 0,
+  alternate = null,
+} = Astro.props;
+
+const langPrefix = lang === 'es' ? '/es' : '';
+const basePath = `/pulse.roots${langPrefix}`;
+const datasetLastmod = genreDatasetLastmod(lang);
+
+const copy = lang === 'es'
+  ? {
+      home: 'Inicio',
+      partOf: 'Parte de',
+      glance: 'de un vistazo',
+      family: 'Familia',
+      parentStyle: 'Estilo padre',
+      subgenres: 'Subgéneros',
+      direct: 'directos',
+      total: 'en total',
+      path: 'Ruta',
+      keyArtists: 'Artistas clave',
+      listen: 'Escucha un ejemplo',
+      subgenresH: 'Subgéneros',
+      relatedH: 'Estilos relacionados',
+      shareH: 'Estilos que comparten artistas clave',
+      shareIntro: `Estos estilos comparten artistas clave con ${genreName}.`,
+      readMore: `Leer más sobre ${genreName} en Wikipedia`,
+      altIntro: `Esta página cubre ${genreName} dentro de ${contextLabel || 'esta rama'}.`,
+      altSee: `Ver también ${genreName} en ${contextLabel}.`,
+      altOther: `Ver también la otra página de ${genreName}.`,
+      titleSuffix: 'subgéneros, artistas y pistas',
+      metaFallback: `Explora ${genreName} en la música electrónica en PulseRoots.`,
+      history: 'Historia de la música:',
+      loading: 'Cargando géneros...',
+      backTop: 'Volver arriba',
+      infoPanel: 'Información del género',
+      breadcrumbLabel: 'Ruta de navegación',
+      itemsList: `Subgéneros de ${genreName}`,
+    }
+  : {
+      home: 'Home',
+      partOf: 'Part of',
+      glance: 'at a glance',
+      family: 'Family',
+      parentStyle: 'Parent style',
+      subgenres: 'Subgenres',
+      direct: 'direct',
+      total: 'in total',
+      path: 'Path',
+      keyArtists: 'Key artists',
+      listen: 'Listen to an example',
+      subgenresH: 'Subgenres',
+      relatedH: 'Related styles',
+      shareH: 'Styles that share key artists',
+      shareIntro: `These styles have key artists in common with ${genreName}.`,
+      readMore: `Read more about ${genreName} on Wikipedia`,
+      altIntro: `This page covers ${genreName} within ${contextLabel || 'this branch'}.`,
+      altSee: `See also ${genreName} in ${contextLabel}.`,
+      altOther: `See also the other ${genreName} page.`,
+      titleSuffix: 'Subgenres, Artists & Tracks',
+      metaFallback: `Explore ${genreName} in electronic music on PulseRoots.`,
+      history: 'Music History:',
+      loading: 'Loading genres...',
+      backTop: 'Back to Top',
+      infoPanel: 'Genre Information',
+      breadcrumbLabel: 'Breadcrumb',
+      itemsList: `${genreName} subgenres`,
+    };
+
+const parent = breadcrumbs[breadcrumbs.length - 1] || null;
+const displayName = isAmbiguous && contextLabel ? `${genreName} (${contextLabel})` : genreName;
+const family = breadcrumbs[0] || null;
+const pathNames = [...breadcrumbs.map(crumb => crumb.name), genreName];
+
+const canonical = `${SITE}${langPrefix}/genres/${fullSlugPath}/`;
+const metaDesc = description
+  ? description.substring(0, 155).replace(/\s+\S*$/, '')
+  : copy.metaFallback;
+
+// Keyword-first title, trimmed to stay inside the ~60 character SERP limit.
+// The fallback differs per language so EN and ES never share a title when a
+// very long name cannot fit the descriptive suffix.
+const longTitle = `${displayName}: ${copy.titleSuffix} | PulseRoots`;
+const fallbackTitle = lang === 'es' ? `${displayName} en PulseRoots` : `${displayName} | PulseRoots`;
+const title = longTitle.length <= 60 ? longTitle : fallbackTitle;
+
+const breadcrumbEntries = [
+  { name: copy.home, url: `${SITE}${langPrefix}/` },
+  ...breadcrumbs.map(crumb => ({
+    name: crumb.name,
+    url: `${SITE}${langPrefix}/genres/${crumb.slug}/`,
+  })),
+];
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        ...breadcrumbEntries.map((entry, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": entry.name,
+          "item": entry.url,
+        })),
+        {
+          "@type": "ListItem",
+          "position": breadcrumbEntries.length + 1,
+          "name": displayName,
+          "item": canonical,
+        },
+      ],
+    },
+    {
+      "@type": "MusicGenre",
+      "name": displayName,
+      "description": description || metaDesc,
+      "url": canonical,
+      "inLanguage": lang,
+      "isPartOf": { "@id": `${SITE}/#website` },
+      ...(datasetLastmod ? { "dateModified": new Date(datasetLastmod).toISOString() } : {}),
+      ...(wikipediaUrl ? { "sameAs": [wikipediaUrl] } : {}),
+    },
+    ...(children.length > 0
+      ? [{
+          "@type": "ItemList",
+          "name": copy.itemsList,
+          "numberOfItems": children.length,
+          "itemListElement": children.map((child, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": child.name,
+            "url": `${SITE}${langPrefix}/genres/${child.fullSlugPath}/`,
+          })),
+        }]
+      : []),
+  ],
+});
+
+function buildBreadcrumbHtml() {
+  let html = `<nav id="breadcrumbs" aria-label="${copy.breadcrumbLabel}">`;
+  html += `<a href="${basePath}/">${copy.home}</a>`;
+  for (const crumb of breadcrumbs) {
+    html += ` <span class="breadcrumb-sep">›</span> <a href="${basePath}/genres/${crumb.slug}/">${crumb.name}</a>`;
+  }
+  html += ` <span class="breadcrumb-sep">›</span> <span class="breadcrumb-current">${displayName}</span>`;
+  html += '</nav>';
+  return html;
+}
+
+const genreScript = `window.PR_LANG='${lang}';window.PR_I18N={};window.PR_I18N_FALLBACK={};window.PR_GENRE_TO_LOAD=${JSON.stringify(genreName)};`;
+---
+
+<BaseLayout
+  title={title}
+  description={metaDesc}
+  canonical={canonical}
+  ogTitle={title}
+  ogDescription={metaDesc}
+  lang={lang}
+  jsonLd={jsonLd}
+  esAvailable
+>
+  <div id="scroll-progress-container">
+    <div id="scroll-progress-bar"></div>
+  </div>
+
+  <Header brandAs="div" />
+
+  <div id="history-banner">
+    <p><strong>{copy.history}</strong> <span id="history-fact"></span></p>
+  </div>
+
+  <main>
+    <div id="main-container">
+      <div id="tooltip" class="info-box" aria-labelledby="intro-title">
+        <Fragment set:html={buildBreadcrumbHtml()} />
+        <ExploreIntro />
+      </div>
+
+      <div id="visualization-container">
+        <div id="loading-spinner" class="hidden">
+          <div class="spinner"></div>
+          <p>{copy.loading}</p>
+        </div>
+        <svg id="treemap"></svg>
+      </div>
+
+      <div id="mobile-nav-container">
+        <h2 data-i18n="mobileNav.title">{lang === 'es' ? 'Explorar géneros' : 'Explore Genres'}</h2>
+        <div id="mobile-search-container">
+          <input type="text" id="mobile-search-input" placeholder={lang === 'es' ? 'Filtrar géneros...' : 'Filter genres...'} autocomplete="off" aria-label={lang === 'es' ? 'Filtrar géneros' : 'Filter genres'} data-i18n-placeholder="search.mobilePlaceholder" data-i18n-aria-label="search.mobileLabel">
+          <button id="mobile-clear-button" class="hidden"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div id="accordion-controls">
+          <button id="expand-all-btn" data-i18n="mobileNav.expandAll">{lang === 'es' ? 'Expandir todo' : 'Expand All'}</button>
+          <button id="collapse-all-btn" data-i18n="mobileNav.collapseAll">{lang === 'es' ? 'Contraer todo' : 'Collapse All'}</button>
+        </div>
+        <ul id="mobile-genre-list"></ul>
+      </div>
+    </div>
+
+    <section id="genre-details" class="container" aria-labelledby="genre-heading">
+      <h1 id="genre-heading" class="genre-heading">{displayName}</h1>
+
+      {parent && (
+        <p class="genre-parent">
+          {copy.partOf} <a href={`${basePath}/genres/${parent.slug}/`}>{parent.name}</a>
+        </p>
+      )}
+
+      {description && <p class="genre-description">{description}</p>}
+
+      <section class="genre-block genre-glance">
+        <h2>{displayName} {copy.glance}</h2>
+        <dl class="genre-glance-list">
+          {family && (
+            <>
+              <dt>{copy.family}</dt>
+              <dd><a href={`${basePath}/genres/${family.slug}/`}>{family.name}</a></dd>
+            </>
+          )}
+          {parent && (
+            <>
+              <dt>{copy.parentStyle}</dt>
+              <dd><a href={`${basePath}/genres/${parent.slug}/`}>{parent.name}</a></dd>
+            </>
+          )}
+          <dt>{copy.subgenres}</dt>
+          <dd>
+            {children.length} {copy.direct}
+            {descendantCount > children.length && <> · {descendantCount} {copy.total}</>}
+          </dd>
+          <dt>{copy.path}</dt>
+          <dd>{pathNames.join(' › ')}</dd>
+        </dl>
+      </section>
+
+      {keyArtists.length > 0 && (
+        <section class="genre-block">
+          <h2>{copy.keyArtists}</h2>
+          <ul class="genre-list">
+            {keyArtists.map(artist => (
+              <li>
+                {artist.url
+                  ? <a href={`https://open.spotify.com/artist/${artist.url}`} target="_blank" rel="noopener noreferrer">{artist.name}</a>
+                  : <span>{artist.name}</span>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {exampleTrack && (
+        <section class="genre-block">
+          <h2>{copy.listen}</h2>
+          <p>
+            {spotifyTrackId
+              ? <a href={`https://open.spotify.com/track/${spotifyTrackId}`} target="_blank" rel="noopener noreferrer">{exampleTrack}</a>
+              : exampleTrack}
+          </p>
+        </section>
+      )}
+
+      {children.length > 0 && (
+        <section class="genre-block">
+          <h2>{copy.subgenresH}</h2>
+          <ul class="genre-list">
+            {children.map(child => (
+              <li><a href={`${basePath}/genres/${child.fullSlugPath}/`}>{child.name}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {siblings.length > 0 && (
+        <section class="genre-block">
+          <h2>{copy.relatedH}</h2>
+          <ul class="genre-list">
+            {siblings.map(sibling => (
+              <li><a href={`${basePath}/genres/${sibling.fullSlugPath}/`}>{sibling.name}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {related.length > 0 && (
+        <section class="genre-block">
+          <h2>{copy.shareH}</h2>
+          <p>{copy.shareIntro}</p>
+          <ul class="genre-list">
+            {related.map(item => (
+              <li><a href={`${basePath}/genres/${item.fullSlugPath}/`}>{item.name}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {wikipediaUrl && (
+        <p class="genre-source">
+          <a href={wikipediaUrl} target="_blank" rel="noopener noreferrer">
+            {copy.readMore}
+          </a>
+        </p>
+      )}
+
+      {alternate && (
+        <p class="genre-source">
+          {copy.altIntro}
+          {alternate.contextLabel
+            ? <> <a href={`${basePath}/genres/${alternate.path}/`}>{copy.altSee}</a></>
+            : <> <a href={`${basePath}/genres/${alternate.path}/`}>{copy.altOther}</a></>}
+        </p>
+      )}
+    </section>
+
+    <button id="back-to-top-btn" aria-label={copy.backTop}>
+      <i class="bi bi-arrow-up"></i>
+    </button>
+  </main>
+
+  <div id="modal-overlay"></div>
+
+  <div id="info-panel" role="dialog" aria-modal="true" aria-label={copy.infoPanel} aria-labelledby="info-panel-title">
+    <div id="info-content"></div>
+    <div id="scroll-indicator" class="hidden">
+      <i class="bi bi-arrow-down-circle"></i>
+    </div>
+  </div>
+
+  <!-- mini-player removed -->
+
+  <Footer />
+
+  <script is:inline set:html={genreScript} />
+
+  <script>
+    import '../js/main.js';
+  </script>
+</BaseLayout>

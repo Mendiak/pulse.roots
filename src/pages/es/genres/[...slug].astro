@@ -1,0 +1,12 @@
+---
+import GenrePage from '../../../components/GenrePage.astro';
+import { buildGenrePaths } from '../../../utils/genre-paths.js';
+
+export async function getStaticPaths() {
+  return buildGenrePaths('es');
+}
+
+const props = Astro.props;
+---
+
+<GenrePage {...props} lang="es" />

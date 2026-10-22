@@ -31,6 +31,8 @@ export interface Props {
   noindex?: boolean;
   /** Pages that are not part of the indexed site (e.g. 404) omit the canonical. */
   hideCanonical?: boolean;
+  /** Override whether this page has a Spanish counterpart (default: non-genre pages). */
+  esAvailable?: boolean;
 }
 
 const baseUrl = 'https://mendiak.github.io/pulse.roots';
@@ -58,6 +60,7 @@ const {
   jsonLd = '',
   noindex = false,
   hideCanonical = false,
+  esAvailable,
 } = Astro.props;
 
 const ogLocale = lang === 'es' ? 'es_ES' : 'en_US';
@@ -74,9 +77,9 @@ const enPathname = basePathname.replace(/^\/es(?=\/|$)/, '') || '/';
 const enHref = `${baseUrl}${enPathname}`;
 const esHref = `${baseUrl}/es${enPathname === '/' ? '/' : enPathname}`;
 
-// Genre pages only exist in the default locale.
+// Genre pages exist in both locales; other sections are translated page by page.
 const isGenrePage = canonical.includes('/genres/');
-const hasSpanish = !isGenrePage;
+const hasSpanish = esAvailable ?? !isGenrePage;
 
 // Site-wide entities emitted on every page so page-level graphs can reference
 // them by @id without redefining them.

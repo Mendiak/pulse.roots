@@ -146,9 +146,6 @@ for (const page of pages) {
   if (/href="[^"]*\/genres\/[^"]*\.html"/.test(page.html)) {
     fail(`${page.url} links to a legacy .html genre URL`);
   }
-  if (page.html.includes('/pulse.roots/es/genres/')) {
-    fail(`${page.url} links to a removed /es/genres/ redirect`);
-  }
 }
 for (const [href, count] of brokenLinks) {
   fail(`broken internal link (${count}x): ${href}`);
