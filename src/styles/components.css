@@ -329,6 +329,12 @@ body.light-mode .coffee-link--pill {
   color: #b8860b;
 }
 
+body.light-mode .coffee-link--pill:hover {
+  background: var(--brand-coffee);
+  border-color: var(--brand-coffee);
+  color: var(--text-on-coffee);
+}
+
 /* --- Ripple Effect --- */
 .ripple-btn {
   position: relative;

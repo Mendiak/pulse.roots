@@ -1,6 +1,7 @@
 ---
 // Shared "How to Explore" sidebar shown in the left info-box on the home page
 // and on the genre detail pages (behind the info panel).
+import CoffeeLink from './CoffeeLink.astro';
 ---
 
 <section>
@@ -18,7 +19,7 @@
   <p>For each genre, we've included a "Key Artists" section featuring pioneers and standout musicians who have significantly shaped its sound.</p>
 
   <h2><i class="bi bi-keyboard" aria-hidden="true"></i> Accessibility</h2>
-  <p>PulseRoots is keyboard-accessible. Use the <strong>Tab</strong> key to navigate through the genre tree nodes, and press <strong>Enter</strong> or <strong>Space</strong> to open the details panel for a selected genre.</p>
+  <p>PulseRoots is keyboard-accessible. Press <strong>Tab</strong> to reach the genre tree, then use the <strong>arrow keys</strong> to move between genres and press <strong>Enter</strong> or <strong>Space</strong> to open the details panel for the selected genre.</p>
 
   <h2><i class="bi bi-journal-text" aria-hidden="true"></i> Note on Classification</h2>
   <p>This visualization represents one interpretation of how electronic music genres are categorized. Music is fluid, and other classifications might group styles differently based on cultural, historical, or sonic perspectives.</p>
@@ -33,7 +34,7 @@
   <p>Thank you for visiting, and I hope you enjoy exploring the world of electronic music.</p>
   <p>If you have any suggestions, improvement proposals, if you've found any errors, or just want to say 'Hi!', feel free to write to me through our <a href="/pulse.roots/contact/" class="info-box-link">contact page</a>.</p>
 
-  <p style="margin-top: 24px; text-align: center;">
-    <a href="https://www.buymeacoffee.com/Mendiak" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:0.8em;opacity:0.6;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="bi bi-cup-hot"></i> Buy me a coffee</a>
+  <p class="coffee-cta">
+    <CoffeeLink />
   </p>
 </section>

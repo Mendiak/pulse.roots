@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import GenreFamilies from '../../components/GenreFamilies.astro';
 import SiteExplainer from '../../components/SiteExplainer.astro';
+import CoffeeLink from '../../components/CoffeeLink.astro';
 import { siteFaq } from '../../data/site-faq.js';
 
 const canonical = 'https://mendiak.github.io/pulse.roots/es/';
@@ -64,7 +65,7 @@ const jsonLd = JSON.stringify({
           <p>Para cada género, incluimos una sección de "Artistas clave" con pioneros y músicos destacados que han moldeado su sonido.</p>
 
           <h2><i class="bi bi-keyboard" aria-hidden="true"></i> Accesibilidad</h2>
-          <p>PulseRoots es accesible por teclado. Usa la tecla <strong>Tab</strong> para navegar por los nodos del árbol de géneros y presiona <strong>Enter</strong> o <strong>Space</strong> para abrir el panel de detalles.</p>
+          <p>PulseRoots es accesible por teclado. Pulsa <strong>Tab</strong> para llegar al árbol de géneros, usa las <strong>flechas</strong> para moverte entre géneros y pulsa <strong>Enter</strong> o <strong>Espacio</strong> para abrir el panel de detalles.</p>
 
           <h2><i class="bi bi-journal-text" aria-hidden="true"></i> Nota sobre la clasificación</h2>
           <p>Esta visualización representa una interpretación de cómo se categorizan los géneros de música electrónica. La música es fluida y otras clasificaciones podrían agrupar los estilos de manera diferente.</p>
@@ -79,8 +80,8 @@ const jsonLd = JSON.stringify({
           <p>Gracias por visitarnos, espero que disfrutes explorando el mundo de la música electrónica.</p>
           <p>Si tienes sugerencias, propuestas de mejora, has encontrado errores, o solo quieres decir "¡Hola!", no dudes en escribirme a través de nuestra <a href="/pulse.roots/contact/" class="info-box-link">página de contacto</a>.</p>
 
-          <p style="margin-top: 24px; text-align: center;">
-            <a href="https://www.buymeacoffee.com/Mendiak" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;color:var(--text-muted);text-decoration:none;font-size:0.8em;opacity:0.6;transition:opacity 0.2s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'"><i class="bi bi-cup-hot"></i> Buy me a coffee</a>
+          <p class="coffee-cta">
+            <CoffeeLink />
           </p>
         </section>
       </div>
