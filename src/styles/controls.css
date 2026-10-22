@@ -1,18 +1,17 @@
-/* Wrapper for layout switch controls */
-.header-control-group {
+/* Shared pill container for header control groups */
+.header-group {
   display: flex;
-  background: var(--glass-bg);
-  border-radius: var(--radius-sm);
-  padding: 2px;
+  align-items: center;
   gap: 2px;
+  padding: var(--header-group-pad);
+  background: var(--glass-bg);
+  border-radius: var(--header-group-radius);
 }
 
-#lang-selector {
-  display: flex;
-  gap: 1px;
-  background: var(--glass-bg);
-  border-radius: var(--radius-sm);
-  padding: 2px;
+@media (pointer: coarse) {
+  .lang-btn {
+    min-width: 40px;
+  }
 }
 
 .lang-btn {
@@ -22,14 +21,18 @@
   font-size: 11px;
   font-weight: 600;
   cursor: pointer;
-  padding: 4px 7px;
-  border-radius: var(--radius-sm);
+  padding: 0 8px;
+  min-width: 34px;
+  height: var(--header-control-height);
+  border-radius: var(--header-radius);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
 }
 
 .lang-btn:hover {
@@ -48,8 +51,10 @@
   color: var(--text-muted);
   font-size: 16px;
   cursor: pointer;
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
+  padding: 0 var(--header-btn-px);
+  min-width: var(--header-control-height);
+  height: var(--header-control-height);
+  border-radius: var(--header-radius);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -70,6 +75,11 @@
 }
 
 .layout-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
+}
+
+.lang-btn:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px var(--accent-pink);
 }
@@ -112,6 +122,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#loading-spinner.error {
+  color: var(--text-muted);
+  max-width: 320px;
+}
+
+#loading-spinner.error i {
+  display: block;
+  font-size: 2rem;
+  color: var(--accent-pink);
+  margin-bottom: 12px;
+}
+
+.loading-error-msg {
+  margin: 0 0 16px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.retry-btn {
+  background: var(--accent-gradient);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.retry-btn:hover {
+  box-shadow: var(--shadow-neon);
 }
 
 #error-message {

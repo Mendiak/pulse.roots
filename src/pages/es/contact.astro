@@ -5,6 +5,28 @@ import Footer from '../../components/Footer.astro';
 
 const canonical = 'https://mendiak.github.io/pulse.roots/es/contact/';
 const web3formsKey = import.meta.env.WEB3FORMS_ACCESS_KEY || '41398cfd-0efd-45fa-859e-50b9e66d6f31';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": `${canonical}#contact`,
+      "url": canonical,
+      "name": "Contacto - PulseRoots",
+      "description": "Sugiere un nuevo género de música electrónica, reporta un error o envía tu opinión sobre PulseRoots.",
+      "isPartOf": { "@id": "https://mendiak.github.io/pulse.roots/#website" },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mendiak.github.io/pulse.roots/es/" },
+        { "@type": "ListItem", "position": 2, "name": "Contacto", "item": canonical }
+      ]
+    }
+  ]
+});
 ---
 
 <BaseLayout
@@ -12,10 +34,11 @@ const web3formsKey = import.meta.env.WEB3FORMS_ACCESS_KEY || '41398cfd-0efd-45fa
   description="Sugiere un nuevo género de música electrónica, reporta un error o envía tu opinión sobre PulseRoots - la visualización interactiva de géneros musicales."
   canonical={canonical}
   lang="es"
+  jsonLd={jsonLd}
 >
-  <Header simple />
+  <Header simple brandAs="div" />
   <div id="main-container" class="container">
-    <h2><i class="bi bi-envelope" aria-hidden="true"></i> Contáctame</h2>
+    <h1><i class="bi bi-envelope" aria-hidden="true"></i> Contáctame</h1>
     <p>¿Tienes ideas para el sitio, has encontrado un error o simplemente quieres saludar? ¡No seas tímido, escríbeme! Me encantará saber de ti.</p>
 
     <form action="https://api.web3forms.com/submit" method="POST">
@@ -87,8 +110,8 @@ const web3formsKey = import.meta.env.WEB3FORMS_ACCESS_KEY || '41398cfd-0efd-45fa
   <style>
     #main-container { flex-direction: column; margin: 40px auto; width: 100%; max-width: 600px; }
     .container { padding: 40px; }
-    h2 { color: var(--text-main); margin-top: 0; font-size: 1.75rem; display: flex; align-items: center; gap: 12px; }
-    h2 i { color: var(--accent-pink); }
+    h1 { color: var(--text-main); margin-top: 0; font-size: 1.75rem; display: flex; align-items: center; gap: 12px; }
+    h1 i { color: var(--accent-pink); }
     p { color: var(--text-muted); }
     .container label { display: block; margin-top: 16px; margin-bottom: 4px; font-size: 0.9em; color: var(--text-muted); font-weight: 500; }
     .container label:first-of-type { margin-top: 0; }

@@ -3,9 +3,12 @@ import { state } from './state.js';
 import { slugify } from './utils.js';
 import { showInfoPanel } from './panel.js';
 
-export function createMobileNav(items, parentElement, parentColor = null) {
-  items.forEach(item => {
-    const baseId = `${slugify(item.name || item.style)}-${Math.random().toString(36).substr(2, 9)}`;
+export function createMobileNav(items, parentElement, parentColor = null, path = '') {
+  items.forEach((item, index) => {
+    // Deterministic ids (path + sibling index) so the saved accordion state can
+    // be restored after a reload. The index disambiguates duplicate names such
+    // as the two "Acid House" entries.
+    const baseId = `${path}${index}-${slugify(item.name || item.style) || 'item'}`;
     const subListId = `sub-list-${baseId}`;
 
     const listItem = document.createElement('li');
@@ -62,7 +65,7 @@ export function createMobileNav(items, parentElement, parentColor = null) {
       subList.id = subListId;
       subList.setAttribute('role', 'region');
       subList.setAttribute('aria-labelledby', buttonId);
-      createMobileNav(item.substyles, subList, currentColor);
+      createMobileNav(item.substyles, subList, currentColor, `${baseId}-`);
 
       listItem.appendChild(itemElement);
       listItem.appendChild(subList);

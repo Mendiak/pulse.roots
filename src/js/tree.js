@@ -240,11 +240,11 @@ export function createTree(data) {
       return d.x >= Math.PI ? 'rotate(180)' : null;
     })
     .style('font-family', '"Outfit", sans-serif')
-    .style('font-size', d => d.children ? '14px' : '13px')
+    .style('font-size', d => d.depth === 1 ? '14px' : '13px')
     .style('fill', document.body.classList.contains('light-mode') ? '#1a1a1a' : '#f5f5f5')
-    .style('font-weight', d => d.children ? '500' : '400')
+    .style('font-weight', d => d.depth === 1 ? '500' : '400')
     .style('letter-spacing', '0.01em')
-    .style('opacity', d => d.children ? 1 : 0.85)
+    .style('opacity', d => d.depth === 1 ? 1 : 0.85)
     .text(d => d.data.name);
 
   node.transition()

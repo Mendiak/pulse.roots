@@ -66,7 +66,7 @@ try {
       genreHtml += `  <li><a href="${genreBase}/${top.fullSlugPath}/">${escapeHtml(top.genreName)}</a></li>\n`;
     }
     genreHtml += '</ul>\n';
-    genreHtml += `<a class="footer-all-genres" href="${basePath}/${langPrefix}sitemap/">All genres &rarr;</a>\n`;
+    genreHtml += `<a class="footer-all-genres" href="${basePath}/genres/">All genres &rarr;</a>\n`;
   }
 } catch (e) {
   console.error('Error loading genre tree:', e);

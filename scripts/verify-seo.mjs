@@ -195,6 +195,80 @@ for (const page of indexable) {
   if (!/hreflang="x-default"/.test(page.html)) warn(`${page.url} has no hreflang="x-default"`);
 }
 
+/* --------------------------------------------------------------- hreflang */
+const pagesByUrl = new Map(pages.map(page => [page.url, page]));
+
+function alternateLinks(html) {
+  return [...html.matchAll(/<link\b[^>]*rel="alternate"[^>]*>/g)]
+    .map(match => match[0])
+    .map(tag => ({
+      hreflang: tag.match(/hreflang="([^"]+)"/)?.[1],
+      href: tag.match(/href="([^"]+)"/)?.[1],
+    }))
+    .filter(link => link.hreflang && link.href);
+}
+
+for (const page of indexable) {
+  const links = alternateLinks(page.html);
+  const langs = new Set(links.map(link => link.hreflang));
+  const absoluteUrl = `${SITE}${page.url}`;
+
+  if (!langs.has('x-default')) fail(`${page.url} has no hreflang="x-default"`);
+  if (!langs.has('en')) fail(`${page.url} has no hreflang="en"`);
+
+  for (const link of links) {
+    if (!link.href.startsWith(`${SITE}${BASE}/`)) {
+      fail(`${page.url} hreflang="${link.hreflang}" points outside the site: ${link.href}`);
+      continue;
+    }
+
+    const targetPath = link.href.slice(SITE.length);
+    const target = pagesByUrl.get(targetPath);
+    if (!target || (target.isRedirect && link.hreflang !== 'x-default')) {
+      fail(`${page.url} hreflang="${link.hreflang}" points to a missing page: ${link.href}`);
+      continue;
+    }
+    if (target.isRedirect) continue;
+
+    const backLinks = alternateLinks(target.html).map(item => item.href);
+    if (!backLinks.includes(absoluteUrl)) {
+      fail(`${page.url} hreflang="${link.hreflang}" is not reciprocal (${link.href} does not link back)`);
+    }
+  }
+}
+
+/* ------------------------------------------------------------- social image */
+for (const page of indexable) {
+  const image = page.html.match(/<meta property="og:image" content="([^"]*)"/)?.[1];
+  const imageAlt = page.html.match(/<meta property="og:image:alt" content="([^"]*)"/)?.[1];
+  const imageType = page.html.match(/<meta property="og:image:type" content="([^"]*)"/)?.[1];
+
+  if (!image) {
+    fail(`${page.url} has no og:image`);
+    continue;
+  }
+  if (!imageAlt) fail(`${page.url} has no og:image:alt`);
+
+  if (image.startsWith(`${SITE}${BASE}/`)) {
+    const local = path.join(DIST, image.slice(`${SITE}${BASE}/`.length));
+    if (!fs.existsSync(local)) fail(`${page.url} og:image does not exist: ${image}`);
+    if (/\.webp$/i.test(image)) {
+      warn(`${page.url} og:image is WebP; LinkedIn/Facebook may not render it`);
+    }
+    if (imageType === 'image/webp') {
+      warn(`${page.url} og:image:type is WebP`);
+    }
+  }
+}
+
+/* ------------------------------------------------------ structured data per type */
+for (const page of indexable) {
+  if (!/\/genres\/[^/]+\//.test(page.url)) continue;
+  if (!/"@type":"MusicGenre"/.test(page.html)) {
+    fail(`${page.url} is missing MusicGenre structured data`);
+  }
+}
+
 /* ------------------------------------------------------- robots & 404 page */
 const expectedNoindex = page =>
   page.isRedirect || page.url.includes('/thanks/') || page.url.endsWith('404.html');

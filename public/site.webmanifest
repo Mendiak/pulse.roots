@@ -1,0 +1,22 @@
+{
+  "name": "PulseRoots: Electronic Music Styles Tree",
+  "short_name": "PulseRoots",
+  "description": "Interactive map and genre tree of electronic music: 300+ styles from Techno to Ambient, with key artists and example tracks.",
+  "start_url": "/pulse.roots/",
+  "scope": "/pulse.roots/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    {
+      "src": "/pulse.roots/assets/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/pulse.roots/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

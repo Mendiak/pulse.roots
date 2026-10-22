@@ -29,7 +29,7 @@ if (submitAll) {
   const xml = fs.readFileSync(sitemapPath, 'utf-8');
   urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
 } else {
-  urls = [`${SITE}/`, `${SITE}/sitemap/`];
+  urls = [`${SITE}/`, `${SITE}/genres/`, `${SITE}/sitemap/`];
 }
 
 if (urls.length === 0) {

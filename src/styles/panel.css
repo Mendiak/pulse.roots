@@ -487,6 +487,40 @@
   box-shadow: 0 0 0 2px var(--accent-pink);
 }
 
+/* Back button shown while drilling through subgenres inside the panel */
+.panel-back-btn {
+  position: relative;
+  z-index: 1001;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: var(--radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+.panel-back-btn:hover,
+.panel-back-btn:active {
+  background: var(--accent-pink);
+  border-color: var(--accent-pink);
+  color: var(--text-on-accent);
+}
+
+.panel-back-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
+}
+
 /* --- External Links in Info Panel --- */
 .external-link-container {
   margin-top: 20px;

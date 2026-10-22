@@ -53,8 +53,7 @@
 
   #search-container,
   #layout-controls,
-  #fullscreen-btn,
-  #theme-toggle-btn {
+  #fullscreen-btn {
     display: none;
   }
 

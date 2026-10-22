@@ -17,14 +17,18 @@ const STRINGS = {
     readLess: 'Read less',
     linkCopied: 'Link copied!',
     copyLinkToClipboard: 'Copy link to clipboard',
-    failedToCopy: 'Failed to copy'
+    failedToCopy: 'Failed to copy',
+    loadError: 'We could not load the genres. Please check your connection and try again.',
+    retry: 'Try again'
   },
   es: {
     readMore: 'Leer más',
     readLess: 'Leer menos',
     linkCopied: '¡Enlace copiado!',
     copyLinkToClipboard: 'Copiar enlace al portapapeles',
-    failedToCopy: 'Error al copiar'
+    failedToCopy: 'Error al copiar',
+    loadError: 'No pudimos cargar los géneros. Comprueba tu conexión e inténtalo de nuevo.',
+    retry: 'Reintentar'
   }
 };
 
@@ -33,6 +37,23 @@ function str(key) {
   let val = STRINGS[lang][key];
   if (val === undefined) val = STRINGS.en[key];
   return typeof val === 'string' ? val : key;
+}
+
+let mobileNavBuilt = false;
+
+function isMobileViewport() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
+function buildMobileNav() {
+  if (mobileNavBuilt) return;
+  const list = document.getElementById('mobile-genre-list');
+  if (!list || !state.allGenreData) return;
+  createMobileNav(state.allGenreData, list);
+  mobileNavBuilt = true;
+  restoreAccordionState();
+  const container = document.getElementById('mobile-nav-container');
+  if (container) container.classList.add('loaded');
 }
 
 async function fetchData() {
@@ -52,12 +73,11 @@ async function fetchData() {
     buildGenreMap(data);
     renderStats(data);
     createTree(data);
-    createMobileNav(data, document.getElementById('mobile-genre-list'));
 
-    restoreAccordionState();
+    // The accordion is only visible on small screens; build it lazily so the
+    // full (hundreds of items) list is not rendered on desktop.
+    if (isMobileViewport()) buildMobileNav();
 
-    const mobileNavContainerEl = document.getElementById('mobile-nav-container');
-    if (mobileNavContainerEl) mobileNavContainerEl.classList.add('loaded');
     if (loadingSpinner) loadingSpinner.classList.add('hidden');
 
     const treeBtn = document.getElementById('tree-layout-btn');
@@ -88,11 +108,10 @@ async function fetchData() {
 
     const expandAllBtn = document.getElementById('expand-all-btn');
     const collapseAllBtn = document.getElementById('collapse-all-btn');
-    const accordionItems = document.querySelectorAll('#mobile-genre-list .genre-item[aria-expanded]');
 
     if (expandAllBtn && collapseAllBtn) {
       expandAllBtn.addEventListener('click', () => {
-        accordionItems.forEach(item => {
+        document.querySelectorAll('#mobile-genre-list .genre-item[aria-expanded]').forEach(item => {
           item.setAttribute('aria-expanded', 'true');
           const subList = document.getElementById(item.getAttribute('aria-controls'));
           if (subList) {
@@ -103,7 +122,7 @@ async function fetchData() {
       });
 
       collapseAllBtn.addEventListener('click', () => {
-        accordionItems.forEach(item => {
+        document.querySelectorAll('#mobile-genre-list .genre-item[aria-expanded]').forEach(item => {
           item.setAttribute('aria-expanded', 'false');
           const subList = document.getElementById(item.getAttribute('aria-controls'));
           if (subList) {
@@ -126,6 +145,24 @@ async function fetchData() {
     handleUrl();
   } catch (error) {
     console.error('Error obtaining data:', error);
+    if (loadingSpinner) {
+      loadingSpinner.classList.remove('hidden');
+      loadingSpinner.classList.add('error');
+      loadingSpinner.innerHTML = `
+        <i class="bi bi-exclamation-triangle" aria-hidden="true"></i>
+        <p class="loading-error-msg">${str('loadError')}</p>
+        <button type="button" id="retry-load-btn" class="retry-btn">${str('retry')}</button>
+      `;
+      const retryBtn = document.getElementById('retry-load-btn');
+      if (retryBtn) {
+        retryBtn.addEventListener('click', () => {
+          loadingSpinner.classList.remove('error');
+          loadingSpinner.classList.add('hidden');
+          loadingSpinner.innerHTML = '';
+          fetchData();
+        });
+      }
+    }
   }
 }
 
@@ -202,18 +239,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   applyI18nToDOM();
   fetchData();
 
-  // Language selector: set correct URLs and highlight current language
-  const langBase = state.BASE_PATH || '';
-  const enBtn = document.getElementById('lang-btn-en');
-  const esBtn = document.getElementById('lang-btn-es');
-  if (enBtn) enBtn.href = langBase + '/';
-  if (esBtn) esBtn.href = langBase + '/es/';
+  // Build the mobile accordion if the viewport grows/shrinks into the mobile
+  // breakpoint (it may not have been built on first load).
+  const mobileMq = window.matchMedia('(max-width: 768px)');
+  mobileMq.addEventListener('change', (e) => {
+    if (e.matches) buildMobileNav();
+  });
+
+  // Highlight the current language.
   const langBtns = document.querySelectorAll('.lang-btn');
   const currentLang = window.PR_LANG || 'en';
   langBtns.forEach(btn => {
-    if (btn.dataset.lang === currentLang) {
-      btn.classList.add('active');
-    }
+    btn.classList.toggle('active', btn.dataset.lang === currentLang);
   });
 
   const mobileSearchInput = document.getElementById('mobile-search-input');
@@ -463,7 +500,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ripple.addEventListener('animationend', () => ripple.remove());
   }
 
-  document.querySelectorAll('#clear-button, #shuffle-button, #fullscreen-btn, #header-share-btn, #theme-toggle-btn, #header-contact-btn, .layout-btn, #back-to-top-btn, .share-popover-btn').forEach(btn => {
+  document.querySelectorAll('#clear-button, #shuffle-button, #fullscreen-btn, #header-share-btn, #theme-toggle-btn, #header-contact-btn, .layout-btn, .lang-btn, #back-to-top-btn, .share-popover-btn').forEach(btn => {
     btn.addEventListener('click', createRipple);
   });
 

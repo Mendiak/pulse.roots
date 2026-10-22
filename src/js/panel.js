@@ -6,6 +6,7 @@ const STRINGS = {
     share: 'Share',
     shareTitle: 'Share this genre',
     closePanel: 'Close info panel',
+    back: 'Back',
     noDescription: 'No description available.',
     readMoreWikipedia: 'Read more on Wikipedia',
     exampleTrack: 'Example track',
@@ -22,6 +23,7 @@ const STRINGS = {
     share: 'Compartir',
     shareTitle: 'Compartir este género',
     closePanel: 'Cerrar panel de información',
+    back: 'Atrás',
     noDescription: 'No hay descripción disponible.',
     readMoreWikipedia: 'Leer más en Wikipedia',
     exampleTrack: 'Pista de ejemplo',
@@ -89,6 +91,12 @@ function updateSchemaOrg(itemData) {
 let persistentGenreData = null;
 let persistentAccentColor = null;
 
+// Navigation history so the panel can offer a "back" button when the user
+// drills from a genre into its subgenres.
+let currentPanelData = null;
+let panelHistory = [];
+let navigatingBack = false;
+
 export function showInfoPanel(inputData, accentColor = '#ff0066') {
   const genreNameForLookup = inputData.name || inputData.style;
   const genreEntry = state.genreMap.get(genreNameForLookup);
@@ -105,6 +113,11 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   if (infoPanel.classList.contains('visible') && infoContent.dataset.genrePath === genreSlug) {
     return;
   }
+
+  if (!navigatingBack && infoPanel.classList.contains('visible') && currentPanelData && currentPanelData !== itemData) {
+    panelHistory.push(currentPanelData);
+  }
+  currentPanelData = itemData;
 
   updateSchemaOrg(itemData);
 
@@ -132,7 +145,9 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
     themeColorMeta.setAttribute('content', accentColor);
   }
 
-  state.focusedElementBeforePanel = document.activeElement;
+  if (!infoPanel.classList.contains('visible')) {
+    state.focusedElementBeforePanel = document.activeElement;
+  }
   document.getElementById('main-container').setAttribute('aria-hidden', 'true');
   document.querySelector('header').setAttribute('aria-hidden', 'true');
   document.querySelector('footer').setAttribute('aria-hidden', 'true');
@@ -193,6 +208,24 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
 
   const headerWrapper = document.createElement('div');
   headerWrapper.className = 'panel-header-wrapper';
+
+  if (panelHistory.length > 0) {
+    const backButton = document.createElement('button');
+    backButton.type = 'button';
+    backButton.className = 'panel-back-btn';
+    backButton.setAttribute('aria-label', str('back'));
+    backButton.title = str('back');
+    backButton.innerHTML = '<i class="bi bi-arrow-left" aria-hidden="true"></i>';
+    backButton.addEventListener('click', () => {
+      const previous = panelHistory.pop();
+      if (!previous) return;
+      navigatingBack = true;
+      showInfoPanel(previous, accentColor);
+      navigatingBack = false;
+    });
+    headerWrapper.appendChild(backButton);
+  }
+
   headerWrapper.appendChild(title);
   headerWrapper.appendChild(shareBtn);
   headerWrapper.appendChild(closeButton);
@@ -459,7 +492,7 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   const firstElement = focusableElements[0];
   const lastElement = focusableElements[focusableElements.length - 1];
 
-  infoPanel.addEventListener('keydown', (e) => {
+  infoPanel.onkeydown = (e) => {
     if (e.key !== 'Tab') return;
 
     if (e.shiftKey) {
@@ -473,13 +506,16 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
         e.preventDefault();
       }
     }
-  });
+  };
 }
 
 export async function closeInfoPanel() {
   const infoPanel = document.getElementById('info-panel');
   const overlay = document.getElementById('modal-overlay');
   const scrollIndicator = document.getElementById('scroll-indicator');
+
+  panelHistory = [];
+  currentPanelData = null;
 
   document.getElementById('main-container').removeAttribute('aria-hidden');
   document.querySelector('header').removeAttribute('aria-hidden');
@@ -505,12 +541,13 @@ export async function closeInfoPanel() {
   }
 
   if (window.location.pathname.includes('/genres/')) {
-    history.pushState(null, '', '/pulse.roots/');
+    history.pushState(null, '', `${state.BASE_PATH}${window.PR_LANG === 'es' ? '/es' : '/'}`);
   }
 
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
   if (themeColorMeta) {
-    themeColorMeta.setAttribute('content', '#080808');
+    const isLight = document.body.classList.contains('light-mode');
+    themeColorMeta.setAttribute('content', isLight ? '#f5f5f0' : '#080808');
   }
 
   if (state.focusedElementBeforePanel) {

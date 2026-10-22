@@ -16,7 +16,9 @@
   },
   "header": {
     "searchPlaceholder": "Search for a genre...",
+    "searchLabel": "Search for a genre",
     "clearButton": "Clear",
+    "clearSearchLabel": "Clear search",
     "shuffleTitle": "Random Genre",
     "treeLayoutTitle": "Tree Layout",
     "radialLayoutTitle": "Radial Layout",
@@ -33,13 +35,15 @@
     "homeLabel": "Home"
   },
   "search": {
+    "shortcutTitle": "Press / to search",
     "searchNav": {
-      "counter": "0 of 0",
+      "counter": "{current} of {total}",
       "prevTitle": "Previous result",
       "nextTitle": "Next result"
     },
     "mobilePlaceholder": "Filter genres...",
-    "mobileLabel": "Filter genres"
+    "mobileLabel": "Filter genres",
+    "noResults": "No results found"
   },
   "infoPanel": {
     "ariaLabel": "Genre information",

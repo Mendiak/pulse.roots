@@ -94,6 +94,13 @@ body.light-mode .active-searched-node text {
   font-style: italic;
 }
 
+.suggestions-empty {
+  padding: 12px 15px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
 /* --- Breadcrumbs --- */
 .breadcrumbs {
   display: flex;

@@ -31,19 +31,17 @@ header {
 }
 
 #search-container {
-  display: flex;
-  gap: 6px;
-  align-items: center;
   position: relative;
   flex-wrap: nowrap;
 }
 
 #search-input {
   width: 200px;
-  padding: 8px 14px;
+  height: var(--header-control-height);
+  padding: 0 14px;
   border-radius: var(--radius-md);
-  border: 1px solid var(--glass-border);
-  background: var(--glass-bg);
+  border: 1px solid transparent;
+  background: transparent;
   color: var(--text-main);
   font-size: 13px;
   font-family: inherit;
@@ -64,8 +62,8 @@ header {
 #header-share-btn,
 #theme-toggle-btn,
 #header-contact-btn {
-  min-width: 40px;
-  height: var(--header-element-height);
+  min-width: var(--header-control-height);
+  height: var(--header-control-height);
   padding: 0 var(--header-btn-px);
   border-radius: var(--header-radius);
   white-space: nowrap;
@@ -129,39 +127,52 @@ header {
   box-shadow: 0 0 0 2px var(--accent-pink);
 }
 
+/* The clear control lives inside the search pill; the icon alone keeps it
+   compact, and the accessible name covers screen readers. */
+#clear-button span {
+  display: none;
+}
+
 .share-btn-wrapper {
   position: relative;
   display: flex;
 }
 
-#header-share-btn.success {
-  background: var(--accent-pink);
-  color: var(--bg-dark);
+
+/* Inline result navigation inside the search pill */
+#search-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 2px 0 10px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
-
-body.light-mode #search-nav {
-  background: var(--glass-bg);
+#search-counter {
+  font-variant-numeric: tabular-nums;
 }
 
 body.light-mode #search-nav #search-counter {
-  color: var(--text-main) !important;
+  color: var(--text-main);
 }
 
 .search-nav-btns {
   display: flex;
-  gap: 4px;
+  gap: 0;
 }
 
 .search-nav-btns button {
   background: none;
   border: none;
-  color: var(--text-main);
-  padding: 4px 6px;
+  color: var(--text-muted);
+  padding: 0;
   font-size: 14px;
-  min-width: 36px;
-  min-height: 36px;
-  border-radius: var(--radius-sm);
+  width: 28px;
+  height: var(--header-control-height);
+  border-radius: var(--header-radius);
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -177,4 +188,15 @@ body.light-mode #search-nav #search-counter {
 .search-nav-btns button:disabled {
   opacity: 0.3;
   cursor: not-allowed;
+}
+
+/* Larger hit areas on touch devices */
+@media (pointer: coarse) {
+  .search-nav-btns button {
+    width: 36px;
+  }
+
+  #search-input {
+    min-height: 40px;
+  }
 }

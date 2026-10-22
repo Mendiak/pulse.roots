@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import GenreFamilies from '../../components/GenreFamilies.astro';
+import SiteExplainer from '../../components/SiteExplainer.astro';
+import { siteFaq } from '../../data/site-faq.js';
 
 const canonical = 'https://mendiak.github.io/pulse.roots/es/';
 const SITE = 'https://mendiak.github.io/pulse.roots';
@@ -11,24 +13,23 @@ const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebSite",
-      "@id": `${SITE}/#website`,
-      "name": "PulseRoots",
-      "url": `${SITE}/es/`,
-      "description": "Explora los géneros de la música electrónica con PulseRoots, un árbol interactivo del Techno al Ambient, con artistas y pistas de ejemplo.",
-      "inLanguage": ["en", "es"],
-      "publisher": { "@id": `${SITE}/#person` }
+      "@type": "WebPage",
+      "@id": `${SITE}/es/#webpage`,
+      "url": canonical,
+      "name": "Mapa de géneros de música electrónica | PulseRoots",
+      "isPartOf": { "@id": `${SITE}/#website` },
+      "inLanguage": "es",
+      "about": { "@id": `${SITE}/#website` }
     },
     {
-      "@type": "Person",
-      "@id": `${SITE}/#person`,
-      "name": "Mikel Aramendia",
-      "url": "https://mendiak.github.io/portfolio/",
-      "sameAs": [
-        "https://github.com/Mendiak",
-        "https://www.buymeacoffee.com/Mendiak"
-      ],
-      "knowsAbout": ["Electronic music", "Music genres", "Music history"]
+      "@type": "FAQPage",
+      "@id": `${SITE}/es/#faq`,
+      "inLanguage": "es",
+      "mainEntity": siteFaq.es.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": { "@type": "Answer", "text": item.a }
+      }))
     }
   ]
 });
@@ -93,20 +94,22 @@ const jsonLd = JSON.stringify({
       </div>
 
       <div id="mobile-nav-container">
-        <h2>Explorar Géneros</h2>
+        <h2 data-i18n="mobileNav.title">Explorar Géneros</h2>
         <div id="mobile-search-container">
-          <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off" aria-label="Filter genres">
+          <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off" aria-label="Filter genres" data-i18n-placeholder="search.mobilePlaceholder" data-i18n-aria-label="search.mobileLabel">
           <button id="mobile-clear-button" class="hidden"><i class="bi bi-x-lg"></i></button>
         </div>
         <div id="accordion-controls">
-          <button id="expand-all-btn">Expand All</button>
-          <button id="collapse-all-btn">Collapse All</button>
+          <button id="expand-all-btn" data-i18n="mobileNav.expandAll">Expand All</button>
+          <button id="collapse-all-btn" data-i18n="mobileNav.collapseAll">Collapse All</button>
         </div>
         <ul id="mobile-genre-list"></ul>
       </div>
     </div>
 
     <GenreFamilies lang="es" />
+
+    <SiteExplainer lang="es" />
 
     <button id="back-to-top-btn" aria-label="Back to Top">
       <i class="bi bi-arrow-up"></i>

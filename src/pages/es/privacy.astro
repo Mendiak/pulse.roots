@@ -4,6 +4,28 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 const canonical = 'https://mendiak.github.io/pulse.roots/es/privacy/';
+const SITE = 'https://mendiak.github.io/pulse.roots';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "PrivacyPolicy",
+      "@id": `${canonical}#privacy`,
+      "url": canonical,
+      "name": "Política de Privacidad - PulseRoots",
+      "isPartOf": { "@id": `${SITE}/#website` },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": `${SITE}/es/` },
+        { "@type": "ListItem", "position": 2, "name": "Política de Privacidad", "item": canonical }
+      ]
+    }
+  ]
+});
 ---
 
 <BaseLayout
@@ -11,6 +33,7 @@ const canonical = 'https://mendiak.github.io/pulse.roots/es/privacy/';
   description="Política de privacidad de PulseRoots - cómo manejamos tus datos cuando usas nuestro explorador interactivo de géneros de música electrónica."
   canonical={canonical}
   lang="es"
+  jsonLd={jsonLd}
 >
   <Header simple brandAs="div" />
   <div id="main-container" class="container">

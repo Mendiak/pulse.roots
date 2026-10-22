@@ -120,9 +120,12 @@
 
   /* Header Consistency */
   --header-element-height: 40px;
+  --header-control-height: 36px;
+  --header-group-pad: 2px;
   --header-btn-px: 10px;
   --header-icon-size: 18px;
   --header-radius: 8px;
+  --header-group-radius: 10px;
   --header-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -244,8 +247,8 @@ body.light-mode .layout-btn.active {
 }
 
 body.light-mode #search-input {
-  background: var(--secondary-dark);
-  border-color: var(--color-input-border);
+  background: transparent;
+  border-color: transparent;
   color: var(--text-main);
 }
 

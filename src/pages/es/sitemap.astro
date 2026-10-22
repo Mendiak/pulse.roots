@@ -1,45 +1,60 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import fs from 'fs';
-import path from 'path';
-import { slugify } from '../../utils/slug.js';
+import { loadGenres, flattenGenres, slugify } from '../../utils/genres-data.js';
 
-const canonical = 'https://mendiak.github.io/pulse.roots/es/sitemap/';
+const SITE = 'https://mendiak.github.io/pulse.roots';
+const canonical = `${SITE}/es/sitemap/`;
 
-const baseUrl = 'https://mendiak.github.io/pulse.roots';
-let genreLinks = '';
-
-try {
-  const filePath = path.resolve(process.cwd(), 'public', 'data', 'pulseroots.genres.es.json');
-  const fallbackPath = path.resolve(process.cwd(), 'public', 'data', 'pulseroots.genres.json');
-  const dataPath = fs.existsSync(filePath) ? filePath : fallbackPath;
-  if (fs.existsSync(dataPath)) {
-    const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-
-    const allGenres = [];
-    const traverse = (items, slugParts, depth) => {
-      for (const item of items) {
-        const name = item.name || item.style;
-        if (!name) continue;
-        const slug = slugify(name);
-        const fullSlugPath = [...slugParts, slug].join('/');
-        allGenres.push({ genreName: name, fullSlugPath, depth });
-        if (item.substyles && item.substyles.length > 0) {
-          traverse(item.substyles, [...slugParts, slug], depth + 1);
-        }
-      }
+const families = loadGenres('es')
+  .map(family => {
+    const name = family.style || family.name;
+    if (!name) return null;
+    const familySlug = slugify(name);
+    return {
+      name,
+      slug: familySlug,
+      styles: flattenGenres(family.substyles || [], 'es').map(style => ({
+        ...style,
+        fullSlugPath: `${familySlug}/${style.fullSlugPath}`,
+      })),
     };
-    traverse(data, [], 0);
+  })
+  .filter(Boolean)
+  .sort((a, b) => a.name.localeCompare(b.name));
 
-    genreLinks = allGenres.map(g => {
-      const url = `${baseUrl}/genres/${g.fullSlugPath}/`;
-      const indent = g.depth > 0 ? '  '.repeat(g.depth) : '';
-      return `${indent}<li><a href="${url}">${g.genreName}</a></li>`;
-    }).join('\n    ');
-  }
-} catch (e) {
-  console.error('Error loading genre data for sitemap:', e);
-}
+const totalStyles = families.reduce((sum, family) => sum + family.styles.length + 1, 0);
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${canonical}#collection`,
+      "url": canonical,
+      "name": "Mapa del Sitio - PulseRoots",
+      "description": "Todas las páginas y géneros de PulseRoots, agrupados por familia.",
+      "isPartOf": { "@id": `${SITE}/#website` },
+      "inLanguage": "es",
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": families.length,
+        "itemListElement": families.map((family, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": family.name,
+          "url": `${SITE}/genres/${family.slug}/`,
+        })),
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": `${SITE}/es/` },
+        { "@type": "ListItem", "position": 2, "name": "Mapa del Sitio", "item": canonical },
+      ],
+    },
+  ],
+});
 ---
 
 <BaseLayout
@@ -47,6 +62,7 @@ try {
   description="Mapa del sitio de PulseRoots - una visualización interactiva de géneros de música electrónica. Explora todas las páginas de géneros disponibles."
   canonical={canonical}
   lang="es"
+  jsonLd={jsonLd}
 >
   <header>
     <div id="header-container">
@@ -56,19 +72,32 @@ try {
     </div>
   </header>
   <main>
-    <div id="main-container" style="padding: 20px; max-width: 800px; margin: 0 auto;">
+    <div id="main-container" class="sitemap-page">
+      <p class="sitemap-lead">
+        Explora los {totalStyles} estilos de música electrónica de PulseRoots, agrupados por familia, o abre la
+        <a href="/pulse.roots/genres/">vista general de familias</a>.
+      </p>
+
       <h2>Todas las Páginas</h2>
       <ul>
-        <li><a href="https://mendiak.github.io/pulse.roots/es/">Inicio</a></li>
-        <li><a href="https://mendiak.github.io/pulse.roots/es/contact/">Contacto</a></li>
-        <li><a href="https://mendiak.github.io/pulse.roots/es/about/">Sobre PulseRoots</a></li>
-        <li><a href="https://mendiak.github.io/pulse.roots/es/privacy/">Política de Privacidad</a></li>
-        <li><a href="https://mendiak.github.io/pulse.roots/es/thanks/">Gracias</a></li>
+        <li><a href="/pulse.roots/es/">Inicio</a></li>
+        <li><a href="/pulse.roots/genres/">Géneros</a></li>
+        <li><a href="/pulse.roots/es/contact/">Contacto</a></li>
+        <li><a href="/pulse.roots/es/about/">Sobre PulseRoots</a></li>
+        <li><a href="/pulse.roots/es/privacy/">Política de Privacidad</a></li>
       </ul>
+
       <h2>Todos los Géneros</h2>
-      <ul>
-        {genreLinks}
-      </ul>
+      {families.map(family => (
+        <section class="sitemap-family">
+          <h3><a href={`/pulse.roots/genres/${family.slug}/`}>{family.name}</a></h3>
+          <ul>
+            {family.styles.map(style => (
+              <li><a href={`/pulse.roots/genres/${style.fullSlugPath}/`}>{style.genreName}</a></li>
+            ))}
+          </ul>
+        </section>
+      ))}
     </div>
   </main>
   <footer>
@@ -76,4 +105,16 @@ try {
       <p>&copy; 2026 PulseRoots. Mapeando el pulso de la música electrónica.</p>
     </div>
   </footer>
+
+  <style>
+    .sitemap-page { padding: 20px; max-width: 800px; margin: 0 auto; color: var(--text-main); }
+    .sitemap-lead { color: var(--text-muted); line-height: 1.7; }
+    .sitemap-page a { color: var(--accent-pink); text-decoration: none; }
+    .sitemap-page a:hover { text-decoration: underline; }
+    .sitemap-page h2 { margin-top: 32px; }
+    .sitemap-family { margin-top: 22px; }
+    .sitemap-family h3 { font-size: 1.1rem; margin: 0 0 6px; }
+    .sitemap-family ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+    .sitemap-family li { font-size: 0.92rem; }
+  </style>
 </BaseLayout>

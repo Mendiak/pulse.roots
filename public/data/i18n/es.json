@@ -16,7 +16,9 @@
   },
   "header": {
     "searchPlaceholder": "Buscar un género...",
+    "searchLabel": "Buscar un género",
     "clearButton": "Limpiar",
+    "clearSearchLabel": "Limpiar búsqueda",
     "shuffleTitle": "Género Aleatorio",
     "treeLayoutTitle": "Vista de Árbol",
     "radialLayoutTitle": "Vista Radial",
@@ -33,13 +35,15 @@
     "homeLabel": "Inicio"
   },
   "search": {
+    "shortcutTitle": "Pulsa / para buscar",
     "searchNav": {
-      "counter": "0 de 0",
+      "counter": "{current} de {total}",
       "prevTitle": "Resultado anterior",
       "nextTitle": "Siguiente resultado"
     },
     "mobilePlaceholder": "Filtrar géneros...",
-    "mobileLabel": "Filtrar géneros"
+    "mobileLabel": "Filtrar géneros",
+    "noResults": "Sin resultados"
   },
   "infoPanel": {
     "ariaLabel": "Información del género",

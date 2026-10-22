@@ -339,6 +339,17 @@ body.light-mode .share-popover-btn:hover {
   visibility: visible;
 }
 
+/* Reserve space so the fixed banner does not cover the page footer/content. */
+body.cookie-banner-visible {
+  padding-bottom: 88px;
+}
+
+@media (max-width: 768px) {
+  body.cookie-banner-visible {
+    padding-bottom: 132px;
+  }
+}
+
 #cookie-consent-banner .cookie-content {
   max-width: 1100px;
   margin: 0 auto;

@@ -1,37 +1,23 @@
 import * as d3 from 'd3';
 import { state } from './state.js';
+import { t } from './i18n.js';
 import { escapeRegex, debounce, slugify } from './utils.js';
 
-export function performSearch(searchTerm) {
-  const term = searchTerm.toLowerCase();
+function resetMobileList() {
+  const mobileListItems = document.querySelectorAll('#mobile-genre-list li');
+  mobileListItems.forEach(li => {
+    li.style.display = 'block';
+    const itemElement = li.querySelector('.genre-item');
+    if (!itemElement) return;
+    const nameSpan = itemElement.querySelector('.genre-name');
+    itemElement.classList.remove('searched-item');
+    if (nameSpan) nameSpan.innerHTML = nameSpan.dataset.originalText;
+  });
+}
 
-  const treeNodes = d3.selectAll('.node');
-  treeNodes.classed('searched-node', false);
-  if (term) {
-    treeNodes
-      .filter(d => d.data.name.toLowerCase().includes(term))
-      .classed('searched-node', true);
-  }
-
+function filterMobileList(term) {
   const mobileListItems = document.querySelectorAll('#mobile-genre-list li');
   if (!mobileListItems.length) return;
-
-  if (!term) {
-    mobileListItems.forEach(li => {
-      li.style.display = 'block';
-      const itemElement = li.querySelector('.genre-item');
-      const nameSpan = itemElement.querySelector('.genre-name');
-      itemElement.classList.remove('searched-item');
-      nameSpan.innerHTML = nameSpan.dataset.originalText;
-    });
-    state.matchedNodes = [];
-    state.currentMatchIndex = -1;
-    const searchNav = document.getElementById('search-nav');
-    if (searchNav) searchNav.classList.add('hidden');
-    d3.selectAll('.node').classed('active-searched-node', false);
-    d3.select('#search-highlight-box').remove();
-    return;
-  }
 
   mobileListItems.forEach(li => {
     const itemElement = li.querySelector('.genre-item');
@@ -72,8 +58,32 @@ export function performSearch(searchTerm) {
       }
     }
   });
+}
+
+export function performSearch(searchTerm) {
+  const term = searchTerm.toLowerCase();
+
+  const treeNodes = d3.selectAll('.node');
+  treeNodes.classed('searched-node', false);
+  if (term) {
+    treeNodes
+      .filter(d => d.data.name.toLowerCase().includes(term))
+      .classed('searched-node', true);
+  }
 
   const searchNav = document.getElementById('search-nav');
+
+  if (!term) {
+    resetMobileList();
+    state.matchedNodes = [];
+    state.currentMatchIndex = -1;
+    if (searchNav) searchNav.classList.add('hidden');
+    d3.selectAll('.node').classed('active-searched-node', false);
+    d3.select('#search-highlight-box').remove();
+    return;
+  }
+
+  filterMobileList(term);
 
   state.matchedNodes = treeNodes.filter(d => d.data.name.toLowerCase().includes(term)).data();
 
@@ -97,7 +107,10 @@ export function navigateToMatch(index) {
 
   const searchCounter = document.getElementById('search-counter');
   if (searchCounter) {
-    searchCounter.textContent = `${state.currentMatchIndex + 1} of ${state.matchedNodes.length}`;
+    searchCounter.textContent = t('search.searchNav.counter', {
+      current: state.currentMatchIndex + 1,
+      total: state.matchedNodes.length
+    });
   }
 
   d3.selectAll('.node')
@@ -154,6 +167,7 @@ export function setupDesktopSearch() {
   const debouncedSearch = debounce((term) => performSearch(term), 300);
 
   function updateSuggestions(term) {
+    currentFocus = -1;
     if (!term) {
       suggestionsContainer.innerHTML = '';
       suggestionsContainer.classList.add('hidden');
@@ -210,8 +224,14 @@ export function setupDesktopSearch() {
       searchInput.setAttribute('aria-expanded', 'true');
     } else {
       suggestionsContainer.innerHTML = '';
-      suggestionsContainer.classList.add('hidden');
-      searchInput.setAttribute('aria-expanded', 'false');
+      const empty = document.createElement('div');
+      empty.className = 'suggestions-empty';
+      empty.setAttribute('role', 'option');
+      empty.setAttribute('aria-disabled', 'true');
+      empty.textContent = t('search.noResults');
+      suggestionsContainer.appendChild(empty);
+      suggestionsContainer.classList.remove('hidden');
+      searchInput.setAttribute('aria-expanded', 'true');
     }
   }
 

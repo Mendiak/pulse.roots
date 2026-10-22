@@ -23,10 +23,13 @@ export interface Props {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   canonical?: string;
   lang?: string;
   jsonLd?: string;
   noindex?: boolean;
+  /** Pages that are not part of the indexed site (e.g. 404) omit the canonical. */
+  hideCanonical?: boolean;
 }
 
 const baseUrl = 'https://mendiak.github.io/pulse.roots';
@@ -47,20 +50,76 @@ const {
   description = seo.description || 'Explore the evolution of electronic music with PulseRoots. An interactive tree visualization mapping genres from Techno and House to Ambient and Experimental. Discover styles, substyles, and sample tracks.',
   ogTitle = seo.ogTitle || title,
   ogDescription = seo.ogDescription || description,
-  ogImage = `${baseUrl}/assets/og_image.webp`,
+  ogImage = `${baseUrl}/assets/og_image.jpg`,
+  ogImageAlt = 'PulseRoots - interactive electronic music genre tree',
   canonical = baseUrl + '/',
   lang = currentLang,
   jsonLd = '',
   noindex = false,
+  hideCanonical = false,
 } = Astro.props;
 
 const ogLocale = lang === 'es' ? 'es_ES' : 'en_US';
+const ogImageType = ogImage.endsWith('.webp')
+  ? 'image/webp'
+  : ogImage.endsWith('.png')
+    ? 'image/png'
+    : 'image/jpeg';
 
-// Dynamic hreflang computation
+// hreflang: derive the language-neutral path from the canonical URL so a page
+// that already lives under /es/ is not prefixed twice.
+const basePathname = canonical.startsWith(baseUrl) ? canonical.slice(baseUrl.length) || '/' : '/';
+const enPathname = basePathname.replace(/^\/es(?=\/|$)/, '') || '/';
+const enHref = `${baseUrl}${enPathname}`;
+const esHref = `${baseUrl}/es${enPathname === '/' ? '/' : enPathname}`;
+
+// Genre pages only exist in the default locale.
 const isGenrePage = canonical.includes('/genres/');
-const enHref = canonical.replace(`/es/`, '/');
-const esHref = canonical.replace(baseUrl, `${baseUrl}/es`);
 const hasSpanish = !isGenrePage;
+
+// Site-wide entities emitted on every page so page-level graphs can reference
+// them by @id without redefining them.
+const siteGraph = [
+  {
+    '@type': 'WebSite',
+    '@id': `${baseUrl}/#website`,
+    name: 'PulseRoots',
+    url: `${baseUrl}/`,
+    description:
+      seo.jsonldDescription ||
+      'Explore the evolution of electronic music with PulseRoots: an interactive tree mapping genres from Techno and House to Ambient and Experimental.',
+    inLanguage: ['en', 'es'],
+    publisher: { '@id': `${baseUrl}/#person` },
+  },
+  {
+    '@type': 'Person',
+    '@id': `${baseUrl}/#person`,
+    name: 'Mikel Aramendia',
+    url: 'https://mendiak.github.io/portfolio/',
+    sameAs: ['https://github.com/Mendiak', 'https://www.buymeacoffee.com/Mendiak'],
+    knowsAbout: ['Electronic music', 'Music genres', 'Music history'],
+    worksFor: { '@id': `${baseUrl}/#website` },
+  },
+];
+
+// Merge page-level JSON-LD with the site graph, dropping duplicate nodes that
+// already exist globally (same @id).
+let pageGraph = [];
+if (jsonLd) {
+  try {
+    const parsed = JSON.parse(jsonLd);
+    pageGraph = parsed['@graph'] || [parsed];
+  } catch {
+    pageGraph = [];
+  }
+}
+const globalIds = new Set(siteGraph.map(node => node['@id']));
+pageGraph = pageGraph.filter(node => !node['@id'] || !globalIds.has(node['@id']));
+
+const structuredData = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [...siteGraph, ...pageGraph],
+});
 ---
 
 <!DOCTYPE html>
@@ -71,18 +130,26 @@ const hasSpanish = !isGenrePage;
 
   <title>{title}</title>
 
-  <link rel="canonical" href={canonical}>
+  {!hideCanonical && <link rel="canonical" href={canonical}>}
   <meta name="description" content={description}>
   <meta name="author" content="PulseRoots">
-  <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'}>
+  <meta
+    name="robots"
+    content={noindex
+      ? 'noindex, follow'
+      : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+  >
   <meta name="theme-color" content="#080808">
 
   <meta property="og:title" content={ogTitle}>
   <meta property="og:description" content={ogDescription}>
   <meta property="og:image" content={ogImage}>
+  <meta property="og:image:type" content={ogImageType}>
+  <meta property="og:image:alt" content={ogImageAlt}>
   <meta property="og:url" content={canonical}>
   <meta property="og:type" content="website">
   <meta property="og:locale" content={ogLocale}>
+  {hasSpanish && <meta property="og:locale:alternate" content={ogLocale === 'es_ES' ? 'en_US' : 'es_ES'}>}
   <meta property="og:site_name" content="PulseRoots">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -91,14 +158,18 @@ const hasSpanish = !isGenrePage;
   <meta name="twitter:title" content={ogTitle}>
   <meta name="twitter:description" content={ogDescription}>
   <meta name="twitter:image" content={ogImage}>
+  <meta name="twitter:image:alt" content={ogImageAlt}>
 
   <meta name="google-site-verification" content="7tAbK2WB9Cx4uF76izgXcrBdBXVeqDfUd9A97KrLewU" />
 
-  <link rel="icon" href="/pulse.roots/assets/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/pulse.roots/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/pulse.roots/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/pulse.roots/site.webmanifest">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/pulse.roots/sitemap-index.xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
     rel="stylesheet" media="print" onload="this.media='all'">
@@ -116,7 +187,7 @@ const hasSpanish = !isGenrePage;
     window.gtag = function() { dataLayer.push(arguments); };
   </script>
 
-  {jsonLd && <script type="application/ld+json" set:html={jsonLd}></script>}
+  <script type="application/ld+json" set:html={structuredData}></script>
 
   <link rel="alternate" hreflang="en" href={enHref}>
   {hasSpanish && <link rel="alternate" hreflang="es" href={esHref}>}

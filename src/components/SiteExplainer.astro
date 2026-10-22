@@ -1,0 +1,102 @@
+---
+import { siteFaq, siteExplainer } from '../data/site-faq.js';
+
+export interface Props {
+  lang?: 'en' | 'es';
+}
+
+const { lang = 'en' } = Astro.props;
+const copy = siteExplainer[lang];
+const faq = siteFaq[lang];
+---
+
+<section id="site-explainer" aria-labelledby="site-explainer-title">
+  <h2 id="site-explainer-title">{copy.heading}</h2>
+  {copy.paragraphs.map(paragraph => <p>{paragraph}</p>)}
+
+  <h2 id="site-faq-title">{copy.faqHeading}</h2>
+  <div class="site-faq">
+    {faq.map(item => (
+      <details>
+        <summary>{item.q}</summary>
+        <p>{item.a}</p>
+      </details>
+    ))}
+  </div>
+
+  <p class="site-explainer-more">
+    {lang === 'es'
+      ? <><a href="/pulse.roots/es/sitemap/">Ver todos los géneros</a> o <a href="/pulse.roots/es/about/">leer más sobre el proyecto</a>.</>
+      : <><a href="/pulse.roots/sitemap/">See all genres</a> or <a href="/pulse.roots/about/">read more about the project</a>.</>}
+  </p>
+</section>
+
+<style>
+  #site-explainer {
+    max-width: 900px;
+    margin: 0 auto 56px;
+    padding: 0 32px;
+    color: var(--text-main);
+  }
+
+  #site-explainer h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 0 12px;
+  }
+
+  #site-explainer h2 + p {
+    margin-top: 0;
+  }
+
+  #site-explainer p {
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin: 0 0 12px;
+  }
+
+  #site-explainer a {
+    color: var(--accent-pink);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 0, 102, 0.35);
+  }
+
+  #site-explainer a:hover {
+    border-bottom-color: var(--accent-pink);
+  }
+
+  .site-faq {
+    margin-top: 4px;
+  }
+
+  .site-faq details {
+    border-bottom: 1px solid var(--glass-border);
+    padding: 10px 0;
+  }
+
+  .site-faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .site-faq summary:hover {
+    color: var(--accent-pink);
+  }
+
+  .site-faq p {
+    margin: 8px 0 0;
+    font-size: 0.95rem;
+  }
+
+  .site-explainer-more {
+    margin-top: 20px;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    #site-explainer {
+      padding: 0 22px;
+    }
+  }
+</style>

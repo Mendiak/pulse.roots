@@ -28,11 +28,13 @@ function loadGoogleAnalytics() {
 function showBanner() {
   const banner = document.getElementById('cookie-consent-banner');
   if (banner) banner.classList.add('visible');
+  document.body.classList.add('cookie-banner-visible');
 }
 
 function hideBanner() {
   const banner = document.getElementById('cookie-consent-banner');
   if (banner) banner.classList.remove('visible');
+  document.body.classList.remove('cookie-banner-visible');
 }
 
 function handleAccept() {

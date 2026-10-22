@@ -108,6 +108,42 @@ main {
   color: var(--text-main);
 }
 
+/* --- Server-rendered breadcrumb inside the sidebar (genre pages) --- */
+#breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--glass-border);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+}
+
+#breadcrumbs a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#breadcrumbs a:hover {
+  color: var(--accent-pink);
+  text-decoration: underline;
+}
+
+#breadcrumbs .breadcrumb-sep {
+  opacity: 0.45;
+  font-size: 0.9em;
+}
+
+#breadcrumbs .breadcrumb-current {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
 /* Add a visual separator for key sections */
 .section-divider {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -138,12 +174,12 @@ main {
 }
 
 #genre-details .genre-block h2 {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent-pink);
-  margin: 0 0 10px;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+  margin: 0 0 8px;
 }
 
 #genre-details .genre-list {
@@ -152,7 +188,26 @@ main {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 18px;
+  gap: 8px;
+}
+
+/* Family/genre chips mirror the panel's pill links for a single visual system. */
+#genre-details .genre-list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+#genre-details .genre-list a:hover {
+  border-color: var(--accent-pink);
+  color: var(--accent-pink);
 }
 
 #genre-details a {
@@ -171,6 +226,24 @@ main {
   margin-top: 24px;
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+#genre-details .genre-glance-list {
+  display: grid;
+  grid-template-columns: minmax(90px, max-content) 1fr;
+  gap: 6px 18px;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+#genre-details .genre-glance-list dt {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+#genre-details .genre-glance-list dd {
+  margin: 0;
+  color: var(--text-main);
 }
 
 @media (max-width: 768px) {
