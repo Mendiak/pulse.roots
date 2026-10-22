@@ -551,6 +551,11 @@
 }
 
 .wiki-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
   text-decoration: none;
   color: var(--text-muted);
   transition: color 0.2s ease, transform 0.2s ease;
