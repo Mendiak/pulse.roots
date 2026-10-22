@@ -10,6 +10,46 @@ const currentLang = Astro.currentLocale || 'en';
 const langPrefix = currentLang === 'en' ? '' : `${currentLang}/`;
 const now = new Date().getFullYear();
 
+const t = currentLang === 'es'
+  ? {
+      logoAlt: 'Logotipo de PulseRoots',
+      mission: 'Explora las conexiones profundas y la evolución de la música electrónica a través de una mirada interactiva. Un viaje de las raíces a los ritmos del futuro.',
+      support: 'Apoyo',
+      supportText: 'Un sitio gratuito hecho con pasión por la música electrónica. Cualquier muestra de apoyo ayuda a mantenerlo vivo.',
+      portfolio: 'Portafolio',
+      linksCredits: 'Enlaces y créditos',
+      github: 'GitHub',
+      logoCredit: 'Logotipo (Flaticon)',
+      contact: 'Contacto',
+      about: 'Sobre PulseRoots',
+      privacy: 'Política de Privacidad',
+      sitemap: 'Mapa del sitio',
+      genres: 'Géneros',
+      allGenres: 'Todos los géneros',
+      copyright: 'Mapeando el pulso de la música electrónica.',
+      linksNav: 'Enlaces y créditos',
+      genresNav: 'Páginas de géneros',
+    }
+  : {
+      logoAlt: 'PulseRoots Logo',
+      mission: 'Explore the deep connections and evolution of electronic music through an interactive lens. A journey from roots to future rhythms.',
+      support: 'Support',
+      supportText: 'A free website built with passion for electronic music. Any token of support helps keep it alive.',
+      portfolio: 'Portfolio',
+      linksCredits: 'Links & Credits',
+      github: 'Github',
+      logoCredit: 'Logo (Flaticon)',
+      contact: 'Contact',
+      about: 'About',
+      privacy: 'Privacy Policy',
+      sitemap: 'Sitemap',
+      genres: 'Genres',
+      allGenres: 'All genres',
+      copyright: 'Mapping the pulse of electronic music.',
+      linksNav: 'Links and Credits',
+      genresNav: 'Genre Pages',
+    };
+
 function escapeHtml(text) {
   return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
@@ -66,7 +106,7 @@ try {
       genreHtml += `  <li><a href="${genreBase}/${top.fullSlugPath}/">${escapeHtml(top.genreName)}</a></li>\n`;
     }
     genreHtml += '</ul>\n';
-    genreHtml += `<a class="footer-all-genres" href="${basePath}/${langPrefix}genres/">All genres &rarr;</a>\n`;
+    genreHtml += `<a class="footer-all-genres" href="${basePath}/${langPrefix}genres/">${t.allGenres} &rarr;</a>\n`;
   }
 } catch (e) {
   console.error('Error loading genre tree:', e);
@@ -76,35 +116,35 @@ try {
 <footer>
   <div id="footer-main">
     <div id="footer-brand">
-      <img src={`/pulse.roots/assets/footer-logo.png`} id="footer-logo" alt="PulseRoots Logo" width="128" height="128" loading="lazy">
-      <p id="footer-mission">Explore the deep connections and evolution of electronic music through an interactive lens. A journey from roots to future rhythms.</p>
+      <img src={`/pulse.roots/assets/footer-logo.png`} id="footer-logo" alt={t.logoAlt} width="128" height="128" loading="lazy">
+      <p id="footer-mission">{t.mission}</p>
     </div>
 
     <div id="footer-support">
-      <h3>Support</h3>
-      <p id="footer-support-text">A free website built with passion for electronic music. Any token of support helps keep it alive.</p>
+      <h3>{t.support}</h3>
+      <p id="footer-support-text">{t.supportText}</p>
       <div id="footer-support-links">
         <a class="footer-link" href="https://mendiak.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-code-slash"></i> <span>Portfolio</span>
+          <i class="bi bi-code-slash"></i> <span>{t.portfolio}</span>
         </a>
         <CoffeeLink variant="pill" lang={currentLang} />
       </div>
     </div>
 
-    <nav id="footer-links" aria-label="Links and Credits">
-      <h3>Links & Credits</h3>
+    <nav id="footer-links" aria-label={t.linksNav}>
+      <h3>{t.linksCredits}</h3>
       <ul>
-        <li><a class="footer-link" href="https://github.com/Mendiak/pulse.roots" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> <span>Github</span></a></li>
-        <li><a class="footer-link" href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> <span>Logo (Flaticon)</span></a></li>
-        <li><a class="footer-link" href={`${basePath}/${langPrefix}contact/`}><i class="bi bi-patch-question"></i> <span>Contact</span></a></li>
-        <li><a class="footer-link" href={`${basePath}/${langPrefix}about/`}><i class="bi bi-info-circle"></i> <span>About</span></a></li>
-        <li><a class="footer-link" href={`${basePath}/${langPrefix}privacy/`}><i class="bi bi-shield-lock"></i> <span>Privacy Policy</span></a></li>
-        <li><a class="footer-link" href={`${basePath}/${langPrefix}sitemap/`}><i class="bi bi-diagram-3"></i> <span>Sitemap</span></a></li>
+        <li><a class="footer-link" href="https://github.com/Mendiak/pulse.roots" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> <span>{t.github}</span></a></li>
+        <li><a class="footer-link" href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> <span>{t.logoCredit}</span></a></li>
+        <li><a class="footer-link" href={`${basePath}/${langPrefix}contact/`}><i class="bi bi-patch-question"></i> <span>{t.contact}</span></a></li>
+        <li><a class="footer-link" href={`${basePath}/${langPrefix}about/`}><i class="bi bi-info-circle"></i> <span>{t.about}</span></a></li>
+        <li><a class="footer-link" href={`${basePath}/${langPrefix}privacy/`}><i class="bi bi-shield-lock"></i> <span>{t.privacy}</span></a></li>
+        <li><a class="footer-link" href={`${basePath}/${langPrefix}sitemap/`}><i class="bi bi-diagram-3"></i> <span>{t.sitemap}</span></a></li>
       </ul>
     </nav>
 
-    <nav id="footer-genres" aria-label="Genre Pages">
-      <h3>Genres</h3>
+    <nav id="footer-genres" aria-label={t.genresNav}>
+      <h3>{t.genres}</h3>
       <div set:html={genreHtml} />
     </nav>
   </div>
@@ -114,6 +154,6 @@ try {
   </div>
 
   <div id="footer-bottom">
-    <p>&copy; {now} PulseRoots. Mapping the pulse of electronic music.</p>
+    <p>&copy; {now} PulseRoots. {t.copyright}</p>
   </div>
 </footer>

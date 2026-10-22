@@ -41,13 +41,13 @@ const shareLink = source =>
                 <button id="search-next" title="Next result" data-i18n-title="search.searchNav.nextTitle"><i class="bi bi-chevron-down"></i></button>
               </div>
             </div>
-            <button id="clear-button" class="hidden" aria-label="Clear search" data-i18n-aria-label="header.clearSearchLabel"><i class="bi bi-x-lg" aria-hidden="true"></i> <span>Clear</span></button>
-            <button id="shuffle-button" title="Random Genre"><i class="bi bi-shuffle"></i></button>
+            <button id="clear-button" class="hidden" aria-label="Clear search" data-i18n-aria-label="header.clearSearchLabel"><i class="bi bi-x-lg" aria-hidden="true"></i> <span data-i18n="header.clearButton">Clear</span></button>
+            <button id="shuffle-button" title="Random Genre" data-i18n-title="header.shuffleTitle"><i class="bi bi-shuffle"></i></button>
           </div>
           <div id="layout-controls" class="header-group">
-            <button id="tree-layout-btn" class="layout-btn active" title="Tree Layout"><i class="bi bi-diagram-3-fill"></i></button>
-            <button id="radial-layout-btn" class="layout-btn" title="Radial Layout"><i class="bi bi-bullseye"></i></button>
-            <button id="timeline-layout-btn" class="layout-btn" title="Timeline"><i class="bi bi-clock-history"></i></button>
+            <button id="tree-layout-btn" class="layout-btn active" title="Tree Layout" data-i18n-title="header.treeLayoutTitle"><i class="bi bi-diagram-3-fill"></i></button>
+            <button id="radial-layout-btn" class="layout-btn" title="Radial Layout" data-i18n-title="header.radialLayoutTitle"><i class="bi bi-bullseye"></i></button>
+            <button id="timeline-layout-btn" class="layout-btn" title="Timeline" data-i18n-title="header.timelineTitle"><i class="bi bi-clock-history"></i></button>
           </div>
         </>
       )}
@@ -58,11 +58,11 @@ const shareLink = source =>
       <div class="header-group header-actions">
         {!simple && (
           <>
-            <button id="fullscreen-btn" title="Toggle Fullscreen" aria-label="Enter Fullscreen">
+            <button id="fullscreen-btn" title="Toggle Fullscreen" aria-label="Enter Fullscreen" data-i18n-title="header.fullscreenTitle" data-i18n-aria-label="header.fullscreenLabel">
               <i class="bi bi-fullscreen"></i>
             </button>
             <div class="share-btn-wrapper">
-              <button id="header-share-btn" title="Share PulseRoots" aria-label="Share PulseRoots">
+              <button id="header-share-btn" title="Share PulseRoots" aria-label="Share PulseRoots" data-i18n-title="header.shareTitle" data-i18n-aria-label="header.shareLabel">
                 <i class="bi bi-share"></i>
               </button>
               <div id="share-popover" role="dialog" aria-label="Share options">
@@ -88,11 +88,11 @@ const shareLink = source =>
             </div>
           </>
         )}
-        <button id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Light/Dark Mode">
+        <button id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Light/Dark Mode" data-i18n-title="header.themeTitle" data-i18n-aria-label="header.themeLabel">
           <i class="bi bi-moon"></i>
         </button>
         <a href={`${basePath}/${currentLang === 'en' ? '' : currentLang + '/'}contact/`} id="header-contact-btn"
-          title="Suggest a Genre / Fix an Error" aria-label="Suggest a Genre / Fix an Error">
+          title="Suggest a Genre / Fix an Error" aria-label="Suggest a Genre / Fix an Error" data-i18n-title="header.contactTitle" data-i18n-aria-label="header.contactLabel">
           <i class="bi bi-patch-question"></i>
         </a>
       </div>
