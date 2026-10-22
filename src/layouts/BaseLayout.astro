@@ -1,6 +1,7 @@
 ---
 import fs from 'fs';
 import path from 'path';
+import '../styles/fonts.css';
 import '../styles/variables.css';
 import '../styles/base.css';
 import '../styles/header.css';
@@ -167,19 +168,12 @@ const structuredData = JSON.stringify({
   <link rel="manifest" href="/pulse.roots/site.webmanifest">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/pulse.roots/sitemap-index.xml">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap">
-  </noscript>
+  <link rel="preload" as="font" type="font/woff2" href="/pulse.roots/assets/fonts/cb308db001b5.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/pulse.roots/assets/fonts/d8a316f7cbfa.woff2" crossorigin>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/pulse.roots/assets/icons/bootstrap-icons.css" media="print" onload="this.media='all'">
   <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/pulse.roots/assets/icons/bootstrap-icons.css">
   </noscript>
 
   <script is:inline>
