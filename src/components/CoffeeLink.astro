@@ -1,0 +1,32 @@
+---
+// Single source of truth for the "Buy me a coffee" call to action.
+// Variants: `pill` for the footer (brand colour) and `inline` for quieter
+// contexts such as the intro sidebar and the genre info panel.
+interface Props {
+  variant?: 'inline' | 'pill';
+  lang?: string;
+  class?: string;
+}
+
+const { variant = 'inline', lang, class: extraClass = '' } = Astro.props;
+
+const locale = (lang ?? Astro.currentLocale ?? 'en') === 'es' ? 'es' : 'en';
+
+const LABELS = {
+  en: 'Buy me a coffee',
+  es: 'Invítame a un café'
+};
+
+const classes = ['coffee-link', `coffee-link--${variant}`, extraClass]
+  .filter(Boolean)
+  .join(' ');
+---
+
+<a
+  class={classes}
+  href="https://www.buymeacoffee.com/Mendiak"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <i class="bi bi-cup-hot" aria-hidden="true"></i><span>{LABELS[locale]}</span>
+</a>

@@ -253,25 +253,80 @@ body.light-mode .share-popover-btn:hover {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.donation-link {
+/* --- "Buy me a coffee" CTA (see components/CoffeeLink.astro) --- */
+.coffee-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.8em;
-  opacity: 0.65;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, transform 0.2s ease;
 }
 
-.donation-link:hover {
+.coffee-link i {
+  font-size: 1em;
+}
+
+.coffee-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-pink);
+}
+
+/* Wrapper used at the end of the intro sidebar */
+.coffee-cta {
+  margin-top: var(--space-6);
+  text-align: center;
+}
+
+/* Discreet inline variant: intro sidebar, info panel */
+.coffee-link--inline {
+  color: var(--text-muted);
+  font-size: 0.85em;
+  font-weight: 500;
+  opacity: 0.85;
+  padding: 3px 10px;
+  border-radius: var(--radius-3xl);
+  background: var(--overlay-1);
+  border: 1px solid var(--glass-border);
+}
+
+.coffee-link--inline i {
+  color: var(--brand-coffee-ink);
+}
+
+.coffee-link--inline:hover {
   opacity: 1;
   color: var(--accent-pink);
-  text-decoration: underline;
+  background: var(--accent-05);
+  border-color: var(--accent-20);
 }
 
-.donation-link i {
-  font-size: 1em;
+.coffee-link--inline:hover i {
+  color: var(--accent-pink);
+}
+
+/* Branded pill: footer support card */
+.coffee-link--pill {
+  color: var(--brand-coffee-ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-3xl);
+  background: rgba(255, 221, 0, 0.08);
+  border: 1px solid rgba(255, 221, 0, 0.2);
+}
+
+.coffee-link--pill:hover {
+  color: var(--text-on-coffee);
+  background: var(--brand-coffee);
+  border-color: var(--brand-coffee);
+  transform: translateY(-1px);
+}
+
+body.light-mode .coffee-link--pill {
+  background: rgba(255, 221, 0, 0.15);
+  border-color: rgba(255, 221, 0, 0.4);
+  color: #b8860b;
 }
 
 /* --- Ripple Effect --- */
