@@ -218,7 +218,7 @@ const genreScript = `window.PR_LANG='${lang}';window.PR_I18N={};window.PR_I18N_F
     <div id="main-container">
       <div id="tooltip" class="info-box" aria-labelledby="intro-title">
         <Fragment set:html={buildBreadcrumbHtml()} />
-        <ExploreIntro />
+        <ExploreIntro lang={lang} />
       </div>
 
       <div id="visualization-container">

@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import GenreFamilies from '../../components/GenreFamilies.astro';
 import SiteExplainer from '../../components/SiteExplainer.astro';
-import CoffeeLink from '../../components/CoffeeLink.astro';
+import ExploreIntro from '../../components/ExploreIntro.astro';
 import { siteFaq } from '../../data/site-faq.js';
 
 const canonical = 'https://mendiak.github.io/pulse.roots/es/';
@@ -44,46 +44,13 @@ const jsonLd = JSON.stringify({
   <Header />
 
   <div id="history-banner">
-    <p><strong>Music History:</strong> <span id="history-fact"></span></p>
+    <p><strong>Historia de la música:</strong> <span id="history-fact"></span></p>
   </div>
 
   <main>
     <div id="main-container">
       <div id="tooltip" class="info-box" aria-labelledby="intro-title">
-        <section>
-          <h2 id="intro-title"><i class="bi bi-compass" aria-hidden="true"></i> Cómo explorar</h2>
-          <p>¡Bienvenido a PulseRoots! Esta guía te ayuda a navegar por el vasto mundo de la música electrónica usando nuestras herramientas interactivas.</p>
-          <p>En <strong>escritorio</strong>, encontrarás un <strong>treemap</strong> inmersivo que mapea visualmente las conexiones entre géneros. En <strong>móvil</strong>, los géneros están organizados en una <strong>lista de acordeón</strong> clara y accesible.</p>
-
-          <h2><i class="bi bi-soundwave" aria-hidden="true"></i> Estilos y subestilos</h2>
-          <p>Ambas vistas comienzan con amplias "Familias" (como Techno o House) y se ramifican en estilos y subestilos específicos. Haz clic o toca cualquier género para abrir un panel con una descripción detallada y una pista de ejemplo.</p>
-
-          <h2><i class="bi bi-clock-history" aria-hidden="true"></i> Línea de tiempo musical</h2>
-          <p>Haz clic en el botón <strong>Timeline</strong> para explorar <strong>107 hitos clave</strong> en la historia de la música electrónica, desde 1897 hasta hoy. Pasa el cursor sobre cualquier punto para leer la historia.</p>
-
-          <h2><i class="bi bi-person-check" aria-hidden="true"></i> Artistas clave</h2>
-          <p>Para cada género, incluimos una sección de "Artistas clave" con pioneros y músicos destacados que han moldeado su sonido.</p>
-
-          <h2><i class="bi bi-keyboard" aria-hidden="true"></i> Accesibilidad</h2>
-          <p>PulseRoots es accesible por teclado. Pulsa <strong>Tab</strong> para llegar al árbol de géneros, usa las <strong>flechas</strong> para moverte entre géneros y pulsa <strong>Enter</strong> o <strong>Espacio</strong> para abrir el panel de detalles.</p>
-
-          <h2><i class="bi bi-journal-text" aria-hidden="true"></i> Nota sobre la clasificación</h2>
-          <p>Esta visualización representa una interpretación de cómo se categorizan los géneros de música electrónica. La música es fluida y otras clasificaciones podrían agrupar los estilos de manera diferente.</p>
-
-          <h2 class="section-divider"><i class="bi bi-lightbulb" aria-hidden="true"></i> Inspiraciones</h2>
-          <p>PulseRoots está inspirado en el increíble trabajo de otros proyectos de exploración musical. Agradecimientos especiales a <a href="https://music.ishkur.com/" class="info-box-link" target="_blank" rel="noopener noreferrer">Ishkur's Guide to Electronic Music</a>, <a href="https://musicmap.info/" class="info-box-link" target="_blank" rel="noopener noreferrer">Musicmap</a>, y <a href="https://everynoise.com/" class="info-box-link" target="_blank" rel="noopener noreferrer">Every Noise at Once</a>.</p>
-
-          <h2 class="section-divider"><i class="bi bi-spotify" aria-hidden="true"></i> Escuchar pistas</h2>
-          <p>Para escuchar las pistas de ejemplo, puede ser necesaria una cuenta de Spotify. El reproductor integrado proporciona una vista previa de 30 segundos para todos los usuarios.</p>
-
-          <h2 class="section-divider"><i class="bi bi-envelope" aria-hidden="true"></i> Contacto</h2>
-          <p>Gracias por visitarnos, espero que disfrutes explorando el mundo de la música electrónica.</p>
-          <p>Si tienes sugerencias, propuestas de mejora, has encontrado errores, o solo quieres decir "¡Hola!", no dudes en escribirme a través de nuestra <a href="/pulse.roots/contact/" class="info-box-link">página de contacto</a>.</p>
-
-          <p class="coffee-cta">
-            <CoffeeLink />
-          </p>
-        </section>
+        <ExploreIntro lang="es" />
       </div>
 
       <div id="visualization-container">
@@ -97,12 +64,12 @@ const jsonLd = JSON.stringify({
       <div id="mobile-nav-container">
         <h2 data-i18n="mobileNav.title">Explorar Géneros</h2>
         <div id="mobile-search-container">
-          <input type="text" id="mobile-search-input" placeholder="Filter genres..." autocomplete="off" aria-label="Filter genres" data-i18n-placeholder="search.mobilePlaceholder" data-i18n-aria-label="search.mobileLabel">
+          <input type="text" id="mobile-search-input" placeholder="Filtrar géneros..." autocomplete="off" aria-label="Filtrar géneros" data-i18n-placeholder="search.mobilePlaceholder" data-i18n-aria-label="search.mobileLabel">
           <button id="mobile-clear-button" class="hidden"><i class="bi bi-x-lg"></i></button>
         </div>
         <div id="accordion-controls">
-          <button id="expand-all-btn" data-i18n="mobileNav.expandAll">Expand All</button>
-          <button id="collapse-all-btn" data-i18n="mobileNav.collapseAll">Collapse All</button>
+          <button id="expand-all-btn" data-i18n="mobileNav.expandAll">Expandir todo</button>
+          <button id="collapse-all-btn" data-i18n="mobileNav.collapseAll">Contraer todo</button>
         </div>
         <ul id="mobile-genre-list"></ul>
       </div>
@@ -112,14 +79,14 @@ const jsonLd = JSON.stringify({
 
     <SiteExplainer lang="es" />
 
-    <button id="back-to-top-btn" aria-label="Back to Top">
+    <button id="back-to-top-btn" aria-label="Volver arriba">
       <i class="bi bi-arrow-up"></i>
     </button>
   </main>
 
   <div id="modal-overlay"></div>
 
-  <div id="info-panel" role="dialog" aria-modal="true" aria-label="Genre Information" aria-labelledby="info-panel-title">
+  <div id="info-panel" role="dialog" aria-modal="true" aria-label="Información del género" aria-labelledby="info-panel-title">
     <div id="info-content"></div>
     <div id="scroll-indicator" class="hidden">
       <i class="bi bi-arrow-down-circle"></i>
