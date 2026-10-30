@@ -1,0 +1,240 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import GenreFamilies from './GenreFamilies.astro';
+
+export interface Props {
+  guide: any;
+  lang?: 'en' | 'es';
+}
+
+const { guide, lang = 'en' } = Astro.props;
+
+const SITE = 'https://mendiak.github.io/pulse.roots';
+const langPrefix = lang === 'es' ? '/es' : '';
+const canonical = `${SITE}${langPrefix}/guides/${guide.slug}/`;
+const otherLang = lang === 'es' ? 'en' : 'es';
+
+const labels = lang === 'es'
+  ? {
+      home: 'Inicio',
+      guides: 'Guías',
+      readIn: 'Read in English',
+      source: 'fuente',
+      sourceLabel: 'Fuente',
+      minRead: 'min de lectura',
+      ctaHref: '/pulse.roots/',
+    }
+  : {
+      home: 'Home',
+      guides: 'Guides',
+      readIn: 'Leer en español',
+      source: 'source',
+      sourceLabel: 'Source',
+      minRead: 'min read',
+      ctaHref: '/pulse.roots/',
+    };
+
+// Sourced chronology, read at build time so the facts ship as static HTML
+// instead of only being fetched by the timeline island in the browser.
+const historyFile = lang === 'es' ? 'music_history.es.json' : 'music_history.json';
+let history = [];
+try {
+  history = JSON.parse(
+    fs.readFileSync(path.resolve(process.cwd(), 'public', 'data', historyFile), 'utf-8'),
+  );
+} catch {
+  history = [];
+}
+
+const factsFor = act => history
+  .map(item => ({ ...item, year: parseInt(String(item.date), 10) }))
+  .filter(item => Number.isFinite(item.year) && item.year >= act.from && item.year <= act.to)
+  .sort((a, b) => a.year - b.year);
+
+const wordCount = guide.acts
+  .flatMap(act => act.paragraphs)
+  .join(' ')
+  .replace(/<[^>]+>/g, ' ')
+  .split(/\s+/)
+  .filter(Boolean).length;
+const readingMinutes = Math.max(1, Math.round(wordCount / 220));
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      '@id': `${canonical}#article`,
+      headline: guide.h1,
+      description: guide.description,
+      inLanguage: lang,
+      datePublished: guide.updated,
+      dateModified: guide.updated,
+      author: { '@id': `${SITE}/#person` },
+      publisher: { '@id': `${SITE}/#website` },
+      isPartOf: { '@id': `${SITE}/#website` },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      about: { '@type': 'Thing', name: 'Electronic music' },
+      articleSection: guide.acts.map(act => act.heading),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: labels.home, item: `${SITE}${langPrefix}/` },
+        { '@type': 'ListItem', position: 2, name: labels.guides, item: `${SITE}${langPrefix}/guides/` },
+        { '@type': 'ListItem', position: 3, name: guide.h1, item: canonical },
+      ],
+    },
+  ],
+});
+---
+
+<BaseLayout
+  title={guide.title}
+  description={guide.description}
+  canonical={canonical}
+  lang={lang}
+  jsonLd={jsonLd}
+  esAvailable
+>
+  <Header brandAs="div" />
+  <main>
+    <article class="guide container">
+      <nav class="guide-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href={`/pulse.roots${langPrefix}/`}>{labels.home}</a></li>
+          <li><a href={`/pulse.roots${langPrefix}/guides/`}>{labels.guides}</a></li>
+          <li aria-current="page">{guide.h1}</li>
+        </ol>
+      </nav>
+
+      <header class="guide-header">
+        <h1>{guide.h1}</h1>
+        <p class="guide-lead" set:html={guide.lead} />
+        <p class="guide-meta">
+          <span>{guide.updatedLabel}</span>
+          <time datetime={guide.updated}>{guide.updated}</time>
+          <span aria-hidden="true">·</span>
+          <span>{readingMinutes} {labels.minRead}</span>
+          <span aria-hidden="true">·</span>
+          <a href={`/pulse.roots${langPrefix === '' ? '/es' : ''}/guides/${guide.slug}/`} hreflang={otherLang} lang={otherLang}>
+            {labels.readIn}
+          </a>
+        </p>
+      </header>
+
+      {guide.acts.map(act => {
+        const facts = factsFor(act);
+        return (
+          <section class="guide-act" id={act.id}>
+            <h2>{act.heading}</h2>
+            <p class="guide-standfirst">{act.standfirst}</p>
+            {act.paragraphs.map(paragraph => <p set:html={paragraph} />)}
+
+            {facts.length > 0 && (
+              <details class="guide-timeline">
+                <summary>
+                  {guide.timelineHeading}
+                  <span class="guide-timeline-count">{facts.length}</span>
+                </summary>
+                <ol>
+                  {facts.map(fact => (
+                    <li>
+                      <span class="guide-year">{fact.date}</span>
+                      <span class="guide-fact">{fact.fact}</span>
+                      {fact.url && (
+                        <a class="guide-source" href={fact.url} target="_blank" rel="noopener noreferrer">
+                          {labels.source}
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </details>
+            )}
+          </section>
+        );
+      })}
+
+      <section class="guide-families" id="families">
+        <p class="guide-families-lead" set:html={guide.familiesIntro} />
+        <GenreFamilies lang={lang} />
+      </section>
+
+      <section class="guide-faq" id="faq">
+        <h2>{guide.faqHeading}</h2>
+        {guide.faq.map(item => (
+          <div class="guide-faq-item">
+            <h3>{item.q}</h3>
+            <p>{item.a}</p>
+          </div>
+        ))}
+      </section>
+
+      <section class="guide-cta">
+        <h2>{guide.ctaHeading}</h2>
+        <p>{guide.ctaText}</p>
+        <a class="guide-cta-link" href={labels.ctaHref}>{guide.ctaLabel} &rarr;</a>
+      </section>
+    </article>
+  </main>
+  <Footer />
+
+  <style>
+    .guide { max-width: 760px; margin: 40px auto; padding: 40px; color: var(--text-main); }
+    .guide-breadcrumb ol { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0 0 28px; padding: 0; font-size: 0.82rem; color: var(--text-muted); }
+    .guide-breadcrumb li + li::before { content: '›'; margin-right: 6px; }
+    .guide-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .guide-breadcrumb a:hover { color: var(--accent-pink); }
+
+    .guide-header { margin-bottom: 44px; padding-bottom: 28px; border-bottom: 1px solid var(--glass-border); }
+    .guide h1 { font-size: clamp(1.9rem, 4.4vw, 2.8rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 18px; }
+    .guide-lead { color: var(--text-muted); font-size: 1.08rem; line-height: 1.75; margin: 0 0 20px; }
+    .guide-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0; font-size: 0.82rem; color: var(--text-muted); }
+    .guide-meta time { color: var(--accent-pink); }
+    .guide-meta a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
+    .guide-meta a:hover { color: var(--accent-pink); }
+
+    .guide-act { margin-bottom: 44px; scroll-margin-top: 90px; }
+    .guide-act h2 { font-size: clamp(1.3rem, 2.6vw, 1.65rem); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; }
+    .guide-standfirst { color: var(--accent-pink); font-size: 1.02rem; line-height: 1.65; margin: 0 0 18px; font-style: italic; }
+    .guide-act p { color: var(--text-muted); line-height: 1.8; margin: 0 0 16px; }
+    .guide-act p :global(a), .guide-families-lead :global(a), .guide-faq :global(a) { color: var(--accent-pink); text-decoration: none; border-bottom: 1px solid rgba(255, 0, 102, 0.35); }
+    .guide-act :global(em) { color: var(--text-main); font-style: italic; }
+
+    .guide-timeline { margin: 22px 0 0; border: 1px solid var(--glass-border); border-radius: 12px; background: rgba(255, 255, 255, 0.02); }
+    .guide-timeline summary { cursor: pointer; padding: 14px 18px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-pink); display: flex; align-items: center; gap: 10px; }
+    .guide-timeline-count { color: var(--text-muted); font-weight: 400; letter-spacing: 0; text-transform: none; }
+    .guide-timeline ol { list-style: none; margin: 0; padding: 0 18px 18px; }
+    .guide-timeline li { display: grid; grid-template-columns: 62px 1fr; gap: 4px 12px; padding: 9px 0; border-top: 1px solid var(--glass-border); font-size: 0.9rem; }
+    .guide-year { color: var(--accent-pink); font-variant-numeric: tabular-nums; font-weight: 600; }
+    .guide-fact { color: var(--text-muted); line-height: 1.6; }
+    .guide-source { grid-column: 2; justify-self: start; font-size: 0.75rem; color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
+    .guide-source:hover { color: var(--accent-pink); }
+
+    .guide-families { margin: 56px 0 0; }
+    .guide-families-lead { color: var(--text-muted); line-height: 1.75; margin: 0 0 24px; }
+    .guide-families-lead :global(a) { color: var(--accent-pink); text-decoration: none; border-bottom: 1px solid rgba(255, 0, 102, 0.35); }
+
+    .guide-faq { margin: 56px 0 0; }
+    .guide-faq h2 { font-size: clamp(1.3rem, 2.6vw, 1.65rem); margin: 0 0 20px; }
+    .guide-faq-item { margin-bottom: 22px; }
+    .guide-faq h3 { font-size: 1rem; font-weight: 700; margin: 0 0 6px; }
+    .guide-faq p { color: var(--text-muted); line-height: 1.75; margin: 0; }
+
+    .guide-cta { margin: 56px 0 0; padding: 26px 24px; border: 1px solid var(--glass-border); border-radius: 14px; background: rgba(255, 0, 102, 0.04); }
+    .guide-cta h2 { font-size: 1.2rem; margin: 0 0 10px; }
+    .guide-cta p { color: var(--text-muted); line-height: 1.7; margin: 0 0 18px; }
+    .guide-cta-link { display: inline-block; padding: 11px 20px; border-radius: 999px; background: var(--accent-pink); color: #fff; font-weight: 600; text-decoration: none; font-size: 0.92rem; }
+    .guide-cta-link:hover { filter: brightness(1.1); }
+
+    @media (max-width: 768px) {
+      .guide { margin: 20px; padding: 22px; }
+      .guide-timeline li { grid-template-columns: 54px 1fr; }
+    }
+  </style>
+</BaseLayout>

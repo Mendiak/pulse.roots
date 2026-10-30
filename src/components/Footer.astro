@@ -22,6 +22,7 @@ const t = currentLang === 'es'
       logoCredit: 'Logotipo (Flaticon)',
       contact: 'Contacto',
       about: 'Sobre PulseRoots',
+      guides: 'Guías',
       privacy: 'Política de Privacidad',
       sitemap: 'Mapa del sitio',
       genres: 'Géneros',
@@ -41,6 +42,7 @@ const t = currentLang === 'es'
       logoCredit: 'Logo (Flaticon)',
       contact: 'Contact',
       about: 'About',
+      guides: 'Guides',
       privacy: 'Privacy Policy',
       sitemap: 'Sitemap',
       genres: 'Genres',
@@ -138,6 +140,7 @@ try {
         <li><a class="footer-link" href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-vector-pen"></i> <span>{t.logoCredit}</span></a></li>
         <li><a class="footer-link" href={`${basePath}/${langPrefix}contact/`}><i class="bi bi-patch-question"></i> <span>{t.contact}</span></a></li>
         <li><a class="footer-link" href={`${basePath}/${langPrefix}about/`}><i class="bi bi-info-circle"></i> <span>{t.about}</span></a></li>
+        <li><a class="footer-link" href={`${basePath}/${langPrefix}guides/`}><i class="bi bi-journal-text"></i> <span>{t.guides}</span></a></li>
         <li><a class="footer-link" href={`${basePath}/${langPrefix}privacy/`}><i class="bi bi-shield-lock"></i> <span>{t.privacy}</span></a></li>
         <li><a class="footer-link" href={`${basePath}/${langPrefix}sitemap/`}><i class="bi bi-diagram-3"></i> <span>{t.sitemap}</span></a></li>
       </ul>

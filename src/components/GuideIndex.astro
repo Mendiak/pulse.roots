@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import { guidesFor, guidesIndex } from '../data/guides.js';
+
+export interface Props {
+  lang?: 'en' | 'es';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const SITE = 'https://mendiak.github.io/pulse.roots';
+const langPrefix = lang === 'es' ? '/es' : '';
+const canonical = `${SITE}${langPrefix}/guides/`;
+const copy = guidesIndex[lang];
+const items = guidesFor(lang);
+
+const labels = lang === 'es'
+  ? { home: 'Inicio', guides: 'Guías' }
+  : { home: 'Home', guides: 'Guides' };
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${canonical}#collection`,
+      url: canonical,
+      name: copy.h1,
+      description: copy.description,
+      inLanguage: lang,
+      isPartOf: { '@id': `${SITE}/#website` },
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: items.length,
+        itemListElement: items.map((guide, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: guide.h1,
+          url: `${SITE}${langPrefix}/guides/${guide.slug}/`,
+        })),
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: labels.home, item: `${SITE}${langPrefix}/` },
+        { '@type': 'ListItem', position: 2, name: labels.guides, item: canonical },
+      ],
+    },
+  ],
+});
+---
+
+<BaseLayout
+  title={copy.title}
+  description={copy.description}
+  canonical={canonical}
+  lang={lang}
+  jsonLd={jsonLd}
+  esAvailable
+>
+  <Header brandAs="div" />
+  <main>
+    <div class="guides-hub container">
+      <nav class="guides-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href={`/pulse.roots${langPrefix}/`}>{labels.home}</a></li>
+          <li aria-current="page">{labels.guides}</li>
+        </ol>
+      </nav>
+
+      <h1>{copy.h1}</h1>
+      <p class="guides-lead">{copy.lead}</p>
+
+      <ul class="guides-list">
+        {items.map(guide => (
+          <li>
+            <a href={`/pulse.roots${langPrefix}/guides/${guide.slug}/`}>
+              <h2>{guide.h1}</h2>
+              <p>{guide.description}</p>
+              <span class="guides-read">{copy.readLabel} &rarr;</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <section class="guides-more">
+        <h2>{copy.moreHeading}</h2>
+        <p set:html={copy.moreText} />
+      </section>
+    </div>
+  </main>
+  <Footer />
+
+  <style>
+    .guides-hub { max-width: 760px; margin: 40px auto; padding: 40px; color: var(--text-main); }
+    .guides-breadcrumb ol { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0 0 28px; padding: 0; font-size: 0.82rem; color: var(--text-muted); }
+    .guides-breadcrumb li + li::before { content: '›'; margin-right: 6px; }
+    .guides-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .guides-breadcrumb a:hover { color: var(--accent-pink); }
+    .guides-hub h1 { font-size: clamp(1.9rem, 4.4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 16px; }
+    .guides-lead { color: var(--text-muted); line-height: 1.75; margin: 0 0 36px; }
+    .guides-list { list-style: none; margin: 0 0 44px; padding: 0; display: grid; gap: 16px; }
+    .guides-list a { display: block; padding: 22px 22px 20px; border: 1px solid var(--glass-border); border-radius: 12px; background: rgba(255, 255, 255, 0.02); text-decoration: none; color: inherit; transition: border-color 0.2s ease, transform 0.2s ease; }
+    .guides-list a:hover { border-color: var(--accent-pink); transform: translateY(-2px); }
+    .guides-list h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 8px; }
+    .guides-list p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin: 0 0 12px; }
+    .guides-read { color: var(--accent-pink); font-size: 0.85rem; font-weight: 600; }
+    .guides-more { padding-top: 28px; border-top: 1px solid var(--glass-border); }
+    .guides-more h2 { font-size: 1.05rem; margin: 0 0 8px; }
+    .guides-more p { color: var(--text-muted); line-height: 1.7; margin: 0; }
+    .guides-more :global(a) { color: var(--accent-pink); text-decoration: none; border-bottom: 1px solid rgba(255, 0, 102, 0.35); }
+    @media (max-width: 768px) { .guides-hub { margin: 20px; padding: 22px; } }
+  </style>
+</BaseLayout>
