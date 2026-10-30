@@ -1,6 +1,9 @@
 /* --- Header --- */
 
-header {
+/* Scoped to the site header (always a direct child of <body>). A plain `header`
+   selector also matched nested <header> elements inside content, such as the
+   one in an article, and turned them into a second sticky bar. */
+body > header {
   position: sticky;
   top: 0;
   z-index: 1000;
