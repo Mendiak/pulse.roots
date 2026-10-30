@@ -1,0 +1,12 @@
+# Git mailmap
+#
+# GitHub maps any <login>@users.noreply.github.com address to the owner of that
+# login. Six commits on 2026-10-22 were authored as
+# <mikel@users.noreply.github.com>, which belongs to the unrelated
+# github.com/mikel account rather than to this project's author.
+#
+# This file keeps `git shortlog`, `git log` and other tooling from repeating
+# that mistake locally. The published history has been rewritten as well, so
+# the GitHub contributors graph no longer attributes those commits elsewhere.
+
+Mikel Aramendia <mikel.aramendia.lacalle@gmail.com> <mikel@users.noreply.github.com>
