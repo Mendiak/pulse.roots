@@ -18,8 +18,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Full history: the sitemap derives <lastmod> from `git log` on the genre
+      # datasets, and a shallow clone reports the deploy commit for every file.
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@v5
         with:
