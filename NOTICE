@@ -1,0 +1,75 @@
+PulseRoots
+==========
+
+Copyright (c) 2026 Mikel Aramendia
+https://mendiak.github.io/pulse.roots/
+
+This repository contains material under more than one licence. This file
+explains which is which; it does not replace any of the licence texts.
+
+
+1. Source code — MIT
+--------------------
+
+Everything under `src/`, `scripts/`, and the configuration files
+(`astro.config.mjs`, `tsconfig.json`, `package.json`, `.github/`) is licensed
+under the MIT License. The full text is in LICENSE.
+
+
+2. Editorial content — CC BY-NC 4.0
+-----------------------------------
+
+The following files are editorial work rather than software and are licensed
+under Creative Commons Attribution-NonCommercial 4.0 International:
+
+  - public/data/pulseroots.genres.json
+  - public/data/pulseroots.genres.es.json
+  - public/data/music_history.json
+  - public/data/music_history.es.json
+  - public/data/i18n/en.json, public/data/i18n/es.json
+  - src/data/guides.js
+
+You may reuse them with attribution and a link back, for non-commercial
+purposes. Commercial use requires written permission. See CONTENT-LICENSE.md.
+
+
+3. Third-party assets
+---------------------
+
+These keep their original licences. They are redistributed here as part of the
+built site, and their licence texts are served at /assets/licenses/.
+
+  Aleo — SIL Open Font License 1.1
+      https://fonts.google.com/specimen/Aleo
+      Licence: public/licenses/OFL-1.1.txt
+
+  Outfit — SIL Open Font License 1.1
+      https://fonts.google.com/specimen/Outfit
+      Licence: public/licenses/OFL-1.1.txt
+
+  Bootstrap Icons — MIT
+      https://github.com/twbs/icons
+      Licence: public/licenses/MIT-bootstrap-icons.txt
+
+  Logo — Flaticon
+      Used under the Flaticon free licence, attributed in the site footer.
+
+
+4. Third-party sources
+----------------------
+
+Genre descriptions take public encyclopaedic sources as a starting point, and
+each genre page links to its source (Wikipedia for 174 of the 307 entries).
+This notice does not claim ownership of those underlying sources. The
+CC BY-NC 4.0 licence covers the selection, hierarchy and wording of the
+dataset, not the material it cites.
+
+Music history entries link to the original reporting or documentation for each
+milestone.
+
+
+5. A note on forks
+------------------
+
+Versions published under the MIT License remain available under the MIT
+License. This notice describes the licensing of the current tree only.

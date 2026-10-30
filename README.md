@@ -137,7 +137,15 @@ Contributions are welcome! Whether it's correcting a genre description, adding n
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+The **source code** is available under the [MIT License](LICENSE).
+
+The **editorial content** — the genre dataset, the historical chronology, the
+written guides and their translations — is licensed separately under
+[CC BY-NC 4.0](CONTENT-LICENSE.md): you may reuse it with attribution and a
+link back, but not commercially.
+
+Third-party assets (fonts, icons, logo) keep their own licences. See
+[NOTICE](NOTICE) for the full breakdown.
 
 ---
 *PulseRoots - Explore the roots, discover the sound.*
