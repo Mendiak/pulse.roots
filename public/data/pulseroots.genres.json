@@ -1,7 +1,7 @@
 [
     {
         "style": "Experimental",
-        "description": "Experimental electronic music is a genre that explores unconventional sounds, structures, and techniques, often pushing the boundaries of traditional music. It incorporates a wide range of electronic instruments, effects, and innovative production methods to create unique auditory experiences, emphasizing creativity and exploration over conventional musical forms.",
+        "description": "Experimental is where electronic music stops being a genre and becomes a method: the sound, the structure or the medium itself is the subject. It runs from the tape and studio work of the 1950s, through the academic computer studios, the 1990s IDM scene that made difficult music danceable, and the noise and plunderphonics traditions that treat distortion and sampling as composition. In this tree it holds IDM and its eight substyles, sound manipulation, noise and distortion, chiptune, avant-club, neoclassical, musique concrete, tape music, plunderphonics and hauntology. These styles rarely share a tempo or an audience; what they share is that the rules of the form are the thing being tested.",
         "example": "John Cage - 4'33\"",
         "spotify_track_id": "2bNCdW4rLnCTzgqUXTTDO1",
         "key_artists": [
@@ -3449,7 +3449,7 @@
     },
     {
         "style": "Bass Music",
-        "description": "Bass music is a broad genre of electronic music that emphasizes heavy, prominent basslines and sub-bass frequencies, often incorporating elements from various styles such as dubstep, trap, drum and bass, and UK garage, with a focus on low-end sound design and rhythmic intensity.",
+        "description": "Bass music is the umbrella for styles where the low end carries the track: sub-bass, weight and space rather than melody. The term came out of UK soundsystem culture in the 2000s, when dubstep, grime and drum and bass shared rigs, DJs and audiences, and it has since absorbed American and global forms. In this tree it holds drum and bass and jungle, dubstep and its six branches, juke, future bass, wave, midtempo bass, trap, cloud rap, phonk, UK bass and moombahton. What ties them together is not tempo - they run from 70 to 180 BPM - but the mixing: the kick and the sub are the subject and everything else is arranged around them.",
         "example": "Baauer - Harlem Shake",
         "spotify_track_id": "01XFgRZfZI7oBagNf1Loml",
         "key_artists": [
@@ -4463,7 +4463,7 @@
     },
     {
         "style": "Breakbeat",
-        "description": "Breakbeat is a genre of electronic music that features syncopated drum patterns, typically derived from sampled drum breaks in funk, hip-hop, or soul music. It emphasizes irregular rhythms and offbeat grooves, often used as a foundation for genres like drum and bass, jungle, and breakbeat hardcore.",
+        "description": "Breakbeat is electronic music built on a broken drum pattern instead of the four-to-the-floor kick that runs through house and techno. The source material is the drum break: funk and soul records sampled and re-sequenced, which is why the rhythms swing and stumble rather than march. The UK made it a genre of its own in the early 1990s, when breakbeat hardcore split into jungle on one side and big beat on the other. This family covers acid breaks, Baltimore club, big beat, breakbeat hardcore, broken beat, nu skool breaks and psychedelic breakbeat: styles that share a rhythmic idea but not a tempo, a decade or a city.",
         "example": "The Future Sound Of London - Papua New Guinea",
         "spotify_track_id": "5zh23oMbATQlWbwEe5U0KG",
         "key_artists": [
@@ -5918,7 +5918,7 @@
     },
     {
         "style": "Industrial and Post-Industrial",
-        "description": "A genre rooted in harsh, mechanical sounds and dystopian themes, often blending elements of electronic, noise, and experimental music. Post-industrial extends these concepts, exploring darker, atmospheric territories.",
+        "description": "Industrial began in the mid-1970s as a confrontation rather than a genre: Throbbing Gristle, Cabaret Voltaire and SPK used tape loops, metal percussion and noise to attack the idea of a song. What followed split in two directions. EBM, electronic body music, kept the rhythm and made it danceable, and became the root of much of the harder end of techno. Post-industrial went the other way, into dark ambient, ritual and collage. This family covers EBM and its two substyles, New Beat - the Belgian 1980s sound that slowed EBM down - and the post-industrial branch. It is the darkest corner of the tree, and the one whose influence is easiest to hear in modern techno and hardstyle.",
         "example": "Nine Inch Nails - Closer",
         "spotify_track_id": "5mc6EyF1OIEOhAkD0Gg9Lc",
         "key_artists": [
