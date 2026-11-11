@@ -3,6 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import fs from 'node:fs';
 import { slugify } from './src/utils/slug.js';
 import { genreDatasetLastmod } from './src/utils/dataset-meta.js';
+import { guides } from './src/data/guides.js';
 
 const SITE = 'https://mendiak.github.io/pulse.roots';
 
@@ -39,6 +40,15 @@ function buildLegacyGenreRedirects() {
  */
 const genreDataLastmod = genreDatasetLastmod('en');
 const genreDataLastmodEs = genreDatasetLastmod('es');
+
+// Latest editorial update, used for the guides index and any guide without a
+// more specific date in its record.
+const guidesLastmod = guides
+  .map(guide => guide.updated)
+  .sort()
+  .at(-1);
+
+const guideLastmodBySlug = new Map(guides.map(guide => [guide.slug, guide.updated]));
 
 export default defineConfig({
   site: 'https://mendiak.github.io',
@@ -79,6 +89,16 @@ export default defineConfig({
         if (lastmod && item.url.includes('/genres/')) {
           return { ...item, lastmod: new Date(lastmod).toISOString() };
         }
+
+        const guideMatch = item.url.match(/\/guides\/([^/]+)\/?$/);
+        if (guideMatch) {
+          const guideDate = guideLastmodBySlug.get(guideMatch[1]) || guidesLastmod;
+          if (guideDate) return { ...item, lastmod: new Date(guideDate).toISOString() };
+        }
+        if (guidesLastmod && /\/guides\/$/.test(item.url)) {
+          return { ...item, lastmod: new Date(guidesLastmod).toISOString() };
+        }
+
         return item;
       },
       i18n: {

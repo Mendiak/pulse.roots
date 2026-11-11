@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
-import ExploreIntro from './ExploreIntro.astro';
 import { genreDatasetLastmod } from '../utils/dataset-meta.js';
 
 export interface Props {
@@ -78,6 +77,14 @@ const copy = lang === 'es'
       infoPanel: 'Información del género',
       breadcrumbLabel: 'Ruta de navegación',
       itemsList: `Subgéneros de ${genreName}`,
+      branch: 'En esta rama',
+      branchRoot: 'es una familia raíz del árbol de géneros.',
+      sitsUnder: 'cuelga de',
+      inFamily: 'dentro de la familia',
+      branchesFrom: 'estilos salen de aquí.',
+      leaf: 'Es un estilo hoja: no tiene subestilos propios.',
+      browseAll: 'Todas las familias',
+      browseAz: 'Todos los estilos de la A a la Z',
     }
   : {
       home: 'Home',
@@ -107,6 +114,14 @@ const copy = lang === 'es'
       infoPanel: 'Genre Information',
       breadcrumbLabel: 'Breadcrumb',
       itemsList: `${genreName} subgenres`,
+      branch: 'In this branch',
+      branchRoot: 'is a root family in the genre tree.',
+      sitsUnder: 'sits under',
+      inFamily: 'within the',
+      branchesFrom: 'styles branch from it.',
+      leaf: 'This is a leaf style: it has no substyles of its own.',
+      browseAll: 'All families',
+      browseAz: 'All styles, A to Z',
     };
 
 const parent = breadcrumbs[breadcrumbs.length - 1] || null;
@@ -216,9 +231,39 @@ const genreScript = `window.PR_LANG='${lang}';window.PR_I18N={};window.PR_I18N_F
 
   <main>
     <div id="main-container">
-      <div id="tooltip" class="info-box" aria-labelledby="intro-title">
+      <div id="tooltip" class="info-box">
         <Fragment set:html={buildBreadcrumbHtml()} />
-        <ExploreIntro lang={lang} />
+
+        <h2 class="branch-title">{copy.branch}</h2>
+        <p class="branch-text">
+          {parent
+            ? <>
+                {displayName} {copy.sitsUnder}{' '}
+                <a href={`${basePath}/genres/${parent.slug}/`}>{parent.name}</a>
+                {family && <>{' '}{copy.inFamily}{' '}
+                  <a href={`${basePath}/genres/${family.slug}/`}>{family.name}</a></>}.
+              </>
+            : <>{displayName} {copy.branchRoot}</>}
+        </p>
+        <p class="branch-text">
+          {children.length > 0
+            ? <>{children.length} {copy.branchesFrom}</>
+            : copy.leaf}
+        </p>
+
+        {children.length > 0 && (
+          <ul class="branch-links">
+            {children.slice(0, 8).map(child => (
+              <li><a href={`${basePath}/genres/${child.fullSlugPath}/`}>{child.name}</a></li>
+            ))}
+          </ul>
+        )}
+
+        <p class="branch-more">
+          <a href={`${basePath}/genres/`}>{copy.browseAll}</a>
+          <span aria-hidden="true"> · </span>
+          <a href={`${basePath}/sitemap/`}>{copy.browseAz}</a>
+        </p>
       </div>
 
       <div id="visualization-container">

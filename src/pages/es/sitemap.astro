@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 import { loadGenres, flattenGenres, slugify } from '../../utils/genres-data.js';
 
 const SITE = 'https://mendiak.github.io/pulse.roots';
@@ -20,7 +22,7 @@ const families = loadGenres('es')
     };
   })
   .filter(Boolean)
-  .sort((a, b) => a.name.localeCompare(b.name));
+  .sort((a, b) => a.name.localeCompare(b.name, 'es'));
 
 const totalStyles = families.reduce((sum, family) => sum + family.styles.length + 1, 0);
 
@@ -31,8 +33,8 @@ const jsonLd = JSON.stringify({
       "@type": "CollectionPage",
       "@id": `${canonical}#collection`,
       "url": canonical,
-      "name": "Mapa del Sitio - PulseRoots",
-      "description": "Todas las páginas y géneros de PulseRoots, agrupados por familia.",
+      "name": "Todos los géneros de música electrónica, de la A a la Z",
+      "description": `Todos los géneros de música electrónica de PulseRoots: ${totalStyles} estilos y subestilos repartidos en ${families.length} familias.`,
       "isPartOf": { "@id": `${SITE}/#website` },
       "inLanguage": "es",
       "mainEntity": {
@@ -50,7 +52,7 @@ const jsonLd = JSON.stringify({
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Inicio", "item": `${SITE}/es/` },
-        { "@type": "ListItem", "position": 2, "name": "Mapa del Sitio", "item": canonical },
+        { "@type": "ListItem", "position": 2, "name": "Todos los géneros", "item": canonical },
       ],
     },
   ],
@@ -58,36 +60,33 @@ const jsonLd = JSON.stringify({
 ---
 
 <BaseLayout
-  title="Mapa del Sitio - PulseRoots"
-  description="Mapa del sitio de PulseRoots - una visualización interactiva de géneros de música electrónica. Explora todas las páginas de géneros disponibles."
+  title={`Todos los géneros de música electrónica A-Z | PulseRoots`}
+  description={`Todos los géneros de música electrónica de PulseRoots: ${totalStyles} estilos y subestilos en ${families.length} familias, del techno y el house al ambient, el bass o el global club.`}
   canonical={canonical}
   lang="es"
   jsonLd={jsonLd}
+  esAvailable
 >
-  <header>
-    <div id="header-container">
-      <a href="/pulse.roots/es/" id="logo-link" aria-label="PulseRoots - Mapa del Sitio - Inicio">
-        <h1>PulseRoots - Mapa del Sitio</h1>
-      </a>
-    </div>
-  </header>
+  <Header brandAs="div" simple />
   <main>
     <div id="main-container" class="sitemap-page">
+      <h1>Todos los géneros de música electrónica, de la A a la Z</h1>
       <p class="sitemap-lead">
-        Explora los {totalStyles} estilos de música electrónica de PulseRoots, agrupados por familia, o abre la
-        <a href="/pulse.roots/es/genres/">vista general de familias</a>.
+        PulseRoots documenta <strong>{totalStyles} estilos y subestilos de música electrónica</strong> repartidos en
+        {' '}<strong>{families.length} familias</strong>. Esta página los lista todos, agrupados por familia y
+        en orden alfabético dentro de cada grupo. Si prefieres empezar por las ramas generales, abre la
+        <a href="/pulse.roots/es/genres/">vista general de familias</a>; si buscas la historia que hay detrás,
+        lee la <a href="/pulse.roots/es/guides/electronic-music-history/">historia de la música electrónica</a>.
       </p>
 
-      <h2>Todas las Páginas</h2>
-      <ul>
-        <li><a href="/pulse.roots/es/">Inicio</a></li>
-        <li><a href="/pulse.roots/es/genres/">Géneros</a></li>
-        <li><a href="/pulse.roots/es/contact/">Contacto</a></li>
+      <ul class="sitemap-quick">
+        <li><a href="/pulse.roots/es/genres/">Explorar por familia</a></li>
+        <li><a href="/pulse.roots/es/guides/">Todas las guías</a></li>
         <li><a href="/pulse.roots/es/about/">Sobre PulseRoots</a></li>
-        <li><a href="/pulse.roots/es/privacy/">Política de Privacidad</a></li>
+        <li><a href="/pulse.roots/es/contact/">Contacto</a></li>
       </ul>
 
-      <h2>Todos los Géneros</h2>
+      <h2>Todos los géneros por familia</h2>
       {families.map(family => (
         <section class="sitemap-family">
           <h3><a href={`/pulse.roots/es/genres/${family.slug}/`}>{family.name}</a></h3>
@@ -98,23 +97,30 @@ const jsonLd = JSON.stringify({
           </ul>
         </section>
       ))}
+
+      <p class="sitemap-footer-note">
+        La taxonomía es una interpretación, no una regla: los géneros se solapan, se dividen y se
+        fusionan, y un mismo sonido puede clasificarse de otra forma en otro sitio. Cada página de
+        género enlaza con su estilo padre, sus subestilos y los estilos que comparten artistas clave.
+      </p>
     </div>
   </main>
-  <footer>
-    <div class="footer-bottom">
-      <p>&copy; 2026 PulseRoots. Mapeando el pulso de la música electrónica.</p>
-    </div>
-  </footer>
+  <Footer />
 
   <style>
-    .sitemap-page { padding: 20px; max-width: 800px; margin: 0 auto; color: var(--text-main); }
-    .sitemap-lead { color: var(--text-muted); line-height: 1.7; }
+    .sitemap-page { padding: 32px; max-width: 1000px; margin: 24px auto 40px; color: var(--text-main); }
+    .sitemap-page h1 { font-size: clamp(1.8rem, 3.6vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 16px; }
+    .sitemap-page h2 { margin: 36px 0 8px; font-size: 1.3rem; }
+    .sitemap-lead { color: var(--text-muted); line-height: 1.75; max-width: 760px; }
+    .sitemap-lead strong { color: var(--text-main); }
     .sitemap-page a { color: var(--accent-pink); text-decoration: none; }
     .sitemap-page a:hover { text-decoration: underline; }
-    .sitemap-page h2 { margin-top: 32px; }
+    .sitemap-quick { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 20px 0 0; padding: 0; font-size: 0.9rem; }
     .sitemap-family { margin-top: 22px; }
-    .sitemap-family h3 { font-size: 1.1rem; margin: 0 0 6px; }
+    .sitemap-family h3 { font-size: 1.05rem; margin: 0 0 6px; }
     .sitemap-family ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
-    .sitemap-family li { font-size: 0.92rem; }
+    .sitemap-family li { font-size: 0.9rem; }
+    .sitemap-footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--glass-border); color: var(--text-muted); line-height: 1.7; font-size: 0.92rem; }
+    @media (max-width: 768px) { .sitemap-page { margin: 20px; padding: 22px; } }
   </style>
 </BaseLayout>

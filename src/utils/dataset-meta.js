@@ -26,6 +26,19 @@ function git(args) {
  * no `<lastmod>` is better than one that is always wrong. The deploy workflow
  * checks out the full history so this branch should not be hit in CI.
  */
+/**
+ * Files whose content is rendered into every genre page. When one of these
+ * changes, the genre pages really did change, so their <lastmod> must move
+ * with it instead of staying frozen on the dataset commit.
+ */
+const GENRE_TEMPLATE_FILES = [
+  'src/components/GenrePage.astro',
+  'src/utils/genre-paths.js',
+  'src/utils/genres-data.js',
+  'src/styles/layout.css',
+  'astro.config.mjs',
+];
+
 export function genreDatasetLastmod(lang = 'en') {
   const file = lang === 'en'
     ? 'public/data/pulseroots.genres.json'
@@ -34,7 +47,8 @@ export function genreDatasetLastmod(lang = 'en') {
   if (cache.has(file)) return cache.get(file);
 
   const isShallow = git('rev-parse --is-shallow-repository') === 'true';
-  const value = isShallow ? '' : git(`log -1 --format=%cI -- ${file}`);
+  const paths = [file, ...GENRE_TEMPLATE_FILES].join(' ');
+  const value = isShallow ? '' : git(`log -1 --format=%cI -- ${paths}`);
 
   cache.set(file, value);
   return value;

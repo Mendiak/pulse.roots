@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { loadGenres, flattenGenres, slugify } from '../utils/genres-data.js';
 
 const SITE = 'https://mendiak.github.io/pulse.roots';
@@ -31,8 +33,8 @@ const jsonLd = JSON.stringify({
       "@type": "CollectionPage",
       "@id": `${canonical}#collection`,
       "url": canonical,
-      "name": "Sitemap - PulseRoots",
-      "description": "Every page and genre on PulseRoots, grouped by family.",
+      "name": "All Electronic Music Genres, A to Z",
+      "description": `Every electronic music genre on PulseRoots: ${totalStyles} styles and substyles across ${families.length} families.`,
       "isPartOf": { "@id": `${SITE}/#website` },
       "inLanguage": "en",
       "mainEntity": {
@@ -50,7 +52,7 @@ const jsonLd = JSON.stringify({
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}/` },
-        { "@type": "ListItem", "position": 2, "name": "Sitemap", "item": canonical },
+        { "@type": "ListItem", "position": 2, "name": "All genres", "item": canonical },
       ],
     },
   ],
@@ -58,35 +60,32 @@ const jsonLd = JSON.stringify({
 ---
 
 <BaseLayout
-  title="Sitemap - PulseRoots"
-  description="Sitemap of PulseRoots - an interactive visualization of electronic music genres. Browse all available genre pages."
+  title={`All Electronic Music Genres A-Z: ${totalStyles} Styles | PulseRoots`}
+  description={`Every electronic music genre on PulseRoots: ${totalStyles} styles and substyles across ${families.length} families, from techno and house to ambient, bass music and global club.`}
   canonical={canonical}
   jsonLd={jsonLd}
+  esAvailable
 >
-  <header>
-    <div id="header-container">
-      <a href="/pulse.roots/" id="logo-link" aria-label="PulseRoots - Sitemap - Home">
-        <h1>PulseRoots - Sitemap</h1>
-      </a>
-    </div>
-  </header>
+  <Header brandAs="div" simple />
   <main>
     <div id="main-container" class="sitemap-page">
+      <h1>All electronic music genres, A to Z</h1>
       <p class="sitemap-lead">
-        Browse all {totalStyles} electronic music styles on PulseRoots, grouped by family, or open the
-        <a href="/pulse.roots/genres/">family overview</a>.
+        PulseRoots documents <strong>{totalStyles} electronic music styles and substyles</strong> across
+        {' '}<strong>{families.length} families</strong>. This page lists every one of them, grouped by family
+        and alphabetical inside each group. If you would rather start from the broad branches, open the
+        <a href="/pulse.roots/genres/">family overview</a>; if you want the story behind them, read the
+        <a href="/pulse.roots/guides/electronic-music-history/">history of electronic music</a>.
       </p>
 
-      <h2>All Pages</h2>
-      <ul>
-        <li><a href="/pulse.roots/">Home</a></li>
-        <li><a href="/pulse.roots/genres/">Genres</a></li>
+      <ul class="sitemap-quick">
+        <li><a href="/pulse.roots/genres/">Browse by family</a></li>
+        <li><a href="/pulse.roots/guides/">All guides</a></li>
+        <li><a href="/pulse.roots/about/">About PulseRoots</a></li>
         <li><a href="/pulse.roots/contact/">Contact</a></li>
-        <li><a href="/pulse.roots/about/">About</a></li>
-        <li><a href="/pulse.roots/privacy/">Privacy Policy</a></li>
       </ul>
 
-      <h2>All Genres</h2>
+      <h2>All genres by family</h2>
       {families.map(family => (
         <section class="sitemap-family">
           <h3><a href={`/pulse.roots/genres/${family.slug}/`}>{family.name}</a></h3>
@@ -97,23 +96,30 @@ const jsonLd = JSON.stringify({
           </ul>
         </section>
       ))}
+
+      <p class="sitemap-footer-note">
+        The taxonomy is an interpretation, not a rule: genres overlap, split and merge, and the same
+        sound can be classified differently elsewhere. Every genre page links to its parent style, its
+        substyles and the styles that share its key artists.
+      </p>
     </div>
   </main>
-  <footer>
-    <div class="footer-bottom">
-      <p>&copy; 2026 PulseRoots. Mapping the pulse of electronic music.</p>
-    </div>
-  </footer>
+  <Footer />
 
   <style>
-    .sitemap-page { padding: 20px; max-width: 800px; margin: 0 auto; color: var(--text-main); }
-    .sitemap-lead { color: var(--text-muted); line-height: 1.7; }
+    .sitemap-page { padding: 32px; max-width: 1000px; margin: 24px auto 40px; color: var(--text-main); }
+    .sitemap-page h1 { font-size: clamp(1.8rem, 3.6vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 16px; }
+    .sitemap-page h2 { margin: 36px 0 8px; font-size: 1.3rem; }
+    .sitemap-lead { color: var(--text-muted); line-height: 1.75; max-width: 760px; }
+    .sitemap-lead strong { color: var(--text-main); }
     .sitemap-page a { color: var(--accent-pink); text-decoration: none; }
     .sitemap-page a:hover { text-decoration: underline; }
-    .sitemap-page h2 { margin-top: 32px; }
+    .sitemap-quick { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 20px 0 0; padding: 0; font-size: 0.9rem; }
     .sitemap-family { margin-top: 22px; }
-    .sitemap-family h3 { font-size: 1.1rem; margin: 0 0 6px; }
+    .sitemap-family h3 { font-size: 1.05rem; margin: 0 0 6px; }
     .sitemap-family ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
-    .sitemap-family li { font-size: 0.92rem; }
+    .sitemap-family li { font-size: 0.9rem; }
+    .sitemap-footer-note { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--glass-border); color: var(--text-muted); line-height: 1.7; font-size: 0.92rem; }
+    @media (max-width: 768px) { .sitemap-page { margin: 20px; padding: 22px; } }
   </style>
 </BaseLayout>

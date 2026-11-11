@@ -144,6 +144,78 @@ main {
   font-weight: 700;
 }
 
+/* --- Sidebar: branch summary on genre pages (replaces the shared explainer) --- */
+.branch-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+  margin: 0 0 10px;
+}
+
+.branch-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+}
+
+.branch-text a {
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-35);
+}
+
+.branch-text a:hover {
+  color: var(--accent-pink);
+  border-bottom-color: var(--accent-pink);
+}
+
+.branch-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.branch-links a {
+  display: inline-flex;
+  padding: 4px 11px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  color: var(--text-main);
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.branch-links a:hover {
+  border-color: var(--accent-pink);
+  color: var(--accent-pink);
+}
+
+.branch-more {
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--glass-border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.branch-more a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.branch-more a:hover {
+  color: var(--accent-pink);
+}
+
 /* Add a visual separator for key sections */
 .section-divider {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
