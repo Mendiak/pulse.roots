@@ -33,6 +33,9 @@ wheels/
 node_modules/
 .astro/
 
+# Generated at build time by scripts/build-map-images.mjs
+public/assets/maps/
+
 # IDE
 .vscode/
 .idea/

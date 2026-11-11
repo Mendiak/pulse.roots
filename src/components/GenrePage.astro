@@ -207,6 +207,17 @@ function buildBreadcrumbHtml() {
 }
 
 const genreScript = `window.PR_LANG='${lang}';window.PR_I18N={};window.PR_I18N_FALLBACK={};window.PR_GENRE_TO_LOAD=${JSON.stringify(genreName)};`;
+
+// Only root families get a generated map: it shows the family and every style
+// that branches from it, which is exactly what the interactive treemap cannot
+// give a crawler. Deeper styles would need 600+ images for little value.
+const isFamily = breadcrumbs.length === 0;
+const familySlug = fullSlugPath.split('/')[0];
+const mapPath = isFamily ? `/assets/maps/family-${familySlug}-${lang}.jpg` : null;
+const mapAlt = lang === 'es'
+  ? `${displayName}: sus ${descendantCount} estilos y subestilos en el árbol de géneros de música electrónica de PulseRoots`
+  : `${displayName}: its ${descendantCount} styles and substyles on the PulseRoots electronic music genre tree`;
+const ogImage = mapPath ? `${SITE}${mapPath}` : undefined;
 ---
 
 <BaseLayout
@@ -215,6 +226,8 @@ const genreScript = `window.PR_LANG='${lang}';window.PR_I18N={};window.PR_I18N_F
   canonical={canonical}
   ogTitle={title}
   ogDescription={metaDesc}
+  ogImage={ogImage}
+  ogImageAlt={mapPath ? mapAlt : undefined}
   lang={lang}
   jsonLd={jsonLd}
   esAvailable
@@ -298,6 +311,19 @@ const genreScript = `window.PR_LANG='${lang}';window.PR_I18N={};window.PR_I18N_F
       )}
 
       {description && <p class="genre-description">{description}</p>}
+
+      {mapPath && (
+        <figure class="genre-map">
+          <img
+            src={`/pulse.roots${mapPath}`}
+            alt={mapAlt}
+            width="1200"
+            height="630"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+      )}
 
       <section class="genre-block genre-glance">
         <h2>{displayName} {copy.glance}</h2>

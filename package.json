@@ -5,8 +5,10 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/flatten-redirects.mjs",
+    "predev": "node scripts/build-map-images.mjs",
+    "build": "node scripts/build-map-images.mjs && astro build && node scripts/flatten-redirects.mjs",
     "preview": "astro preview",
+    "icons": "node scripts/build-icons.mjs",
     "check:seo": "node scripts/verify-seo.mjs && node scripts/verify-i18n.mjs",
     "verify": "npm run build && npm run check:seo"
   },
@@ -23,6 +25,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.0.4",
-    "d3": "^6.7.0"
+    "d3": "^6.7.0",
+    "sharp": "^0.35.5"
   }
 }

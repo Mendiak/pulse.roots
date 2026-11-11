@@ -94,6 +94,8 @@ const jsonLd = JSON.stringify({
   description={`The complete list of electronic music genres, grouped into families: Techno, House, Trance, Ambient, Bass, Breakbeat, Experimental and more. ${totalStyles}+ styles.`}
   canonical={canonical}
   jsonLd={jsonLd}
+  ogImage={`${SITE}/assets/maps/overview-en.jpg`}
+  ogImageAlt={`The PulseRoots electronic music genre tree: ${families.length} families and ${totalStyles} styles`}
   esAvailable
 >
   <Header brandAs="div" />
@@ -105,6 +107,21 @@ const jsonLd = JSON.stringify({
         Start with a family to see how its styles and substyles evolved, or open the
         <a href="/pulse.roots/sitemap/">alphabetical list of every genre</a>.
       </p>
+
+      <figure class="genres-map">
+        <img
+          src="/pulse.roots/assets/maps/overview-en.jpg"
+          alt={`Map of ${families.length} electronic music families and the ${totalStyles} styles that branch from them`}
+          width="1200"
+          height="630"
+          fetchpriority="high"
+          decoding="async"
+        >
+        <figcaption>
+          {families.length} families, {totalStyles} styles. Every branch opens a page with its
+          substyles, key artists and an example track.
+        </figcaption>
+      </figure>
 
       <ul class="genres-stats">
         <li><strong>{families.length}</strong><span>families</span></li>
@@ -169,6 +186,9 @@ const jsonLd = JSON.stringify({
     .genres-stats li { flex: 1 1 160px; padding: 14px 16px; border: 1px solid var(--glass-border); border-radius: 12px; background: rgba(255, 255, 255, 0.02); }
     .genres-stats strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--accent-pink); line-height: 1.1; }
     .genres-stats span { display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+.genres-map { margin: 0 0 32px; }
+.genres-map img { display: block; width: 100%; height: auto; border-radius: var(--radius-xl); border: 1px solid var(--glass-border); }
+.genres-map figcaption { margin-top: 10px; font-size: 0.85rem; color: var(--text-muted); }
     .genres-family-grid { list-style: none; margin: 0 0 40px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
     .genres-family-grid li a { display: block; height: 100%; padding: 16px 18px; border: 1px solid var(--glass-border); border-radius: 12px; text-decoration: none; color: inherit; background: rgba(255, 255, 255, 0.02); transition: border-color 0.2s ease, transform 0.2s ease; }
     .genres-family-grid li a:hover { border-color: var(--accent-pink); transform: translateY(-2px); }

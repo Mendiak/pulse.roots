@@ -241,6 +241,20 @@ main {
   margin: 0 0 8px;
 }
 
+/* Static map for family pages: the treemap is a canvas, so crawlers and image
+   search never saw the shape of the tree. */
+#genre-details .genre-map {
+  margin: 20px 0 8px;
+}
+
+#genre-details .genre-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+}
+
 #genre-details .genre-block {
   margin-top: 28px;
 }
