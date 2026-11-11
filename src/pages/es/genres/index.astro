@@ -27,6 +27,26 @@ const families = loadGenres('es')
 
 const totalStyles = families.reduce((sum, family) => sum + family.count, 0);
 
+// El mismo texto alimenta el FAQ visible y el schema FAQPage.
+const faq = [
+  {
+    q: '¿Cuántos tipos de música electrónica hay?',
+    a: `No hay una cifra oficial. PulseRoots reúne ${totalStyles} estilos y subestilos en ${families.length} familias, desde la música experimental y de cinta hasta el hyperpop, el phonk y el amapiano. Cada año aparecen escenas nuevas, así que el árbol se revisa y amplía.`,
+  },
+  {
+    q: '¿Cuáles son los géneros principales de la música electrónica?',
+    a: 'Techno, House, Trance, Ambient, Bass Music, Breakbeat, Electro, Disco, Chill Out, Experimental, Industrial, Pop and Rock Fusion, Funk and Soul Fusion y Global Club. Cada página de familia enumera sus estilos y subestilos con descripción, artistas clave y una pista de ejemplo.',
+  },
+  {
+    q: '¿Qué diferencia hay entre un género y un subgénero?',
+    a: 'Un género es una familia amplia definida por una escena, un sonido y una época. Un subgénero es una rama que mantiene los rasgos centrales de su padre pero cambia el tempo, la textura o el público. El Detroit Techno es un estilo dentro del Techno, y el Ghettotech es un subgénero del Detroit Techno.',
+  },
+  {
+    q: '¿Cómo se usa este árbol de géneros?',
+    a: 'Empieza por una de las familias de abajo y sigue las ramas hacia estilos y subestilos. Cada página de género enlaza con su estilo padre, con sus subestilos y con estilos relacionados, así que puedes moverte entre familias amplias y microgéneros en ambos sentidos.',
+  },
+];
+
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
@@ -56,13 +76,22 @@ const jsonLd = JSON.stringify({
         { "@type": "ListItem", "position": 2, "name": "Géneros", "item": canonical },
       ],
     },
+    {
+      "@type": "FAQPage",
+      "@id": `${canonical}#faq`,
+      "mainEntity": faq.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": { "@type": "Answer", "text": item.a },
+      })),
+    },
   ],
 });
 ---
 
 <BaseLayout
-  title="Géneros de música electrónica: árbol completo | PulseRoots"
-  description="Explora todas las familias de música electrónica de PulseRoots: Techno, House, Trance, Ambient, Bass, Breakbeat, Experimental y más, con estilos y subestilos."
+  title="Tipos de música electrónica: lista y árbol completo | PulseRoots"
+  description={`Lista completa de tipos y géneros de música electrónica por familias: Techno, House, Trance, Ambient, Bass, Breakbeat, Experimental y más. ${totalStyles}+ estilos.`}
   canonical={canonical}
   lang="es"
   jsonLd={jsonLd}
@@ -71,12 +100,18 @@ const jsonLd = JSON.stringify({
   <Header brandAs="div" />
   <main>
     <article id="genres-hub" class="container">
-      <h1>Géneros de música electrónica: el árbol completo</h1>
+      <h1>Tipos de música electrónica: lista y árbol completo</h1>
       <p class="genres-lead">
         PulseRoots agrupa más de {totalStyles} estilos de música electrónica en {families.length} familias.
-        Empieza por una familia para ver cómo evolucionaron sus estilos y subestilos, o abre la
-        <a href="/pulse.roots/es/sitemap/">lista completa de géneros</a>.
+        Empieza por una familia para ver cómo evolucionaron sus estilos y subestilos, o consulta la
+        <a href="/pulse.roots/es/sitemap/">lista alfabética de todos los géneros</a>.
       </p>
+
+      <ul class="genres-stats">
+        <li><strong>{families.length}</strong><span>familias</span></li>
+        <li><strong>{totalStyles}+</strong><span>estilos y subestilos</span></li>
+        <li><strong>1</strong><span>pista de ejemplo por género</span></li>
+      </ul>
 
       <ul class="genres-family-grid">
         {families.map(family => (
@@ -111,6 +146,16 @@ const jsonLd = JSON.stringify({
           <a href="/pulse.roots/es/guides/electronic-music-history/">cómo llegó hasta aquí la música electrónica</a>.
         </p>
       </section>
+
+      <section class="genres-faq" aria-labelledby="genres-faq-title">
+        <h2 id="genres-faq-title">Preguntas frecuentes</h2>
+        {faq.map(item => (
+          <div class="genres-faq-item">
+            <h3>{item.q}</h3>
+            <p>{item.a}</p>
+          </div>
+        ))}
+      </section>
     </article>
   </main>
   <Footer />
@@ -121,12 +166,20 @@ const jsonLd = JSON.stringify({
     #genres-hub h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 4px; }
     .genres-lead { color: var(--text-muted); margin-bottom: 28px; }
     .genres-lead a, #genres-hub section a { color: var(--accent-pink); text-decoration: none; border-bottom: 1px solid rgba(255, 0, 102, 0.35); }
+    .genres-stats { list-style: none; margin: 0 0 32px; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+    .genres-stats li { flex: 1 1 160px; padding: 14px 16px; border: 1px solid var(--glass-border); border-radius: 12px; background: rgba(255, 255, 255, 0.02); }
+    .genres-stats strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--accent-pink); line-height: 1.1; }
+    .genres-stats span { display: block; font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
     .genres-family-grid { list-style: none; margin: 0 0 40px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
     .genres-family-grid li a { display: block; height: 100%; padding: 16px 18px; border: 1px solid var(--glass-border); border-radius: 12px; text-decoration: none; color: inherit; background: rgba(255, 255, 255, 0.02); transition: border-color 0.2s ease, transform 0.2s ease; }
     .genres-family-grid li a:hover { border-color: var(--accent-pink); transform: translateY(-2px); }
     .genres-family-count { color: var(--accent-pink); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 8px; }
     .genres-family-desc { color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.5; }
     #genres-hub section p { color: var(--text-muted); line-height: 1.7; }
+    .genres-faq { margin-top: 12px; }
+    .genres-faq h3 { font-size: 1rem; font-weight: 700; margin: 0 0 4px; color: var(--text-main); }
+    .genres-faq-item { padding: 14px 0; border-top: 1px solid var(--glass-border); }
+    .genres-faq-item p { margin: 0; }
     @media (max-width: 768px) { #genres-hub { margin: 20px; padding: 20px; } }
   </style>
 </BaseLayout>
