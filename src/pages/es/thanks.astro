@@ -22,6 +22,20 @@ const canonical = 'https://mendiak.github.io/pulse.roots/es/thanks/';
 
   <Footer />
 
+  <script is:inline>
+    // Señal fiable de conversión: el formulario hace POST a Web3Forms y
+    // redirige aquí, así que GA4 nunca llega a enviar form_submit.
+    window.addEventListener('load', function () {
+      if (typeof window.gtag === 'function' && window._gaLoaded) {
+        window.gtag('event', 'generate_lead', {
+          method: 'contact_form',
+          form_name: 'contact',
+          language: 'es'
+        });
+      }
+    });
+  </script>
+
   <style>
     #main-container { flex-direction: column; margin: 40px auto; width: 100%; max-width: 600px; }
     .container { padding: 40px; text-align: center; }

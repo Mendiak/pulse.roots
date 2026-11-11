@@ -1,5 +1,6 @@
 import { state } from './state.js';
 import { slugify, getGenrePath, truncateDescription } from './utils.js';
+import { track } from './analytics.js';
 
 const STRINGS = {
   en: {
@@ -141,6 +142,12 @@ export function showInfoPanel(inputData, accentColor = '#ff0066') {
   document.querySelector('link[rel="canonical"]').setAttribute('href', newUrl);
   document.querySelector('meta[property="og:url"]').setAttribute('content', newUrl);
   const genreDisplayName = itemData.name || itemData.style;
+  track('genre_open', {
+    genre: genreDisplayName,
+    genre_path: newPath,
+    language: window.PR_LANG === 'es' ? 'es' : 'en',
+    nested: panelHistory.length > 0,
+  });
   const longTitle = `${genreDisplayName}: ${str('titleSuffix')} | PulseRoots`;
   const newTitle = longTitle.length <= 60
     ? longTitle
@@ -595,6 +602,7 @@ export async function shareGenre(itemData) {
         text: shareText,
         url: shareUrl,
       });
+      track('share', { method: 'native', genre: genreName, item_type: 'genre' });
     } catch (err) {
       console.error('Error sharing:', err);
     }
@@ -607,6 +615,8 @@ export async function shareGenre(itemData) {
       const originalHTML = shareBtn.innerHTML;
       shareBtn.innerHTML = `<i class="bi bi-check-lg"></i> Copied!`;
       shareBtn.style.background = 'var(--accent-pink)';
+
+      track('share', { method: 'copy_link', genre: genreName, item_type: 'genre' });
 
       setTimeout(() => {
         shareBtn.innerHTML = originalHTML;
