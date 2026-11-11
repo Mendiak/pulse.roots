@@ -25,15 +25,24 @@ const canonical = 'https://mendiak.github.io/pulse.roots/thanks/';
     // The contact form posts to Web3Forms and redirects here on success, so
     // this page is the reliable conversion signal (GA4 form_submit never fires
     // because the browser leaves the document before the event is sent).
-    window.addEventListener('load', function () {
-      if (typeof window.gtag === 'function' && window._gaLoaded) {
-        window.gtag('event', 'generate_lead', {
-          method: 'contact_form',
-          form_name: 'contact',
-          language: 'en'
-        });
-      }
-    });
+    // The flag is set on submit: it keeps direct visits and reloads from
+    // counting as leads, and is removed after firing to avoid double counting.
+    (function () {
+      var submitted = false;
+      try { submitted = sessionStorage.getItem('pulseRootsContactSubmitted') === '1'; } catch (e) {}
+      if (!submitted) return;
+
+      window.addEventListener('load', function () {
+        if (typeof window.gtag === 'function' && window._gaLoaded) {
+          window.gtag('event', 'generate_lead', {
+            method: 'contact_form',
+            form_name: 'contact',
+            language: 'en'
+          });
+          try { sessionStorage.removeItem('pulseRootsContactSubmitted'); } catch (e) {}
+        }
+      });
+    })();
   </script>
 
   <style>

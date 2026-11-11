@@ -25,15 +25,24 @@ const canonical = 'https://mendiak.github.io/pulse.roots/es/thanks/';
   <script is:inline>
     // Señal fiable de conversión: el formulario hace POST a Web3Forms y
     // redirige aquí, así que GA4 nunca llega a enviar form_submit.
-    window.addEventListener('load', function () {
-      if (typeof window.gtag === 'function' && window._gaLoaded) {
-        window.gtag('event', 'generate_lead', {
-          method: 'contact_form',
-          form_name: 'contact',
-          language: 'es'
-        });
-      }
-    });
+    // La marca se pone al enviar: evita contar visitas directas o recargas,
+    // y se borra después de disparar para no duplicar el lead.
+    (function () {
+      var submitted = false;
+      try { submitted = sessionStorage.getItem('pulseRootsContactSubmitted') === '1'; } catch (e) {}
+      if (!submitted) return;
+
+      window.addEventListener('load', function () {
+        if (typeof window.gtag === 'function' && window._gaLoaded) {
+          window.gtag('event', 'generate_lead', {
+            method: 'contact_form',
+            form_name: 'contact',
+            language: 'es'
+          });
+          try { sessionStorage.removeItem('pulseRootsContactSubmitted'); } catch (e) {}
+        }
+      });
+    })();
   </script>
 
   <style>

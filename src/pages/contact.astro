@@ -97,6 +97,9 @@ const jsonLd = JSON.stringify({
 
       if (form && submitBtn) {
         form.addEventListener('submit', () => {
+          // Flags the redirect that follows, so /thanks/ only counts a lead
+          // when the form was actually sent (not on direct visits or reloads).
+          try { sessionStorage.setItem('pulseRootsContactSubmitted', '1'); } catch (e) {}
           submitBtn.disabled = true;
           if (submitIcon) submitIcon.classList.add('hidden');
           if (submitText) submitText.classList.add('hidden');

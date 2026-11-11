@@ -98,6 +98,9 @@ const jsonLd = JSON.stringify({
 
       if (form && submitBtn) {
         form.addEventListener('submit', () => {
+          // Marca la redirección posterior: /thanks/ solo cuenta un lead si el
+          // formulario se ha enviado de verdad (no en visitas directas).
+          try { sessionStorage.setItem('pulseRootsContactSubmitted', '1'); } catch (e) {}
           submitBtn.disabled = true;
           if (submitIcon) submitIcon.classList.add('hidden');
           if (submitText) submitText.classList.add('hidden');
