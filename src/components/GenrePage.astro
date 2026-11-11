@@ -149,6 +149,17 @@ const breadcrumbEntries = [
   })),
 ];
 
+// Only root families get a generated map: it shows the family and every style
+// that branches from it, which is exactly what the interactive treemap cannot
+// give a crawler. Deeper styles would need 600+ images for little value.
+const isFamily = breadcrumbs.length === 0;
+const familySlug = fullSlugPath.split('/')[0];
+const mapPath = isFamily ? `/assets/maps/family-${familySlug}-${lang}.jpg` : null;
+const mapAlt = lang === 'es'
+  ? `${displayName}: sus ${descendantCount} estilos y subestilos en el árbol de géneros de música electrónica de PulseRoots`
+  : `${displayName}: its ${descendantCount} styles and substyles on the PulseRoots electronic music genre tree`;
+const ogImage = mapPath ? `${SITE}${mapPath}` : undefined;
+
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
@@ -176,6 +187,17 @@ const jsonLd = JSON.stringify({
       "url": canonical,
       "inLanguage": lang,
       "isPartOf": { "@id": `${SITE}/#website` },
+      ...(ogImage
+        ? {
+            "image": {
+              "@type": "ImageObject",
+              "url": ogImage,
+              "width": 1200,
+              "height": 630,
+              "caption": mapAlt,
+            },
+          }
+        : {}),
       ...(datasetLastmod ? { "dateModified": new Date(datasetLastmod).toISOString() } : {}),
       ...(wikipediaUrl ? { "sameAs": [wikipediaUrl] } : {}),
     },
@@ -207,17 +229,6 @@ function buildBreadcrumbHtml() {
 }
 
 const genreScript = `window.PR_LANG='${lang}';window.PR_I18N={};window.PR_I18N_FALLBACK={};window.PR_GENRE_TO_LOAD=${JSON.stringify(genreName)};`;
-
-// Only root families get a generated map: it shows the family and every style
-// that branches from it, which is exactly what the interactive treemap cannot
-// give a crawler. Deeper styles would need 600+ images for little value.
-const isFamily = breadcrumbs.length === 0;
-const familySlug = fullSlugPath.split('/')[0];
-const mapPath = isFamily ? `/assets/maps/family-${familySlug}-${lang}.jpg` : null;
-const mapAlt = lang === 'es'
-  ? `${displayName}: sus ${descendantCount} estilos y subestilos en el árbol de géneros de música electrónica de PulseRoots`
-  : `${displayName}: its ${descendantCount} styles and substyles on the PulseRoots electronic music genre tree`;
-const ogImage = mapPath ? `${SITE}${mapPath}` : undefined;
 ---
 
 <BaseLayout
