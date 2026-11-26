@@ -711,18 +711,38 @@ async function toggleReady() {
 async function removeCandidate() {
   const candidate = current();
   if (!candidate) return;
-  if (!confirm(`¿Eliminar "${candidate.style}" del staging? No toca el árbol publicado.`)) return;
   const index = state.candidates.indexOf(candidate);
+  if (index < 0) return;
+
+  const label = candidate.style || candidate.id;
+  const message =
+    candidate.status === 'published'
+      ? `"${label}" ya está publicado. Se borra solo la ficha del staging; el nodo del árbol y published.log se quedan. ¿Continuar?`
+      : `¿Eliminar "${label}" del staging? No toca el árbol publicado.`;
+  if (!confirm(message)) return;
+
   state.candidates.splice(index, 1);
   selectedId = null;
   markDirty();
-  await saveNow(true);
+
+  if (!(await saveNow(true))) {
+    state.candidates.splice(index, 0, candidate);
+    selectCandidate(candidate.id);
+    renderStats();
+    renderFilters();
+    return;
+  }
+
   renderStats();
   renderFilters();
-  const next = state.candidates[Math.max(0, index - 1)];
-  if (next) selectCandidate(next.id);
-  else showEmpty();
-  renderList();
+  const next = state.candidates[Math.min(index, state.candidates.length - 1)];
+  if (next) {
+    selectCandidate(next.id);
+  } else {
+    renderList();
+    showEmpty();
+  }
+  toast(`«${label}» eliminado del staging.`, 'ok');
 }
 
 async function publish(ids = null, dryRun = false) {

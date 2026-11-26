@@ -202,6 +202,11 @@ textarea {
   border-color: rgba(255, 95, 109, 0.35);
 }
 
+.btn.danger:hover {
+  background: rgba(255, 95, 109, 0.12);
+  border-color: var(--danger);
+}
+
 /* Layout */
 
 .shell {
