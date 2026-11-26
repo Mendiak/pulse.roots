@@ -1011,50 +1011,6 @@
       "updatedAt": "2026-11-11"
     },
     {
-      "id": "city-pop",
-      "style": "City Pop",
-      "parentPath": [
-        "Chill-out"
-      ],
-      "status": "draft",
-      "priority": 3,
-      "placement": {
-        "verdict": "defer",
-        "alternatives": [
-          [
-            "Pop and Rock Fusion"
-          ]
-        ],
-        "rationale": "No es un género electrónico: es pop japonés de los ochenta. Su relación es por influencia en vaporwave y future funk.",
-        "sources": [
-          "https://en.wikipedia.org/wiki/City_pop"
-        ],
-        "reviewed": false
-      },
-      "description": "",
-      "description_es": "",
-      "example": "",
-      "spotify_track_id": "",
-      "key_artists": [
-        {
-          "name": "Tatsuro Yamashita",
-          "url": ""
-        },
-        {
-          "name": "Mariya Takeuchi",
-          "url": ""
-        },
-        {
-          "name": "Anri",
-          "url": ""
-        }
-      ],
-      "wikipedia_url": "https://en.wikipedia.org/wiki/City_pop",
-      "notes": "Propuesta: no crear nodo, mencionarlo en Future Funk o Vaporwave.",
-      "addedAt": "2026-11-11",
-      "updatedAt": "2026-11-11"
-    },
-    {
       "id": "electro-swing",
       "style": "Electro Swing",
       "parentPath": [
