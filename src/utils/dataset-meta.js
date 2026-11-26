@@ -14,21 +14,22 @@ function git(args) {
 }
 
 /**
- * Commit date of a genre dataset, used as `dateModified` for genre pages and as
- * `<lastmod>` in the sitemap.
+ * Commit date of a genre dataset. Used only as `dateModified` in the genre
+ * pages' structured data; the XML sitemap no longer emits a `<lastmod>` for
+ * genre URLs, because a single dataset commit touched every page at once and
+ * Google stops trusting a field that changes for hundreds of unrelated URLs.
  * Cached per file because the build imports this module once per route render.
  *
  * In a shallow clone (`actions/checkout` defaults to depth 1) git treats the
  * boundary commit as if it had touched every file, so `git log -- <file>`
  * reports the deploy commit instead of the commit that actually changed the
- * dataset. That rewrote `<lastmod>` for all 616 genre URLs on every deploy,
- * which teaches Google to distrust the value. Fall back to an empty string:
- * no `<lastmod>` is better than one that is always wrong. The deploy workflow
- * checks out the full history so this branch should not be hit in CI.
+ * dataset. Fall back to an empty string: no date is better than one that is
+ * always wrong. The deploy workflow checks out the full history so this
+ * branch should not be hit in CI.
  */
 /**
  * Files whose content is rendered into every genre page. When one of these
- * changes, the genre pages really did change, so their <lastmod> must move
+ * changes, the genre pages really did change, so `dateModified` must move
  * with it instead of staying frozen on the dataset commit.
  */
 const GENRE_TEMPLATE_FILES = [

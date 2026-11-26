@@ -268,7 +268,10 @@ for (const page of indexable) {
 
 /* ------------------------------------------------------- robots & 404 page */
 const expectedNoindex = page =>
-  page.isRedirect || page.url.includes('/thanks/') || page.url.endsWith('404.html');
+  page.isRedirect ||
+  page.url.includes('/thanks/') ||
+  /\/sitemap\/$/.test(page.url) ||
+  page.url.endsWith('404.html');
 
 for (const page of pages) {
   const hasNoindex = robotsMeta(page).includes('noindex');

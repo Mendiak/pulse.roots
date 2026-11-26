@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import fs from 'node:fs';
 import { slugify } from './src/utils/slug.js';
-import { genreDatasetLastmod } from './src/utils/dataset-meta.js';
 import { guides } from './src/data/guides.js';
 
 const SITE = 'https://mendiak.github.io/pulse.roots';
@@ -32,14 +31,6 @@ function buildLegacyGenreRedirects() {
   }
   return redirects;
 }
-
-/**
- * Date of the last change to each genre dataset, used as <lastmod> for genre
- * pages. Falls back to an empty string (no lastmod) when git is unavailable,
- * e.g. in a shallow clone where the file has no history.
- */
-const genreDataLastmod = genreDatasetLastmod('en');
-const genreDataLastmodEs = genreDatasetLastmod('es');
 
 // Latest editorial update, used for the guides index and any guide without a
 // more specific date in its record.
@@ -76,20 +67,20 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false,
     },
-    // Genre pages only exist in the default locale. The previous "es" fallback
-    // generated 300+ noindex redirect stubs that wasted crawl budget.
   },
 
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/thanks/'),
+      // `/thanks/` is a noindex confirmation page. `/sitemap/` duplicates the
+      // family overview at `/genres/`, so it is noindex and stays out of the
+      // XML sitemap; it still passes link equity through its A-Z list.
+      filter: (page) => !page.includes('/thanks/') && !/\/sitemap\/$/.test(page),
       serialize(item) {
-        const isSpanish = item.url.includes('/es/genres/');
-        const lastmod = isSpanish ? genreDataLastmodEs : genreDataLastmod;
-        if (lastmod && item.url.includes('/genres/')) {
-          return { ...item, lastmod: new Date(lastmod).toISOString() };
-        }
-
+        // Genre `<lastmod>` used to come from `git log` on the whole dataset, so
+        // a single data commit rewrote the date for every genre page. Google
+        // learns to ignore a field that changes for hundreds of unrelated URLs
+        // at once, so genre pages now ship without it. Guides keep real,
+        // per-guide dates.
         const guideMatch = item.url.match(/\/guides\/([^/]+)\/?$/);
         if (guideMatch) {
           const guideDate = guideLastmodBySlug.get(guideMatch[1]) || guidesLastmod;
