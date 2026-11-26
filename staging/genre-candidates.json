@@ -1,0 +1,1570 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-26",
+  "candidates": [
+    {
+      "id": "dub",
+      "style": "Dub",
+      "parentPath": [],
+      "status": "draft",
+      "priority": 1,
+      "placement": {
+        "verdict": "family",
+        "alternatives": [
+          [
+            "Bass Music"
+          ]
+        ],
+        "rationale": "Ya hay cinco ramas que lo referencian (dub techno, dub house, dubstep, psydub, ambient dub) pero falta la raíz. Es un linaje con hijos propios, no un subestilo de Bass Music.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dub_music"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "King Tubby",
+          "url": ""
+        },
+        {
+          "name": "Lee \"Scratch\" Perry",
+          "url": ""
+        },
+        {
+          "name": "Augustus Pablo",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Dub_music",
+      "notes": "Candidato prioritario. Verificar el encaje de Dancehall como nodo aparte.",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "dancehall",
+      "style": "Dancehall",
+      "parentPath": [
+        "Global Club"
+      ],
+      "status": "draft",
+      "priority": 1,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "Global Club",
+            "Reggaeton"
+          ]
+        ],
+        "rationale": "Fuente directa de reggaeton, dembow, moombahton y tropical house. Sin este nodo, media rama latina pierde su origen.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dancehall"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Shabba Ranks",
+          "url": ""
+        },
+        {
+          "name": "Buju Banton",
+          "url": ""
+        },
+        {
+          "name": "Sean Paul",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Dancehall",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "rave",
+      "style": "Rave",
+      "parentPath": [],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "family",
+        "alternatives": [
+          [
+            "Breakbeat"
+          ]
+        ],
+        "rationale": "Es el paraguas histórico de 1988-93 del que cuelgan breakbeat hardcore, happy hardcore y buena parte de Hardcore. Hoy no existe como nodo.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Rave_music"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "The Prodigy",
+          "url": ""
+        },
+        {
+          "name": "Altern-8",
+          "url": ""
+        },
+        {
+          "name": "SL2",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Rave_music",
+      "notes": "Familia nueva = cambio caro. Valorar si basta como estilo bajo Breakbeat.",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "rawstyle",
+      "style": "Rawstyle",
+      "parentPath": [
+        "Techno",
+        "Hard Techno",
+        "Hardcore",
+        "Hardstyle"
+      ],
+      "status": "draft",
+      "priority": 1,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Subestilo mayor del hardstyle actual, con escena y sellos propios. No justifica familia nueva, pero sí nodo.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hardstyle#Rawstyle"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Radical Redemption",
+          "url": ""
+        },
+        {
+          "name": "Warface",
+          "url": ""
+        },
+        {
+          "name": "D-Sturb",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "uptempo-hardcore",
+      "style": "Uptempo Hardcore",
+      "parentPath": [
+        "Techno",
+        "Hard Techno",
+        "Hardcore"
+      ],
+      "status": "draft",
+      "priority": 1,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Escena muy activa desde 2020, con tempo y estética propios dentro del hardcore. Hoy no aparece en el árbol.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Uptempo_hardcore"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "N-Vitral",
+          "url": ""
+        },
+        {
+          "name": "Angerfist",
+          "url": ""
+        },
+        {
+          "name": "Deadly Guns",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Uptempo_hardcore",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "jumpstyle",
+      "style": "Jumpstyle",
+      "parentPath": [
+        "Techno",
+        "Hard Techno",
+        "Hardcore"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Género con baile y escena propios, especialmente en Bélgica y Países Bajos. Encaja como subestilo de Hardcore.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jumpstyle"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "DJ Furax",
+          "url": ""
+        },
+        {
+          "name": "Vorwerk",
+          "url": ""
+        },
+        {
+          "name": "Chicago Zone",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jumpstyle",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "hardbass",
+      "style": "Hardbass",
+      "parentPath": [
+        "Techno",
+        "Hard Techno"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "Techno",
+            "Hard Techno",
+            "Hardcore"
+          ]
+        ],
+        "rationale": "Escena rusa con identidad sonora y visual muy marcada. Padre discutible entre Hard Techno y Hardcore.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hardbass"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "DJ Blyatman",
+          "url": ""
+        },
+        {
+          "name": "Hard Bass School",
+          "url": ""
+        },
+        {
+          "name": "XS Project",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hardbass",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "hands-up",
+      "style": "Hands Up",
+      "parentPath": [
+        "Techno",
+        "Hard Techno",
+        "Hardcore"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "Pop and Rock Fusion",
+            "Eurodance"
+          ]
+        ],
+        "rationale": "Cruce alemán de hardstyle, trance y eurodance con nombre y escena consolidados. Puede solaparse con Hardstyle.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hands_up_music"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Cascada",
+          "url": ""
+        },
+        {
+          "name": "Basshunter",
+          "url": ""
+        },
+        {
+          "name": "Manian",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hands_up_music",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "tech-trance",
+      "style": "Tech Trance",
+      "parentPath": [
+        "Trance"
+      ],
+      "status": "draft",
+      "priority": 1,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [],
+        "rationale": "Puente actual entre techno y trance. Tiene nombre, escena y artistas propios, y no está cubierto por Progressive Trance.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Tech_trance"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Marco V",
+          "url": ""
+        },
+        {
+          "name": "Simon Patterson",
+          "url": ""
+        },
+        {
+          "name": "Will Atkinson",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tech_trance",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "hi-tech-psytrance",
+      "style": "Hi-Tech Psytrance",
+      "parentPath": [
+        "Trance",
+        "Goa Trance",
+        "Psytrance"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Rama rápida y saturada del psytrance, con escena propia. Falta junto a full-on, dark y forest.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Psytrance#Hi-tech_psytrance"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Kindzadza",
+          "url": ""
+        },
+        {
+          "name": "Psykovsky",
+          "url": ""
+        },
+        {
+          "name": "Fobi",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "hypnotic-techno",
+      "style": "Hypnotic Techno",
+      "parentPath": [
+        "Techno"
+      ],
+      "status": "draft",
+      "priority": 1,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "Techno",
+            "Minimal Techno"
+          ],
+          [
+            "Techno",
+            "Deep Techno"
+          ]
+        ],
+        "rationale": "Etiqueta consolidada para el techno repetitivo y atmosférico actual. Padre alternativo: Minimal Techno o Deep Techno.",
+        "sources": [],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Donato Dozzy",
+          "url": ""
+        },
+        {
+          "name": "Oscar Mulero",
+          "url": ""
+        },
+        {
+          "name": "Rødhåd",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "Elegir padre y justificar frente a Deep Techno.",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "rominimal",
+      "style": "Rominimal",
+      "parentPath": [
+        "Techno",
+        "Minimal Techno"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Escena rumana con sonido y sellos propios dentro del minimal. Nombre asentado en la escena.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Rominimal"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Rhadoo",
+          "url": ""
+        },
+        {
+          "name": "Petre Inspirescu",
+          "url": ""
+        },
+        {
+          "name": "Raresh",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "organic-house",
+      "style": "Organic House",
+      "parentPath": [
+        "House"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "House",
+            "Deep House"
+          ]
+        ],
+        "rationale": "Categoría de escena y de tienda con identidad propia (orgánico, percusivo, downtempo). Hoy no tiene nodo.",
+        "sources": [],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Sébastien Léger",
+          "url": ""
+        },
+        {
+          "name": "Lee Burridge",
+          "url": ""
+        },
+        {
+          "name": "Hrag Mikkel",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "Verificar si se solapa con Downtempo o Deep House.",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "melodic-house",
+      "style": "Melodic House",
+      "parentPath": [
+        "House"
+      ],
+      "status": "draft",
+      "priority": 1,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "House",
+            "Progressive House"
+          ]
+        ],
+        "rationale": "Hermano de Melodic Techno, que sí existe. Tiene escena propia y demanda clara; su ausencia deja el árbol cojo.",
+        "sources": [],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Lane 8",
+          "url": ""
+        },
+        {
+          "name": "Yotto",
+          "url": ""
+        },
+        {
+          "name": "Marsh",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "afro-tech",
+      "style": "Afro Tech",
+      "parentPath": [
+        "House"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "House",
+            "Kwaito",
+            "Afro House"
+          ]
+        ],
+        "rationale": "Cruce actual de afro house y techno, con escena propia. Padre alternativo: Afro House.",
+        "sources": [],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Black Coffee",
+          "url": ""
+        },
+        {
+          "name": "Shimza",
+          "url": ""
+        },
+        {
+          "name": "Da Capo",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "uk-funky",
+      "style": "UK Funky",
+      "parentPath": [
+        "House",
+        "Garage House"
+      ],
+      "status": "draft",
+      "priority": 1,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "House",
+            "Garage House",
+            "UK Garage"
+          ]
+        ],
+        "rationale": "Género británico de 2008-11 con nombre, sellos y artistas propios. El árbol tiene UK Garage y Bassline, pero no UK Funky.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/UK_funky"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Crazy Cousinz",
+          "url": ""
+        },
+        {
+          "name": "Roska",
+          "url": ""
+        },
+        {
+          "name": "Champion",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/UK_funky",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "guaracha",
+      "style": "Guaracha",
+      "parentPath": [
+        "Global Club",
+        "Latin Club"
+      ],
+      "status": "published",
+      "priority": 1,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "House"
+          ],
+          [
+            "House",
+            "Tech House",
+            "Tribal Tech House"
+          ]
+        ],
+        "rationale": "Uno de los sonidos latinos de club con más crecimiento. Padre discutible frente a House o Tribal House; exige justificación.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Guaracha"
+        ],
+        "reviewed": true
+      },
+      "description": "Electronic Guaracha, also known as Colombian Guaracha, Aleteo or Zapateo, is a Latin American electronic dance music genre originating in Colombia, particularly within Medellín's underground nightlife scene. It emerged during the 2010s from the evolution of Mexican tribal house and tribal guarachero, progressively incorporating rhythmic and melodic elements from Colombian cumbia and other Latin American popular music styles.\n\nIt is characterized by fast, repetitive rhythms, generally ranging between 126 and 135 BPM, powerful percussion, electronic basslines, piercing synthesizers and melodies inspired by trumpets, accordions and other traditional instruments. Its productions often feature vocal samples, transition effects and high-impact drops, with arrangements designed to sustain energy on the dancefloor.\n\nInitially associated with private parties, clubs and grassroots music scenes in Colombia, electronic guaracha gained popularity during the second half of the 2010s, spreading across Latin America and achieving international recognition in the early 2020s.\n\nMore than simply a fusion of Latin music and commercial electronic dance music, it represents a distinctive Latin American club culture, characterized by its festive energy, syncopated rhythms and electronic reinterpretation of tropical sounds.",
+      "description_es": "La guaracha electrónica, también conocida como guaracha colombiana, aleteo o zapateo, es un género de música electrónica de baile originario de Colombia, especialmente de la escena nocturna de Medellín. Surgió durante la década de 2010 a partir de la evolución del tribal house mexicano y el tribal guarachero, incorporando progresivamente elementos rítmicos y melódicos de la cumbia colombiana y otros estilos de música popular latinoamericana.\n\nSe caracteriza por sus ritmos acelerados y repetitivos, generalmente entre 126 y 135 BPM, percusiones contundentes, bajos electrónicos, sintetizadores estridentes y melodías inspiradas en trompetas, acordeones y otros instrumentos tradicionales. Sus producciones suelen incluir samples vocales, efectos de transición y drops de gran intensidad, con una estructura orientada a mantener la energía de la pista de baile.\n\nInicialmente vinculada a fiestas privadas, clubes y circuitos populares de Colombia, la guaracha electrónica fue ganando popularidad durante la segunda mitad de la década de 2010, extendiéndose por Latinoamérica y alcanzando proyección internacional a comienzos de los años 2020.\n\nMás que una simple fusión de música latina y electrónica comercial, representa una identidad propia de la cultura de club latinoamericana, caracterizada por su energía festiva, sus ritmos sincopados y su particular reinterpretación electrónica de los sonidos tropicales.",
+      "example": "Dayvi, Victor Cardenas, Kelly Ruiz - Baila Conmigo (feat. Kelly Ruiz)",
+      "spotify_track_id": "0Dl00EZBJHkkdsSZIBK8Sb",
+      "key_artists": [
+        {
+          "name": "Victor Cardenas",
+          "url": "00CMSJdbf36zOzKB3z8JrR"
+        },
+        {
+          "name": "Fumaratto",
+          "url": "3iuDJzaIhy7gDPgmUW2ujw"
+        },
+        {
+          "name": "Marcela Reyes",
+          "url": "2a3lL5m6feAyGUR1PI2osJ"
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Guaracha",
+      "notes": "Completar artistas: la escena actual es muy reciente y conviene verificar.",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-26",
+      "publishedAt": "2026-11-26T04:48:57.186Z",
+      "publishedUrl": "/genres/global-club/latin-club/guaracha/"
+    },
+    {
+      "id": "tribal-house",
+      "style": "Tribal House",
+      "parentPath": [
+        "House"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "House",
+            "Tech House",
+            "Tribal Tech House"
+          ]
+        ],
+        "rationale": "Género propio de los noventa, con percusión y escena definidas. Hoy solo existe Tribal Tech House como derivado.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Tribal_house"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Danny Tenaglia",
+          "url": ""
+        },
+        {
+          "name": "Peter Rauhofer",
+          "url": ""
+        },
+        {
+          "name": "Victor Calderone",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tribal_house",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "rkt-perreo",
+      "style": "RKT / Perreo",
+      "parentPath": [
+        "Global Club",
+        "Reggaeton"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Rama argentina del reggaeton con identidad y escena propias. Neoperreo ya está, pero RKT no.",
+        "sources": [],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "L-Gante",
+          "url": ""
+        },
+        {
+          "name": "Callejero Fino",
+          "url": ""
+        },
+        {
+          "name": "BM",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "Verificar si conviene como subestilo de Reggaeton o de Latin Club.",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "sgija-3-step",
+      "style": "Sgija / 3-step",
+      "parentPath": [
+        "House",
+        "Kwaito",
+        "Amapiano"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [
+          [
+            "House",
+            "Kwaito",
+            "Amapiano"
+          ]
+        ],
+        "rationale": "Variante de amapiano con tempo y bajo propios, con escena sudafricana activa. Amapiano ya está; falta su rama.",
+        "sources": [],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Felo Le Tee",
+          "url": ""
+        },
+        {
+          "name": "DBN Gogo",
+          "url": ""
+        },
+        {
+          "name": "Sfarzo Rtee",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "afrobeats",
+      "style": "Afrobeats",
+      "parentPath": [
+        "Global Club"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "House",
+            "Kwaito",
+            "Afro House"
+          ]
+        ],
+        "rationale": "Categoría global con demanda altísima, aunque su relación con la electrónica es parcial. Padre alternativo: Afro House.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Afrobeats"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Burna Boy",
+          "url": ""
+        },
+        {
+          "name": "Wizkid",
+          "url": ""
+        },
+        {
+          "name": "Davido",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Afrobeats",
+      "notes": "Valorar si el proyecto es de música electrónica o si basta una mención en Afro House.",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "darksynth",
+      "style": "Darksynth",
+      "parentPath": [
+        "Chill-out",
+        "Synthwave"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Rama oscura del synthwave, con escena y artistas propios. Falta frente a Horror Synth, que ya existe.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Synthwave#Darksynth"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Perturbator",
+          "url": ""
+        },
+        {
+          "name": "Carpenter Brut",
+          "url": ""
+        },
+        {
+          "name": "Dance with the Dead",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "outrun",
+      "style": "Outrun",
+      "parentPath": [
+        "Chill-out",
+        "Synthwave"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Subestilo de synthwave con estética y tempo propios. Puede convivir con Darksynth.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Synthwave#Outrun"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "The Midnight",
+          "url": ""
+        },
+        {
+          "name": "Kavinsky",
+          "url": ""
+        },
+        {
+          "name": "Mitch Murder",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "city-pop",
+      "style": "City Pop",
+      "parentPath": [
+        "Chill-out"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "defer",
+        "alternatives": [
+          [
+            "Pop and Rock Fusion"
+          ]
+        ],
+        "rationale": "No es un género electrónico: es pop japonés de los ochenta. Su relación es por influencia en vaporwave y future funk.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/City_pop"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Tatsuro Yamashita",
+          "url": ""
+        },
+        {
+          "name": "Mariya Takeuchi",
+          "url": ""
+        },
+        {
+          "name": "Anri",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/City_pop",
+      "notes": "Propuesta: no crear nodo, mencionarlo en Future Funk o Vaporwave.",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "electro-swing",
+      "style": "Electro Swing",
+      "parentPath": [
+        "Funk and Soul Fusion"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "Pop and Rock Fusion"
+          ]
+        ],
+        "rationale": "Cruce consolidado de swing y electrónica, con escena y demanda propias. Padre alternativo: Pop and Rock Fusion.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Electro_swing"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Parov Stelar",
+          "url": ""
+        },
+        {
+          "name": "Caravan Palace",
+          "url": ""
+        },
+        {
+          "name": "Jamie Berry",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Electro_swing",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "mahraganat",
+      "style": "Mahraganat",
+      "parentPath": [
+        "Global Club"
+      ],
+      "status": "published",
+      "priority": 3,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [],
+        "rationale": "Electro chaabi egipcio con escena masiva y nombre propio. Encaja en la línea global del árbol.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mahraganat"
+        ],
+        "reviewed": true
+      },
+      "description": "Mahraganat, also known as Electro Chaabi, is a genre of electronic popular music originating in the working-class and peripheral neighbourhoods of Cairo, Egypt. It emerged in the mid-2000s, particularly between 2006 and 2008, when young DJs and MCs began combining Egyptian shaabi popular music with electronic rhythms, hip-hop and dance music, using computers, synthesizers and low-cost digital production tools.\n\nIts name comes from the Arabic word mahragan, meaning “festival”. Initially associated with weddings, street celebrations and popular parties, the genre spread rapidly through the internet, YouTube and digital file sharing. It gained enormous popularity throughout the 2010s, coinciding with the social and political changes following the 2011 Egyptian Revolution.\n\nMusically, it is characterized by powerful repetitive rhythms, electronic basslines, piercing synthesizers, percussion inspired by traditional Egyptian music and heavily Auto-Tuned vocals. Its lyrics, usually performed in colloquial Egyptian Arabic, explore everyday life, working-class neighbourhood identities, personal relationships, economic hardship, celebration and social criticism.\n\nBeyond its musical dimension, Mahraganat represents an urban popular cultural expression that challenged the conventions of the Egyptian music industry and traditional distinctions between popular and institutional culture.",
+      "description_es": "El Mahraganat, también conocido como Electro Chaabi, es un género de música electrónica popular originario de los barrios obreros y periféricos de El Cairo, Egipto. Surgió a mediados de los años 2000, especialmente entre 2006 y 2008, cuando jóvenes DJs y MCs comenzaron a combinar la música popular egipcia shaabi con ritmos electrónicos, hip-hop y música de baile, utilizando ordenadores, sintetizadores y herramientas de producción digital de bajo coste.\n\nSu nombre procede de la palabra árabe mahragan, que significa «festival». Inicialmente vinculado a bodas, celebraciones callejeras y fiestas populares, el género se extendió rápidamente a través de Internet, YouTube y el intercambio de archivos digitales. Alcanzó una enorme popularidad durante la década de 2010, coincidiendo con los cambios sociales y políticos posteriores a la Revolución egipcia de 2011.\n\nMusicalmente se caracteriza por ritmos contundentes y repetitivos, bajos electrónicos, sintetizadores estridentes, percusiones inspiradas en la música tradicional egipcia y voces procesadas mediante Auto-Tune. Sus letras, habitualmente interpretadas en árabe coloquial egipcio, abordan la vida cotidiana, la identidad de los barrios populares, las relaciones personales, la precariedad, la celebración y la crítica social.\n\nMás allá de su dimensión musical, el Mahraganat representa una expresión cultural urbana y popular que desafió las convenciones de la industria musical egipcia y las distinciones tradicionales entre cultura popular y cultura institucional.",
+      "example": "Amr 7a7a - Crazy Sad",
+      "spotify_track_id": "3eEswEs8JsBLOo1VZTzPIg",
+      "key_artists": [
+        {
+          "name": "Islam Chipsy",
+          "url": "1EKPc0xUrJKAQrYtEwuzvT"
+        },
+        {
+          "name": "Sadat El 3almy",
+          "url": "6XvZkxVvGXWhlDFTR6Q4sj"
+        },
+        {
+          "name": "Amr 7a7a",
+          "url": "2Gb3RVy2fb6hx1QM9ZFCN8"
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mahraganat",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-26",
+      "publishedAt": "2026-11-26T04:43:43.316Z",
+      "publishedUrl": "/genres/global-club/mahraganat/"
+    },
+    {
+      "id": "shangaan-electro",
+      "style": "Shangaan Electro",
+      "parentPath": [
+        "Global Club"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [],
+        "rationale": "Sonido sudafricano con tempo y estética inconfundibles. Tiene menos masa crítica que Gqom o Amapiano.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Shangaan_electro"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Nozinja",
+          "url": ""
+        },
+        {
+          "name": "Tshetsha Boys",
+          "url": ""
+        },
+        {
+          "name": "DJ Spoko",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Shangaan_electro",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "electro-industrial",
+      "style": "Electro-Industrial",
+      "parentPath": [
+        "Industrial and Post-Industrial",
+        "EBM"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [
+          [
+            "Industrial and Post-Industrial",
+            "Post-Industrial"
+          ]
+        ],
+        "rationale": "Rama con identidad propia dentro del industrial, distinta de EBM y aggrotech. La familia solo tiene ocho nodos.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Electro-industrial"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Front Line Assembly",
+          "url": ""
+        },
+        {
+          "name": "Skinny Puppy",
+          "url": ""
+        },
+        {
+          "name": "Velvet Acid Christ",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Electro-industrial",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "rhythmic-noise",
+      "style": "Rhythmic Noise",
+      "parentPath": [
+        "Industrial and Post-Industrial",
+        "Post-Industrial"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Subgénero de ruido rítmico con escena europea propia. Cubre un hueco entre power electronics y EBM.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Rhythmic_noise"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Ah Cama-Sotz",
+          "url": ""
+        },
+        {
+          "name": "Converter",
+          "url": ""
+        },
+        {
+          "name": "Imminent Starvation",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Rhythmic_noise",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "field-recording",
+      "style": "Field Recording",
+      "parentPath": [
+        "Experimental"
+      ],
+      "status": "published",
+      "priority": 3,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [
+          [
+            "Experimental",
+            "Sound Manipulation"
+          ],
+          [
+            "Ambient"
+          ]
+        ],
+        "rationale": "Práctica con nombre y tradición propios, hoy ausente. Se solapa parcialmente con Sound Art y Musique Concrète.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Field_recording"
+        ],
+        "reviewed": true
+      },
+      "description": "Field recording is a sound and artistic practice based on capturing environmental sounds using recording devices outside the studio. Its origins date back to early sound recording technologies, but its development as an artistic practice is closely connected to experimental music, musique concrète, acoustic ecology and sound art, particularly from the mid-20th century onwards.\n\nIt may capture natural landscapes, urban environments, industrial sounds, animals, weather phenomena or everyday situations. Recordings can be presented with little or no manipulation as autonomous sonic documents, or used as raw material for compositions through editing, electronic processing and sound transformation techniques.\n\nRather than reproducing conventional music, field recording encourages attentive listening to the world, exploring the aesthetic, narrative, environmental and emotional dimensions of the sounds around us.",
+      "description_es": "El field recording o grabación de campo es una práctica artística y sonora basada en la captura de sonidos del entorno mediante dispositivos de grabación, fuera del estudio. Sus orígenes se remontan a las primeras tecnologías de grabación sonora, pero su desarrollo como práctica artística está estrechamente ligado a la música experimental, la musique concrète, la ecología acústica y el arte sonoro, especialmente desde mediados del siglo XX.\n\nPuede registrar paisajes naturales, ambientes urbanos, sonidos industriales, animales, fenómenos meteorológicos o situaciones cotidianas. Las grabaciones pueden presentarse prácticamente sin manipulación, como documentos sonoros autónomos, o utilizarse como materia prima para composiciones mediante edición, procesamiento electrónico y técnicas de transformación.\n\nMás que reproducir música convencional, el field recording propone una forma de escucha atenta del mundo, explorando la dimensión estética, narrativa, ambiental y emocional de los sonidos que nos rodean.",
+      "example": "Francisco López - La Selva, Pt. 1",
+      "spotify_track_id": "7cHcsM6aVo4NCPkpL509BJ",
+      "key_artists": [
+        {
+          "name": "Chris Watson",
+          "url": "6hCSDeCfwXsR3Mg6AVlvvk"
+        },
+        {
+          "name": "Jana Winderen",
+          "url": "4fCXWSHQemkqb0Qm03Uvxx"
+        },
+        {
+          "name": "Francisco López",
+          "url": "2NIo9CSlxx2pArdKee4hes"
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Field_recording",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-26",
+      "publishedAt": "2026-11-26T04:37:01.738Z",
+      "publishedUrl": "/genres/experimental/field-recording/"
+    },
+    {
+      "id": "acousmatic",
+      "style": "Acousmatic",
+      "parentPath": [
+        "Experimental",
+        "Musique Concrète"
+      ],
+      "status": "published",
+      "priority": 3,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Rama académica de la música concreta con escena y terminología propias. Musique Concrète ya está; esto la completa.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Acousmatic_music"
+        ],
+        "reviewed": true
+      },
+      "description": "Acousmatic music is a form of electroacoustic music intended to be heard without seeing the sources producing the sounds. Its roots lie in musique concrète, developed in France in the late 1940s by Pierre Schaeffer, who began using recordings of everyday sounds as compositional material, manipulating and rearranging them through studio techniques. With the evolution of electronic technology and recording media, this practice developed into new forms of sonic creation, particularly during the 1960s and 1970s. Acousmatic music uses natural, everyday or synthetic sounds, transformed and arranged to explore their timbral, textural, spatial and expressive qualities. Sound becomes autonomous musical material, detached from its visual origin, creating immersive, abstract and exploratory listening experiences.",
+      "description_es": "La música acusmática es una forma de música electroacústica concebida para ser escuchada sin ver la fuente que produce los sonidos. Sus raíces se encuentran en la musique concrète, desarrollada en Francia a finales de los años 40 por Pierre Schaeffer, quien comenzó a utilizar grabaciones de sonidos cotidianos como material compositivo, manipulándolos y reorganizándolos mediante técnicas de estudio. Con la evolución de la tecnología electrónica y de los medios de grabación, esta práctica se desarrolló hacia nuevas formas de creación sonora, especialmente durante las décadas de 1960 y 1970. La música acusmática utiliza sonidos naturales, cotidianos o sintéticos, transformados y organizados para explorar sus cualidades tímbricas, texturales, espaciales y expresivas. El sonido se convierte en materia musical autónoma, desligada de su origen visual, dando lugar a experiencias auditivas inmersivas, abstractas y exploratorias.",
+      "example": "Bernard Parmegiani - De Natura Sonorum",
+      "spotify_track_id": "1EvfWK48vc0CZMjQCaUuFJ",
+      "key_artists": [
+        {
+          "name": "Pierre Schaeffer",
+          "url": "47ypz2bndV4j06Xx8yPDZl"
+        },
+        {
+          "name": "François Bayle",
+          "url": "6b8rrNcSgsJwZEtVroBoLb"
+        },
+        {
+          "name": "Bernard Parmegiani",
+          "url": "5F5PIdJtRh6MsFIKa3KY3y"
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Acousmatic_music",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-26",
+      "publishedAt": "2026-11-26T04:28:23.302Z",
+      "publishedUrl": "/genres/experimental/musique-concrete/acousmatic/"
+    },
+    {
+      "id": "sambass",
+      "style": "Sambass",
+      "parentPath": [
+        "Bass Music",
+        "Drum and Bass"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Drum and bass brasileño con nombre y escena propios. El árbol no tiene ninguna rama sudamericana de DnB.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Sambass"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "DJ Marky",
+          "url": ""
+        },
+        {
+          "name": "Patife",
+          "url": ""
+        },
+        {
+          "name": "Fernanda Porto",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sambass",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "crossbreed",
+      "style": "Crossbreed",
+      "parentPath": [
+        "Bass Music",
+        "Drum and Bass"
+      ],
+      "status": "draft",
+      "priority": 2,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [
+          [
+            "Breakbeat",
+            "Breakbeat hardcore"
+          ]
+        ],
+        "rationale": "Cruce de drum and bass y hardcore con escena propia. Padre alternativo: Breakbeat Hardcore.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Crossbreed_(music)"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "The Outside Agency",
+          "url": ""
+        },
+        {
+          "name": "DJ Hidden",
+          "url": ""
+        },
+        {
+          "name": "Sei2ure",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Crossbreed_(music)",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "freestyle",
+      "style": "Freestyle",
+      "parentPath": [
+        "Electro"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [],
+        "rationale": "Género latino de los ochenta con identidad y artistas propios, emparentado con electro y Miami bass. La familia Electro solo tiene once nodos.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Freestyle_music"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Shannon",
+          "url": ""
+        },
+        {
+          "name": "Debbie Deb",
+          "url": ""
+        },
+        {
+          "name": "Lisa Lisa",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Freestyle_music",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "post-disco",
+      "style": "Post-disco",
+      "parentPath": [
+        "Disco"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "style",
+        "alternatives": [],
+        "rationale": "Puente entre disco y los ochenta, con nombre y tradición propios. Disco solo tiene nueve nodos.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Post-disco"
+        ],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "The S.O.S. Band",
+          "url": ""
+        },
+        {
+          "name": "D Train",
+          "url": ""
+        },
+        {
+          "name": "Sharon Redd",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Post-disco",
+      "notes": "",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    {
+      "id": "chillhop",
+      "style": "Chillhop",
+      "parentPath": [
+        "Chill-out",
+        "Downtempo"
+      ],
+      "status": "draft",
+      "priority": 3,
+      "placement": {
+        "verdict": "substyle",
+        "alternatives": [],
+        "rationale": "Rama instrumental del downtempo con escena y sellos propios. Lo-fi Hip Hop ya existe, pero Chillhop no.",
+        "sources": [],
+        "reviewed": false
+      },
+      "description": "",
+      "description_es": "",
+      "example": "",
+      "spotify_track_id": "",
+      "key_artists": [
+        {
+          "name": "Nujabes",
+          "url": ""
+        },
+        {
+          "name": "Idealism",
+          "url": ""
+        },
+        {
+          "name": "Saib",
+          "url": ""
+        }
+      ],
+      "wikipedia_url": "",
+      "notes": "Verificar solapamiento con Lo-fi Hip Hop antes de abrir nodo.",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    }
+  ]
+}

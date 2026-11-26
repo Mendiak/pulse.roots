@@ -8,6 +8,7 @@
     "predev": "node scripts/build-map-images.mjs",
     "build": "node scripts/build-map-images.mjs && astro build && node scripts/flatten-redirects.mjs",
     "preview": "astro preview",
+    "studio": "node scripts/genre-studio.mjs",
     "icons": "node scripts/build-icons.mjs",
     "check:seo": "node scripts/verify-seo.mjs && node scripts/verify-i18n.mjs",
     "verify": "npm run build && npm run check:seo"

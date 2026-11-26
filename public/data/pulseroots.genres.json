@@ -733,7 +733,31 @@
                         "url": "6zaiVGhHTJtQfEUUDd9ORu"
                     }
                 ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Musique_concr%C3%A8te"
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Musique_concr%C3%A8te",
+                "substyles": [
+                    {
+                        "style": "Acousmatic",
+                        "description": "Acousmatic music is a form of electroacoustic music intended to be heard without seeing the sources producing the sounds. Its roots lie in musique concrète, developed in France in the late 1940s by Pierre Schaeffer, who began using recordings of everyday sounds as compositional material, manipulating and rearranging them through studio techniques. With the evolution of electronic technology and recording media, this practice developed into new forms of sonic creation, particularly during the 1960s and 1970s. Acousmatic music uses natural, everyday or synthetic sounds, transformed and arranged to explore their timbral, textural, spatial and expressive qualities. Sound becomes autonomous musical material, detached from its visual origin, creating immersive, abstract and exploratory listening experiences.",
+                        "example": "Bernard Parmegiani - De Natura Sonorum",
+                        "spotify_track_id": "1EvfWK48vc0CZMjQCaUuFJ",
+                        "key_artists": [
+                            {
+                                "name": "Pierre Schaeffer",
+                                "url": "47ypz2bndV4j06Xx8yPDZl"
+                            },
+                            {
+                                "name": "François Bayle",
+                                "url": "6b8rrNcSgsJwZEtVroBoLb"
+                            },
+                            {
+                                "name": "Bernard Parmegiani",
+                                "url": "5F5PIdJtRh6MsFIKa3KY3y"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Acousmatic_music",
+                        "substyles": []
+                    }
+                ]
             },
             {
                 "name": "Tape Music",
@@ -818,6 +842,28 @@
                         ]
                     }
                 ]
+            },
+            {
+                "style": "Field Recording",
+                "description": "Field recording is a sound and artistic practice based on capturing environmental sounds using recording devices outside the studio. Its origins date back to early sound recording technologies, but its development as an artistic practice is closely connected to experimental music, musique concrète, acoustic ecology and sound art, particularly from the mid-20th century onwards.\n\nIt may capture natural landscapes, urban environments, industrial sounds, animals, weather phenomena or everyday situations. Recordings can be presented with little or no manipulation as autonomous sonic documents, or used as raw material for compositions through editing, electronic processing and sound transformation techniques.\n\nRather than reproducing conventional music, field recording encourages attentive listening to the world, exploring the aesthetic, narrative, environmental and emotional dimensions of the sounds around us.",
+                "example": "Francisco López - La Selva, Pt. 1",
+                "spotify_track_id": "7cHcsM6aVo4NCPkpL509BJ",
+                "key_artists": [
+                    {
+                        "name": "Chris Watson",
+                        "url": "6hCSDeCfwXsR3Mg6AVlvvk"
+                    },
+                    {
+                        "name": "Jana Winderen",
+                        "url": "4fCXWSHQemkqb0Qm03Uvxx"
+                    },
+                    {
+                        "name": "Francisco López",
+                        "url": "2NIo9CSlxx2pArdKee4hes"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Field_recording",
+                "substyles": []
             }
         ]
     },
@@ -1769,7 +1815,7 @@
                 "name": "Deep House",
                 "description": "Deep house is a subgenre of house music that emerged in the late 1980s, blending the soulful, disco-infused sound of early Chicago house with the complexities of jazz-funk and a more subdued, atmospheric mood. It is characterized by a slightly slower tempo than classic house, complex chord progressions, lush pads, and a focus on smooth, soulful vocals or instrumental melodies. The sound is often described as sophisticated, hypnotic, and introspective, with deep, rolling basslines that create a warm, immersive experience. Pioneered by artists like Larry Heard (Mr. Fingers), deep house prioritizes mood and musicality, making it suitable for both intimate dancefloors and contemplative listening.",
                 "example": "Larry Heard - Can You Feel It",
-                "spotify_track_id": "3bdcJVeUuAi7Hhkp54YOA9",
+                "spotify_track_id": "79MX4lY6osZ4N1TD3mcG7k",
                 "key_artists": [
                     {
                         "name": "Larry Heard",
@@ -5238,6 +5284,28 @@
                                 "url": "5yWDRD9Mxe9b50KZl61gJX"
                             }
                         ]
+                    },
+                    {
+                        "style": "Guaracha",
+                        "description": "Electronic Guaracha, also known as Colombian Guaracha, Aleteo or Zapateo, is a Latin American electronic dance music genre originating in Colombia, particularly within Medellín's underground nightlife scene. It emerged during the 2010s from the evolution of Mexican tribal house and tribal guarachero, progressively incorporating rhythmic and melodic elements from Colombian cumbia and other Latin American popular music styles.\n\nIt is characterized by fast, repetitive rhythms, generally ranging between 126 and 135 BPM, powerful percussion, electronic basslines, piercing synthesizers and melodies inspired by trumpets, accordions and other traditional instruments. Its productions often feature vocal samples, transition effects and high-impact drops, with arrangements designed to sustain energy on the dancefloor.\n\nInitially associated with private parties, clubs and grassroots music scenes in Colombia, electronic guaracha gained popularity during the second half of the 2010s, spreading across Latin America and achieving international recognition in the early 2020s.\n\nMore than simply a fusion of Latin music and commercial electronic dance music, it represents a distinctive Latin American club culture, characterized by its festive energy, syncopated rhythms and electronic reinterpretation of tropical sounds.",
+                        "example": "Dayvi, Victor Cardenas, Kelly Ruiz - Baila Conmigo (feat. Kelly Ruiz)",
+                        "spotify_track_id": "0Dl00EZBJHkkdsSZIBK8Sb",
+                        "key_artists": [
+                            {
+                                "name": "Victor Cardenas",
+                                "url": "00CMSJdbf36zOzKB3z8JrR"
+                            },
+                            {
+                                "name": "Fumaratto",
+                                "url": "3iuDJzaIhy7gDPgmUW2ujw"
+                            },
+                            {
+                                "name": "Marcela Reyes",
+                                "url": "2a3lL5m6feAyGUR1PI2osJ"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Guaracha",
+                        "substyles": []
                     }
                 ]
             },
@@ -5552,6 +5620,28 @@
                     }
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Nortec"
+            },
+            {
+                "style": "Mahraganat",
+                "description": "Mahraganat, also known as Electro Chaabi, is a genre of electronic popular music originating in the working-class and peripheral neighbourhoods of Cairo, Egypt. It emerged in the mid-2000s, particularly between 2006 and 2008, when young DJs and MCs began combining Egyptian shaabi popular music with electronic rhythms, hip-hop and dance music, using computers, synthesizers and low-cost digital production tools.\n\nIts name comes from the Arabic word mahragan, meaning “festival”. Initially associated with weddings, street celebrations and popular parties, the genre spread rapidly through the internet, YouTube and digital file sharing. It gained enormous popularity throughout the 2010s, coinciding with the social and political changes following the 2011 Egyptian Revolution.\n\nMusically, it is characterized by powerful repetitive rhythms, electronic basslines, piercing synthesizers, percussion inspired by traditional Egyptian music and heavily Auto-Tuned vocals. Its lyrics, usually performed in colloquial Egyptian Arabic, explore everyday life, working-class neighbourhood identities, personal relationships, economic hardship, celebration and social criticism.\n\nBeyond its musical dimension, Mahraganat represents an urban popular cultural expression that challenged the conventions of the Egyptian music industry and traditional distinctions between popular and institutional culture.",
+                "example": "Amr 7a7a - Crazy Sad",
+                "spotify_track_id": "3eEswEs8JsBLOo1VZTzPIg",
+                "key_artists": [
+                    {
+                        "name": "Islam Chipsy",
+                        "url": "1EKPc0xUrJKAQrYtEwuzvT"
+                    },
+                    {
+                        "name": "Sadat El 3almy",
+                        "url": "6XvZkxVvGXWhlDFTR6Q4sj"
+                    },
+                    {
+                        "name": "Amr 7a7a",
+                        "url": "2Gb3RVy2fb6hx1QM9ZFCN8"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Mahraganat",
+                "substyles": []
             }
         ]
     },

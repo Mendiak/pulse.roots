@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PulseRoots · Panel de géneros</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='%23ff0066'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <div>
+          <h1>Panel de géneros</h1>
+          <p id="subtitle">Staging local · el árbol publicado no se toca</p>
+        </div>
+      </div>
+
+      <div class="stats" id="stats"></div>
+
+      <div class="topbar-actions">
+        <span class="save-state" id="save-state">Guardado</span>
+        <button class="btn ghost" id="copy-ready" type="button">Copiar listos</button>
+        <button class="btn ghost" id="dry-run" type="button">Revisar</button>
+        <button class="btn primary" id="publish" type="button">Publicar</button>
+      </div>
+    </header>
+
+    <main class="shell">
+      <aside class="sidebar">
+        <div class="sidebar-tools">
+          <input
+            id="search"
+            class="search"
+            type="search"
+            placeholder="Buscar género o familia…"
+            autocomplete="off"
+          />
+          <div class="filters" id="filters"></div>
+        </div>
+        <div class="list" id="list"></div>
+      </aside>
+
+      <section class="workspace">
+        <div class="empty" id="empty">
+          <p>Selecciona un género de la lista para empezar.</p>
+        </div>
+
+        <form id="form" class="form" hidden autocomplete="off">
+          <div class="form-head">
+            <div>
+              <input id="f-style" class="title-input" type="text" placeholder="Nombre del género" />
+              <div class="crumbs" id="crumbs"></div>
+            </div>
+            <div class="form-head-actions">
+              <span class="badge" id="status-badge"></span>
+              <button class="btn ghost small" id="delete" type="button">Eliminar</button>
+            </div>
+          </div>
+
+          <div class="issues" id="issues" hidden></div>
+
+          <div class="grid">
+            <section class="card">
+              <div class="card-head">
+                <h2>1 · Ubicación</h2>
+                <span class="gate" id="gate-placement">Pendiente</span>
+              </div>
+
+              <div class="row two">
+                <label class="field">
+                  <span>Veredicto</span>
+                  <select id="f-verdict">
+                    <option value="substyle">Subestilo (por defecto)</option>
+                    <option value="style">Estilo (nodo propio)</option>
+                    <option value="family">Familia (raíz nueva)</option>
+                    <option value="alias">Alias (sin nodo)</option>
+                    <option value="defer">Aplazar</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span>Prioridad</span>
+                  <select id="f-priority">
+                    <option value="1">1 · Alta</option>
+                    <option value="2">2 · Media</option>
+                    <option value="3">3 · Baja</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Padre en el árbol</span>
+                <select id="f-parent"></select>
+                <small id="parent-help" class="help"></small>
+              </label>
+
+              <div class="alternatives" id="alternatives" hidden>
+                <span class="help">Alternativas anotadas:</span>
+                <div id="alternative-chips" class="chips"></div>
+              </div>
+
+              <label class="field">
+                <span>Por qué ahí</span>
+                <textarea id="f-rationale" rows="3" placeholder="Dos o tres líneas: por qué este padre y no otro."></textarea>
+              </label>
+
+              <label class="field">
+                <span>Fuentes <small>(una por línea)</small></span>
+                <textarea id="f-sources" rows="2" placeholder="https://en.wikipedia.org/wiki/…"></textarea>
+              </label>
+
+              <label class="check">
+                <input id="f-reviewed" type="checkbox" />
+                <span>He revisado la ubicación y la justificación</span>
+              </label>
+
+              <div class="preview" id="preview"></div>
+            </section>
+
+            <section class="card">
+              <div class="card-head">
+                <h2>2 · Evidencia</h2>
+                <span class="gate" id="gate-spotify">Pendiente</span>
+              </div>
+
+              <label class="field">
+                <span>Pista representativa</span>
+                <input
+                  id="f-track"
+                  type="text"
+                  placeholder="Pega la URL de Spotify o el ID"
+                  spellcheck="false"
+                />
+                <small class="help" id="track-help"></small>
+              </label>
+
+              <div class="embed-wrap" id="embed-wrap" hidden>
+                <iframe
+                  id="embed"
+                  title="Reproductor de Spotify"
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                ></iframe>
+              </div>
+
+              <label class="field">
+                <span>Ejemplo <small>(Artista - Tema)</small></span>
+                <input id="f-example" type="text" placeholder="Artista - Tema" />
+              </label>
+
+              <div class="artists" id="artists"></div>
+
+              <label class="field">
+                <span>Wikipedia</span>
+                <input id="f-wiki" type="url" placeholder="https://en.wikipedia.org/wiki/…" spellcheck="false" />
+              </label>
+            </section>
+          </div>
+
+          <div class="grid">
+            <section class="card">
+              <div class="card-head">
+                <h2>3 · Descripciones</h2>
+                <span class="gate" id="gate-prose">Opcional ahora</span>
+              </div>
+              <p class="help block">
+                Puedes dejarlas vacías: se escriben antes de publicar. Si las pegas tú, mejor.
+              </p>
+              <label class="field">
+                <span>Descripción EN</span>
+                <textarea id="f-desc-en" rows="5" placeholder="English description…"></textarea>
+              </label>
+              <label class="field">
+                <span>Descripción ES</span>
+                <textarea id="f-desc-es" rows="5" placeholder="Descripción en español…"></textarea>
+              </label>
+            </section>
+
+            <section class="card">
+              <div class="card-head">
+                <h2>4 · Notas</h2>
+              </div>
+              <label class="field">
+                <span>Notas internas</span>
+                <textarea id="f-notes" rows="8" placeholder="Dudas, solapamientos, cosas que verificar…"></textarea>
+              </label>
+            </section>
+          </div>
+
+          <div class="form-foot">
+            <div class="foot-meta">
+              <span id="meta-line" class="help"></span>
+            </div>
+            <div class="foot-actions">
+              <button class="btn ghost" id="save" type="button">Guardar</button>
+              <button class="btn secondary" id="toggle-ready" type="button">Marcar listo</button>
+              <button class="btn primary" id="publish-one" type="button">Publicar este</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

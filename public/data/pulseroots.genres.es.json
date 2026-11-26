@@ -733,7 +733,31 @@
                         "url": "6zaiVGhHTJtQfEUUDd9ORu"
                     }
                 ],
-                "wikipedia_url": "https://en.wikipedia.org/wiki/Musique_concr%C3%A8te"
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Musique_concr%C3%A8te",
+                "substyles": [
+                    {
+                        "style": "Acousmatic",
+                        "description": "La música acusmática es una forma de música electroacústica concebida para ser escuchada sin ver la fuente que produce los sonidos. Sus raíces se encuentran en la musique concrète, desarrollada en Francia a finales de los años 40 por Pierre Schaeffer, quien comenzó a utilizar grabaciones de sonidos cotidianos como material compositivo, manipulándolos y reorganizándolos mediante técnicas de estudio. Con la evolución de la tecnología electrónica y de los medios de grabación, esta práctica se desarrolló hacia nuevas formas de creación sonora, especialmente durante las décadas de 1960 y 1970. La música acusmática utiliza sonidos naturales, cotidianos o sintéticos, transformados y organizados para explorar sus cualidades tímbricas, texturales, espaciales y expresivas. El sonido se convierte en materia musical autónoma, desligada de su origen visual, dando lugar a experiencias auditivas inmersivas, abstractas y exploratorias.",
+                        "example": "Bernard Parmegiani - De Natura Sonorum",
+                        "spotify_track_id": "1EvfWK48vc0CZMjQCaUuFJ",
+                        "key_artists": [
+                            {
+                                "name": "Pierre Schaeffer",
+                                "url": "47ypz2bndV4j06Xx8yPDZl"
+                            },
+                            {
+                                "name": "François Bayle",
+                                "url": "6b8rrNcSgsJwZEtVroBoLb"
+                            },
+                            {
+                                "name": "Bernard Parmegiani",
+                                "url": "5F5PIdJtRh6MsFIKa3KY3y"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Acousmatic_music",
+                        "substyles": []
+                    }
+                ]
             },
             {
                 "name": "Tape Music",
@@ -818,6 +842,28 @@
                         ]
                     }
                 ]
+            },
+            {
+                "style": "Field Recording",
+                "description": "El field recording o grabación de campo es una práctica artística y sonora basada en la captura de sonidos del entorno mediante dispositivos de grabación, fuera del estudio. Sus orígenes se remontan a las primeras tecnologías de grabación sonora, pero su desarrollo como práctica artística está estrechamente ligado a la música experimental, la musique concrète, la ecología acústica y el arte sonoro, especialmente desde mediados del siglo XX.\n\nPuede registrar paisajes naturales, ambientes urbanos, sonidos industriales, animales, fenómenos meteorológicos o situaciones cotidianas. Las grabaciones pueden presentarse prácticamente sin manipulación, como documentos sonoros autónomos, o utilizarse como materia prima para composiciones mediante edición, procesamiento electrónico y técnicas de transformación.\n\nMás que reproducir música convencional, el field recording propone una forma de escucha atenta del mundo, explorando la dimensión estética, narrativa, ambiental y emocional de los sonidos que nos rodean.",
+                "example": "Francisco López - La Selva, Pt. 1",
+                "spotify_track_id": "7cHcsM6aVo4NCPkpL509BJ",
+                "key_artists": [
+                    {
+                        "name": "Chris Watson",
+                        "url": "6hCSDeCfwXsR3Mg6AVlvvk"
+                    },
+                    {
+                        "name": "Jana Winderen",
+                        "url": "4fCXWSHQemkqb0Qm03Uvxx"
+                    },
+                    {
+                        "name": "Francisco López",
+                        "url": "2NIo9CSlxx2pArdKee4hes"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Field_recording",
+                "substyles": []
             }
         ]
     },
@@ -1769,7 +1815,7 @@
                 "name": "Deep House",
                 "description": "El deep house es un subgénero de la música house que surgió a finales de la década de 1980, combinando el sonido conmovedor y con infusión disco del house de Chicago temprano con las complejidades del jazz-funk y un estado de ánimo atmosférico más tenue. Se caracteriza por un tempo ligeramente más lento que el house clásico, progresiones de acordes complejas, pads exuberantes y un enfoque en voces suaves y conmovedoras o melodías instrumentales. El sonido a menudo se describe como sofisticado, hipnótico e introspectivo, con líneas de bajo profundas y ondulantes que crean una experiencia cálida e inmersiva. Creado por artistas como Larry Heard (Mr. Fingers), el deep house prioriza el estado de ánimo y la musicalidad, lo que lo hace adecuado tanto para pistas de baile íntimas como para escuchas contemplativas.",
                 "example": "Larry Heard - Can You Feel It",
-                "spotify_track_id": "3bdcJVeUuAi7Hhkp54YOA9",
+                "spotify_track_id": "79MX4lY6osZ4N1TD3mcG7k",
                 "key_artists": [
                     {
                         "name": "Larry Heard",
@@ -5238,6 +5284,28 @@
                                 "url": "5yWDRD9Mxe9b50KZl61gJX"
                             }
                         ]
+                    },
+                    {
+                        "style": "Guaracha",
+                        "description": "La guaracha electrónica, también conocida como guaracha colombiana, aleteo o zapateo, es un género de música electrónica de baile originario de Colombia, especialmente de la escena nocturna de Medellín. Surgió durante la década de 2010 a partir de la evolución del tribal house mexicano y el tribal guarachero, incorporando progresivamente elementos rítmicos y melódicos de la cumbia colombiana y otros estilos de música popular latinoamericana.\n\nSe caracteriza por sus ritmos acelerados y repetitivos, generalmente entre 126 y 135 BPM, percusiones contundentes, bajos electrónicos, sintetizadores estridentes y melodías inspiradas en trompetas, acordeones y otros instrumentos tradicionales. Sus producciones suelen incluir samples vocales, efectos de transición y drops de gran intensidad, con una estructura orientada a mantener la energía de la pista de baile.\n\nInicialmente vinculada a fiestas privadas, clubes y circuitos populares de Colombia, la guaracha electrónica fue ganando popularidad durante la segunda mitad de la década de 2010, extendiéndose por Latinoamérica y alcanzando proyección internacional a comienzos de los años 2020.\n\nMás que una simple fusión de música latina y electrónica comercial, representa una identidad propia de la cultura de club latinoamericana, caracterizada por su energía festiva, sus ritmos sincopados y su particular reinterpretación electrónica de los sonidos tropicales.",
+                        "example": "Dayvi, Victor Cardenas, Kelly Ruiz - Baila Conmigo (feat. Kelly Ruiz)",
+                        "spotify_track_id": "0Dl00EZBJHkkdsSZIBK8Sb",
+                        "key_artists": [
+                            {
+                                "name": "Victor Cardenas",
+                                "url": "00CMSJdbf36zOzKB3z8JrR"
+                            },
+                            {
+                                "name": "Fumaratto",
+                                "url": "3iuDJzaIhy7gDPgmUW2ujw"
+                            },
+                            {
+                                "name": "Marcela Reyes",
+                                "url": "2a3lL5m6feAyGUR1PI2osJ"
+                            }
+                        ],
+                        "wikipedia_url": "https://en.wikipedia.org/wiki/Guaracha",
+                        "substyles": []
                     }
                 ]
             },
@@ -5552,6 +5620,28 @@
                     }
                 ],
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Nortec"
+            },
+            {
+                "style": "Mahraganat",
+                "description": "El Mahraganat, también conocido como Electro Chaabi, es un género de música electrónica popular originario de los barrios obreros y periféricos de El Cairo, Egipto. Surgió a mediados de los años 2000, especialmente entre 2006 y 2008, cuando jóvenes DJs y MCs comenzaron a combinar la música popular egipcia shaabi con ritmos electrónicos, hip-hop y música de baile, utilizando ordenadores, sintetizadores y herramientas de producción digital de bajo coste.\n\nSu nombre procede de la palabra árabe mahragan, que significa «festival». Inicialmente vinculado a bodas, celebraciones callejeras y fiestas populares, el género se extendió rápidamente a través de Internet, YouTube y el intercambio de archivos digitales. Alcanzó una enorme popularidad durante la década de 2010, coincidiendo con los cambios sociales y políticos posteriores a la Revolución egipcia de 2011.\n\nMusicalmente se caracteriza por ritmos contundentes y repetitivos, bajos electrónicos, sintetizadores estridentes, percusiones inspiradas en la música tradicional egipcia y voces procesadas mediante Auto-Tune. Sus letras, habitualmente interpretadas en árabe coloquial egipcio, abordan la vida cotidiana, la identidad de los barrios populares, las relaciones personales, la precariedad, la celebración y la crítica social.\n\nMás allá de su dimensión musical, el Mahraganat representa una expresión cultural urbana y popular que desafió las convenciones de la industria musical egipcia y las distinciones tradicionales entre cultura popular y cultura institucional.",
+                "example": "Amr 7a7a - Crazy Sad",
+                "spotify_track_id": "3eEswEs8JsBLOo1VZTzPIg",
+                "key_artists": [
+                    {
+                        "name": "Islam Chipsy",
+                        "url": "1EKPc0xUrJKAQrYtEwuzvT"
+                    },
+                    {
+                        "name": "Sadat El 3almy",
+                        "url": "6XvZkxVvGXWhlDFTR6Q4sj"
+                    },
+                    {
+                        "name": "Amr 7a7a",
+                        "url": "2Gb3RVy2fb6hx1QM9ZFCN8"
+                    }
+                ],
+                "wikipedia_url": "https://en.wikipedia.org/wiki/Mahraganat",
+                "substyles": []
             }
         ]
     },

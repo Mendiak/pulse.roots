@@ -36,6 +36,9 @@ node_modules/
 # Generated at build time by scripts/build-map-images.mjs
 public/assets/maps/
 
+# Local backups from the genre studio (the staging JSON itself is versioned)
+staging/.backup/
+
 # IDE
 .vscode/
 .idea/

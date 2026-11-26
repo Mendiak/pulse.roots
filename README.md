@@ -94,6 +94,16 @@ The project also includes `public/data/music_history.json`, a linear array of hi
 - **`fact`** (string): Description of the milestone.
 - **`url`** (string, optional): External link to Wikipedia, official site, or related content.
 
+## Genre studio (local)
+
+New genres are researched in `staging/` before they touch the published tree. The source of truth is `staging/genre-candidates.json`; the rules for admitting and placing a genre live in [`staging/TAXONOMY.md`](staging/TAXONOMY.md).
+
+- **Open the panel:** double-click `Abrir panel de generos.bat`, or run `npm run studio`. It serves a local editor at `http://127.0.0.1:4310` and opens the browser.
+- **What it does:** paste Spotify track and artist links (IDs are extracted automatically), preview the track, record the placement verdict, parent, rationale and sources, and autosave everything to the staging JSON.
+- **What it does not do:** it never edits `public/data/` unless you press **Publicar**, and it is not part of the build or the deployed site. The launcher, server and UI live in `scripts/` and `staging/`, outside `public/`.
+
+Publication is explicit: a candidate must be marked `ready` and have both descriptions written. The merge inserts the node into the English and Spanish trees, refuses duplicate siblings, and appends a line to `staging/published.log`.
+
 ## Project Structure
 
 ```
