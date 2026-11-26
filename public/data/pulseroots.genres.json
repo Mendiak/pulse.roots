@@ -633,7 +633,7 @@
             },
             {
                 "name": "Neoclassical",
-                "description": "Neoclassical music is a genre that merges classical music elements with contemporary techniques and sounds, often utilizing electronic instruments and production methods. It emphasizes emotional depth and intricate compositions, appealing to both classical music enthusiasts and electronic music listeners.",
+                "description": "Neoclassical electronic music borrows the tools of classical composition — piano, strings, counterpoint, long-form structure — and filters them through synthesis, sampling and studio production. It is less a fixed scene than a meeting point between contemporary classical, ambient and electronic music, and it took its current shape in the 2000s and 2010s through artists such as Ólafur Arnalds, Nils Frahm, Max Richter and Jóhann Jóhannsson as well as club producers who moved toward acoustic instruments. Typical traits are intimacy, slow development and a focus on texture and reverb rather than beat. The style is often used in film, television and games, which has made it one of the most visible forms of contemporary instrumental music.",
                 "example": "Ólafur Arnalds - Near Light",
                 "spotify_track_id": "6Xajr512QEGAZ20bqAWkyT",
                 "key_artists": [
@@ -890,7 +890,7 @@
         "substyles": [
             {
                 "name": "Detroit Techno",
-                "description": "Detroit techno is a subgenre of techno music that originated in Detroit in the 1980s, characterized by its soulful melodies, driving 4/4 beats, and futuristic sounds. It often incorporates elements of funk, jazz, and electronic music, reflecting the city's cultural heritage and industrial landscape. Detroit techno is known for its emotional depth and innovative production techniques, influencing the global techno scene.",
+                "description": "Detroit techno is the founding branch of techno: a futurist, machine-driven sound built in Michigan in the mid-1980s by the Belleville Three — Juan Atkins, Derrick May and Kevin Saunderson — and their circle. It joins the cold pulse of Kraftwerk and electro with the warmth of soul, funk and jazz: syncopated 4/4 drums, minor-key chords, strings and sci-fi synth lines. Early records such as Cybotron's Clear, Rhythim Is Rhythim's Strings of Life and Inner City's Big Fun set the template, and the 1990s second wave (Underground Resistance, Carl Craig, Jeff Mills) pushed it toward minimalism and harder edges. Detroit techno is the root of almost every techno subgenre that follows, and its tension between soul and machinery is still the genre's signature.",
                 "example": "Derrick May -  Strings of Life",
                 "spotify_track_id": "7N3FfUFMud1rjI6Vgw71mm",
                 "key_artists": [
@@ -1035,7 +1035,7 @@
             },
             {
                 "name": "Acid Techno",
-                "description": "Acid techno is a subgenre of techno music that emerged in the late 1980s, characterized by its use of the Roland TB-303 synthesizer, which creates distinctive squelchy basslines and psychedelic melodies. The genre features repetitive beats and hypnotic rhythms, often incorporating elements of acid house and trance, resulting in a sound that is both energetic and immersive, popular in underground dance scenes.",
+                "description": "Acid techno is the sound of the Roland TB-303 pushed past its design: squelching, resonant basslines, sliding filter sweeps and a hypnotic, repetitive groove. The recipe came from Chicago acid house in the mid-1980s, but producers in London, Berlin and the American Midwest hardened it into techno — faster tempos, fewer vocals, more distortion. London's squat and free-party scene of the 1990s, labels such as Stay Up Forever, and DJs like Dave the Drummer and Liberator turned it into a distinct underground genre, while artists such as Hardfloor and Emmanuel Top took it to European clubs. Acid techno is defined less by a fixed tempo than by the acid line running through it, and the 303's voice remains one of the most recognisable sounds in electronic music.",
                 "example": "Phuture - Acid Trax",
                 "spotify_track_id": "2aLXJJ2zOsBJlGTxiG0yMi",
                 "key_artists": [
@@ -1100,7 +1100,7 @@
             },
             {
                 "name": "Minimal Techno",
-                "description": "Minimal techno is a subgenre of techno music that focuses on simplicity and subtlety, characterized by repetitive beats, minimalistic arrangements, and a reduced palette of sounds. It emphasizes space and texture, often incorporating sparse melodies and rhythmic variations to create an immersive listening experience, making it popular in both club settings and for home listening.",
+                "description": "Minimal techno strips techno down to its skeleton: a steady 4/4 kick, a handful of clicks and hisses, and tiny melodic or textural changes that carry the track over long stretches. The style grew out of Detroit techno's second wave — Robert Hood's Internal Empire is the usual reference point — and was refined in Berlin and Cologne during the 1990s by artists such as Richie Hawtin, Marco Carola and the Kompakt label. Tempos are rarely extreme; the interest lies in groove, space and the slow accumulation of detail, which makes the music as suited to headphones as to a club. Because it rejects big drops and obvious hooks, minimal techno is often described as functional music, but its best records are studies in tension and patience.",
                 "example": "Plastikman - Spastik",
                 "spotify_track_id": "553HOkDZQktOEBKvxTBPS1",
                 "key_artists": [
@@ -1583,7 +1583,7 @@
         "substyles": [
             {
                 "name": "Electroclash",
-                "description": "A fusion of electro, punk, and synthpop, often with a retro, underground aesthetic, characterized by aggressive, danceable beats, distorted vocals, and a rebellious attitude. Electroclash emerged in the late 1990s and early 2000s, creating a unique blend of electronic and alternative music styles.",
+                "description": "Electroclash was a short, loud bridge between electro, punk and synth-pop that came to prominence around 2000–2003. Its sound was deliberately cheap and theatrical: drum machines, cold analogue synths, spoken or shouted vocals, distorted bass and a heavy debt to 1980s new wave. The name is usually traced to a New York festival and scene around DJs and artists such as Larry Tee, Fischerspooner, Peaches, Chicks on Speed and Miss Kittin & The Hacker. Electroclash was as much about art-school performance, fashion and irony as about music, and it faded almost as quickly as it appeared. Its real legacy is the permission it gave a generation of pop and club producers to sound synthetic, playful and retro on purpose.",
                 "example": "Fischerspooner - Emerge",
                 "spotify_track_id": "3vyKSb9sAdXl0kQ1KnS9fY",
                 "key_artists": [
@@ -1729,7 +1729,7 @@
             },
             {
                 "name": "Detroit Electro",
-                "description": "A subgenre of electro that originated in Detroit, known for its raw, energetic sound, often incorporating elements of funk, soul, and techno. Detroit Electro is characterized by its driving rhythms, prominent basslines, and a sense of gritty urban energy.",
+                "description": "Detroit electro is the missing link between Kraftwerk and techno: drum-machine rhythms, vocoders, chrome-plated synth melodies and a street-level funk sensibility. It grew out of the same early-1980s Detroit scene that produced techno — Cybotron's Clear and Enter, and the records of the Direct Beat label, are foundational — and it treats the machine as a band member rather than a backing track. The sound is rawer and more song-like than Detroit techno: breakbeats, 808s, talk-box vocals and sci-fi themes. Artists such as Aux 88, DJ Assault and Dopplereffekt carried it into the 1990s and 2000s, and its influence runs through ghettotech, electroclash and modern electro. It is one of the few American styles that kept the word electro literal.",
                 "example": "Juan Atkins - No UFO's",
                 "spotify_track_id": "1Ro7L7RPp5P8heOfW4EQKA",
                 "key_artists": [
@@ -1749,7 +1749,7 @@
             },
             {
                 "name": "Industrial Electro",
-                "description": "A blend of electro and industrial music, characterized by harsh, distorted sounds, repetitive rhythms, and a sense of mechanical, often dystopian atmosphere. Industrial Electro incorporates elements of noise music and industrial techno, creating a dark, intense, and experimental sound.",
+                "description": "Industrial electro is the point where electro's machine funk meets industrial music's noise and discipline. Drum machines and harsh, distorted synths dominate; vocals are shouted, treated or absent; the atmosphere is cold, metallic and often aggressive. The style formed in the 1980s and 1990s where electro, EBM and industrial dance crossed, with acts such as Front 242, Nitzer Ebb and later artists on labels like Ant-Zen and Hands Productions moving between the categories. Tempos and structures vary widely, from club-ready body music to slow, grinding instrumentals. It is a small genre by numbers but a durable one: its sound design and rhythmic vocabulary keep resurfacing in techno, dark electro and modern industrial club music.",
                 "example": "Front 242 - Headhunter",
                 "spotify_track_id": "3iZIki3LcOtyY3Cg5DEllm",
                 "key_artists": [
@@ -1770,7 +1770,7 @@
             },
             {
                 "name": "Dark Electro",
-                "description": "A darker and more atmospheric subgenre of Electro, often characterized by sinister melodies, complex synth work, and a sense of brooding intensity. Dark Electro has a focus on creating unsettling and hypnotic soundscapes, drawing influences from industrial music and gothic themes.",
+                "description": "Dark electro is a brooding, atmospheric offshoot of electro that leans into industrial and gothic territory. The drums are heavy and mechanical, the bass is distorted, and the melodic elements are minor-key, cold and often choral or orchestral; vocals, when present, are usually processed, whispered or growling. The style took shape in the late 1980s and 1990s in the overlap between electro, EBM and industrial dance music, with European acts such as Leæther Strip, :wumpscut: and Suicide Commando among its reference points. Tempos sit around the industrial-dance range rather than electro's funkier pulse. Dark electro is club music for the darker end of the night, and it remains a staple of goth and industrial festivals.",
                 "example": "Hocico - Poltergeist",
                 "spotify_track_id": "41MMt30XQ95J4ynStyRPnM",
                 "key_artists": [
@@ -2482,7 +2482,7 @@
             },
             {
                 "name": "Electro House",
-                "description": "Electro House rose to prominence in the mid-2000s, fusing the steady 4/4 beats of house music with the gritty, distorted basslines and analog synthesizer sounds of 80s electro. Unlike traditional house, which is often soulful or smooth, Electro House is aggressive, buzz-heavy, and energetic. It served as the precursor to the modern EDM explosion, introducing 'dirty' basslines and heavy drops to the mainstage.",
+                "description": "Electro house took the 4/4 pulse of house and gave it the bite of electro: distorted, buzzing basslines, big analogue stabs and a hard, compressed low end. The name appeared in the mid-2000s as producers such as Benny Benassi, Justice, Boys Noize and Fedde Le Grand mixed house structure with the attitude of French electro and the rising EDM circuit. Tracks were built around a single aggressive riff and a drop rather than a long groove, which made the style a bridge between club music and festival main stages. Its commercial peak lasted roughly from 2005 to 2012, when big-room house and EDM absorbed much of its language. Electro house is less a strict genre than a production approach: house tempo, electro texture, maximum impact.",
                 "example": "Benny Benassi - Satisfaction",
                 "spotify_track_id": "1n7omixiROWs5q6xpWiQuL",
                 "key_artists": [
@@ -2566,7 +2566,7 @@
             },
             {
                 "name": "Hard House",
-                "description": "Hard House is a style known for its fast tempo (typically 145–150 BPM), off-beat bass stabs (often called 'donks'), and energetic, uplifting vibe. Emerging in the 90s (notably in the UK club 'Trade'), it sits between House and Hard Trance. Unlike Techno, it retains a funky, swinging groove and often features diva vocal samples, but delivered with aggressive speed and intensity.",
+                "description": "Hard house is the faster, tougher side of house, usually between 145 and 155 BPM. It keeps a four-to-the-floor kick and a swinging groove but adds hard, off-beat bass stabs — often called donks — hoover-like synth leads and diva vocal samples, all mixed for maximum lift. The sound took shape in the UK during the 1990s, with London clubs such as Trade and labels like Nukleuz and Tidy Trax as its centres; DJs including Tony de Vit, Lisa Lashes and Andy Farley became its public faces. Hard house is deliberately functional and unsubtle, built for peak-time rooms, and it overlaps with hard trance and, later, with the harder end of bounce and hardstyle's offshoots. It remains a fixture of the UK and Irish club circuit.",
                 "example": "Tony De Vit - The Dawn",
                 "spotify_track_id": "0QmIykIkfezWfODoHwqlnm",
                 "key_artists": [
@@ -3452,7 +3452,7 @@
             },
             {
                 "name": "Space Ambient",
-                "description": "Ambient music that evokes the vastness and mystery of outer space, often using synthesizers to create cosmic soundscapes.",
+                "description": "Space ambient is ambient music built to suggest the scale and emptiness of outer space: long, slow synthesizer pads, drifting arpeggios, radio-static textures and a sense of weightless travel. It grew out of the 1970s kosmische tradition — Tangerine Dream, Klaus Schulze, Vangelis — and was carried into the ambient era by artists such as Steve Roach, Michael Stearns and the Hearts of Space radio programme. The style is less about melody than about atmosphere and duration: tracks often run for ten minutes or more and change almost imperceptibly. It overlaps with drone, dark ambient and Berlin School electronic music, and it remains a staple of planetarium shows, science-fiction soundtracks and late-night listening.",
                 "example": "Steve Roach - Structures from Silence",
                 "spotify_track_id": "3v6UGvx3CJ0F0iEq5jWwl1",
                 "key_artists": [
@@ -3832,7 +3832,7 @@
             },
             {
                 "name": "Juke",
-                "description": "Juke is a fast-paced electronic dance genre from Chicago, typically around 160 BPM. It features syncopated rhythms, deep basslines, and chopped-up vocal samples. Known for its energetic, raw sound, juke focuses on rhythm and movement, often accompanying fast, intricate footwork dance styles. It is a precursor to footwork and has influenced bass-heavy electronic music.",
+                "description": "Juke is Chicago's fast, stripped-down dance music, usually around 160 BPM. It keeps house's four-to-the-floor foundation but replaces its smoothness with syncopated kick patterns, deep sub-bass, sharp claps and heavily chopped vocal samples. The style developed in the 1990s on Chicago's South and West sides, first as the soundtrack to footwork battles, with producers such as RP Boo, DJ Rashad, DJ Spinn and Traxman turning the dance's stop-start movement into rhythm. Tracks are short, repetitive and built for dancers rather than radio, and the scene's own DJs and parties were its main distribution network. Juke and footwork later reached clubs and festivals worldwide, and their influence is audible in modern bass music, jungle revival and experimental club music.",
                 "example": "DJ Funk - Run",
                 "spotify_track_id": "09OzrUfjdciGFbVlnjUqwk",
                 "key_artists": [
@@ -4381,7 +4381,7 @@
             },
             {
                 "name": "Phonk",
-                "description": "Phonk is a genre that fuses 90s Memphis rap with modern electronic production techniques. It is characterized by the use of distorted and repetitive vocals (often samples from old cassette tapes), saturated 808 basslines, and dark or jazzy melodies. In its recent evolution, it has branched into high-energy styles driven by cowbells and fast rhythms, becoming a viral phenomenon associated with drifting culture and fitness.",
+                "description": "Phonk is a Memphis-rooted style that rebuilt 1990s southern rap from the outside: chopped and screwed vocal loops taken from old tapes, saturated 808 bass, cowbells, lo-fi hiss and dark, jazzy or horror-film samples. It grew out of 1990s Memphis rap and the chopped-and-screwed tapes of Houston's DJ Screw, then returned in the 2010s through internet producers and labels close to Three 6 Mafia's extended family, SpaceGhostPurrp and the drift-phonk wave. Modern phonk split into a laid-back, atmospheric strain and a fast, aggressive strain built for car culture, gym videos and short-form video edits. Its low-budget, deliberately degraded sound is the point rather than a limitation.",
                 "example": "Kordhell - Murder In My Mind",
                 "spotify_track_id": "6v9tjIDuN0anXNoPMytvbQ",
                 "key_artists": [
@@ -4487,7 +4487,7 @@
             },
             {
                 "name": "Moombahton",
-                "description": "Moombahton is a fusion genre created by Dave Nada in 2009 that slows down Dutch House vibes to the tempo of Reggaeton (usually 108-112 BPM). It combines the thick, elastic basslines and dramatic build-ups of Electro House with the 'dembow' rhythm of Reggaeton. It became a global phenomenon, heavily influencing modern pop production and leading to subgenres like Moombahcore.",
+                "description": "Moombahton is a fusion genre that slows Dutch house down to reggaeton tempo, usually between 108 and 112 BPM. The story usually starts with Dave Nada, who in 2009 pitched down a Dutch house track at a house party in Washington DC and matched it to the dembow rhythm; the result spread quickly through blogs and club DJs. The sound keeps the big, elastic basslines and dramatic builds of electro house but swaps the four-to-the-floor pulse for reggaeton's three-note pattern, and it often adds tropical percussion and Spanish-language vocals. Moombahton's first wave faded after a few years, but its tempo and attitude fed into global club music, moombahcore and later Latin electronic pop.",
                 "example": "Major Lazer - Lean On",
                 "spotify_track_id": "4UKJUbcuStnnxLeJmVJsSc",
                 "key_artists": [
@@ -5602,7 +5602,7 @@
             },
             {
                 "name": "Nortec",
-                "description": "Nortec is an electronic dance music genre that emerged from Tijuana, Mexico, in the late 1990s. Its name is a portmanteau of 'norteño' and 'techno,' reflecting its unique fusion of traditional northern Mexican sounds (accordion, tuba, banda brass) with club-focused electronic production. It represents a trans-cultural aesthetic that bridges regional border traditions with global underground electronic music.",
+                "description": "Nortec (also written Nortec Collective) is a Tijuana style that fuses norteño and banda music with electronic production. The name is a contraction of norteño and techno, and the project began in the late 1990s when producers such as Bostich, Fussible, Panóptica and Hiperboreal started sampling accordion, tuba and brass from local bands and setting them against house, techno and breakbeat rhythms. Nortec was never only a sound: it was a statement about the border, about what counts as traditional and what counts as modern, and it was presented as an audiovisual collective as much as a band. Its records and multimedia shows travelled widely in the 2000s, and it remains the best-known example of Latin American electronic music built directly from regional acoustic traditions.",
                 "example": "Nortec: Bostich + Fussible - Tijuana Makes Me Happy",
                 "spotify_track_id": "2GKva36e90AM0B0WF1J0YY",
                 "key_artists": [
@@ -5817,7 +5817,7 @@
             },
             {
                 "name": "Space disco",
-                "description": "A subgenre of disco with futuristic and space-themed elements.",
+                "description": "Space disco is disco seen through a science-fiction lens: rolling basslines and string arrangements pushed through synthesizers, vocoders and cosmic sound effects. It emerged in the late 1970s, when European producers such as Cerrone, Space and the Munich Machine mixed disco's groove with the electronic vocabulary of Kraftwerk and the Berlin School, and it was quickly adopted by Italian and French studio scenes. The style is more a mood than a strict formula — shiny, futuristic, slightly absurd — and its blend of dance music and space themes fed directly into Italo disco, synth-pop and later electro. Modern producers revisit it under the nu-disco and cosmic-disco labels, but the original records remain some of the strangest and most joyful artefacts of the disco era.",
                 "example": "Meco - Star Wars Theme/Cantina Band",
                 "spotify_track_id": "4MVA30NmvNtpbDon1ZG7mk",
                 "key_artists": [
